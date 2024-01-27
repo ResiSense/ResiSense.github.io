@@ -18,6 +18,13 @@
             "name": "404",
             "title": "404: Page not found",
             "builder": "markdown"
+        },
+        {
+            "name": "home"
+        },
+        {
+            "name": "introduction",
+            "builder": "markdown"
         }
     ]
 }
