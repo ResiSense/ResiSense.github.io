@@ -1,3 +1,5 @@
+loadResource('/loadResourceTest.js', 'script');
+// 
 const currentPathTree = window.location.pathname.split('/').filter(item => item !== '');
 console.log({ currentPathTree });
 
