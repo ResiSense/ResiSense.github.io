@@ -1,0 +1,23 @@
+/*
+    This .jsonc file is used to configure how the pages are built and shown using the cursed 404 redirecting.
+    The entries are only for .html-less pages with generic styles that are able to be built with minimal effort.
+    Pages with their own dedicated .html file need not be included here although it is still recommended.
+
+    name        (required): Name of the HTML document.
+
+    title?      (optional): Title of the HTML document. If unspecified, a title case of the name will be used.
+    builder?    (optional): Page builder to use. Default is "html".
+                            | html      - Plain vanilla HTML
+                            | markdown  - Markdown page builder
+                            | custom    - Custom page builder
+    pages?      (optional): Array of pages hierarchically under this page, with "parent name/ child name" as their url path.
+*/
+{
+    "pages": [
+        {
+            "name": "404",
+            "title": "404: Page not found",
+            "builder": "markdown"
+        }
+    ]
+}
