@@ -67,8 +67,10 @@ function markdownBuilder(markdown) {
         document.body.appendChild(script);
     });
     scriptPromise.then(() => {
+        console.log('Building site from markdown file...')
         document.body.innerHTML = parseResponse(markdown);
     }).catch(() => {
+        console.log('Falling back to plaintext markdown...')
         document.body.innerHTML = markdown.replace(/  /g, '<br>');
     });
 }
