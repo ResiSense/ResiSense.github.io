@@ -1,6 +1,10 @@
 loadResource('/loadResourceTest.js', 'script');
+loadResource('/loadResourceTest.css', 'style');
+loadResource('/loadResourceTest.generic', 'generic');
 setTimeout(() => {
     loadResource('/loadResourceTestTimeout.js', 'script');
+    loadResource('/loadResourceTest.css', 'style');
+    loadResource('/loadResourceTest.generic', 'generic');
 }, 5000);
 // 
 const currentPathTree = window.location.pathname.split('/').filter(item => item !== '');
