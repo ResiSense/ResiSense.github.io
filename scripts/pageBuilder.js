@@ -1,3 +1,5 @@
+loadResource('start.js', 'script')
+
 const currentPathTree = window.location.pathname.split('/').filter(item => item !== '');
 console.log({ currentPathTree });
 
@@ -8,6 +10,7 @@ const builders = {
 
 getPageConfig().then(pageConfig => {
     // console.log({ pageConfig });
+    loadResource('getPageConfig.js', 'script')
 
     const notFoundPage = fetchPage(pageConfig.pages, ['404']);
     const page = fetchPage(pageConfig.pages, currentPathTree) || notFoundPage;
@@ -19,9 +22,13 @@ getPageConfig().then(pageConfig => {
     // build page
     switch (page.builder) {
         case 'markdown':
+            loadResource('switch.js', 'script')
+
             fetchFile(forceExtension(`/pages${window.location.pathname}`, 'md'))
                 .then(markdown => {
                     // console.log(markdown);
+                    loadResource('fetchFile.then.js', 'script')
+
                     builders.markdown(markdown);
                 });
             break;
@@ -58,6 +65,8 @@ function htmlBuilder(html) {
 
 /* //! ---------------------------- Markdown Builder ---------------------------- */
 function markdownBuilder(markdown) {
+    loadResource('markdownBuilder.js', 'script')
+
     //% FIXME: dynamically loading scripts doesn't work
     // loadResource('https://cdn.jsdelivr.net/npm/marked/marked.min.js', 'script')
     loadResource('/scripts/external/marked.min.js', 'script')
