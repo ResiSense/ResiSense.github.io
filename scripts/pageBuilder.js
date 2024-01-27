@@ -64,7 +64,7 @@ function markdownBuilder(markdown) {
         script.onload = resolve;
         script.onerror = reject;
         script.src = 'https://cdn.jsdelivr.net/npm/marked/marked.min.js';
-        document.body.appendChild(script);
+        document.head.appendChild(script);
     });
     scriptPromise.then(() => {
         console.log('Building site from markdown file...')
