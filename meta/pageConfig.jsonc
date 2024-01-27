@@ -20,7 +20,8 @@
             "builder": "markdown"
         },
         {
-            "name": "home"
+            "name": "home",
+            "builder": "markdown"
         },
         {
             "name": "introduction",
