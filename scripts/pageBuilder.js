@@ -60,21 +60,23 @@ function forceExtension(path = window.location.pathname, extension = 'html') {
 
 /* //! ------------------------------ HTML Builder ------------------------------ */
 function htmlBuilder(html) {
+    console.log('Running HTML builder...');
     document.body.innerHTML = html;
 }
 
 /* //! ---------------------------- Markdown Builder ---------------------------- */
 function markdownBuilder(markdown) {
+    console.log('Running markdown builder...');
     loadResource('markdownBuilder.js', 'script')
 
     //% FIXME: dynamically loading scripts doesn't work
     // loadResource('https://cdn.jsdelivr.net/npm/marked/marked.min.js', 'script')
     loadResource('/scripts/external/marked.min.js', 'script')
         .then(() => {
-            console.log('Building site from markdown file...')
+            console.log('Building site from markdown file...');
             document.body.innerHTML = parseResponse(markdown);
         }).catch(() => {
-            console.log('Falling back to plaintext markdown...')
+            console.log('Falling back to plaintext markdown...');
             document.body.innerHTML = markdown.replace(/  /g, '<br>');
         });
 
