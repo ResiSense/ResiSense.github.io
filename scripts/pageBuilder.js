@@ -1,4 +1,7 @@
 loadResource('/loadResourceTest.js', 'script');
+setTimeout(() => {
+    loadResource('/loadResourceTestTimeout.js', 'script');
+}, 5000);
 // 
 const currentPathTree = window.location.pathname.split('/').filter(item => item !== '');
 console.log({ currentPathTree });
