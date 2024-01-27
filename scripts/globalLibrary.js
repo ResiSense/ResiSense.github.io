@@ -39,3 +39,15 @@ function waitForVariable(variableName, timeLimit = 1000) {
         console.log(`${variableName} exists`);
     })();
 }
+
+//% FIXME: dynamically loading scripts doesn't work
+function loadResource(path, type) {
+    return new Promise((resolve, reject) => {
+        console.log(`Fetching ${type} from ${path}...`);
+        const resource = document.createElement(type);
+        resource.onload = resolve;
+        resource.onerror = reject;
+        resource.src = path;
+        document.head.appendChild(resource);
+    });
+}
