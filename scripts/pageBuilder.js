@@ -3,8 +3,8 @@ loadResource('/loadResourceTest.css', 'style');
 loadResource('/loadResourceTest.generic', 'generic');
 setTimeout(() => {
     loadResource('/loadResourceTestTimeout.js', 'script');
-    loadResource('/loadResourceTest.css', 'style');
-    loadResource('/loadResourceTest.generic', 'generic');
+    loadResource('/loadResourceTestTimeout.css', 'style');
+    loadResource('/loadResourceTestTimeout.generic', 'generic');
 }, 5000);
 // 
 const currentPathTree = window.location.pathname.split('/').filter(item => item !== '');
@@ -68,16 +68,7 @@ function htmlBuilder(html) {
 /* //! ---------------------------- Markdown Builder ---------------------------- */
 function markdownBuilder(markdown) {
     //% FIXME: dynamically loading scripts doesn't work
-    // loadResource('https://cdn.jsdelivr.net/npm/marked/marked.min.js', 'script')
-    //     .then(() => {
-    //         console.log('Building site from markdown file...')
-    //         document.body.innerHTML = parseResponse(markdown);
-    //     }).catch(() => {
-    //         console.log('Falling back to plaintext markdown...')
-    //         document.body.innerHTML = markdown.replace(/  /g, '<br>');
-    //     });
-
-    waitForVariable('marked')
+    loadResource('https://cdn.jsdelivr.net/npm/marked/marked.min.js', 'script')
         .then(() => {
             console.log('Building site from markdown file...')
             document.body.innerHTML = parseResponse(markdown);
@@ -85,6 +76,15 @@ function markdownBuilder(markdown) {
             console.log('Falling back to plaintext markdown...')
             document.body.innerHTML = markdown.replace(/  /g, '<br>');
         });
+
+    // waitForVariable('marked')
+    //     .then(() => {
+    //         console.log('Building site from markdown file...')
+    //         document.body.innerHTML = parseResponse(markdown);
+    //     }).catch(() => {
+    //         console.log('Falling back to plaintext markdown...')
+    //         document.body.innerHTML = markdown.replace(/  /g, '<br>');
+    //     });
 }
 function parseResponse(markdown) {
     console.log('Parsing markdown...');
