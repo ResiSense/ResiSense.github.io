@@ -1,12 +1,3 @@
-loadResource('/loadResourceTest.js', 'script');
-loadResource('/loadResourceTest.css', 'style');
-loadResource('/loadResourceTest.generic', 'generic');
-setTimeout(() => {
-    loadResource('/loadResourceTestTimeout.js', 'script');
-    loadResource('/loadResourceTestTimeout.css', 'style');
-    loadResource('/loadResourceTestTimeout.generic', 'generic');
-}, 5000);
-// 
 const currentPathTree = window.location.pathname.split('/').filter(item => item !== '');
 console.log({ currentPathTree });
 
@@ -68,7 +59,8 @@ function htmlBuilder(html) {
 /* //! ---------------------------- Markdown Builder ---------------------------- */
 function markdownBuilder(markdown) {
     //% FIXME: dynamically loading scripts doesn't work
-    loadResource('https://cdn.jsdelivr.net/npm/marked/marked.min.js', 'script')
+    // loadResource('https://cdn.jsdelivr.net/npm/marked/marked.min.js', 'script')
+    loadResource('/scripts/external/marked.min.js', 'script')
         .then(() => {
             console.log('Building site from markdown file...')
             document.body.innerHTML = parseResponse(markdown);
