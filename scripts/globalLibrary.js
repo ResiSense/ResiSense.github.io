@@ -24,3 +24,18 @@ function fetchFile(path) {
 function toTitleCase(string) {
     return string.replace(/\b\w/g, match => match.toUpperCase());
 }
+
+function waitForVariable(variableName, timeLimit = 1000) {
+    return (async () => {
+        console.log(`Waiting for ${variableName}...`);
+        const startTime = Date.now();
+        while (!window.hasOwnProperty(variableName)) {
+            await new Promise(resolve => setTimeout(resolve, 250));
+            if (Date.now() - startTime > timeLimit) {
+                console.log(`${variableName} took too long to exist!`);
+                reject();
+            }
+        }
+        console.log(`${variableName} exists`);
+    })();
+}

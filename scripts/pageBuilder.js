@@ -58,22 +58,31 @@ function htmlBuilder(html) {
 
 /* //! ---------------------------- Markdown Builder ---------------------------- */
 function markdownBuilder(markdown) {
-    const scriptPromise = new Promise((resolve, reject) => {
-        console.log('Fetching marked.js...');
-        const script = document.createElement('script');
-        script.onload = resolve;
-        script.onerror = reject;
-        script.src = 'https://cdn.jsdelivr.net/npm/marked/marked.min.js';
-        document.head.appendChild(script);
-        debugger;
-    });
-    scriptPromise.then(() => {
-        console.log('Building site from markdown file...')
-        document.body.innerHTML = parseResponse(markdown);
-    }).catch(() => {
-        console.log('Falling back to plaintext markdown...')
-        document.body.innerHTML = markdown.replace(/  /g, '<br>');
-    });
+    //% FIXME: dynamically loading scripts doesn't work
+    // const scriptPromise = new Promise((resolve, reject) => {
+    //     console.log('Fetching marked.js...');
+    //     const script = document.createElement('script');
+    //     script.onload = resolve;
+    //     script.onerror = reject;
+    //     script.src = 'https://cdn.jsdelivr.net/npm/marked/marked.min.js';
+    //     document.head.appendChild(script);
+    // });
+    // scriptPromise.then(() => {
+    //     console.log('Building site from markdown file...')
+    //     document.body.innerHTML = parseResponse(markdown);
+    // }).catch(() => {
+    //     console.log('Falling back to plaintext markdown...')
+    //     document.body.innerHTML = markdown.replace(/  /g, '<br>');
+    // });
+
+    waitForVariable('marked')
+        .then(() => {
+            console.log('Building site from markdown file...')
+            document.body.innerHTML = parseResponse(markdown);
+        }).catch(() => {
+            console.log('Falling back to plaintext markdown...')
+            document.body.innerHTML = markdown.replace(/  /g, '<br>');
+        });
 }
 function parseResponse(markdown) {
     console.log('Parsing markdown...');
