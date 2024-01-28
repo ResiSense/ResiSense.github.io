@@ -71,7 +71,7 @@ function replaceCustomTags(element = document.body, depth = 0) {
 
     Array.from(element.getElementsByTagName('custom-use-script')).forEach(element => {
         loadResource(element.getAttribute('src'), resourceType.script);
-        markAsProcessed(element);
+        element.remove();
     });
     return;
 }
