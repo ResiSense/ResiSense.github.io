@@ -16,7 +16,7 @@
     "pages": [
         {
             "name": "404",
-            "title": "404: Page not found",
+            "title": "Page not found ☹️",
             "builder": "markdown"
         },
         {
