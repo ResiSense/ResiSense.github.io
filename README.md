@@ -7,13 +7,3 @@ Lead: [CCheukKa](https://github.com/CCheukKa)
 
 # 🙋🏻‍♂️ Questions?
 If you have any questions or would like to know how to help contribute, contact [CCheukKa](https://github.com/CCheukKa).  
-
-<hr>
-
-# ✅ Progress checklist
-Please only trust this progress checklist slightly since it is not always updated.  
-- ⚠️ Critical
-  - [ ]  Structural framework
-  - [ ]  .md fetcher
-- 🎨 Aesthetics
-  - [ ]  Global styles
