@@ -1,3 +1,39 @@
+/* 
++------------------------------------------------------------------------+ 
+|                       Page Builder Internal Logic                      |
++------------------------------------------------------------------------+
+
+---------------------------------- Brief ---------------------------------
+
+This file contains the logic for building the page based on the current URL.
+GitHub Pages does not support server-side code, so this is the only way to
+dynamically build pages (that I can think of quickly).
+GitHub Pages automatically serves the 404.html page when a page is not found.
+The page builder hijacks this feature and use it to act as a central node for
+all pages. The page builder will then fetch the page config and content from
+and build the page.
+
+------------------------------ General flow -----------------------------
+
+- User attempts to access (/foo)/bar(.html)
+- GitHub Pages serves 404.html containing pageBuilder.js
+- Fetch pageConfig.jsonc
+- Set tab title
+- Paint the common template, unless specified otherwise in pageConfig
+- Get page.builder from pageConfig
+-> If builder is HTML:
+    - Fetch /pages(/foo)/bar.html
+    - Build page from HTML
+    - Replace <content>
+    -> If builder is markdown:
+    - Fetch /pages(/foo)/bar.md
+    - Fetch marked.min.js remotely
+    - Build HTML from markdown using marked.js, using plaintext markdown as fallback
+    - Replace <content>
+
+-------------------------------------------------------------------------- 
+*/
+
 const currentPathTree = window.location.pathname.split('/').filter(item => item !== '');
 console.log({ currentPathTree });
 
