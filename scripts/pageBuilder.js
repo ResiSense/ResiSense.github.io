@@ -95,7 +95,9 @@ function forceExtension(path = window.location.pathname, extension = 'html') {
 /* //! ------------------------------ HTML Builder ------------------------------ */
 function htmlBuilder(html) {
     console.log('Running HTML builder...');
-    document.body.innerHTML = html;
+    templateHTMLs['custom-content'] = html;
+    // 
+    replaceCustomTags();
 }
 
 /* //! ---------------------------- Markdown Builder ---------------------------- */
@@ -104,10 +106,12 @@ function markdownBuilder(markdown) {
     loadResource('https://cdn.jsdelivr.net/npm/marked/marked.min.js', 'script')
         .then(() => {
             console.log('Building site from markdown file...');
-            document.body.innerHTML = parseResponse(markdown);
+            templateHTMLs['custom-content'] = parseResponse(markdown);
         }).catch(() => {
             console.log('Falling back to plaintext markdown...');
-            document.body.innerHTML = markdown.replace(/  /g, '<br>');
+            templateHTMLs['custom-content'] = markdown.replace(/  /g, '<br>');
+        }).finally(() => {
+            replaceCustomTags();
         });
 }
 function parseResponse(markdown) {

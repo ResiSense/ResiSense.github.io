@@ -15,9 +15,14 @@ function fetchConfig(path) {
     });
 }
 
-function fetchFile(path) {
+function fetchFile(path, catchSilentReject = false) {
     return new Promise((resolve, reject) => {
-        fetch(path).then(response => resolve(response.text()))
+        fetch(path)
+            .then(response => {
+                // console.log(response);
+                if (catchSilentReject && !response.ok) { reject(undefined); }
+                resolve(response.text());
+            }).catch(error => reject(error));
     });
 }
 
