@@ -1,3 +1,7 @@
+/* -------------------------------------------------------------------------- */
+/*                                  Fetching                                  */
+/* -------------------------------------------------------------------------- */
+
 function getPageConfig() {
     return fetchConfig('/meta/pageConfig.jsonc');
 }
@@ -17,6 +21,9 @@ function fetchConfig(path) {
 
 function fetchFile(path, catchSilentReject = false) {
     return new Promise((resolve, reject) => {
+        // technically unnecessary, but it's a good idea to prevent erroneous content templates
+        if (path.match(/.*content(\.[a-z]+)?$/)) { reject(undefined); }
+        // 
         fetch(path)
             .then(response => {
                 // console.log(response);
@@ -42,6 +49,8 @@ function loadResource(path, type) {
         document.head.appendChild(resource);
     });
 }
+
+/* -------------------------------------------------------------------------- */
 
 function toTitleCase(string) {
     return string.replace(/\b\w/g, match => match.toUpperCase());
