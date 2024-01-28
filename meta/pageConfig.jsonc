@@ -24,8 +24,18 @@
             "builder": "markdown"
         },
         {
-            "name": "introduction",
-            "builder": "markdown"
+            "name": "project",
+            "builder": "markdown",
+            "pages": [
+                {
+                    "name": "overview",
+                    "builder": "markdown"
+                },
+                {
+                    "name": "design",
+                    "builder": "markdown"
+                }
+            ]
         }
     ]
 }
