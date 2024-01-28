@@ -73,6 +73,10 @@ function replaceCustomTags(element = document.body, depth = 0) {
         loadResource(element.getAttribute('src'), resourceType.js);
         element.remove();
     });
+    Array.from(element.getElementsByTagName('custom-css')).forEach(element => {
+        loadResource(element.getAttribute('href'), resourceType.css);
+        element.remove();
+    });
     return;
 }
 
