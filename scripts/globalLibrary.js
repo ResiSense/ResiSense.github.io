@@ -51,3 +51,14 @@ function loadResource(path, type) {
         document.head.appendChild(resource);
     });
 }
+
+function getUrlParameters() {
+    if (!window.location.search) return {};
+    const parameters = {};
+    const keyValues = window.location.search.replace('?', '').split('&');
+    keyValues.forEach(keyValue => {
+        const [key, value] = keyValue.split('=');
+        parameters[key] = value;
+    });
+    return parameters;
+}

@@ -34,8 +34,7 @@ and build the page.
 -------------------------------------------------------------------------- 
 */
 
-const currentPathTree = window.location.pathname.split('/').filter(item => item !== '');
-console.log({ currentPathTree });
+const urlParameters = getUrlParameters();
 
 const builders = {
     html: htmlBuilder,
@@ -44,10 +43,14 @@ const builders = {
 
 getPageConfig().then(pageConfig => {
     // console.log({ pageConfig });
+    const currentPathTree = (urlParameters.page || window.location.pathname).split('/').filter(item => item !== '');
+    console.log({ currentPathTree });
 
-    const notFoundPage = fetchPage(pageConfig.pages, ['404']);
-    const page = fetchPage(pageConfig.pages, currentPathTree) || notFoundPage;
+    // determine page
+    const page = fetchPage(pageConfig.pages, currentPathTree) || fetchPage(pageConfig.pages, ['404']);
     console.log({ page });
+    const useablePathTree = page.name == '404' ? ['404'] : currentPathTree;
+    if (page.name == '404') { delete (currentPathTree); }
 
     // set title
     document.title = page.title ? page.title : toTitleCase(page.name);
@@ -55,7 +58,7 @@ getPageConfig().then(pageConfig => {
     // build page
     switch (page.builder) {
         case 'markdown':
-            fetchFile(forceExtension(`/pages${window.location.pathname}`, 'md'))
+            fetchFile(forceExtension(`/pages/${useablePathTree.join('/')}`, 'md'))
                 .then(markdown => {
                     // console.log(markdown);
                     builders.markdown(markdown);
@@ -64,7 +67,7 @@ getPageConfig().then(pageConfig => {
 
         case 'html':
         default:
-            fetchFile(forceExtension(`/pages${window.location.pathname}`, 'html'))
+            fetchFile(forceExtension(`/pages${useablePathTree.join('/')}`, 'html'))
                 .then(html => {
                     builders.html(html);
                 });
@@ -72,6 +75,7 @@ getPageConfig().then(pageConfig => {
     }
 });
 function fetchPage(pages, pathTree) {
+    if (!pages) { return null };
     for (let i = 0; i < pages.length; i++) {
         const page = pages[i];
         if (page.name === pathTree[0]) {
@@ -82,6 +86,7 @@ function fetchPage(pages, pathTree) {
             }
         }
     }
+    return null;
 }
 function forceExtension(path = window.location.pathname, extension = 'html') {
     return `${path.replace(/\..*$/, '')}.${extension}`
