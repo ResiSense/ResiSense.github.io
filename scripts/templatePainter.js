@@ -17,7 +17,7 @@ Yes I am basically reinventing React. No I don't care because this is fun.
 */
 
 const templateHTMLs = {};
-replaceCustomTags();
+window.addEventListener('load', () => replaceCustomTags());
 
 function replaceCustomTags(element = document.body, depth = 0) {
     console.log(`Replacing custom tags in ${element.tagName}...`);
