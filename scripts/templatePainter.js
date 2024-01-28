@@ -28,8 +28,8 @@ function replaceCustomTags(element = document.body, depth = 0) {
 
     tags.forEach(tagName => {
         tagName = tagName.replace(/<|>/g, '');
-
         const elements = element.getElementsByTagName(tagName);
+
         // console.log({ elements });
         var useableTemplateHTML = undefined;
         if (templateHTMLs[tagName] !== undefined) {
@@ -52,18 +52,28 @@ function replaceCustomTags(element = document.body, depth = 0) {
 
         //
         function insertTemplateHTML() {
-            // ? HTML collection is live, so mutating it while iterating over it is a bad idea
             Array.from(elements).forEach(element => {
                 // console.log(element);
-                const processedElement = document.createElement(`processed-${element.tagName}`);
-                element.parentNode.replaceChild(processedElement, element);
-                element.remove();
+                const processedElement = markAsProcessed(element);
                 if (useableTemplateHTML) {
                     processedElement.innerHTML = useableTemplateHTML;
                     replaceCustomTags(processedElement, depth + 1);
                 }
             });
         }
+        function markAsProcessed(element) {
+            const processedElement = document.createElement(`processed-${element.tagName}`);
+            element.parentNode.replaceChild(processedElement, element);
+            element.remove();
+            return processedElement;
+        }
     });
+
+    Array.from(element.getElementsByTagName('custom-use-script')).forEach(element => {
+        loadResource(element.getAttribute('src'), resourceType.script);
+        markAsProcessed(element);
+    });
+    return;
 }
+
 
