@@ -34,9 +34,9 @@ function fetchFile(path, catchSilentReject = false) {
 }
 
 const resourceType = Object.freeze({
-    // colloquial name: HTML tag name
-    script: 'script',
-    stylesheet: 'style',
+    // colloquial/extension name: HTML tag name
+    js: 'script',
+    css: 'style',
 });
 function loadResource(path, type) {
     // console.log(`Promising ${type} from ${path}...`);
