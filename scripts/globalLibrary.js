@@ -26,6 +26,23 @@ function fetchFile(path, catchSilentReject = false) {
     });
 }
 
+const resourceType = Object.freeze({
+    // colloquial name: HTML tag name
+    script: 'script',
+    stylesheet: 'style',
+});
+function loadResource(path, type) {
+    // console.log(`Promising ${type} from ${path}...`);
+    return new Promise((resolve, reject) => {
+        console.log(`Fetching ${type} from ${path}...`);
+        const resource = document.createElement(type);
+        resource.onload = resolve;
+        resource.onerror = reject;
+        resource.src = path;
+        document.head.appendChild(resource);
+    });
+}
+
 function toTitleCase(string) {
     return string.replace(/\b\w/g, match => match.toUpperCase());
 }
@@ -43,18 +60,6 @@ function waitForVariable(variableName, timeLimit = 1000) {
         }
         console.log(`${variableName} exists`);
     })();
-}
-
-function loadResource(path, type) {
-    console.log(`Promising ${type} from ${path}...`);
-    return new Promise((resolve, reject) => {
-        console.log(`Fetching ${type} from ${path}...`);
-        const resource = document.createElement(type);
-        resource.onload = resolve;
-        resource.onerror = reject;
-        resource.src = path;
-        document.head.appendChild(resource);
-    });
 }
 
 function getUrlParameters() {

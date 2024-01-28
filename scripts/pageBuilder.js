@@ -103,7 +103,7 @@ function htmlBuilder(html) {
 /* //! ---------------------------- Markdown Builder ---------------------------- */
 function markdownBuilder(markdown) {
     console.log('Running markdown builder...');
-    loadResource('https://cdn.jsdelivr.net/npm/marked/marked.min.js', 'script')
+    loadResource('https://cdn.jsdelivr.net/npm/marked/marked.min.js', resourceType.script)
         .then(() => {
             console.log('Building site from markdown file...');
             templateHTMLs['custom-content'] = parseResponse(markdown);
