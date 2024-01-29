@@ -1,21 +1,48 @@
 .searchbar {
-    font-family: 'Baloo 2', 'Trebuchet MS', 'Lucida Sans Unicode', Arial, sans-serif;
-    font-weight: 600;
-    font-size: 0.9rem;
     background-color: var(--pale-green);
     border-color: var(--light-green);
     border-radius: 0.5rem;
     border-style: solid;
     border-width: 0.2rem;
-    padding: 0.1rem 0.5rem;
+}
+
+.searchfield {
+    background-color: transparent;
+    border: none;
+    font-family: 'Baloo 2', 'Trebuchet MS', 'Lucida Sans Unicode', Arial, sans-serif;
+    font-weight: 600;
+    font-size: 0.9rem;
+    padding: 0.1rem 0.1rem 0.1rem 0.5rem;
     color: var(--dark-green);
 }
 
-.searchbar::placeholder {
+.searchfield::placeholder {
     color: var(--light-green);
 }
 
-.searchbar:focus {
+.searchfield:focus {
     outline: none;
     border-color: var(--dark-green);
+}
+
+.search-button {
+    background-color: var(--light-green);
+    border: none;
+    cursor: pointer;
+    font-family: 'Baloo 2', 'Trebuchet MS', 'Lucida Sans Unicode', Arial, sans-serif;
+    font-weight: 600;
+    font-size: 0.9rem;
+    padding: 0.1em 0.2rem 0.1rem 0.3rem;
+}
+
+.searchfield::-webkit-search-cancel-button {
+    -webkit-appearance: none;
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    margin-left: 10px;
+    background:
+        linear-gradient(45deg, transparent 0%, transparent 43%, var(--dark-green) 45%, var(--dark-green) 55%, transparent 57%, transparent 100%),
+        linear-gradient(135deg, transparent 0%, transparent 43%, var(--dark-green) 45%, var(--dark-green) 55%, transparent 57%, transparent 100%);
+    cursor: pointer;
 }

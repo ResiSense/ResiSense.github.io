@@ -1,8 +1,8 @@
-const searchbarElement = document.getElementById('searchbar');
+const searchfieldElement = document.getElementById('searchfield');
 const searchButtonElement = document.getElementById('search-button');
 
 searchButtonElement.addEventListener('click', () => {
-    const searchQuery = searchbarElement.value;
+    const searchQuery = searchfieldElement.value;
     console.log(searchQuery);
     getPageConfig().then(pageConfig => {
         console.log(listPages(pageConfig));
