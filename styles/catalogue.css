@@ -17,3 +17,12 @@
     text-decoration: underline;
     font-weight: 700;
 }
+
+.catalogue-divider {
+    color: var(--desaturated-orange);
+    font-weight: 500;
+}
+
+.catalogue-divider:last-child {
+    display: none;
+}
