@@ -42,40 +42,51 @@ const builders = {
 }
 
 var currentPathTree = undefined;
-getPageConfig().then(pageConfig => {
-    // console.log({ pageConfig });
-    const pathTree = (urlParameters.page || window.location.pathname).split('/').filter(item => item !== '');
-    console.log({ currentPathTree: pathTree });
 
-    // determine page
-    const page = fetchPage(pageConfig.pages, pathTree) || fetchPage(pageConfig.pages, ['404']);
-    console.log({ page });
-    currentPathTree = page.name == '404' ? ['404'] : pathTree;
-    if (page.name == '404') { delete (pathTree); }
+buildPage();
+function buildPage(forcedPagePath = undefined) {
+    getPageConfig().then(pageConfig => {
+        // console.log({ pageConfig });
+        const pathTree = (forcedPagePath || urlParameters.page || window.location.pathname).split('/').filter(item => item !== '');
+        console.log({ currentPathTree: pathTree });
 
-    // set title
-    document.title = page.title ? page.title : toTitleCase(page.name);
+        // determine page
+        const page = getPageFromPathTree(pageConfig.pages, pathTree) || getPageFromPathTree(pageConfig.pages, ['404']);
+        console.log({ page });
+        currentPathTree = page.name == '404' ? ['404'] : pathTree;
+        if (page.name == '404') { delete (pathTree); }
 
-    // build page
-    switch (page.builder) {
-        case 'markdown':
-            fetchFile(forceExtension(`/pages/${currentPathTree.join('/')}`, 'md'))
-                .then(markdown => {
-                    // console.log(markdown);
-                    builders.markdown(markdown);
-                });
-            break;
+        // set title
+        document.title = page.title ? page.title : toTitleCase(page.name);
 
-        case 'html':
-        default:
-            fetchFile(forceExtension(`/pages${currentPathTree.join('/')}`, 'html'))
-                .then(html => {
-                    builders.html(html);
-                });
-            break;
-    }
-});
-function fetchPage(pages, pathTree) {
+        // build page
+        switch (page.builder) {
+            case 'markdown':
+                fetchFile(forceExtension(`/pages/${currentPathTree.join('/')}`, 'md'))
+                    .then(markdown => {
+                        // console.log(markdown);
+                        builders.markdown(markdown);
+                    }).catch(() => {
+                        buildPage('404');
+                        return;
+                    });
+                break;
+
+            case 'html':
+            default:
+                fetchFile(forceExtension(`/pages${currentPathTree.join('/')}`, 'html'))
+                    .then(html => {
+                        builders.html(html);
+                    }).catch(() => {
+                        buildPage('404');
+                        return;
+                    });
+                break;
+        }
+    });
+}
+
+function getPageFromPathTree(pages, pathTree) {
     if (!pages) { return null };
     for (let i = 0; i < pages.length; i++) {
         const page = pages[i];
@@ -83,7 +94,7 @@ function fetchPage(pages, pathTree) {
             if (pathTree.length === 1) {
                 return page;
             } else {
-                return fetchPage(page.pages, pathTree.slice(1));
+                return getPageFromPathTree(page.pages, pathTree.slice(1));
             }
         }
     }
