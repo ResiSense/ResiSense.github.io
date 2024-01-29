@@ -31,14 +31,14 @@ function fetchFile(path, catchSilentReject = false) {
             .then(response => {
                 // console.log(response);
                 if (catchSilentReject && !response.ok) {
-                    console.log(`Fetching ${type} from ${path} failed!`);
+                    console.log(`Fetching from ${path} failed!`);
                     reject(undefined);
                     return;
                 }
-                console.log(`Fetching ${type} from ${path} succeeded`);
+                console.log(`Fetching from ${path} succeeded`);
                 resolve(response.text());
             }).catch(error => {
-                console.log(`Fetching ${type} from ${path} failed!`);
+                console.log(`Fetching from ${path} failed!`);
                 reject(error);
                 return;
             });
