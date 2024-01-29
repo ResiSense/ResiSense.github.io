@@ -1,0 +1,19 @@
+.catalogue {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    gap: 1rem;
+    flex-direction: row;
+}
+
+.catalogue-item>a {
+    color: var(--desaturated-orange);
+    font-weight: 500;
+    text-decoration: none;
+}
+
+.catalogue-item.catalogue-item-active>a {
+    color: var(--saturated-orange);
+    text-decoration: underline;
+    font-weight: 700;
+}

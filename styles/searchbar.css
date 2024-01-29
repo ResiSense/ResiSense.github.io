@@ -1,0 +1,21 @@
+.searchbar {
+    font-family: 'Baloo 2', 'Trebuchet MS', 'Lucida Sans Unicode', Arial, sans-serif;
+    font-weight: 600;
+    font-size: 0.9rem;
+    background-color: var(--pale-green);
+    border-color: var(--light-green);
+    border-radius: 0.5rem;
+    border-style: solid;
+    border-width: 0.2rem;
+    padding: 0.1rem 0.5rem;
+    color: var(--dark-green);
+}
+
+.searchbar::placeholder {
+    color: var(--light-green);
+}
+
+.searchbar:focus {
+    outline: none;
+    border-color: var(--dark-green);
+}
