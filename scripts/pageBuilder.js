@@ -39,6 +39,11 @@ const builders = Object.freeze({
     markdown: markdownBuilder,
 });
 
+// FIXME: Find a way to actually detect when the page is fully built
+setTimeout(() => {
+    document.body.classList.remove('preload')
+}, 1000);
+
 var currentPathTree = undefined;
 getPageConfig().then(pageConfig => {
     // console.log({ pageConfig });
@@ -68,7 +73,7 @@ getPageConfig().then(pageConfig => {
                         buildPage('404');
                         return;
                     });
-                break;
+                return;
 
             case 'html':
             default:
@@ -79,8 +84,8 @@ getPageConfig().then(pageConfig => {
                         buildPage('404');
                         return;
                     });
-                break;
-        }
+                return;
+        };
     }
 });
 

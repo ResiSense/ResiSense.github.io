@@ -1,5 +1,8 @@
 * {
     /* outline: 1px dotted rgba(255, 0, 255, 0.2); */
+}
+
+body:not(.preload) * {
     transition: all 0.15s ease-in-out;
 }
 
