@@ -1,0 +1,30 @@
+* {
+    /* outline: 1px dotted rgba(255, 0, 255, 0.2); */
+    transition: all 0.15s ease-in-out;
+}
+
+:root {
+    --white: #fcfcf7;
+
+    --pale-green: #d4dbb1;
+    --light-green: #aeb992;
+    --dark-green: #4c523a;
+    --deep-green: #40422f;
+
+    --bright-brown: #f4e2c9;
+    --pale-brown: #b49a7f;
+
+    --desaturated-orange: #f2d49b;
+    --saturated-orange: #f3922d;
+}
+
+body {
+    color-scheme: light;
+    background-color: var(--white);
+    color: black;
+    margin: 0;
+    /* padding: 0 5rem; */
+    font-family: 'Baloo 2', 'Trebuchet MS', 'Lucida Sans Unicode', Arial, sans-serif;
+    /* font-family: 'Bellota Text', 'Trebuchet MS', 'Lucida Sans Unicode', Arial, sans-serif; */
+    font-weight: 500;
+}

@@ -3,21 +3,23 @@
     The entries are only for .html-less pages with generic styles that are able to be built with minimal effort.
     Pages with their own dedicated .html file need not be included here although it is still recommended.
 
-    name        (required): Name of the HTML document.
+    name                (required): Name of the HTML document.
 
-    title?      (optional): Title of the HTML document. If unspecified, a title case of the name will be used.
-    builder?    (optional): Page builder to use. Default is "html".
-                            | html      - Plain vanilla HTML
-                            | markdown  - Markdown page builder
-                            | custom    - Custom page builder
-    pages?      (optional): Array of pages hierarchically under this page, with "parent name/ child name" as their url path.
+    title?              (optional): Title of the HTML document. If unspecified, a title case of the name will be used.
+    builder?            (optional): Page builder to use. Default is "html".
+                                    | html      - Plain vanilla HTML
+                                    | markdown  - Markdown page builder
+                                    | custom    - Custom page builder
+    hideFromCatalogue?  (optional): Whether to hide this page from the catalogue. Default is false.
+    pages?              (optional): Array of pages hierarchically under this page, with "parent name/ child name" as their url path.
 */
 {
     "pages": [
         {
             "name": "404",
             "title": "Page not found ☹️",
-            "builder": "markdown"
+            "builder": "markdown",
+            "hideFromCatalogue": true
         },
         {
             "name": "home",
@@ -36,6 +38,10 @@
                     "builder": "markdown"
                 }
             ]
+        },
+        {
+            "name": "about us",
+            "builder": "markdown"
         }
     ]
 }

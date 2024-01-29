@@ -41,16 +41,17 @@ const builders = {
     markdown: markdownBuilder,
 }
 
+var currentPathTree = undefined;
 getPageConfig().then(pageConfig => {
     // console.log({ pageConfig });
-    const currentPathTree = (urlParameters.page || window.location.pathname).split('/').filter(item => item !== '');
-    console.log({ currentPathTree });
+    const pathTree = (urlParameters.page || window.location.pathname).split('/').filter(item => item !== '');
+    console.log({ currentPathTree: pathTree });
 
     // determine page
-    const page = fetchPage(pageConfig.pages, currentPathTree) || fetchPage(pageConfig.pages, ['404']);
+    const page = fetchPage(pageConfig.pages, pathTree) || fetchPage(pageConfig.pages, ['404']);
     console.log({ page });
-    const useablePathTree = page.name == '404' ? ['404'] : currentPathTree;
-    if (page.name == '404') { delete (currentPathTree); }
+    currentPathTree = page.name == '404' ? ['404'] : pathTree;
+    if (page.name == '404') { delete (pathTree); }
 
     // set title
     document.title = page.title ? page.title : toTitleCase(page.name);
@@ -58,7 +59,7 @@ getPageConfig().then(pageConfig => {
     // build page
     switch (page.builder) {
         case 'markdown':
-            fetchFile(forceExtension(`/pages/${useablePathTree.join('/')}`, 'md'))
+            fetchFile(forceExtension(`/pages/${currentPathTree.join('/')}`, 'md'))
                 .then(markdown => {
                     // console.log(markdown);
                     builders.markdown(markdown);
@@ -67,7 +68,7 @@ getPageConfig().then(pageConfig => {
 
         case 'html':
         default:
-            fetchFile(forceExtension(`/pages${useablePathTree.join('/')}`, 'html'))
+            fetchFile(forceExtension(`/pages${currentPathTree.join('/')}`, 'html'))
                 .then(html => {
                     builders.html(html);
                 });
