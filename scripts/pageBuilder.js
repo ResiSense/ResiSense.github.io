@@ -43,10 +43,11 @@ const builders = {
 
 var currentPathTree = undefined;
 
-buildPage();
-function buildPage(forcedPagePath = undefined) {
-    getPageConfig().then(pageConfig => {
-        // console.log({ pageConfig });
+getPageConfig().then(pageConfig => {
+    // console.log({ pageConfig });
+    buildPage();
+    // 
+    function buildPage(forcedPagePath = undefined) {
         const pathTree = (forcedPagePath || urlParameters.page || window.location.pathname).split('/').filter(item => item !== '');
         console.log({ currentPathTree: pathTree });
 
@@ -83,8 +84,8 @@ function buildPage(forcedPagePath = undefined) {
                     });
                 break;
         }
-    });
-}
+    }
+});
 
 function getPageFromPathTree(pages, pathTree) {
     if (!pages) { return null };
