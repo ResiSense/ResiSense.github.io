@@ -27,6 +27,7 @@
 
 .search-button {
     background-color: var(--light-green);
+    height: 100%;
     border: none;
     cursor: pointer;
     font-family: 'Baloo 2', 'Trebuchet MS', 'Lucida Sans Unicode', Arial, sans-serif;
