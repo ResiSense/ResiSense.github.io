@@ -22,14 +22,23 @@ function fetchConfig(path) {
 function fetchFile(path, catchSilentReject = false) {
     return new Promise((resolve, reject) => {
         // technically unnecessary, but it's a good idea to prevent erroneous content templates
-        if (path.match(/.*content(\.[a-z]+)?$/)) { reject(undefined); }
+        if (path.match(/.*content(\.[a-z]+)?$/)) {
+            reject(undefined);
+            return;
+        }
         // 
         fetch(path)
             .then(response => {
                 // console.log(response);
-                if (catchSilentReject && !response.ok) { reject(undefined); }
+                if (catchSilentReject && !response.ok) {
+                    reject(undefined);
+                    return;
+                }
                 resolve(response.text());
-            }).catch(error => reject(error));
+            }).catch(error => {
+                reject(error);
+                return;
+            });
     });
 }
 
@@ -77,6 +86,7 @@ function waitForVariable(variableName, timeLimit = 1000) {
             if (Date.now() - startTime > timeLimit) {
                 console.log(`${variableName} took too long to exist!`);
                 reject();
+                return;
             }
         }
         console.log(`${variableName} exists`);
