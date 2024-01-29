@@ -34,15 +34,12 @@ and build the page.
 -------------------------------------------------------------------------- 
 */
 
-const urlParameters = getUrlParameters();
-
-const builders = {
+const builders = Object.freeze({
     html: htmlBuilder,
     markdown: markdownBuilder,
-}
+});
 
 var currentPathTree = undefined;
-
 getPageConfig().then(pageConfig => {
     // console.log({ pageConfig });
     buildPage();

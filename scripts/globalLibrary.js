@@ -2,8 +2,11 @@
 /*                                  Fetching                                  */
 /* -------------------------------------------------------------------------- */
 
+var pageConfig = undefined;
 function getPageConfig() {
-    return fetchConfig('/meta/pageConfig.jsonc');
+    return pageConfig
+        ? Promise.resolve(pageConfig)
+        : fetchConfig('/meta/pageConfig.jsonc');
 }
 
 function fetchConfig(path) {
@@ -11,10 +14,13 @@ function fetchConfig(path) {
         fetch(path)
             .then(response => response.text())
             .then(data => {
-                resolve(JSON.parse(
+                const uncommentedData = JSON.parse(
                     //? Strip raw JSON text of comments
                     data.replace(/\\"|"(?:\\"|[^"])*"|(\/\/.*|\/\*[\s\S]*?\*\/)/g, (m, g) => g ? "" : m)
-                ));
+                )
+                pageConfig = uncommentedData;
+                Object.freeze(pageConfig);
+                resolve(uncommentedData);
                 return;
             });
     });
@@ -99,6 +105,7 @@ function waitForVariable(variableName, timeLimit = 1000) {
     })();
 }
 
+const urlParameters = getUrlParameters();
 function getUrlParameters() {
     if (!window.location.search) return {};
     const parameters = {};
