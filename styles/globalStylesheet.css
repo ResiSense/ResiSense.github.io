@@ -28,3 +28,7 @@ body {
     /* font-family: 'Bellota Text', 'Trebuchet MS', 'Lucida Sans Unicode', Arial, sans-serif; */
     font-weight: 500;
 }
+
+a {
+    cursor: pointer;
+}
