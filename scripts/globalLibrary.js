@@ -15,6 +15,7 @@ function fetchConfig(path) {
                     //? Strip raw JSON text of comments
                     data.replace(/\\"|"(?:\\"|[^"])*"|(\/\/.*|\/\*[\s\S]*?\*\/)/g, (m, g) => g ? "" : m)
                 ));
+                return;
             });
     });
 }
@@ -27,9 +28,10 @@ function fetchFile(path, catchSilentReject = false) {
             return;
         }
         // 
+        console.log(`Fetching from ${path}...`);
         fetch(path)
             .then(response => {
-                // console.log(response);
+                console.log(response);
                 if (catchSilentReject && !response.ok) {
                     console.log(`Fetching from ${path} failed!`);
                     reject(undefined);
@@ -37,6 +39,7 @@ function fetchFile(path, catchSilentReject = false) {
                 }
                 console.log(`Fetching from ${path} succeeded`);
                 resolve(response.text());
+                return;
             }).catch(error => {
                 console.log(`Fetching from ${path} failed!`);
                 reject(error);
