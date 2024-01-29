@@ -37,7 +37,7 @@ function replaceCustomTags(element = document.body, depth = 0) {
             insertTemplateHTML();
             return;
         } else {
-            fetchFile(`/templates/${tagName.replace('custom-', '')}.html`, true)
+            fetchFile(`/templates/${tagName.replace('custom-', '')}.html`)
                 .then(templateHTML => {
                     useableTemplateHTML = templateHTML;
                     templateHTMLs[tagName] = templateHTML;

@@ -20,7 +20,7 @@ function fetchConfig(path) {
     });
 }
 
-function fetchFile(path, catchSilentReject = false) {
+function fetchFile(path) {
     return new Promise((resolve, reject) => {
         // technically unnecessary, but it's a good idea to prevent erroneous content templates
         if (path.match(/.*content(\.[a-z]+)?$/)) {
@@ -32,7 +32,7 @@ function fetchFile(path, catchSilentReject = false) {
         fetch(path)
             .then(response => {
                 console.log(response);
-                if (catchSilentReject && !response.ok) {
+                if (!response.ok) {
                     console.log(`Fetching from ${path} failed!`);
                     reject(undefined);
                     return;
