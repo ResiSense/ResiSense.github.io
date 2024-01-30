@@ -8,19 +8,20 @@
 /* -------------------------------------------------------------------------- */
 
 header {
+    position: fixed;
     width: 100vw;
     height: var(--header-height);
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-direction: row;
 }
 
-.header-container {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-direction: row;
+.header-spacer {
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: var(--header-height);
 }
 
 .header-shelf {
