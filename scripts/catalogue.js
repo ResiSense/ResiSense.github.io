@@ -32,32 +32,3 @@ function listPages(pageConfig, pathTrace = '') {
     });
     return pages;
 }
-
-/* -------------------------------------------------------------------------- */
-
-const catalogueItems = document.getElementsByClassName("catalogue-item");
-var firstCatalogueItemLeftBoundClientPosition = undefined;
-window.addEventListener("scroll", () => {
-    const shouldHideCatalogue = window.scrollY > parseFloat(getComputedStyle(document.documentElement).fontSize);
-
-    // ? hide entire catalogue
-    // catalogueElement.style.transform = shouldHideCatalogue ? "translateY(-100%)" : "translateY(0)";
-
-    // ? hide only inactive items
-    Array.from(catalogueItems).forEach(catalogueElement => {
-        if (catalogueElement.classList.contains("catalogue-arrow")) { return; }
-        if (!firstCatalogueItemLeftBoundClientPosition) {
-            firstCatalogueItemLeftBoundClientPosition = catalogueElement.getBoundingClientRect().left;
-            Object.freeze(firstCatalogueItemLeftBoundClientPosition);
-        }
-
-        if (!catalogueElement.hasAttribute('left-bound-client-position')) { catalogueElement.setAttribute('left-bound-client-position', catalogueElement.getBoundingClientRect().left); }
-        // console.log(catalogueElement.getAttribute('left-bound-client-position'));
-        catalogueElement.style.transform = shouldHideCatalogue ?
-            `translateX(${firstCatalogueItemLeftBoundClientPosition - catalogueElement.getAttribute('left-bound-client-position')}px)`
-            : "translateX(0)";
-        if (catalogueElement.classList.contains("catalogue-item-active")) { return; }
-        catalogueElement.style.opacity = shouldHideCatalogue ? 0 : 1;
-        catalogueElement.style.pointerEvents = shouldHideCatalogue ? "none" : "auto";
-    });
-});
