@@ -35,7 +35,6 @@ function listPages(pageConfig, pathTrace = '') {
 
 /* -------------------------------------------------------------------------- */
 
-const catalogueDividerElements = document.getElementsByClassName("catalogue-divider");
 const catalogueItems = document.getElementsByClassName("catalogue-item");
 var firstCatalogueItemLeftBoundClientPosition = undefined;
 window.addEventListener("scroll", () => {
@@ -45,7 +44,8 @@ window.addEventListener("scroll", () => {
     // catalogueElement.style.transform = shouldHideCatalogue ? "translateY(-100%)" : "translateY(0)";
 
     // ? hide only inactive items
-    Array.from(catalogueItems).concat(Array.from(catalogueDividerElements)).forEach(catalogueElement => {
+    Array.from(catalogueItems).forEach(catalogueElement => {
+        if (catalogueElement.classList.contains("catalogue-arrow")) { return; }
         if (!firstCatalogueItemLeftBoundClientPosition) {
             firstCatalogueItemLeftBoundClientPosition = catalogueElement.getBoundingClientRect().left;
             Object.freeze(firstCatalogueItemLeftBoundClientPosition);
