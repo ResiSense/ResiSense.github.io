@@ -7,11 +7,7 @@
 }
 
 .catalogue-item {
-    color: var(--pale-brown);
-}
-
-.catalogue-item>a {
-    color: inherit;
+    color: var(--desaturated-orange);
     font-weight: 500;
 }
 

@@ -21,7 +21,7 @@ header {
     top: 0;
     left: 0;
     width: 100vw;
-    height: calc(var(--header-height) * 0.9);
+    height: var(--header-height);
 }
 
 .header-shelf {
@@ -33,8 +33,11 @@ header {
     align-items: start;
 }
 
-.header-items-container {
+.header-shelf>div:first-child {
     height: calc(var(--header-height) * 0.7);
+}
+
+.header-items-container {
     display: flex;
     align-items: center;
     justify-content: space-between;
