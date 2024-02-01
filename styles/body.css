@@ -28,12 +28,4 @@ main>fieldset>legend {
     border-radius: 0.5rem;
     padding: 0 0.4rem;
     text-shadow: 0 0 0.5rem var(--white);
-
-    z-index: 1;
-    position: sticky;
-    top: calc(var(--header-height) * 0.7 / 2 - 1.5rem);
-}
-
-main>fieldset>legend.hide-text-shadow {
-    text-shadow: none;
 }
