@@ -37,8 +37,8 @@ function listPages(pageConfig, pathTrace = '') {
 
 const catalogueItems = document.getElementsByClassName("catalogue-item");
 var firstCatalogueItemLeftBoundClientPosition = undefined;
-window.addEventListener("scroll", () => {
-    const shouldHideCatalogue = window.scrollY > parseFloat(getComputedStyle(document.documentElement).fontSize);
+window.addEventListener(eventType.contentScrollPastHeader, (e) => {
+    const shouldHideCatalogue = e.detail;
 
     // ? hide entire catalogue
     // catalogueElement.style.transform = shouldHideCatalogue ? "translateY(-100%)" : "translateY(0)";
