@@ -8,6 +8,7 @@
 
 .catalogue-item {
     color: var(--desaturated-orange);
+    font-size: 1rem;
     font-weight: 500;
 }
 
