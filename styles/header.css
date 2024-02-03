@@ -21,7 +21,7 @@ header {
     top: 0;
     left: 0;
     width: 100vw;
-    height: var(--header-height);
+    height: calc(var(--header-height) * 0.8);
 }
 
 .header-shelf {
