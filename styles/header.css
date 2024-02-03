@@ -3,10 +3,6 @@
     --padding-size: 0.5rem;
 }
 
-/* -------------------------------------------------------------------------- */
-/*                               Header Styling                               */
-/* -------------------------------------------------------------------------- */
-
 header {
     position: fixed;
     width: 100vw;
@@ -15,6 +11,83 @@ header {
     justify-content: space-between;
     align-items: center;
     flex-direction: row;
+
+    .logo-container {
+        height: calc(var(--header-height) - var(--padding-size) * 4);
+        aspect-ratio: 1;
+        padding: calc(var(--padding-size) * 2);
+        background-color: var(--bright-brown);
+        border-radius: 0 0 50% 50%;
+
+        .logo {
+            display: block;
+            position: relative;
+            height: 100%;
+            background-image: url('/assets/svg/Green Logo.svg');
+            background-size: 100% 100%;
+        }
+    }
+
+    .header-shelf {
+        height: var(--header-height);
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: start;
+
+        .header-items-container {
+            height: calc(var(--header-height) * 0.6);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: var(--bright-brown);
+            width: calc(100% - var(--padding-size));
+            padding-right: var(--padding-size);
+            box-shadow: var(--bright-brown) calc(var(--header-height) * -1) 0px 0px 0px;
+
+            .header-leftside {
+                display: flex;
+                justify-content: space-between;
+                flex-direction: column;
+                gap: 0.4rem;
+
+                .logo-name-text {
+                    height: 2rem;
+                    font-size: 2.2rem;
+                    font-weight: 700;
+                    color: var(--deep-green);
+                }
+
+                .logo-flavour-text {
+                    height: 1.5rem;
+                    font-size: 1.2rem;
+                    font-weight: 500;
+                    color: var(--pale-brown);
+                    text-indent: 1rem;
+                }
+            }
+
+            .header-rightside {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                gap: 1rem;
+                flex-direction: row;
+            }
+        }
+
+        .header-catalogue-container {
+            width: calc(100% - var(--padding-size) * 2);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding-left: var(--padding-size);
+            padding-right: var(--padding-size);
+            margin-top: 0.5rem;
+            margin-bottom: auto;
+        }
+    }
 }
 
 .header-spacer {
@@ -22,101 +95,4 @@ header {
     left: 0;
     width: 100vw;
     height: calc(var(--header-height) * 0.8);
-}
-
-.header-shelf {
-    height: var(--header-height);
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: start;
-}
-
-.header-items-container {
-    height: calc(var(--header-height) * 0.6);
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background-color: var(--bright-brown);
-    width: calc(100% - var(--padding-size));
-    padding-right: var(--padding-size);
-
-    box-shadow: var(--bright-brown) calc(var(--header-height) * -1) 0px 0px 0px;
-}
-
-/* -------------------------------------------------------------------------- */
-/*                                    Logo                                    */
-/* -------------------------------------------------------------------------- */
-
-.logo-container {
-    height: calc(var(--header-height) - var(--padding-size) * 4);
-    aspect-ratio: 1;
-    padding: calc(var(--padding-size) * 2);
-    background-color: var(--bright-brown);
-    border-radius: 0 0 50% 50%;
-}
-
-.logo {
-    position: relative;
-    height: 100%;
-}
-
-/* -------------------------------------------------------------------------- */
-/*                                 Header Left                                */
-/* -------------------------------------------------------------------------- */
-
-.header-leftside {
-    display: flex;
-    justify-content: space-between;
-    flex-direction: column;
-    gap: 0.4rem;
-}
-
-.logo-name-text {
-    height: 2rem;
-    font-size: 2.2rem;
-    font-weight: 700;
-    color: var(--deep-green);
-}
-
-.logo-name-text>a {
-    color: var(--deep-green);
-    text-decoration: none;
-}
-
-.logo-flavour-text {
-    height: 1.5rem;
-    font-size: 1.2rem;
-    font-weight: 500;
-    color: var(--pale-brown);
-    text-indent: 1rem;
-}
-
-
-/* -------------------------------------------------------------------------- */
-/*                                Header Right                                */
-/* -------------------------------------------------------------------------- */
-
-.header-rightside {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 1rem;
-    flex-direction: row;
-}
-
-/* -------------------------------------------------------------------------- */
-/*                              Header Catalogue                              */
-/* -------------------------------------------------------------------------- */
-
-.header-catalogue-container {
-    width: calc(100% - var(--padding-size) * 2);
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding-left: var(--padding-size);
-    padding-right: var(--padding-size);
-    margin-top: 0.5rem;
-    margin-bottom: auto;
 }
