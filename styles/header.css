@@ -13,6 +13,7 @@ header {
     flex-direction: row;
 
     .logo-container {
+        margin-left: 1rem;
         height: calc(var(--header-height) - var(--padding-size) * 4);
         aspect-ratio: 1;
         padding: calc(var(--padding-size) * 2);
@@ -44,7 +45,7 @@ header {
             background-color: var(--bright-brown);
             width: calc(100% - var(--padding-size));
             padding-right: var(--padding-size);
-            box-shadow: var(--bright-brown) calc(var(--header-height) * -1) 0px 0px 0px;
+            box-shadow: var(--bright-brown) -10rem 0px 0px 0px;
 
             .header-leftside {
                 display: flex;
