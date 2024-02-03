@@ -20,6 +20,8 @@ function buildCatalogue() {
             const catalogueDividerElement = catalogueDividerTemplateElement.content.cloneNode(true);
             catalogueElement.appendChild(catalogueDividerElement);
         });
+
+        window.dispatchEvent(new CustomEvent(eventType.catalogueBuilt));
     });
 }
 
@@ -36,7 +38,14 @@ function listPages(pageConfig, pathTrace = '') {
 /* -------------------------------------------------------------------------- */
 
 const catalogueItems = document.getElementsByClassName("catalogue-item");
-var firstCatalogueItemLeftBoundClientPosition = undefined;
+window.addEventListener(eventType.catalogueBuilt, (e) => {
+    // maybe recompute this on window resize
+    Array.from(catalogueItems).forEach(catalogueElement => {
+        const firstCatalogueItemLeftBoundClientPosition = document.querySelector('.catalogue-item:not(.catalogue-arrow)').getBoundingClientRect().left;
+        const catalogueItemLeftBoundClientPosition = catalogueElement.getBoundingClientRect().left;
+        catalogueElement.setAttribute('translate-amount', firstCatalogueItemLeftBoundClientPosition - catalogueItemLeftBoundClientPosition);
+    });
+});
 window.addEventListener(eventType.contentScrollPastHeader, (e) => {
     const shouldHideCatalogue = e.detail;
 
@@ -45,19 +54,10 @@ window.addEventListener(eventType.contentScrollPastHeader, (e) => {
 
     // ? hide only inactive items
     Array.from(catalogueItems).forEach(catalogueElement => {
+        // ? remove this when attr() has better browser support
         if (catalogueElement.classList.contains("catalogue-arrow")) { return; }
-        if (!firstCatalogueItemLeftBoundClientPosition) {
-            firstCatalogueItemLeftBoundClientPosition = catalogueElement.getBoundingClientRect().left;
-            Object.freeze(firstCatalogueItemLeftBoundClientPosition);
-        }
+        catalogueElement.style.translate = shouldHideCatalogue ? `${catalogueElement.getAttribute('translate-amount')}px` : 0;
 
-        if (!catalogueElement.hasAttribute('left-bound-client-position')) { catalogueElement.setAttribute('left-bound-client-position', catalogueElement.getBoundingClientRect().left); }
-        // console.log(catalogueElement.getAttribute('left-bound-client-position'));
-        catalogueElement.style.transform = shouldHideCatalogue ?
-            `translateX(${firstCatalogueItemLeftBoundClientPosition - catalogueElement.getAttribute('left-bound-client-position')}px)`
-            : "translateX(0)";
-        if (catalogueElement.classList.contains("catalogue-item-active")) { return; }
-        catalogueElement.style.opacity = shouldHideCatalogue ? 0 : 1;
-        catalogueElement.style.pointerEvents = shouldHideCatalogue ? "none" : "auto";
+        catalogueElement.classList.toggle("catalogue-item-hidden", shouldHideCatalogue);
     });
 });

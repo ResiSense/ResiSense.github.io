@@ -21,6 +21,13 @@
                 font-weight: 700;
             }
         }
+
+        &.catalogue-item-hidden:not(.catalogue-item-active, .catalogue-item-arrow) {
+            /* ? wait for browser support */
+            /* translate: attr(translate-amount)'px'; */
+            opacity: 0;
+            pointer-events: none;
+        }
     }
 
     .catalogue-divider:last-child {
