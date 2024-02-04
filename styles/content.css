@@ -4,32 +4,36 @@ processed-custom-content {
     h1,
     h2,
     h3,
-    h4,
-    h5 {
+    h4 {
         margin: 0;
         position: sticky;
         /* outline: 1px dashed magenta; */
         box-shadow: 0 -20px 0 0 var(--pale-green);
+        top: var(--this-top);
+        scroll-margin-top: var(--this-top);
     }
 
     h1 {
         z-index: 5;
         background: linear-gradient(to bottom, var(--pale-green) 80%, transparent 100%);
-        top: 5rem;
-        scroll-margin-top: 5rem;
+        --this-top: 5rem;
     }
 
     h2 {
         z-index: 4;
         background: linear-gradient(to bottom, var(--pale-green) 90%, transparent 100%);
-        top: 7.5rem;
-        scroll-margin-top: 7.5rem;
+        --this-top: 7.5rem;
     }
 
-    /* h3 {
+    h3 {
         z-index: 3;
         background: linear-gradient(to bottom, var(--pale-green) 95%, transparent 100%);
-        top: 9.5rem;
-        scroll-margin-top: 9.5rem;
-    } */
+        --this-top: 9.5rem;
+    }
+
+    h4 {
+        z-index: 2;
+        background: linear-gradient(to bottom, var(--pale-green) 95%, transparent 100%);
+        --this-top: 11rem;
+    }
 }
