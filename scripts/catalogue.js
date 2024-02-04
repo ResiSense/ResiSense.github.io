@@ -40,9 +40,12 @@ const catalogueItems = document.getElementsByClassName("catalogue-item");
 window.addEventListener(eventType.catalogueBuilt, (e) => {
     // maybe recompute this on window resize
     Array.from(catalogueItems).forEach(catalogueElement => {
-        const firstCatalogueItemLeftBoundClientPosition = document.querySelector('.catalogue-item:not(.catalogue-arrow)').getBoundingClientRect().left;
-        const catalogueItemLeftBoundClientPosition = catalogueElement.getBoundingClientRect().left;
-        catalogueElement.setAttribute('translate-amount', firstCatalogueItemLeftBoundClientPosition - catalogueItemLeftBoundClientPosition);
+        waitForRender(catalogueElement)
+            .then(() => {
+                const firstCatalogueItemLeftBoundClientPosition = document.querySelector('.catalogue-item:not(.catalogue-arrow)').getBoundingClientRect().left;
+                const catalogueItemLeftBoundClientPosition = catalogueElement.getBoundingClientRect().left;
+                catalogueElement.setAttribute('translate-amount', firstCatalogueItemLeftBoundClientPosition - catalogueItemLeftBoundClientPosition);
+            });
     });
 });
 window.addEventListener(eventType.contentScrollPastHeader, (e) => {

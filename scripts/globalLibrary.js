@@ -119,6 +119,18 @@ function waitForVariable(variableName, timeLimit = 1000) {
     })();
 }
 
+function waitForRender(element) {
+    return new Promise((resolve, reject) => {
+        const observer = new MutationObserver(() => {
+            if (document.contains(element)) {
+                observer.disconnect();
+                resolve();
+            }
+        })
+        observer.observe(element, { attributes: true });
+    });
+}
+
 const urlParameters = getUrlParameters();
 function getUrlParameters() {
     if (!window.location.search) return {};
