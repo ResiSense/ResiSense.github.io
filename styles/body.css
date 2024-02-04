@@ -9,6 +9,7 @@
     main {
         width: 60%;
         color: var(--deep-green);
+        margin-bottom: 50vh;
 
         fieldset {
             background-color: var(--pale-green);
