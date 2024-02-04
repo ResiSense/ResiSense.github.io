@@ -5,6 +5,9 @@ const eventType = Object.freeze({
     // 
     contentScrollPastHeader: 'contentScrollPastHeader',
 });
+Object.keys(eventType).forEach(key => {
+    window.addEventListener(eventType[key], () => { console.warn(`Event: ${eventType[key]}`) });
+});
 
 /* -------------------------------------------------------------------------- */
 /*                                  Fetching                                  */
