@@ -137,13 +137,6 @@ function markdownBuilder(markdown) {
 }
 function parseResponse(markdown) {
     console.log('Parsing markdown...');
-
-    marked.use({
-        headerIds: true,
-        smartypants: true
-    });
-    let result = marked.parse(markdown);
-
-    // console.log(result);
-    return result;
+    marked.use({ gfm: true });
+    return marked.parse(markdown);
 }
