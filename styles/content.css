@@ -1,58 +1,59 @@
 processed-custom-content {
     isolation: isolate;
 
-    section {
+    p {
+        text-align: justify;
+    }
 
-        h1,
-        h2,
-        h3,
-        h4,
-        h5,
-        h6 {
-            margin: 0;
-            position: sticky;
-            /* outline: 1px dashed magenta; */
-            box-shadow: 0 -20px 0 0 var(--pale-green);
-            top: var(--this-top);
-            scroll-margin-top: var(--this-top);
-            font-weight: bold;
-        }
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        margin: 0;
+        position: sticky;
+        /* outline: 1px dashed magenta; */
+        box-shadow: 0 -20px 0 0 var(--pale-green);
+        top: var(--this-top);
+        scroll-margin-top: var(--this-top);
+        font-weight: bold;
+    }
 
-        h1 {
-            z-index: 5;
-            background: linear-gradient(to bottom, var(--pale-green) 80%, transparent 100%);
-            --this-top: 5rem;
-            font-size: 2em;
-        }
+    h1 {
+        z-index: 5;
+        background: linear-gradient(to bottom, var(--pale-green) 80%, transparent 100%);
+        --this-top: 5rem;
+        font-size: 2em;
+    }
 
-        h2 {
-            z-index: 4;
-            background: linear-gradient(to bottom, var(--pale-green) 90%, transparent 100%);
-            --this-top: 7.5rem;
-        }
+    h2 {
+        z-index: 4;
+        background: linear-gradient(to bottom, var(--pale-green) 90%, transparent 100%);
+        --this-top: 7.5rem;
+    }
 
-        h3 {
-            z-index: 3;
-            background: linear-gradient(to bottom, var(--pale-green) 95%, transparent 100%);
-            --this-top: 9.5rem;
-        }
+    h3 {
+        z-index: 3;
+        background: linear-gradient(to bottom, var(--pale-green) 95%, transparent 100%);
+        --this-top: 9.5rem;
+    }
 
-        h4 {
-            z-index: 2;
-            background: linear-gradient(to bottom, var(--pale-green) 95%, transparent 100%);
-            --this-top: 11rem;
-        }
+    h4 {
+        z-index: 2;
+        background: linear-gradient(to bottom, var(--pale-green) 95%, transparent 100%);
+        --this-top: 11rem;
+    }
 
-        h5 {
-            z-index: 1;
-            background: linear-gradient(to bottom, var(--pale-green) 95%, transparent 100%);
-            --this-top: 12.4rem;
-        }
+    h5 {
+        z-index: 1;
+        background: linear-gradient(to bottom, var(--pale-green) 95%, transparent 100%);
+        --this-top: 12.4rem;
+    }
 
-        h6 {
-            z-index: 0;
-            background: linear-gradient(to bottom, var(--pale-green) 95%, transparent 100%);
-            --this-top: 13.5rem;
-        }
+    h6 {
+        z-index: 0;
+        background: linear-gradient(to bottom, var(--pale-green) 95%, transparent 100%);
+        --this-top: 13.5rem;
     }
 }
