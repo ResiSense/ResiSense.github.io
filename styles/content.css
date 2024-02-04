@@ -1,39 +1,46 @@
 processed-custom-content {
     isolation: isolate;
 
-    h1,
-    h2,
-    h3,
-    h4 {
-        margin: 0;
-        position: sticky;
-        /* outline: 1px dashed magenta; */
-        box-shadow: 0 -20px 0 0 var(--pale-green);
-        top: var(--this-top);
-        scroll-margin-top: var(--this-top);
-    }
+    section {
 
-    h1 {
-        z-index: 5;
-        background: linear-gradient(to bottom, var(--pale-green) 80%, transparent 100%);
-        --this-top: 5rem;
-    }
+        h1,
+        h2,
+        h3,
+        h4 {
+            margin: 0;
+            position: sticky;
+            /* outline: 1px dashed magenta; */
+            box-shadow: 0 -20px 0 0 var(--pale-green);
+            top: var(--this-top);
+            scroll-margin-top: var(--this-top);
+            font-weight: bold;
+        }
 
-    h2 {
-        z-index: 4;
-        background: linear-gradient(to bottom, var(--pale-green) 90%, transparent 100%);
-        --this-top: 7.5rem;
-    }
+        h1 {
+            z-index: 5;
+            background: linear-gradient(to bottom, var(--pale-green) 80%, transparent 100%);
+            --this-top: 5rem;
+            font-size: 2em;
+        }
 
-    h3 {
-        z-index: 3;
-        background: linear-gradient(to bottom, var(--pale-green) 95%, transparent 100%);
-        --this-top: 9.5rem;
-    }
+        h2 {
+            z-index: 4;
+            background: linear-gradient(to bottom, var(--pale-green) 90%, transparent 100%);
+            --this-top: 7.5rem;
+            font-size: 1.5em;
+        }
 
-    h4 {
-        z-index: 2;
-        background: linear-gradient(to bottom, var(--pale-green) 95%, transparent 100%);
-        --this-top: 11rem;
+        h3 {
+            z-index: 3;
+            background: linear-gradient(to bottom, var(--pale-green) 95%, transparent 100%);
+            --this-top: 9.5rem;
+            font-size: 1.17em;
+        }
+
+        h4 {
+            z-index: 2;
+            background: linear-gradient(to bottom, var(--pale-green) 95%, transparent 100%);
+            --this-top: 11rem;
+        }
     }
 }

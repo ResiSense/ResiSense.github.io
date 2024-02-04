@@ -135,7 +135,10 @@ function markdownBuilder(markdown) {
             replaceCustomTags();
         });
 
-    window.addEventListener(eventType.templatePainted, addIdToHeadings);
+    window.addEventListener(eventType.templatePainted, () => {
+        addIdToHeadings();
+        wrapHeadingSectionsInSections();
+    });
 }
 function parseResponse(markdown) {
     console.log('Parsing markdown...');
@@ -148,4 +151,30 @@ function addIdToHeadings() {
         heading.id = heading.textContent.replace(/ /g, '-');
         window.location = `#${window.location.hash.substring(1)}`;
     });
+}
+function wrapHeadingSectionsInSections() {
+    console.log('Wrapping heading sections...');
+    wrapHeadingSection(document.getElementsByTagName('processed-custom-content')[0], 0);
+    // 
+    function wrapHeadingSection(wrapParentElement, level) {
+        const headerTagNames = ['H1', 'H2', 'H3', 'H4', 'H5', 'H6'];
+        const headingTagName = headerTagNames[level];
+        Array.from(wrapParentElement.getElementsByTagName(headingTagName)).forEach(heading => {
+            const children = [];
+
+            children.push(heading);
+            let nextElement = heading.nextElementSibling;
+            while (nextElement && nextElement.tagName !== headingTagName) {
+                children.push(nextElement);
+                nextElement = nextElement.nextElementSibling;
+            }
+
+            const sectionElement = document.createElement('section');
+            wrapParentElement.insertBefore(sectionElement, heading);
+            children.forEach(child => { sectionElement.appendChild(child); });
+
+            if (level < headerTagNames.length - 1) { wrapHeadingSection(sectionElement, level + 1); }
+        });
+
+    }
 }
