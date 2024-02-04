@@ -14,19 +14,22 @@ processed-custom-content {
 
     h1 {
         z-index: 5;
-        top: 5rem;
         background: linear-gradient(to bottom, var(--pale-green) 80%, transparent 100%);
+        top: 5rem;
+        scroll-margin-top: 5rem;
     }
 
     h2 {
         z-index: 4;
-        top: 7.5rem;
         background: linear-gradient(to bottom, var(--pale-green) 90%, transparent 100%);
+        top: 7.5rem;
+        scroll-margin-top: 7.5rem;
     }
 
     /* h3 {
         z-index: 3;
-        top: 9.5rem;
         background: linear-gradient(to bottom, var(--pale-green) 95%, transparent 100%);
+        top: 9.5rem;
+        scroll-margin-top: 9.5rem;
     } */
 }
