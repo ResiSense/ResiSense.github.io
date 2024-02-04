@@ -1,8 +1,3 @@
-const eventType = Object.freeze({
-    contentScrollPastHeader: 'contentScrollPastHeader',
-    catalogueBuilt: 'catalogueBuilt',
-});
-
 const contentScrollPastHeader = {
     old: undefined,
     current: undefined,

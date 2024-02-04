@@ -1,3 +1,11 @@
+const eventType = Object.freeze({
+    pathTreeResolved: 'pathTreeResolved',
+    templatePainted: 'templatePainted',
+    catalogueBuilt: 'catalogueBuilt',
+    // 
+    contentScrollPastHeader: 'contentScrollPastHeader',
+});
+
 /* -------------------------------------------------------------------------- */
 /*                                  Fetching                                  */
 /* -------------------------------------------------------------------------- */
@@ -37,7 +45,7 @@ function fetchFile(path) {
         console.log(`Fetching from ${path}...`);
         fetch(path)
             .then(response => {
-                console.log(response);
+                // console.log(response);
                 if (!response.ok) {
                     console.log(`Fetching from ${path} failed!`);
                     reject(undefined);
