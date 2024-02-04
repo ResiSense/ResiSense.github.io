@@ -77,11 +77,11 @@ function replaceCustomTags(element = document.body, depth = 0) {
     });
 
     Array.from(element.getElementsByTagName('custom-js')).forEach(element => {
-        promises.push(loadResource(element.getAttribute('src'), resourceType.js));
+        promises.push(loadResource(resourceType.js, element.getAttribute('src')));
         element.remove();
     });
     Array.from(element.getElementsByTagName('custom-css')).forEach(element => {
-        promises.push(loadResource(element.getAttribute('href'), resourceType.css));
+        promises.push(loadResource(resourceType.css, element.getAttribute('href')));
         element.remove();
     });
 

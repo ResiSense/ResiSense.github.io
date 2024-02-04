@@ -67,28 +67,34 @@ const resourceType = Object.freeze({
     js: 'script',
     css: 'link',
 });
-function loadResource(path, type) {
-    // console.log(`Promising ${type} from ${path}...`);
-    return new Promise((resolve, reject) => {
-        console.log(`Fetching ${type} from ${path}...`);
-        const resource = document.createElement(type);
-        document.head.appendChild(resource);
-        resource.onload = resolve;
-        resource.onerror = reject;
+function loadResource(type, ...paths) {
+    console.log(`Promising ${type} from ${paths.join(', ')}...`);
+    let promises = [];
+    paths.forEach(path => {
+        promises.push(
+            new Promise((resolve, reject) => {
+                console.log(`Fetching ${type} from ${path}...`);
+                const resource = document.createElement(type);
+                document.head.appendChild(resource);
+                resource.onload = resolve;
+                resource.onerror = reject;
 
-        switch (type) {
-            case resourceType.js:
-                resource.src = path;
-                break;
-            case resourceType.css:
-                resource.rel = 'stylesheet';
-                resource.href = path;
-                break;
-            default:
-                reject(`Unknown resource type: ${type}`);
-                return;
-        }
+                switch (type) {
+                    case resourceType.js:
+                        resource.src = path;
+                        break;
+                    case resourceType.css:
+                        resource.rel = 'stylesheet';
+                        resource.href = path;
+                        break;
+                    default:
+                        reject(`Unknown resource type: ${type} `);
+                        return;
+                }
+            })
+        );
     });
+    return Promise.all(promises);
 }
 
 /* -------------------------------------------------------------------------- */
