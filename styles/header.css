@@ -11,6 +11,7 @@ header {
     justify-content: space-between;
     align-items: center;
     flex-direction: row;
+    z-index: 1;
 
     .logo-container {
         margin-left: 1rem;

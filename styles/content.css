@@ -1,3 +1,32 @@
-h1 {
-    margin: 0;
+processed-custom-content {
+    isolation: isolate;
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5 {
+        margin: 0;
+        position: sticky;
+        /* outline: 1px dashed magenta; */
+        box-shadow: 0 -20px 0 0 var(--pale-green);
+    }
+
+    h1 {
+        z-index: 5;
+        top: 5rem;
+        background: linear-gradient(to bottom, var(--pale-green) 80%, transparent 100%);
+    }
+
+    h2 {
+        z-index: 4;
+        top: 7.5rem;
+        background: linear-gradient(to bottom, var(--pale-green) 90%, transparent 100%);
+    }
+
+    /* h3 {
+        z-index: 3;
+        top: 9.5rem;
+        background: linear-gradient(to bottom, var(--pale-green) 95%, transparent 100%);
+    } */
 }
