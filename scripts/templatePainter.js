@@ -17,7 +17,13 @@ Yes I am basically reinventing React. No I don't care because this is fun.
 */
 
 const templateHTMLs = {};
-window.addEventListener('load', () => replaceCustomTags());
+var templatePainterPromises = [];
+window.addEventListener('load', () => {
+    replaceCustomTags().then(() => {
+        console.log('All templates loaded!');
+        window.dispatchEvent(new CustomEvent(eventType.templatePainted));
+    });
+});
 
 function replaceCustomTags(element = document.body, depth = 0) {
     console.log(`Replacing custom tags in ${element.tagName}...`);
@@ -26,40 +32,41 @@ function replaceCustomTags(element = document.body, depth = 0) {
     const tags = new Set(element.innerHTML.match(/<custom-[a-zA-Z0-9][a-zA-Z0-9-]+>/g));
     // console.log(tags);
 
-    tags.forEach(tagName => {
+    const promises = Array.from(tags).map(tagName => {
         tagName = tagName.replace(/<|>/g, '');
         const elements = element.getElementsByTagName(tagName);
-
         // console.log({ elements });
+
         var useableTemplateHTML = undefined;
         if (templateHTMLs[tagName] !== undefined) {
             useableTemplateHTML = templateHTMLs[tagName];
-            insertTemplateHTML();
-            return;
+            return insertTemplateHTML();
         } else {
-            fetchFile(`/templates/${tagName.replace('custom-', '')}.html`)
+            const promise = fetchFile(`/templates/${tagName.replace('custom-', '')}.html`)
                 .then(templateHTML => {
                     useableTemplateHTML = templateHTML;
                     templateHTMLs[tagName] = templateHTML;
-                    insertTemplateHTML();
+                    return insertTemplateHTML();
                 }).catch(() => {
                     useableTemplateHTML = undefined;
                     templateHTMLs[tagName] = undefined;
                 }).finally(() => {
                     // insertTemplateHTML();
                 });
+            templatePainterPromises.push(promise);
+            return promise;
         }
 
         //
         function insertTemplateHTML() {
-            Array.from(elements).forEach(element => {
+            return Promise.all(Array.from(elements).map(element => {
                 // console.log(element);
                 const processedElement = markAsProcessed(element);
                 if (useableTemplateHTML) {
                     processedElement.innerHTML = useableTemplateHTML;
-                    replaceCustomTags(processedElement, depth + 1);
+                    return replaceCustomTags(processedElement, depth + 1);
                 }
-            });
+            }));
         }
         function markAsProcessed(element) {
             const processedElement = document.createElement(`processed-${element.tagName}`);
@@ -70,14 +77,13 @@ function replaceCustomTags(element = document.body, depth = 0) {
     });
 
     Array.from(element.getElementsByTagName('custom-js')).forEach(element => {
-        loadResource(element.getAttribute('src'), resourceType.js);
+        promises.push(loadResource(element.getAttribute('src'), resourceType.js));
         element.remove();
     });
     Array.from(element.getElementsByTagName('custom-css')).forEach(element => {
-        loadResource(element.getAttribute('href'), resourceType.css);
+        promises.push(loadResource(element.getAttribute('href'), resourceType.css));
         element.remove();
     });
-    return;
+
+    return Promise.all(promises);
 }
-
-

@@ -39,10 +39,7 @@ const builders = Object.freeze({
     markdown: markdownBuilder,
 });
 
-// FIXME: Find a way to actually detect when the page is fully built
-setTimeout(() => {
-    document.body.classList.remove('preload')
-}, 1000);
+window.addEventListener(eventType.templatePainted, () => { document.body.classList.remove('preload') });
 
 var currentPathTree = undefined;
 getPageConfig().then(pageConfig => {
@@ -57,7 +54,11 @@ getPageConfig().then(pageConfig => {
         const page = getPageFromPathTree(pageConfig.pages, pathTree) || getPageFromPathTree(pageConfig.pages, ['404']);
         console.log({ page });
         currentPathTree = page.name == '404' ? ['404'] : pathTree;
-        if (page.name == '404') { delete (pathTree); }
+        delete (pathTree);
+        if (page.name == '404') {
+            Object.freeze(currentPathTree);
+            window.dispatchEvent(new CustomEvent(eventType.pathTreeResolved));
+        }
 
         // set title
         document.title = page.title ? page.title : toTitleCase(page.name);
@@ -67,6 +68,8 @@ getPageConfig().then(pageConfig => {
             case 'markdown':
                 fetchFile(forceExtension(`/pages/${currentPathTree.join('/')}`, 'md'))
                     .then(markdown => {
+                        Object.freeze(currentPathTree);
+                        window.dispatchEvent(new CustomEvent(eventType.pathTreeResolved));
                         // console.log(markdown);
                         builders.markdown(markdown);
                     }).catch(() => {
@@ -79,6 +82,9 @@ getPageConfig().then(pageConfig => {
             default:
                 fetchFile(forceExtension(`/pages${currentPathTree.join('/')}`, 'html'))
                     .then(html => {
+                        Object.freeze(currentPathTree);
+                        window.dispatchEvent(new CustomEvent(eventType.pathTreeResolved));
+                        // 
                         builders.html(html);
                     }).catch(() => {
                         buildPage('404');

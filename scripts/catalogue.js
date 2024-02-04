@@ -2,8 +2,7 @@ const catalogueElement = document.getElementById("catalogue");
 const catalogueItemTemplateElement = document.getElementById("catalogue-item-template");
 const catalogueDividerTemplateElement = document.getElementById("catalogue-divider-template");
 
-
-buildCatalogue();
+window.addEventListener(eventType.pathTreeResolved, buildCatalogue());
 
 function buildCatalogue() {
     getPageConfig().then(pageConfig => {
