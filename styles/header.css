@@ -13,7 +13,7 @@ header {
     flex-direction: row;
     z-index: 1;
 
-    .logo-container {
+    &>.logo-container {
         margin-left: 1rem;
         height: calc(var(--header-height) - var(--padding-size) * 4);
         aspect-ratio: 1;
@@ -21,7 +21,7 @@ header {
         background-color: var(--bright-brown);
         border-radius: 0 0 50% 50%;
 
-        .logo {
+        &>.logo {
             display: block;
             position: relative;
             height: 100%;
@@ -30,7 +30,7 @@ header {
         }
     }
 
-    .header-shelf {
+    &>.header-shelf {
         height: var(--header-height);
         width: 100%;
         display: flex;
@@ -38,7 +38,7 @@ header {
         justify-content: space-between;
         align-items: start;
 
-        .header-items-container {
+        &>.header-items-container {
             height: calc(var(--header-height) * 0.6);
             display: flex;
             align-items: center;
@@ -48,20 +48,20 @@ header {
             padding-right: var(--padding-size);
             box-shadow: var(--bright-brown) -10rem 0px 0px 0px;
 
-            .header-leftside {
+            &>.header-leftside {
                 display: flex;
                 justify-content: space-between;
                 flex-direction: column;
                 gap: 0.4rem;
 
-                .logo-name-text {
+                &>.logo-name-text {
                     height: 2rem;
                     font-size: 2.2rem;
                     font-weight: 700;
                     color: var(--deep-green);
                 }
 
-                .logo-flavour-text {
+                &>.logo-flavour-text {
                     height: 1.5rem;
                     font-size: 1.2rem;
                     font-weight: 500;
@@ -70,7 +70,7 @@ header {
                 }
             }
 
-            .header-rightside {
+            &>.header-rightside {
                 display: flex;
                 justify-content: space-between;
                 align-items: center;
@@ -79,7 +79,7 @@ header {
             }
         }
 
-        .header-catalogue-container {
+        &>.header-catalogue-container {
             width: calc(100% - var(--padding-size) * 2);
             display: flex;
             align-items: center;

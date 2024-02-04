@@ -5,17 +5,17 @@
     gap: 1rem;
     flex-direction: row;
 
-    .catalogue-item {
+    &>.catalogue-item {
         color: var(--desaturated-orange);
         font-size: 1rem;
         font-weight: 500;
 
-        a {
+        & a {
             text-shadow: 0 0 1rem var(--white);
         }
 
         &.catalogue-item-active {
-            a {
+            & a {
                 color: var(--saturated-orange);
                 text-decoration: underline;
                 font-weight: 700;
@@ -30,7 +30,7 @@
         }
     }
 
-    .catalogue-divider:last-child {
+    &>.catalogue-divider:last-child {
         visibility: hidden;
     }
 }
