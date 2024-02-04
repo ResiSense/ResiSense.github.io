@@ -134,9 +134,18 @@ function markdownBuilder(markdown) {
         }).finally(() => {
             replaceCustomTags();
         });
+
+    window.addEventListener(eventType.templatePainted, addIdToHeadings);
 }
 function parseResponse(markdown) {
     console.log('Parsing markdown...');
     marked.use({ gfm: true });
     return marked.parse(markdown);
+}
+function addIdToHeadings() {
+    console.log('Adding IDs to headings...');
+    document.querySelectorAll('h1, h2, h3, h4, h5, h6').forEach(heading => {
+        heading.id = heading.textContent.replace(/ /g, '-');
+        window.location = `#${window.location.hash.substring(1)}`;
+    });
 }

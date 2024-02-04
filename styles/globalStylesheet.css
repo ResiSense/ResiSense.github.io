@@ -2,10 +2,6 @@
     /* outline: 1px dotted rgba(255, 0, 255, 0.2); */
 }
 
-body:not(.preload) * {
-    transition: all 0.2s ease-in-out;
-}
-
 :root {
     --white: #fcfcf7;
 
@@ -19,6 +15,14 @@ body:not(.preload) * {
 
     --desaturated-orange: #f2d49b;
     --saturated-orange: #f3922d;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body:not(.preload) * {
+    transition: all 0.2s ease-in-out;
 }
 
 body {
