@@ -20,38 +20,49 @@ processed-custom-content {
         font-weight: bold;
     }
 
-    h1 {
+    .scroll-marker {
+        top: var(--this-top);
+        scroll-margin-top: var(--this-top);
+    }
+
+    h1,
+    .scroll-marker[data-scroll-marker-level="H1"] {
         z-index: 5;
         background: linear-gradient(to bottom, var(--pale-green) 80%, transparent 100%);
         --this-top: 5rem;
         font-size: 2em;
     }
 
-    h2 {
+    h2,
+    .scroll-marker[data-scroll-marker-level="H2"] {
         z-index: 4;
         background: linear-gradient(to bottom, var(--pale-green) 90%, transparent 100%);
         --this-top: 7.5rem;
     }
 
-    h3 {
+    h3,
+    .scroll-marker[data-scroll-marker-level="H3"] {
         z-index: 3;
         background: linear-gradient(to bottom, var(--pale-green) 95%, transparent 100%);
         --this-top: 9.5rem;
     }
 
-    h4 {
+    h4,
+    .scroll-marker[data-scroll-marker-level="H4"] {
         z-index: 2;
         background: linear-gradient(to bottom, var(--pale-green) 95%, transparent 100%);
         --this-top: 11rem;
     }
 
-    h5 {
+    h5,
+    .scroll-marker[data-scroll-marker-level="H5"] {
         z-index: 1;
         background: linear-gradient(to bottom, var(--pale-green) 95%, transparent 100%);
         --this-top: 12.4rem;
     }
 
-    h6 {
+    h6,
+    .scroll-marker[data-scroll-marker-level="H6"] {
         z-index: 0;
         background: linear-gradient(to bottom, var(--pale-green) 95%, transparent 100%);
         --this-top: 13.5rem;

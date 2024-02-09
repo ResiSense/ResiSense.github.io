@@ -145,21 +145,32 @@ function parseResponse(markdown) {
     marked.use({ gfm: true });
     return marked.parse(markdown);
 }
+var contentHeadingElements = [];
 function addIdToHeadings() {
     console.log('Adding IDs to headings...');
     document.querySelectorAll('h1, h2, h3, h4, h5, h6').forEach(heading => {
-        heading.id = heading.textContent.replace(/ /g, '-');
+        const scrollMarker = document.createElement('div');
+        scrollMarker.classList.add('scroll-marker');
+        scrollMarker.dataset.scrollMarkerLevel = heading.tagName;
+        var id = heading.textContent.replace(/[^a-zA-Z0-9]/g, '-').replace(/-+/g, '-').replace(/^-|-$/g, '').toLowerCase();
+        while (document.getElementById(id)) { id += '-'; }
+        scrollMarker.id = id;
+        heading.id = id;
+        heading.parentElement.insertBefore(scrollMarker, heading);
+
         if (window.location.hash.substring(1)) { window.location = `#${window.location.hash.substring(1)}`; }
         contentHeadingElements.push(heading);
     });
+    Object.freeze(contentHeadingElements);
+    window.dispatchEvent(new CustomEvent(eventType.contentHeadingElementsIdentified));
 }
 function wrapHeadingSectionsInSections() {
     console.log('Wrapping heading sections...');
     wrapHeadingSection(document.getElementsByTagName('processed-custom-content')[0], 0);
     // 
     function wrapHeadingSection(wrapParentElement, level) {
-        const headerTagNames = ['H1', 'H2', 'H3', 'H4', 'H5', 'H6'];
-        const headingTagName = headerTagNames[level];
+        const headingTagNames = ['H1', 'H2', 'H3', 'H4', 'H5', 'H6'];
+        const headingTagName = headingTagNames[level];
         Array.from(wrapParentElement.getElementsByTagName(headingTagName)).forEach(heading => {
             const children = [];
 
@@ -174,8 +185,7 @@ function wrapHeadingSectionsInSections() {
             wrapParentElement.insertBefore(sectionElement, heading);
             children.forEach(child => { sectionElement.appendChild(child); });
 
-            if (level < headerTagNames.length - 1) { wrapHeadingSection(sectionElement, level + 1); }
+            if (level < headingTagNames.length - 1) { wrapHeadingSection(sectionElement, level + 1); }
         });
-
     }
 }

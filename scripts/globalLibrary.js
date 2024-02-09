@@ -2,6 +2,7 @@ const eventType = Object.freeze({
     pathTreeResolved: 'pathTreeResolved',
     templatePainted: 'templatePainted',
     catalogueBuilt: 'catalogueBuilt',
+    contentHeadingElementsIdentified: 'contentHeadingElementsIdentified',
     // 
     contentScrollPastHeader: 'contentScrollPastHeader',
 });
