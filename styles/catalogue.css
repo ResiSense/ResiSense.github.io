@@ -1,14 +1,20 @@
+processed-custom-catalogue {
+    pointer-events: none;
+}
+
 .catalogue {
     display: flex;
     justify-content: left;
     align-items: center;
     gap: 1rem;
     flex-direction: row;
+    pointer-events: none;
 
     &>.catalogue-item {
         color: var(--desaturated-orange);
         font-size: 1rem;
         font-weight: 500;
+        pointer-events: initial;
 
         & a {
             text-shadow: 0 0 1rem var(--white);

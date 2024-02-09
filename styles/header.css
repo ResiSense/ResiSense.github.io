@@ -12,6 +12,7 @@ header {
     align-items: center;
     flex-direction: row;
     z-index: 1;
+    pointer-events: none;
 
     &>.logo-container {
         margin-left: 1rem;
@@ -20,6 +21,7 @@ header {
         padding: calc(var(--padding-size) * 2);
         background-color: var(--bright-brown);
         border-radius: 0 0 50% 50%;
+        pointer-events: initial;
 
         &>.logo {
             display: block;
@@ -37,6 +39,7 @@ header {
         flex-direction: column;
         justify-content: space-between;
         align-items: start;
+        pointer-events: none;
 
         &>.header-items-container {
             height: calc(var(--header-height) * 0.6);
@@ -47,6 +50,7 @@ header {
             width: calc(100% - var(--padding-size));
             padding-right: var(--padding-size);
             box-shadow: var(--bright-brown) -10rem 0px 0px 0px;
+            pointer-events: initial;
 
             &>.header-leftside {
                 display: flex;
@@ -88,6 +92,7 @@ header {
             padding-right: var(--padding-size);
             margin-top: 0.5rem;
             margin-bottom: auto;
+            pointer-events: none;
         }
     }
 }
@@ -97,4 +102,5 @@ header {
     left: 0;
     width: 100vw;
     height: calc(var(--header-height) * 0.8);
+    pointer-events: none;
 }
