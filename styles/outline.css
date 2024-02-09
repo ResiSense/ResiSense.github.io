@@ -5,6 +5,7 @@ nav {
     border: 2px dashed var(--pale-green);
     border-radius: 1rem;
     padding: 0.8rem 0.5rem;
+    --line-height: 1.2rem;
 
     &>.outline {
         --list-indentation: 0.5rem;
@@ -15,7 +16,7 @@ nav {
         ul {
             padding: 0;
             margin-left: var(--list-indentation);
-            line-height: 120%;
+            line-height: var(--line-height);
         }
 
         &>#outline-tree {
@@ -75,6 +76,11 @@ nav {
     }
 
     &>#outline-progress-pointer {
+        width: 0;
         position: relative;
+        left: 2px;
+        line-height: var(--line-height);
+        z-index: 1;
+        pointer-events: none;
     }
 }

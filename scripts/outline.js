@@ -30,4 +30,5 @@ window.addEventListener('scroll', (e) => {
     const currentProgressOutlineElement = document.getElementById(`--outline-${latestHeading.id}`);
     const firstProgressOutlineElement = document.getElementById(`--outline-${contentHeadingElements[0].id}`);
     outlineProgressPointerElement.style.top = `${currentProgressOutlineElement.getBoundingClientRect().top - firstProgressOutlineElement.getBoundingClientRect().top}px`;
+    outlineProgressPointerElement.style.left = `${2 + currentProgressOutlineElement.getBoundingClientRect().left - firstProgressOutlineElement.getBoundingClientRect().left}px`;
 });
