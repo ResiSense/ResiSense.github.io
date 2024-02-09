@@ -149,7 +149,8 @@ function addIdToHeadings() {
     console.log('Adding IDs to headings...');
     document.querySelectorAll('h1, h2, h3, h4, h5, h6').forEach(heading => {
         heading.id = heading.textContent.replace(/ /g, '-');
-        window.location = `#${window.location.hash.substring(1)}`;
+        if (window.location.hash.substring(1)) { window.location = `#${window.location.hash.substring(1)}`; }
+        contentHeadingElements.push(heading);
     });
 }
 function wrapHeadingSectionsInSections() {
