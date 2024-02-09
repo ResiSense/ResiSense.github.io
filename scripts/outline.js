@@ -17,7 +17,7 @@ window.addEventListener(eventType.contentHeadingElementsIdentified, () => {
             currentElements[level] = outlineTreeElement.lastElementChild;
         } else {
             currentElements[level - 1].querySelector('ul').appendChild(currentElement);
-            currentElements[level] = currentElements[level - 1].lastElementChild;
+            currentElements[level] = currentElements[level - 1].querySelector('ul').lastElementChild;
         }
     });
 });
