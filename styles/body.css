@@ -41,4 +41,10 @@
             }
         }
     }
+
+    &>processed-custom-sidebar {
+        margin-left: 1rem;
+        position: sticky;
+        top: var(--header-height);
+    }
 }
