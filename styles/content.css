@@ -78,12 +78,12 @@ processed-custom-content {
         border-color: var(--dark-green);
         border-width: 3px 0 0 3px;
 
-        &>h1,
-        &>h2,
-        &>h3,
-        &>h4,
-        &>h5,
-        &>h6 {
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
             box-shadow: 0 0px 0 0 var(--blockquote-background);
             background-image: none;
         }

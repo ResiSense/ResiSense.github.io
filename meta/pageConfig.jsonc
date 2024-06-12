@@ -46,6 +46,19 @@
         {
             "name": "about us",
             "builder": "markdown"
+        },
+        {
+            "name": "integrated-human-practice",
+            "title": "Integrated Human Practice",
+            "builder": "markdown",
+            "includes": {
+                "js": [
+                    "/scripts/integrated-human-practice.js"
+                ],
+                "css": [
+                    "/styles/integrated-human-practice.css"
+                ]
+            }
         }
     ]
 }

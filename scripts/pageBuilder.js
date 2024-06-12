@@ -146,6 +146,7 @@ function markdownBuilder(markdown, includes = {}) {
     window.addEventListener(eventType.templatePainted, () => {
         addIdToHeadings();
         wrapHeadingSectionsInSections();
+        window.dispatchEvent(new CustomEvent(eventType.templatePaintedPostJobsDone));
     });
     // 
     includes.css?.forEach(css => { loadResource(resourceType.css, css) });
@@ -193,7 +194,7 @@ function wrapHeadingSectionsInSections() {
             }
 
             const sectionElement = document.createElement('section');
-            wrapParentElement.insertBefore(sectionElement, heading);
+            heading.parentNode.insertBefore(sectionElement, heading);
             children.forEach(child => { sectionElement.appendChild(child); });
 
             if (level < headingTagNames.length - 1) { wrapHeadingSection(sectionElement, level + 1); }

@@ -3,6 +3,7 @@ const eventType = Object.freeze({
     templatePainted: 'templatePainted',
     catalogueBuilt: 'catalogueBuilt',
     contentHeadingElementsIdentified: 'contentHeadingElementsIdentified',
+    templatePaintedPostJobsDone: 'templatePaintedPostJobsDone',
     // 
     contentScrollPastHeader: 'contentScrollPastHeader',
 });
