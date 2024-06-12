@@ -33,6 +33,7 @@ processed-custom-content {
         aspect-ratio: 3/4;
         overflow: hidden;
         object-fit: cover;
+        border-radius: 0;
     }
 
     &>.human-card-text-container {
