@@ -6,8 +6,7 @@ window.addEventListener(eventType.templatePaintedPostJobsDone, () => {
 
 function wrapHumanCards() {
     const humanCardEnds = document.getElementsByClassName('--human-card-above');
-    for (let i = 0; i < humanCardEnds.length; i++) {
-        const humanCardEnd = humanCardEnds[i];
+    Array.from(humanCardEnds).forEach(humanCardEnd => {
         const h3 = humanCardEnd.parentElement.parentElement.getElementsByTagName('h3')[0];
         const img = humanCardEnd.parentElement.getElementsByTagName('img')[0];
         const p = humanCardEnd.parentElement;
@@ -28,5 +27,5 @@ function wrapHumanCards() {
         for (let j = 0; j < brs.length; j++) {
             brs[j].remove();
         }
-    }
+    });
 }
