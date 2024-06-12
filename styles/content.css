@@ -16,6 +16,30 @@ processed-custom-content {
         border-radius: 1rem;
     }
 
+    table {
+        width: 100%;
+        border-collapse: collapse;
+
+        th,
+        td {
+            padding: 0 1rem;
+        }
+
+        th:not(:first-child),
+        td:not(:first-child) {
+            border-left: 1px solid var(--light-green);
+        }
+
+        th {
+            border-bottom: 1px solid var(--dark-green);
+        }
+
+        td {
+            border-top: 1px solid var(--light-green);
+        }
+
+    }
+
     h1,
     h2,
     h3,
