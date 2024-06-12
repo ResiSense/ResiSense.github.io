@@ -6,7 +6,7 @@ Our team emphasises the connection of our project design with the actual needs o
 
 # Interview
 
-> ## Probe Selection
+> ## Probe Vector Selection
 > 
 > ### Professor Margaret Ip
 > ![](https://www.med.cuhk.edu.hk/f/staff/4207/252p336/_DSC1625%20v1_1627444488.jpg)  
