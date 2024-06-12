@@ -205,7 +205,7 @@ function wrapHeadingSectionsInSections() {
 function coerceRedirectsToNewTabs() {
     console.log('Coercing redirects to new tabs...');
     document.querySelectorAll('a').forEach(link => {
-        if (!link.href.startsWith(window.location.origin) || link.href.includes(window.location.pathname)) {
+        if (!link.href.startsWith(window.location.origin)) {
             link.target = '_blank';
             link.rel = 'noopener noreferrer';
         }
