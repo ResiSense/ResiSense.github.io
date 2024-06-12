@@ -10,6 +10,10 @@
                                     | html      - Plain vanilla HTML
                                     | markdown  - Markdown page builder
                                     | custom    - Custom page builder
+    includes            (optional): {
+        js?             (optional): Array of JS file paths to include. Implementation is up to the page builder. Default is none.
+        css?            (optional): Array of CSS file paths to include. Implementation is up to the page builder. Default is none.
+    }
     hideFromCatalogue?  (optional): Whether to hide this page from the catalogue. Default is false.
     pages?              (optional): Array of pages hierarchically under this page, with "parent name/ child name" as their url path.
 */

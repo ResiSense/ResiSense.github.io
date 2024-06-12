@@ -74,7 +74,7 @@ getPageConfig().then(pageConfig => {
                         Object.freeze(currentPathTree);
                         window.dispatchEvent(new CustomEvent(eventType.pathTreeResolved));
                         // console.log(markdown);
-                        builders.markdown(markdown);
+                        builders.markdown(markdown, page.includes);
                     }).catch(() => {
                         buildPage('404');
                         return;
@@ -88,7 +88,7 @@ getPageConfig().then(pageConfig => {
                         Object.freeze(currentPathTree);
                         window.dispatchEvent(new CustomEvent(eventType.pathTreeResolved));
                         // 
-                        builders.html(html);
+                        builders.html(html, page.includes);
                     }).catch(() => {
                         buildPage('404');
                         return;
@@ -117,15 +117,20 @@ function forceExtension(path = window.location.pathname, extension = 'html') {
 }
 
 /* //! ------------------------------ HTML Builder ------------------------------ */
-function htmlBuilder(html) {
+function htmlBuilder(html, includes = {}) {
+    //$ includes are processed at the end of build, CSS before JS
     console.log('Running HTML builder...');
     templateHTMLs['custom-content'] = html;
     // 
     replaceCustomTags();
+    // 
+    includes.css?.forEach(css => { loadResource(resourceType.css, css) });
+    includes.js?.forEach(js => { loadResource(resourceType.js, js) });
 }
 
 /* //! ---------------------------- Markdown Builder ---------------------------- */
-function markdownBuilder(markdown) {
+function markdownBuilder(markdown, includes = {}) {
+    //$ includes are processed at the end of build, CSS before JS
     console.log('Running markdown builder...');
     loadResource(resourceType.js, 'https://cdn.jsdelivr.net/npm/marked/marked.min.js')
         .then(() => {
@@ -142,6 +147,9 @@ function markdownBuilder(markdown) {
         addIdToHeadings();
         wrapHeadingSectionsInSections();
     });
+    // 
+    includes.css?.forEach(css => { loadResource(resourceType.css, css) });
+    includes.js?.forEach(js => { loadResource(resourceType.js, js) });
 }
 function parseResponse(markdown) {
     console.log('Parsing markdown...');
