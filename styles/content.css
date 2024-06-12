@@ -67,4 +67,55 @@ processed-custom-content {
         background: linear-gradient(to bottom, var(--pale-green) 95%, transparent 100%);
         --this-top: 13.5rem;
     }
+
+    blockquote {
+        --blockquote-background: var(--light-green);
+        margin: 0;
+        padding: 0.5rem 1rem;
+        background: var(--blockquote-background);
+        border-radius: 1rem 0 1rem 0;
+        border-style: solid;
+        border-color: var(--dark-green);
+        border-width: 3px 0 0 3px;
+
+        &>h1,
+        &>h2,
+        &>h3,
+        &>h4,
+        &>h5,
+        &>h6 {
+            box-shadow: 0 0px 0 0 var(--blockquote-background);
+            background-image: none;
+        }
+
+        h1,
+        .scroll-marker[data-scroll-marker-level="H1"] {
+            background: linear-gradient(to bottom, var(--blockquote-background) 80%, transparent 100%);
+        }
+
+        h2,
+        .scroll-marker[data-scroll-marker-level="H2"] {
+            background: linear-gradient(to bottom, var(--blockquote-background) 90%, transparent 100%);
+        }
+
+        h3,
+        .scroll-marker[data-scroll-marker-level="H3"] {
+            background: linear-gradient(to bottom, var(--blockquote-background) 95%, transparent 100%);
+        }
+
+        h4,
+        .scroll-marker[data-scroll-marker-level="H4"] {
+            background: linear-gradient(to bottom, var(--blockquote-background) 95%, transparent 100%);
+        }
+
+        h5,
+        .scroll-marker[data-scroll-marker-level="H5"] {
+            background: linear-gradient(to bottom, var(--blockquote-background) 95%, transparent 100%);
+        }
+
+        h6,
+        .scroll-marker[data-scroll-marker-level="H6"] {
+            background: linear-gradient(to bottom, var(--blockquote-background) 95%, transparent 100%);
+        }
+    }
 }
