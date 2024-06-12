@@ -1,8 +1,19 @@
 processed-custom-content {
     isolation: isolate;
 
+    a {
+        color: var(--saturated-orange);
+        text-decoration: underline;
+    }
+
     p {
         text-align: justify;
+    }
+
+    img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 1rem;
     }
 
     h1,
