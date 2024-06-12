@@ -3,7 +3,7 @@
     border-radius: 1rem;
     overflow: hidden;
     display: grid;
-    grid-template-columns: 1fr 4fr;
+    grid-template-columns: 15% 85%;
     background-color: var(--human-card-background);
     /* color: white; */
 
