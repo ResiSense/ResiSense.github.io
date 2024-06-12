@@ -1,3 +1,8 @@
+if (currentPathTree[0] == '404') {
+    const processedCustomOutlineElement = document.getElementsByTagName('processed-custom-outline')[0];
+    processedCustomOutlineElement.style.visibility = 'hidden';
+}
+
 const outlineTreeElement = document.getElementById('outline-tree');
 const outlineHeadingTemplateElement = document.getElementById('outline-heading-template');
 
