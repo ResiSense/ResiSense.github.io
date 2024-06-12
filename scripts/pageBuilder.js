@@ -48,7 +48,7 @@ getPageConfig().then(pageConfig => {
     // 
     function buildPage(forcedPagePath = undefined) {
         const flatPathTree = (forcedPagePath || urlParameters.page || window.location.pathname);
-        window.history.pushState({}, '', flatPathTree);
+        window.history.pushState({}, '', `${flatPathTree}${window.location.hash.substring(1) ? window.location.hash : ''}`);
 
         const pathTree = flatPathTree.split('/').filter(item => item !== '');
         console.log({ currentPathTree: pathTree });
@@ -146,6 +146,7 @@ function markdownBuilder(markdown, includes = {}) {
     window.addEventListener(eventType.templatePainted, () => {
         addIdToHeadings();
         wrapHeadingSectionsInSections();
+        coerceRedirectsToNewTabs();
         window.dispatchEvent(new CustomEvent(eventType.templatePaintedPostJobsDone));
     });
     // 
@@ -200,4 +201,13 @@ function wrapHeadingSectionsInSections() {
             if (level < headingTagNames.length - 1) { wrapHeadingSection(sectionElement, level + 1); }
         });
     }
+}
+function coerceRedirectsToNewTabs() {
+    console.log('Coercing redirects to new tabs...');
+    document.querySelectorAll('a').forEach(link => {
+        if (!link.href.startsWith(window.location.origin) || link.href.includes(window.location.pathname)) {
+            link.target = '_blank';
+            link.rel = 'noopener noreferrer';
+        }
+    });
 }
