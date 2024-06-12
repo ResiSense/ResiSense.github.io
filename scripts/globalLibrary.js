@@ -142,7 +142,7 @@ function getUrlParameters() {
     const keyValues = window.location.search.replace('?', '').split('&');
     keyValues.forEach(keyValue => {
         const [key, value] = keyValue.split('=');
-        parameters[key] = value;
+        parameters[key] = value.replaceAll(/( |\%20)/g, '-');
     });
     return parameters;
 }

@@ -47,7 +47,10 @@ getPageConfig().then(pageConfig => {
     buildPage();
     // 
     function buildPage(forcedPagePath = undefined) {
-        const pathTree = (forcedPagePath || urlParameters.page || window.location.pathname).split('/').filter(item => item !== '');
+        const flatPathTree = (forcedPagePath || urlParameters.page || window.location.pathname);
+        window.history.pushState({}, '', flatPathTree);
+
+        const pathTree = flatPathTree.split('/').filter(item => item !== '');
         console.log({ currentPathTree: pathTree });
 
         // determine page
