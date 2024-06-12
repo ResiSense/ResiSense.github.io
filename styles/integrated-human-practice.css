@@ -1,3 +1,24 @@
+processed-custom-content {
+    blockquote {
+
+        h4,
+        .scroll-marker[data-scroll-marker-level="H4"] {
+            font-size: 1.17rem;
+            --this-top: 9.5rem;
+        }
+
+        h5,
+        .scroll-marker[data-scroll-marker-level="H5"] {
+            --this-top: 11rem;
+        }
+
+        h6,
+        .scroll-marker[data-scroll-marker-level="H6"] {
+            --this-top: 12.4rem;
+        }
+    }
+}
+
 .human-card {
     --human-card-background: var(--bright-brown);
     border-radius: 1rem;
