@@ -7,3 +7,4 @@ Lead: [CCheukKa](https://github.com/CCheukKa)
 
 # 🙋🏻‍♂️ Questions?
 If you have any questions or would like to know how to help contribute, contact [CCheukKa](https://github.com/CCheukKa).  
+***DO NOT*** directly commit to the repository without prior approval. Always create a pull request before merging changes.  
