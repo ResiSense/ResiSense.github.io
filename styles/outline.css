@@ -1,3 +1,9 @@
+@media screen and (max-width: 1100px) {
+    processed-custom-outline {
+        display: none;
+    }
+}
+
 nav {
     display: flex;
     flex-direction: row;
