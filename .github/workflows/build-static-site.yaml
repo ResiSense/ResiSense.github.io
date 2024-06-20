@@ -34,3 +34,6 @@ jobs:
 
       - name: Run test
         run: npm test --if-present
+
+      - name: Push to production branch
+        run: 'git checkout prod -- /dir && git commit -m "${{ github.event.head_commit.id }}" && git push -f'
