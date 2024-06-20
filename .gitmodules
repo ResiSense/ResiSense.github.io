@@ -1,0 +1,4 @@
+[submodule "dist"]
+	path = dist
+	url = https://github.com/ResiSense/ResiSense.github.io
+	branch = dist
