@@ -1,3 +1,4 @@
+# Table of contents <!-- omit in toc -->
 - [🧬 ResiSense.github.io](#-resisensegithubio)
 - [✍🏻 Contributors](#-contributors)
 - [🙋🏻‍♂️ Questions?](#️-questions)
