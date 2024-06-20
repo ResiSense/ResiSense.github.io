@@ -1,0 +1,22 @@
+{
+    "name": "resisense.github.io",
+    "version": "1.0.0",
+    "description": "ResiSense team site",
+    "main": "index.js",
+    "scripts": {
+        "build": "echo Running build script && node build.js"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/ResiSense/ResiSense.github.io.git"
+    },
+    "author": "ResiSense",
+    "license": "CC-BY-4.0",
+    "bugs": {
+        "url": "https://github.com/ResiSense/ResiSense.github.io/issues"
+    },
+    "homepage": "https://github.com/ResiSense/ResiSense.github.io#readme",
+    "dependencies": {
+        "fs-extra": "^11.2.0"
+    }
+}
