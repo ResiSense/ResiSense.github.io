@@ -21,7 +21,7 @@
     "pages": [
         {
             "name": "404",
-            "title": "Page not found ☹️",
+            "title": "404: Page not found ☹️",
             "populator": "markdown",
             "hideFromCatalogue": true
         },

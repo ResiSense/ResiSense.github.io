@@ -4,8 +4,8 @@ export default function (pageData: PageData) {
     const document = pageData.document;
     const page = pageData.page;
     // 
-    const navElement: HTMLElement = document.querySelector('painted-outline');
-    if (page.name === '404') { navElement.style.visibility = 'hidden'; }
+    const outlineElement: HTMLElement = document.querySelector('painted-outline');
+    if (page.name === '404') { outlineElement.style.visibility = 'hidden'; }
 
     const outlineTreeElement = document.getElementById('outline-tree');
     const outlineHeadingTemplateElement = document.getElementById('outline-heading-template') as HTMLTemplateElement;
