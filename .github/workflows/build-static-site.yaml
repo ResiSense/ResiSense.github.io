@@ -1,40 +1,45 @@
 name: Build static site
 
 on:
-  push:
-    branches: ["main"]
-    tags-ignore: "prod"
-  pull_request:
-    branches: ["main"]
+    push:
+        branches: ["main"]
+        tags-ignore: "prod"
+    pull_request:
+        branches: ["main"]
 
 permissions:
-  contents: write
+    contents: write
 
 jobs:
-  build:
-    runs-on: ubuntu-latest
+    build:
+        runs-on: ubuntu-latest
 
-    strategy:
-      matrix:
-        node-version: [18.x]
+        strategy:
+            matrix:
+                node-version: [18.x]
 
-    steps:
-      - uses: actions/checkout@v4
+        steps:
+            - uses: actions/checkout@v4
 
-      - name: Use Node.js ${{ matrix.node-version }}
-        uses: actions/setup-node@v3
-        with:
-          node-version: ${{ matrix.node-version }}
-          cache: "npm"
+            - name: Use Node.js ${{ matrix.node-version }}
+              uses: actions/setup-node@v3
+              with:
+                  node-version: ${{ matrix.node-version }}
+                  cache: "npm"
 
-      - name: Install dependencies
-        run: npm ci
+            - name: Install dependencies
+              run: npm ci
 
-      - name: Build static site
-        run: npm run prod-build --if-present
+            - name: Build static site
+              run: npm run prod-build --if-present
 
-      - name: Run test
-        run: npm test --if-present
+            - name: Run test
+              run: npm test --if-present
 
-      - name: Push to production branch
-        run: 'git add . && git commit -m "STATIC BUILD: ${{ github.event.head_commit.message }}" && git tag prod && git push origin main'
+            - name: Push to production branch
+              uses: stefanzweifel/git-auto-commit-action@v5
+              with:
+                  commit_message: "STATIC BUILD: ${{ github.event.head_commit.message }}"
+                  commit_user_name: static-site-builder[bot]
+                  commit_user_email: static-site-builder[bot]@users.noreply.github.com
+                  tagging_message: prod
