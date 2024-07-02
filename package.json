@@ -4,8 +4,8 @@
     "description": "ResiSense team site",
     "main": "index.js",
     "scripts": {
-        "prod-build": "echo Running build script (prod) && npx ts-node ./siteBuilder.ts --prod",
-        "dev-build": "echo Running build script (dev) && npx ts-node ./siteBuilder.ts --dev"
+        "prod-build": "echo Running prod build script && npx ts-node ./siteBuilder.ts --prod",
+        "dev-build": "echo Running dev build script && npx ts-node ./siteBuilder.ts --dev"
     },
     "repository": {
         "type": "git",
