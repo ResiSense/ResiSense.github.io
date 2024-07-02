@@ -1,0 +1,156 @@
+painted-content {
+    isolation: isolate;
+
+    a {
+        color: var(--saturated-orange);
+        text-decoration: underline;
+    }
+
+    p {
+        text-align: justify;
+    }
+
+    img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 1rem;
+    }
+
+    table {
+        width: 100%;
+        border-collapse: collapse;
+
+        th,
+        td {
+            padding: 0 1rem;
+        }
+
+        th:not(:first-child),
+        td:not(:first-child) {
+            border-left: 1px solid var(--light-green);
+        }
+
+        th {
+            border-bottom: 1px solid var(--dark-green);
+        }
+
+        td {
+            border-top: 1px solid var(--light-green);
+        }
+
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        margin: 0;
+        position: sticky;
+        /* outline: 1px dashed magenta; */
+        box-shadow: 0 -20px 0 0 var(--pale-green);
+        top: var(--this-top);
+        scroll-margin-top: var(--this-top);
+        font-weight: bold;
+    }
+
+    .scroll-marker {
+        top: var(--this-top);
+        scroll-margin-top: var(--this-top);
+    }
+
+    h1,
+    .scroll-marker[data-scroll-marker-level="H1"] {
+        z-index: 5;
+        background: linear-gradient(to bottom, var(--pale-green) 80%, transparent 100%);
+        --this-top: 5rem;
+        font-size: 2em;
+    }
+
+    h2,
+    .scroll-marker[data-scroll-marker-level="H2"] {
+        z-index: 4;
+        background: linear-gradient(to bottom, var(--pale-green) 90%, transparent 100%);
+        --this-top: 7.5rem;
+    }
+
+    h3,
+    .scroll-marker[data-scroll-marker-level="H3"] {
+        z-index: 3;
+        background: linear-gradient(to bottom, var(--pale-green) 95%, transparent 100%);
+        --this-top: 9.5rem;
+    }
+
+    h4,
+    .scroll-marker[data-scroll-marker-level="H4"] {
+        z-index: 2;
+        background: linear-gradient(to bottom, var(--pale-green) 95%, transparent 100%);
+        --this-top: 11rem;
+    }
+
+    h5,
+    .scroll-marker[data-scroll-marker-level="H5"] {
+        z-index: 1;
+        background: linear-gradient(to bottom, var(--pale-green) 95%, transparent 100%);
+        --this-top: 12.4rem;
+    }
+
+    h6,
+    .scroll-marker[data-scroll-marker-level="H6"] {
+        z-index: 0;
+        background: linear-gradient(to bottom, var(--pale-green) 95%, transparent 100%);
+        --this-top: 13.5rem;
+    }
+
+    blockquote {
+        --blockquote-background: var(--light-green);
+        margin: 1rem 0 2rem;
+        padding: 0.5rem 1rem;
+        background: var(--blockquote-background);
+        border-radius: 1rem 0 1rem 0;
+        border-style: solid;
+        border-color: var(--dark-green);
+        border-width: 3px 0 0 3px;
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            box-shadow: 0 0px 0 0 var(--blockquote-background);
+            background-image: none;
+        }
+
+        h1,
+        .scroll-marker[data-scroll-marker-level="H1"] {
+            background: linear-gradient(to bottom, var(--blockquote-background) 80%, transparent 100%);
+        }
+
+        h2,
+        .scroll-marker[data-scroll-marker-level="H2"] {
+            background: linear-gradient(to bottom, var(--blockquote-background) 90%, transparent 100%);
+        }
+
+        h3,
+        .scroll-marker[data-scroll-marker-level="H3"] {
+            background: linear-gradient(to bottom, var(--blockquote-background) 95%, transparent 100%);
+        }
+
+        h4,
+        .scroll-marker[data-scroll-marker-level="H4"] {
+            background: linear-gradient(to bottom, var(--blockquote-background) 95%, transparent 100%);
+        }
+
+        h5,
+        .scroll-marker[data-scroll-marker-level="H5"] {
+            background: linear-gradient(to bottom, var(--blockquote-background) 95%, transparent 100%);
+        }
+
+        h6,
+        .scroll-marker[data-scroll-marker-level="H6"] {
+            background: linear-gradient(to bottom, var(--blockquote-background) 95%, transparent 100%);
+        }
+    }
+}
