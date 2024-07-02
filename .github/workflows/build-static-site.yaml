@@ -3,6 +3,7 @@ name: Build static site
 on:
   push:
     branches: ["main"]
+    tags-ignore: "prod"
   pull_request:
     branches: ["main"]
 
@@ -30,10 +31,10 @@ jobs:
         run: npm ci
 
       - name: Build static site
-        run: npm run build --if-present
+        run: npm run prod-build --if-present
 
       - name: Run test
         run: npm test --if-present
 
       - name: Push to production branch
-        run: 'git checkout prod -- /dir && git commit -m "${{ github.event.head_commit.id }}" && git push -f'
+        run: 'git add . && git commit -m "STATIC BUILD: ${{ github.event.head_commit.message }}" && git tag prod && git push origin main'

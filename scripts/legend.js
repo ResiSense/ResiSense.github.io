@@ -1,6 +1,4 @@
 const contentLegendElement = document.getElementById('content-legend');
-contentLegendElement.innerHTML = document.title;
-
 const headerItemsContainerElement = document.getElementsByClassName('header-items-container');
 window.addEventListener('scroll', () => {
     if (contentLegendElement.getBoundingClientRect().top < headerItemsContainerElement[0].getBoundingClientRect().bottom) {

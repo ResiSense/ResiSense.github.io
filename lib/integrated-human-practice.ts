@@ -1,10 +1,8 @@
-console.log('integrated-human-practice.js');
+import { PageData } from "./PageData";
 
-window.addEventListener(eventType.templatePaintedPostJobsDone, () => {
-    wrapHumanCards();
-});
-
-function wrapHumanCards() {
+export default function wrapHumanCards(pageData: PageData) {
+    const document = pageData.document;
+    // 
     const humanCardEnds = document.getElementsByClassName('--human-card-above');
     Array.from(humanCardEnds).forEach(humanCardEnd => {
         const h3 = humanCardEnd.parentElement.parentElement.getElementsByTagName('h3')[0];

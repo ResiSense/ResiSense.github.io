@@ -5,7 +5,7 @@
     align-items: flex-start;
     width: 100%;
 
-    &>processed-custom-outline {
+    &>painted-outline {
         margin-right: 1rem;
         position: sticky;
         top: var(--header-height);
@@ -47,7 +47,7 @@
         }
     }
 
-    &>processed-custom-sidebar {
+    &>painted-sidebar {
         margin-left: 1rem;
         position: sticky;
         top: var(--header-height);

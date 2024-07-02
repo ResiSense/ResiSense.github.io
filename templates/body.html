@@ -1,15 +1,16 @@
-<custom-js src="/scripts/legend.js"></custom-js>
+<js-post-population src="/lib/nameLegend.ts" />
+<js-runtime src="/scripts/legend.js" />
 
-<custom-css href="/styles/body.css"></custom-css>
-<custom-css href="/styles/content.css"></custom-css>
+<css-embed href="/styles/body.css" />
+<css-embed href="/styles/content.css" />
 
 <div class="body-container">
-    <custom-outline></custom-outline>
+    <custom-outline />
     <main>
         <fieldset>
             <legend id="content-legend">page name</legend>
-            <custom-content></custom-content>
+            <paintable-content />
         </fieldset>
     </main>
-    <custom-sidebar></custom-sidebar>
+    <custom-sidebar />
 </div>

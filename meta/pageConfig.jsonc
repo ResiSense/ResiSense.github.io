@@ -6,13 +6,14 @@
     name                (required): Name of the HTML document.
 
     title?              (optional): Title of the HTML document. If unspecified, a title case of the name will be used.
-    builder?            (optional): Page builder to use. Default is "html".
+    populator?          (optional): Page populator to use. Default is "html".
                                     | html      - Plain vanilla HTML
-                                    | markdown  - Markdown page builder
-                                    | custom    - Custom page builder
+                                    | markdown  - Markdown page populator
+                                    | custom    - Custom page populator
     includes            (optional): {
-        js?             (optional): Array of JS file paths to include. Implementation is up to the page builder. Default is none.
-        css?            (optional): Array of CSS file paths to include. Implementation is up to the page builder. Default is none.
+        ts?             (optional): Array of TS file paths to include at build-time. Implementation is up to the page populator. Default is none.
+        js?             (optional): Array of JS file paths to include. Implementation is up to the page populator. Default is none.
+        css?            (optional): Array of CSS file paths to include. Implementation is up to the page populator. Default is none.
     }
     hideFromCatalogue?  (optional): Whether to hide this page from the catalogue. Default is false.
     pages?              (optional): Array of pages hierarchically under this page, with "parent name/ child name" as their url path.
@@ -22,38 +23,38 @@
         {
             "name": "404",
             "title": "Page not found ☹️",
-            "builder": "markdown",
+            "populator": "markdown",
             "hideFromCatalogue": true
         },
         {
             "name": "home",
-            "builder": "markdown"
+            "populator": "markdown"
         },
         {
             "name": "project",
-            "builder": "markdown",
+            "populator": "markdown",
             "pages": [
                 {
                     "name": "overview",
-                    "builder": "markdown"
+                    "populator": "markdown"
                 },
                 {
                     "name": "design",
-                    "builder": "markdown"
+                    "populator": "markdown"
                 }
             ]
         },
         {
             "name": "about us",
-            "builder": "markdown"
+            "populator": "markdown"
         },
         {
             "name": "integrated-human-practice",
             "title": "Integrated Human Practice",
-            "builder": "markdown",
+            "populator": "markdown",
             "includes": {
-                "js": [
-                    "/scripts/integrated-human-practice.js"
+                "ts": [
+                    "/lib/integrated-human-practice.ts"
                 ],
                 "css": [
                     "/styles/integrated-human-practice.css"

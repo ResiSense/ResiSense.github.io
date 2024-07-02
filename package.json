@@ -4,7 +4,8 @@
     "description": "ResiSense team site",
     "main": "index.js",
     "scripts": {
-        "build": "echo Running build script && node build.js"
+        "prod-build": "echo Running build script (prod) && npx ts-node ./siteBuilder.ts --prod",
+        "dev-build": "echo Running build script (dev) && npx ts-node ./siteBuilder.ts --dev"
     },
     "repository": {
         "type": "git",
@@ -17,6 +18,13 @@
     },
     "homepage": "https://github.com/ResiSense/ResiSense.github.io#readme",
     "dependencies": {
-        "fs-extra": "^11.2.0"
+        "@types/fs-extra": "^11.0.4",
+        "@types/jsdom": "^21.1.7",
+        "@types/node": "^20.14.9",
+        "fs-extra": "^11.2.0",
+        "jsdom": "^24.1.0",
+        "marked": "^13.0.1",
+        "typescript": "^5.5.2",
+        "util": "^0.12.5"
     }
 }

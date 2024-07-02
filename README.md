@@ -1,11 +1,7 @@
 # Table of contents <!-- omit in toc -->
-- [❗ Important Notice](#-important-notice)
 - [🧬 ResiSense.github.io](#-resisensegithubio)
 - [✍🏻 Contributors](#-contributors)
 - [🙋🏻‍♂️ Questions?](#️-questions)
-
-# ❗ Important Notice
-***This repository is currently undergoing a major refactor. Please expect a certain amount of downtime.***
 
 # 🧬 [ResiSense.github.io](https://ResiSense.github.io)
 This is an alpha draft version of the ResiSense site, temporarily hosted using Github pages. It will eventually be pushed to the [iGEM](https://igem.org/) servers (I think).  
