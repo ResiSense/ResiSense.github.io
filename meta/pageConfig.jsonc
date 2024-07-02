@@ -1,7 +1,6 @@
 /*
-    This .jsonc file is used to configure how the pages are built and shown using the cursed 404 redirecting.
-    The entries are only for .html-less pages with generic styles that are able to be built with minimal effort.
-    Pages with their own dedicated .html file need not be included here although it is still recommended.
+    This .jsonc file is used to configure how the pages are built and populated.
+    This allows .html-less pages with generic styles that are able to be built with minimal effort.
 
     name                (required): Name of the HTML document.
 
