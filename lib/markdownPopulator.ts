@@ -1,3 +1,9 @@
+/*
+    This module populates a page with content from a markdown file.
+    It grabs the markdown file from /pages/{pageTrace}.md and parses it with the marked module into HTML elements.
+    It then adds IDs to headings for hash navigation and wraps heading sections in <section> elements.
+*/
+
 import { marked } from "marked";
 import { getTrace } from "./PageConfig";
 import fs = require('fs-extra');
