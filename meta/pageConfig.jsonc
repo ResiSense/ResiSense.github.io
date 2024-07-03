@@ -10,7 +10,7 @@
                                     | markdown  - Markdown page populator
                                     | custom    - Custom page populator
     includes            (optional): {
-        ts?             (optional): Array of TS file paths to include at build-time. Implementation is up to the page populator. Default is none.
+        ts?             (optional): Array of TS file paths to include at build-time post-population. Implementation is up to the page populator. Default is none.
         js?             (optional): Array of JS file paths to include. Implementation is up to the page populator. Default is none.
         css?            (optional): Array of CSS file paths to include. Implementation is up to the page populator. Default is none.
     }
