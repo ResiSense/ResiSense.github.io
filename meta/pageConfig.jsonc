@@ -5,7 +5,7 @@
     name                (required): Name of the HTML document.
 
     title?              (optional): Title of the HTML document. If unspecified, a title case of the name will be used.
-    populator?          (optional): Page populator to use. Default is "html".
+    populator?          (optional): Page populator to use. Default is "markdown".
                                     | html      - Plain vanilla HTML
                                     | markdown  - Markdown page populator
                                     | custom    - Custom page populator
