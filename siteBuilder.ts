@@ -54,7 +54,7 @@ async function buildFile(page: Page, templateCache: TemplateCache): Promise<void
     insertCssEmbeds(pageData);
     insertJsRuntimes(pageData);
 
-    runJsPostPaints(pageData);
+    runTsPostPaints(pageData);
     switch (page.populator || 'markdown ') {
         case 'html':
             break;
@@ -64,7 +64,7 @@ async function buildFile(page: Page, templateCache: TemplateCache): Promise<void
         default:
             throw new Error(`Invalid populator: ${page.populator}`);
     }
-    runJsPostPopulations(pageData);
+    runTsPostPopulations(pageData);
     runTsIncludes(pageData);
 
     fs.writeFileSync(path.resolve(targetDirectory, `${getTrace(page).join('/')}.html`), `<!DOCTYPE html>\n${document.documentElement.outerHTML}`, 'utf8');
@@ -86,25 +86,25 @@ function insertCssEmbeds(pageData: PageData) {
         document.head.appendChild(linkTag);
     });
 }
-function runJsPostPaints(pageData: PageData) {
+function runTsPostPaints(pageData: PageData) {
     const paintedHtml = pageData.paintedHtml;
     // 
-    const jsPaths: string[] = [];
-    jsPaths.push(...paintedHtml.js?.postPaint || []);
-    jsPaths.forEach(jsPath => {
-        const scriptPath = `.${jsPath}`;
+    const tsPaths: string[] = [];
+    tsPaths.push(...paintedHtml.ts?.postPaint || []);
+    tsPaths.forEach(tsPath => {
+        const scriptPath = `.${tsPath}`;
         console.log(`Running postPaint: ${scriptPath}`);
         const postPaintFunction: (pageData: PageData) => void = require(scriptPath).default;
         postPaintFunction(pageData);
     });
 }
-function runJsPostPopulations(pageData: PageData) {
+function runTsPostPopulations(pageData: PageData) {
     const paintedHtml = pageData.paintedHtml;
     // 
-    const jsPaths: string[] = [];
-    jsPaths.push(...paintedHtml.js?.postPopulation || []);
-    jsPaths.forEach(jsPath => {
-        const scriptPath = `.${jsPath}`;
+    const tsPaths: string[] = [];
+    tsPaths.push(...paintedHtml.ts?.postPopulation || []);
+    tsPaths.forEach(tsPath => {
+        const scriptPath = `.${tsPath}`;
         console.log(`Running postPopulation: ${scriptPath}`);
         const postPopulationFunction: (pageData: PageData) => void = require(scriptPath).default;
         postPopulationFunction(pageData);

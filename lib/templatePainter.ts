@@ -26,10 +26,12 @@ type Template = PaintableHtml & {
 
 type PaintableHtml = {
     html: string;
-    js?: {
+    ts?: {
         postPaint?: string[],
-        runtime?: string[],
         postPopulation?: string[],
+    },
+    js?: {
+        runtime?: string[],
     },
     css?: {
         embed?: string[]
@@ -37,9 +39,9 @@ type PaintableHtml = {
 }
 
 const templateRegex = /<custom-([a-z]|-)+ \/>/g;
-const jsPostPaintRegex = /<js-post-paint src=".*\.ts" \/>/g;
+const tsPostPaintRegex = /<ts-post-paint src=".*\.ts" \/>/g;
 const jsRuntimeRegex = /<js-runtime src=".*\.js" \/>/g;
-const jsPostPopulationRegex = /<js-post-population src=".*\.ts" \/>/g;
+const tsPostPopulationRegex = /<ts-post-population src=".*\.ts" \/>/g;
 const cssEmbedRegex = /<css-embed href=".*\.css" \/>/g;
 
 async function compileTemplates(): Promise<TemplateCache> {
@@ -89,7 +91,8 @@ async function compileTemplates(): Promise<TemplateCache> {
 }
 
 function paintHtmlFragment(paintableHtml: PaintableHtml, templateCache: TemplateCache): PaintableHtml {
-    paintableHtml.js = paintableHtml.js || { postPaint: [], runtime: [], postPopulation: [] };
+    paintableHtml.ts = paintableHtml.ts || { postPaint: [], postPopulation: [] };
+    paintableHtml.js = paintableHtml.js || { runtime: [] };
     paintableHtml.css = paintableHtml.css || { embed: [] };
 
     // templates
@@ -101,16 +104,16 @@ function paintHtmlFragment(paintableHtml: PaintableHtml, templateCache: Template
             `<painted-${customTagName}> ${customTemplate.html} </painted-${customTagName}>`
         );
 
-        paintableHtml.js.postPaint.push(...customTemplate.js?.postPaint || []);
+        paintableHtml.ts.postPaint.push(...customTemplate.ts?.postPaint || []);
         paintableHtml.js.runtime.push(...customTemplate.js?.runtime || []);
-        paintableHtml.js.postPopulation.push(...customTemplate.js?.postPopulation || []);
+        paintableHtml.ts.postPopulation.push(...customTemplate.ts?.postPopulation || []);
         paintableHtml.css.embed.push(...customTemplate.css?.embed || []);
     });
 
     // js
-    paintableHtml.html = paint(paintableHtml.html, jsPostPaintRegex, '<js-post-paint src="', '" />', paintableHtml.js.postPaint);
+    paintableHtml.html = paint(paintableHtml.html, tsPostPaintRegex, '<ts-post-paint src="', '" />', paintableHtml.ts.postPaint);
     paintableHtml.html = paint(paintableHtml.html, jsRuntimeRegex, '<js-runtime src="', '" />', paintableHtml.js.runtime);
-    paintableHtml.html = paint(paintableHtml.html, jsPostPopulationRegex, '<js-post-population src="', '" />', paintableHtml.js.postPopulation);
+    paintableHtml.html = paint(paintableHtml.html, tsPostPopulationRegex, '<ts-post-population src="', '" />', paintableHtml.ts.postPopulation);
 
     // css
     paintableHtml.html = paint(paintableHtml.html, cssEmbedRegex, '<css-embed href="', '" />', paintableHtml.css.embed);
