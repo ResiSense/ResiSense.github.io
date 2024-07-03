@@ -1,7 +1,6 @@
 if (window.location.pathname.split('/').includes('404')) {
     const outlineElement = document.querySelector('painted-outline');
     outlineElement.style.visibility = 'hidden';
-    return;
 }
 
 const outlineProgressPointerElement = document.getElementById('outline-progress-pointer');

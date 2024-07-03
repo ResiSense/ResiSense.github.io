@@ -1,7 +1,6 @@
 if (window.location.pathname.split('/').includes('404')) {
     const contentLegendElement = document.getElementById('content-legend');
     contentLegendElement.innerHTML = "404: Page not found ☹️";
-    return;
 }
 
 const contentLegendElement = document.getElementById('content-legend');
