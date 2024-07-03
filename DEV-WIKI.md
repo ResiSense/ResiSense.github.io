@@ -262,7 +262,7 @@ See [`meta/pageConfig.jsonc`](meta/pageConfig.jsonc) for more information.
      - Use `child` as the name
 3. Change the `title` field to the title of the page as you want it to appear on the site; this is not necessary if the title is the same as the `name`
    - If unset, the `name`, capitalised, will be used as the title
-4. Change the `populator` field to `markdown`/`html` to use the appropriate populator
+4. Change the `populator` field to `markdown`/`html-full`/`html-frame` to use the appropriate populator
 5. If you are using custom scripts or styles, add them to the `scripts` and `styles` arrays respectively; it is recommended that the scripts and styles are named after the page `name`
 
 ## Shortcut
