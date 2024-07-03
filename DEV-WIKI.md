@@ -27,6 +27,9 @@
   - [Content](#content)
   - [Content population](#content-population)
   - [CSS embeds](#css-embeds)
+  - [HTML frame populator](#html-frame-populator)
+  - [HTML full replacer](#html-full-replacer)
+  - [Markdown populator](#markdown-populator)
   - [`pageConfig.jsonc`](#pageconfigjsonc)
   - [Populator](#populator)
   - [Post-paint TS](#post-paint-ts)
@@ -201,11 +204,16 @@ You can refer to the [glossary](#-glossary) as necessary.
 
 
 # 📝 Writing content for the site
-You are recommended to use the markdown [populator](#populator) for the most seamless experience.  
+Choosing a [populator](#populator) is the first step to writing content for the site.  
+| Populator                           | Flavour  | 🕳️ Seamlessness | 🤏🏻 Control | ⏳ Speed  | 👶🏻 Ease |
+| :---------------------------------- | :------: | :------------- | :--------- | :------- | :----- |
+| [Markdown](#markdown-populator)     | Seamless | 🟢 High         | 🔴 Low      | 🟢 High   | 🟢 High |
+| [HTML frame](#html-frame-populator) |  Flair   | 🟡 Medium       | 🟡 Medium   | 🟡 Medium | 🔴 Low  |
+| [HTML full](#html-full-replacer)    | Control  | 🔴 Low          | 🟢 High     | 🔴 Low    | 🔴 Low  |
 
 ## Adding a new page
 
-### Using the markdown [populator](#populator)
+### Using the [markdown populator](#markdown-populator)
 The markdown populator allows you to write content in markdown format and have it displayed on the site in the [content](#content) field.  
 
 0. You are recommended to read up on the basics of markdown if you are not familiar with it, or use the [markdown cheat sheet](https://www.markdownguide.org/cheat-sheet/); it is really very simple
@@ -218,7 +226,7 @@ The markdown populator allows you to write content in markdown format and have i
 5. [Test the site](#-testing-the-site) to ensure that the changes are displayed correctly (not really necessary for simple content changes)
 6. [Commit the changes](#-committing-changes) to the repository
 
-### Using the HTML frame [populator](#populator)
+### Using the [HTML frame populator](#html-frame-populator)
 The HTML frame populator allows you to write content in HTML format and have it displayed on the site in the [content](#content) field.
 
 1. Create a new `.html` file in the `pages/` folder, see [#naming-conventions](#naming-conventions)
@@ -230,7 +238,7 @@ The HTML frame populator allows you to write content in HTML format and have it 
 5. [Test the site](#-testing-the-site) to ensure that the changes are displayed correctly
 6. [Commit the changes](#-committing-changes) to the repository
 
-### Using the HTML full [replacer](#populator)
+### Using the [HTML full replacer](#html-full-replacer)
 The HTML full replacer allows you to replace the entire content of a page with an HTML file.
 
 1. Create a new `.html` file in the `pages/` folder, see [#naming-conventions](#naming-conventions)
@@ -296,6 +304,18 @@ Content population is the process of filling the [content](#content) of a page w
 CSS embeds are CSS files that are embedded into the HTML relationally as `<link>` tags.  
 Tags that reference [templates](#template) should use the [painted](#template-painting) tag name.
 
+## [HTML frame populator](/lib/htmlFramePopulator.ts)
+The HTML frame populator is a function that fills the [content](#content) of a page with an HTML file during [content population](#content-population).  
+It is recommended to read the comments in the file itself to understand how it works.
+
+## [HTML full replacer](/lib/htmlFullReplacer.ts)
+The HTML full replacer is a function that replaces the entire content of a page with an HTML file during [content population](#content-population).  
+It is recommended to read the comments in the file itself to understand how it works.
+
+## [Markdown populator](/lib/markdownPopulator.ts)
+The markdown populator is a function that fills the [content](#content) of a page with a markdown file during [content population](#content-population).  
+It is recommended to read the comments in the file itself to understand how it works.
+
 ## [`pageConfig.jsonc`](meta/pageConfig.jsonc)
 This file is probably the most important file in the repository. It describes the structure of the site and how the [content](#content) is displayed.  
 In short, it is a JSON file that describes the metadata of each page on the site. **It is required to edit this file to add new pages or change existing ones.**  
@@ -303,9 +323,9 @@ It is recommended to read the comments in the file itself to understand how it w
 
 ## Populator
 Populators are functions that fill the [content](#content) of a page. They are called by the framework to fill the content of a page.  
-- [Markdown populator](/lib/markdownPopulator.ts): Fills the [content](#content) of a page with a markdown file
-- [HTML frame populator](/lib/htmlFramePopulator.ts.ts): Fills the [content](#content) of a page with an HTML file
-- [HTML full replacer](/lib/htmlFullReplacer.ts): Replaces the entire content of a page with an HTML file
+- [Markdown populator](#markdown-populator): Fills the [content](#content) of a page with a markdown file
+- [HTML frame populator](#html-frame-populator): Fills the [content](#content) of a page with an HTML file
+- [HTML full replacer](#html-full-replacer): Replaces the entire content of a page with an HTML file
 
 It is recommended to read the comments in the files themselves to understand how it works.  
 
