@@ -24,6 +24,7 @@
 - [🖼️ Working on the framework](#️-working-on-the-framework)
   - [`PageData`](#pagedata)
 - [📖 Glossary](#-glossary)
+  - [Content](#content)
   - [Content population](#content-population)
   - [CSS embeds](#css-embeds)
   - [`pageConfig.jsonc`](#pageconfigjsonc)
@@ -163,7 +164,7 @@ Sign here if you read this:
 
 # 🧠 Understanding the framework
 This is a very stripped-down and very custom framework specifically designed for the ResiSense website.  
-The framework is how the site is built and how the content is displayed.  
+The framework is how the site is built and how the [content](#content) is displayed.  
 You can refer to the [glossary](#-glossary) as necessary.
 
 ## 🚲 Life cycle of a build
@@ -205,7 +206,7 @@ You are recommended to use the markdown [populator](#populator) for the most sea
 ## Adding a new page
 
 ### Using the markdown [populator](#populator)
-The markdown populator allows you to write content in markdown format and have it displayed on the site in the content field.  
+The markdown populator allows you to write content in markdown format and have it displayed on the site in the [content](#content) field.  
 
 0. You are recommended to read up on the basics of markdown if you are not familiar with it, or use the [markdown cheat sheet](https://www.markdownguide.org/cheat-sheet/); it is really very simple
 1. Create a new `.md` file in the `pages/` folder, see [#naming-conventions](#naming-conventions)
@@ -218,7 +219,7 @@ The markdown populator allows you to write content in markdown format and have i
 6. [Commit the changes](#-committing-changes) to the repository
 
 ### Using the HTML frame [populator](#populator)
-The HTML frame populator allows you to write content in HTML format and have it displayed on the site in the content field.
+The HTML frame populator allows you to write content in HTML format and have it displayed on the site in the [content](#content) field.
 
 1. Create a new `.html` file in the `pages/` folder, see [#naming-conventions](#naming-conventions)
    - If your page is nested under another page (i.e. `parent/child`), create a folder `parent` and put `child.html` file in it
@@ -285,22 +286,25 @@ Variables can be attached onto this type to be passed down these functions.
 
 # 📖 Glossary
 
+## Content
+Content is defined as the main place for content in a page, conventionally the `<paintable-content />`.  
+
 ## Content population
-Content population is the process of filling the content of a page with a [populator](#populator) function.
+Content population is the process of filling the [content](#content) of a page with a [populator](#populator) function.
 
 ## CSS embeds
 CSS embeds are CSS files that are embedded into the HTML relationally as `<link>` tags.  
 Tags that reference [templates](#template) should use the [painted](#template-painting) tag name.
 
 ## [`pageConfig.jsonc`](meta/pageConfig.jsonc)
-This file is probably the most important file in the repository. It describes the structure of the site and how the content is displayed.  
+This file is probably the most important file in the repository. It describes the structure of the site and how the [content](#content) is displayed.  
 In short, it is a JSON file that describes the metadata of each page on the site. **It is required to edit this file to add new pages or change existing ones.**  
 It is recommended to read the comments in the file itself to understand how it works. You can also refer to [updating `pageConfig.jsonc`](#updating-pageconfigjsonc) for more information.  
 
 ## Populator
-Populators are functions that fill the content of a page. They are called by the framework to fill the content of a page.  
-- [Markdown populator](/lib/markdownPopulator.ts): Fills the content of a page with a markdown file
-- [HTML frame populator](/lib/htmlFramePopulator.ts.ts): Fills the content of a page with an HTML file
+Populators are functions that fill the [content](#content) of a page. They are called by the framework to fill the content of a page.  
+- [Markdown populator](/lib/markdownPopulator.ts): Fills the [content](#content) of a page with a markdown file
+- [HTML frame populator](/lib/htmlFramePopulator.ts.ts): Fills the [content](#content) of a page with an HTML file
 - [HTML full replacer](/lib/htmlFullReplacer.ts): Replaces the entire content of a page with an HTML file
 
 It is recommended to read the comments in the files themselves to understand how it works.  
@@ -312,7 +316,7 @@ Variables that reference [templates](#template) should use the [painted](#templa
 [CSS embeds](#css-embeds) are **NOT** in scope.  
 
 ## Post-population TS
-Post-population TS is the TS that is run after [populating](#content-population) the content of a page.
+Post-population TS is the TS that is run after [populating](#content-population) the [content](#content) of a page.
 Only the default exported function is run, with [`PageData`](#pagedata) passed as the only argument.  
 Variables that reference [templates](#template) should use the [painted](#template-painting) tag name.  
 [CSS embeds](#css-embeds) are **NOT** in scope.  
@@ -327,7 +331,7 @@ A template is a partial HTML file that is embedded/[painted](#template-painting)
 Templates can recursively require CSS, JS, TS, and other templates in them with the following tags:
 - `<custom-example />`: Paints a `templates/example.html` template
 - `<ts-post-paint src="example.ts" />`: Runs `lib/example.ts` after [painting](#template-painting)
-- `<ts-post-population src="example.ts" />`: Runs `lib/example.ts` after [populating](#content-population) the content
+- `<ts-post-population src="example.ts" />`: Runs `lib/example.ts` after [populating](#content-population) the [content](#content)
 - `<js-runtime src="example.js" />`: Embeds `scripts/example.js` as a [runtime JS](#runtime)
 - `<css-embed href="example.css" />`: Embeds `styles/example.css` as a [CSS embed](#css-embeds)
 
