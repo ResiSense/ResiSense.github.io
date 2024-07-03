@@ -329,7 +329,7 @@ Templates can recursively require CSS, JS, TS, and other templates in them with 
 - `<ts-post-paint src="example.ts" />`: Runs `lib/example.ts` after [painting](#template-painting)
 - `<ts-post-population src="example.ts" />`: Runs `lib/example.ts` after [populating](#content-population) the content
 - `<js-runtime src="example.js" />`: Embeds `scripts/example.js` as a [runtime JS](#runtime)
-- `<css-embed href="example.css" \/>`: Embeds `styles/example.css` as a [CSS embed](#css-embeds)
+- `<css-embed href="example.css" />`: Embeds `styles/example.css` as a [CSS embed](#css-embeds)
 
 Note that the exact syntax of these tags must be followed for the framework to work correctly. Change only `example` to the name of the file.  
 
