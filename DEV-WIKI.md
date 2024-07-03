@@ -14,8 +14,8 @@
 - [📝 Writing content for the site](#-writing-content-for-the-site)
   - [Adding a new page](#adding-a-new-page)
     - [Using the markdown populator](#using-the-markdown-populator)
-  - [Using the HTML frame populator](#using-the-html-frame-populator)
-  - [Using the HTML full replacer](#using-the-html-full-replacer)
+    - [Using the HTML frame populator](#using-the-html-frame-populator)
+    - [Using the HTML full replacer](#using-the-html-full-replacer)
   - [Making changes to an existing page](#making-changes-to-an-existing-page)
   - [Updating `pageConfig.jsonc`](#updating-pageconfigjsonc)
     - [Adding a new entry](#adding-a-new-entry)
@@ -217,7 +217,7 @@ The markdown populator allows you to write content in markdown format and have i
 5. [Test the site](#-testing-the-site) to ensure that the changes are displayed correctly (not really necessary for simple content changes)
 6. [Commit the changes](#-committing-changes) to the repository
 
-## Using the HTML frame [populator](#populator)
+### Using the HTML frame [populator](#populator)
 The HTML frame populator allows you to write content in HTML format and have it displayed on the site in the content field.
 
 1. Create a new `.html` file in the `pages/` folder, see [#naming-conventions](#naming-conventions)
@@ -229,7 +229,7 @@ The HTML frame populator allows you to write content in HTML format and have it 
 5. [Test the site](#-testing-the-site) to ensure that the changes are displayed correctly
 6. [Commit the changes](#-committing-changes) to the repository
 
-## Using the HTML full [replacer](#populator)
+### Using the HTML full [replacer](#populator)
 The HTML full replacer allows you to replace the entire content of a page with an HTML file.
 
 1. Create a new `.html` file in the `pages/` folder, see [#naming-conventions](#naming-conventions)
