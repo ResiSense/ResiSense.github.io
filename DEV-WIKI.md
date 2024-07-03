@@ -19,7 +19,7 @@
   - [Making changes to an existing page](#making-changes-to-an-existing-page)
   - [Updating `pageConfig.jsonc`](#updating-pageconfigjsonc)
     - [Adding a new entry](#adding-a-new-entry)
-  - [Shortcut](#shortcut)
+  - [Shortcut for lazies](#shortcut-for-lazies)
 - [✨ Working on the frontend](#-working-on-the-frontend)
 - [🖼️ Working on the framework](#️-working-on-the-framework)
   - [`PageData`](#pagedata)
@@ -45,7 +45,7 @@ You can use the [glossary](#-glossary) to understand the terms used in this wiki
 
 ### I just want to write content wtf is this:
 <!-- no toc -->
-0. [Shortcut](#shortcut)
+0. [Shortcut](#shortcut-for-lazies)
 1. [Getting started](#-getting-started)
 2. [Testing the site](#testing-the-site)
 3. [Committing changes](#committing-changes)
@@ -265,7 +265,7 @@ See [`meta/pageConfig.jsonc`](meta/pageConfig.jsonc) for more information.
 4. Change the `populator` field to `markdown`/`html-full`/`html-frame` to use the appropriate populator
 5. If you are using custom scripts or styles, add them to the `scripts` and `styles` arrays respectively; it is recommended that the scripts and styles are named after the page `name`
 
-## Shortcut
+## Shortcut for lazies
 I recommend you to go through the steps above to understand how the site works. But still here's a shortcut if you are lazy and don't want to go through [#getting-started](#-getting-started).  
 You can just get a file and upload/dump it [here](https://github.com/ResiSense/ResiSense.github.io/tree/main/pages) and I will take care of the rest. Use the ResiSense GitHub account to do this maybe despite it normally being [a terrible idea](#-committing-changes).  
 
