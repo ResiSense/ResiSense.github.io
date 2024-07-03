@@ -15,7 +15,7 @@
         css?            (optional): Array of CSS file paths to include. Implementation is up to the page populator. Default is none.
     }
     hideFromCatalogue?  (optional): Whether to hide this page from the catalogue. Default is false.
-    pages?              (optional): Array of pages hierarchically under this page, with "parent name/ child name" as their url path.
+    pages?              (optional): Array of pages hierarchically under this page, with "<parent.name>/<child.name>" as their url path.
 */
 {
     "pages": [
