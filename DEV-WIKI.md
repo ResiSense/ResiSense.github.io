@@ -325,7 +325,7 @@ It is recommended to read the comments in the file itself to understand how it w
 Populators are functions that fill the [content](#content) of a page. They are called by the framework to fill the content of a page.  
 - [Markdown populator](#markdown-populator): Fills the [content](#content) of a page with a markdown file
 - [HTML frame populator](#html-frame-populator): Fills the [content](#content) of a page with an HTML file
-- [HTML full replacer](#html-full-replacer): Replaces the entire content of a page with an HTML file
+- [HTML full replacer](#html-full-replacer): Replaces the entire page with an HTML file
 
 It is recommended to read the comments in the files themselves to understand how it works.  
 
