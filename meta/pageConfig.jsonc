@@ -44,7 +44,7 @@
             ]
         },
         {
-            "name": "about us",
+            "name": "about-us",
             "populator": "markdown"
         },
         {
