@@ -2,10 +2,9 @@ import fs = require('fs-extra');
 import path = require('path');
 import { JSDOM } from "jsdom";
 import { PaintableHtml, TemplateCache, compileTemplates, paintPageHtml } from './lib/templatePainter';
-import { Page, flattenedPageConfig, getTrace, pageConfig } from './lib/PageConfig';
+import { Page, flattenedPageConfig, getTrace } from './lib/PageConfig';
 import { populatePageFromMarkdown } from './lib/markdownPopulator';
 import { promisifyCallback, toTitleCase } from './lib/utils';
-import { error } from 'console';
 import { PageData } from './lib/PageData';
 
 
