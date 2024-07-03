@@ -5,10 +5,11 @@
     name                (required): Name of the HTML document.
 
     title?              (optional): Title of the HTML document. If unspecified, a title case of the name will be used.
-    populator?          (optional): Page populator to use. Default is "markdown".
-                                    | html      - Plain vanilla HTML
-                                    | markdown  - Markdown page populator
-                                    | custom    - Custom page populator
+    populator?          (optional): Conten populator to use. Default is "markdown".
+                                    | html-full     - Full-page HTML replacement
+                                    | html-frame    - HTML-in-frame content populator
+                                    | markdown      - Markdown content populator
+                                    | custom        - Custom content populator
     includes            (optional): {
         ts?             (optional): Array of TS file paths to include at build-time post-population. Implementation is up to the page populator. Default is none.
         js?             (optional): Array of JS file paths to include. Implementation is up to the page populator. Default is none.

@@ -3,9 +3,11 @@ import path = require('path');
 import { JSDOM } from "jsdom";
 import { PaintableHtml, TemplateCache, compileTemplates, paintPageHtml } from './lib/templatePainter';
 import { Page, flattenedPageConfig, getTrace } from './lib/PageConfig';
-import { populatePageFromMarkdown } from './lib/markdownPopulator';
+import markdownPopulator from './lib/markdownPopulator';
 import { promisifyCallback, toTitleCase } from './lib/utils';
 import { PageData } from './lib/PageData';
+import htmlFullReplacer from './lib/htmlFullReplacer';
+import htmlFramePopulator from './lib/htmlFramePopulator';
 
 
 console.log(`Running ${path.basename(__filename)}...`)
@@ -38,7 +40,19 @@ function cloneDirectory(source: string, destination: string): Promise<void> {
 }
 /* -------------------------------------------------------------------------- */
 async function buildFile(page: Page, templateCache: TemplateCache): Promise<void> {
-    const filename = 'boiler-plate.html';
+
+    const filename: string = (() => {
+        switch (page.populator || 'markdown ') {
+            case 'html-full':
+                return htmlFullReplacer.baseFilename(page);
+            case 'html-frame':
+                return htmlFramePopulator.baseFilename;
+            case 'markdown':
+                return markdownPopulator.baseFilename;
+            default:
+                throw new Error(`Invalid populator: ${page.populator}`);
+        }
+    })();
     const rawHtml = fs.readFileSync(filename, 'utf8');
     const paintedHtml: PaintableHtml = paintPageHtml({ html: rawHtml }, templateCache);
     const document = new JSDOM(paintedHtml.html).window.document;
@@ -55,10 +69,14 @@ async function buildFile(page: Page, templateCache: TemplateCache): Promise<void
 
     runTsPostPaints(pageData);
     switch (page.populator || 'markdown ') {
-        case 'html':
+        case 'html-full':
+            await htmlFullReplacer.replacePageWithFullHtml(pageData);
+            break;
+        case 'html-frame':
+            await htmlFramePopulator.populatePageFromMarkdown(pageData);
             break;
         case 'markdown':
-            await populatePageFromMarkdown(pageData);
+            await markdownPopulator.populatePageFromMarkdown(pageData);
             break;
         default:
             throw new Error(`Invalid populator: ${page.populator}`);

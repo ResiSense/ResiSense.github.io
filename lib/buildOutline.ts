@@ -11,8 +11,12 @@ export default function (pageData: PageData) {
     const outlineHeadingTemplateElement = document.getElementById('outline-heading-template') as HTMLTemplateElement;
 
     if (!Object.isFrozen(pageData.contentHeadingElements)) { throw new Error('contentHeadingElements is not yet computed.'); }
+    if (!pageData.contentHeadingElements?.length) {
+        outlineElement.style.visibility = 'hidden';
+        return;
+    }
     let currentElements: HTMLElement[] = [undefined, undefined, undefined, undefined, undefined, undefined];
-    pageData.contentHeadingElements.forEach(heading => {
+    pageData.contentHeadingElements.forEach((heading: HTMLHeadingElement) => {
         const level = parseInt(heading.tagName.charAt(1)) - 1;
         const currentElement = outlineHeadingTemplateElement.content.cloneNode(true) as HTMLElement;
         const aElement = currentElement.querySelector('a');

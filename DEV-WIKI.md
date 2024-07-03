@@ -14,6 +14,8 @@
 - [📝 Writing content for the site](#-writing-content-for-the-site)
   - [Adding a new page](#adding-a-new-page)
     - [Using the markdown populator](#using-the-markdown-populator)
+  - [Using the HTML frame populator](#using-the-html-frame-populator)
+  - [Using the HTML full replacer](#using-the-html-full-replacer)
   - [Making changes to an existing page](#making-changes-to-an-existing-page)
   - [Updating `pageConfig.jsonc`](#updating-pageconfigjsonc)
     - [Adding a new entry](#adding-a-new-entry)
@@ -203,6 +205,8 @@ You are recommended to use the markdown [populator](#populator) for the most sea
 ## Adding a new page
 
 ### Using the markdown [populator](#populator)
+The markdown populator allows you to write content in markdown format and have it displayed on the site in the content field.  
+
 0. You are recommended to read up on the basics of markdown if you are not familiar with it, or use the [markdown cheat sheet](https://www.markdownguide.org/cheat-sheet/); it is really very simple
 1. Create a new `.md` file in the `pages/` folder, see [#naming-conventions](#naming-conventions)
    - If your page is nested under another page (i.e. `parent/child`), create a folder `parent` and put `child.md` file in it
@@ -211,6 +215,31 @@ You are recommended to use the markdown [populator](#populator) for the most sea
 3. If you wish to use custom scripts or styles, create a new `.js` or `.css` file in the `scripts/` or `styles/` folder respectively; it is recommended that the scripts and styles are named after the page `name`
 4. [Update `pageConfig.jsonc`](#updating-pageconfigjsonc) to include the new page
 5. [Test the site](#-testing-the-site) to ensure that the changes are displayed correctly (not really necessary for simple content changes)
+6. [Commit the changes](#-committing-changes) to the repository
+
+## Using the HTML frame [populator](#populator)
+The HTML frame populator allows you to write content in HTML format and have it displayed on the site in the content field.
+
+1. Create a new `.html` file in the `pages/` folder, see [#naming-conventions](#naming-conventions)
+   - If your page is nested under another page (i.e. `parent/child`), create a folder `parent` and put `child.html` file in it
+2. Write your content in HTML format
+   - You can use all the features of HTML and [templates](#template)
+3. If you wish to use custom scripts or styles, create a new `.js` or `.css` file in the `scripts/` or `styles/` folder respectively; it is recommended that the scripts and styles are named after the page `name`
+4. [Update `pageConfig.jsonc`](#updating-pageconfigjsonc) to include the new page
+5. [Test the site](#-testing-the-site) to ensure that the changes are displayed correctly
+6. [Commit the changes](#-committing-changes) to the repository
+
+## Using the HTML full [replacer](#populator)
+The HTML full replacer allows you to replace the entire content of a page with an HTML file.
+
+1. Create a new `.html` file in the `pages/` folder, see [#naming-conventions](#naming-conventions)
+   - If your page is nested under another page (i.e. `parent/child`), create a folder `parent` and put `child.html` file in it
+2. Write your content in HTML format
+    - Your file should be a full HTML document, including the `<html>`, `<head>`, and `<body>` tags
+    - You can use all the features of HTML and [templates](#template)
+3. If you wish to use custom scripts or styles, create a new `.js` or `.css` file in the `scripts/` or `styles/` folder respectively; it is recommended that the scripts and styles are named after the page `name`
+4. [Update `pageConfig.jsonc`](#updating-pageconfigjsonc) to include the new page
+5. [Test the site](#-testing-the-site) to ensure that the changes are displayed correctly
 6. [Commit the changes](#-committing-changes) to the repository
 
 ## Making changes to an existing page
@@ -271,7 +300,8 @@ It is recommended to read the comments in the file itself to understand how it w
 ## Populator
 Populators are functions that fill the content of a page. They are called by the framework to fill the content of a page.  
 - [Markdown populator](/lib/markdownPopulator.ts): Fills the content of a page with a markdown file
-- ~~[HTML populator](/lib/htmlPopulator.ts): Fills the content of a page with an HTML file~~
+- [HTML frame populator](/lib/htmlFramePopulator.ts.ts): Fills the content of a page with an HTML file
+- [HTML full replacer](/lib/htmlFullReplacer.ts): Replaces the entire content of a page with an HTML file
 
 It is recommended to read the comments in the files themselves to understand how it works.  
 

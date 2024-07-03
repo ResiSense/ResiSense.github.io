@@ -19,7 +19,7 @@ type FlattenedPageConfig = {
 type FlattenedPage = {
     name: string;
     title: string;
-    populator?: 'html' | 'markdown' | 'custom';
+    populator?: 'html-full' | 'html-frame' | 'markdown' | 'custom';
     hideFromCatalogue?: boolean;
     trace?: string[];
 }
