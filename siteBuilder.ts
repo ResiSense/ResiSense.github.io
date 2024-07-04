@@ -39,6 +39,7 @@ if (!targetDirectory) { throw new Error('Invalid mode!') };
     console.log(`Compiled templates.`);
     // 
     await Promise.all(flattenedPageConfig.pages.map(page => buildFile(page, templateCache).catch(error => console.error(error))));
+    console.log(`Built all pages.`);
     // 
     console.log(`${path.basename(__filename)} is done!`);
 })();
