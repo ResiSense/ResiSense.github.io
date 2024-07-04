@@ -4,7 +4,7 @@ Integrated human practice refers to the collaboration with various parties to fu
 
 Our team emphasises the connection of our project design with the actual needs of society. In this regard, we interacted with several experts with the aim of inventing a product that provides maximum impact to society and matches the requirements of various stakeholders.  
 
-# Interview
+# Interviews
 
 > ## Probe Vector Selection
 > 
