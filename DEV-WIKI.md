@@ -100,8 +100,8 @@ You can use the [glossary](#-glossary) to understand the terms used in this wiki
 > 2. Search for the extension ID and click install  
 
 ## Clone the repository  
-> 1. In file explorer, create a new folder for the repository
-> 2. Right-click the folder and select `Open with Code` to open the folder in VSCode
+> 1. In file explorer, create a new folder for the repository and navigate into it
+> 3. Right-click and select `Open with Code` to open the folder in VSCode
 > 3. Open the terminal with `Ctrl` + `` ` `` (backtick)
 > 3. Run `git clone https://github.com/ResiSense/ResiSense.github.io.git` to clone the repository
 > 4. Close VSCode
