@@ -101,9 +101,10 @@ You can use the [glossary](#-glossary) to understand the terms used in this wiki
 
 ## Clone the repository  
 > 1. In file explorer, create a new folder for the repository
-> 2. Right-click the folder and select `Git Bash Here`
+> 2. Right-click the folder and select `Open with Code` to open the folder in VSCode
+> 3. Open the terminal with `Ctrl` + `` ` `` (backtick)
 > 3. Run `git clone https://github.com/ResiSense/ResiSense.github.io.git` to clone the repository
-> 4. Close the Git Bash terminal
+> 4. Close VSCode
 > 5. In file explorer, navigate to the cloned repository folder `ResiSense.github.io`
 > 6. Right-click the folder and select `Open with Code` to open the repository in VSCode
 > 7. Open the terminal with `Ctrl` + `` ` `` (backtick)
