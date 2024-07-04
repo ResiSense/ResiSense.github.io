@@ -5,6 +5,10 @@ Object.keys(eventType).forEach(key => {
     window.addEventListener(eventType[key], () => { console.warn(`Event: ${eventType[key]}`) });
 });
 // 
+window.setTimeout(() => {
+    document.body.classList.add('post-buffered');
+}, 100);
+// 
 function waitForRender(element) {
     return new Promise((resolve, reject) => {
         const observer = new MutationObserver(() => {
