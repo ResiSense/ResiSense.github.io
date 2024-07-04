@@ -153,18 +153,18 @@ Sign here if you read this:
 | `.github/`   | GitHub essential files                    | templates and actions   | *edit with caution*                 |
 | `docs/`      | Production build of the site              |                         | ***DO NOT TOUCH***                  |
 
-| Important files                                   | What's this?                                | Remarks                           |
-| :------------------------------------------------ | :------------------------------------------ | :-------------------------------- |
-| [`README.md`](/README.md)                         | Repository information                      |                                   |
-| [`DEV-WIKI.md`](/DEV-WIKI.md)                     | Developer wiki                              |                                   |
-| [`meta/pageConfig.jsonc`](/meta/pageConfig.jsonc) | Metadata for pages; ***VERY IMPORTANT!***   | See [this](#pageconfigjsonc)      |
-| [`siteBuilder.ts`](/siteBuilder.ts)               | Framework code entry point                  |                                   |
-| [`boiler-plate.html`](/boiler-plate.html)         | Boilerplate HTML template for site builders |                                   |
-| [`index.html`](/index.html)                       | Entry point of the site                     | *edit with caution*               |
-| [`.gitignore`](/.gitignore)                       | Files and folders to be ignored by Git      | *edit with caution*               |
-| [`tsconfig.json`](/tsconfig.json)                 | TypeScript configuration                    | *edit with caution*               |
-| [`package.json`](/package.json)                   | Node.js package configuration               | *edit with caution*               |
-| [`package-lock.json`](/package-lock.json)         | Node.js dependencies                        | *not recommended to edit by hand* |
+| Important files                                   | What's this?                                  | Remarks                           |
+| :------------------------------------------------ | :-------------------------------------------- | :-------------------------------- |
+| [`README.md`](/README.md)                         | Repository information                        |                                   |
+| [`DEV-WIKI.md`](/DEV-WIKI.md)                     | Developer wiki                                |                                   |
+| [`meta/pageConfig.jsonc`](/meta/pageConfig.jsonc) | Metadata for pages; ***VERY IMPORTANT!***     | See [this](#pageconfigjsonc)      |
+| [`siteBuilder.ts`](/siteBuilder.ts)               | Framework code entry point                    |                                   |
+| [`boiler-plate.html`](/boiler-plate.html)         | Boilerplate HTML template for site builders   |                                   |
+| [`pages/index.html`](/pages/index.html)           | Entry point of the site, redirects to `/home` | ***DO NOT TOUCH***                |
+| [`.gitignore`](/.gitignore)                       | Files and folders to be ignored by Git        | *edit with caution*               |
+| [`tsconfig.json`](/tsconfig.json)                 | TypeScript configuration                      | *edit with caution*               |
+| [`package.json`](/package.json)                   | Node.js package configuration                 | *edit with caution*               |
+| [`package-lock.json`](/package-lock.json)         | Node.js dependencies                          | *not recommended to edit by hand* |
 
 # 🧠 Understanding the framework
 This is a very stripped-down and very custom framework specifically designed for the ResiSense website.  

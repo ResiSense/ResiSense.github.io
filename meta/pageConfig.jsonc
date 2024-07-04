@@ -21,6 +21,12 @@
 {
     "pages": [
         {
+            // do not touch this
+            "name": "index",
+            "populator": "html-full",
+            "hideFromCatalogue": true
+        },
+        {
             "name": "404",
             "title": "404: Page not found ☹️",
             "populator": "markdown",
