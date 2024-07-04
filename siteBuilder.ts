@@ -12,8 +12,19 @@ import htmlFramePopulator from './lib/htmlFramePopulator';
 
 console.log(`Running ${path.basename(__filename)}...`)
 
-const mode = process.argv[2].substring(2);
-const targetDirectory = mode === 'dev' ? 'test' : mode === 'prod' ? 'docs' : null;
+const mode = process.argv[2].substring(2) as typeof MODES[keyof typeof MODES];
+const MODES = Object.freeze({
+    dev: 'dev',
+    prod: 'prod',
+});
+const targetDirectory = (() => {
+    switch (mode) {
+        case MODES.dev:
+            return 'test';
+        case MODES.prod:
+            return 'docs';
+    }
+})();
 if (!targetDirectory) { throw new Error('Invalid mode!') };
 
 (async () => {
@@ -83,6 +94,8 @@ async function buildFile(page: Page, templateCache: TemplateCache): Promise<void
     }
     runTsPostPopulations(pageData);
     runTsIncludes(pageData);
+
+    if (mode === MODES.dev) { addHtmlExtensionsToAnchorHrefs(pageData); }
 
     fs.writeFileSync(path.resolve(targetDirectory, `${getTrace(page).join('/')}.html`), `<!DOCTYPE html>\n${document.documentElement.outerHTML}`, 'utf8');
 }
@@ -154,3 +167,20 @@ function runTsIncludes(pageData: PageData) {
     });
 }
 /* -------------------------------------------------------------------------- */
+function addHtmlExtensionsToAnchorHrefs(pageData: PageData) {
+    const document = pageData.document;
+    const anchors = document.querySelectorAll('a');
+    anchors.forEach(anchor => {
+        const href = anchor.getAttribute('href');
+        if (!href) { return; }
+        if (href.endsWith('.html')) { return; }
+        if (href === '/') {
+            anchor.href = '/index.html';
+            return;
+        }
+        if (href.startsWith('/') && !href.endsWith('/')) {
+            anchor.href = `${href}.html`;
+            return;
+        }
+    });
+}
