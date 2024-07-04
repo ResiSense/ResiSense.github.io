@@ -5,7 +5,7 @@ if (window.location.pathname.split('/').includes('404')) {
 
 const outlineProgressPointerElement = document.getElementById('outline-progress-pointer');
 const contentHeadingElements = document.querySelector('painted-content').querySelectorAll('h1, h2, h3, h4, h5, h6')
-window.addEventListener('scroll', () => {
+window.addEventListener('scroll', (e) => {
     const latestHeading =
         [...contentHeadingElements].reverse()
             .find(heading => heading.getBoundingClientRect().top < 180) || contentHeadingElements[0];
