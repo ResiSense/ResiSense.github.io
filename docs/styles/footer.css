@@ -1,0 +1,34 @@
+footer {
+    background-color: var(--bright-brown);
+
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row;
+
+    &>div {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
+
+        &>span>a {
+            height: 100%;
+
+            &>img {
+                vertical-align: middle;
+                height: 20px;
+                aspect-ratio: 1/1;
+                object-fit: contain;
+            }
+        }
+
+        &.license-container a {
+            font-weight: 700;
+            text-decoration: underline;
+        }
+    }
+}
