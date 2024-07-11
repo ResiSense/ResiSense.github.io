@@ -9,7 +9,6 @@ import { PageData } from './lib/PageData';
 import htmlFullReplacer from './lib/htmlFullReplacer';
 import htmlFramePopulator from './lib/htmlFramePopulator';
 
-
 console.log(`Running ${path.basename(__filename)}...`)
 
 const mode = process.argv[2].substring(2) as typeof MODES[keyof typeof MODES];
@@ -52,7 +51,6 @@ function cloneDirectory(source: string, destination: string): Promise<void> {
 }
 /* -------------------------------------------------------------------------- */
 async function buildFile(page: Page, templateCache: TemplateCache): Promise<void> {
-
     const filename: string = (() => {
         switch (page.populator || 'markdown ') {
             case 'html-full':

@@ -78,7 +78,6 @@ export default class markdownPopulator {
                 if (link.href.startsWith('/')) { return; } // Internal link - do nothing
                 link.target = '_blank';
                 link.rel = 'noopener noreferrer';
-
             });
         }
     }
