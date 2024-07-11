@@ -22,6 +22,19 @@
 {
     "pages": [
         {
+            "name": "attributions",
+            "populator": "html-frame",
+            "hideFromCatalogue": true,
+            "includes": {
+                "js": [
+                    "/scripts/attributions.js"
+                ],
+                "css": [
+                    "/styles/attributions.css"
+                ]
+            }
+        },
+        {
             "name": "404",
             "title": "404: Page not found ☹️",
             "populator": "markdown",
