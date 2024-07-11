@@ -13,10 +13,10 @@ import htmlFramePopulator from './lib/htmlFramePopulator';
 console.log(`Running ${path.basename(__filename)}...`)
 
 const mode = process.argv[2].substring(2) as typeof MODES[keyof typeof MODES];
-const MODES = Object.freeze({
+const MODES = {
     dev: 'dev',
     prod: 'prod',
-});
+} as const;
 const targetDirectory = (() => {
     switch (mode) {
         case MODES.dev:
