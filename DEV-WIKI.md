@@ -1,17 +1,17 @@
 # Table of contents <!-- omit in toc -->
-- [❓ Getting started](#-getting-started)
+- [❓Getting started](#getting-started)
   - [Install VSCode](#install-vscode)
   - [Install Git](#install-git)
   - [Install Node.js via NVM](#install-nodejs-via-nvm)
   - [Install recommended VSCode extensions](#install-recommended-vscode-extensions)
   - [Clone the repository](#clone-the-repository)
-- [🧪 Testing the site](#-testing-the-site)
-- [✍🏻 Committing changes](#-committing-changes)
-- [📂 Understanding the repository structure](#-understanding-the-repository-structure)
-- [🧠 Understanding the framework](#-understanding-the-framework)
-  - [🚲 Life cycle of a build](#-life-cycle-of-a-build)
+- [🧪Testing the site](#testing-the-site)
+- [✍🏻Committing changes](#committing-changes)
+- [📂Understanding the repository structure](#understanding-the-repository-structure)
+- [🧠Understanding the framework](#understanding-the-framework)
+  - [🚲Life cycle of a build](#life-cycle-of-a-build)
   - [Naming conventions](#naming-conventions)
-- [📝 Writing content for the site](#-writing-content-for-the-site)
+- [📝Writing content for the site](#writing-content-for-the-site)
   - [Adding a new page](#adding-a-new-page)
     - [Using the markdown populator](#using-the-markdown-populator)
     - [Using the HTML frame populator](#using-the-html-frame-populator)
@@ -20,10 +20,10 @@
   - [Updating `pageConfig.jsonc`](#updating-pageconfigjsonc)
     - [Adding a new entry](#adding-a-new-entry)
   - [Shortcut for lazies](#shortcut-for-lazies)
-- [✨ Working on the frontend](#-working-on-the-frontend)
-- [🖼️ Working on the framework](#️-working-on-the-framework)
+- [✨Working on the frontend](#working-on-the-frontend)
+- [🖼️Working on the framework](#️working-on-the-framework)
   - [`PageData`](#pagedata)
-- [📖 Glossary](#-glossary)
+- [📖Glossary](#glossary)
   - [Content](#content)
   - [Content population](#content-population)
   - [CSS embeds](#css-embeds)
@@ -41,40 +41,40 @@
   - [TS includes](#ts-includes)
 
 
-# 🔍 Developer Wiki <!-- omit in toc -->
+# 🔍Developer Wiki <!-- omit in toc -->
 This bare-bones wiki contains information for developers working on the site. If you are not sure how something works, please don't hesitate to ask!  
 
 **To get yourself familiarised, you are recommended to follow one of the tracks depending on what you are trying to do.**  
-You can use the [glossary](#-glossary) to understand the terms used in this wiki.  
+You can use the [glossary](#glossary) to understand the terms used in this wiki.  
 
 ### I just want to write content wtf is this:
 <!-- no toc -->
 0. [Shortcut](#shortcut-for-lazies)
-1. [Getting started](#-getting-started)
+1. [Getting started](#getting-started)
 2. [Testing the site](#testing-the-site)
 3. [Committing changes](#committing-changes)
-4. [Writing content for the site](#-writing-content-for-the-site)
+4. [Writing content for the site](#writing-content-for-the-site)
 
 ### I am just getting started:  
 <!-- no toc -->
-1. [Getting started](#-getting-started)
+1. [Getting started](#getting-started)
 2. [Testing the site](#testing-the-site)
 3. [Committing changes](#committing-changes)
-4. [Understanding the repository structure](#-understanding-the-repository-structure)
+4. [Understanding the repository structure](#understanding-the-repository-structure)
 
 ### I want to work on the frontend:  
 <!-- no toc -->
-1. [Understanding the repository structure](#-understanding-the-repository-structure)
-2. [Understanding the framework](#-understanding-the-framework)
-3. [Working on the frontend](#-working-on-the-frontend)
+1. [Understanding the repository structure](#understanding-the-repository-structure)
+2. [Understanding the framework](#understanding-the-framework)
+3. [Working on the frontend](#working-on-the-frontend)
 
 ### I want to work on the framework:  
 <!-- no toc -->
-1. [Understanding the repository structure](#-understanding-the-repository-structure)
-2. [Understanding the framework](#-understanding-the-framework)
-3. [Working on the framework](#️-working-on-the-framework)
+1. [Understanding the repository structure](#understanding-the-repository-structure)
+2. [Understanding the framework](#understanding-the-framework)
+3. [Working on the framework](#️working-on-the-framework)
 
-# ❓ Getting started
+# ❓Getting started
 
 ## Install VSCode  
 > 1. Install VSCode from https://code.visualstudio.com/ following the default installation instructions
@@ -110,7 +110,7 @@ You can use the [glossary](#-glossary) to understand the terms used in this wiki
 > 7. Open the terminal with `Ctrl` + `` ` `` (backtick)
 > 8. Run `npm install` to install the required dependencies
 
-# 🧪 Testing the site
+# 🧪Testing the site
 1. Open the terminal with `Ctrl` + `` ` `` (backtick)
 2. Run `npm run dev-build` to build the site for testing, you should find a new `test` folder in the repository
 3. In file explorer, navigate to the `test` folder
@@ -123,7 +123,7 @@ The test site should now be running in your browser.
 Live reloading should be enabled so that changes to the source code are automatically reflected in the browser after running `npm run dev-build`. You can also refresh manually if live reloading fails.  
 Note that the `test` folder is not tracked by Git and can be deleted or modified at any time without consequence.  
 
-# ✍🏻 Committing changes
+# ✍🏻Committing changes
 0. You are recommended to read up on the basics of Git and GitHub if you are not familiar with them
 1. Open the source control sidebar with `Ctrl` + `Shift` + `G`
 2. Sign in to your GitHub account as necessary
@@ -140,7 +140,7 @@ Sign here if you read this:
 - The most important things in the world are Ka and sleep (by Tommy.2024)
 ```
 
-# 📂 Understanding the repository structure
+# 📂Understanding the repository structure
 | Folder                 | Description                               | Content                 | Remarks                             |
 | :--------------------- | :---------------------------------------- | :---------------------- | :---------------------------------- |
 | `test/`                | Test build of the site                    |                         | Untracked, sandbox to test stuff in |
@@ -171,16 +171,16 @@ Sign here if you read this:
 | [`package.json`](/package.json)                   | Node.js package configuration                 | *edit with caution*               |
 | [`package-lock.json`](/package-lock.json)         | Node.js dependencies                          | *not recommended to edit by hand* |
 
-# 🧠 Understanding the framework
+# 🧠Understanding the framework
 This is a very stripped-down and very custom framework specifically designed for the ResiSense website.  
 The framework is how the site is built and how the [content](#content) is displayed.  
-You can refer to the [glossary](#-glossary) as necessary.
+You can refer to the [glossary](#glossary) as necessary.
 
-## 🚲 Life cycle of a build
+## 🚲Life cycle of a build
 0. `siteBuilder.ts` is run, via `npm run dev-build` (manual testing) or `npm run prod-build` (auto on push)
 1. `assets/`, `scripts/`, and `styles/` are copied to `docs/`
 2. The templates in `templates/` are [compiled](#template-compilation) recursively and cached
-3. For each page described in [`meta/pageConfig.jsonc`](#️-pageconfigjsonc):
+3. For each page described in [`meta/pageConfig.jsonc`](#pageconfigjsonc):
    1. Templates are embedded into `boiler-plate.html` as necessary
       - CSS, JS, and TS are pushed into an array as required by the template
       - This step is referred to as **[template painting](#template-painting)**
@@ -188,7 +188,7 @@ You can refer to the [glossary](#-glossary) as necessary.
       - These CSS are referred to as **[CSS embeds](#css-embeds)**
       - These JS are referred to as **[runtime JS](#runtime-js)**
    3. **[Post-paint TS](#post-paint-ts)** functions are run as required by `pageConfig.jsonc` and the templates
-   4. Page is filled with content using a [populator](#️-populators) function as described in `pageConfig.jsonc`
+   4. Page is filled with content using a [populator](#populators) function as described in `pageConfig.jsonc`
       - This step is referred to as **[content population](#content-population)**
    5. **[Post-population TS](#post-population-ts)** functions are run as required by `pageConfig.jsonc` and the templates
    6. **[TS includes](#ts-includes)** are run as required by `pageConfig.jsonc`
@@ -209,7 +209,7 @@ You can refer to the [glossary](#-glossary) as necessary.
 | [TS includes](#ts-includes)               | camelCase                              | Start with a verb       |
 
 
-# 📝 Writing content for the site
+# 📝Writing content for the site
 Choosing a [populator](#populator) is the first step to writing content for the site.  
 | Populator                           | Flavour  | 🕳️ Seamlessness | 🤏🏻 Control | ⏳ Speed  | 👶🏻 Ease |
 | :---------------------------------- | :------: | :------------- | :--------- | :------- | :----- |
@@ -229,8 +229,8 @@ The markdown populator allows you to write content in markdown format and have i
    - Anything is fine really, but try not to skip heading levels (e.g. `#` to `###`) since I believe it breaks the parser or something
 3. If you wish to use custom scripts or styles, create a new `.js` or `.css` file in the `scripts/` or `styles/` folder respectively; it is recommended that the scripts and styles are named after the page `name`
 4. [Update `pageConfig.jsonc`](#updating-pageconfigjsonc) to include the new page
-5. [Test the site](#-testing-the-site) to ensure that the changes are displayed correctly (not really necessary for simple content changes)
-6. [Commit the changes](#-committing-changes) to the repository
+5. [Test the site](#testing-the-site) to ensure that the changes are displayed correctly (not really necessary for simple content changes)
+6. [Commit the changes](#committing-changes) to the repository
 
 ### Using the [HTML frame populator](#html-frame-populator)
 The HTML frame populator allows you to write content in HTML format and have it displayed on the site in the [content](#content) field.
@@ -241,8 +241,8 @@ The HTML frame populator allows you to write content in HTML format and have it 
    - You can use all the features of HTML and [templates](#template)
 3. If you wish to use custom scripts or styles, create a new `.js` or `.css` file in the `scripts/` or `styles/` folder respectively; it is recommended that the scripts and styles are named after the page `name`
 4. [Update `pageConfig.jsonc`](#updating-pageconfigjsonc) to include the new page
-5. [Test the site](#-testing-the-site) to ensure that the changes are displayed correctly
-6. [Commit the changes](#-committing-changes) to the repository
+5. [Test the site](#testing-the-site) to ensure that the changes are displayed correctly
+6. [Commit the changes](#committing-changes) to the repository
 
 ### Using the [HTML full replacer](#html-full-replacer)
 The HTML full replacer allows you to replace the entire content of a page with an HTML file.
@@ -254,14 +254,14 @@ The HTML full replacer allows you to replace the entire content of a page with a
     - You can use all the features of HTML and [templates](#template)
 3. If you wish to use custom scripts or styles, create a new `.js` or `.css` file in the `scripts/` or `styles/` folder respectively; it is recommended that the scripts and styles are named after the page `name`
 4. [Update `pageConfig.jsonc`](#updating-pageconfigjsonc) to include the new page
-5. [Test the site](#-testing-the-site) to ensure that the changes are displayed correctly
-6. [Commit the changes](#-committing-changes) to the repository
+5. [Test the site](#testing-the-site) to ensure that the changes are displayed correctly
+6. [Commit the changes](#committing-changes) to the repository
 
 ## Making changes to an existing page
 1. Open the file and make the necessary changes
 2. If you have made new custom scripts or styles, [update `pageConfig.jsonc`](#updating-pageconfigjsonc)
-3. [Test the site](#-testing-the-site) to ensure that the changes are displayed correctly (not really necessary for simple content changes)
-4. [Commit the changes](#-committing-changes) to the repository
+3. [Test the site](#testing-the-site) to ensure that the changes are displayed correctly (not really necessary for simple content changes)
+4. [Commit the changes](#committing-changes) to the repository
 
 ## Updating `pageConfig.jsonc`
 See [`meta/pageConfig.jsonc`](meta/pageConfig.jsonc) for more information.  
@@ -282,16 +282,16 @@ See [`meta/pageConfig.jsonc`](meta/pageConfig.jsonc) for more information.
 6. If you want to add an alias for the page, add it to the `redirectAliasPaths` array; be careful of path collisions!
 
 ## Shortcut for lazies
-I recommend you to go through the steps above to understand how the site works. But still here's a shortcut if you are lazy and don't want to go through [#getting-started](#-getting-started).  
-You can just get a file and upload/dump it [here](https://github.com/ResiSense/ResiSense.github.io/tree/main/pages) and I will take care of the rest. Use the ResiSense GitHub account to do this maybe despite it normally being [a terrible idea](#-committing-changes).  
+I recommend you to go through the steps above to understand how the site works. But still here's a shortcut if you are lazy and don't want to go through [#getting-started](#getting-started).  
+You can just get a file and upload/dump it [here](https://github.com/ResiSense/ResiSense.github.io/tree/main/pages) and I will take care of the rest. Use the ResiSense GitHub account to do this maybe despite it normally being [a terrible idea](#committing-changes).  
 
-# ✨ Working on the frontend
+# ✨Working on the frontend
 > Remember: copy-and-pasting is your friend!  
 
-The frontend primarily makes use of [templates](#template), [CSS embeds](#css-embeds), and [runtime JS](#runtime-js) to structure the site. Your domain should mainly be `templates/`, `styles/`, and `scripts/`. Make sure you [understand the repository structure](#-understanding-the-repository-structure).  
-[Test the site](#-testing-the-site) after making changes to ensure that they are displayed correctly.  
+The frontend primarily makes use of [templates](#template), [CSS embeds](#css-embeds), and [runtime JS](#runtime-js) to structure the site. Your domain should mainly be `templates/`, `styles/`, and `scripts/`. Make sure you [understand the repository structure](#understanding-the-repository-structure).  
+[Test the site](#testing-the-site) after making changes to ensure that they are displayed correctly.  
 
-# 🖼️ Working on the framework
+# 🖼️Working on the framework
 If you are working on the framework, you are probably comfortable enough to know what you are doing. [`siteBuilder.ts`](/siteBuilder.ts) is the entry point of the framework. Good luck!  
 
 ## `PageData`
@@ -299,7 +299,7 @@ If you are working on the framework, you are probably comfortable enough to know
 `PageData` is a TypeScript type that is passed to internal builder functions, [post-paint TS](#post-paint-ts), [post-population TS](#post-population-ts), and [TS includes](#ts-includes), in this order.  
 Variables can be attached onto this type to be passed down these functions.  
 
-# 📖 Glossary
+# 📖Glossary
 
 ## Content
 Content is defined as the main place for content in a page, conventionally the `<paintable-content />`.  
