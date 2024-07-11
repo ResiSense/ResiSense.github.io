@@ -22,6 +22,7 @@ export type FlattenedPage = {
     populator?: 'html-full' | 'html-frame' | 'markdown' | 'custom';
     hideFromCatalogue?: boolean;
     trace?: string[];
+    redirectAliasPaths?: string[];
 }
 
 

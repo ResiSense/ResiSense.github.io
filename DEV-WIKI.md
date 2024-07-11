@@ -279,6 +279,7 @@ See [`meta/pageConfig.jsonc`](meta/pageConfig.jsonc) for more information.
    - If unset, the `name`, capitalised, will be used as the title
 4. Change the `populator` field to `markdown`/`html-full`/`html-frame` to use the appropriate populator
 5. If you are using custom scripts or styles, add them to the `scripts` and `styles` arrays respectively; it is recommended that the scripts and styles are named after the page `name`
+6. If you want to add an alias for the page, add it to the `redirectAliasPaths` array; be careful of path collisions!
 
 ## Shortcut for lazies
 I recommend you to go through the steps above to understand how the site works. But still here's a shortcut if you are lazy and don't want to go through [#getting-started](#-getting-started).  

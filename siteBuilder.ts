@@ -43,6 +43,9 @@ if (!targetDirectory) { throw new Error('Invalid mode!') };
     await Promise.all(Pages.flattenedPageConfig.pages.map(page => buildFile(page, templateCache).catch(error => console.error(error))));
     console.log(`Built all pages.`);
     // 
+    await Promise.all(Pages.flattenedPageConfig.pages.map(page => buildAliasFile(page).catch(error => console.error(error))));
+    console.log(`Built all aliases.`);
+    // 
     console.log(`${path.basename(__filename)} is done!`);
 })();
 
@@ -184,5 +187,17 @@ function addHtmlExtensionsToAnchorHrefs(pageData: PageData) {
             anchor.href = `${href}.html`;
             return;
         }
+    });
+}
+/* -------------------------------------------------------------------------- */
+async function buildAliasFile(page: Page): Promise<void> {
+    if (!page.redirectAliasPaths) { return; }
+    const pathName = Pages.getTrace(page).join('/');
+    const redirectHtml = await fs.readFile('./redirect.html', 'utf8');
+
+    console.log(`Building aliases for ${pathName}...`);
+    page.redirectAliasPaths.forEach(aliasPath => {
+        const aliasHtml = redirectHtml.replace('[[path]]', pathName);
+        fs.writeFileSync(path.resolve(targetDirectory, `${aliasPath}.html`), aliasHtml, 'utf8');
     });
 }

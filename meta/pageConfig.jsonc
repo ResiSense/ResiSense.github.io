@@ -17,15 +17,10 @@
     }
     hideFromCatalogue?  (optional): Whether to hide this page from the catalogue. Default is false.
     pages?              (optional): Array of pages hierarchically under this page, with "<parent.name>/<child.name>" as their url path.
+    redirectAliasPaths? (optional): Array of alias paths to redirect to this page, relative to root. Default is none.
 */
 {
     "pages": [
-        {
-            // do not touch this
-            "name": "index",
-            "populator": "html-full",
-            "hideFromCatalogue": true
-        },
         {
             "name": "404",
             "title": "404: Page not found ☹️",
@@ -34,7 +29,10 @@
         },
         {
             "name": "home",
-            "populator": "markdown"
+            "populator": "markdown",
+            "redirectAliasPaths": [
+                "index"
+            ]
         },
         {
             "name": "project",
