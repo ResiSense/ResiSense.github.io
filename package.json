@@ -5,7 +5,8 @@
     "main": "siteBuilder.ts",
     "scripts": {
         "prod-build": "echo Running prod build script && npx ts-node ./siteBuilder.ts --prod",
-        "dev-build": "echo Running dev build script && npx ts-node ./siteBuilder.ts --dev"
+        "dev-build": "echo Running dev build script && npx ts-node ./siteBuilder.ts --dev",
+        "dev-watch": "echo Running dev watch script && npx ts-node ./watcher.ts"
     },
     "repository": {
         "type": "git",
@@ -18,9 +19,11 @@
     },
     "homepage": "https://github.com/ResiSense/ResiSense.github.io#readme",
     "dependencies": {
+        "@types/chokidar": "^2.1.3",
         "@types/fs-extra": "^11.0.4",
         "@types/jsdom": "^21.1.7",
         "@types/node": "^20.14.9",
+        "chokidar": "^3.6.0",
         "fs-extra": "^11.2.0",
         "jsdom": "^24.1.0",
         "marked": "^13.0.1",

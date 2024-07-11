@@ -113,6 +113,7 @@ You can use the [glossary](#glossary) to understand the terms used in this wiki.
 # 🧪Testing the site
 1. Open the terminal with `Ctrl` + `` ` `` (backtick)
 2. Run `npm run dev-build` to build the site for testing, you should find a new `test` folder in the repository
+   - For frequent testing, you can run `npm run dev-watch` to automatically rebuild the site on changes not in `.gitignore`; note that this will suppress `console.log()` messages
 3. In file explorer, navigate to the `test` folder
 4. Right-click the folder and select `Open with Code` to open the test site in another VSCode window
 5. Open the command palette with `Ctrl` + `Shift` + `P`
@@ -164,6 +165,7 @@ Sign here if you read this:
 | [`DEV-WIKI.md`](/DEV-WIKI.md)                     | Developer wiki                                |                                   |
 | [`meta/pageConfig.jsonc`](/meta/pageConfig.jsonc) | Metadata for pages; ***VERY IMPORTANT!***     | See [this](#pageconfigjsonc)      |
 | [`siteBuilder.ts`](/siteBuilder.ts)               | Framework code entry point                    |                                   |
+| [`watcher.ts`](/watcher.ts)                       | Watcher code entry point for `dev-watch`      |                                   |
 | [`boiler-plate.html`](/boiler-plate.html)         | Boilerplate HTML template for site builders   |                                   |
 | [`pages/index.html`](/pages/index.html)           | Entry point of the site, redirects to `/home` | ***DO NOT TOUCH***                |
 | [`.gitignore`](/.gitignore)                       | Files and folders to be ignored by Git        | *edit with caution*               |
