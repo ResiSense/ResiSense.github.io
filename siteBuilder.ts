@@ -102,7 +102,7 @@ async function buildFile(page: Page, templateCache: TemplateCache): Promise<void
 
     if (mode === MODES.dev) { addHtmlExtensionsToAnchorHrefs(pageData); }
 
-    fs.writeFileSync(path.resolve(targetDirectory, `${Pages.getTrace(page).join('/')}.html`), `<!DOCTYPE html>\n${document.documentElement.outerHTML}`, 'utf8');
+    Utils.writeFileSyncWithMakeDirectory(path.resolve(targetDirectory, `${Pages.getTrace(page).join('/')}.html`), `<!DOCTYPE html>\n${document.documentElement.outerHTML}`);
 }
 /* -------------------------------------------------------------------------- */
 function insertCssEmbeds(pageData: PageData) {
@@ -198,6 +198,6 @@ async function buildAliasFile(page: Page): Promise<void> {
     console.log(`Building aliases for ${pathName}...`);
     page.redirectAliasPaths.forEach(aliasPath => {
         const aliasHtml = redirectHtml.replace('[[path]]', pathName);
-        fs.writeFileSync(path.resolve(targetDirectory, `${aliasPath}.html`), aliasHtml, 'utf8');
+        Utils.writeFileSyncWithMakeDirectory(path.resolve(targetDirectory, `${aliasPath}.html`), aliasHtml);
     });
 }
