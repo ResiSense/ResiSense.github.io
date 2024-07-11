@@ -52,7 +52,7 @@
             "populator": "markdown",
             "pages": [
                 {
-                    "name": "overview",
+                    "name": "description",
                     "populator": "markdown"
                 },
                 {
