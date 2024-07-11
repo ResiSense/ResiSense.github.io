@@ -2,7 +2,7 @@
     "name": "resisense.github.io",
     "version": "1.0.0",
     "description": "ResiSense team site",
-    "main": "index.js",
+    "main": "siteBuilder.ts",
     "scripts": {
         "prod-build": "echo Running prod build script && npx ts-node ./siteBuilder.ts --prod",
         "dev-build": "echo Running dev build script && npx ts-node ./siteBuilder.ts --dev"
