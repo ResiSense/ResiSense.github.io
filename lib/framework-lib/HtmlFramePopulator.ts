@@ -8,19 +8,22 @@ import fs = require('fs-extra');
 import Pages from "../types/Pages";
 import type { PageData } from "../types/PageData";
 
-export default class htmlFramePopulator {
-    static baseFilename = 'boiler-plate.html';
+const baseFilename = 'boiler-plate.html';
 
-    static async populatePageFromMarkdown(pageData: PageData) {
-        const page = pageData.page;
-        const document = pageData.document;
-        // 
-        const htmlPath = `pages/${Pages.getTrace(page).join('.')}.html`;
-        console.log(`Populating ${page.name}.html from ${htmlPath}...`);
-        const html = await fs.readFile(htmlPath, 'utf8').catch(() => { throw new Error(`Failed to read ${htmlPath}!`) });
-        const paintableContentElement = document.createElement('painted-content');
-        document.querySelector('paintable-content').replaceWith(paintableContentElement);
-        paintableContentElement.innerHTML = html;
-        return;
-    }
+async function populatePageFromMarkdown(pageData: PageData) {
+    const page = pageData.page;
+    const document = pageData.document;
+    // 
+    const htmlPath = `pages/${Pages.getTrace(page).join('.')}.html`;
+    console.log(`Populating ${page.name}.html from ${htmlPath}...`);
+    const html = await fs.readFile(htmlPath, 'utf8').catch(() => { throw new Error(`Failed to read ${htmlPath}!`) });
+    const paintableContentElement = document.createElement('painted-content');
+    document.querySelector('paintable-content').replaceWith(paintableContentElement);
+    paintableContentElement.innerHTML = html;
+    return;
+}
+
+export default class HtmlFramePopulator {
+    static baseFilename = baseFilename;
+    static populatePageFromMarkdown = populatePageFromMarkdown;
 }
