@@ -3,9 +3,10 @@
     It grabs the HTML file from /pages/{pageTrace}.html and pushes it into the content frame.
 */
 
-import { getTrace } from "./PageConfig";
 import fs = require('fs-extra');
-import { PageData } from "./PageData";
+
+import Pages from "../types/Pages";
+import type { PageData } from "../types/PageData";
 
 export default class htmlFramePopulator {
     static baseFilename = 'boiler-plate.html';
@@ -14,7 +15,7 @@ export default class htmlFramePopulator {
         const page = pageData.page;
         const document = pageData.document;
         // 
-        const htmlPath = `pages/${getTrace(page).join('.')}.html`;
+        const htmlPath = `pages/${Pages.getTrace(page).join('.')}.html`;
         console.log(`Populating ${page.name}.html from ${htmlPath}...`);
         const html = await fs.readFile(htmlPath, 'utf8').catch(() => { throw new Error(`Failed to read ${htmlPath}!`) });
         const paintableContentElement = document.createElement('painted-content');

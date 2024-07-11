@@ -8,4 +8,7 @@ function toTitleCase(string: string) {
     return string.replace(/\b\w/g, match => match.toUpperCase());
 }
 
-export { promisifyCallback, toTitleCase }
+export default class Utils {
+    static promisifyCallback = promisifyCallback;
+    static toTitleCase = toTitleCase;
+}

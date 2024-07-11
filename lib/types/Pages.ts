@@ -1,13 +1,13 @@
 import fs = require('fs-extra');
 
-type PageConfig = {
+export type PageConfig = {
     pages: Page[];
 }
-type Page = FlattenedPage & {
+export type Page = FlattenedPage & {
     includes?: Includes;
     pages?: Page[]; // Nested pages for hierarchical structure
 }
-type Includes = {
+export type Includes = {
     ts?: string[];
     js?: string[];
     css?: string[];
@@ -16,7 +16,7 @@ type Includes = {
 type FlattenedPageConfig = {
     pages: FlattenedPage[];
 }
-type FlattenedPage = {
+export type FlattenedPage = {
     name: string;
     title: string;
     populator?: 'html-full' | 'html-frame' | 'markdown' | 'custom';
@@ -55,4 +55,8 @@ function getTrace(page: Page | FlattenedPage): string[] {
     return getFlattenedPage(page).trace;
 }
 
-export { PageConfig, Page, FlattenedPage, Includes, pageConfig, flattenedPageConfig, getTrace };
+export default class Pages {
+    static pageConfig = pageConfig;
+    static flattenedPageConfig = flattenedPageConfig;
+    static getTrace = getTrace;
+}

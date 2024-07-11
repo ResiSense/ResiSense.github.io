@@ -1,11 +1,12 @@
-import { Page, PageConfig, pageConfig } from "./PageConfig";
+import Pages from "./Pages";
+import type { Page, PageConfig } from "./Pages";
 
-type CatalogueEntry = {
+export type CatalogueEntry = {
     name: string;
     path: string;
 }
 
-const catalogueEntries: CatalogueEntry[] = flattenConfig(pageConfig);
+const catalogueEntries: CatalogueEntry[] = flattenConfig(Pages.pageConfig);
 
 function flattenConfig(config: PageConfig): CatalogueEntry[] {
     const entries: CatalogueEntry[] = [];
@@ -23,4 +24,6 @@ function flattenConfig(config: PageConfig): CatalogueEntry[] {
     }
 }
 
-export { CatalogueEntry, catalogueEntries };
+export default class Catalogue {
+    static catalogueEntries = catalogueEntries;
+}

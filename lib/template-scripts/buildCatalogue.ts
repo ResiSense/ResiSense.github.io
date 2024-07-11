@@ -1,6 +1,6 @@
-import { catalogueEntries } from "./CatalogueEntry";
-import { getTrace } from "./PageConfig";
-import { PageData } from "./PageData";
+import Catalogue from "../types/Catalogue";
+import Pages from "../types/Pages";
+import type { PageData } from "../types/PageData";
 
 export default function (pageData: PageData) {
     const document = pageData.document;
@@ -10,13 +10,13 @@ export default function (pageData: PageData) {
     const catalogueItemTemplateElement = document.getElementById('catalogue-item-template') as HTMLTemplateElement;
     const catalogueDividerTemplateElement = document.getElementById('catalogue-divider-template') as HTMLTemplateElement;
 
-    catalogueEntries.forEach(entry => {
+    Catalogue.catalogueEntries.forEach(entry => {
         const catalogueItemElement = catalogueItemTemplateElement.content.cloneNode(true) as HTMLElement;
         const anchorElement = catalogueItemElement.querySelector('a');
         anchorElement.href = entry.path;
         anchorElement.textContent = entry.name;
 
-        if (entry.path.replace(/^\//, '') === getTrace(page).join('/')) {
+        if (entry.path.replace(/^\//, '') === Pages.getTrace(page).join('/')) {
             catalogueItemElement.querySelector('div').classList.add('catalogue-item-active');
         }
         catalogueElement.appendChild(catalogueItemElement);

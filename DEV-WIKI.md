@@ -141,18 +141,22 @@ Sign here if you read this:
 ```
 
 # 📂 Understanding the repository structure
-| Folder       | Description                               | Content                 | Remarks                             |
-| :----------- | :---------------------------------------- | :---------------------- | :---------------------------------- |
-| `test/`      | Test build of the site                    |                         | Untracked, sandbox to test stuff in |
-| `pages/`     | Content of the site                       | `.md` and `.html` files |                                     |
-| `assets/`    | Assets used in the site                   | predominantly images    | **is cloned to `docs/`**            |
-| `scripts/`   | JS scripts to be packaged to clients      | `.js` files             | **is cloned to `docs/`**            |
-| `styles/`    | CSS stylesheets to be packaged to clients | `.css` files            | **is cloned to `docs/`**            |
-| `meta/`      | Metadata for the site                     |                         |                                     |
-| `templates/` | HTML templates for the site               | `.html` files           |                                     |
-| `lib/`       | Framework code                            | `.ts` files             |                                     |
-| `.github/`   | GitHub essential files                    | templates and actions   | *edit with caution*                 |
-| `docs/`      | Production build of the site              |                         | ***DO NOT TOUCH***                  |
+| Folder                 | Description                               | Content                 | Remarks                             |
+| :--------------------- | :---------------------------------------- | :---------------------- | :---------------------------------- |
+| `test/`                | Test build of the site                    |                         | Untracked, sandbox to test stuff in |
+| `pages/`               | Content of the site                       | `.md` and `.html` files |                                     |
+| `assets/`              | Assets used in the site                   | predominantly images    | **is cloned to `docs/`**            |
+| `scripts/`             | JS scripts to be packaged to clients      | `.js` files             | **is cloned to `docs/`**            |
+| `styles/`              | CSS stylesheets to be packaged to clients | `.css` files            | **is cloned to `docs/`**            |
+| `meta/`                | Metadata for the site                     |                         |                                     |
+| `templates/`           | HTML templates for the site               | `.html` files           |                                     |
+| `lib/`                 | Framework code                            | `.ts` files             |                                     |
+| `lib/framework-lib`    | Framework dependencies                    | `.ts` files             |                                     |
+| `lib/types`            | Framework type and class declarations     | `.ts` files             |                                     |
+| `lib/page-scripts`     | Page-specific dependencies                | `.ts` files             |                                     |
+| `lib/template-scripts` | Template-specific dependencies            | `.ts` files             |                                     |
+| `.github/`             | GitHub essential files                    | templates and actions   | *edit with caution*                 |
+| `docs/`                | Production build of the site              |                         | ***DO NOT TOUCH***                  |
 
 | Important files                                   | What's this?                                  | Remarks                           |
 | :------------------------------------------------ | :-------------------------------------------- | :-------------------------------- |
@@ -192,17 +196,17 @@ You can refer to the [glossary](#-glossary) as necessary.
 4. The `docs/` or `test/` folder is now a static build of the site
 
 ## Naming conventions
-| Type                                      | Naming convention                         | Remarks                 |
-| :---------------------------------------- | :---------------------------------------- | :---------------------- |
-| [Templates](#template)                    | Only lowercase letters and `-` for spaces | Name after the page     |
-| [CSS embeds](#css-embeds)                 | Only lowercase letters and `-` for spaces | Name after the template |
-| [Runtime JS](#runtime-js)                 | Only lowercase letters and `-` for spaces | Name after the template |
-| Markdown files                            | Only lowercase letters and `-` for spaces | Name after the page     |
-| TypeScript type declaration files         | PascalCase                                |                         |
-| TypeScript files                          | camelCase                                 |                         |
-| [Post-paint TS](#post-paint-ts)           | camelCase                                 | Start with a verb       |
-| [Post-population TS](#post-population-ts) | camelCase                                 | Start with a verb       |
-| [TS includes](#ts-includes)               | camelCase                                 | Start with a verb       |
+| Type                                      | Naming convention                      | Remarks                 |
+| :---------------------------------------- | :------------------------------------- | :---------------------- |
+| [Templates](#template)                    | lowercase letters only; `-` for spaces | Name after the page     |
+| [CSS embeds](#css-embeds)                 | lowercase letters only; `-` for spaces | Name after the template |
+| [Runtime JS](#runtime-js)                 | lowercase letters only; `-` for spaces | Name after the template |
+| Markdown files                            | lowercase letters only; `-` for spaces | Name after the page     |
+| TypeScript type declaration files         | PascalCase                             |                         |
+| TypeScript files                          | camelCase                              |                         |
+| [Post-paint TS](#post-paint-ts)           | camelCase                              | Start with a verb       |
+| [Post-population TS](#post-population-ts) | camelCase                              | Start with a verb       |
+| [TS includes](#ts-includes)               | camelCase                              | Start with a verb       |
 
 
 # 📝 Writing content for the site
@@ -290,7 +294,7 @@ The frontend primarily makes use of [templates](#template), [CSS embeds](#css-em
 If you are working on the framework, you are probably comfortable enough to know what you are doing. [`siteBuilder.ts`](/siteBuilder.ts) is the entry point of the framework. Good luck!  
 
 ## `PageData`
-[Definition](/lib/PageData.ts)  
+[Definition](/lib/types/PageData.ts)  
 `PageData` is a TypeScript type that is passed to internal builder functions, [post-paint TS](#post-paint-ts), [post-population TS](#post-population-ts), and [TS includes](#ts-includes), in this order.  
 Variables can be attached onto this type to be passed down these functions.  
 
@@ -306,15 +310,15 @@ Content population is the process of filling the [content](#content) of a page w
 CSS embeds are CSS files that are embedded into the HTML relationally as `<link>` tags.  
 Tags that reference [templates](#template) should use the [painted](#template-painting) tag name.
 
-## [HTML frame populator](/lib/htmlFramePopulator.ts)
+## [HTML frame populator](/lib/framework-lib/HtmlFramePopulator.ts)
 The HTML frame populator is a function that fills the [content](#content) of a page with an HTML file during [content population](#content-population).  
 It is recommended to read the comments in the file itself to understand how it works.
 
-## [HTML full replacer](/lib/htmlFullReplacer.ts)
+## [HTML full replacer](/lib/framework-lib/HtmlFullReplacer.ts)
 The HTML full replacer is a function that replaces the entire content of a page with an HTML file during [content population](#content-population).  
 It is recommended to read the comments in the file itself to understand how it works.
 
-## [Markdown populator](/lib/markdownPopulator.ts)
+## [Markdown populator](/lib/framework-lib/MarkdownPopulator.ts)
 The markdown populator is a function that fills the [content](#content) of a page with a markdown file during [content population](#content-population).  
 It is recommended to read the comments in the file itself to understand how it works.
 
@@ -352,8 +356,8 @@ Variables that reference [templates](#template) should use the [painted](#templa
 A template is a partial HTML file that is embedded/[painted](#template-painting) into the boilerplate HTML or another template.  
 Templates can recursively require CSS, JS, TS, and other templates in them with the following tags:
 - `<custom-example />`: Paints a `templates/example.html` template
-- `<ts-post-paint src="example.ts" />`: Runs `lib/example.ts` after [painting](#template-painting)
-- `<ts-post-population src="example.ts" />`: Runs `lib/example.ts` after [populating](#content-population) the [content](#content)
+- `<ts-post-paint src="example.ts" />`: Runs `lib/template-scripts/example.ts` after [painting](#template-painting)
+- `<ts-post-population src="example.ts" />`: Runs `lib/template-scripts/example.ts` after [populating](#content-population) the [content](#content)
 - `<js-runtime src="example.js" />`: Embeds `scripts/example.js` as a [runtime JS](#runtime)
 - `<css-embed href="example.css" />`: Embeds `styles/example.css` as a [CSS embed](#css-embeds)
 

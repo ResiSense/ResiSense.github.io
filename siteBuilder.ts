@@ -1,13 +1,16 @@
 import fs = require('fs-extra');
 import path = require('path');
 import { JSDOM } from "jsdom";
-import { PaintableHtml, TemplateCache, compileTemplates, paintPageHtml } from './lib/templatePainter';
-import { Page, flattenedPageConfig, getTrace } from './lib/PageConfig';
-import markdownPopulator from './lib/markdownPopulator';
-import { promisifyCallback, toTitleCase } from './lib/utils';
-import { PageData } from './lib/PageData';
-import htmlFullReplacer from './lib/htmlFullReplacer';
-import htmlFramePopulator from './lib/htmlFramePopulator';
+
+import TemplatePainter from './lib/framework-lib/TemplatePainter';
+import type { PaintableHtml, TemplateCache } from './lib/framework-lib/TemplatePainter';
+import Pages from './lib/types/Pages';
+import type { Page } from './lib/types/Pages';
+import MarkdownPopulator from './lib/framework-lib/MarkdownPopulator';
+import Utils from './lib/framework-lib/Utils';
+import type { PageData } from './lib/types/PageData';
+import HtmlFullReplacer from './lib/framework-lib/HtmlFullReplacer';
+import HtmlFramePopulator from './lib/framework-lib/HtmlFramePopulator';
 
 console.log(`Running ${path.basename(__filename)}...`)
 
@@ -34,10 +37,10 @@ if (!targetDirectory) { throw new Error('Invalid mode!') };
     ]);
     console.log(`Cloned directories to ${targetDirectory}.`);
     // 
-    const templateCache: TemplateCache = await compileTemplates();
+    const templateCache: TemplateCache = await TemplatePainter.compileTemplates();
     console.log(`Compiled templates.`);
     // 
-    await Promise.all(flattenedPageConfig.pages.map(page => buildFile(page, templateCache).catch(error => console.error(error))));
+    await Promise.all(Pages.flattenedPageConfig.pages.map(page => buildFile(page, templateCache).catch(error => console.error(error))));
     console.log(`Built all pages.`);
     // 
     console.log(`${path.basename(__filename)} is done!`);
@@ -46,7 +49,7 @@ if (!targetDirectory) { throw new Error('Invalid mode!') };
 /* -------------------------------------------------------------------------- */
 function cloneDirectory(source: string, destination: string): Promise<void> {
     fs.emptyDirSync(targetDirectory);
-    const FS_CP = promisifyCallback(fs.cp, path.resolve(source), path.resolve(destination, path.basename(source)), { recursive: true });
+    const FS_CP = Utils.promisifyCallback(fs.cp, path.resolve(source), path.resolve(destination, path.basename(source)), { recursive: true });
     return FS_CP;
 }
 /* -------------------------------------------------------------------------- */
@@ -54,19 +57,19 @@ async function buildFile(page: Page, templateCache: TemplateCache): Promise<void
     const filename: string = (() => {
         switch (page.populator || 'markdown ') {
             case 'html-full':
-                return htmlFullReplacer.baseFilename(page);
+                return HtmlFullReplacer.baseFilename(page);
             case 'html-frame':
-                return htmlFramePopulator.baseFilename;
+                return HtmlFramePopulator.baseFilename;
             case 'markdown':
-                return markdownPopulator.baseFilename;
+                return MarkdownPopulator.baseFilename;
             default:
                 throw new Error(`Invalid populator: ${page.populator}`);
         }
     })();
     const rawHtml = fs.readFileSync(filename, 'utf8');
-    const paintedHtml: PaintableHtml = paintPageHtml({ html: rawHtml }, templateCache);
+    const paintedHtml: PaintableHtml = TemplatePainter.paintPageHtml({ html: rawHtml }, templateCache);
     const document = new JSDOM(paintedHtml.html).window.document;
-    document.title = page.title || toTitleCase(page.name);
+    document.title = page.title || Utils.toTitleCase(page.name);
 
     const pageData: PageData = {
         page,
@@ -80,13 +83,13 @@ async function buildFile(page: Page, templateCache: TemplateCache): Promise<void
     runTsPostPaints(pageData);
     switch (page.populator || 'markdown ') {
         case 'html-full':
-            await htmlFullReplacer.replacePageWithFullHtml(pageData);
+            await HtmlFullReplacer.replacePageWithFullHtml(pageData);
             break;
         case 'html-frame':
-            await htmlFramePopulator.populatePageFromMarkdown(pageData);
+            await HtmlFramePopulator.populatePageFromMarkdown(pageData);
             break;
         case 'markdown':
-            await markdownPopulator.populatePageFromMarkdown(pageData);
+            await MarkdownPopulator.populatePageFromMarkdown(pageData);
             break;
         default:
             throw new Error(`Invalid populator: ${page.populator}`);
@@ -96,7 +99,7 @@ async function buildFile(page: Page, templateCache: TemplateCache): Promise<void
 
     if (mode === MODES.dev) { addHtmlExtensionsToAnchorHrefs(pageData); }
 
-    fs.writeFileSync(path.resolve(targetDirectory, `${getTrace(page).join('/')}.html`), `<!DOCTYPE html>\n${document.documentElement.outerHTML}`, 'utf8');
+    fs.writeFileSync(path.resolve(targetDirectory, `${Pages.getTrace(page).join('/')}.html`), `<!DOCTYPE html>\n${document.documentElement.outerHTML}`, 'utf8');
 }
 /* -------------------------------------------------------------------------- */
 function insertCssEmbeds(pageData: PageData) {

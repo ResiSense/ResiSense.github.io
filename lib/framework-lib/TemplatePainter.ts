@@ -16,7 +16,7 @@ Yes I am basically reinventing React. No I don't care because this is fun.
 
 import fs = require('fs-extra');
 
-type TemplateCache = {
+export type TemplateCache = {
     [key: string]: Template;
 }
 
@@ -24,7 +24,7 @@ type Template = PaintableHtml & {
     painted: boolean;
 }
 
-type PaintableHtml = {
+export type PaintableHtml = {
     html: string;
     ts?: {
         postPaint?: string[],
@@ -141,4 +141,7 @@ function paintPageHtml(paintableHtml: PaintableHtml, templateCache: TemplateCach
     return paintableHtml;
 }
 
-export { compileTemplates, paintPageHtml, TemplateCache, PaintableHtml };
+export default class TemplatePainter {
+    static compileTemplates = compileTemplates;
+    static paintPageHtml = paintPageHtml;
+}

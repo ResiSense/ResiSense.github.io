@@ -60,7 +60,7 @@
             "populator": "markdown",
             "includes": {
                 "ts": [
-                    "/lib/integrated-human-practice.ts"
+                    "/lib/page-scripts/integrated-human-practice.ts"
                 ],
                 "css": [
                     "/styles/integrated-human-practice.css"
