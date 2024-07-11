@@ -113,7 +113,9 @@ You can use the [glossary](#glossary) to understand the terms used in this wiki.
 # 🧪Testing the site
 1. Open the terminal with `Ctrl` + `` ` `` (backtick)
 2. Run `npm run dev-build` to build the site for testing, you should find a new `test` folder in the repository
-   - For frequent testing, you can run `npm run dev-watch` to automatically rebuild the site on changes not in `.gitignore`; note that this will suppress `console.log()` messages
+   - For frequent testing, you can run `npm run dev-watch` to automatically rebuild the site on changes not in `.gitignore`
+     - Note that this will suppress `console.log()` messages
+     - `npm run dev-build` is automatically run under the hood
 3. In file explorer, navigate to the `test` folder
 4. Right-click the folder and select `Open with Code` to open the test site in another VSCode window
 5. Open the command palette with `Ctrl` + `Shift` + `P`
