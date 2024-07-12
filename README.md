@@ -1,7 +1,7 @@
 # 🧬 [ResiSense.github.io](https://ResiSense.github.io)
 This repository contains the source code for the ResiSense site.  
 Please note that this repository can be accessed in many locations via clones, but the one hosted on [Github](https://github.com/ResiSense/ResiSense.github.io) should always be regarded as the authoritative version.  
-~~The repository is automatically cloned and deployed to iGEM's GitLab on commits.~~  
+*The repository is automatically cloned and deployed to [iGEM's GitLab repository](https://gitlab.igem.org/2024/hongkong-cuhk) on commits.*  
 
 # ✍🏻 Contributors
 Lead: [CCheukKa](https://github.com/CCheukKa)
