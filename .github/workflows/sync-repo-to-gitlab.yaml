@@ -29,6 +29,7 @@ jobs:
 
                   git remote add gitlab "$gitlab_repo_url_with_credentials"
                   git add --all
+                  git status
                   git commit -m "SYNC: ${{ github.event.head_commit.message }}"
 
                   branch_name=$(echo $GITHUB_REF | sed 's/refs\/heads\///')
