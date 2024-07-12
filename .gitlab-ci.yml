@@ -9,7 +9,7 @@ before_script:
   - bundle init
   - bundle add jekyll
   - bundle install
-  - cp -R .gitlab docs
+  - rsync -av .gitlab/ docs/
 
 pages:
   stage: deploy
