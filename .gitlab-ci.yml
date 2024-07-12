@@ -5,7 +5,6 @@ workflow:
         - if: $CI_COMMIT_BRANCH
 
 before_script:
-    - cd docs
     - gem install bundler
     - bundle init
     - bundle add jekyll
@@ -14,7 +13,7 @@ before_script:
 pages:
     stage: deploy
     script:
-        - bundle exec jekyll build -d public
+        - bundle exec jekyll build --source docs --destination public
     artifacts:
         paths:
             - public
@@ -25,7 +24,7 @@ pages:
 test:
     stage: test
     script:
-        - bundle exec jekyll build -d test
+        - bundle exec jekyll build --source docs --destination test
     artifacts:
         paths:
             - test
