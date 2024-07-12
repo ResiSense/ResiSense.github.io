@@ -7,8 +7,6 @@ workflow:
 before_script:
     - apt-get update && apt-get install -y rsync
     - gem install bundler
-    - bundle init
-    - bundle add jekyll
     - bundle install
     - rsync -av .gitlab/ .
 
