@@ -6,7 +6,8 @@
     "scripts": {
         "prod-build": "echo Running prod build script && npx ts-node ./siteBuilder.ts --prod",
         "dev-build": "echo Running dev build script && npx ts-node ./siteBuilder.ts --dev",
-        "dev-watch": "echo Running dev watch script && npx ts-node ./watcher.ts"
+        "dev-watch": "echo Running dev watch script && npx ts-node ./watcher.ts",
+        "gitlab-actions": "echo Running dev watch script && npx ts-node ./.gitlab/addBaseUrl.ts"
     },
     "repository": {
         "type": "git",
@@ -25,6 +26,7 @@
         "@types/node": "^20.14.9",
         "chokidar": "^3.6.0",
         "fs-extra": "^11.2.0",
+        "glob": "^11.0.0",
         "jsdom": "^24.1.0",
         "marked": "^13.0.1",
         "typescript": "^5.5.2"
