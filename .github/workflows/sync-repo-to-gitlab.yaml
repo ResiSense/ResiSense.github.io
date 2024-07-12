@@ -21,7 +21,7 @@ jobs:
                   git clone ${gitlab_repo_url} gitlab-repo
 
                   rm -r gitlab-repo/*
-                  cp -r github-repo/* gitlab-repo
+                  rsync -av --exclude='.git' github-repo/ gitlab-repo/
                   cd gitlab-repo
 
                   git config user.name gitlab-repo-syncer[bot]
