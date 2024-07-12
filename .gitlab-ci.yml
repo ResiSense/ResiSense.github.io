@@ -6,9 +6,9 @@ workflow:
 
 before_script:
     - apt-get update && apt-get install -y rsync
+    - rsync -av .gitlab/ .
     - gem install bundler
     - bundle install
-    - rsync -av .gitlab/ .
 
 pages:
     stage: deploy
