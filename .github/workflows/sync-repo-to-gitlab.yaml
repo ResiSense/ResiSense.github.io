@@ -29,8 +29,6 @@ jobs:
 
                   git remote add gitlab "$gitlab_repo_url_with_credentials"
                   git add .
-                  git add --force .gitignore
-                  git add --force .gitlab-ci.yml
                   git commit -m "SYNC: ${{ github.event.head_commit.message }}"
 
                   branch_name=$(echo $GITHUB_REF | sed 's/refs\/heads\///')
