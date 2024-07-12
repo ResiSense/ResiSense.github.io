@@ -4,7 +4,7 @@ workflow:
 
 default:
     interruptible: true
-    image: node:18
+    image: node:20
 
     before_script:
         - npm ci
