@@ -13,7 +13,6 @@ jobs:
         steps:
             - name: Push to GitLab
               run: |
-                  export GIT_SSH_COMMAND='ssh -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no'
                   github_repo_url=${{ github.server_url }}/${{ github.repository }}.git
                   gitlab_repo_url=${{ secrets.GITLAB_URL }}
                   gitlab_repo_url_with_credentials="https://${{ secrets.USERNAME }}:${{ secrets.GITLAB_PAT }}@${gitlab_repo_url#https://}"
