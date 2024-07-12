@@ -13,9 +13,10 @@ pages:
     stage: deploy
     script:
         - npm run gitlab-actions --if-present
+        - cp -r docs public
     artifacts:
         paths:
-            - docs
+            - public
     rules:
         - if: $CI_COMMIT_BRANCH == "main"
     environment: production
