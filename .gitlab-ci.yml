@@ -8,7 +8,7 @@ before_script:
     - cd docs
     - gem install bundler
     - bundle init
-    - bundle install
+    - bundle install jekyll
 
 pages:
     stage: deploy
