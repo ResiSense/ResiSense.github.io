@@ -1,8 +1,4 @@
-# Table of contents <!-- omit in toc -->
-- [✍🏻 Contributors](#-contributors)
-- [🙋🏻‍♂️ Questions?](#️-questions)
-
-# 🧬 [ResiSense.github.io](https://ResiSense.github.io) <!-- omit in toc -->
+# 🧬 [ResiSense.github.io](https://ResiSense.github.io)
 This repository contains the source code for the ResiSense site.  
 Please note that this repository can be accessed in many locations via clones, but the one hosted on [Github](https://github.com/ResiSense/ResiSense.github.io) should always be regarded as the authoritative version.  
 ~~The repository is automatically cloned and deployed to iGEM's GitLab on commits.~~  
