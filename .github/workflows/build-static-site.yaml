@@ -1,11 +1,11 @@
 name: Build static site
 
 on:
+    workflow_dispatch:
+
     push:
         branches: ["main"]
         tags-ignore: "prod"
-    pull_request:
-        branches: ["main"]
 
 permissions:
     contents: write
@@ -36,7 +36,7 @@ jobs:
             - name: Run test
               run: npm test --if-present
 
-            - name: Push to production branch
+            - name: Commit built site to main branch
               uses: stefanzweifel/git-auto-commit-action@v5
               with:
                   commit_message: "STATIC BUILD: ${{ github.event.head_commit.message }}"
