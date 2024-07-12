@@ -9,11 +9,12 @@ before_script:
     - bundle init
     - bundle add jekyll
     - bundle install
+    - cp -R .gitlab docs
 
-pages:
+pages:  
     stage: deploy
     script:
-        - bundle exec jekyll build --source docs --destination public
+        - bundle exec jekyll build --source docs --destination public --baseurl hongkong-cuhk
     artifacts:
         paths:
             - public
@@ -24,7 +25,7 @@ pages:
 test:
     stage: test
     script:
-        - bundle exec jekyll build --source docs --destination test
+        - bundle exec jekyll build --source docs --destination test --baseurl hongkong-cuhk
     artifacts:
         paths:
             - test
