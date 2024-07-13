@@ -15,15 +15,15 @@ import HtmlFramePopulator from './lib/framework-lib/HtmlFramePopulator';
 console.log(`Running ${path.basename(__filename)}...`)
 
 const mode = process.argv[2].substring(2) as typeof MODES[keyof typeof MODES];
-const MODES = {
-    dev: 'dev',
-    prod: 'prod',
-} as const;
+enum MODES {
+    DEV = 'dev',
+    PROD = 'prod',
+}
 const targetDirectory = (() => {
     switch (mode) {
-        case MODES.dev:
+        case MODES.DEV:
             return 'test';
-        case MODES.prod:
+        case MODES.PROD:
             return 'docs';
     }
 })();
@@ -100,7 +100,7 @@ async function buildFile(page: Page, templateCache: TemplateCache): Promise<void
     runTsPostPopulations(pageData);
     runTsIncludes(pageData);
 
-    if (mode === MODES.dev) { addHtmlExtensionsToAnchorHrefs(pageData); }
+    if (mode === MODES.DEV) { addHtmlExtensionsToAnchorHrefs(pageData); }
 
     Utils.writeFileSyncWithMakeDirectory(path.resolve(targetDirectory, `${Pages.getTrace(page).join('/')}.html`), `<!DOCTYPE html>\n${document.documentElement.outerHTML}`);
 }
