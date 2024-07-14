@@ -6,11 +6,6 @@ on:
             commitMessage:
                 required: true
                 type: string
-        secrets:
-            USERNAME:
-                required: true
-            MY_GITHUB_PAT:
-                required: true
     workflow_dispatch:
         inputs:
             commitMessage:
@@ -49,19 +44,9 @@ jobs:
               run: npm test --if-present
 
             - name: Commit built site to main branch
-              run: |
-                  export GIT_SSH_COMMAND='ssh -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no'
-                  github_repo_url=${{ github.server_url }}/${{ github.repository }}.git
-                  github_repo_url_with_credentials="https://${{ secrets.USERNAME }}:${{ secrets.MY_GITHUB_PAT }}@${github_repo_url#https://}"
-
-                  git config user.name static-site-builder[bot]
-                  git config user.email static-site-builder[bot]@users.noreply.github.com
-
-                  git remote add github "$github_repo_url_with_credentials"
-                  git add --all
-                  git status
-                  git commit -m "STATIC BUILD: ${{ github.event.head_commit.message || inputs.commitMessage }}"
-
-                  branch_name=$(echo $GITHUB_REF | sed 's/refs\/heads\///')
-                  git push github "$branch_name" --force
-              shell: bash
+              uses: stefanzweifel/git-auto-commit-action@v5
+              with:
+                  commit_message: "STATIC BUILD: ${{ github.event.head_commit.message || inputs.commitMessage }}"
+                  commit_user_name: static-site-builder[bot]
+                  commit_user_email: static-site-builder[bot]@users.noreply.github.com
+                  tagging_message: prod
