@@ -13,7 +13,7 @@ pages:
     stage: deploy
     script:
         - npm run gitlab-actions --if-present
-        - cp -r docs public
+        - mv docs public
     artifacts:
         paths:
             - public
