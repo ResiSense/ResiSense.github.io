@@ -1,11 +1,10 @@
 name: Sync Repo to GitLab
 
 on:
-    workflow_dispatch:
-
     push:
-        branches: ["main"]
+        branches: "main"
         tags: "prod"
+    workflow_dispatch:
 
 jobs:
     sync:
