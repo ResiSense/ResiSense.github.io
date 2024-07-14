@@ -50,3 +50,5 @@ jobs:
                   commit_user_name: static-site-builder[bot]
                   commit_user_email: static-site-builder[bot]@users.noreply.github.com
                   tagging_message: prod
+              env:
+                  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

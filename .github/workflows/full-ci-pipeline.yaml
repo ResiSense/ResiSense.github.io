@@ -24,6 +24,7 @@ jobs:
         uses: ./.github/workflows/build-static-site.yaml
         with:
             commitMessage: ${{ github.event.head_commit.message || inputs.commitMessage }}
+        secrets: inherit
 
     sync_repo_to_gitlab:
         needs: build_static_site
