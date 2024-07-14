@@ -21,12 +21,15 @@ painted-content {
 
 .human-card {
     --human-card-background: var(--bright-brown);
-    border-radius: 1rem;
+    --border-radius: 1rem;
+    --grid-left-percent: 15%;
+    --grid-right-percent: 85%;
+    border-radius: var(--border-radius);
     overflow: hidden;
     display: grid;
-    grid-template-columns: 15% 85%;
-    background-color: var(--human-card-background);
-    /* color: white; */
+    grid-template-columns: var(--grid-left-percent) var(--grid-right-percent);
+    position: relative;
+    height: 100%;
 
     &>img {
         width: 100%;
@@ -34,24 +37,37 @@ painted-content {
         overflow: hidden;
         object-fit: cover;
         border-radius: 0;
+        z-index: 1;
     }
 
-    &>.human-card-text-container {
+    &>.human-card-box {
+        background-color: var(--human-card-background);
+        position: absolute;
+        bottom: 0;
+        right: 0;
         display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        padding: 0.5rem 1rem;
-        margin: 0;
+        justify-content: end;
+        border-radius: var(--border-radius);
 
-        &>h3 {
-            position: initial;
-            background: var(--human-card-background);
-            box-shadow: none;
-        }
-
-        &>p {
+        &>.human-card-text-container {
+            display: flex;
+            box-sizing: border-box;
+            flex-direction: column;
+            justify-content: space-between;
+            padding: 0.5rem 1rem;
             margin: 0;
-            padding: 0;
+            width: var(--grid-right-percent);
+
+            &>h3 {
+                position: initial;
+                background: var(--human-card-background);
+                box-shadow: none;
+            }
+
+            &>p {
+                margin: 0;
+                padding: 0;
+            }
         }
     }
 }

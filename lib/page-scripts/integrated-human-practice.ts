@@ -15,11 +15,16 @@ export default function wrapHumanCards(pageData: PageData) {
         h3.parentElement.insertBefore(humanCard, h3);
 
         humanCard.appendChild(img);
+
+        const humanCardBox = document.createElement('div');
+        humanCardBox.classList.add('human-card-box');
+        humanCard.appendChild(humanCardBox);
+
         const humanCardTextContainer = document.createElement('div');
         humanCardTextContainer.classList.add('human-card-text-container');
         humanCardTextContainer.appendChild(h3);
         humanCardTextContainer.appendChild(p);
-        humanCard.appendChild(humanCardTextContainer);
+        humanCardBox.appendChild(humanCardTextContainer);
 
         const brs = humanCard.getElementsByTagName('br');
         for (let j = 0; j < brs.length; j++) {
