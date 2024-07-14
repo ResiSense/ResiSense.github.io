@@ -1,3 +1,5 @@
+console.log(`Script running: ${ document.currentScript.src }`);
+//
 const searchfieldElement = document.getElementById('searchfield');
 const searchButtonElement = document.getElementById('search-button');
 

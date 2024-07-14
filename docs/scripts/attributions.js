@@ -1,3 +1,5 @@
+console.log(`Script running: ${ document.currentScript.src }`);
+//
 window.addEventListener("message", function (e) {
     if (e.origin === "https://teams.igem.org") {
         const { type, data } = JSON.parse(e.data);
