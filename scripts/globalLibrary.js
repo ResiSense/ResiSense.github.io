@@ -9,7 +9,7 @@ window.setTimeout(() => {
     document.body.classList.add('post-buffered');
 }, 100);
 // 
-function waitForRender(element) {
+function waitForMutation(element) { //! Does not work for initial page load
     return new Promise((resolve, reject) => {
         const observer = new MutationObserver(() => {
             if (document.contains(element)) {
