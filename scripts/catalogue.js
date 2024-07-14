@@ -1,12 +1,5 @@
 const catalogueItems = document.getElementsByClassName("catalogue-item");
-Array.from(catalogueItems).forEach(catalogueElement => {
-    waitForRender(catalogueElement)
-        .then(() => {
-            const firstCatalogueItemLeftBoundClientPosition = document.querySelector('.catalogue-item:not(.catalogue-arrow)').getBoundingClientRect().left;
-            const catalogueItemLeftBoundClientPosition = catalogueElement.getBoundingClientRect().left;
-            catalogueElement.setAttribute('translate-amount', firstCatalogueItemLeftBoundClientPosition - catalogueItemLeftBoundClientPosition);
-        });
-});
+
 window.addEventListener(eventType.contentScrollPastHeader, (e) => {
     const shouldHideCatalogue = e.detail;
 
@@ -21,4 +14,20 @@ window.addEventListener(eventType.contentScrollPastHeader, (e) => {
 
         catalogueElement.classList.toggle("catalogue-item-hidden", shouldHideCatalogue);
     });
+});
+
+window.addEventListener('DOMContentLoaded', () => {
+    calculateTranslateAmount();
+    function calculateTranslateAmount() {
+        if (contentScrollPastHeader.current === undefined) {
+            requestAnimationFrame(calculateTranslateAmount);
+            return;
+        }
+        Array.from(catalogueItems).forEach(catalogueElement => {
+            const firstCatalogueItemLeftBoundClientPosition = document.querySelector('.catalogue-item:not(.catalogue-arrow)').getBoundingClientRect().left;
+            const catalogueItemLeftBoundClientPosition = catalogueElement.getBoundingClientRect().left;
+            catalogueElement.setAttribute('translate-amount', firstCatalogueItemLeftBoundClientPosition - catalogueItemLeftBoundClientPosition);
+            window.dispatchEvent(new CustomEvent(eventType.contentScrollPastHeader, { detail: contentScrollPastHeader.current }));
+        });
+    }
 });
