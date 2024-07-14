@@ -2,10 +2,8 @@ name: Build static site
 
 on:
     push:
-        branches:
-            - "main"
-        tags-ignore:
-            - "prod"
+        branches: "main"
+        tags-ignore: "prod"
     workflow_dispatch:
 
 permissions:

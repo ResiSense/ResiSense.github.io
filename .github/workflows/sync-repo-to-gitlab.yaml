@@ -2,10 +2,8 @@ name: Sync Repo to GitLab
 
 on:
     push:
-        branches:
-            - "main"
-        tags:
-            - "prod"
+        branches: "main"
+        tags: "prod"
     workflow_dispatch:
 
 jobs:
