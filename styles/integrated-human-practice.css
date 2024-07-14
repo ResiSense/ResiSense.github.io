@@ -1,6 +1,11 @@
 painted-content {
     blockquote {
 
+        h3,
+        .scroll-marker[data-scroll-marker-level="H3"] {
+            --this-top: 7rem;
+        }
+
         h4,
         .scroll-marker[data-scroll-marker-level="H4"] {
             font-size: 1.17rem;
