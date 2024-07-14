@@ -153,12 +153,16 @@ Sign here if you read this:
 After committing onto GitHub, a CI pipeline as defined in [`.github/workflows/full-ci-pipeline.yaml`](/.github/workflows/full-ci-pipeline.yaml) is run automatically.  
 *This usually takes ~30 seconds.*  
 - The site is automatically built and deployed to [GitHub Pages](https://ResiSense.github.io)
+  - The build job will fail if there is no site-related changes (e.g. metadata changes only). It is normal behaviour.
 - The site is automatically cloned and committed to GitLab
 
 After auto-committing onto GitLab, a CI workflow as defined in [`.gitlab-ci.yml`](/.gitlab-ci.yml) is run automatically.  
 *This usually takes >3 minutes.*  
 - `.ts` scripts in [`.gitlab/`](/.gitlab/) are run
 - The site is automatically deployed to [GitLab Pages](https://2024.igem.wiki/hongkong-cuhk)
+
+> [!NOTE]
+> Concurrent CI runs will automatically kill all old jobs. Only the most recent job will execute.
 
 # 📂Understanding the repository structure
 | Folder                                            | Description                               | Content                 | Remarks                        |
