@@ -22,11 +22,11 @@ jobs:
 
         steps:
             - name: Build static site
-              uses: .github/workflows/build-static-site.yaml
+              uses: ./.github/workflows/build-static-site.yaml
               with:
                   commitMessage: ${{ github.event.head_commit.message || inputs.commitMessage }}
 
             - name: Sync Repo to GitLab
-              uses: .github/workflows/sync-repo-to-gitlab.yaml
+              uses: ./.github/workflows/sync-repo-to-gitlab.yaml
               with:
                   commitMessage: ${{ github.event.head_commit.message || inputs.commitMessage }}
