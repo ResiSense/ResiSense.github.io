@@ -114,14 +114,14 @@ This bare-bones wiki contains information for developers working on the site. If
 > 8. Run `npm install` to install the required dependencies
 
 # 🧪Testing the site
-1. Open the terminal with `Ctrl` + `` ` `` (backtick)
-2. Run `npm run dev-build` to build the site for testing, you should find a new `test` folder in the repository
-   - For frequent testing, you can run `npm run dev-watch` to automatically rebuild the site on changes not in `.gitignore`
-     - `npm run dev-build` is automatically run under the hood
-3. In file explorer, navigate to the `test` folder
-4. Right-click the folder and select `Open with Code` to open the test site in another VSCode window
-5. Open the command palette with `Ctrl` + `Shift` + `P`
-6. Search for `Live Server: Open with Live Server` and select it to open the test site in your browser
+> 1. Open the terminal with `Ctrl` + `` ` `` (backtick)
+> 2. Run `npm run dev-build` to build the site for testing, you should find a new `test` folder in the repository
+>    - For frequent testing, you can run `npm run dev-watch` to automatically rebuild the site on changes not in `.gitignore`
+>      - `npm run dev-build` is automatically run under the hood
+> 3. In file explorer, navigate to the `test` folder
+> 4. Right-click the folder and select `Open with Code` to open the test site in another VSCode window
+> 5. Open the command palette with `Ctrl` + `Shift` + `P`
+> 6. Search for `Live Server: Open with Live Server` and select it to open the test site in your browser
 
 The test site should now be running in your browser.  
 > [!NOTE]
@@ -133,14 +133,14 @@ Live reloading should be enabled so that changes to the source code are automati
 > The `test` folder is not tracked by Git and can be deleted or modified at any time without consequence. Feel free to use it as a sandbox to test stuff with!
 
 # ✍🏻Committing changes
-0. You are recommended to read up on the basics of Git and GitHub if you are not familiar with them
-1. Open the source control sidebar with `Ctrl` + `Shift` + `G`
-2. Sign in to your GitHub account as necessary
-3. Stage the changes by clicking the `+` button next to each file name
-4. Write a commit message in the text box at the top of the sidebar to describe the changes
-5. Click `Commit & Create Pull Request`; you can find this button under the dropdown menu next to the commit button if it is not already visible
-6. Follow the instructions in the new browser window to create a pull request
-7. Wait for the pull request to be reviewed and merged by the repository owner
+> 0. You are recommended to read up on the basics of Git and GitHub if you are not familiar with them
+> 1. Open the source control sidebar with `Ctrl` + `Shift` + `G`
+> 2. Sign in to your GitHub account as necessary
+> 3. Stage the changes by clicking the `+` button next to each file name
+> 4. Write a commit message in the text box at the top of the sidebar to describe the changes
+> 5. Click `Commit & Create Pull Request`; you can find this button under the dropdown menu next to the commit button if it is not already visible
+> 6. Follow the instructions in the new browser window to create a pull request
+> 7. Wait for the pull request to be reviewed and merged by the repository owner
 
 Feel free to make changes here as a test if you wish. (This file is `/DEV-WIKI.md` btw.)
 ```markdown
@@ -201,23 +201,23 @@ The framework is how the site is built and how the [content](#content) is displa
 > You can refer to the [glossary](#glossary) as necessary.  
 
 ## 🚲Life cycle of a build
-0. `siteBuilder.ts` is run, via `npm run dev-build` (manual testing) or `npm run prod-build` (auto on push)
-1. `assets/`, `scripts/`, and `styles/` are copied to `docs/`
-2. The templates in `templates/` are [compiled](#template-compilation) recursively and cached
-3. For each page described in [`meta/pageConfig.jsonc`](#pageconfigjsonc):
-   1. Templates are embedded into `boiler-plate.html` as necessary
-      - CSS, JS, and TS are pushed into an array as required by the template
-      - This step is referred to as **[template painting](#template-painting)**
-   2. CSS and JS are embedded into the HTML (relationally) as required by `pageConfig.jsonc` and the templates
-      - These CSS are referred to as **[CSS embeds](#css-embeds)**
-      - These JS are referred to as **[runtime JS](#runtime-js)**
-   3. **[Post-paint TS](#post-paint-ts)** functions are run as required by `pageConfig.jsonc` and the templates
-   4. Page is filled with content using a [populator](#populators) function as described in `pageConfig.jsonc`
-      - This step is referred to as **[content population](#content-population)**
-   5. **[Post-population TS](#post-population-ts)** functions are run as required by `pageConfig.jsonc` and the templates
-   6. **[TS includes](#ts-includes)** are run as required by `pageConfig.jsonc`
-   7. The final HTML is written to `docs/` as `<page>.html`
-4. The `docs/` or `test/` folder is now a static build of the site
+> 0. `siteBuilder.ts` is run, via `npm run dev-build` (manual testing) or `npm run prod-build` (auto on push)
+> 1. `assets/`, `scripts/`, and `styles/` are copied to `docs/`
+> 2. The templates in `templates/` are [compiled](#template-compilation) recursively and cached
+> 3. For each page described in [`meta/pageConfig.jsonc`](#pageconfigjsonc):
+>    1. Templates are embedded into `boiler-plate.html` as necessary
+>       - CSS, JS, and TS are pushed into an array as required by the template
+>       - This step is referred to as **[template painting](#template-painting)**
+>    2. CSS and JS are embedded into the HTML (relationally) as required by `pageConfig.jsonc` and the templates
+>       - These CSS are referred to as **[CSS embeds](#css-embeds)**
+>       - These JS are referred to as **[runtime JS](#runtime-js)**
+>    3. **[Post-paint TS](#post-paint-ts)** functions are run as required by `pageConfig.jsonc` and the templates
+>    4. Page is filled with content using a [populator](#populators) function as described in `pageConfig.jsonc`
+>       - This step is referred to as **[content population](#content-population)**
+>    5. **[Post-population TS](#post-population-ts)** functions are run as required by `pageConfig.jsonc` and the templates
+>    6. **[TS includes](#ts-includes)** are run as required by `pageConfig.jsonc`
+>    7. The final HTML is written to `docs/` as `<page>.html`
+> 4. The `docs/` or `test/` folder is now a static build of the site
 
 ## Naming conventions
 | Type                                      | Naming convention                      | Remarks                 |
@@ -249,45 +249,45 @@ The markdown populator allows you to write content in markdown format and have i
 > [!TIP]
 > You are recommended to read up on the basics of markdown if you are not familiar with it, or use the [markdown cheat sheet](https://www.markdownguide.org/cheat-sheet/); it is really very simple  
 
-1. Create a new `.md` file in the `pages/` folder, see [#naming-conventions](#naming-conventions)
-   - If your page is nested under another page (i.e. `parent/child`), create a folder `parent` and put `child.md` file in it
-2. Write your content in markdown format
-   - Anything is fine really, but try not to skip heading levels (e.g. `#` to `###`) since I believe it breaks the parser or something
-3. If you wish to use custom scripts or styles, create a new `.js` or `.css` file in the `scripts/` or `styles/` folder respectively; it is recommended that the scripts and styles are named after the page `name`
-4. [Update `pageConfig.jsonc`](#updating-pageconfigjsonc) to include the new page
-5. [Test the site](#testing-the-site) to ensure that the changes are displayed correctly (not really necessary for simple content changes)
-6. [Commit the changes](#committing-changes) to the repository
+> 1. Create a new `.md` file in the `pages/` folder, see [#naming-conventions](#naming-conventions)
+>    - If your page is nested under another page (i.e. `parent/child`), create a folder `parent` and put `child.md` file in it
+> 2. Write your content in markdown format
+>    - Anything is fine really, but try not to skip heading levels (e.g. `#` to `###`) since I believe it breaks the parser or something
+> 3. If you wish to use custom scripts or styles, create a new `.js` or `.css` file in the `scripts/` or `styles/` folder respectively; it is recommended that the scripts and styles are named after the page `name`
+> 4. [Update `pageConfig.jsonc`](#updating-pageconfigjsonc) to include the new page
+> 5. [Test the site](#testing-the-site) to ensure that the changes are displayed correctly (not really necessary for simple content changes)
+> 6. [Commit the changes](#committing-changes) to the repository
 
 ### Using the [HTML frame populator](#html-frame-populator)
 The HTML frame populator allows you to write content in HTML format and have it displayed on the site in the [content](#content) field.
 
-1. Create a new `.html` file in the `pages/` folder, see [#naming-conventions](#naming-conventions)
-   - If your page is nested under another page (i.e. `parent/child`), create a folder `parent` and put `child.html` file in it
-2. Write your content in HTML format
-   - You can use all the features of HTML and [templates](#template)
-3. If you wish to use custom scripts or styles, create a new `.js` or `.css` file in the `scripts/` or `styles/` folder respectively; it is recommended that the scripts and styles are named after the page `name`
-4. [Update `pageConfig.jsonc`](#updating-pageconfigjsonc) to include the new page
-5. [Test the site](#testing-the-site) to ensure that the changes are displayed correctly
-6. [Commit the changes](#committing-changes) to the repository
+> 1. Create a new `.html` file in the `pages/` folder, see [#naming-conventions](#naming-conventions)
+>    - If your page is nested under another page (i.e. `parent/child`), create a folder `parent` and put `child.html` file in it
+> 2. Write your content in HTML format
+>    - You can use all the features of HTML and [templates](#template)
+> 3. If you wish to use custom scripts or styles, create a new `.js` or `.css` file in the `scripts/` or `styles/` folder respectively; it is recommended that the scripts and styles are named after the page `name`
+> 4. [Update `pageConfig.jsonc`](#updating-pageconfigjsonc) to include the new page
+> 5. [Test the site](#testing-the-site) to ensure that the changes are displayed correctly
+> 6. [Commit the changes](#committing-changes) to the repository
 
 ### Using the [HTML full replacer](#html-full-replacer)
 The HTML full replacer allows you to replace the entire content of a page with an HTML file.
 
-1. Create a new `.html` file in the `pages/` folder, see [#naming-conventions](#naming-conventions)
-   - If your page is nested under another page (i.e. `parent/child`), create a folder `parent` and put `child.html` file in it
-2. Write your content in HTML format
-    - Your file should be a full HTML document, including the `<html>`, `<head>`, and `<body>` tags
-    - You can use all the features of HTML and [templates](#template)
-3. If you wish to use custom scripts or styles, create a new `.js` or `.css` file in the `scripts/` or `styles/` folder respectively; it is recommended that the scripts and styles are named after the page `name`
-4. [Update `pageConfig.jsonc`](#updating-pageconfigjsonc) to include the new page
-5. [Test the site](#testing-the-site) to ensure that the changes are displayed correctly
-6. [Commit the changes](#committing-changes) to the repository
+> 1. Create a new `.html` file in the `pages/` folder, see [#naming-conventions](#naming-conventions)
+>    - If your page is nested under another page (i.e. `parent/child`), create a folder `parent` and put `child.html` file in it
+> 2. Write your content in HTML format
+>     - Your file should be a full HTML document, including the `<html>`, `<head>`, and `<body>` tags
+>     - You can use all the features of HTML and [templates](#template)
+> 3. If you wish to use custom scripts or styles, create a new `.js` or `.css` file in the `scripts/` or `styles/` folder respectively; it is recommended that the scripts and styles are named after the page `name`
+> 4. [Update `pageConfig.jsonc`](#updating-pageconfigjsonc) to include the new page
+> 5. [Test the site](#testing-the-site) to ensure that the changes are displayed correctly
+> 6. [Commit the changes](#committing-changes) to the repository
 
 ## Making changes to an existing page
-1. Open the file and make the necessary changes
-2. If you have made new custom scripts or styles, [update `pageConfig.jsonc`](#updating-pageconfigjsonc)
-3. [Test the site](#testing-the-site) to ensure that the changes are displayed correctly (not really necessary for simple content changes)
-4. [Commit the changes](#committing-changes) to the repository
+> 1. Open the file and make the necessary changes
+> 2. If you have made new custom scripts or styles, [update `pageConfig.jsonc`](#updating-pageconfigjsonc)
+> 3. [Test the site](#testing-the-site) to ensure that the changes are displayed correctly (not really necessary for simple content changes)
+> 4. [Commit the changes](#committing-changes) to the repository
 
 ## Updating `pageConfig.jsonc`
 See [`meta/pageConfig.jsonc`](meta/pageConfig.jsonc) for more information.  
@@ -296,17 +296,17 @@ See [`meta/pageConfig.jsonc`](meta/pageConfig.jsonc) for more information.
 > [!TIP]
 > Copy-and-pasting is your friend!  
 
-1. Add a new entry(/object) to the `pages` array in `pageConfig.jsonc`
-   - Note that the order of the entries determine the order of the pages shown on the site catalogue
-2. Change the `name` field to the name of the `.md`/`.html` file in `pages/` without the extension (e.g. `example.md` -> `example`); ***this must match the file name exactly***
-   - If your page is nested under another page (i.e. `parent/child`):
-     - Under the `parent` entry, add a `pages` array and add the new page object to it
-     - Use `child` as the name
-3. Change the `title` field to the title of the page as you want it to appear on the site; this is not necessary if the title is the same as the `name`
-   - If unset, the `name`, capitalised, will be used as the title
-4. Change the `populator` field to `markdown`/`html-full`/`html-frame` to use the appropriate populator
-5. If you are using custom scripts or styles, add them to the `scripts` and `styles` arrays respectively; it is recommended that the scripts and styles are named after the page `name`
-6. If you want to add an alias for the page, add it to the `redirectAliasPaths` array; be careful of path collisions!
+> 1. Add a new entry(/object) to the `pages` array in `pageConfig.jsonc`
+>    - Note that the order of the entries determine the order of the pages shown on the site catalogue
+> 2. Change the `name` field to the name of the `.md`/`.html` file in `pages/` without the extension (e.g. `example.md` -> `example`); ***this must match the file name exactly***
+>    - If your page is nested under another page (i.e. `parent/child`):
+>      - Under the `parent` entry, add a `pages` array and add the new page object to it
+>      - Use `child` as the name
+> 3. Change the `title` field to the title of the page as you want it to appear on the site; this is not necessary if the title is the same as the `name`
+>    - If unset, the `name`, capitalised, will be used as the title
+> 4. Change the `populator` field to `markdown`/`html-full`/`html-frame` to use the appropriate populator
+> 5. If you are using custom scripts or styles, add them to the `scripts` and `styles` arrays respectively; it is recommended that the scripts and styles are named after the page `name`
+> 6. If you want to add an alias for the page, add it to the `redirectAliasPaths` array; be careful of path collisions!
 
 ## Shortcut for lazies
 I recommend you to go through the steps above to understand how the site works. But still here's a shortcut if you are lazy and don't want to go through [#getting-started](#getting-started).  
