@@ -5,6 +5,12 @@ on:
         branches: "main"
         tags-ignore: "prod"
     workflow_dispatch:
+        inputs:
+            commitMessage:
+                description: "Commit message for static site build"
+                default: "Manual build trigger"
+                required: true
+                type: string
 
 permissions:
     contents: write
@@ -34,7 +40,7 @@ jobs:
             - name: Commit built site to main branch
               uses: stefanzweifel/git-auto-commit-action@v5
               with:
-                  commit_message: "STATIC BUILD: ${{ github.event.head_commit.message }}"
+                  commit_message: "STATIC BUILD: ${{ github.event.head_commit.message || inputs.commitMessage }}"
                   commit_user_name: static-site-builder[bot]
                   commit_user_email: static-site-builder[bot]@users.noreply.github.com
                   tagging_message: prod

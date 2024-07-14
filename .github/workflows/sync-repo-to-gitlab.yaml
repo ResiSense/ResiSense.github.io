@@ -5,6 +5,12 @@ on:
         workflows: "Build static site"
         types: completed
     workflow_dispatch:
+        inputs:
+            commitMessage:
+                description: "Commit message for repo sync"
+                default: "Manual sync trigger"
+                required: true
+                type: string
 
 jobs:
     sync:
@@ -30,7 +36,7 @@ jobs:
                   git remote add gitlab "$gitlab_repo_url_with_credentials"
                   git add --all
                   git status
-                  git commit -m "SYNC: ${{ github.event.head_commit.message }}"
+                  git commit -m "SYNC: ${{ github.event.head_commit.message || inputs.commitMessage }}"
 
                   branch_name=$(echo $GITHUB_REF | sed 's/refs\/heads\///')
                   git push gitlab "$branch_name"
