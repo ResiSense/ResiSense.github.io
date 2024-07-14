@@ -151,10 +151,12 @@ Sign here if you read this:
 
 ## Post-commit CI
 After committing onto GitHub, a CI pipeline as defined in [`.github/workflows/full-ci-pipeline.yaml`](/.github/workflows/full-ci-pipeline.yaml) is run automatically.  
+*This usually takes ~30 seconds.*  
 - The site is automatically built and deployed to [GitHub Pages](https://ResiSense.github.io)
 - The site is automatically cloned and committed to GitLab
 
-After committing onto GitLab, a CI workflow as defined in [`.gitlab-ci.yml`](/.gitlab-ci.yml) is run automatically.  
+After auto-committing onto GitLab, a CI workflow as defined in [`.gitlab-ci.yml`](/.gitlab-ci.yml) is run automatically.  
+*This usually takes >3 minutes.*  
 - `.ts` scripts in [`.gitlab/`](/.gitlab/) are run
 - The site is automatically deployed to [GitLab Pages](https://2024.igem.wiki/hongkong-cuhk)
 
