@@ -13,7 +13,7 @@ The current methods for detecting antibiotic-resistant pathogens are **expensive
 # Our Solution
 
 We are developing **a point-of-care test kit, ResiSense**, for more efficient diagnosis, using **cell-free synthetic biology**. This proposed testing system consists of three parts: target gene extraction, rolling circle amplification (RCA) [⤴️](https://en.wikipedia.org/wiki/Rolling_circle_replication), and signal expression. Bacterial DNA is released following cell lysis before a snippet of the target gene responsible for antibiotic resistance is cut using **a pair of restriction enzymes and nickase**. Φ-29 polymerase aids in releasing the target gene as **ss-DNA**. This target gene serves as a primer and triggers the formation of **peroxidase-mimicking (G-quadruplex) DNAzymes** through RCA to cause a **color change in the solution**, indicating the presence of antibiotic-resistant genes in bacteria. Our aim is to create a **versatile, easily programmable system** that can detect various antibiotic resistance genes, starting with those related to ***Klebsiella pneumonia***, which is a common intestinal bacterium that showed elevated resistance levels against critical antibiotics [⤴️](https://www.who.int/news-room/fact-sheets/detail/antimicrobial-resistance).  
-![picture 1](<../assets/mechanism overview diagram.png>)  
+![picture 1](<../assets/content images/mechanism overview diagram.png>)  
 
 # Expected Results
 
