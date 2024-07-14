@@ -9,7 +9,7 @@ Our team emphasises the connection of our project design with the actual needs o
 > ## Probe Vector Selection
 > 
 > ### Professor Margaret Ip
-> ![](https://www.med.cuhk.edu.hk/f/staff/4207/252p336/_DSC1625%20v1_1627444488.jpg)  
+> ![](/assets/humans/margaret%20ip%20full.jpg)  
 > Professor Ip is the Chairperson of the Department of Microbiology at The Chinese University of Hong Kong. She is an expert in Clinical Microbiology and Infection and is a renowned member of various antibiotics-related committees.  
 > <span class="--human-card-above"></span>  
 >
@@ -27,7 +27,7 @@ Our team emphasises the connection of our project design with the actual needs o
 > ## Point-of-care Kit Design
 >
 > ### Professor Stephen Tsui
-> ![](https://www2.sbs.cuhk.edu.hk/images/content/People/Stephen_Tsui.jpg)  
+> ![](/assets/humans/stephen%20tsui%20full.jpg)  
 > Professor Tsui is a renowned expert in the field of Biomedical Sciences and the director of the Hong Kong Bioinformatics Centre and the Centre for Microbial Genomics and Proteomics at The Chinese University of Hong Kong (CUHK).  
 > <span class="--human-card-above"></span>
 >
@@ -48,7 +48,7 @@ Our team emphasises the connection of our project design with the actual needs o
 > ## Antibiotic Use in Hospitals and Public Awareness
 >
 > ### Dr Pierre Chan
-> ![](https://hkam25.hkam.org.hk/wp-content/uploads/2018/08/Dr.-Pierre-Chan-1.jpg)  
+> ![](/assets/humans/pierre%20chan%20full.jpg)  
 > Dr Pierre Chan is a medical practitioner and a former legislative counsellor seated as the representative for the medical functional constituency in Hong Kong.  
 > <span class="--human-card-above"></span>
 >
