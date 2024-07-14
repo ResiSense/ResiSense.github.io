@@ -1,9 +1,9 @@
 name: Sync Repo to GitLab
 
 on:
-    push:
-        branches: "main"
-        tags: "prod"
+    workflow_run:
+        workflows: "Build static site"
+        types: completed
     workflow_dispatch:
 
 jobs:
