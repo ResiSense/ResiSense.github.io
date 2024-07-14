@@ -7,6 +7,7 @@
   - [Clone the repository](#clone-the-repository)
 - [🧪Testing the site](#testing-the-site)
 - [✍🏻Committing changes](#committing-changes)
+  - [Post-commit CI](#post-commit-ci)
 - [📂Understanding the repository structure](#understanding-the-repository-structure)
 - [🧠Understanding the framework](#understanding-the-framework)
   - [🚲Life cycle of a build](#life-cycle-of-a-build)
@@ -142,40 +143,49 @@ Sign here if you read this:
 - The most important things in the world are Ka and sleep (by Tommy.2024)
 ```
 
-# 📂Understanding the repository structure
-| Folder                  | Description                               | Content                 | Remarks                             |
-| :---------------------- | :---------------------------------------- | :---------------------- | :---------------------------------- |
-| `test/`                 | Test build of the site                    |                         | Untracked, sandbox to test stuff in |
-| `pages/`                | Content of the site                       | `.md` and `.html` files |                                     |
-| `assets/`               | Assets used in the site                   | predominantly images    | **is cloned to `docs/`**            |
-| `scripts/`              | JS scripts to be packaged to clients      | `.js` files             | **is cloned to `docs/`**            |
-| `styles/`               | CSS stylesheets to be packaged to clients | `.css` files            | **is cloned to `docs/`**            |
-| `meta/`                 | Metadata for the site                     |                         |                                     |
-| `templates/`            | HTML templates for the site               | `.html` files           |                                     |
-| `lib/`                  | Framework code                            | `.ts` files             |                                     |
-| `lib/framework-lib/`    | Framework dependencies                    | `.ts` files             |                                     |
-| `lib/types/`            | Framework type and class declarations     | `.ts` files             |                                     |
-| `lib/page-scripts/`     | Page-specific dependencies                | `.ts` files             |                                     |
-| `lib/template-scripts/` | Template-specific dependencies            | `.ts` files             |                                     |
-| `.github/`              | GitHub essential files                    | templates and actions   | *edit with caution*                 |
-| `.gitlab/`              | GitLab essential files (for Jekyll)       | configs                 | *edit with caution*                 |
-| `docs/`                 | Production build of the site              |                         | ***DO NOT TOUCH***                  |
+## Post-commit CI
+After committing onto GitHub, numerous CI workflows as defined in [`.github/workflows/`](/.github/workflows) are run automatically.  
+- The site is automatically built and deployed to [GitHub Pages](https://ResiSense.github.io)
+- The site is automatically cloned and committed to GitLab
 
-| Important files                                   | What's this?                                   | Remarks                           |
-| :------------------------------------------------ | :--------------------------------------------- | :-------------------------------- |
-| [`README.md`](/README.md)                         | Repository information                         |                                   |
-| [`DEV-WIKI.md`](/DEV-WIKI.md)                     | Developer wiki                                 |                                   |
-| [`TODO.md`](/TODO.md)                             | To-do list                                     | Try to keep it updated            |
-| [`meta/pageConfig.jsonc`](/meta/pageConfig.jsonc) | Metadata for pages; ***VERY IMPORTANT!***      | See [this](#pageconfigjsonc)      |
-| [`siteBuilder.ts`](/siteBuilder.ts)               | Framework code entry point                     |                                   |
-| [`watcher.ts`](/watcher.ts)                       | Watcher code entry point for `dev-watch`       |                                   |
-| [`boiler-plate.html`](/boiler-plate.html)         | Boilerplate HTML template for site builders    |                                   |
-| [`redirect.html`](/redirect.html)                 | Redirect HTML template page for aliases        | ***DO NOT TOUCH***                |
-| [`.gitignore`](/.gitignore)                       | Files and folders to be ignored by Git         | *edit with caution*               |
-| [`tsconfig.json`](/tsconfig.json)                 | TypeScript configuration                       | *edit with caution*               |
-| [`package.json`](/package.json)                   | Node.js package configuration                  | *edit with caution*               |
-| [`package-lock.json`](/package-lock.json)         | Node.js dependencies                           | *not recommended to edit by hand* |
-| [`.gitlab-ci.yml`](/.gitlab-ci.yml)               | GitLab CI/CD actions (GitLab Pages deployment) | *edit with caution*               |
+After committing onto GitLab, a CI workflow as defined in [`.gitlab-ci.yml`](/.gitlab-ci.yml) is run automatically.  
+- `.ts` scripts in [`.gitlab/`](/.gitlab/) are run
+- The site is automatically deployed to [GitLab Pages](https://2024.igem.wiki/hongkong-cuhk)
+
+# 📂Understanding the repository structure
+| Folder                                            | Description                               | Content                 | Remarks                        |
+| :------------------------------------------------ | :---------------------------------------- | :---------------------- | :----------------------------- |
+| [`test/`](/test/)                                 | Test build of the site                    |                         | Sandbox for testing; untracked |
+| [`pages/`](/pages/)                               | Content of the site                       | `.md` and `.html` files |                                |
+| [`assets/`](/assets/)                             | Assets used in the site                   | predominantly images    | **is cloned to `docs/`**       |
+| [`scripts/`](/scripts/)                           | JS scripts to be packaged to clients      | `.js` files             | **is cloned to `docs/`**       |
+| [`styles/`](/styles/)                             | CSS stylesheets to be packaged to clients | `.css` files            | **is cloned to `docs/`**       |
+| [`meta/`](/meta/)                                 | Metadata for the site                     |                         |                                |
+| [`templates/`](/templates/)                       | HTML templates for the site               | `.html` files           |                                |
+| [`lib/`](/lib/)                                   | Framework code                            | `.ts` files             |                                |
+| [`lib/framework-lib/`](/lib/framework-lib/)       | Framework dependencies                    | `.ts` files             |                                |
+| [`lib/types/`](/lib/types/)                       | Framework type and class declarations     | `.ts` files             |                                |
+| [`lib/page-scripts/`](/lib/page-scripts/)         | Page-specific dependencies                | `.ts` files             |                                |
+| [`lib/template-scripts/`](/lib/template-scripts/) | Template-specific dependencies            | `.ts` files             |                                |
+| [`.github/`](/.github/)                           | GitHub essential files                    | templates and actions   | *edit with caution*            |
+| [`.gitlab/`](/.gitlab/)                           | GitLab essential files (for Jekyll)       | configs                 | *edit with caution*            |
+| [`docs/`](/docs/)                                 | Production build of the site              |                         | ***DO NOT TOUCH***             |
+
+| Important files                                   | What's this?                                   | Remarks                      |
+| :------------------------------------------------ | :--------------------------------------------- | :--------------------------- |
+| [`README.md`](/README.md)                         | Repository information                         |                              |
+| [`DEV-WIKI.md`](/DEV-WIKI.md)                     | Developer wiki                                 |                              |
+| [`TODO.md`](/TODO.md)                             | To-do list                                     | Try to keep it updated       |
+| [`meta/pageConfig.jsonc`](/meta/pageConfig.jsonc) | Metadata for pages; ***VERY IMPORTANT!***      | See [this](#pageconfigjsonc) |
+| [`siteBuilder.ts`](/siteBuilder.ts)               | Framework code entry point                     |                              |
+| [`watcher.ts`](/watcher.ts)                       | Watcher code entry point for `dev-watch`       |                              |
+| [`boiler-plate.html`](/boiler-plate.html)         | Boilerplate HTML template for site builders    |                              |
+| [`redirect.html`](/redirect.html)                 | Redirect HTML template page for aliases        | ***DO NOT TOUCH***           |
+| [`.gitignore`](/.gitignore)                       | Files and folders to be ignored by Git         | *edit with caution*          |
+| [`tsconfig.json`](/tsconfig.json)                 | TypeScript configuration                       | *edit with caution*          |
+| [`package.json`](/package.json)                   | Node.js package configuration                  | *edit with caution*          |
+| [`package-lock.json`](/package-lock.json)         | Node.js dependencies                           | *edit with caution*          |
+| [`.gitlab-ci.yml`](/.gitlab-ci.yml)               | GitLab CI/CD actions (GitLab Pages deployment) | *edit with caution*          |
 
 # 🧠Understanding the framework
 This is a very stripped-down and very custom framework specifically designed for the ResiSense website.  

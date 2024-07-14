@@ -1,7 +1,7 @@
 **This repository contains the source code for the ResiSense site ([GitHub Pages](https://resisense.github.io) | [GitLab Pages](https://2024.igem.wiki/hongkong-cuhk)).**  
 
 Please note that this repository can be accessed in many locations via clones, but the one hosted on [GitHub](https://github.com/ResiSense/ResiSense.github.io) should always be regarded as the authoritative version.  
-*The repository is automatically cloned and deployed to [iGEM's GitLab repository](https://gitlab.igem.org/2024/hongkong-cuhk) on commits. GitLab-exclusive commits will be lost on automatic clones.*  
+*The repository is automatically cloned and deployed to [iGEM's GitLab repository](https://gitlab.igem.org/2024/hongkong-cuhk) on commits (See [#post-commit-ci](/DEV-WIKI.md#post-commit-ci)). GitLab-exclusive commits will be lost on automatic clones.*  
 
 # ✍🏻 Contributors
 Lead: [CCheukKa](https://github.com/CCheukKa)
