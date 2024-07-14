@@ -6,6 +6,11 @@ on:
             commitMessage:
                 required: true
                 type: string
+        secrets:
+            USERNAME:
+                required: true
+            MY_GITHUB_PAT:
+                required: true
     workflow_dispatch:
         inputs:
             commitMessage:
@@ -45,27 +50,18 @@ jobs:
 
             - name: Commit built site to main branch
               run: |
-                  ls -R
-              #   export GIT_SSH_COMMAND='ssh -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no'
-              #   github_repo_url=${{ github.server_url }}/${{ github.repository }}.git
-              #   gitlab_repo_url=${{ secrets.GITLAB_URL }}
-              #   gitlab_repo_url_with_credentials="https://${{ secrets.USERNAME }}:${{ secrets.GITLAB_PAT }}@${gitlab_repo_url#https://}"
+                  export GIT_SSH_COMMAND='ssh -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no'
+                  github_repo_url=${{ github.server_url }}/${{ github.repository }}.git
+                  github_repo_url_with_credentials="https://${{ secrets.USERNAME }}:${{ secrets.MY_GITHUB_PAT }}@${github_repo_url#https://}"
 
-              #   git clone ${github_repo_url} github-repo
-              #   git clone ${gitlab_repo_url} gitlab-repo
+                  git config user.name static-site-builder[bot]
+                  git config user.email static-site-builder[bot]@users.noreply.github.com
 
-              #   rm -r gitlab-repo/*
-              #   rsync -av --exclude='.git' github-repo/ gitlab-repo/
-              #   cd gitlab-repo
+                  git remote add github "$github_repo_url_with_credentials"
+                  git add --all
+                  git status
+                  git commit -m "STATIC BUILD: ${{ github.event.head_commit.message || inputs.commitMessage }}"
 
-              #   git config user.name gitlab-repo-syncer[bot]
-              #   git config user.email gitlab-repo-syncer[bot]@users.noreply.github.com
-
-              #   git remote add gitlab "$gitlab_repo_url_with_credentials"
-              #   git add --all
-              #   git status
-              #   git commit -m "SYNC: ${{ github.event.head_commit.message || inputs.commitMessage }}"
-
-              #   branch_name=$(echo $GITHUB_REF | sed 's/refs\/heads\///')
-              #   git push gitlab "$branch_name"
+                  branch_name=$(echo $GITHUB_REF | sed 's/refs\/heads\///')
+                  git push github "$branch_name"
               shell: bash
