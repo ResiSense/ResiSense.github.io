@@ -37,12 +37,14 @@ painted-content {
     height: 100%;
 
     &>img {
+        --human-outline: 0.15rem;
         width: 100%;
         aspect-ratio: 3/4;
         overflow: hidden;
         object-fit: cover;
         border-radius: 0;
         z-index: 1;
+        filter: drop-shadow(var(--human-outline) 0 0 white) drop-shadow(calc(var(--human-outline) * -1) 0 0 white) drop-shadow(0 var(--human-outline) 0 white) drop-shadow(0 calc(var(--human-outline) * -1) 0 white);
     }
 
     &>.human-card-box {
