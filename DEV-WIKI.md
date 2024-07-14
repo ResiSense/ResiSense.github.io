@@ -144,7 +144,7 @@ Sign here if you read this:
 ```
 
 ## Post-commit CI
-After committing onto GitHub, numerous CI workflows as defined in [`.github/workflows/`](/.github/workflows) are run automatically.  
+After committing onto GitHub, a CI pipeline as defined in [`.github/workflows/full-ci-pipeline.yaml`](/.github/workflows/full-ci-pipeline.yaml) is run automatically.  
 - The site is automatically built and deployed to [GitHub Pages](https://ResiSense.github.io)
 - The site is automatically cloned and committed to GitLab
 
