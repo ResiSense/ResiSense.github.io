@@ -44,11 +44,28 @@ jobs:
               run: npm test --if-present
 
             - name: Commit built site to main branch
-              uses: stefanzweifel/git-auto-commit-action@v5
-              with:
-                  commit_message: "STATIC BUILD: ${{ github.event.head_commit.message || inputs.commitMessage }}"
-                  commit_user_name: static-site-builder[bot]
-                  commit_user_email: static-site-builder[bot]@users.noreply.github.com
-                  tagging_message: prod
-              env:
-                  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+              run: |
+                  ls -R
+              #   export GIT_SSH_COMMAND='ssh -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no'
+              #   github_repo_url=${{ github.server_url }}/${{ github.repository }}.git
+              #   gitlab_repo_url=${{ secrets.GITLAB_URL }}
+              #   gitlab_repo_url_with_credentials="https://${{ secrets.USERNAME }}:${{ secrets.GITLAB_PAT }}@${gitlab_repo_url#https://}"
+
+              #   git clone ${github_repo_url} github-repo
+              #   git clone ${gitlab_repo_url} gitlab-repo
+
+              #   rm -r gitlab-repo/*
+              #   rsync -av --exclude='.git' github-repo/ gitlab-repo/
+              #   cd gitlab-repo
+
+              #   git config user.name gitlab-repo-syncer[bot]
+              #   git config user.email gitlab-repo-syncer[bot]@users.noreply.github.com
+
+              #   git remote add gitlab "$gitlab_repo_url_with_credentials"
+              #   git add --all
+              #   git status
+              #   git commit -m "SYNC: ${{ github.event.head_commit.message || inputs.commitMessage }}"
+
+              #   branch_name=$(echo $GITHUB_REF | sed 's/refs\/heads\///')
+              #   git push gitlab "$branch_name"
+              shell: bash
