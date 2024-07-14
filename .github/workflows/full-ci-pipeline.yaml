@@ -30,3 +30,4 @@ jobs:
               uses: ./.github/workflows/sync-repo-to-gitlab.yaml
               with:
                   commitMessage: ${{ github.event.head_commit.message || inputs.commitMessage }}
+              secrets: inherit

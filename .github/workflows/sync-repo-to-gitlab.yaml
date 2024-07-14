@@ -2,6 +2,17 @@ name: Sync Repo to GitLab
 
 on:
     workflow_call:
+        inputs:
+            commitMessage:
+                required: true
+                type: string
+        secrets:
+            GITLAB_URL:
+                required: true
+            USERNAME:
+                required: true
+            GITLAB_PAT:
+                required: true
     workflow_dispatch:
         inputs:
             commitMessage:

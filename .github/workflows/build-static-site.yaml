@@ -2,6 +2,10 @@ name: Build static site
 
 on:
     workflow_call:
+        inputs:
+            commitMessage:
+                required: true
+                type: string
     workflow_dispatch:
         inputs:
             commitMessage:
