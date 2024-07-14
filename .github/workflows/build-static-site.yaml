@@ -1,9 +1,7 @@
 name: Build static site
 
 on:
-    push:
-        branches: "main"
-        tags-ignore: "prod"
+    workflow_call:
     workflow_dispatch:
         inputs:
             commitMessage:
@@ -11,6 +9,10 @@ on:
                 default: "Manual build trigger"
                 required: true
                 type: string
+
+concurrency:
+    group: "build-static-site"
+    cancel-in-progress: true
 
 permissions:
     contents: write

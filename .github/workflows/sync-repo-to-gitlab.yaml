@@ -1,9 +1,7 @@
 name: Sync Repo to GitLab
 
 on:
-    workflow_run:
-        workflows: "Build static site"
-        types: completed
+    workflow_call:
     workflow_dispatch:
         inputs:
             commitMessage:
@@ -11,6 +9,10 @@ on:
                 default: "Manual sync trigger"
                 required: true
                 type: string
+
+concurrency:
+    group: "sync-repo-to-gitlab"
+    cancel-in-progress: true
 
 jobs:
     sync:
