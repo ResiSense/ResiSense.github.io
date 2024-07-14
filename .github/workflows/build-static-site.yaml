@@ -63,5 +63,5 @@ jobs:
                   git commit -m "STATIC BUILD: ${{ github.event.head_commit.message || inputs.commitMessage }}"
 
                   branch_name=$(echo $GITHUB_REF | sed 's/refs\/heads\///')
-                  git push github "$branch_name"
+                  git push github "$branch_name" --force
               shell: bash
