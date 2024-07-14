@@ -17,17 +17,14 @@ concurrency:
     cancel-in-progress: true
 
 jobs:
-    pipeline:
-        runs-on: ubuntu-latest
+    build_static_site:
+        uses: ./.github/workflows/build-static-site.yaml
+        with:
+            commitMessage: ${{ github.event.head_commit.message || inputs.commitMessage }}
 
-        steps:
-            - name: Build static site
-              uses: ./.github/workflows/build-static-site.yaml
-              with:
-                  commitMessage: ${{ github.event.head_commit.message || inputs.commitMessage }}
-
-            - name: Sync Repo to GitLab
-              uses: ./.github/workflows/sync-repo-to-gitlab.yaml
-              with:
-                  commitMessage: ${{ github.event.head_commit.message || inputs.commitMessage }}
-              secrets: inherit
+    sync_repo_to_gitlab:
+        needs: build_static_site
+        uses: ./.github/workflows/sync-repo-to-gitlab.yaml
+        with:
+            commitMessage: ${{ github.event.head_commit.message || inputs.commitMessage }}
+        secrets: inherit
