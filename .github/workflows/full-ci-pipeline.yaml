@@ -16,6 +16,9 @@ concurrency:
     group: "full-ci-pipeline"
     cancel-in-progress: true
 
+permissions:
+    contents: write
+
 jobs:
     build_static_site:
         uses: ./.github/workflows/build-static-site.yaml
