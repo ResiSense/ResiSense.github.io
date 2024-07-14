@@ -33,7 +33,7 @@ if (!targetDirectory) { throw new Error('Invalid mode!') };
     await Promise.all([
         cloneDirectory('assets', targetDirectory),
         cloneDirectory('styles', targetDirectory),
-        cloneDirectory('scripts', targetDirectory),
+        cloneDirectory('scripts', targetDirectory).then(addIdentifierLogToJsEmbeds),
     ]);
     console.log(`Cloned directories to ${targetDirectory}.`);
     // 
@@ -54,6 +54,17 @@ function cloneDirectory(source: string, destination: string): Promise<void> {
     fs.emptyDirSync(targetDirectory);
     const FS_CP = Utils.promisifyCallback(fs.cp, path.resolve(source), path.resolve(destination, path.basename(source)), { recursive: true });
     return FS_CP;
+}
+/* -------------------------------------------------------------------------- */
+function addIdentifierLogToJsEmbeds() {
+    const jsDirectory = path.resolve(targetDirectory, 'scripts');
+    const jsFiles = fs.readdirSync(jsDirectory);
+    jsFiles.forEach(jsFile => {
+        const jsPath = path.resolve(jsDirectory, jsFile);
+        const jsContent = fs.readFileSync(jsPath, 'utf8');
+        const jsContentWithLog = `console.log(\`Script running: \${ document.currentScript.src }\`);\n//\n${jsContent}`;
+        fs.writeFileSync(jsPath, jsContentWithLog);
+    });
 }
 /* -------------------------------------------------------------------------- */
 async function buildFile(page: Page, templateCache: TemplateCache): Promise<void> {
