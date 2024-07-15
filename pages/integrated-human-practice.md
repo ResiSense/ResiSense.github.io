@@ -47,7 +47,7 @@ Our team emphasises the connection of our project design with the actual needs o
 
 > ## Antibiotic Use in Hospitals and Public Awareness
 >
-> ### Dr Pierre Chan
+> ### Doctor Pierre Chan
 > ![](/assets/humans/pierre%20chan%20full-Enhanced-SR%20transprent.png)  
 > Dr Pierre Chan is a medical practitioner and a former legislative counsellor seated as the representative for the medical functional constituency in Hong Kong.  
 > <span class="--human-card-above"></span>
