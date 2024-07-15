@@ -92,7 +92,7 @@ async function buildFile(page: Page, templateCache: TemplateCache): Promise<void
     };
 
     insertCssEmbeds(pageData);
-    insertJsRuntimes(pageData);
+    insertJsEmbeds(pageData);
 
     runTsPostPaints(pageData);
     switch (page.populator || 'markdown ') {
@@ -156,13 +156,13 @@ function runTsPostPopulations(pageData: PageData) {
         postPopulationFunction(pageData);
     });
 }
-function insertJsRuntimes(pageData: PageData) {
+function insertJsEmbeds(pageData: PageData) {
     const paintedHtml = pageData.paintedHtml;
     const document = pageData.document;
     const jsIncludes = pageData.page.includes?.js;
     // 
     const jsPaths: string[] = [];
-    jsPaths.push(...paintedHtml.js?.runtime || []);
+    jsPaths.push(...paintedHtml.js?.embed || []);
     jsPaths.push(...jsIncludes || []);
     jsPaths.forEach(jsFile => {
         const scriptTag = document.createElement('script');

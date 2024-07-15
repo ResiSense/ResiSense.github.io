@@ -31,7 +31,7 @@ export type PaintableHtml = {
         postPopulation?: string[],
     },
     js?: {
-        runtime?: string[],
+        embed?: string[],
     },
     css?: {
         embed?: string[]
@@ -40,7 +40,7 @@ export type PaintableHtml = {
 
 const templateRegex = /<custom-([a-z]|-)+ \/>/g;
 const tsPostPaintRegex = /<ts-post-paint src=".*\.ts" \/>/g;
-const jsRuntimeRegex = /<js-runtime src=".*\.js" \/>/g;
+const jsEmbedRegex = /<js-embed src=".*\.js" \/>/g;
 const tsPostPopulationRegex = /<ts-post-population src=".*\.ts" \/>/g;
 const cssEmbedRegex = /<css-embed href=".*\.css" \/>/g;
 
@@ -92,7 +92,7 @@ async function compileTemplates(): Promise<TemplateCache> {
 
 function paintHtmlFragment(paintableHtml: PaintableHtml, templateCache: TemplateCache): PaintableHtml {
     paintableHtml.ts = paintableHtml.ts || { postPaint: [], postPopulation: [] };
-    paintableHtml.js = paintableHtml.js || { runtime: [] };
+    paintableHtml.js = paintableHtml.js || { embed: [] };
     paintableHtml.css = paintableHtml.css || { embed: [] };
 
     // templates
@@ -105,14 +105,14 @@ function paintHtmlFragment(paintableHtml: PaintableHtml, templateCache: Template
         );
 
         paintableHtml.ts.postPaint.push(...customTemplate.ts?.postPaint || []);
-        paintableHtml.js.runtime.push(...customTemplate.js?.runtime || []);
+        paintableHtml.js.embed.push(...customTemplate.js?.embed || []);
         paintableHtml.ts.postPopulation.push(...customTemplate.ts?.postPopulation || []);
         paintableHtml.css.embed.push(...customTemplate.css?.embed || []);
     });
 
     // js
     paintableHtml.html = paint(paintableHtml.html, tsPostPaintRegex, '<ts-post-paint src="', '" />', paintableHtml.ts.postPaint);
-    paintableHtml.html = paint(paintableHtml.html, jsRuntimeRegex, '<js-runtime src="', '" />', paintableHtml.js.runtime);
+    paintableHtml.html = paint(paintableHtml.html, jsEmbedRegex, '<js-embed src="', '" />', paintableHtml.js.embed);
     paintableHtml.html = paint(paintableHtml.html, tsPostPopulationRegex, '<ts-post-population src="', '" />', paintableHtml.ts.postPopulation);
 
     // css

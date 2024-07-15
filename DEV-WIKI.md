@@ -30,12 +30,12 @@
   - [CSS embeds](#css-embeds)
   - [HTML frame populator](#html-frame-populator)
   - [HTML full replacer](#html-full-replacer)
+  - [JS embeds](#js-embeds)
   - [Markdown populator](#markdown-populator)
   - [`pageConfig.jsonc`](#pageconfigjsonc)
   - [Populator](#populator)
   - [Post-paint TS](#post-paint-ts)
   - [Post-population TS](#post-population-ts)
-  - [Runtime JS](#runtime-js)
   - [Template](#template)
   - [Template compilation](#template-compilation)
   - [Template painting](#template-painting)
@@ -216,7 +216,7 @@ The framework is how the site is built and how the [content](#content) is displa
 >       - This step is referred to as **[template painting](#template-painting)**
 >    2. CSS and JS are embedded into the HTML (relationally) as required by `pageConfig.jsonc` and the templates
 >       - These CSS are referred to as **[CSS embeds](#css-embeds)**
->       - These JS are referred to as **[runtime JS](#runtime-js)**
+>       - These JS are referred to as **[JS embeds](#js-embeds)**
 >    3. **[Post-paint TS](#post-paint-ts)** functions are run as required by `pageConfig.jsonc` and the templates
 >    4. Page is filled with content using a [populator](#populators) function as described in `pageConfig.jsonc`
 >       - This step is referred to as **[content population](#content-population)**
@@ -230,7 +230,7 @@ The framework is how the site is built and how the [content](#content) is displa
 | :---------------------------------------- | :------------------------------------- | :---------------------- |
 | [Templates](#template)                    | lowercase letters only; `-` for spaces | Name after the page     |
 | [CSS embeds](#css-embeds)                 | lowercase letters only; `-` for spaces | Name after the template |
-| [Runtime JS](#runtime-js)                 | lowercase letters only; `-` for spaces | Name after the template |
+| [JS embeds](#js-embeds)                   | lowercase letters only; `-` for spaces | Name after the template |
 | Markdown files                            | lowercase letters only; `-` for spaces | Name after the page     |
 | TypeScript type declaration files         | PascalCase                             |                         |
 | TypeScript files                          | camelCase                              |                         |
@@ -322,7 +322,7 @@ You can just get a file and upload/dump it [here](https://github.com/ResiSense/R
 > [!TIP]
 > Copy-and-pasting is your friend!  
 
-The frontend primarily makes use of [templates](#template), [CSS embeds](#css-embeds), and [runtime JS](#runtime-js) to structure the site. Your domain should mainly be `templates/`, `styles/`, and `scripts/`. Make sure you [understand the repository structure](#understanding-the-repository-structure).  
+The frontend primarily makes use of [templates](#template), [CSS embeds](#css-embeds), and [JS embeds](#js-embeds) to structure the site. Your domain should mainly be `templates/`, `styles/`, and `scripts/`. Make sure you [understand the repository structure](#understanding-the-repository-structure).  
 [Test the site](#testing-the-site) after making changes to ensure that they are displayed correctly.  
 
 # 🖼️Working on the framework
@@ -353,6 +353,11 @@ It is recommended to read the comments in the file itself to understand how it w
 The HTML full replacer is a function that replaces the entire content of a page with an HTML file during [content population](#content-population).  
 It is recommended to read the comments in the file itself to understand how it works.
 
+## JS embeds
+JS embeds are JS scripts that are run during browsing. It is embedded into the HTML relationally as a `<script>` tag.  
+Variables that reference [templates](#template) should use the [painted](#template-painting) tag name.  
+[CSS embeds](#css-embeds) are in scope.  
+
 ## [Markdown populator](/lib/framework-lib/MarkdownPopulator.ts)
 The markdown populator is a function that fills the [content](#content) of a page with a markdown file during [content population](#content-population).  
 It is recommended to read the comments in the file itself to understand how it works.
@@ -382,18 +387,13 @@ Only the default exported function is run, with [`PageData`](#pagedata) passed a
 Variables that reference [templates](#template) should use the [painted](#template-painting) tag name.  
 [CSS embeds](#css-embeds) are **NOT** in scope.  
 
-## Runtime JS
-Runtime JS is the JS that is run during browsing. It is embedded into the HTML relationally as a `<script>` tag.  
-Variables that reference [templates](#template) should use the [painted](#template-painting) tag name.  
-[CSS embeds](#css-embeds) are in scope.  
-
 ## Template
 A template is a partial HTML file that is embedded/[painted](#template-painting) into the boilerplate HTML or another template.  
 Templates can recursively require CSS, JS, TS, and other templates in them with the following tags:
 - `<custom-example />`: Paints a `templates/example.html` template
 - `<ts-post-paint src="example.ts" />`: Runs `lib/template-scripts/example.ts` after [painting](#template-painting)
 - `<ts-post-population src="example.ts" />`: Runs `lib/template-scripts/example.ts` after [populating](#content-population) the [content](#content)
-- `<js-runtime src="example.js" />`: Embeds `scripts/example.js` as a [runtime JS](#runtime)
+- `<js-embed src="example.js" />`: Embeds `scripts/example.js` as a [JS embed](#js-embeds)
 - `<css-embed href="example.css" />`: Embeds `styles/example.css` as a [CSS embed](#css-embeds)
 
 Note that the exact syntax of these tags must be followed for the framework to work correctly. Change only `example` to the name of the file.  
