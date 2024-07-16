@@ -12,3 +12,4 @@
 
 ## Actually important stuff
 - [ ] add responsiveness
+- [ ] add catalogue nesting
