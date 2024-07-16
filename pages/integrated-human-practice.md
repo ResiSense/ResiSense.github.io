@@ -10,7 +10,7 @@ Our team emphasises the connection of our project design with the actual needs o
 > 
 > ### Professor Margaret Ip
 > ![Portrait of Professor Margaret Ip](/assets/humans/margaret%20ip%20full-Enhanced-SR%20transparent.png)  
-> Professor Ip is the Chairperson of the Department of Microbiology at The Chinese University of Hong Kong. She is an expert in Clinical Microbiology and Infection and is a renowned member of various antibiotics-related committees.  
+> [Professor Ip](https://www.med.cuhk.edu.hk/staff/professor-margaret-ip) is the Chairperson of the [Department of Microbiology](https://www.cuhk.edu.hk/med/mic) at the Chinese University of Hong Kong. She is an expert in Clinical Microbiology and Infection and is a renowned member of various antibiotics-related committees.  
 > <span class="--human-card-above"></span>  
 >
 > In the interview with Prof Margaret Ip, we gained a comprehensive understanding of the current situation of antibiotic resistance in Hong Kong and the corresponding detection methods.  
@@ -28,7 +28,7 @@ Our team emphasises the connection of our project design with the actual needs o
 >
 > ### Professor Stephen Tsui
 > ![Portrait of Professor Stephen Tsui](/assets/humans/stephen%20tsui%20full-Enhanced-SR%20transparent.png)  
-> Professor Tsui is a renowned expert in the field of Biomedical Sciences and the director of the Hong Kong Bioinformatics Centre and the Centre for Microbial Genomics and Proteomics at The Chinese University of Hong Kong (CUHK).  
+> [Professor Tsui](https://www2.sbs.cuhk.edu.hk/en-gb/people/academic-staff/prof-tsui-kwok-wing-stephen) is a renowned expert in the field of Biomedical Sciences and the director of the [Hong Kong Bioinformatics Centre](http://www.hkbic.cuhk.edu.hk/) and the Centre for Microbial Genomics and Proteomics at the Chinese University of Hong Kong.  
 > <span class="--human-card-above"></span>
 >
 > In the interview with Prof Tsui, we discussed the feasibility and efficiency of our point-of-care (POC) kit and analysed the current market.
@@ -49,7 +49,7 @@ Our team emphasises the connection of our project design with the actual needs o
 >
 > ### Doctor Pierre Chan
 > ![Portrait of Doctor Pierre Chan](/assets/humans/pierre%20chan%20full-Enhanced-SR%20transprent.png)  
-> Doctor Pierre Chan is a medical practitioner and a former legislative counsellor seated as the representative for the medical functional constituency in Hong Kong.  
+> [Doctor Pierre Chan](https://www.drchanpierre.org/about-me) is a medical practitioner and a former legislative counsellor seated as the representative for the medical functional constituency in Hong Kong.  
 > <span class="--human-card-above"></span>
 >
 > In our discussion with Dr Chan, we gained insights into the use of antibiotics in hospitals and public awareness of antibiotics.
