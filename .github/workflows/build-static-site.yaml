@@ -43,7 +43,7 @@ jobs:
             - name: Run test
               run: npm test --if-present
 
-            - name: Add
+            - name: Add GitHub context json for debugging
               run: |
                   cd docs
                   echo '${{ toJson(github) }}' | jq 'del(.token)' > github-context.json
