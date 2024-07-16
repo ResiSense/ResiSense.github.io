@@ -7,6 +7,7 @@ default:
   image: node:20
 
   before_script:
+    - apt-get update && apt-get install -y tree
     - npm ci
 
 pages:
@@ -14,7 +15,7 @@ pages:
   script:
     - npm run gitlab-actions --if-present
     - mv docs public
-    - ls -R public
+    - tree public
   artifacts:
     paths:
       - public
