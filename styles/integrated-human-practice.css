@@ -37,14 +37,15 @@ painted-content {
     height: 100%;
 
     &>img {
-        --human-outline: 0.15rem;
+        --human-outline-width: 0.15rem;
+        --human-outline-colour: white;
         width: 100%;
         aspect-ratio: 3/4;
         overflow: hidden;
         object-fit: cover;
         border-radius: 0;
         z-index: 1;
-        filter: drop-shadow(var(--human-outline) 0 0 white) drop-shadow(calc(var(--human-outline) * -1) 0 0 white) drop-shadow(0 var(--human-outline) 0 white) drop-shadow(0 calc(var(--human-outline) * -1) 0 white);
+        filter: drop-shadow(var(--human-outline-width) 0 0 var(--human-outline-colour)) drop-shadow(calc(var(--human-outline-width) * -1) 0 0 var(--human-outline-colour)) drop-shadow(0 var(--human-outline-width) 0 var(--human-outline-colour)) drop-shadow(0 calc(var(--human-outline-width) * -1) 0 var(--human-outline-colour));
     }
 
     &>.human-card-box {
