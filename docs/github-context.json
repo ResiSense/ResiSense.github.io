@@ -1,13 +1,13 @@
 {
   "job": "build",
   "ref": "refs/heads/main",
-  "sha": "d108de20dc589378edb212a2080516db868f6fa8",
+  "sha": "7b0eb99410f5b8fd7d44915c940083260220e5f2",
   "repository": "ResiSense/ResiSense.github.io",
   "repository_owner": "ResiSense",
   "repository_owner_id": "157815954",
   "repositoryUrl": "git://github.com/ResiSense/ResiSense.github.io.git",
-  "run_id": "9950792714",
-  "run_number": "37",
+  "run_id": "9951280446",
+  "run_number": "45",
   "retention_days": "90",
   "run_attempt": "1",
   "artifact_cache_size_limit": "10",
@@ -23,50 +23,30 @@
   "base_ref": "",
   "event_name": "push",
   "event": {
-    "after": "d108de20dc589378edb212a2080516db868f6fa8",
+    "after": "7b0eb99410f5b8fd7d44915c940083260220e5f2",
     "base_ref": null,
-    "before": "8382addbd4d95d10676994b8635174582afeaf00",
-    "commits": [
-      {
-        "author": {
-          "email": "ccheukka@gmail.com",
-          "name": "CCheukKa",
-          "username": "CCheukKa"
-        },
-        "committer": {
-          "email": "ccheukka@gmail.com",
-          "name": "CCheukKa",
-          "username": "CCheukKa"
-        },
-        "distinct": true,
-        "id": "d108de20dc589378edb212a2080516db868f6fa8",
-        "message": "add name to step",
-        "timestamp": "2024-07-16T12:32:44+08:00",
-        "tree_id": "c2c6ceb86ce0f200497e9233cfa7a6fb0063c1f9",
-        "url": "https://github.com/ResiSense/ResiSense.github.io/commit/d108de20dc589378edb212a2080516db868f6fa8"
-      }
-    ],
-    "compare": "https://github.com/ResiSense/ResiSense.github.io/compare/8382addbd4d9...d108de20dc58",
+    "before": "ca8f1acf9d4a7a55d2b102677368de8f3e147d10",
+    "commits": [],
+    "compare": "https://github.com/ResiSense/ResiSense.github.io/compare/ca8f1acf9d4a...7b0eb99410f5",
     "created": false,
     "deleted": false,
-    "forced": false,
+    "forced": true,
     "head_commit": {
       "author": {
-        "email": "ccheukka@gmail.com",
+        "email": "CCheukKa@users.noreply.github.com",
         "name": "CCheukKa",
         "username": "CCheukKa"
       },
       "committer": {
-        "email": "ccheukka@gmail.com",
-        "name": "CCheukKa",
-        "username": "CCheukKa"
+        "email": "static-site-builder[bot]@users.noreply.github.com",
+        "name": "static-site-builder[bot]"
       },
       "distinct": true,
-      "id": "d108de20dc589378edb212a2080516db868f6fa8",
-      "message": "add name to step",
-      "timestamp": "2024-07-16T12:32:44+08:00",
-      "tree_id": "c2c6ceb86ce0f200497e9233cfa7a6fb0063c1f9",
-      "url": "https://github.com/ResiSense/ResiSense.github.io/commit/d108de20dc589378edb212a2080516db868f6fa8"
+      "id": "7b0eb99410f5b8fd7d44915c940083260220e5f2",
+      "message": "STATIC BUILD: add name to step",
+      "timestamp": "2024-07-16T04:33:06Z",
+      "tree_id": "fd8b32154459aa24f0911da7180a0872b3bd164a",
+      "url": "https://github.com/ResiSense/ResiSense.github.io/commit/7b0eb99410f5b8fd7d44915c940083260220e5f2"
     },
     "organization": {
       "avatar_url": "https://avatars.githubusercontent.com/u/157815954?v=4",
@@ -177,7 +157,7 @@
       },
       "private": false,
       "pulls_url": "https://api.github.com/repos/ResiSense/ResiSense.github.io/pulls{/number}",
-      "pushed_at": 1721104367,
+      "pushed_at": 1721107714,
       "releases_url": "https://api.github.com/repos/ResiSense/ResiSense.github.io/releases{/id}",
       "size": 9589,
       "ssh_url": "git@github.com:ResiSense/ResiSense.github.io.git",
@@ -192,7 +172,7 @@
       "teams_url": "https://api.github.com/repos/ResiSense/ResiSense.github.io/teams",
       "topics": [],
       "trees_url": "https://api.github.com/repos/ResiSense/ResiSense.github.io/git/trees{/sha}",
-      "updated_at": "2024-07-16T04:30:13Z",
+      "updated_at": "2024-07-16T05:11:16Z",
       "url": "https://github.com/ResiSense/ResiSense.github.io",
       "visibility": "public",
       "watchers": 1,
@@ -228,15 +208,15 @@
   "ref_type": "branch",
   "secret_source": "Actions",
   "workflow_ref": "ResiSense/ResiSense.github.io/.github/workflows/full-ci-pipeline.yaml@refs/heads/main",
-  "workflow_sha": "d108de20dc589378edb212a2080516db868f6fa8",
+  "workflow_sha": "7b0eb99410f5b8fd7d44915c940083260220e5f2",
   "workspace": "/home/runner/work/ResiSense.github.io/ResiSense.github.io",
   "action": "__run_4",
   "event_path": "/home/runner/work/_temp/_github_workflow/event.json",
   "action_repository": "",
   "action_ref": "",
-  "path": "/home/runner/work/_temp/_runner_file_commands/add_path_25cf6c5e-596f-4846-b5a5-c49e31a511da",
-  "env": "/home/runner/work/_temp/_runner_file_commands/set_env_25cf6c5e-596f-4846-b5a5-c49e31a511da",
-  "step_summary": "/home/runner/work/_temp/_runner_file_commands/step_summary_25cf6c5e-596f-4846-b5a5-c49e31a511da",
-  "state": "/home/runner/work/_temp/_runner_file_commands/save_state_25cf6c5e-596f-4846-b5a5-c49e31a511da",
-  "output": "/home/runner/work/_temp/_runner_file_commands/set_output_25cf6c5e-596f-4846-b5a5-c49e31a511da"
+  "path": "/home/runner/work/_temp/_runner_file_commands/add_path_9d838ea4-fd77-43e6-a67a-564395d93ee9",
+  "env": "/home/runner/work/_temp/_runner_file_commands/set_env_9d838ea4-fd77-43e6-a67a-564395d93ee9",
+  "step_summary": "/home/runner/work/_temp/_runner_file_commands/step_summary_9d838ea4-fd77-43e6-a67a-564395d93ee9",
+  "state": "/home/runner/work/_temp/_runner_file_commands/save_state_9d838ea4-fd77-43e6-a67a-564395d93ee9",
+  "output": "/home/runner/work/_temp/_runner_file_commands/set_output_9d838ea4-fd77-43e6-a67a-564395d93ee9"
 }
