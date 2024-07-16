@@ -63,10 +63,6 @@
             ]
         },
         {
-            "name": "about-us",
-            "populator": "markdown"
-        },
-        {
             "name": "integrated-human-practice",
             "title": "Integrated Human Practice",
             "populator": "markdown",
@@ -78,6 +74,10 @@
                     "/styles/integrated-human-practice.css"
                 ]
             }
+        },
+        {
+            "name": "acknowledgements",
+            "populator": "markdown"
         }
     ]
 }
