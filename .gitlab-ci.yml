@@ -1,22 +1,23 @@
 workflow:
-    rules:
-        - if: $CI_COMMIT_BRANCH
+  rules:
+    - if: $CI_COMMIT_BRANCH
 
 default:
-    interruptible: true
-    image: node:20
+  interruptible: true
+  image: node:20
 
-    before_script:
-        - npm ci
+  before_script:
+    - npm ci
 
 pages:
-    stage: deploy
-    script:
-        - npm run gitlab-actions --if-present
-        - mv docs public
-    artifacts:
-        paths:
-            - public
-    rules:
-        - if: $CI_COMMIT_BRANCH == "main"
-    environment: production
+  stage: deploy
+  script:
+    - npm run gitlab-actions --if-present
+    - mv docs public
+    - ls -R public
+  artifacts:
+    paths:
+      - public
+  rules:
+    - if: $CI_COMMIT_BRANCH == "main"
+  environment: production
