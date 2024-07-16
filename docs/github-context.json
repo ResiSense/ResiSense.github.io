@@ -1,13 +1,13 @@
 {
   "job": "build",
   "ref": "refs/heads/main",
-  "sha": "7b0eb99410f5b8fd7d44915c940083260220e5f2",
+  "sha": "272848e1f07e13cb0f3aa815ed9d178b28018f14",
   "repository": "ResiSense/ResiSense.github.io",
   "repository_owner": "ResiSense",
   "repository_owner_id": "157815954",
   "repositoryUrl": "git://github.com/ResiSense/ResiSense.github.io.git",
-  "run_id": "9951280446",
-  "run_number": "45",
+  "run_id": "9951293072",
+  "run_number": "46",
   "retention_days": "90",
   "run_attempt": "1",
   "artifact_cache_size_limit": "10",
@@ -23,30 +23,68 @@
   "base_ref": "",
   "event_name": "push",
   "event": {
-    "after": "7b0eb99410f5b8fd7d44915c940083260220e5f2",
+    "after": "272848e1f07e13cb0f3aa815ed9d178b28018f14",
     "base_ref": null,
-    "before": "ca8f1acf9d4a7a55d2b102677368de8f3e147d10",
-    "commits": [],
-    "compare": "https://github.com/ResiSense/ResiSense.github.io/compare/ca8f1acf9d4a...7b0eb99410f5",
+    "before": "9285dbc7c7b7b524a7b86457fe89fdfcc8ea4eb4",
+    "commits": [
+      {
+        "author": {
+          "email": "ccheukka@gmail.com",
+          "name": "CCheukKa",
+          "username": "CCheukKa"
+        },
+        "committer": {
+          "email": "ccheukka@gmail.com",
+          "name": "CCheukKa",
+          "username": "CCheukKa"
+        },
+        "distinct": true,
+        "id": "37dd2e9fd55dea25f8fae8e2c05303884cb657e4",
+        "message": "change step name",
+        "timestamp": "2024-07-16T13:29:49+08:00",
+        "tree_id": "9530bf4ef90cf7baf5cb9695458ffb4db125ff68",
+        "url": "https://github.com/ResiSense/ResiSense.github.io/commit/37dd2e9fd55dea25f8fae8e2c05303884cb657e4"
+      },
+      {
+        "author": {
+          "email": "ccheukka@gmail.com",
+          "name": "CCheukKa",
+          "username": "CCheukKa"
+        },
+        "committer": {
+          "email": "ccheukka@gmail.com",
+          "name": "CCheukKa",
+          "username": "CCheukKa"
+        },
+        "distinct": true,
+        "id": "272848e1f07e13cb0f3aa815ed9d178b28018f14",
+        "message": "Merge branch main of https://github.com/ResiSense/ResiSense.github.io",
+        "timestamp": "2024-07-16T13:29:52+08:00",
+        "tree_id": "76505eb03f8db9ea8ae81911f33f061873e09b78",
+        "url": "https://github.com/ResiSense/ResiSense.github.io/commit/272848e1f07e13cb0f3aa815ed9d178b28018f14"
+      }
+    ],
+    "compare": "https://github.com/ResiSense/ResiSense.github.io/compare/9285dbc7c7b7...272848e1f07e",
     "created": false,
     "deleted": false,
-    "forced": true,
+    "forced": false,
     "head_commit": {
       "author": {
-        "email": "CCheukKa@users.noreply.github.com",
+        "email": "ccheukka@gmail.com",
         "name": "CCheukKa",
         "username": "CCheukKa"
       },
       "committer": {
-        "email": "static-site-builder[bot]@users.noreply.github.com",
-        "name": "static-site-builder[bot]"
+        "email": "ccheukka@gmail.com",
+        "name": "CCheukKa",
+        "username": "CCheukKa"
       },
       "distinct": true,
-      "id": "7b0eb99410f5b8fd7d44915c940083260220e5f2",
-      "message": "STATIC BUILD: add name to step",
-      "timestamp": "2024-07-16T04:33:06Z",
-      "tree_id": "fd8b32154459aa24f0911da7180a0872b3bd164a",
-      "url": "https://github.com/ResiSense/ResiSense.github.io/commit/7b0eb99410f5b8fd7d44915c940083260220e5f2"
+      "id": "272848e1f07e13cb0f3aa815ed9d178b28018f14",
+      "message": "Merge branch main of https://github.com/ResiSense/ResiSense.github.io",
+      "timestamp": "2024-07-16T13:29:52+08:00",
+      "tree_id": "76505eb03f8db9ea8ae81911f33f061873e09b78",
+      "url": "https://github.com/ResiSense/ResiSense.github.io/commit/272848e1f07e13cb0f3aa815ed9d178b28018f14"
     },
     "organization": {
       "avatar_url": "https://avatars.githubusercontent.com/u/157815954?v=4",
@@ -157,9 +195,9 @@
       },
       "private": false,
       "pulls_url": "https://api.github.com/repos/ResiSense/ResiSense.github.io/pulls{/number}",
-      "pushed_at": 1721107714,
+      "pushed_at": 1721107793,
       "releases_url": "https://api.github.com/repos/ResiSense/ResiSense.github.io/releases{/id}",
-      "size": 9589,
+      "size": 9599,
       "ssh_url": "git@github.com:ResiSense/ResiSense.github.io.git",
       "stargazers": 1,
       "stargazers_count": 1,
@@ -172,7 +210,7 @@
       "teams_url": "https://api.github.com/repos/ResiSense/ResiSense.github.io/teams",
       "topics": [],
       "trees_url": "https://api.github.com/repos/ResiSense/ResiSense.github.io/git/trees{/sha}",
-      "updated_at": "2024-07-16T05:11:16Z",
+      "updated_at": "2024-07-16T05:29:02Z",
       "url": "https://github.com/ResiSense/ResiSense.github.io",
       "visibility": "public",
       "watchers": 1,
@@ -208,15 +246,15 @@
   "ref_type": "branch",
   "secret_source": "Actions",
   "workflow_ref": "ResiSense/ResiSense.github.io/.github/workflows/full-ci-pipeline.yaml@refs/heads/main",
-  "workflow_sha": "7b0eb99410f5b8fd7d44915c940083260220e5f2",
+  "workflow_sha": "272848e1f07e13cb0f3aa815ed9d178b28018f14",
   "workspace": "/home/runner/work/ResiSense.github.io/ResiSense.github.io",
   "action": "__run_4",
   "event_path": "/home/runner/work/_temp/_github_workflow/event.json",
   "action_repository": "",
   "action_ref": "",
-  "path": "/home/runner/work/_temp/_runner_file_commands/add_path_9d838ea4-fd77-43e6-a67a-564395d93ee9",
-  "env": "/home/runner/work/_temp/_runner_file_commands/set_env_9d838ea4-fd77-43e6-a67a-564395d93ee9",
-  "step_summary": "/home/runner/work/_temp/_runner_file_commands/step_summary_9d838ea4-fd77-43e6-a67a-564395d93ee9",
-  "state": "/home/runner/work/_temp/_runner_file_commands/save_state_9d838ea4-fd77-43e6-a67a-564395d93ee9",
-  "output": "/home/runner/work/_temp/_runner_file_commands/set_output_9d838ea4-fd77-43e6-a67a-564395d93ee9"
+  "path": "/home/runner/work/_temp/_runner_file_commands/add_path_108071f0-d8ba-41d1-ab91-734202b18f77",
+  "env": "/home/runner/work/_temp/_runner_file_commands/set_env_108071f0-d8ba-41d1-ab91-734202b18f77",
+  "step_summary": "/home/runner/work/_temp/_runner_file_commands/step_summary_108071f0-d8ba-41d1-ab91-734202b18f77",
+  "state": "/home/runner/work/_temp/_runner_file_commands/save_state_108071f0-d8ba-41d1-ab91-734202b18f77",
+  "output": "/home/runner/work/_temp/_runner_file_commands/set_output_108071f0-d8ba-41d1-ab91-734202b18f77"
 }
