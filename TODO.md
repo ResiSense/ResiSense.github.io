@@ -11,4 +11,4 @@
 - [ ] videos are uploaded [here](https://tools.igem.org/wiki/non-deliverable-videos)
 
 ## Actually important stuff
-- [ ] 
+- [ ] add responsiveness
