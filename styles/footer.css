@@ -1,9 +1,10 @@
 footer {
     --footer-background-color: var(--bright-brown);
     --footer-horizontal-padding: 1rem;
+    background-color: var(--footer-background-color);
 
     &>.footer-banner {
-        background-color: var(--footer-background-color);
+        /* background-color: var(--footer-background-color); */
         width: 100%;
         height: 5.5rem;
         display: flex;
@@ -84,6 +85,7 @@ footer {
     &>.footer-spacer {
         --footer-spacer-height: awaiting-js-definition;
         height: var(--footer-spacer-height);
+        /* background-color: var(--footer-background-color); */
         position: sticky;
         bottom: 0;
     }
