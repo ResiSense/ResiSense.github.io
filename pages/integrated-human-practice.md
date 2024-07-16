@@ -49,7 +49,7 @@ Our team emphasises the connection of our project design with the actual needs o
 >
 > ### Doctor Pierre Chan
 > ![Portrait of Doctor Pierre Chan](/assets/humans/pierre%20chan%20full-Enhanced-SR%20transprent.png)  
-> Dr Pierre Chan is a medical practitioner and a former legislative counsellor seated as the representative for the medical functional constituency in Hong Kong.  
+> Doctor Pierre Chan is a medical practitioner and a former legislative counsellor seated as the representative for the medical functional constituency in Hong Kong.  
 > <span class="--human-card-above"></span>
 >
 > In our discussion with Dr Chan, we gained insights into the use of antibiotics in hospitals and public awareness of antibiotics.
