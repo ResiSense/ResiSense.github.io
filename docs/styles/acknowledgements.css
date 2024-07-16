@@ -1,0 +1,20 @@
+painted-content {
+
+    img {
+        height: var(--image-height);
+        overflow: hidden;
+        object-fit: cover;
+    }
+
+    section:has(h1#affiliations, h1#sponsors) {
+        --image-height: 5rem;
+    }
+
+    section:has(h1#interviewees) {
+        --image-height: 15rem;
+
+        & img {
+            aspect-ratio: 3/4;
+        }
+    }
+}
