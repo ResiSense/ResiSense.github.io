@@ -3,7 +3,7 @@
 This page is dedicated to acknowledging the contributions of various individuals and organizations that have helped in the development of the project.
 
 # Affiliations
-The ResiSense team is a group of undergraduate students from the Chinese University of Hong Kong, spanning Biomedical Engineering and Life Sciences.  
+The ResiSense team is a group of undergraduate students from the Chinese University of Hong Kong, spanning the Department of Biomedical Engineering and the School of Life Sciences.  
 
 ## The Chinese University of Hong Kong
 [![CUHK Logo](/assets/logos/cuhk%20logo%20horizontal.svg)](https://www.cuhk.edu.hk)  
