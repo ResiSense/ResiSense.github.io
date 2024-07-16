@@ -46,7 +46,7 @@ jobs:
             - name: Generate GitHub context JSON
               run: |
                   cd docs
-                  echo '${{ toJson(github) }}' | jq 'del(.token)' > github-context.json
+                  echo '${{ toJson(github) }}' | jq '{job, ref, sha, repository, repository_Url, run_id, run_number, run_attempt, artifact_cache_size_limit, actor, trigerring_actor, workflow, event_name, event, ref_name, ref_protected, ref_type, secret_source, workflow_ref, workflow_sha, workspace}' > github-context.json
               shell: bash
 
             - name: Commit built site to main branch
