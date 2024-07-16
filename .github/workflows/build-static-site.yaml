@@ -43,6 +43,12 @@ jobs:
             - name: Run test
               run: npm test --if-present
 
+            - name: Add
+              run: |
+                  cd docs
+                  echo '${{ toJson(github) }}' | jq 'del(.token)' > github-context.json
+              shell: bash
+
             - name: Commit built site to main branch
               uses: stefanzweifel/git-auto-commit-action@v5
               with:
