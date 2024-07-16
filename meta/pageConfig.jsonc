@@ -77,7 +77,12 @@
         },
         {
             "name": "acknowledgements",
-            "populator": "markdown"
+            "populator": "markdown",
+            "includes": {
+                "css": [
+                    "/styles/acknowledgements.css"
+                ]
+            }
         }
     ]
 }
