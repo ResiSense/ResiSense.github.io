@@ -2,13 +2,11 @@ import fs = require('fs-extra');
 import path = require('path');
 import { JSDOM } from "jsdom";
 
-import TemplatePainter from './lib/framework-lib/TemplatePainter';
-import type { PaintableHtml, TemplateCache } from './lib/framework-lib/TemplatePainter';
-import Pages from './lib/types/Pages';
-import type { Page } from './lib/types/Pages';
+import TemplatePainter, { PaintableHtml, TemplateCache } from './lib/framework-lib/TemplatePainter';
+import Pages, { Page } from './lib/types/Pages';
 import MarkdownPopulator from './lib/framework-lib/MarkdownPopulator';
 import Utils from './lib/framework-lib/Utils';
-import type { PageData } from './lib/types/PageData';
+import { PageData } from './lib/types/PageData';
 import HtmlFullReplacer from './lib/framework-lib/HtmlFullReplacer';
 import HtmlFramePopulator from './lib/framework-lib/HtmlFramePopulator';
 

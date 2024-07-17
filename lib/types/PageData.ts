@@ -1,5 +1,5 @@
-import type { Page } from "./Pages";
-import type { PaintableHtml } from "../framework-lib/TemplatePainter";
+import { Page } from "./Pages";
+import { PaintableHtml } from "../framework-lib/TemplatePainter";
 
 export type PageData = {
     page: Page;

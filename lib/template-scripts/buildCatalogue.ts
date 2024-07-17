@@ -1,6 +1,6 @@
 import Catalogue from "../types/Catalogue";
 import Pages from "../types/Pages";
-import type { PageData } from "../types/PageData";
+import { PageData } from "../types/PageData";
 
 export default function (pageData: PageData) {
     const document = pageData.document;

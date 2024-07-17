@@ -6,7 +6,7 @@
 import fs = require('fs-extra');
 
 import Pages from "../types/Pages";
-import type { PageData } from "../types/PageData";
+import { PageData } from "../types/PageData";
 
 const baseFilename = 'boiler-plate.html';
 

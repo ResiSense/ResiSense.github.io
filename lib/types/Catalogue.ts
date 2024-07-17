@@ -1,5 +1,4 @@
-import Pages from "./Pages";
-import type { Page, PageConfig } from "./Pages";
+import Pages, { Page, PageConfig } from "./Pages";
 
 export type CatalogueEntry = {
     name: string;

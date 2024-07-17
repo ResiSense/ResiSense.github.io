@@ -5,9 +5,8 @@
 
 import fs = require('fs-extra');
 
-import Pages from '../types/Pages';
-import type { Page } from '../types/Pages';
-import type { PageData } from '../types/PageData';
+import Pages, { Page } from '../types/Pages';
+import { PageData } from '../types/PageData';
 
 const baseFilename = (page: Page) => {
     return `pages/${Pages.getTrace(page).join('.')}.html`;
