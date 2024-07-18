@@ -1,11 +1,11 @@
 {
   "job": "build",
   "ref": "refs/heads/main",
-  "sha": "f9bce5259ea75eca10e8ec2bf60e86a574ebfb73",
+  "sha": "b40e636ea25cc075d1ff347c9f404fb289c21174",
   "repository": "ResiSense/ResiSense.github.io",
   "repository_Url": null,
-  "run_id": "9981922645",
-  "run_number": "52",
+  "run_id": "9985593102",
+  "run_number": "53",
   "run_attempt": "1",
   "artifact_cache_size_limit": "10",
   "actor": "CCheukKa",
@@ -13,8 +13,8 @@
   "workflow": "Full CI Pipeline",
   "event_name": "push",
   "event": {
-    "after": "f9bce5259ea75eca10e8ec2bf60e86a574ebfb73",
-    "before": "a243f0cfdfa9cc8d123fb759201f7771ce964fb5",
+    "after": "b40e636ea25cc075d1ff347c9f404fb289c21174",
+    "before": "0e18bd24a8b6997b2fa0a26f87a39d32ea32bbb7",
     "commits": [
       {
         "author": {
@@ -28,14 +28,14 @@
           "username": "CCheukKa"
         },
         "distinct": true,
-        "id": "f9bce5259ea75eca10e8ec2bf60e86a574ebfb73",
-        "message": "chore: Update import statements in framework-lib files",
-        "timestamp": "2024-07-18T05:45:25+08:00",
-        "tree_id": "6f66733103d2c08b412c72d1d23e4804f2c7abe5",
-        "url": "https://github.com/ResiSense/ResiSense.github.io/commit/f9bce5259ea75eca10e8ec2bf60e86a574ebfb73"
+        "id": "b40e636ea25cc075d1ff347c9f404fb289c21174",
+        "message": "tag some dependencies as dev",
+        "timestamp": "2024-07-18T12:35:57+08:00",
+        "tree_id": "45e0c733c734f3fbe6daea5e43fe925400894b18",
+        "url": "https://github.com/ResiSense/ResiSense.github.io/commit/b40e636ea25cc075d1ff347c9f404fb289c21174"
       }
     ],
-    "compare": "https://github.com/ResiSense/ResiSense.github.io/compare/a243f0cfdfa9...f9bce5259ea7",
+    "compare": "https://github.com/ResiSense/ResiSense.github.io/compare/0e18bd24a8b6...b40e636ea25c",
     "created": false,
     "deleted": false,
     "forced": false,
@@ -51,11 +51,11 @@
         "username": "CCheukKa"
       },
       "distinct": true,
-      "id": "f9bce5259ea75eca10e8ec2bf60e86a574ebfb73",
-      "message": "chore: Update import statements in framework-lib files",
-      "timestamp": "2024-07-18T05:45:25+08:00",
-      "tree_id": "6f66733103d2c08b412c72d1d23e4804f2c7abe5",
-      "url": "https://github.com/ResiSense/ResiSense.github.io/commit/f9bce5259ea75eca10e8ec2bf60e86a574ebfb73"
+      "id": "b40e636ea25cc075d1ff347c9f404fb289c21174",
+      "message": "tag some dependencies as dev",
+      "timestamp": "2024-07-18T12:35:57+08:00",
+      "tree_id": "45e0c733c734f3fbe6daea5e43fe925400894b18",
+      "url": "https://github.com/ResiSense/ResiSense.github.io/commit/b40e636ea25cc075d1ff347c9f404fb289c21174"
     },
     "pusher": {
       "email": "ccheukka@gmail.com",
@@ -68,6 +68,6 @@
   "ref_type": "branch",
   "secret_source": "Actions",
   "workflow_ref": "ResiSense/ResiSense.github.io/.github/workflows/full-ci-pipeline.yaml@refs/heads/main",
-  "workflow_sha": "f9bce5259ea75eca10e8ec2bf60e86a574ebfb73",
+  "workflow_sha": "b40e636ea25cc075d1ff347c9f404fb289c21174",
   "workspace": "/home/runner/work/ResiSense.github.io/ResiSense.github.io"
 }
