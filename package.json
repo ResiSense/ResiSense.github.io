@@ -22,12 +22,14 @@
     "dependencies": {
         "@types/fs-extra": "^11.0.4",
         "@types/jsdom": "^21.1.7",
-        "@types/node": "^20.14.10",
         "chokidar": "^3.6.0",
         "fs-extra": "^11.2.0",
         "glob": "^11.0.0",
         "jsdom": "^24.1.0",
-        "marked": "^13.0.2",
+        "marked": "^13.0.2"
+    },
+    "devDependencies": {
+        "@types/node": "^20.14.11",
         "typescript": "^5.5.3"
     }
 }
