@@ -12,7 +12,7 @@ import HtmlFramePopulator from './lib/framework-lib/HtmlFramePopulator';
 
 console.log(`Running ${path.basename(__filename)}...`)
 
-const mode = process.argv[2].substring(2) as typeof MODES[keyof typeof MODES];
+const mode = process.argv[2].match(/(?<=^--)([a-z]|-)+/)[0] as typeof MODES[keyof typeof MODES];
 enum MODES {
     DEV = 'dev',
     PROD = 'prod',
