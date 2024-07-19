@@ -7,7 +7,7 @@
         "prod-build": "echo Running prod build script && cross-env NODE_ENV=prod npx ts-node ./siteBuilder.ts",
         "dev-build": "echo Running dev build script && cross-env NODE_ENV=dev npx ts-node ./siteBuilder.ts",
         "dev-watch": "echo Running dev watch script && npx ts-node ./watcher.ts",
-        "gitlab-actions": "echo Running gitlab actions script && npx ts-node ./.gitlab/addBaseUrl.ts"
+        "gitlab-actions": "echo Running gitlab actions script && npx ts-node ./.gitlab/gitlabActions.ts"
     },
     "repository": {
         "type": "git",
@@ -21,10 +21,12 @@
     "homepage": "https://github.com/ResiSense/ResiSense.github.io#readme",
     "dependencies": {
         "@types/fs-extra": "^11.0.4",
+        "@types/he": "^1.2.3",
         "@types/jsdom": "^21.1.7",
         "chokidar": "^3.6.0",
         "fs-extra": "^11.2.0",
         "glob": "^11.0.0",
+        "igem-upload-api": "^1.2.3",
         "jsdom": "^24.1.0",
         "marked": "^13.0.2"
     },
