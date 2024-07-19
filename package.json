@@ -4,8 +4,8 @@
     "description": "ResiSense team site",
     "main": "siteBuilder.ts",
     "scripts": {
-        "prod-build": "echo Running prod build script && npx ts-node ./siteBuilder.ts --prod",
-        "dev-build": "echo Running dev build script && npx ts-node ./siteBuilder.ts --dev",
+        "prod-build": "echo Running prod build script && cross-env NODE_ENV=prod npx ts-node ./siteBuilder.ts",
+        "dev-build": "echo Running dev build script && cross-env NODE_ENV=dev npx ts-node ./siteBuilder.ts",
         "dev-watch": "echo Running dev watch script && npx ts-node ./watcher.ts",
         "gitlab-actions": "echo Running gitlab actions script && npx ts-node ./.gitlab/addBaseUrl.ts"
     },
@@ -30,6 +30,7 @@
     },
     "devDependencies": {
         "@types/node": "^20.14.11",
+        "cross-env": "^7.0.3",
         "typescript": "^5.5.3"
     }
 }

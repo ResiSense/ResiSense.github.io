@@ -10,9 +10,9 @@ import { PageData } from './lib/types/PageData';
 import HtmlFullReplacer from './lib/framework-lib/HtmlFullReplacer';
 import HtmlFramePopulator from './lib/framework-lib/HtmlFramePopulator';
 
-console.log(`Running ${path.basename(__filename)}...`)
+const mode = process.env.NODE_ENV?.trim() as typeof MODES[keyof typeof MODES];
+console.log(`Running ${path.basename(__filename)} in ${mode} mode...`)
 
-const mode = process.argv[2].match(/(?<=^--)([a-z]|-)+/)[0] as typeof MODES[keyof typeof MODES];
 enum MODES {
     DEV = 'dev',
     PROD = 'prod',
