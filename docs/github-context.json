@@ -1,11 +1,11 @@
 {
   "job": "build",
   "ref": "refs/heads/main",
-  "sha": "b40e636ea25cc075d1ff347c9f404fb289c21174",
+  "sha": "feaf6b4b162be6c3552b99d1cc3387b1888d4cad",
   "repository": "ResiSense/ResiSense.github.io",
   "repository_Url": null,
-  "run_id": "9985593102",
-  "run_number": "53",
+  "run_id": "10010582926",
+  "run_number": "54",
   "run_attempt": "1",
   "artifact_cache_size_limit": "10",
   "actor": "CCheukKa",
@@ -13,8 +13,8 @@
   "workflow": "Full CI Pipeline",
   "event_name": "push",
   "event": {
-    "after": "b40e636ea25cc075d1ff347c9f404fb289c21174",
-    "before": "0e18bd24a8b6997b2fa0a26f87a39d32ea32bbb7",
+    "after": "feaf6b4b162be6c3552b99d1cc3387b1888d4cad",
+    "before": "d40ea789bae6ee44cedb88272a0f45e579a3edd3",
     "commits": [
       {
         "author": {
@@ -28,14 +28,86 @@
           "username": "CCheukKa"
         },
         "distinct": true,
-        "id": "b40e636ea25cc075d1ff347c9f404fb289c21174",
-        "message": "tag some dependencies as dev",
-        "timestamp": "2024-07-18T12:35:57+08:00",
-        "tree_id": "45e0c733c734f3fbe6daea5e43fe925400894b18",
-        "url": "https://github.com/ResiSense/ResiSense.github.io/commit/b40e636ea25cc075d1ff347c9f404fb289c21174"
+        "id": "37f9fa2e4eae84d3b008b9c2d914ed6f18152972",
+        "message": "chore: Update mode parsing in siteBuilder.ts to be more strict",
+        "timestamp": "2024-07-18T14:11:00+08:00",
+        "tree_id": "9e2b76a9f12be67c8cc114d13d1913945dd51693",
+        "url": "https://github.com/ResiSense/ResiSense.github.io/commit/37f9fa2e4eae84d3b008b9c2d914ed6f18152972"
+      },
+      {
+        "author": {
+          "email": "ccheukka@gmail.com",
+          "name": "CCheukKa",
+          "username": "CCheukKa"
+        },
+        "committer": {
+          "email": "ccheukka@gmail.com",
+          "name": "CCheukKa",
+          "username": "CCheukKa"
+        },
+        "distinct": true,
+        "id": "4f4525b699334242d140da9614c7a37a4630bc52",
+        "message": "Merge branch main of https://github.com/ResiSense/ResiSense.github.io",
+        "timestamp": "2024-07-18T14:25:47+08:00",
+        "tree_id": "2517eb7c1523a45f0ed15d11e426c66ec9bdb670",
+        "url": "https://github.com/ResiSense/ResiSense.github.io/commit/4f4525b699334242d140da9614c7a37a4630bc52"
+      },
+      {
+        "author": {
+          "email": "ccheukka@gmail.com",
+          "name": "CCheukKa",
+          "username": "CCheukKa"
+        },
+        "committer": {
+          "email": "ccheukka@gmail.com",
+          "name": "CCheukKa",
+          "username": "CCheukKa"
+        },
+        "distinct": true,
+        "id": "24c971e965f8c1a6cc656129be765de44f2fd90d",
+        "message": "use cross-env",
+        "timestamp": "2024-07-19T11:35:52+08:00",
+        "tree_id": "0e867f337ce99d5f3eb934050441527fb727d89e",
+        "url": "https://github.com/ResiSense/ResiSense.github.io/commit/24c971e965f8c1a6cc656129be765de44f2fd90d"
+      },
+      {
+        "author": {
+          "email": "ccheukka@gmail.com",
+          "name": "CCheukKa",
+          "username": "CCheukKa"
+        },
+        "committer": {
+          "email": "ccheukka@gmail.com",
+          "name": "CCheukKa",
+          "username": "CCheukKa"
+        },
+        "distinct": true,
+        "id": "996c02dbfb4f190f39327fe17194e66fc1541f0a",
+        "message": "fix incorrect url syntax",
+        "timestamp": "2024-07-19T23:31:29+08:00",
+        "tree_id": "ae61d27505257b79986ad33717280deddb9e76d6",
+        "url": "https://github.com/ResiSense/ResiSense.github.io/commit/996c02dbfb4f190f39327fe17194e66fc1541f0a"
+      },
+      {
+        "author": {
+          "email": "ccheukka@gmail.com",
+          "name": "CCheukKa",
+          "username": "CCheukKa"
+        },
+        "committer": {
+          "email": "ccheukka@gmail.com",
+          "name": "CCheukKa",
+          "username": "CCheukKa"
+        },
+        "distinct": true,
+        "id": "feaf6b4b162be6c3552b99d1cc3387b1888d4cad",
+        "message": "add auto igem file server upload and url relink",
+        "timestamp": "2024-07-19T23:33:17+08:00",
+        "tree_id": "037c3ac7a1bd81ba669f0cf6f7ec4f80ad3df6de",
+        "url": "https://github.com/ResiSense/ResiSense.github.io/commit/feaf6b4b162be6c3552b99d1cc3387b1888d4cad"
       }
     ],
-    "compare": "https://github.com/ResiSense/ResiSense.github.io/compare/0e18bd24a8b6...b40e636ea25c",
+    "compare": "https://github.com/ResiSense/ResiSense.github.io/compare/d40ea789bae6...feaf6b4b162b",
     "created": false,
     "deleted": false,
     "forced": false,
@@ -51,11 +123,11 @@
         "username": "CCheukKa"
       },
       "distinct": true,
-      "id": "b40e636ea25cc075d1ff347c9f404fb289c21174",
-      "message": "tag some dependencies as dev",
-      "timestamp": "2024-07-18T12:35:57+08:00",
-      "tree_id": "45e0c733c734f3fbe6daea5e43fe925400894b18",
-      "url": "https://github.com/ResiSense/ResiSense.github.io/commit/b40e636ea25cc075d1ff347c9f404fb289c21174"
+      "id": "feaf6b4b162be6c3552b99d1cc3387b1888d4cad",
+      "message": "add auto igem file server upload and url relink",
+      "timestamp": "2024-07-19T23:33:17+08:00",
+      "tree_id": "037c3ac7a1bd81ba669f0cf6f7ec4f80ad3df6de",
+      "url": "https://github.com/ResiSense/ResiSense.github.io/commit/feaf6b4b162be6c3552b99d1cc3387b1888d4cad"
     },
     "pusher": {
       "email": "ccheukka@gmail.com",
@@ -68,6 +140,6 @@
   "ref_type": "branch",
   "secret_source": "Actions",
   "workflow_ref": "ResiSense/ResiSense.github.io/.github/workflows/full-ci-pipeline.yaml@refs/heads/main",
-  "workflow_sha": "b40e636ea25cc075d1ff347c9f404fb289c21174",
+  "workflow_sha": "feaf6b4b162be6c3552b99d1cc3387b1888d4cad",
   "workspace": "/home/runner/work/ResiSense.github.io/ResiSense.github.io"
 }
