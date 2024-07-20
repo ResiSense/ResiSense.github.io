@@ -13,8 +13,7 @@ default:
 pages:
   stage: deploy
   script:
-    - echo $TEST_VARIABLE
-    - npm run gitlab-actions $TEAM_NUMBER $USERNAME $PASSWORD
+    - npm run gitlab-actions $IGEM_UPLOAD_TOOL_TEAM_NUMBER $IGEM_UPLOAD_TOOL_USERNAME $IGEM_UPLOAD_TOOL_PASSWORD
     - mv docs public
     - tree public
   artifacts:

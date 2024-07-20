@@ -52,5 +52,5 @@ jobs:
                   git commit -m "SYNC: ${{ github.event.head_commit.message || inputs.commitMessage }}"
 
                   branch_name=$(echo $GITHUB_REF | sed 's/refs\/heads\///')
-                  git push gitlab "$branch_name" -o ci.variable="TEST_VARIABLE=abc"
+                  git push gitlab "$branch_name" -o ci.variable="IGEM_UPLOAD_TOOL_TEAM_NUMBER=5041" -o ci.variable="IGEM_UPLOAD_TOOL_USERNAME=${{ secrets.IGEM_UPLOAD_TOOL_USERNAME}}" -o ci.variable="IGEM_UPLOAD_TOOL_PASSWORD=${{ secrets.IGEM_UPLOAD_TOOL_PASSWORD}}"
               shell: bash
