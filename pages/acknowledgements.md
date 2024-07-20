@@ -23,7 +23,15 @@ The following organizations have provided financial support to the project.
 
 ## Hong Kong Life Sciences Society
 [![HKLSS Logo](/assets/logos/hklss%20logo.svg)](https://www.hklss.org)  
-The [Hong Kong Life Sciences Society](https://www.hklss.org) has kindly provided us with [5000HKD](https://www.google.com/search?q=5000HKD) to support our project.
+The [Hong Kong Life Sciences Society](https://www.hklss.org) has kindly provided us with [5000HKD](https://www.google.com/search?q=5000HKD) to support our project.  
+
+## New England Biolabs
+[![NEB Logo](/assets/logos/neb%20logo.svg)](https://www.neb.com)  
+[New England Biolabs](https://www.neb.com) has kindly provided us with reagents totalling <span style="color:red">***TK***</span> for our experiments.  
+
+## Integrated DNA Technologies
+[![IDT Logo](/assets/logos/idt%20logo.svg)](https://www.idtdna.com)
+[Integrated DNA Technologies](https://www.idtdna.com) has kindly provided us with primers and gene fragments totalling <span style="color:red">***TK***</span> for our experiments.  
 
 # Collaborators
 
