@@ -49,6 +49,9 @@ jobs:
                   echo '${{ toJson(github) }}' | jq '{job, ref, sha, repository, repository_Url, run_id, run_number, run_attempt, artifact_cache_size_limit, actor, trigerring_actor, workflow, event_name, event, ref_name, ref_protected, ref_type, secret_source, workflow_ref, workflow_sha, workspace}' | jq 'del(.event.base_ref, .event.organization, .event.repository, .event.sender)' > github-context.json
               shell: bash
 
+            - name: Prettify all files
+              run: npm run prettify --if-present
+
             - name: Commit built site to main branch
               uses: stefanzweifel/git-auto-commit-action@v5
               with:
