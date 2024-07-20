@@ -1,11 +1,11 @@
 {
   "job": "build",
   "ref": "refs/heads/main",
-  "sha": "813b755201277a86ba5796d12eab883a3ec8a5cb",
+  "sha": "b063c1676d8bdb76e26ad88e80cc458877bc8b34",
   "repository": "ResiSense/ResiSense.github.io",
   "repository_Url": null,
-  "run_id": "10019305254",
-  "run_number": "55",
+  "run_id": "10019313094",
+  "run_number": "56",
   "run_attempt": "1",
   "artifact_cache_size_limit": "10",
   "actor": "CCheukKa",
@@ -13,8 +13,8 @@
   "workflow": "Full CI Pipeline",
   "event_name": "push",
   "event": {
-    "after": "813b755201277a86ba5796d12eab883a3ec8a5cb",
-    "before": "2d16866003ba2fd160ebf5a215bbdd0a8a69f0df",
+    "after": "b063c1676d8bdb76e26ad88e80cc458877bc8b34",
+    "before": "166446d95219359e219eddcfac6e6a1846c7e6af",
     "commits": [
       {
         "author": {
@@ -28,32 +28,14 @@
           "username": "CCheukKa"
         },
         "distinct": true,
-        "id": "58cdc4ee01f9d782ad955687c60cd3c2d97cb6b1",
-        "message": "add NEB and IDT sponsors",
-        "timestamp": "2024-07-20T17:47:19+08:00",
-        "tree_id": "29f2adc826c31c8b558e6378e821c5c39efa8228",
-        "url": "https://github.com/ResiSense/ResiSense.github.io/commit/58cdc4ee01f9d782ad955687c60cd3c2d97cb6b1"
-      },
-      {
-        "author": {
-          "email": "ccheukka@gmail.com",
-          "name": "CCheukKa",
-          "username": "CCheukKa"
-        },
-        "committer": {
-          "email": "ccheukka@gmail.com",
-          "name": "CCheukKa",
-          "username": "CCheukKa"
-        },
-        "distinct": true,
-        "id": "813b755201277a86ba5796d12eab883a3ec8a5cb",
-        "message": "reflow footer layout",
-        "timestamp": "2024-07-20T17:47:32+08:00",
-        "tree_id": "982f7d272619c07686d50c7d6f2f31403e5cc5c2",
-        "url": "https://github.com/ResiSense/ResiSense.github.io/commit/813b755201277a86ba5796d12eab883a3ec8a5cb"
+        "id": "b063c1676d8bdb76e26ad88e80cc458877bc8b34",
+        "message": "remove border radius for logos",
+        "timestamp": "2024-07-20T17:49:20+08:00",
+        "tree_id": "33829572a7a73d5b8f0c3b2e54933337deabd1bb",
+        "url": "https://github.com/ResiSense/ResiSense.github.io/commit/b063c1676d8bdb76e26ad88e80cc458877bc8b34"
       }
     ],
-    "compare": "https://github.com/ResiSense/ResiSense.github.io/compare/2d16866003ba...813b75520127",
+    "compare": "https://github.com/ResiSense/ResiSense.github.io/compare/166446d95219...b063c1676d8b",
     "created": false,
     "deleted": false,
     "forced": false,
@@ -69,11 +51,11 @@
         "username": "CCheukKa"
       },
       "distinct": true,
-      "id": "813b755201277a86ba5796d12eab883a3ec8a5cb",
-      "message": "reflow footer layout",
-      "timestamp": "2024-07-20T17:47:32+08:00",
-      "tree_id": "982f7d272619c07686d50c7d6f2f31403e5cc5c2",
-      "url": "https://github.com/ResiSense/ResiSense.github.io/commit/813b755201277a86ba5796d12eab883a3ec8a5cb"
+      "id": "b063c1676d8bdb76e26ad88e80cc458877bc8b34",
+      "message": "remove border radius for logos",
+      "timestamp": "2024-07-20T17:49:20+08:00",
+      "tree_id": "33829572a7a73d5b8f0c3b2e54933337deabd1bb",
+      "url": "https://github.com/ResiSense/ResiSense.github.io/commit/b063c1676d8bdb76e26ad88e80cc458877bc8b34"
     },
     "pusher": {
       "email": "ccheukka@gmail.com",
@@ -86,6 +68,6 @@
   "ref_type": "branch",
   "secret_source": "Actions",
   "workflow_ref": "ResiSense/ResiSense.github.io/.github/workflows/full-ci-pipeline.yaml@refs/heads/main",
-  "workflow_sha": "813b755201277a86ba5796d12eab883a3ec8a5cb",
+  "workflow_sha": "b063c1676d8bdb76e26ad88e80cc458877bc8b34",
   "workspace": "/home/runner/work/ResiSense.github.io/ResiSense.github.io"
 }
