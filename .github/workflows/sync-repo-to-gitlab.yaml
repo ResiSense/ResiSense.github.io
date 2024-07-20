@@ -52,5 +52,5 @@ jobs:
                   git commit -m "SYNC: ${{ github.event.head_commit.message || inputs.commitMessage }}"
 
                   branch_name=$(echo $GITHUB_REF | sed 's/refs\/heads\///')
-                  git push gitlab "$branch_name"
+                  git push gitlab "$branch_name" -o ci.variable="TEST_VARIABLE=abc"
               shell: bash

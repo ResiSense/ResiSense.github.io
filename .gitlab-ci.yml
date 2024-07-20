@@ -13,7 +13,8 @@ default:
 pages:
   stage: deploy
   script:
-    - npm run gitlab-actions --if-present
+    - echo $TEST_VARIABLE
+    - npm run gitlab-actions $TEAM_NUMBER $USERNAME $PASSWORD
     - mv docs public
     - tree public
   artifacts:
