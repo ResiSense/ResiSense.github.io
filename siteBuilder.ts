@@ -1,6 +1,6 @@
 import fs = require('fs-extra');
 import path = require('path');
-import { JSDOM } from "jsdom";
+import { JSDOM } from 'jsdom';
 
 import TemplatePainter, { PaintableHtml, TemplateCache } from './lib/framework-lib/TemplatePainter';
 import Pages, { Page } from './lib/types/Pages';
