@@ -1,11 +1,11 @@
 {
   "job": "build",
   "ref": "refs/heads/main",
-  "sha": "9acb67f3ff736542e8bc5b6967a112ced7eac653",
+  "sha": "cd837edb043c1970289715282c8056f35976b3a4",
   "repository": "ResiSense/ResiSense.github.io",
   "repository_Url": null,
-  "run_id": "10019367896",
-  "run_number": "58",
+  "run_id": "10019507065",
+  "run_number": "59",
   "run_attempt": "1",
   "artifact_cache_size_limit": "10",
   "actor": "CCheukKa",
@@ -13,8 +13,8 @@
   "workflow": "Full CI Pipeline",
   "event_name": "push",
   "event": {
-    "after": "9acb67f3ff736542e8bc5b6967a112ced7eac653",
-    "before": "db76f1433c6b62dff224a1a0a0eb9d56ff89637c",
+    "after": "cd837edb043c1970289715282c8056f35976b3a4",
+    "before": "0dac26a280b9eb515625f347822dd396a18076a7",
     "commits": [
       {
         "author": {
@@ -28,14 +28,14 @@
           "username": "CCheukKa"
         },
         "distinct": true,
-        "id": "9acb67f3ff736542e8bc5b6967a112ced7eac653",
-        "message": "renamed some logos to icons",
-        "timestamp": "2024-07-20T18:01:41+08:00",
-        "tree_id": "467cb7a2e9c09c7fa9c3d27c36cd73dd173aa894",
-        "url": "https://github.com/ResiSense/ResiSense.github.io/commit/9acb67f3ff736542e8bc5b6967a112ced7eac653"
+        "id": "cd837edb043c1970289715282c8056f35976b3a4",
+        "message": "test CI variable",
+        "timestamp": "2024-07-20T18:24:29+08:00",
+        "tree_id": "dd18488c209a8c949e3740312e973848195f52c6",
+        "url": "https://github.com/ResiSense/ResiSense.github.io/commit/cd837edb043c1970289715282c8056f35976b3a4"
       }
     ],
-    "compare": "https://github.com/ResiSense/ResiSense.github.io/compare/db76f1433c6b...9acb67f3ff73",
+    "compare": "https://github.com/ResiSense/ResiSense.github.io/compare/0dac26a280b9...cd837edb043c",
     "created": false,
     "deleted": false,
     "forced": false,
@@ -51,11 +51,11 @@
         "username": "CCheukKa"
       },
       "distinct": true,
-      "id": "9acb67f3ff736542e8bc5b6967a112ced7eac653",
-      "message": "renamed some logos to icons",
-      "timestamp": "2024-07-20T18:01:41+08:00",
-      "tree_id": "467cb7a2e9c09c7fa9c3d27c36cd73dd173aa894",
-      "url": "https://github.com/ResiSense/ResiSense.github.io/commit/9acb67f3ff736542e8bc5b6967a112ced7eac653"
+      "id": "cd837edb043c1970289715282c8056f35976b3a4",
+      "message": "test CI variable",
+      "timestamp": "2024-07-20T18:24:29+08:00",
+      "tree_id": "dd18488c209a8c949e3740312e973848195f52c6",
+      "url": "https://github.com/ResiSense/ResiSense.github.io/commit/cd837edb043c1970289715282c8056f35976b3a4"
     },
     "pusher": {
       "email": "ccheukka@gmail.com",
@@ -68,6 +68,6 @@
   "ref_type": "branch",
   "secret_source": "Actions",
   "workflow_ref": "ResiSense/ResiSense.github.io/.github/workflows/full-ci-pipeline.yaml@refs/heads/main",
-  "workflow_sha": "9acb67f3ff736542e8bc5b6967a112ced7eac653",
+  "workflow_sha": "cd837edb043c1970289715282c8056f35976b3a4",
   "workspace": "/home/runner/work/ResiSense.github.io/ResiSense.github.io"
 }
