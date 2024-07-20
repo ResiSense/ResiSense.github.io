@@ -1,310 +1,449 @@
-<!DOCTYPE html>
-<html lang="en"><head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/x-icon" href="/assets/favicon.png">
-    <title>Project</title>
+<!doctype html>
+<html lang="en"
+    ><head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="icon" type="image/x-icon" href="/assets/favicon.png" />
+        <title>Project</title>
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
-    <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400..800&amp;display=swap" rel="stylesheet">
-    <!-- <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet"> -->
-    <!-- <link href="https://fonts.googleapis.com/css2?family=Bellota+Text:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet"> -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" />
+        <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400..800&amp;display=swap" rel="stylesheet" />
+        <!-- <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet"> -->
+        <!-- <link href="https://fonts.googleapis.com/css2?family=Bellota+Text:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet"> -->
 
-    <link rel="stylesheet" type="text/css" href="/styles/globalStylesheet.css">
-    <script type="text/javascript" src="/scripts/globalLibrary.js"></script>
-<link rel="stylesheet" type="text/css" href="/styles/header.css"><link rel="stylesheet" type="text/css" href="/styles/body.css"><link rel="stylesheet" type="text/css" href="/styles/content.css"><link rel="stylesheet" type="text/css" href="/styles/footer.css"><link rel="stylesheet" type="text/css" href="/styles/searchbar.css"><link rel="stylesheet" type="text/css" href="/styles/catalogue.css"><link rel="stylesheet" type="text/css" href="/styles/outline.css"><script type="text/javascript" src="/scripts/responsivenessHandler.js" defer=""></script><script type="text/javascript" src="/scripts/legend.js" defer=""></script><script type="text/javascript" src="/scripts/footer.js" defer=""></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/fuse.js/dist/fuse.min.js" defer=""></script><script type="text/javascript" src="/scripts/searchbar.js" defer=""></script><script type="text/javascript" src="/scripts/catalogue.js" defer=""></script><script type="text/javascript" src="/scripts/outline.js" defer=""></script></head>
+        <link rel="stylesheet" type="text/css" href="/styles/globalStylesheet.css" />
+        <script type="text/javascript" src="/scripts/globalLibrary.js"></script>
+        <link rel="stylesheet" type="text/css" href="/styles/header.css" /><link
+            rel="stylesheet"
+            type="text/css"
+            href="/styles/body.css" /><link rel="stylesheet" type="text/css" href="/styles/content.css" /><link
+            rel="stylesheet"
+            type="text/css"
+            href="/styles/footer.css" /><link rel="stylesheet" type="text/css" href="/styles/searchbar.css" /><link
+            rel="stylesheet"
+            type="text/css"
+            href="/styles/catalogue.css" /><link rel="stylesheet" type="text/css" href="/styles/outline.css" /><script
+            type="text/javascript"
+            src="/scripts/responsivenessHandler.js"
+            defer=""
+        ></script
+        ><script type="text/javascript" src="/scripts/legend.js" defer=""></script
+        ><script type="text/javascript" src="/scripts/footer.js" defer=""></script
+        ><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/fuse.js/dist/fuse.min.js" defer=""></script
+        ><script type="text/javascript" src="/scripts/searchbar.js" defer=""></script
+        ><script type="text/javascript" src="/scripts/catalogue.js" defer=""></script
+        ><script type="text/javascript" src="/scripts/outline.js" defer=""></script
+    ></head>
 
-<body>
-    <painted-template> 
-
-<painted-header> 
-
-<header>
-    <div class="logo-container">
-        <a href="/" class="logo"> </a>
-    </div>
-    <div class="header-shelf">
-        <div class="header-items-container">
-            <div class="header-leftside">
-                <div class="logo-name-text">
-                    <a href="/">
-                        ResiSense
-                    </a>
-                </div>
-                <div class="logo-flavour-text">
-                    Finding resistant pathogens one species at a time
-                </div>
-            </div>
-            <div class="header-rightside">
-                <painted-searchbar> 
-
-
-
-
-<search class="searchbar">
-    <input type="search" class="searchfield" id="searchfield" placeholder="Search for a page...">
-    <button type="submit" class="search-button" id="search-button">🔍</button>
-</search> </painted-searchbar>
-                <painted-hamburger-menu> 🍔 </painted-hamburger-menu>
-            </div>
-        </div>
-        <div class="header-catalogue-container">
-            <painted-catalogue> 
-
-
-
-<div class="catalogue" id="catalogue">
-    <template id="catalogue-item-template">
-        <div class="catalogue-item">
-            <a href=""></a>
-        </div>
-    </template>
-    <template id="catalogue-divider-template">
-        <div class="catalogue-item catalogue-divider"> | </div>
-    </template>
-    <!--  -->
-    <div class="catalogue-item catalogue-arrow"> &gt; </div>
-
-        <div class="catalogue-item">
-            <a href="/home">home</a>
-        </div>
-    
-        <div class="catalogue-item catalogue-divider"> | </div>
-    
-        <div class="catalogue-item catalogue-item-active">
-            <a href="/project">project</a>
-        </div>
-    
-        <div class="catalogue-item catalogue-divider"> | </div>
-    
-        <div class="catalogue-item">
-            <a href="/project/description">project description</a>
-        </div>
-    
-        <div class="catalogue-item catalogue-divider"> | </div>
-    
-        <div class="catalogue-item">
-            <a href="/project/design">design</a>
-        </div>
-    
-        <div class="catalogue-item catalogue-divider"> | </div>
-    
-        <div class="catalogue-item">
-            <a href="/integrated-human-practice">integrated human practice</a>
-        </div>
-    
-        <div class="catalogue-item catalogue-divider"> | </div>
-    
-        <div class="catalogue-item">
-            <a href="/acknowledgements">acknowledgements</a>
-        </div>
-    
-        <div class="catalogue-item catalogue-divider"> | </div>
-    </div> </painted-catalogue>
-        </div>
-    </div>
-</header>
-<div class="header-spacer"></div> </painted-header>
-<painted-body> 
-
-
-
-
-
-<div class="body-container">
-    <painted-outline> 
-
-
-
-
-<nav>
-    <div id="outline-progress-pointer">➡️</div>
-    <div class="outline">
-        <ul id="outline-tree">
-            <template id="outline-heading-template">
-                <li>
-                    <a>heading</a>
-                    <ul></ul>
-                </li>
-            </template>
-        
-                <li>
-                    <a href="#problem-background" id="--outline-problem-background">Problem Background</a>
-                    <ul>
-                <li>
-                    <a href="#antibiotic-resistance-prevalence" id="--outline-antibiotic-resistance-prevalence">Antibiotic Resistance Prevalence</a>
-                    <ul></ul>
-                </li>
-            
-                <li>
-                    <a href="#current-methods" id="--outline-current-methods">Current Methods</a>
-                    <ul></ul>
-                </li>
-            </ul>
-                </li>
-            
-                <li>
-                    <a href="#our-solution" id="--outline-our-solution">Our Solution</a>
-                    <ul></ul>
-                </li>
-            
-                <li>
-                    <a href="#expected-results" id="--outline-expected-results">Expected Results</a>
-                    <ul></ul>
-                </li>
-            </ul>
-    </div>
-</nav> </painted-outline>
-    <main>
-        <fieldset>
-            <legend id="content-legend">Project</legend>
-            <painted-content><p>ResiSense is a project that aims to provide a cheaper and faster alternative to detecting antibiotic-resistant pathogens via DNA sensing.  </p>
-<div class="scroll-marker" data-scroll-marker-level="H1" id="problem-background"></div><section><h1 id="problem-background">Problem Background</h1><div class="scroll-marker" data-scroll-marker-level="H2" id="antibiotic-resistance-prevalence"></div><section><h2 id="antibiotic-resistance-prevalence">Antibiotic Resistance Prevalence</h2><p>Antibiotic resistance is a growing problem in the world. The <a href="https://www.who.int" target="_blank" rel="noopener noreferrer">World Health Organization (WHO)</a> has declared antibiotic resistance as <strong>one of the biggest threats to global health, food security, and development</strong> <a href="https://www.who.int/news-room/fact-sheets/detail/antimicrobial-resistance" target="_blank" rel="noopener noreferrer">⤴️</a>. The misuse and overuse of antibiotics have led to the emergence of antibiotic-resistant pathogens. Previously manageable infections resurface as untreatable diseases as <strong>the effectiveness of last-resort drugs are compromised</strong>, leading to increased mortality rates and healthcare costs. Antibiotic resistance directly caused 1.27 million deaths and contributed to 4.95 million deaths in total in 2019 <a href="https://www.who.int/news-room/fact-sheets/detail/antimicrobial-resistance" target="_blank" rel="noopener noreferrer">⤴️</a>, and this figure is projected to rise to 10 million by 2050 if no action is taken <a href="https://apo.org.au/sites/default/files/resource-files/2016-05/apo-nid63983.pdf" target="_blank" rel="noopener noreferrer">⤴️</a>.  </p><div class="scroll-marker" data-scroll-marker-level="H2" id="current-methods"></div></section><section><h2 id="current-methods">Current Methods</h2><p>The current methods for detecting antibiotic-resistant pathogens are <strong>expensive and time-consuming</strong>, limiting its accessibility and potential utility <a href="/integrated-human-practice#current-methods">⤵️</a>. A cheaper, faster, and simpler technology is needed.  </p><div class="scroll-marker" data-scroll-marker-level="H1" id="our-solution"></div></section></section>
-
-
-
-
-<section><h1 id="our-solution">Our Solution</h1><p>We are developing <strong>a point-of-care test kit, ResiSense</strong>, for more efficient diagnosis, using <strong>cell-free synthetic biology</strong>. This proposed testing system consists of three parts: target gene extraction, rolling circle amplification (RCA) <a href="https://en.wikipedia.org/wiki/Rolling_circle_replication" target="_blank" rel="noopener noreferrer">⤴️</a>, and signal expression. Bacterial DNA is released following cell lysis before a snippet of the target gene responsible for antibiotic resistance is cut using <strong>a pair of restriction enzymes and nickase</strong>. Φ-29 polymerase aids in releasing the target gene as <strong>ss-DNA</strong>. This target gene serves as a primer and triggers the formation of <strong>peroxidase-mimicking (G-quadruplex) DNAzymes</strong> through RCA to cause a <strong>color change in the solution</strong>, indicating the presence of antibiotic-resistant genes in bacteria. Our aim is to create a <strong>versatile, easily programmable system</strong> that can detect various antibiotic resistance genes, starting with those related to <em><strong>Klebsiella pneumonia</strong></em>, which is a common intestinal bacterium that showed elevated resistance levels against critical antibiotics <a href="https://www.who.int/news-room/fact-sheets/detail/antimicrobial-resistance" target="_blank" rel="noopener noreferrer">⤴️</a>.<br><img src="../assets/diagrams/mechanism%20overview%20diagram.png" alt="picture 1">  </p><div class="scroll-marker" data-scroll-marker-level="H1" id="expected-results"></div></section>
-
-<section><h1 id="expected-results">Expected Results</h1><table>
-<thead>
-<tr>
-<th align="left">Testing Method</th>
-<th align="left">Limitations</th>
-<th align="right">Time</th>
-<th align="right">Cost (USD)</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="left">MIC</td>
-<td align="left">Long incubation time</td>
-<td align="right">24h</td>
-<td align="right">9.18</td>
-</tr>
-<tr>
-<td align="left">PCR</td>
-<td align="left">Requires specific machines and trained personnel</td>
-<td align="right">50m</td>
-<td align="right">34.18</td>
-</tr>
-<tr>
-<td align="left">Sequencing</td>
-<td align="left">Requires trained personnel and specilised software</td>
-<td align="right">24h</td>
-<td align="right">97.52</td>
-</tr>
-<tr>
-<td align="left">MALDI-TOF MS</td>
-<td align="left">Requires expensive equipment and trained personnel</td>
-<td align="right">30m</td>
-<td align="right">0.1</td>
-</tr>
-<tr>
-<td align="left">ResiSense (Projected)</td>
-<td align="left">Under development</td>
-<td align="right">93m</td>
-<td align="right">5.22</td>
-</tr>
-</tbody></table><p>Our solution aims to address the problems of lengthy culturing, the need for specilised machines and trained personnel by offering a cheaper, quicker, and simpler technology. We are confident that the innovation will bring a great impact on different aspects.  </p></section>
-
-
-</painted-content></fieldset>
-    </main>
-    <painted-sidebar> <aside>
-    <a href="#"> 🔝 </a>
-</aside> </painted-sidebar>
-</div> </painted-body>
-<painted-footer> 
-
-
-<footer>
-    <div class="footer-banner">
-        <div class="resisense">
-            <div class="resisense-logo">
-                <img src="/assets/logos/resisense/ResiSense Green Logo.svg" alt="ResiSense logo">
-            </div>
-            <div class="resisense-logo-aside">
-                <div class="resisense-name"> ResiSense </div>
-                <div class="socials">
-                    <div class="social">
-                        <a href="https://www.instagram.com/cuhkigem2024/" target="_blank" rel="noopener noreferrer">
-                            <img src="/assets/icons/instagram icon.svg" alt="Instagram icon">
-                            <span> cuhkigem2024 </span>
-                        </a>
+    <body>
+        <painted-template>
+            <painted-header>
+                <header>
+                    <div class="logo-container">
+                        <a href="/" class="logo"> </a>
                     </div>
-                    <div class="social">
-                        <a href="mailto:cuhkigem2024@gmail.com" target="_blank" rel="noopener noreferrer">
-                            <img src="/assets/icons/email icon.svg" alt="Email icon">
-                            <span> cuhkigem2024@gmail.com </span>
-                        </a>
+                    <div class="header-shelf">
+                        <div class="header-items-container">
+                            <div class="header-leftside">
+                                <div class="logo-name-text">
+                                    <a href="/"> ResiSense </a>
+                                </div>
+                                <div class="logo-flavour-text"> Finding resistant pathogens one species at a time </div>
+                            </div>
+                            <div class="header-rightside">
+                                <painted-searchbar>
+                                    <search class="searchbar">
+                                        <input
+                                            type="search"
+                                            class="searchfield"
+                                            id="searchfield"
+                                            placeholder="Search for a page..."
+                                        />
+                                        <button type="submit" class="search-button" id="search-button">🔍</button>
+                                    </search>
+                                </painted-searchbar>
+                                <painted-hamburger-menu> 🍔 </painted-hamburger-menu>
+                            </div>
+                        </div>
+                        <div class="header-catalogue-container">
+                            <painted-catalogue>
+                                <div class="catalogue" id="catalogue">
+                                    <template id="catalogue-item-template">
+                                        <div class="catalogue-item">
+                                            <a href=""></a>
+                                        </div>
+                                    </template>
+                                    <template id="catalogue-divider-template">
+                                        <div class="catalogue-item catalogue-divider"> | </div>
+                                    </template>
+                                    <!--  -->
+                                    <div class="catalogue-item catalogue-arrow"> &gt; </div>
+
+                                    <div class="catalogue-item">
+                                        <a href="/home">home</a>
+                                    </div>
+
+                                    <div class="catalogue-item catalogue-divider"> | </div>
+
+                                    <div class="catalogue-item catalogue-item-active">
+                                        <a href="/project">project</a>
+                                    </div>
+
+                                    <div class="catalogue-item catalogue-divider"> | </div>
+
+                                    <div class="catalogue-item">
+                                        <a href="/project/description">project description</a>
+                                    </div>
+
+                                    <div class="catalogue-item catalogue-divider"> | </div>
+
+                                    <div class="catalogue-item">
+                                        <a href="/project/design">design</a>
+                                    </div>
+
+                                    <div class="catalogue-item catalogue-divider"> | </div>
+
+                                    <div class="catalogue-item">
+                                        <a href="/integrated-human-practice">integrated human practice</a>
+                                    </div>
+
+                                    <div class="catalogue-item catalogue-divider"> | </div>
+
+                                    <div class="catalogue-item">
+                                        <a href="/acknowledgements">acknowledgements</a>
+                                    </div>
+
+                                    <div class="catalogue-item catalogue-divider"> | </div>
+                                </div>
+                            </painted-catalogue>
+                        </div>
                     </div>
+                </header>
+                <div class="header-spacer"></div>
+            </painted-header>
+            <painted-body>
+                <div class="body-container">
+                    <painted-outline>
+                        <nav>
+                            <div id="outline-progress-pointer">➡️</div>
+                            <div class="outline">
+                                <ul id="outline-tree">
+                                    <template id="outline-heading-template">
+                                        <li>
+                                            <a>heading</a>
+                                            <ul></ul>
+                                        </li>
+                                    </template>
+
+                                    <li>
+                                        <a href="#problem-background" id="--outline-problem-background"
+                                            >Problem Background</a
+                                        >
+                                        <ul>
+                                            <li>
+                                                <a
+                                                    href="#antibiotic-resistance-prevalence"
+                                                    id="--outline-antibiotic-resistance-prevalence"
+                                                    >Antibiotic Resistance Prevalence</a
+                                                >
+                                                <ul></ul>
+                                            </li>
+
+                                            <li>
+                                                <a href="#current-methods" id="--outline-current-methods"
+                                                    >Current Methods</a
+                                                >
+                                                <ul></ul>
+                                            </li>
+                                        </ul>
+                                    </li>
+
+                                    <li>
+                                        <a href="#our-solution" id="--outline-our-solution">Our Solution</a>
+                                        <ul></ul>
+                                    </li>
+
+                                    <li>
+                                        <a href="#expected-results" id="--outline-expected-results">Expected Results</a>
+                                        <ul></ul>
+                                    </li>
+                                </ul>
+                            </div>
+                        </nav>
+                    </painted-outline>
+                    <main>
+                        <fieldset>
+                            <legend id="content-legend">Project</legend>
+                            <painted-content
+                                ><p
+                                    >ResiSense is a project that aims to provide a cheaper and faster alternative to
+                                    detecting antibiotic-resistant pathogens via DNA sensing.
+                                </p>
+                                <div class="scroll-marker" data-scroll-marker-level="H1" id="problem-background"></div
+                                ><section
+                                    ><h1 id="problem-background">Problem Background</h1
+                                    ><div
+                                        class="scroll-marker"
+                                        data-scroll-marker-level="H2"
+                                        id="antibiotic-resistance-prevalence"
+                                    ></div
+                                    ><section
+                                        ><h2 id="antibiotic-resistance-prevalence">Antibiotic Resistance Prevalence</h2
+                                        ><p
+                                            >Antibiotic resistance is a growing problem in the world. The
+                                            <a href="https://www.who.int" target="_blank" rel="noopener noreferrer"
+                                                >World Health Organization (WHO)</a
+                                            >
+                                            has declared antibiotic resistance as
+                                            <strong
+                                                >one of the biggest threats to global health, food security, and
+                                                development</strong
+                                            >
+                                            <a
+                                                href="https://www.who.int/news-room/fact-sheets/detail/antimicrobial-resistance"
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                                >⤴️</a
+                                            >. The misuse and overuse of antibiotics have led to the emergence of
+                                            antibiotic-resistant pathogens. Previously manageable infections resurface
+                                            as untreatable diseases as
+                                            <strong>the effectiveness of last-resort drugs are compromised</strong>,
+                                            leading to increased mortality rates and healthcare costs. Antibiotic
+                                            resistance directly caused 1.27 million deaths and contributed to 4.95
+                                            million deaths in total in 2019
+                                            <a
+                                                href="https://www.who.int/news-room/fact-sheets/detail/antimicrobial-resistance"
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                                >⤴️</a
+                                            >, and this figure is projected to rise to 10 million by 2050 if no action
+                                            is taken
+                                            <a
+                                                href="https://apo.org.au/sites/default/files/resource-files/2016-05/apo-nid63983.pdf"
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                                >⤴️</a
+                                            >. </p
+                                        ><div
+                                            class="scroll-marker"
+                                            data-scroll-marker-level="H2"
+                                            id="current-methods"
+                                        ></div></section
+                                    ><section
+                                        ><h2 id="current-methods">Current Methods</h2
+                                        ><p
+                                            >The current methods for detecting antibiotic-resistant pathogens are
+                                            <strong>expensive and time-consuming</strong>, limiting its accessibility
+                                            and potential utility
+                                            <a href="/integrated-human-practice#current-methods">⤵️</a>. A cheaper,
+                                            faster, and simpler technology is needed. </p
+                                        ><div
+                                            class="scroll-marker"
+                                            data-scroll-marker-level="H1"
+                                            id="our-solution"
+                                        ></div></section
+                                ></section>
+
+                                <section
+                                    ><h1 id="our-solution">Our Solution</h1
+                                    ><p
+                                        >We are developing <strong>a point-of-care test kit, ResiSense</strong>, for
+                                        more efficient diagnosis, using <strong>cell-free synthetic biology</strong>.
+                                        This proposed testing system consists of three parts: target gene extraction,
+                                        rolling circle amplification (RCA)
+                                        <a
+                                            href="https://en.wikipedia.org/wiki/Rolling_circle_replication"
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            >⤴️</a
+                                        >, and signal expression. Bacterial DNA is released following cell lysis before
+                                        a snippet of the target gene responsible for antibiotic resistance is cut using
+                                        <strong>a pair of restriction enzymes and nickase</strong>. Φ-29 polymerase aids
+                                        in releasing the target gene as <strong>ss-DNA</strong>. This target gene serves
+                                        as a primer and triggers the formation of
+                                        <strong>peroxidase-mimicking (G-quadruplex) DNAzymes</strong> through RCA to
+                                        cause a <strong>color change in the solution</strong>, indicating the presence
+                                        of antibiotic-resistant genes in bacteria. Our aim is to create a
+                                        <strong>versatile, easily programmable system</strong> that can detect various
+                                        antibiotic resistance genes, starting with those related to
+                                        <em><strong>Klebsiella pneumonia</strong></em
+                                        >, which is a common intestinal bacterium that showed elevated resistance levels
+                                        against critical antibiotics
+                                        <a
+                                            href="https://www.who.int/news-room/fact-sheets/detail/antimicrobial-resistance"
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            >⤴️</a
+                                        >.<br /><img
+                                            src="../assets/diagrams/mechanism%20overview%20diagram.png"
+                                            alt="picture 1"
+                                        /> </p
+                                    ><div
+                                        class="scroll-marker"
+                                        data-scroll-marker-level="H1"
+                                        id="expected-results"
+                                    ></div
+                                ></section>
+
+                                <section
+                                    ><h1 id="expected-results">Expected Results</h1
+                                    ><table>
+                                        <thead>
+                                            <tr>
+                                                <th align="left">Testing Method</th>
+                                                <th align="left">Limitations</th>
+                                                <th align="right">Time</th>
+                                                <th align="right">Cost (USD)</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody
+                                            ><tr>
+                                                <td align="left">MIC</td>
+                                                <td align="left">Long incubation time</td>
+                                                <td align="right">24h</td>
+                                                <td align="right">9.18</td>
+                                            </tr>
+                                            <tr>
+                                                <td align="left">PCR</td>
+                                                <td align="left">Requires specific machines and trained personnel</td>
+                                                <td align="right">50m</td>
+                                                <td align="right">34.18</td>
+                                            </tr>
+                                            <tr>
+                                                <td align="left">Sequencing</td>
+                                                <td align="left">Requires trained personnel and specilised software</td>
+                                                <td align="right">24h</td>
+                                                <td align="right">97.52</td>
+                                            </tr>
+                                            <tr>
+                                                <td align="left">MALDI-TOF MS</td>
+                                                <td align="left">Requires expensive equipment and trained personnel</td>
+                                                <td align="right">30m</td>
+                                                <td align="right">0.1</td>
+                                            </tr>
+                                            <tr>
+                                                <td align="left">ResiSense (Projected)</td>
+                                                <td align="left">Under development</td>
+                                                <td align="right">93m</td>
+                                                <td align="right">5.22</td>
+                                            </tr>
+                                        </tbody></table
+                                    ><p
+                                        >Our solution aims to address the problems of lengthy culturing, the need for
+                                        specilised machines and trained personnel by offering a cheaper, quicker, and
+                                        simpler technology. We are confident that the innovation will bring a great
+                                        impact on different aspects.
+                                    </p></section
+                                >
+                            </painted-content></fieldset
+                        >
+                    </main>
+                    <painted-sidebar>
+                        <aside>
+                            <a href="#"> 🔝 </a>
+                        </aside>
+                    </painted-sidebar>
                 </div>
-            </div>
-        </div>
-        <div class="divider"></div>
-        <div class="logo-container-wrapper">
-            <div> Affiliated with: </div>
-            <div class="cuhk-department-logo-container">
-                <a href="https://www.cuhk.edu.hk" target="_blank" rel="noopener noreferrer">
-                    <img src="/assets/logos/cuhk logo horizontal.svg" alt="CUHK logo">
-                </a>
-                <a href="https://www.bme.cuhk.edu.hk" target="_blank" rel="noopener noreferrer">
-                    <img src="/assets/logos/bme logo.svg" alt="CUHK BME logo">
-                </a>
-                <a href="https://www.sls.cuhk.edu.hk" target="_blank" rel="noopener noreferrer">
-                    <img src="/assets/logos/sls logo.svg" alt="CUHK SLS logo">
-                </a>
-            </div>
-            <div> Sponsored by: </div>
-            <div class="sponsor-logo-container">
-                <a href="https://opentrons.com" target="_blank" rel="noopener noreferrer">
-                    <img src="/assets/logos/opentrons logo.svg" alt="Opentrons logo">
-                </a>
-                <a href="https://www.hklss.org" target="_blank" rel="noopener noreferrer">
-                    <img src="/assets/logos/hklss logo repacked.svg" alt="HKLSS logo">
-                </a>
-                <a href="https://www.neb.com" target="_blank" rel="noopener noreferrer">
-                    <img src="/assets/logos/neb logo.svg" alt="NEB logo">
-                </a>
-                <a href="https://www.idtdna.com" target="_blank" rel="noopener noreferrer">
-                    <img src="/assets/logos/idt logo.svg" alt="IDT logo">
-                </a>
-            </div>
-        </div>
-    </div>
-    <div class="footer-spacer"></div>
-    <div class="footer-persistent">
-        <div class="repository-container">
-            <!-- Repository links -->
-            <span>
-                Repository: <a href="https://github.com/ResiSense/ResiSense.github.io" target="_blank">
-                    <img src="/assets/icons/github icon.svg" alt="GitHub icon">
-                </a>
-                <a href="https://gitlab.igem.org/2024/hongkong-cuhk" target="_blank">
-                    <img src="/assets/icons/gitlab icon.svg" alt="GitLab icon">
-                </a>
-            </span>
-        </div>
-        <div class="license-container">
-            <!-- Licensing https://creativecommons.org/licenses/by/4.0/ -->
-            <span>
-                ©️ 2024 ResiSense.
-                Licensed under <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank">
-                    <img src="/assets/icons/creative common/Creative Common CC icon.svg" alt="Creative Commons icon">
-                    <img src="/assets/icons/creative common/Creative Common BY icon.svg" alt="Creative Commons BY icon">
-                    CC BY 4.0</a>.
-                All rights reserved.
-            </span>
-        </div>
-    </div>
-</footer> </painted-footer> </painted-template>
-
-
-
-
-
-
-
-
-</body></html>
+            </painted-body>
+            <painted-footer>
+                <footer>
+                    <div class="footer-banner">
+                        <div class="resisense">
+                            <div class="resisense-logo">
+                                <img src="/assets/logos/resisense/ResiSense Green Logo.svg" alt="ResiSense logo" />
+                            </div>
+                            <div class="resisense-logo-aside">
+                                <div class="resisense-name"> ResiSense </div>
+                                <div class="socials">
+                                    <div class="social">
+                                        <a
+                                            href="https://www.instagram.com/cuhkigem2024/"
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                        >
+                                            <img src="/assets/icons/instagram icon.svg" alt="Instagram icon" />
+                                            <span> cuhkigem2024 </span>
+                                        </a>
+                                    </div>
+                                    <div class="social">
+                                        <a
+                                            href="mailto:cuhkigem2024@gmail.com"
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                        >
+                                            <img src="/assets/icons/email icon.svg" alt="Email icon" />
+                                            <span> cuhkigem2024@gmail.com </span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="divider"></div>
+                        <div class="logo-container-wrapper">
+                            <div> Affiliated with: </div>
+                            <div class="cuhk-department-logo-container">
+                                <a href="https://www.cuhk.edu.hk" target="_blank" rel="noopener noreferrer">
+                                    <img src="/assets/logos/cuhk logo horizontal.svg" alt="CUHK logo" />
+                                </a>
+                                <a href="https://www.bme.cuhk.edu.hk" target="_blank" rel="noopener noreferrer">
+                                    <img src="/assets/logos/bme logo.svg" alt="CUHK BME logo" />
+                                </a>
+                                <a href="https://www.sls.cuhk.edu.hk" target="_blank" rel="noopener noreferrer">
+                                    <img src="/assets/logos/sls logo.svg" alt="CUHK SLS logo" />
+                                </a>
+                            </div>
+                            <div> Sponsored by: </div>
+                            <div class="sponsor-logo-container">
+                                <a href="https://opentrons.com" target="_blank" rel="noopener noreferrer">
+                                    <img src="/assets/logos/opentrons logo.svg" alt="Opentrons logo" />
+                                </a>
+                                <a href="https://www.hklss.org" target="_blank" rel="noopener noreferrer">
+                                    <img src="/assets/logos/hklss logo repacked.svg" alt="HKLSS logo" />
+                                </a>
+                                <a href="https://www.neb.com" target="_blank" rel="noopener noreferrer">
+                                    <img src="/assets/logos/neb logo.svg" alt="NEB logo" />
+                                </a>
+                                <a href="https://www.idtdna.com" target="_blank" rel="noopener noreferrer">
+                                    <img src="/assets/logos/idt logo.svg" alt="IDT logo" />
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="footer-spacer"></div>
+                    <div class="footer-persistent">
+                        <div class="repository-container">
+                            <!-- Repository links -->
+                            <span>
+                                Repository:
+                                <a href="https://github.com/ResiSense/ResiSense.github.io" target="_blank">
+                                    <img src="/assets/icons/github icon.svg" alt="GitHub icon" />
+                                </a>
+                                <a href="https://gitlab.igem.org/2024/hongkong-cuhk" target="_blank">
+                                    <img src="/assets/icons/gitlab icon.svg" alt="GitLab icon" />
+                                </a>
+                            </span>
+                        </div>
+                        <div class="license-container">
+                            <!-- Licensing https://creativecommons.org/licenses/by/4.0/ -->
+                            <span>
+                                ©️ 2024 ResiSense. Licensed under
+                                <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank">
+                                    <img
+                                        src="/assets/icons/creative common/Creative Common CC icon.svg"
+                                        alt="Creative Commons icon"
+                                    />
+                                    <img
+                                        src="/assets/icons/creative common/Creative Common BY icon.svg"
+                                        alt="Creative Commons BY icon"
+                                    />
+                                    CC BY 4.0</a
+                                >. All rights reserved.
+                            </span>
+                        </div>
+                    </div>
+                </footer>
+            </painted-footer>
+        </painted-template>
+    </body></html
+>

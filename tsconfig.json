@@ -2,9 +2,7 @@
     "compilerOptions": {
         "module": "commonjs",
         "target": "es6",
-        "types": [
-            "node"
-        ]
+        "types": ["node"]
     },
     "declaration": true
 }
