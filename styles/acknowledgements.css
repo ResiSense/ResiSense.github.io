@@ -8,6 +8,10 @@ painted-content {
 
     section:has(h1#affiliations, h1#sponsors) {
         --image-height: 5rem;
+
+        & img {
+            border-radius: 0;
+        }
     }
 
     section:has(h1#interviewees) {
