@@ -11,7 +11,7 @@ import HtmlFullReplacer from './lib/framework-lib/HtmlFullReplacer';
 import HtmlFramePopulator from './lib/framework-lib/HtmlFramePopulator';
 
 const mode = process.env.NODE_ENV?.trim() as typeof MODES[keyof typeof MODES];
-console.log(`Running ${path.basename(__filename)} in ${mode} mode...`)
+console.log(`Running ${path.basename(__filename)} in ${mode} mode...`);
 
 enum MODES {
     DEV = 'dev',
@@ -25,7 +25,7 @@ const targetDirectory = (() => {
             return 'docs';
     }
 })();
-if (!targetDirectory) { throw new Error('Invalid mode!') };
+if (!targetDirectory) { throw new Error('Invalid mode!'); }
 
 (async () => {
     await Promise.all([
