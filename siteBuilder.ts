@@ -111,7 +111,8 @@ async function buildFile(page: Page, templateCache: TemplateCache): Promise<void
 
     if (mode === MODES.DEV) { addHtmlExtensionsToAnchorHrefs(pageData); }
 
-    Utils.writeFileSyncWithMakeDirectory(path.resolve(targetDirectory, `${Pages.getTrace(page).join('/')}.html`), `<!DOCTYPE html>\n${document.documentElement.outerHTML}`);
+    const htmlFileContent = `<!DOCTYPE html>\n${document.documentElement.outerHTML}`;
+    Utils.writeFileSyncWithMakeDirectory(path.resolve(targetDirectory, `${Pages.getTrace(page).join('/')}.html`), htmlFileContent);
 }
 /* -------------------------------------------------------------------------- */
 function insertCssEmbeds(pageData: PageData) {
