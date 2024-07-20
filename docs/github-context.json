@@ -1,11 +1,11 @@
 {
   "job": "build",
   "ref": "refs/heads/main",
-  "sha": "18340d44ea3089c0bff0b9228d16a6afa8ef9cc8",
+  "sha": "851ac883d40b5315aef873cdfb1e600a4376835e",
   "repository": "ResiSense/ResiSense.github.io",
   "repository_Url": null,
-  "run_id": "10019581676",
-  "run_number": "60",
+  "run_id": "10019745174",
+  "run_number": "61",
   "run_attempt": "1",
   "artifact_cache_size_limit": "10",
   "actor": "CCheukKa",
@@ -13,8 +13,8 @@
   "workflow": "Full CI Pipeline",
   "event_name": "push",
   "event": {
-    "after": "18340d44ea3089c0bff0b9228d16a6afa8ef9cc8",
-    "before": "e394aca7e9a9449409c621ff628df0c05fe1252f",
+    "after": "851ac883d40b5315aef873cdfb1e600a4376835e",
+    "before": "b6ede810cfd8c356cc3118574ef1db43a987270d",
     "commits": [
       {
         "author": {
@@ -28,14 +28,32 @@
           "username": "CCheukKa"
         },
         "distinct": true,
-        "id": "18340d44ea3089c0bff0b9228d16a6afa8ef9cc8",
-        "message": "chore: Update sync-repo-to-gitlab.yaml and .gitlab-ci.yml for IGEM upload tool integration",
-        "timestamp": "2024-07-20T18:36:54+08:00",
-        "tree_id": "90520b4f469ed530796838d6a2750ce21122270a",
-        "url": "https://github.com/ResiSense/ResiSense.github.io/commit/18340d44ea3089c0bff0b9228d16a6afa8ef9cc8"
+        "id": "9d1a63957e0eb2292be523f128750e871703ad51",
+        "message": "chore: Update import statement for JSDOM in siteBuilder.ts",
+        "timestamp": "2024-07-20T19:09:23+08:00",
+        "tree_id": "aef586d7a7ca21be825b278566e54c7bee61609c",
+        "url": "https://github.com/ResiSense/ResiSense.github.io/commit/9d1a63957e0eb2292be523f128750e871703ad51"
+      },
+      {
+        "author": {
+          "email": "ccheukka@gmail.com",
+          "name": "CCheukKa",
+          "username": "CCheukKa"
+        },
+        "committer": {
+          "email": "ccheukka@gmail.com",
+          "name": "CCheukKa",
+          "username": "CCheukKa"
+        },
+        "distinct": true,
+        "id": "851ac883d40b5315aef873cdfb1e600a4376835e",
+        "message": "Refactor buildFile function in siteBuilder.ts for improved readability and maintainability",
+        "timestamp": "2024-07-20T19:09:32+08:00",
+        "tree_id": "891943dfedd3514069da36a51582a3e93968127a",
+        "url": "https://github.com/ResiSense/ResiSense.github.io/commit/851ac883d40b5315aef873cdfb1e600a4376835e"
       }
     ],
-    "compare": "https://github.com/ResiSense/ResiSense.github.io/compare/e394aca7e9a9...18340d44ea30",
+    "compare": "https://github.com/ResiSense/ResiSense.github.io/compare/b6ede810cfd8...851ac883d40b",
     "created": false,
     "deleted": false,
     "forced": false,
@@ -51,11 +69,11 @@
         "username": "CCheukKa"
       },
       "distinct": true,
-      "id": "18340d44ea3089c0bff0b9228d16a6afa8ef9cc8",
-      "message": "chore: Update sync-repo-to-gitlab.yaml and .gitlab-ci.yml for IGEM upload tool integration",
-      "timestamp": "2024-07-20T18:36:54+08:00",
-      "tree_id": "90520b4f469ed530796838d6a2750ce21122270a",
-      "url": "https://github.com/ResiSense/ResiSense.github.io/commit/18340d44ea3089c0bff0b9228d16a6afa8ef9cc8"
+      "id": "851ac883d40b5315aef873cdfb1e600a4376835e",
+      "message": "Refactor buildFile function in siteBuilder.ts for improved readability and maintainability",
+      "timestamp": "2024-07-20T19:09:32+08:00",
+      "tree_id": "891943dfedd3514069da36a51582a3e93968127a",
+      "url": "https://github.com/ResiSense/ResiSense.github.io/commit/851ac883d40b5315aef873cdfb1e600a4376835e"
     },
     "pusher": {
       "email": "ccheukka@gmail.com",
@@ -68,6 +86,6 @@
   "ref_type": "branch",
   "secret_source": "Actions",
   "workflow_ref": "ResiSense/ResiSense.github.io/.github/workflows/full-ci-pipeline.yaml@refs/heads/main",
-  "workflow_sha": "18340d44ea3089c0bff0b9228d16a6afa8ef9cc8",
+  "workflow_sha": "851ac883d40b5315aef873cdfb1e600a4376835e",
   "workspace": "/home/runner/work/ResiSense.github.io/ResiSense.github.io"
 }
