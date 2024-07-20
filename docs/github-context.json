@@ -1,11 +1,11 @@
 {
   "job": "build",
   "ref": "refs/heads/main",
-  "sha": "b063c1676d8bdb76e26ad88e80cc458877bc8b34",
+  "sha": "918ffdec9e74a1b0998cee5b5574c8e4c13adafa",
   "repository": "ResiSense/ResiSense.github.io",
   "repository_Url": null,
-  "run_id": "10019313094",
-  "run_number": "56",
+  "run_id": "10019342120",
+  "run_number": "57",
   "run_attempt": "1",
   "artifact_cache_size_limit": "10",
   "actor": "CCheukKa",
@@ -13,8 +13,8 @@
   "workflow": "Full CI Pipeline",
   "event_name": "push",
   "event": {
-    "after": "b063c1676d8bdb76e26ad88e80cc458877bc8b34",
-    "before": "166446d95219359e219eddcfac6e6a1846c7e6af",
+    "after": "918ffdec9e74a1b0998cee5b5574c8e4c13adafa",
+    "before": "87ad65e9f53d03f3215d54ee9b680385c043408a",
     "commits": [
       {
         "author": {
@@ -28,14 +28,14 @@
           "username": "CCheukKa"
         },
         "distinct": true,
-        "id": "b063c1676d8bdb76e26ad88e80cc458877bc8b34",
-        "message": "remove border radius for logos",
-        "timestamp": "2024-07-20T17:49:20+08:00",
-        "tree_id": "33829572a7a73d5b8f0c3b2e54933337deabd1bb",
-        "url": "https://github.com/ResiSense/ResiSense.github.io/commit/b063c1676d8bdb76e26ad88e80cc458877bc8b34"
+        "id": "918ffdec9e74a1b0998cee5b5574c8e4c13adafa",
+        "message": "repack HKLSS logo",
+        "timestamp": "2024-07-20T17:56:30+08:00",
+        "tree_id": "bd8649de46ae42cefff2a293abfd816deed2e3e6",
+        "url": "https://github.com/ResiSense/ResiSense.github.io/commit/918ffdec9e74a1b0998cee5b5574c8e4c13adafa"
       }
     ],
-    "compare": "https://github.com/ResiSense/ResiSense.github.io/compare/166446d95219...b063c1676d8b",
+    "compare": "https://github.com/ResiSense/ResiSense.github.io/compare/87ad65e9f53d...918ffdec9e74",
     "created": false,
     "deleted": false,
     "forced": false,
@@ -51,11 +51,11 @@
         "username": "CCheukKa"
       },
       "distinct": true,
-      "id": "b063c1676d8bdb76e26ad88e80cc458877bc8b34",
-      "message": "remove border radius for logos",
-      "timestamp": "2024-07-20T17:49:20+08:00",
-      "tree_id": "33829572a7a73d5b8f0c3b2e54933337deabd1bb",
-      "url": "https://github.com/ResiSense/ResiSense.github.io/commit/b063c1676d8bdb76e26ad88e80cc458877bc8b34"
+      "id": "918ffdec9e74a1b0998cee5b5574c8e4c13adafa",
+      "message": "repack HKLSS logo",
+      "timestamp": "2024-07-20T17:56:30+08:00",
+      "tree_id": "bd8649de46ae42cefff2a293abfd816deed2e3e6",
+      "url": "https://github.com/ResiSense/ResiSense.github.io/commit/918ffdec9e74a1b0998cee5b5574c8e4c13adafa"
     },
     "pusher": {
       "email": "ccheukka@gmail.com",
@@ -68,6 +68,6 @@
   "ref_type": "branch",
   "secret_source": "Actions",
   "workflow_ref": "ResiSense/ResiSense.github.io/.github/workflows/full-ci-pipeline.yaml@refs/heads/main",
-  "workflow_sha": "b063c1676d8bdb76e26ad88e80cc458877bc8b34",
+  "workflow_sha": "918ffdec9e74a1b0998cee5b5574c8e4c13adafa",
   "workspace": "/home/runner/work/ResiSense.github.io/ResiSense.github.io"
 }
