@@ -95,12 +95,8 @@ This bare-bones wiki contains information for developers working on the site. If
 > 7. Run `node --version` to check that Node.js has been installed correctly, you should see the version number
 
 ## Install recommended VSCode extensions  
-> It is recommended to install the following extensions for VSCode:  
-> - `GitHub.vscode-pull-request-github` for easier pull request management
-> - `ritwickdey.LiveServer` for live previewing of the site
-> 
 > 1. Open the extensions sidebar with `Ctrl` + `Shift` + `X`  
-> 2. Search for the extension ID and click install  
+> 2. Search for `@recommended` and install all the recommended extensions  
 
 ## Clone the repository  
 > 1. In file explorer, create a new folder for the repository and navigate into it
