@@ -1,4 +1,5 @@
-# Table of contents <!-- omit in toc -->
+<!-- omit in toc -->
+# Table of contents
 - [❓Getting started](#getting-started)
   - [Install VSCode](#install-vscode)
   - [Install Git](#install-git)
@@ -41,8 +42,8 @@
   - [Template painting](#template-painting)
   - [TS includes](#ts-includes)
 
-
-# 🔍Developer Wiki <!-- omit in toc -->
+<!-- omit in toc -->
+# 🔍Developer Wiki
 This bare-bones wiki contains information for developers working on the site. If you are not sure how something works, please don't hesitate to ask!  
 
 > [!TIP]
