@@ -27,7 +27,7 @@
         "chokidar": "^3.6.0",
         "fs-extra": "^11.2.0",
         "glob": "^11.0.0",
-        "igem-upload-api": "^1.2.3",
+        "igem-upload-api": "^1.2.4",
         "jsdom": "^24.1.0",
         "marked": "^13.0.2"
     },
