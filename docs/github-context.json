@@ -1,11 +1,11 @@
 {
     "job": "build",
     "ref": "refs/heads/main",
-    "sha": "33dc439ed924e4297ff0c4a50066fcf26b7fecfc",
+    "sha": "6e36a403a9627790fa0edac35bd936d6636ed931",
     "repository": "ResiSense/ResiSense.github.io",
     "repository_Url": null,
-    "run_id": "10026765050",
-    "run_number": "64",
+    "run_id": "10026872638",
+    "run_number": "65",
     "run_attempt": "1",
     "artifact_cache_size_limit": "10",
     "actor": "CCheukKa",
@@ -13,8 +13,8 @@
     "workflow": "Full CI Pipeline",
     "event_name": "push",
     "event": {
-        "after": "33dc439ed924e4297ff0c4a50066fcf26b7fecfc",
-        "before": "9f49f6a7182658586085dd4788221cb2f164b6fa",
+        "after": "6e36a403a9627790fa0edac35bd936d6636ed931",
+        "before": "8751ce2bfb0aa5226e99e011a44dd13b2e59b440",
         "commits": [
             {
                 "author": {
@@ -28,17 +28,17 @@
                     "username": "CCheukKa"
                 },
                 "distinct": true,
-                "id": "33dc439ed924e4297ff0c4a50066fcf26b7fecfc",
-                "message": "Add extensions.json for easier installation",
-                "timestamp": "2024-07-21T16:05:20+08:00",
-                "tree_id": "ceeb9d334f1ea3984b164841e3d77469d81b6559",
-                "url": "https://github.com/ResiSense/ResiSense.github.io/commit/33dc439ed924e4297ff0c4a50066fcf26b7fecfc"
+                "id": "6e36a403a9627790fa0edac35bd936d6636ed931",
+                "message": "staggered omit tags",
+                "timestamp": "2024-07-21T16:21:49+08:00",
+                "tree_id": "aa375d465569e5406b14b3497ac45911524cb092",
+                "url": "https://github.com/ResiSense/ResiSense.github.io/commit/6e36a403a9627790fa0edac35bd936d6636ed931"
             }
         ],
-        "compare": "https://github.com/ResiSense/ResiSense.github.io/compare/9f49f6a71826...33dc439ed924",
+        "compare": "https://github.com/ResiSense/ResiSense.github.io/compare/8751ce2bfb0a...6e36a403a962",
         "created": false,
         "deleted": false,
-        "forced": true,
+        "forced": false,
         "head_commit": {
             "author": {
                 "email": "ccheukka@gmail.com",
@@ -51,11 +51,11 @@
                 "username": "CCheukKa"
             },
             "distinct": true,
-            "id": "33dc439ed924e4297ff0c4a50066fcf26b7fecfc",
-            "message": "Add extensions.json for easier installation",
-            "timestamp": "2024-07-21T16:05:20+08:00",
-            "tree_id": "ceeb9d334f1ea3984b164841e3d77469d81b6559",
-            "url": "https://github.com/ResiSense/ResiSense.github.io/commit/33dc439ed924e4297ff0c4a50066fcf26b7fecfc"
+            "id": "6e36a403a9627790fa0edac35bd936d6636ed931",
+            "message": "staggered omit tags",
+            "timestamp": "2024-07-21T16:21:49+08:00",
+            "tree_id": "aa375d465569e5406b14b3497ac45911524cb092",
+            "url": "https://github.com/ResiSense/ResiSense.github.io/commit/6e36a403a9627790fa0edac35bd936d6636ed931"
         },
         "pusher": {
             "email": "ccheukka@gmail.com",
@@ -68,6 +68,6 @@
     "ref_type": "branch",
     "secret_source": "Actions",
     "workflow_ref": "ResiSense/ResiSense.github.io/.github/workflows/full-ci-pipeline.yaml@refs/heads/main",
-    "workflow_sha": "33dc439ed924e4297ff0c4a50066fcf26b7fecfc",
+    "workflow_sha": "6e36a403a9627790fa0edac35bd936d6636ed931",
     "workspace": "/home/runner/work/ResiSense.github.io/ResiSense.github.io"
 }
