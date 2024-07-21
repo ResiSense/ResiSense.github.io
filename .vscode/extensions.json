@@ -1,6 +1,3 @@
 {
-    "recommendations": [
-        "GitHub.vscode-pull-request-github",
-        "ritwickdey.LiveServer"
-    ]
+    "recommendations": ["GitHub.vscode-pull-request-github", "ritwickdey.LiveServer"]
 }

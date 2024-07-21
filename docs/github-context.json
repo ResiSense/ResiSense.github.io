@@ -1,11 +1,11 @@
 {
     "job": "build",
     "ref": "refs/heads/main",
-    "sha": "4870af2e447a4a64c1edc5f2df1cbc35a521ebb0",
+    "sha": "33dc439ed924e4297ff0c4a50066fcf26b7fecfc",
     "repository": "ResiSense/ResiSense.github.io",
     "repository_Url": null,
-    "run_id": "10020423157",
-    "run_number": "62",
+    "run_id": "10026765050",
+    "run_number": "64",
     "run_attempt": "1",
     "artifact_cache_size_limit": "10",
     "actor": "CCheukKa",
@@ -13,8 +13,8 @@
     "workflow": "Full CI Pipeline",
     "event_name": "push",
     "event": {
-        "after": "4870af2e447a4a64c1edc5f2df1cbc35a521ebb0",
-        "before": "10e44ab6481fcfd2c2e1a30f51030b4580a7cac4",
+        "after": "33dc439ed924e4297ff0c4a50066fcf26b7fecfc",
+        "before": "9f49f6a7182658586085dd4788221cb2f164b6fa",
         "commits": [
             {
                 "author": {
@@ -28,35 +28,17 @@
                     "username": "CCheukKa"
                 },
                 "distinct": true,
-                "id": "4959b7702e96553ceaf4777e9f673006b724d843",
-                "message": "minor formatting",
-                "timestamp": "2024-07-20T20:31:58+08:00",
-                "tree_id": "8339bfe3cd97fcc837f434b1cfb4e493f4937ded",
-                "url": "https://github.com/ResiSense/ResiSense.github.io/commit/4959b7702e96553ceaf4777e9f673006b724d843"
-            },
-            {
-                "author": {
-                    "email": "ccheukka@gmail.com",
-                    "name": "CCheukKa",
-                    "username": "CCheukKa"
-                },
-                "committer": {
-                    "email": "ccheukka@gmail.com",
-                    "name": "CCheukKa",
-                    "username": "CCheukKa"
-                },
-                "distinct": true,
-                "id": "4870af2e447a4a64c1edc5f2df1cbc35a521ebb0",
-                "message": "add prettier to CI",
-                "timestamp": "2024-07-20T21:01:18+08:00",
-                "tree_id": "68373a8e4779732910e126d54c3d616d35df38f8",
-                "url": "https://github.com/ResiSense/ResiSense.github.io/commit/4870af2e447a4a64c1edc5f2df1cbc35a521ebb0"
+                "id": "33dc439ed924e4297ff0c4a50066fcf26b7fecfc",
+                "message": "Add extensions.json for easier installation",
+                "timestamp": "2024-07-21T16:05:20+08:00",
+                "tree_id": "ceeb9d334f1ea3984b164841e3d77469d81b6559",
+                "url": "https://github.com/ResiSense/ResiSense.github.io/commit/33dc439ed924e4297ff0c4a50066fcf26b7fecfc"
             }
         ],
-        "compare": "https://github.com/ResiSense/ResiSense.github.io/compare/10e44ab6481f...4870af2e447a",
+        "compare": "https://github.com/ResiSense/ResiSense.github.io/compare/9f49f6a71826...33dc439ed924",
         "created": false,
         "deleted": false,
-        "forced": false,
+        "forced": true,
         "head_commit": {
             "author": {
                 "email": "ccheukka@gmail.com",
@@ -69,11 +51,11 @@
                 "username": "CCheukKa"
             },
             "distinct": true,
-            "id": "4870af2e447a4a64c1edc5f2df1cbc35a521ebb0",
-            "message": "add prettier to CI",
-            "timestamp": "2024-07-20T21:01:18+08:00",
-            "tree_id": "68373a8e4779732910e126d54c3d616d35df38f8",
-            "url": "https://github.com/ResiSense/ResiSense.github.io/commit/4870af2e447a4a64c1edc5f2df1cbc35a521ebb0"
+            "id": "33dc439ed924e4297ff0c4a50066fcf26b7fecfc",
+            "message": "Add extensions.json for easier installation",
+            "timestamp": "2024-07-21T16:05:20+08:00",
+            "tree_id": "ceeb9d334f1ea3984b164841e3d77469d81b6559",
+            "url": "https://github.com/ResiSense/ResiSense.github.io/commit/33dc439ed924e4297ff0c4a50066fcf26b7fecfc"
         },
         "pusher": {
             "email": "ccheukka@gmail.com",
@@ -86,6 +68,6 @@
     "ref_type": "branch",
     "secret_source": "Actions",
     "workflow_ref": "ResiSense/ResiSense.github.io/.github/workflows/full-ci-pipeline.yaml@refs/heads/main",
-    "workflow_sha": "4870af2e447a4a64c1edc5f2df1cbc35a521ebb0",
+    "workflow_sha": "33dc439ed924e4297ff0c4a50066fcf26b7fecfc",
     "workspace": "/home/runner/work/ResiSense.github.io/ResiSense.github.io"
 }
