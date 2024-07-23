@@ -21,17 +21,17 @@ The following organizations have provided financial support to the project.
 [![Opentrons Logo](/assets/logos/opentrons%20logo.svg)](https://opentrons.com)  
 [Opentrons](https://opentrons.com) has kindly provided us with credits worth [25000USD](https://www.google.com/search?q=25000USD), with which we acquired a [liquid handling robot](https://opentrons.com/products/ot-2-robot) and various accompanying equipment for our experiments.
 
-## Hong Kong Life Sciences Society
-[![HKLSS Logo](/assets/logos/hklss%20logo.svg)](https://www.hklss.org)  
-The [Hong Kong Life Sciences Society](https://www.hklss.org) has kindly provided us with [5000HKD](https://www.google.com/search?q=5000HKD) to support our project.  
+## Integrated DNA Technologies
+[![IDT Logo](/assets/logos/idt%20logo.svg)](https://www.idtdna.com)
+[Integrated DNA Technologies](https://www.idtdna.com) has kindly provided us with credits worth [3400USD](https://www.google.com/search?q=3400USD), with which we acquired primers and gene fragments for our experiments.  
 
 ## New England Biolabs
 [![NEB Logo](/assets/logos/neb%20logo.svg)](https://www.neb.com)  
 [New England Biolabs](https://www.neb.com) has kindly provided us with reagents totalling [880EUR](https://www.google.com/search?q=880EUR) for our experiments.  
 
-## Integrated DNA Technologies
-[![IDT Logo](/assets/logos/idt%20logo.svg)](https://www.idtdna.com)
-[Integrated DNA Technologies](https://www.idtdna.com) has kindly provided us with credits worth [3400USD](https://www.google.com/search?q=3400USD), with which we acquired primers and gene fragments for our experiments.  
+## Hong Kong Life Sciences Society
+[![HKLSS Logo](/assets/logos/hklss%20logo.svg)](https://www.hklss.org)  
+The [Hong Kong Life Sciences Society](https://www.hklss.org) has kindly provided us with [5000HKD](https://www.google.com/search?q=5000HKD) to support our project.  
 
 # Collaborators
 
