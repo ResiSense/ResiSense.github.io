@@ -1,11 +1,11 @@
 {
     "job": "build",
     "ref": "refs/heads/main",
-    "sha": "c526f22aa396d91d3cebd671c04ab4ce9ecfa3e7",
+    "sha": "dd296589aaf051de84a6dd145107934bf4cf272b",
     "repository": "ResiSense/ResiSense.github.io",
     "repository_Url": null,
-    "run_id": "10053162781",
-    "run_number": "68",
+    "run_id": "10053229804",
+    "run_number": "69",
     "run_attempt": "1",
     "artifact_cache_size_limit": "10",
     "actor": "CCheukKa",
@@ -13,8 +13,8 @@
     "workflow": "Full CI Pipeline",
     "event_name": "push",
     "event": {
-        "after": "c526f22aa396d91d3cebd671c04ab4ce9ecfa3e7",
-        "before": "551dfe59acf0b7ce8cc8af4d9784f76e224f68ea",
+        "after": "dd296589aaf051de84a6dd145107934bf4cf272b",
+        "before": "d57fe724c9a74beef42b5059a8857d8bbcd0951c",
         "commits": [
             {
                 "author": {
@@ -28,32 +28,14 @@
                     "username": "CCheukKa"
                 },
                 "distinct": true,
-                "id": "fa4c9d87a563e4e1e0afbf0e9975d8ed4141b296",
-                "message": "add monetary values to sponsorships",
-                "timestamp": "2024-07-23T13:16:41+08:00",
-                "tree_id": "afe0640084c23065a99eea3075c4d55aa7c449d8",
-                "url": "https://github.com/ResiSense/ResiSense.github.io/commit/fa4c9d87a563e4e1e0afbf0e9975d8ed4141b296"
-            },
-            {
-                "author": {
-                    "email": "ccheukka@gmail.com",
-                    "name": "CCheukKa",
-                    "username": "CCheukKa"
-                },
-                "committer": {
-                    "email": "ccheukka@gmail.com",
-                    "name": "CCheukKa",
-                    "username": "CCheukKa"
-                },
-                "distinct": true,
-                "id": "c526f22aa396d91d3cebd671c04ab4ce9ecfa3e7",
-                "message": "reorder sponsorships by monetary amounts",
-                "timestamp": "2024-07-23T13:17:46+08:00",
-                "tree_id": "ec4eb5c9e9c21b2212f7fa390cd3c20cfc92b949",
-                "url": "https://github.com/ResiSense/ResiSense.github.io/commit/c526f22aa396d91d3cebd671c04ab4ce9ecfa3e7"
+                "id": "dd296589aaf051de84a6dd145107934bf4cf272b",
+                "message": "update spacing",
+                "timestamp": "2024-07-23T13:24:22+08:00",
+                "tree_id": "22e6044282f8f5af0cbd88fcd1baed2e0f725b6b",
+                "url": "https://github.com/ResiSense/ResiSense.github.io/commit/dd296589aaf051de84a6dd145107934bf4cf272b"
             }
         ],
-        "compare": "https://github.com/ResiSense/ResiSense.github.io/compare/551dfe59acf0...c526f22aa396",
+        "compare": "https://github.com/ResiSense/ResiSense.github.io/compare/d57fe724c9a7...dd296589aaf0",
         "created": false,
         "deleted": false,
         "forced": false,
@@ -69,11 +51,11 @@
                 "username": "CCheukKa"
             },
             "distinct": true,
-            "id": "c526f22aa396d91d3cebd671c04ab4ce9ecfa3e7",
-            "message": "reorder sponsorships by monetary amounts",
-            "timestamp": "2024-07-23T13:17:46+08:00",
-            "tree_id": "ec4eb5c9e9c21b2212f7fa390cd3c20cfc92b949",
-            "url": "https://github.com/ResiSense/ResiSense.github.io/commit/c526f22aa396d91d3cebd671c04ab4ce9ecfa3e7"
+            "id": "dd296589aaf051de84a6dd145107934bf4cf272b",
+            "message": "update spacing",
+            "timestamp": "2024-07-23T13:24:22+08:00",
+            "tree_id": "22e6044282f8f5af0cbd88fcd1baed2e0f725b6b",
+            "url": "https://github.com/ResiSense/ResiSense.github.io/commit/dd296589aaf051de84a6dd145107934bf4cf272b"
         },
         "pusher": {
             "email": "ccheukka@gmail.com",
@@ -86,6 +68,6 @@
     "ref_type": "branch",
     "secret_source": "Actions",
     "workflow_ref": "ResiSense/ResiSense.github.io/.github/workflows/full-ci-pipeline.yaml@refs/heads/main",
-    "workflow_sha": "c526f22aa396d91d3cebd671c04ab4ce9ecfa3e7",
+    "workflow_sha": "dd296589aaf051de84a6dd145107934bf4cf272b",
     "workspace": "/home/runner/work/ResiSense.github.io/ResiSense.github.io"
 }
