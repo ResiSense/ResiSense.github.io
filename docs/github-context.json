@@ -1,11 +1,11 @@
 {
     "job": "build",
     "ref": "refs/heads/main",
-    "sha": "48f805ccf9fac2c9c0b105d55397f24ccad80f34",
+    "sha": "c526f22aa396d91d3cebd671c04ab4ce9ecfa3e7",
     "repository": "ResiSense/ResiSense.github.io",
     "repository_Url": null,
-    "run_id": "10027073329",
-    "run_number": "67",
+    "run_id": "10053162781",
+    "run_number": "68",
     "run_attempt": "1",
     "artifact_cache_size_limit": "10",
     "actor": "CCheukKa",
@@ -13,8 +13,8 @@
     "workflow": "Full CI Pipeline",
     "event_name": "push",
     "event": {
-        "after": "48f805ccf9fac2c9c0b105d55397f24ccad80f34",
-        "before": "508d63f4d4f8d7e2c182c7ef9665e690b1a0f654",
+        "after": "c526f22aa396d91d3cebd671c04ab4ce9ecfa3e7",
+        "before": "551dfe59acf0b7ce8cc8af4d9784f76e224f68ea",
         "commits": [
             {
                 "author": {
@@ -28,14 +28,32 @@
                     "username": "CCheukKa"
                 },
                 "distinct": true,
-                "id": "48f805ccf9fac2c9c0b105d55397f24ccad80f34",
-                "message": "chore: Update igem-upload-api dependency to version 1.2.4",
-                "timestamp": "2024-07-21T16:58:00+08:00",
-                "tree_id": "2437a46655e57959c063b79aee5aa7947767b561",
-                "url": "https://github.com/ResiSense/ResiSense.github.io/commit/48f805ccf9fac2c9c0b105d55397f24ccad80f34"
+                "id": "fa4c9d87a563e4e1e0afbf0e9975d8ed4141b296",
+                "message": "add monetary values to sponsorships",
+                "timestamp": "2024-07-23T13:16:41+08:00",
+                "tree_id": "afe0640084c23065a99eea3075c4d55aa7c449d8",
+                "url": "https://github.com/ResiSense/ResiSense.github.io/commit/fa4c9d87a563e4e1e0afbf0e9975d8ed4141b296"
+            },
+            {
+                "author": {
+                    "email": "ccheukka@gmail.com",
+                    "name": "CCheukKa",
+                    "username": "CCheukKa"
+                },
+                "committer": {
+                    "email": "ccheukka@gmail.com",
+                    "name": "CCheukKa",
+                    "username": "CCheukKa"
+                },
+                "distinct": true,
+                "id": "c526f22aa396d91d3cebd671c04ab4ce9ecfa3e7",
+                "message": "reorder sponsorships by monetary amounts",
+                "timestamp": "2024-07-23T13:17:46+08:00",
+                "tree_id": "ec4eb5c9e9c21b2212f7fa390cd3c20cfc92b949",
+                "url": "https://github.com/ResiSense/ResiSense.github.io/commit/c526f22aa396d91d3cebd671c04ab4ce9ecfa3e7"
             }
         ],
-        "compare": "https://github.com/ResiSense/ResiSense.github.io/compare/508d63f4d4f8...48f805ccf9fa",
+        "compare": "https://github.com/ResiSense/ResiSense.github.io/compare/551dfe59acf0...c526f22aa396",
         "created": false,
         "deleted": false,
         "forced": false,
@@ -51,11 +69,11 @@
                 "username": "CCheukKa"
             },
             "distinct": true,
-            "id": "48f805ccf9fac2c9c0b105d55397f24ccad80f34",
-            "message": "chore: Update igem-upload-api dependency to version 1.2.4",
-            "timestamp": "2024-07-21T16:58:00+08:00",
-            "tree_id": "2437a46655e57959c063b79aee5aa7947767b561",
-            "url": "https://github.com/ResiSense/ResiSense.github.io/commit/48f805ccf9fac2c9c0b105d55397f24ccad80f34"
+            "id": "c526f22aa396d91d3cebd671c04ab4ce9ecfa3e7",
+            "message": "reorder sponsorships by monetary amounts",
+            "timestamp": "2024-07-23T13:17:46+08:00",
+            "tree_id": "ec4eb5c9e9c21b2212f7fa390cd3c20cfc92b949",
+            "url": "https://github.com/ResiSense/ResiSense.github.io/commit/c526f22aa396d91d3cebd671c04ab4ce9ecfa3e7"
         },
         "pusher": {
             "email": "ccheukka@gmail.com",
@@ -68,6 +86,6 @@
     "ref_type": "branch",
     "secret_source": "Actions",
     "workflow_ref": "ResiSense/ResiSense.github.io/.github/workflows/full-ci-pipeline.yaml@refs/heads/main",
-    "workflow_sha": "48f805ccf9fac2c9c0b105d55397f24ccad80f34",
+    "workflow_sha": "c526f22aa396d91d3cebd671c04ab4ce9ecfa3e7",
     "workspace": "/home/runner/work/ResiSense.github.io/ResiSense.github.io"
 }
