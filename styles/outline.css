@@ -4,90 +4,116 @@
     }
 }
 
-nav {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
-    border: 2px dashed var(--pale-green);
-    border-radius: 1rem;
-    padding: 0.8rem 0.5rem;
-    --line-height: 1.2rem;
+painted-outline {
+    width: 20%;
 
-    &>.outline {
-        --list-indentation: 0.5rem;
-        --border-left-offset: 1rem;
+    &>nav {
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
+        justify-content: flex-end;
+        border: 2px dashed var(--pale-green);
+        border-radius: 1rem;
+        padding: 0.8rem 0.5rem;
+        --line-height: 1.2rem;
 
-        ul {
-            padding: 0;
-            margin-left: var(--list-indentation);
-            line-height: var(--line-height);
-        }
+        &>.outline {
+            --list-indentation: 0.5rem;
+            --border-left-offset: 1rem;
+            display: flex;
+            flex-direction: column;
 
-        &>#outline-tree {
-            margin: 0;
-            padding: 0;
-
-            &>li::before,
-            &>li::after {
-                display: none;
+            ul {
+                padding: 0;
+                margin-left: var(--list-indentation);
+                line-height: var(--line-height);
             }
 
-            li {
-                list-style-type: disc;
-                list-style-position: inside;
-                margin: 0 0 0 10px;
-                position: relative;
+            &>#outline-tree {
+                margin: 0;
+                padding: 0;
 
-                &:before {
-                    content: "";
-                    position: absolute;
-                    top: -5px;
-                    left: calc(var(--border-left-offset) * -1);
-                    border-left: 2px solid var(--pale-green);
-                    border-bottom: 2px solid var(--pale-green);
-                    width: calc(var(--list-indentation) + var(--border-left-offset) / 4);
-                    height: 12px;
-                    border-bottom-left-radius: 5px;
-                }
-
-                &:after {
-                    content: "";
-                    position: absolute;
-                    top: 5px;
-                    left: calc(var(--border-left-offset) * -1);
-                    border-left: 2px solid var(--pale-green);
-                    width: var(--list-indentation);
-                    height: 100%;
-                }
-
-                &:last-child:after {
+                &>li::before,
+                &>li::after {
                     display: none;
                 }
 
-                &::marker {
-                    color: var(--light-green);
-                }
-
-                &>a {
-                    color: var(--light-green);
+                li {
+                    --line-width: 0.1rem;
+                    list-style-type: disc;
+                    list-style-position: inside;
+                    margin: 0 0 0 10px;
                     position: relative;
-                    left: -0.5rem;
                     white-space: nowrap;
-                    font-size: 1rem;
+
+                    &::before {
+                        content: "";
+                        position: absolute;
+                        top: -5px;
+                        left: calc(var(--border-left-offset) * -1);
+                        border-left: var(--line-width) solid var(--pale-green);
+                        border-bottom: var(--line-width) solid var(--pale-green);
+                        width: calc(var(--list-indentation) + var(--border-left-offset) / 4);
+                        height: 12px;
+                        border-bottom-left-radius: 5px;
+                    }
+
+                    &::after {
+                        content: "";
+                        position: absolute;
+                        top: 5px;
+                        left: calc(var(--border-left-offset) * -1);
+                        border-left: var(--line-width) solid var(--pale-green);
+                        width: var(--list-indentation);
+                        height: 100%;
+                    }
+
+                    &:last-child::after {
+                        display: none;
+                    }
+
+                    &::marker {
+                        color: var(--light-green);
+                        color: transparent;
+                    }
+
+                    &>a {
+                        color: var(--light-green);
+                        position: relative;
+                        left: -0.5rem;
+                        font-size: 1rem;
+                        padding-right: 1rem;
+                        text-wrap: wrap;
+                        display: inline-block;
+
+                        &::before {
+                            content: '•';
+                            position: absolute;
+                            font-size: 2rem;
+                            left: -1rem;
+                        }
+
+                        &:has(+ul>li)::after {
+                            content: '';
+                            position: absolute;
+                            /* TODO: line this up with JS? */
+                            left: calc(var(--border-left-offset) * -1 + 3px);
+                            bottom: 0;
+                            height: calc(100% - 0.92rem);
+                            border-left: var(--line-width) solid var(--pale-green);
+                        }
+                    }
                 }
             }
         }
-    }
 
-    &>#outline-progress-pointer {
-        width: 0;
-        height: 0;
-        position: relative;
-        left: 2px;
-        line-height: var(--line-height);
-        z-index: 1;
-        pointer-events: none;
+        &>#outline-progress-pointer {
+            width: 0;
+            height: 0;
+            position: relative;
+            left: 2px;
+            line-height: var(--line-height);
+            z-index: 1;
+            pointer-events: none;
+        }
     }
 }
