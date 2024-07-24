@@ -95,8 +95,7 @@ painted-outline {
                         &:has(+ul>li)::after {
                             content: '';
                             position: absolute;
-                            /* TODO: line this up with JS? */
-                            left: calc(var(--border-left-offset) * -1 + 3px);
+                            left: calc(var(--border-left-offset) * -1 + 0.22rem);
                             bottom: 0;
                             height: calc(100% - 0.92rem);
                             border-left: var(--line-width) solid var(--pale-green);
