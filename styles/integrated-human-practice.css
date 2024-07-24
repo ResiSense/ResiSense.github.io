@@ -69,7 +69,7 @@ painted-content {
 
             &>h3 {
                 position: initial;
-                background: var(--human-card-background);
+                background: transparent;
                 box-shadow: none;
             }
 
