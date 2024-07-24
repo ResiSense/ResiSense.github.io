@@ -5,7 +5,7 @@
 }
 
 painted-outline {
-    width: 20%;
+    max-width: 20%;
 
     &>nav {
         display: flex;
