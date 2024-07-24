@@ -1,11 +1,11 @@
 {
     "job": "build",
     "ref": "refs/heads/main",
-    "sha": "05fedee74996b44d30377f3e76d069641e68b4d6",
+    "sha": "a6f1da0f2d70a4a4cc3df3d01ab2118c382a9751",
     "repository": "ResiSense/ResiSense.github.io",
     "repository_Url": null,
-    "run_id": "10079470784",
-    "run_number": "72",
+    "run_id": "10079551043",
+    "run_number": "73",
     "run_attempt": "1",
     "artifact_cache_size_limit": "10",
     "actor": "CCheukKa",
@@ -13,8 +13,8 @@
     "workflow": "Full CI Pipeline",
     "event_name": "push",
     "event": {
-        "after": "05fedee74996b44d30377f3e76d069641e68b4d6",
-        "before": "3645d824681a245b0db41569d84ea819be9f5482",
+        "after": "a6f1da0f2d70a4a4cc3df3d01ab2118c382a9751",
+        "before": "dc90c982d4f0a98c88742d344183ead841187c81",
         "commits": [
             {
                 "author": {
@@ -28,14 +28,14 @@
                     "username": "CCheukKa"
                 },
                 "distinct": true,
-                "id": "05fedee74996b44d30377f3e76d069641e68b4d6",
-                "message": "add google custom search engine verification tag",
-                "timestamp": "2024-07-24T23:22:19+08:00",
-                "tree_id": "d2e607aa1547d1b69743435040362ab222e81944",
-                "url": "https://github.com/ResiSense/ResiSense.github.io/commit/05fedee74996b44d30377f3e76d069641e68b4d6"
+                "id": "a6f1da0f2d70a4a4cc3df3d01ab2118c382a9751",
+                "message": "Revert \"add google custom search engine verification tag\"\n\nThis reverts commit 05fedee74996b44d30377f3e76d069641e68b4d6.",
+                "timestamp": "2024-07-24T23:27:14+08:00",
+                "tree_id": "f222f063545aa89d2d113e39e7c6c1e7c36abca8",
+                "url": "https://github.com/ResiSense/ResiSense.github.io/commit/a6f1da0f2d70a4a4cc3df3d01ab2118c382a9751"
             }
         ],
-        "compare": "https://github.com/ResiSense/ResiSense.github.io/compare/3645d824681a...05fedee74996",
+        "compare": "https://github.com/ResiSense/ResiSense.github.io/compare/dc90c982d4f0...a6f1da0f2d70",
         "created": false,
         "deleted": false,
         "forced": false,
@@ -51,11 +51,11 @@
                 "username": "CCheukKa"
             },
             "distinct": true,
-            "id": "05fedee74996b44d30377f3e76d069641e68b4d6",
-            "message": "add google custom search engine verification tag",
-            "timestamp": "2024-07-24T23:22:19+08:00",
-            "tree_id": "d2e607aa1547d1b69743435040362ab222e81944",
-            "url": "https://github.com/ResiSense/ResiSense.github.io/commit/05fedee74996b44d30377f3e76d069641e68b4d6"
+            "id": "a6f1da0f2d70a4a4cc3df3d01ab2118c382a9751",
+            "message": "Revert \"add google custom search engine verification tag\"\n\nThis reverts commit 05fedee74996b44d30377f3e76d069641e68b4d6.",
+            "timestamp": "2024-07-24T23:27:14+08:00",
+            "tree_id": "f222f063545aa89d2d113e39e7c6c1e7c36abca8",
+            "url": "https://github.com/ResiSense/ResiSense.github.io/commit/a6f1da0f2d70a4a4cc3df3d01ab2118c382a9751"
         },
         "pusher": {
             "email": "ccheukka@gmail.com",
@@ -68,6 +68,6 @@
     "ref_type": "branch",
     "secret_source": "Actions",
     "workflow_ref": "ResiSense/ResiSense.github.io/.github/workflows/full-ci-pipeline.yaml@refs/heads/main",
-    "workflow_sha": "05fedee74996b44d30377f3e76d069641e68b4d6",
+    "workflow_sha": "a6f1da0f2d70a4a4cc3df3d01ab2118c382a9751",
     "workspace": "/home/runner/work/ResiSense.github.io/ResiSense.github.io"
 }
