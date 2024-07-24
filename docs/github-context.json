@@ -1,11 +1,11 @@
 {
     "job": "build",
     "ref": "refs/heads/main",
-    "sha": "db597c822be515521ad8127886515d7265919904",
+    "sha": "e88c94966677757b5c126c324916e07cab33cb43",
     "repository": "ResiSense/ResiSense.github.io",
     "repository_Url": null,
-    "run_id": "10075345525",
-    "run_number": "70",
+    "run_id": "10079290287",
+    "run_number": "71",
     "run_attempt": "1",
     "artifact_cache_size_limit": "10",
     "actor": "CCheukKa",
@@ -13,8 +13,8 @@
     "workflow": "Full CI Pipeline",
     "event_name": "push",
     "event": {
-        "after": "db597c822be515521ad8127886515d7265919904",
-        "before": "4767e5c56ccf69a6645ba0aa7f088a4867a7c783",
+        "after": "e88c94966677757b5c126c324916e07cab33cb43",
+        "before": "67f431db4833e1fe57506984d8f361b9a86b2ed1",
         "commits": [
             {
                 "author": {
@@ -28,68 +28,14 @@
                     "username": "CCheukKa"
                 },
                 "distinct": true,
-                "id": "686733e590774f598ceaf91c9e780e7b54c20ab2",
-                "message": "allow outline titles to wrap",
-                "timestamp": "2024-07-24T00:31:50+08:00",
-                "tree_id": "901c2b3ce2ac940bc4676b1524ede13f370d5632",
-                "url": "https://github.com/ResiSense/ResiSense.github.io/commit/686733e590774f598ceaf91c9e780e7b54c20ab2"
-            },
-            {
-                "author": {
-                    "email": "ccheukka@gmail.com",
-                    "name": "CCheukKa",
-                    "username": "CCheukKa"
-                },
-                "committer": {
-                    "email": "ccheukka@gmail.com",
-                    "name": "CCheukKa",
-                    "username": "CCheukKa"
-                },
-                "distinct": true,
-                "id": "a0ba7099fd9916fc344683bd7a93c84134945a2d",
-                "message": "style: update background colour for human card title",
-                "timestamp": "2024-07-24T18:08:39+08:00",
-                "tree_id": "8f7ef753343cf84187245abd23a5e682dbc11023",
-                "url": "https://github.com/ResiSense/ResiSense.github.io/commit/a0ba7099fd9916fc344683bd7a93c84134945a2d"
-            },
-            {
-                "author": {
-                    "email": "ccheukka@gmail.com",
-                    "name": "CCheukKa",
-                    "username": "CCheukKa"
-                },
-                "committer": {
-                    "email": "ccheukka@gmail.com",
-                    "name": "CCheukKa",
-                    "username": "CCheukKa"
-                },
-                "distinct": true,
-                "id": "bfc2f5f5f3ce0d59b49dca249128e2d144c77261",
-                "message": "fix line styling",
-                "timestamp": "2024-07-24T18:55:12+08:00",
-                "tree_id": "ba228ebc3f8fe73b8148c135e1372cc5cc9bab00",
-                "url": "https://github.com/ResiSense/ResiSense.github.io/commit/bfc2f5f5f3ce0d59b49dca249128e2d144c77261"
-            },
-            {
-                "author": {
-                    "email": "ccheukka@gmail.com",
-                    "name": "CCheukKa",
-                    "username": "CCheukKa"
-                },
-                "committer": {
-                    "email": "ccheukka@gmail.com",
-                    "name": "CCheukKa",
-                    "username": "CCheukKa"
-                },
-                "distinct": true,
-                "id": "db597c822be515521ad8127886515d7265919904",
-                "message": "style: update max-width for painted-outline to 20%",
-                "timestamp": "2024-07-24T18:56:23+08:00",
-                "tree_id": "5b9806c84fb137bf2be0e7909ecc77ee1b7a38d8",
-                "url": "https://github.com/ResiSense/ResiSense.github.io/commit/db597c822be515521ad8127886515d7265919904"
+                "id": "e88c94966677757b5c126c324916e07cab33cb43",
+                "message": "limit prettify scope to only production code",
+                "timestamp": "2024-07-24T23:11:36+08:00",
+                "tree_id": "6599c82f271e14cd94643bc91849d12cd5b012c1",
+                "url": "https://github.com/ResiSense/ResiSense.github.io/commit/e88c94966677757b5c126c324916e07cab33cb43"
             }
         ],
-        "compare": "https://github.com/ResiSense/ResiSense.github.io/compare/4767e5c56ccf...db597c822be5",
+        "compare": "https://github.com/ResiSense/ResiSense.github.io/compare/67f431db4833...e88c94966677",
         "created": false,
         "deleted": false,
         "forced": false,
@@ -105,11 +51,11 @@
                 "username": "CCheukKa"
             },
             "distinct": true,
-            "id": "db597c822be515521ad8127886515d7265919904",
-            "message": "style: update max-width for painted-outline to 20%",
-            "timestamp": "2024-07-24T18:56:23+08:00",
-            "tree_id": "5b9806c84fb137bf2be0e7909ecc77ee1b7a38d8",
-            "url": "https://github.com/ResiSense/ResiSense.github.io/commit/db597c822be515521ad8127886515d7265919904"
+            "id": "e88c94966677757b5c126c324916e07cab33cb43",
+            "message": "limit prettify scope to only production code",
+            "timestamp": "2024-07-24T23:11:36+08:00",
+            "tree_id": "6599c82f271e14cd94643bc91849d12cd5b012c1",
+            "url": "https://github.com/ResiSense/ResiSense.github.io/commit/e88c94966677757b5c126c324916e07cab33cb43"
         },
         "pusher": {
             "email": "ccheukka@gmail.com",
@@ -122,6 +68,6 @@
     "ref_type": "branch",
     "secret_source": "Actions",
     "workflow_ref": "ResiSense/ResiSense.github.io/.github/workflows/full-ci-pipeline.yaml@refs/heads/main",
-    "workflow_sha": "db597c822be515521ad8127886515d7265919904",
+    "workflow_sha": "e88c94966677757b5c126c324916e07cab33cb43",
     "workspace": "/home/runner/work/ResiSense.github.io/ResiSense.github.io"
 }

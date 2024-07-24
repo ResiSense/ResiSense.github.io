@@ -3,7 +3,7 @@ footer {
     --footer-horizontal-padding: 1rem;
     background-color: var(--footer-background-color);
 
-    &>.footer-banner {
+    & > .footer-banner {
         /* background-color: var(--footer-background-color); */
         width: 100%;
         height: 7rem;
@@ -13,7 +13,7 @@ footer {
         align-items: center;
         overflow: hidden;
 
-        &>div {
+        & > div {
             height: 100%;
         }
 
@@ -22,17 +22,17 @@ footer {
             width: auto;
         }
 
-        &>.resisense {
+        & > .resisense {
             display: flex;
             gap: 1rem;
 
-            &>.resisense-logo-aside {
+            & > .resisense-logo-aside {
                 display: flex;
                 flex-direction: column;
                 justify-content: space-between;
                 color: var(--deep-green);
 
-                &>.resisense-name {
+                & > .resisense-name {
                     --size: 2.6rem;
                     font-size: var(--size);
                     line-height: var(--size);
@@ -42,15 +42,15 @@ footer {
                     align-items: center;
                 }
 
-                &>.socials {
+                & > .socials {
                     font-size: 1rem;
                     display: flex;
                     flex-direction: column;
 
-                    &>.social {
+                    & > .social {
                         width: fit-content;
 
-                        &>a {
+                        & > a {
                             line-height: 1rem;
                             display: flex;
                             align-items: center;
@@ -58,7 +58,7 @@ footer {
                             width: fit-content;
                             padding-right: 1rem;
 
-                            &>img {
+                            & > img {
                                 max-width: 1rem;
                             }
                         }
@@ -72,23 +72,23 @@ footer {
             border-left: 2px dashed var(--desaturated-orange);
         }
 
-        &>.logo-container-wrapper {
+        & > .logo-container-wrapper {
             display: grid;
             grid-template-columns: auto auto;
             grid-template-rows: 50% 50%;
             gap: 0.2rem;
 
-            &>.cuhk-department-logo-container,
-            &>.sponsor-logo-container {
+            & > .cuhk-department-logo-container,
+            & > .sponsor-logo-container {
                 display: flex;
                 flex-direction: row;
                 align-items: center;
                 gap: 0.5rem;
 
-                &>a {
+                & > a {
                     height: 100%;
 
-                    &>img {
+                    & > img {
                         width: 100%;
                         height: 100%;
                         object-fit: contain;
@@ -98,7 +98,7 @@ footer {
         }
     }
 
-    &>.footer-spacer {
+    & > .footer-spacer {
         --footer-spacer-height: awaiting-js-definition;
         height: var(--footer-spacer-height);
         background-color: var(--footer-background-color);
@@ -106,7 +106,7 @@ footer {
         bottom: 0;
     }
 
-    &>.footer-persistent {
+    & > .footer-persistent {
         background-color: var(--footer-background-color);
         position: fixed;
         bottom: 0;
@@ -117,16 +117,16 @@ footer {
         align-items: center;
         flex-direction: row;
 
-        &>div {
+        & > div {
             display: flex;
             justify-content: center;
             align-items: center;
             flex-direction: row;
 
-            &>span>a {
+            & > span > a {
                 height: 100%;
 
-                &>img {
+                & > img {
                     vertical-align: middle;
                     height: 20px;
                     aspect-ratio: 1/1;

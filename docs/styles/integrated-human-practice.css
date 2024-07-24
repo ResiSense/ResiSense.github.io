@@ -1,24 +1,23 @@
 painted-content {
     blockquote {
-
         h3,
-        .scroll-marker[data-scroll-marker-level="H3"] {
+        .scroll-marker[data-scroll-marker-level='H3'] {
             --this-top: 7rem;
         }
 
         h4,
-        .scroll-marker[data-scroll-marker-level="H4"] {
+        .scroll-marker[data-scroll-marker-level='H4'] {
             font-size: 1.17rem;
             --this-top: 9.5rem;
         }
 
         h5,
-        .scroll-marker[data-scroll-marker-level="H5"] {
+        .scroll-marker[data-scroll-marker-level='H5'] {
             --this-top: 11rem;
         }
 
         h6,
-        .scroll-marker[data-scroll-marker-level="H6"] {
+        .scroll-marker[data-scroll-marker-level='H6'] {
             --this-top: 12.4rem;
         }
     }
@@ -36,7 +35,7 @@ painted-content {
     position: relative;
     height: 100%;
 
-    &>img {
+    & > img {
         --human-outline-width: 0.15rem;
         --human-outline-colour: white;
         max-width: 10rem;
@@ -45,10 +44,13 @@ painted-content {
         object-fit: cover;
         border-radius: 0;
         z-index: 1;
-        filter: drop-shadow(var(--human-outline-width) 0 0 var(--human-outline-colour)) drop-shadow(calc(var(--human-outline-width) * -1) 0 0 var(--human-outline-colour)) drop-shadow(0 var(--human-outline-width) 0 var(--human-outline-colour)) drop-shadow(0 calc(var(--human-outline-width) * -1) 0 var(--human-outline-colour));
+        filter: drop-shadow(var(--human-outline-width) 0 0 var(--human-outline-colour))
+            drop-shadow(calc(var(--human-outline-width) * -1) 0 0 var(--human-outline-colour))
+            drop-shadow(0 var(--human-outline-width) 0 var(--human-outline-colour))
+            drop-shadow(0 calc(var(--human-outline-width) * -1) 0 var(--human-outline-colour));
     }
 
-    &>.human-card-box {
+    & > .human-card-box {
         background-color: var(--human-card-background);
         position: absolute;
         bottom: 0;
@@ -58,7 +60,7 @@ painted-content {
         border-radius: var(--border-radius);
         width: 100%;
 
-        &>.human-card-text-container {
+        & > .human-card-text-container {
             display: flex;
             box-sizing: border-box;
             flex-direction: column;
@@ -67,13 +69,13 @@ painted-content {
             margin: 0;
             width: var(--grid-right-percent);
 
-            &>h3 {
+            & > h3 {
                 position: initial;
                 background: transparent;
                 box-shadow: none;
             }
 
-            &>p {
+            & > p {
                 margin: 0;
                 padding: 0;
             }

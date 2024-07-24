@@ -7,7 +7,7 @@
 painted-outline {
     max-width: 20%;
 
-    &>nav {
+    & > nav {
         display: flex;
         flex-direction: row;
         justify-content: flex-end;
@@ -16,7 +16,7 @@ painted-outline {
         padding: 0.8rem 0.5rem;
         --line-height: 1.2rem;
 
-        &>.outline {
+        & > .outline {
             --list-indentation: 0.5rem;
             --border-left-offset: 1rem;
             display: flex;
@@ -28,12 +28,12 @@ painted-outline {
                 line-height: var(--line-height);
             }
 
-            &>#outline-tree {
+            & > #outline-tree {
                 margin: 0;
                 padding: 0;
 
-                &>li::before,
-                &>li::after {
+                & > li::before,
+                & > li::after {
                     display: none;
                 }
 
@@ -46,7 +46,7 @@ painted-outline {
                     white-space: nowrap;
 
                     &::before {
-                        content: "";
+                        content: '';
                         position: absolute;
                         top: -5px;
                         left: calc(var(--border-left-offset) * -1);
@@ -58,7 +58,7 @@ painted-outline {
                     }
 
                     &::after {
-                        content: "";
+                        content: '';
                         position: absolute;
                         top: 5px;
                         left: calc(var(--border-left-offset) * -1);
@@ -76,7 +76,7 @@ painted-outline {
                         color: transparent;
                     }
 
-                    &>a {
+                    & > a {
                         color: var(--light-green);
                         position: relative;
                         left: -0.5rem;
@@ -92,7 +92,7 @@ painted-outline {
                             left: -1rem;
                         }
 
-                        &:has(+ul>li)::after {
+                        &:has(+ ul > li)::after {
                             content: '';
                             position: absolute;
                             left: calc(var(--border-left-offset) * -1 + 0.22rem);
@@ -105,7 +105,7 @@ painted-outline {
             }
         }
 
-        &>#outline-progress-pointer {
+        & > #outline-progress-pointer {
             width: 0;
             height: 0;
             position: relative;

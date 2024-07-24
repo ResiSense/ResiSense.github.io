@@ -10,7 +10,7 @@ painted-catalogue {
     flex-direction: row;
     pointer-events: none;
 
-    &>.catalogue-item {
+    & > .catalogue-item {
         color: var(--desaturated-orange);
         font-size: 1rem;
         font-weight: 500;
@@ -36,7 +36,7 @@ painted-catalogue {
         }
     }
 
-    &>.catalogue-divider:last-child {
+    & > .catalogue-divider:last-child {
         visibility: hidden;
     }
 }

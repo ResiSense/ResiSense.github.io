@@ -1,4 +1,4 @@
-console.log(`Script running: ${ document.currentScript.src }`);
+console.log(`Script running: ${document.currentScript.src}`);
 //
 const footerSpacerElement = document.querySelector('.footer-spacer');
 const footerPersistentElement = document.querySelector('.footer-persistent');

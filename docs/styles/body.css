@@ -5,13 +5,13 @@
     align-items: flex-start;
     width: 100%;
 
-    &>painted-outline {
+    & > painted-outline {
         margin-right: 1rem;
         position: sticky;
         top: var(--header-height);
     }
 
-    &>main {
+    & > main {
         width: 60%;
         color: var(--deep-green);
         margin-bottom: 50vh;
@@ -21,14 +21,14 @@
             margin-top: 1rem;
         }
 
-        &>fieldset {
+        & > fieldset {
             background-color: var(--pale-green);
             border: none;
             border-radius: 2rem;
             padding: 0 2rem 1rem 2rem;
             margin: 0 0 1rem 0;
 
-            &>legend {
+            & > legend {
                 color: var(--dark-green);
                 margin: 0 auto;
                 font-size: 2rem;
@@ -47,7 +47,7 @@
         }
     }
 
-    &>painted-sidebar {
+    & > painted-sidebar {
         margin-left: 1rem;
         position: sticky;
         top: var(--header-height);

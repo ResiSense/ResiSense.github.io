@@ -1,4 +1,4 @@
-console.log(`Script running: ${ document.currentScript.src }`);
+console.log(`Script running: ${document.currentScript.src}`);
 //
 const searchfieldElement = document.getElementById('searchfield');
 const searchButtonElement = document.getElementById('search-button');
@@ -15,7 +15,9 @@ function listPages(pageConfig) {
     const pages = [];
     pageConfig.pages.forEach(page => {
         pages.push(page.name);
-        if (page.pages) { pages.push(...listPages(page)); }
+        if (page.pages) {
+            pages.push(...listPages(page));
+        }
     });
     return pages;
 }
