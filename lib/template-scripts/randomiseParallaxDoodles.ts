@@ -37,7 +37,7 @@ function cloneDoodlesToFillPool(parallaxElement: HTMLElement) {
 }
 
 function calculateRandomDoodleOffset(siblingCount: number) {
-    // TODO: Make this avoid collisions?
+    // I'm not sure doing the randomisation in two steps is any better than doing it in one step?
     const gradationCount = siblingCount / Y_DENSITY_PER_PX / GRADATION_HEIGHT;
     const gradationNumber = Math.floor(Math.random() * gradationCount);
     const xOffset = randomFromRange(0, 100); // in vw
