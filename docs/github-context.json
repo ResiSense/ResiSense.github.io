@@ -1,11 +1,11 @@
 {
     "job": "build",
     "ref": "refs/heads/main",
-    "sha": "137f3e4ac759a5de9fd6d0fd6224e865610a85c3",
+    "sha": "82a7287281b4067dbbe0a8d77a7f6869bbc783f5",
     "repository": "ResiSense/ResiSense.github.io",
     "repository_Url": null,
-    "run_id": "10106915256",
-    "run_number": "76",
+    "run_id": "10114967595",
+    "run_number": "77",
     "run_attempt": "1",
     "artifact_cache_size_limit": "10",
     "actor": "CCheukKa",
@@ -13,65 +13,29 @@
     "workflow": "Full CI Pipeline",
     "event_name": "push",
     "event": {
-        "after": "137f3e4ac759a5de9fd6d0fd6224e865610a85c3",
-        "before": "fc5eaeec57e25db446b96287060513b473e9c37a",
+        "after": "82a7287281b4067dbbe0a8d77a7f6869bbc783f5",
+        "before": "92f319b1c94094c8366fb912fabf3d85904f94c8",
         "commits": [
             {
                 "author": {
-                    "email": "49699333+dependabot[bot]@users.noreply.github.com",
-                    "name": "dependabot[bot]",
-                    "username": "dependabot[bot]"
-                },
-                "committer": {
-                    "email": "noreply@github.com",
-                    "name": "GitHub",
-                    "username": "web-flow"
-                },
-                "distinct": false,
-                "id": "4ba68279720cbc89280d5afccc55618a4ec109e4",
-                "message": "Chore(deps): Bump jsdom from 24.1.0 to 24.1.1\n\nBumps [jsdom](https://github.com/jsdom/jsdom) from 24.1.0 to 24.1.1.\n- [Release notes](https://github.com/jsdom/jsdom/releases)\n- [Changelog](https://github.com/jsdom/jsdom/blob/main/Changelog.md)\n- [Commits](https://github.com/jsdom/jsdom/compare/24.1.0...24.1.1)\n\n---\nupdated-dependencies:\n- dependency-name: jsdom\n  dependency-type: direct:production\n  update-type: version-update:semver-patch\n...\n\nSigned-off-by: dependabot[bot] <support@github.com>",
-                "timestamp": "2024-07-24T16:05:23Z",
-                "tree_id": "229648f830c0d17db82b9f39253edc817db0ed54",
-                "url": "https://github.com/ResiSense/ResiSense.github.io/commit/4ba68279720cbc89280d5afccc55618a4ec109e4"
-            },
-            {
-                "author": {
                     "email": "ccheukka@gmail.com",
                     "name": "CCheukKa",
                     "username": "CCheukKa"
                 },
                 "committer": {
-                    "email": "noreply@github.com",
-                    "name": "GitHub",
-                    "username": "web-flow"
-                },
-                "distinct": false,
-                "id": "dd60102da59c2433f0a0efd3858d85f52d72c295",
-                "message": "Merge branch main into dependabot/npm_and_yarn/jsdom-24.1.1",
-                "timestamp": "2024-07-26T14:38:41+08:00",
-                "tree_id": "6258d259cef5070c2c71cc42042063d80de1e52d",
-                "url": "https://github.com/ResiSense/ResiSense.github.io/commit/dd60102da59c2433f0a0efd3858d85f52d72c295"
-            },
-            {
-                "author": {
                     "email": "ccheukka@gmail.com",
                     "name": "CCheukKa",
                     "username": "CCheukKa"
-                },
-                "committer": {
-                    "email": "noreply@github.com",
-                    "name": "GitHub",
-                    "username": "web-flow"
                 },
                 "distinct": true,
-                "id": "137f3e4ac759a5de9fd6d0fd6224e865610a85c3",
-                "message": "Merge pull request #14 from ResiSense/dependabot/npm_and_yarn/jsdom-24.1.1\n\nChore(deps): Bump jsdom from 24.1.0 to 24.1.1",
-                "timestamp": "2024-07-26T14:38:49+08:00",
-                "tree_id": "6258d259cef5070c2c71cc42042063d80de1e52d",
-                "url": "https://github.com/ResiSense/ResiSense.github.io/commit/137f3e4ac759a5de9fd6d0fd6224e865610a85c3"
+                "id": "82a7287281b4067dbbe0a8d77a7f6869bbc783f5",
+                "message": "update TODO.md",
+                "timestamp": "2024-07-27T01:06:09+08:00",
+                "tree_id": "018e86253b90d3d6a1e188436e8c8911a8e56838",
+                "url": "https://github.com/ResiSense/ResiSense.github.io/commit/82a7287281b4067dbbe0a8d77a7f6869bbc783f5"
             }
         ],
-        "compare": "https://github.com/ResiSense/ResiSense.github.io/compare/fc5eaeec57e2...137f3e4ac759",
+        "compare": "https://github.com/ResiSense/ResiSense.github.io/compare/92f319b1c940...82a7287281b4",
         "created": false,
         "deleted": false,
         "forced": false,
@@ -82,16 +46,16 @@
                 "username": "CCheukKa"
             },
             "committer": {
-                "email": "noreply@github.com",
-                "name": "GitHub",
-                "username": "web-flow"
+                "email": "ccheukka@gmail.com",
+                "name": "CCheukKa",
+                "username": "CCheukKa"
             },
             "distinct": true,
-            "id": "137f3e4ac759a5de9fd6d0fd6224e865610a85c3",
-            "message": "Merge pull request #14 from ResiSense/dependabot/npm_and_yarn/jsdom-24.1.1\n\nChore(deps): Bump jsdom from 24.1.0 to 24.1.1",
-            "timestamp": "2024-07-26T14:38:49+08:00",
-            "tree_id": "6258d259cef5070c2c71cc42042063d80de1e52d",
-            "url": "https://github.com/ResiSense/ResiSense.github.io/commit/137f3e4ac759a5de9fd6d0fd6224e865610a85c3"
+            "id": "82a7287281b4067dbbe0a8d77a7f6869bbc783f5",
+            "message": "update TODO.md",
+            "timestamp": "2024-07-27T01:06:09+08:00",
+            "tree_id": "018e86253b90d3d6a1e188436e8c8911a8e56838",
+            "url": "https://github.com/ResiSense/ResiSense.github.io/commit/82a7287281b4067dbbe0a8d77a7f6869bbc783f5"
         },
         "pusher": {
             "email": "ccheukka@gmail.com",
@@ -104,6 +68,6 @@
     "ref_type": "branch",
     "secret_source": "Actions",
     "workflow_ref": "ResiSense/ResiSense.github.io/.github/workflows/full-ci-pipeline.yaml@refs/heads/main",
-    "workflow_sha": "137f3e4ac759a5de9fd6d0fd6224e865610a85c3",
+    "workflow_sha": "82a7287281b4067dbbe0a8d77a7f6869bbc783f5",
     "workspace": "/home/runner/work/ResiSense.github.io/ResiSense.github.io"
 }
