@@ -84,6 +84,7 @@ async function buildFile(page: Page, templateCache: TemplateCache): Promise<void
     document.title = page.title || Utils.toTitleCase(page.name);
 
     const pageData: PageData = {
+        targetDirectory,
         page,
         document,
         paintedHtml,
