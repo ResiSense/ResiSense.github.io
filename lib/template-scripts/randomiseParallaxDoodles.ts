@@ -65,6 +65,10 @@ export default function (pageData: PageData) {
     const document = pageData.document;
     // 
     const parallaxElement = document.getElementById('parallax');
+    if (parallaxElement.childElementCount === 0) {
+        console.warn('Parallax element is empty!');
+        return;
+    }
     const parallaxAnimations: { hash: string, translateAmount: number }[] = [];
     const contentLength = document.getElementsByTagName('painted-content')[0].innerHTML.length;
     const Y_PAGE_SIZE_HEURISTIC = calculatePageSizeHeuristic(contentLength);
