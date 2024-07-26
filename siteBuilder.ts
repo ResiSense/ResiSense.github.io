@@ -11,7 +11,8 @@ import HtmlFullReplacer from './lib/framework-lib/HtmlFullReplacer';
 import HtmlFramePopulator from './lib/framework-lib/HtmlFramePopulator';
 
 const mode = process.env.NODE_ENV?.trim() as typeof MODES[keyof typeof MODES];
-console.log(`Running ${path.basename(__filename)} in ${mode} mode...`);
+const isWatching = process.argv.includes('--watch');
+console.log(`Running ${path.basename(__filename)} in ${mode} mode${isWatching ? ' (watching)' : ''}...`);
 
 enum MODES {
     DEV = 'dev',
@@ -49,7 +50,9 @@ if (!targetDirectory) { throw new Error('Invalid mode!'); }
 
 /* -------------------------------------------------------------------------- */
 function cloneDirectory(source: string, destination: string): Promise<void> {
-    fs.emptyDirSync(targetDirectory);
+    isWatching
+        ? null
+        : fs.emptyDirSync(targetDirectory);
     const FS_CP = Utils.promisifyCallback(fs.cp, path.resolve(source), path.resolve(destination, path.basename(source)), { recursive: true });
     return FS_CP;
 }
