@@ -56,6 +56,9 @@ painted-header {
                 padding-right: var(--padding-size);
                 box-shadow: var(--bright-brown) -10rem 0px 0px 0px;
                 pointer-events: initial;
+                position: relative;
+                z-index: -1;
+                overflow: clip;
 
                 &>.header-leftside {
                     display: flex;
@@ -86,6 +89,25 @@ painted-header {
                     gap: 1rem;
                     flex-direction: row;
                 }
+
+                &>#header-page-title {
+                    position: absolute;
+                    width: 0;
+                    height: 0;
+                    text-wrap: nowrap;
+                    font-weight: bold;
+                    font-size: 2rem;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    color: var(--deep-green);
+                    bottom: calc(var(--header-height) * 0.6 / 2);
+                    left: 55%;
+
+                    &.hidden {
+                        bottom: -1rem;
+                    }
+                }
             }
 
             &>.header-catalogue-container {
@@ -98,25 +120,6 @@ painted-header {
                 margin-top: 0.5rem;
                 margin-bottom: auto;
                 pointer-events: none;
-            }
-        }
-
-        &>#header-page-title {
-            position: absolute;
-            width: 0;
-            height: 0;
-            text-wrap: nowrap;
-            font-weight: bold;
-            font-size: 2rem;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            color: var(--deep-green);
-            top: calc(var(--header-height) * 0.6 / 2);
-            left: 50%;
-
-            &.hidden {
-                top: -1lh;
             }
         }
     }
