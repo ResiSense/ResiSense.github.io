@@ -33,6 +33,10 @@ The following organizations have provided financial support to the project.
 [![HKLSS Logo](/assets/logos/hklss%20logo.svg)](https://www.hklss.org)  
 The [Hong Kong Life Sciences Society](https://www.hklss.org) has kindly provided us with [5000HKD](https://www.google.com/search?q=5000HKD) to support our project.  
 
+## Amgen
+[![Amgen Logo](/assets/logos/amgen%20logo.svg)](https://www.amgen.com)  
+[Amgen](https://www.amgen.com) has kindly provided us with various cells, plasmids, and reagents totalling [1000HKD](https://www.google.com/search?q=1000HKD) for our experiments.  
+
 # Collaborators
 
 # Advisors
