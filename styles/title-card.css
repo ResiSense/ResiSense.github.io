@@ -50,7 +50,7 @@ painted-title-card {
             }
         }
 
-        &>.card-title {
+        &>.page-title {
             display: flex;
             justify-content: center;
             align-items: center;
