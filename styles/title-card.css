@@ -83,12 +83,12 @@ painted-title-card {
             height: 10rem;
 
             /* For easier modification: */
-            --blue-pills-parallax-amount: -60%;
+            --blue-pills-parallax-amount: -40%;
             --globe-parallax-amount: 60%;
             --orange-pills-parallax-amount: 20%;
             --gurney-parallax-amount: 40%;
             --hold-pills-parallax-amount: 20%;
-            --colourful-pills-parallax-amount: -80%;
+            --colourful-pills-parallax-amount: -60%;
         }
 
         &>#blue-pills {
