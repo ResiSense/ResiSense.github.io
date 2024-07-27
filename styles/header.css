@@ -14,11 +14,12 @@ header {
     z-index: 1;
     pointer-events: none;
 
-    /* TODO: maker responsive at 1100px */
+    /* TODO: make responsive at 1100px */
 
     &>.logo-container {
         margin-left: 1rem;
-        height: calc(var(--header-height) - var(--padding-size) * 4);
+        height: var(--header-height);
+        box-sizing: border-box;
         aspect-ratio: 1;
         padding: calc(var(--padding-size) * 2);
         background-color: var(--bright-brown);
@@ -49,7 +50,8 @@ header {
             align-items: center;
             justify-content: space-between;
             background-color: var(--bright-brown);
-            width: calc(100% - var(--padding-size));
+            width: 100%;
+            box-sizing: border-box;
             padding-right: var(--padding-size);
             box-shadow: var(--bright-brown) -10rem 0px 0px 0px;
             pointer-events: initial;
@@ -86,12 +88,12 @@ header {
         }
 
         &>.header-catalogue-container {
-            width: calc(100% - var(--padding-size) * 2);
+            width: 100%;
+            box-sizing: border-box;
             display: flex;
             align-items: center;
             justify-content: space-between;
-            padding-left: var(--padding-size);
-            padding-right: var(--padding-size);
+            padding: 0 var(--padding-size);
             margin-top: 0.5rem;
             margin-bottom: auto;
             pointer-events: none;
