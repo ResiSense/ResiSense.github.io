@@ -70,6 +70,7 @@ painted-title-card {
                 color: transparent;
                 -webkit-text-stroke: 6px var(--white);
                 z-index: 1;
+                user-select: none;
             }
 
             &#title-name-box {
@@ -77,6 +78,7 @@ painted-title-card {
                 background-color: var(--white);
                 padding: 0.2rem 0.5rem;
                 rotate: -2deg;
+                user-select: none;
             }
         }
 
@@ -89,6 +91,7 @@ painted-title-card {
             &>* {
                 position: absolute;
                 height: 10rem;
+                user-select: none;
 
                 /* For easier modification: */
                 --blue-pills-parallax-amount: -40%;
