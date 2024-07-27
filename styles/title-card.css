@@ -49,13 +49,13 @@ painted-title-card {
         height: 3rem;
         font-weight: bolder;
         font-size: 3rem;
-        --parallax-amount-x: 10%;
-        --parallax-amount-y: 300%;
+        top: 35%;
+        --parallax-amount-x: 2rem;
+        --parallax-amount-y: 12rem;
 
         &#title-name {
-            position: absolute;
             color: var(--deep-green);
-            z-index: 3;
+            z-index: 2;
         }
 
         &#title-name-shadow {
