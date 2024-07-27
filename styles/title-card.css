@@ -1,6 +1,8 @@
 painted-title-card {
     width: 100%;
-    overflow-x: hidden;
+    height: fit-content;
+    padding-bottom: 2rem;
+    overflow: clip;
 
     &>.title-card-container {
         --card-rotate-degrees: 1deg;
@@ -12,6 +14,8 @@ painted-title-card {
         justify-content: center;
         align-items: center;
         rotate: var(--card-rotate-degrees);
+        white-space: nowrap;
+        white-space-collapse: discard;
 
         &>* {
             position: absolute;
