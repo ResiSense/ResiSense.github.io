@@ -1,11 +1,11 @@
 {
     "job": "build",
     "ref": "refs/heads/main",
-    "sha": "8c2ea5781f5ca4147118fcf0f47e7d9605aa56fa",
+    "sha": "4515954060ac7ad5ed3838dfe82bb72a5c8eaa45",
     "repository": "ResiSense/ResiSense.github.io",
     "repository_Url": null,
-    "run_id": "10122984628",
-    "run_number": "79",
+    "run_id": "10125380356",
+    "run_number": "81",
     "run_attempt": "1",
     "artifact_cache_size_limit": "10",
     "actor": "CCheukKa",
@@ -13,8 +13,8 @@
     "workflow": "Full CI Pipeline",
     "event_name": "push",
     "event": {
-        "after": "8c2ea5781f5ca4147118fcf0f47e7d9605aa56fa",
-        "before": "4a5869f17e5de97c429a7bffce25c6538ce53a56",
+        "after": "4515954060ac7ad5ed3838dfe82bb72a5c8eaa45",
+        "before": "720a3a1acf1b23406a289073d530fff77683b74d",
         "commits": [
             {
                 "author": {
@@ -28,14 +28,14 @@
                     "username": "CCheukKa"
                 },
                 "distinct": true,
-                "id": "8c2ea5781f5ca4147118fcf0f47e7d9605aa56fa",
-                "message": "add Amgen as a sponsor",
-                "timestamp": "2024-07-27T18:52:44+08:00",
-                "tree_id": "fbcbcccea314e874297e1642b3a5892593599803",
-                "url": "https://github.com/ResiSense/ResiSense.github.io/commit/8c2ea5781f5ca4147118fcf0f47e7d9605aa56fa"
+                "id": "4515954060ac7ad5ed3838dfe82bb72a5c8eaa45",
+                "message": "chore: Update boiler-plate.html with preconnect links",
+                "timestamp": "2024-07-28T01:53:41+08:00",
+                "tree_id": "ccdbdbe57901da0d96cc0683e919f74a5b12c18d",
+                "url": "https://github.com/ResiSense/ResiSense.github.io/commit/4515954060ac7ad5ed3838dfe82bb72a5c8eaa45"
             }
         ],
-        "compare": "https://github.com/ResiSense/ResiSense.github.io/compare/4a5869f17e5d...8c2ea5781f5c",
+        "compare": "https://github.com/ResiSense/ResiSense.github.io/compare/720a3a1acf1b...4515954060ac",
         "created": false,
         "deleted": false,
         "forced": false,
@@ -51,11 +51,11 @@
                 "username": "CCheukKa"
             },
             "distinct": true,
-            "id": "8c2ea5781f5ca4147118fcf0f47e7d9605aa56fa",
-            "message": "add Amgen as a sponsor",
-            "timestamp": "2024-07-27T18:52:44+08:00",
-            "tree_id": "fbcbcccea314e874297e1642b3a5892593599803",
-            "url": "https://github.com/ResiSense/ResiSense.github.io/commit/8c2ea5781f5ca4147118fcf0f47e7d9605aa56fa"
+            "id": "4515954060ac7ad5ed3838dfe82bb72a5c8eaa45",
+            "message": "chore: Update boiler-plate.html with preconnect links",
+            "timestamp": "2024-07-28T01:53:41+08:00",
+            "tree_id": "ccdbdbe57901da0d96cc0683e919f74a5b12c18d",
+            "url": "https://github.com/ResiSense/ResiSense.github.io/commit/4515954060ac7ad5ed3838dfe82bb72a5c8eaa45"
         },
         "pusher": {
             "email": "ccheukka@gmail.com",
@@ -68,6 +68,6 @@
     "ref_type": "branch",
     "secret_source": "Actions",
     "workflow_ref": "ResiSense/ResiSense.github.io/.github/workflows/full-ci-pipeline.yaml@refs/heads/main",
-    "workflow_sha": "8c2ea5781f5ca4147118fcf0f47e7d9605aa56fa",
+    "workflow_sha": "4515954060ac7ad5ed3838dfe82bb72a5c8eaa45",
     "workspace": "/home/runner/work/ResiSense.github.io/ResiSense.github.io"
 }

@@ -16,8 +16,20 @@ painted-catalogue {
         font-weight: 500;
         pointer-events: initial;
 
-        & a {
-            text-shadow: 0 0 1rem var(--white);
+        & a,
+        & span {
+            --stroke-width: 1px;
+            --stroke-blur: 0.5px;
+            text-shadow:
+                0 0 1rem var(--white),
+                0 var(--stroke-width) var(--stroke-blur) var(--white),
+                0 calc(-1 * var(--stroke-width)) var(--stroke-blur) var(--white),
+                var(--stroke-width) 0 var(--stroke-blur) var(--white),
+                calc(-1 * var(--stroke-width)) 0 var(--stroke-blur) var(--white),
+                var(--stroke-width) var(--stroke-width) var(--stroke-blur) var(--white),
+                calc(-1 * var(--stroke-width)) calc(-1 * var(--stroke-width)) var(--stroke-blur) var(--white),
+                var(--stroke-width) calc(-1 * var(--stroke-width)) var(--stroke-blur) var(--white),
+                calc(-1 * var(--stroke-width)) var(--stroke-width) var(--stroke-blur) var(--white);
         }
 
         &.catalogue-item-active {
