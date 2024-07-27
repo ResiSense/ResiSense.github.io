@@ -1,6 +1,5 @@
 painted-title-card {
     width: 100%;
-    height: fit-content;
     padding-bottom: 2rem;
     overflow: clip;
 
@@ -8,14 +7,12 @@ painted-title-card {
         --card-rotate-degrees: 1deg;
         height: 20rem;
         width: 100%;
-        overflow: hidden;
+        overflow: clip;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
         rotate: var(--card-rotate-degrees);
-        white-space: nowrap;
-        white-space-collapse: discard;
 
         &>* {
             position: absolute;
@@ -35,11 +32,10 @@ painted-title-card {
         }
 
         &>.background-box {
-            --overflow: 0.5rem;
             width: 70%;
-            height: calc(80% + var(--overflow));
+            height: 80%;
             justify-self: flex-end;
-            bottom: calc(-1 * var(--overflow));
+            bottom: 0;
             rotate: var(--card-rotate-degrees);
             background-color: var(--bright-brown);
 
