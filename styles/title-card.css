@@ -1,0 +1,107 @@
+painted-title-card {
+    --card-rotate-degrees: 1deg;
+    isolation: isolate;
+    position: relative;
+    height: 18rem;
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    rotate: var(--card-rotate-degrees);
+
+    &>* {
+        position: absolute;
+        transform: rotate(calc(-1 * var(--card-rotate-degrees)));
+    }
+
+    &>.background-box {
+        --overflow: 0.5rem;
+        width: 70%;
+        height: calc(80% + var(--overflow));
+        justify-self: flex-end;
+        bottom: calc(-1 * var(--overflow));
+        rotate: var(--card-rotate-degrees);
+        background-color: var(--bright-brown);
+
+        &>.pattern {
+            height: 100%;
+            width: 100%;
+            background-color: var(--pale-brown);
+            mask-image: url('/assets/backgrounds/OX.svg');
+            opacity: 20%;
+            mask-position: center;
+            mask-size: 5rem auto;
+        }
+    }
+
+    &>.title-name {
+        --rotate-degrees: 2deg;
+        background-color: var(--white);
+        padding: 0.2rem 0.5rem;
+        rotate: calc(-1 * var(--rotate-degrees));
+
+        &>#title-name {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 3rem;
+            font-weight: bolder;
+            font-size: 3rem;
+            rotate: var(--rotate-degrees);
+        }
+    }
+
+    &>.stickers {
+        position: relative;
+        height: 100%;
+        width: 100%;
+        isolation: isolate;
+
+        &>* {
+            position: absolute;
+            height: 10rem;
+        }
+
+        &>#blue-pills {
+            rotate: -70deg;
+            scale: 1.5;
+            left: 6%;
+            top: 30%;
+        }
+
+        &>#globe {
+            scale: 1.8;
+            left: 20%;
+            top: 20%;
+        }
+
+        &>#orange-pills {
+            rotate: 120deg;
+            scale: 1.2;
+            left: 30%;
+            top: 65%;
+        }
+
+        &>#gurney {
+            scale: 1.5;
+            left: 55%;
+            top: 60%
+        }
+
+        &>#hold-pills {
+            rotate: 20deg;
+            scale: 2;
+            left: 75%;
+            top: 40%;
+        }
+
+        &>#colourful-pills {
+            rotate: 40deg;
+            scale: 1.5;
+            left: 90%;
+            top: 20%;
+        }
+    }
+}
