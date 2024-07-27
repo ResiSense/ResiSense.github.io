@@ -16,30 +16,30 @@ function calculatePageSizeHeuristic(contentLength: number): number {
     // return 10000; // constant
 }
 
-function cloneDoodlesToFillPool(parallaxElement: HTMLElement, Y_PAGE_SIZE_HEURISTIC: number) {
+function cloneDoodlesToFillPool(parallaxDoodleContainer: HTMLElement, Y_PAGE_SIZE_HEURISTIC: number) {
     // 
     const requiredDoodleCount = Y_DENSITY_PER_PX * Y_PAGE_SIZE_HEURISTIC * 2;
     // make a doodle bag to clone from
-    const doodleBag: HTMLElement[] = Array.from(parallaxElement.children).map(child => child.cloneNode(true) as HTMLElement);
+    const doodleBag: HTMLElement[] = Array.from(parallaxDoodleContainer.children).map(child => child.cloneNode(true) as HTMLElement);
     // fill the pool
-    while (parallaxElement.childElementCount < requiredDoodleCount) {
+    while (parallaxDoodleContainer.childElementCount < requiredDoodleCount) {
         doodleBag.forEach(doodle => {
             const clone = doodle.cloneNode(true) as HTMLElement;
-            parallaxElement.appendChild(clone);
+            parallaxDoodleContainer.appendChild(clone);
         });
     }
     // shuffle the pool
-    const pool = Array.from(parallaxElement.children);
+    const pool = Array.from(parallaxDoodleContainer.children);
     for (let i = pool.length - 1; i > 0; i--) {
         const j = Math.floor(Math.random() * (i + 1));
         [pool[i], pool[j]] = [pool[j], pool[i]];
     }
-    // put the shuffled pool back in the parallax element
-    parallaxElement.innerHTML = '';
-    pool.forEach(doodle => parallaxElement.appendChild(doodle));
+    // put the shuffled pool back in the parallax doodle container
+    parallaxDoodleContainer.innerHTML = '';
+    pool.forEach(doodle => parallaxDoodleContainer.appendChild(doodle));
     // remove excess doodles
-    while (parallaxElement.childElementCount > requiredDoodleCount) {
-        parallaxElement.removeChild(parallaxElement.lastElementChild);
+    while (parallaxDoodleContainer.childElementCount > requiredDoodleCount) {
+        parallaxDoodleContainer.removeChild(parallaxDoodleContainer.lastElementChild);
     }
 }
 
@@ -61,38 +61,39 @@ function calculateRandomTranslateAmount(Y_PAGE_SIZE_HEURISTIC: number) {
 }
 
 export default function (pageData: PageData) {
-    const PARALLAX_CSS_PATH = `${pageData.targetDirectory}/styles/parallax.css`;
+    const PARALLAX_DOODLE_CSS_PATH = `${pageData.targetDirectory}/styles/parallax-doodle.css`;
     const document = pageData.document;
     // 
-    const parallaxElement = document.getElementById('parallax');
-    if (parallaxElement.childElementCount === 0) {
-        console.warn('Parallax element is empty!');
+    const parallaxDoodleContainer = document.getElementById('parallax-doodle-container');
+    if (parallaxDoodleContainer.childElementCount === 0) {
+        console.warn('Parallax doodle container is empty!');
         return;
     }
-    const parallaxAnimations: { hash: string, translateAmount: number }[] = [];
+    const ANIMATION_NAME_PREFIX = 'parallax-doodle';
+    const parallaxDoodleAnimations: { hash: string, translateAmount: number }[] = [];
     const contentLength = document.getElementsByTagName('painted-content')[0].innerHTML.length;
     const Y_PAGE_SIZE_HEURISTIC = calculatePageSizeHeuristic(contentLength);
-    cloneDoodlesToFillPool(parallaxElement, Y_PAGE_SIZE_HEURISTIC);
-    for (let child of parallaxElement.children) {
+    cloneDoodlesToFillPool(parallaxDoodleContainer, Y_PAGE_SIZE_HEURISTIC);
+    for (let child of parallaxDoodleContainer.children) {
         const doodleElement = child as HTMLElement;
         // 
-        const { xOffset, yOffset } = calculateRandomDoodleOffset(parallaxElement.childElementCount);
+        const { xOffset, yOffset } = calculateRandomDoodleOffset(parallaxDoodleContainer.childElementCount);
         doodleElement.style.translate = `${xOffset}vw ${yOffset}px`;
         //
         const translateAmount = calculateRandomTranslateAmount(Y_PAGE_SIZE_HEURISTIC);
         const hash = translateAmount.toString(36).substring(7);
-        doodleElement.style.animationName = `parallax-${hash}`;
-        parallaxAnimations.push({ hash, translateAmount });
+        doodleElement.style.animationName = `${ANIMATION_NAME_PREFIX}-${hash}`;
+        parallaxDoodleAnimations.push({ hash, translateAmount });
     }
     //
-    const css = fs.readFileSync(PARALLAX_CSS_PATH, 'utf8');
+    const css = fs.readFileSync(PARALLAX_DOODLE_CSS_PATH, 'utf8');
     let newCss = css;
-    parallaxAnimations.forEach(({ hash, translateAmount }) => {
+    parallaxDoodleAnimations.forEach(({ hash, translateAmount }) => {
         newCss += `
-            @keyframes parallax-${hash} {
+            @keyframes ${ANIMATION_NAME_PREFIX}-${hash} {
                 to { transform: translateY(${translateAmount}px); }
             }
         `;
     });
-    fs.writeFileSync(PARALLAX_CSS_PATH, newCss);
+    fs.writeFileSync(PARALLAX_DOODLE_CSS_PATH, newCss);
 }
