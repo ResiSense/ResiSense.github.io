@@ -1,11 +1,11 @@
 {
     "job": "build",
     "ref": "refs/heads/main",
-    "sha": "98ad279fe406d5115df054d7474a204e46ea1d12",
+    "sha": "8c2ea5781f5ca4147118fcf0f47e7d9605aa56fa",
     "repository": "ResiSense/ResiSense.github.io",
     "repository_Url": null,
-    "run_id": "10115400144",
-    "run_number": "78",
+    "run_id": "10122984628",
+    "run_number": "79",
     "run_attempt": "1",
     "artifact_cache_size_limit": "10",
     "actor": "CCheukKa",
@@ -13,8 +13,8 @@
     "workflow": "Full CI Pipeline",
     "event_name": "push",
     "event": {
-        "after": "98ad279fe406d5115df054d7474a204e46ea1d12",
-        "before": "ec96b0428289e16fdc0a89ebe2a014a7850d0210",
+        "after": "8c2ea5781f5ca4147118fcf0f47e7d9605aa56fa",
+        "before": "4a5869f17e5de97c429a7bffce25c6538ce53a56",
         "commits": [
             {
                 "author": {
@@ -28,14 +28,14 @@
                     "username": "CCheukKa"
                 },
                 "distinct": true,
-                "id": "98ad279fe406d5115df054d7474a204e46ea1d12",
-                "message": "add super hot reload to dev-watch mode to improve DX",
-                "timestamp": "2024-07-27T01:41:59+08:00",
-                "tree_id": "154c57ec30b446986e2c184dc1aac5ab960fba96",
-                "url": "https://github.com/ResiSense/ResiSense.github.io/commit/98ad279fe406d5115df054d7474a204e46ea1d12"
+                "id": "8c2ea5781f5ca4147118fcf0f47e7d9605aa56fa",
+                "message": "add Amgen as a sponsor",
+                "timestamp": "2024-07-27T18:52:44+08:00",
+                "tree_id": "fbcbcccea314e874297e1642b3a5892593599803",
+                "url": "https://github.com/ResiSense/ResiSense.github.io/commit/8c2ea5781f5ca4147118fcf0f47e7d9605aa56fa"
             }
         ],
-        "compare": "https://github.com/ResiSense/ResiSense.github.io/compare/ec96b0428289...98ad279fe406",
+        "compare": "https://github.com/ResiSense/ResiSense.github.io/compare/4a5869f17e5d...8c2ea5781f5c",
         "created": false,
         "deleted": false,
         "forced": false,
@@ -51,11 +51,11 @@
                 "username": "CCheukKa"
             },
             "distinct": true,
-            "id": "98ad279fe406d5115df054d7474a204e46ea1d12",
-            "message": "add super hot reload to dev-watch mode to improve DX",
-            "timestamp": "2024-07-27T01:41:59+08:00",
-            "tree_id": "154c57ec30b446986e2c184dc1aac5ab960fba96",
-            "url": "https://github.com/ResiSense/ResiSense.github.io/commit/98ad279fe406d5115df054d7474a204e46ea1d12"
+            "id": "8c2ea5781f5ca4147118fcf0f47e7d9605aa56fa",
+            "message": "add Amgen as a sponsor",
+            "timestamp": "2024-07-27T18:52:44+08:00",
+            "tree_id": "fbcbcccea314e874297e1642b3a5892593599803",
+            "url": "https://github.com/ResiSense/ResiSense.github.io/commit/8c2ea5781f5ca4147118fcf0f47e7d9605aa56fa"
         },
         "pusher": {
             "email": "ccheukka@gmail.com",
@@ -68,6 +68,6 @@
     "ref_type": "branch",
     "secret_source": "Actions",
     "workflow_ref": "ResiSense/ResiSense.github.io/.github/workflows/full-ci-pipeline.yaml@refs/heads/main",
-    "workflow_sha": "98ad279fe406d5115df054d7474a204e46ea1d12",
+    "workflow_sha": "8c2ea5781f5ca4147118fcf0f47e7d9605aa56fa",
     "workspace": "/home/runner/work/ResiSense.github.io/ResiSense.github.io"
 }
