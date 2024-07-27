@@ -20,6 +20,10 @@ painted-title-card {
         animation-delay: var(--parallax-sticker-animation-delay);
         --parallax-amount-x: 0;
         --parallax-amount-y: 0;
+
+        @media (prefers-reduced-motion: reduce) {
+            animation: none;
+        }
     }
 
     &>.background-box {
