@@ -58,12 +58,12 @@ painted-title-card {
             font-weight: bolder;
             font-size: 3rem;
             top: 35%;
-            --parallax-amount-x: 2rem;
-            --parallax-amount-y: 12rem;
 
             &#title-name {
                 color: var(--deep-green);
                 z-index: 2;
+                --parallax-amount-x: 2rem;
+                --parallax-amount-y: 11rem;
             }
 
             &#title-name-shadow {
@@ -71,6 +71,8 @@ painted-title-card {
                 -webkit-text-stroke: 6px var(--white);
                 z-index: 1;
                 user-select: none;
+                --parallax-amount-x: 2.1rem;
+                --parallax-amount-y: 11.5rem;
             }
 
             &#title-name-box {
@@ -79,6 +81,8 @@ painted-title-card {
                 padding: 0.2rem 0.5rem;
                 rotate: -2deg;
                 user-select: none;
+                --parallax-amount-x: -2rem;
+                --parallax-amount-y: 9rem;
             }
         }
 
