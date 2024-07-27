@@ -3,106 +3,132 @@
     --padding-size: 0.5rem;
 }
 
-header {
-    position: fixed;
-    width: 100vw;
-    height: var(--header-height);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-direction: row;
-    z-index: 1;
-    pointer-events: none;
-
-    /* TODO: maker responsive at 1100px */
-
-    &>.logo-container {
-        margin-left: 1rem;
-        height: calc(var(--header-height) - var(--padding-size) * 4);
-        aspect-ratio: 1;
-        padding: calc(var(--padding-size) * 2);
-        background-color: var(--bright-brown);
-        border-radius: 0 0 50% 50%;
-        pointer-events: initial;
-
-        &>.logo {
-            display: block;
-            position: relative;
-            height: 100%;
-            background-image: url('/assets/logos/resisense/ResiSense Green Logo.svg');
-            background-size: 100% 100%;
-        }
-    }
-
-    &>.header-shelf {
+painted-header {
+    &>header {
+        position: fixed;
+        width: 100vw;
         height: var(--header-height);
-        width: 100%;
         display: flex;
-        flex-direction: column;
         justify-content: space-between;
-        align-items: start;
+        align-items: center;
+        flex-direction: row;
+        z-index: 1;
         pointer-events: none;
 
-        &>.header-items-container {
-            height: calc(var(--header-height) * 0.6);
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
+        /* TODO: make responsive at 1100px */
+
+        &>.logo-container {
+            margin-left: 1rem;
+            height: var(--header-height);
+            box-sizing: border-box;
+            aspect-ratio: 1;
+            padding: calc(var(--padding-size) * 2);
             background-color: var(--bright-brown);
-            width: calc(100% - var(--padding-size));
-            padding-right: var(--padding-size);
-            box-shadow: var(--bright-brown) -10rem 0px 0px 0px;
+            border-radius: 0 0 50% 50%;
             pointer-events: initial;
 
-            &>.header-leftside {
-                display: flex;
-                justify-content: space-between;
-                flex-direction: column;
-                gap: 0.4rem;
-
-                &>.logo-name-text {
-                    height: 2rem;
-                    font-size: 2.2rem;
-                    font-weight: 700;
-                    color: var(--deep-green);
-                }
-
-                &>.logo-flavour-text {
-                    height: 1.5rem;
-                    font-size: 1.2rem;
-                    font-weight: 500;
-                    color: var(--pale-brown);
-                    text-indent: 1rem;
-                }
-            }
-
-            &>.header-rightside {
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
-                gap: 1rem;
-                flex-direction: row;
+            &>.logo {
+                display: block;
+                position: relative;
+                height: 100%;
+                background-image: url('/assets/logos/resisense/ResiSense Green Logo.svg');
+                background-size: 100% 100%;
             }
         }
 
-        &>.header-catalogue-container {
-            width: calc(100% - var(--padding-size) * 2);
+        &>.header-shelf {
+            height: var(--header-height);
+            width: 100%;
             display: flex;
-            align-items: center;
+            flex-direction: column;
             justify-content: space-between;
-            padding-left: var(--padding-size);
-            padding-right: var(--padding-size);
-            margin-top: 0.5rem;
-            margin-bottom: auto;
+            align-items: start;
             pointer-events: none;
+
+            &>.header-items-container {
+                height: calc(var(--header-height) * 0.6);
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                background-color: var(--bright-brown);
+                width: 100%;
+                box-sizing: border-box;
+                padding-right: var(--padding-size);
+                box-shadow: var(--bright-brown) -10rem 0px 0px 0px;
+                pointer-events: initial;
+                position: relative;
+                z-index: -1;
+                overflow: clip;
+
+                &>.header-leftside {
+                    display: flex;
+                    justify-content: space-between;
+                    flex-direction: column;
+                    gap: 0.4rem;
+
+                    &>.logo-name-text {
+                        height: 2rem;
+                        font-size: 2.2rem;
+                        font-weight: 700;
+                        color: var(--deep-green);
+                    }
+
+                    &>.logo-flavour-text {
+                        height: 1.5rem;
+                        font-size: 1.2rem;
+                        font-weight: 500;
+                        color: var(--pale-brown);
+                        text-indent: 1rem;
+                    }
+                }
+
+                &>.header-rightside {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    gap: 1rem;
+                    flex-direction: row;
+                }
+
+                &>#header-page-title {
+                    position: absolute;
+                    width: 0;
+                    height: 0;
+                    text-wrap: nowrap;
+                    font-weight: bold;
+                    font-size: 2rem;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    color: var(--deep-green);
+                    bottom: calc(var(--header-height) * 0.6 / 2);
+                    left: 55%;
+
+                    &.hidden {
+                        bottom: -1rem;
+                    }
+                }
+            }
+
+            &>.header-catalogue-container {
+                width: 100%;
+                box-sizing: border-box;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                padding: 0 var(--padding-size);
+                margin-top: 0.5rem;
+                margin-bottom: auto;
+                pointer-events: none;
+            }
         }
     }
-}
 
-.header-spacer {
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: calc(var(--header-height) * 0.8);
-    pointer-events: none;
+    &>.header-spacer {
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: calc(var(--header-height) * 0.8);
+        pointer-events: none;
+    }
 }
