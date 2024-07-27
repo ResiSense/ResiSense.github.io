@@ -3,5 +3,7 @@ import { PageData } from "../types/PageData";
 export default function (pageData: PageData) {
     const document = pageData.document;
     // 
-    document.getElementById('title-name').innerHTML = document.title;
+    for (const element of document.getElementsByClassName('card-title')) {
+        element.innerHTML = document.title;
+    }
 }

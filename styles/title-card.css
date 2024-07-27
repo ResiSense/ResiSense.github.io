@@ -34,27 +34,37 @@ painted-title-card {
         }
     }
 
-    &>.title-name {
-        --rotate-degrees: 2deg;
-        background-color: var(--white);
-        padding: 0.2rem 0.5rem;
-        rotate: calc(-1 * var(--rotate-degrees));
+    &>.card-title {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 3rem;
+        font-weight: bolder;
+        font-size: 3rem;
 
-        &>#title-name {
+        &#title-name {
             color: var(--deep-green);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 3rem;
-            font-weight: bolder;
-            font-size: 3rem;
-            rotate: var(--rotate-degrees);
+            z-index: 2;
+        }
+
+        &#title-name-shadow {
+            color: transparent;
+            -webkit-text-stroke: 6px var(--white);
+            z-index: 1;
+        }
+
+        &#title-name-box {
+            color: transparent;
+            background-color: var(--white);
+            padding: 0.2rem 0.5rem;
+            rotate: -2deg;
         }
     }
 
     &>.stickers {
         height: 100%;
         width: 100%;
+        z-index: 0;
         isolation: isolate;
 
         &>* {
@@ -67,6 +77,7 @@ painted-title-card {
             scale: 1.5;
             left: 6%;
             top: 30%;
+            z-index: 1;
         }
 
         &>#globe {
@@ -80,6 +91,7 @@ painted-title-card {
             scale: 1.2;
             left: 30%;
             top: 65%;
+            z-index: 1;
         }
 
         &>#gurney {
@@ -100,6 +112,7 @@ painted-title-card {
             scale: 1.5;
             left: 90%;
             top: 20%;
+            z-index: 1;
         }
     }
 }
