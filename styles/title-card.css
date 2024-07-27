@@ -1,7 +1,5 @@
 painted-title-card {
     --card-rotate-degrees: 1deg;
-    isolation: isolate;
-    position: relative;
     height: 18rem;
     width: 100%;
     overflow: hidden;
@@ -43,6 +41,7 @@ painted-title-card {
         rotate: calc(-1 * var(--rotate-degrees));
 
         &>#title-name {
+            color: var(--deep-green);
             display: flex;
             justify-content: center;
             align-items: center;
@@ -54,7 +53,6 @@ painted-title-card {
     }
 
     &>.stickers {
-        position: relative;
         height: 100%;
         width: 100%;
         isolation: isolate;
