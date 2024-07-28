@@ -143,12 +143,12 @@ Live reloading should be enabled so that changes to the source code are automati
 >    - You are recommended to make a new commit by each change or feature you are making
 >      - **Don't do this:**
 >        - One commit for everything you have changed
->        - Commit messages that are too vague (`update stuff`)
+>        - Commit messages that are too vague (e.g. `update stuff`)
 >      - **Do this:**
->        - One commit for one feature (`add responsive scrolling`)
->        - One commit for one bug fix (`fix page not updating`)
->        - Group changes to multiple files in one commit if they are related (`update page content`)
->        - Put `minor` if you are only fixing typos or something (`minor: fix typo`)
+>        - One commit for one feature (e.g. `add responsive scrolling`)
+>        - One commit for one bug fix (e.g. `fix page not updating`)
+>        - Group changes to multiple files in one commit if they are related (e.g. `update page content`)
+>        - Put a `minor:` prefix if you are only fixing typos or something (e.g. `minor: fix typo`)
 >    - If you can't describe the changes clearly and concisely, you are probably doing too much in one commit
 > 6. Click `Commit & Create Pull Request`; you can find this button under the dropdown menu next to the commit button if it is not already visible
 > 7. Follow the instructions in the new browser window to create a pull request
