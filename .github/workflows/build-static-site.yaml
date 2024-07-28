@@ -60,8 +60,8 @@ jobs:
                   BRANCH_NAME=$(echo "$COMMIT_MESSAGE" | tr -c '[:alnum:]_-' '-' | sed 's/-\{2,\}/-/g' | sed 's/^-//;s/-$//')
                   echo "Branch name: $BRANCH_NAME"
 
-                  git config user.name static-site-builder[bot]
-                  git config user.email static-site-builder[bot]@users.noreply.github.com
+                  git config user.name "static-site-builder[bot]"
+                  git config user.email "static-site-builder[bot]@users.noreply.github.com"
                   COMMIT_AUTHOR="${{ github.actor }} <${{ github.actor }}@users.noreply.github.com>"
                   git add --all
                   git status
