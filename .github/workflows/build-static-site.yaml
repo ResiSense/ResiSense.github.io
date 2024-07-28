@@ -70,6 +70,6 @@ jobs:
                   git tag prod
                   git push --set-upstream origin "$BRANCH_NAME" --follow-tags
 
-                  gh pr create --assignee @me --base main --fill-verbose --title "$COMMIT_MESSAGE"
+                  gh pr create --base main --fill-verbose --title "$COMMIT_MESSAGE"
                   gh pr merge --squash
               shell: bash
