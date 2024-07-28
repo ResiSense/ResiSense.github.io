@@ -27,6 +27,23 @@ jobs:
         runs-on: ubuntu-latest
 
         steps:
+            - name: Set environment variables
+              id: set-vars
+              run: |
+                  COMMIT_MESSAGE="STATIC BUILD: ${{ github.event.head_commit.message || 'Automated build' }}"
+                  BRANCH_NAME=$(echo "$COMMIT_MESSAGE" | tr -c '[:alnum:]_-' '-' | sed 's/-\{2,\}/-/g' | sed 's/^-//;s/-$//')
+                  echo "::set-output name=COMMIT_MESSAGE::$COMMIT_MESSAGE"
+                  echo "::set-output name=BRANCH_NAME::$BRANCH_NAME"
+              shell: bash
+
+            - name: Setup actions bot
+              id: setup-actions-bot
+              uses: devlooped/actions-bot@v1
+              with:
+                  name: static-site-builder[bot]
+                  email: static-site-builder[bot]@users.noreply.github.com
+                  gh_token: ${{ secrets.GH_TOKEN }}
+
             - uses: actions/checkout@v4
 
             - name: Use Node.js 20.x
@@ -53,24 +70,28 @@ jobs:
             - name: Prettify all files
               run: npm run prettify --if-present
 
-            - name: Commit built site to main branch
+            - name: Commit and create pull request
+              id: create-pull-request
+              uses: peter-evans/create-pull-request@v6
               env:
-                  GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-              run: |
-                  COMMIT_MESSAGE="STATIC BUILD: ${{ github.event.head_commit.message || inputs.commitMessage }}"
-                  BRANCH_NAME=$(echo "$COMMIT_MESSAGE" | tr -c '[:alnum:]_-' '-' | sed 's/-\{2,\}/-/g' | sed 's/^-//;s/-$//')
-                  echo "Branch name: $BRANCH_NAME"
+                  BOT_AUTHOR: ${{ steps.setup-actions-bot.outputs.bot-author }}
+                  COMMIT_MESSAGE: ${{ steps.set-vars.outputs.COMMIT_MESSAGE }}
+                  BRANCH_NAME: ${{ steps.set-vars.outputs.BRANCH_NAME }}
+                  GH_TOKEN: ${{ secrets.GH_TOKEN }}
+              with:
+                  token: ${{ secrets.GH_TOKEN }}
+                  commit-message: ${{ env.COMMIT_MESSAGE }}
+                  committer: ${{ env.BOT_AUTHOR }}
+                  author: ${{ github.actor }} <${{ github.actor }}@users.noreply.github.com>
+                  branch: ${{ env.BRANCH_NAME }}
+                  title: ${{ env.COMMIT_MESSAGE }}
+                  body: Automated build by ${{ env.BOT_AUTHOR }}
 
-                  git config user.name "static-site-builder[bot]"
-                  git config user.email "static-site-builder[bot]@users.noreply.github.com"
-                  COMMIT_AUTHOR="${{ github.actor }} <${{ github.actor }}@users.noreply.github.com>"
-                  git add --all
-                  git status
-                  git checkout -b "$BRANCH_NAME"
-                  git commit -m "$COMMIT_MESSAGE" --author "$COMMIT_AUTHOR"
-                  git tag prod
-                  git push --set-upstream origin "$BRANCH_NAME" --follow-tags
-
-                  gh pr create --base main --fill-verbose --title "$COMMIT_MESSAGE"
-                  gh pr merge --squash
-              shell: bash
+            - name: Merge pull request
+              uses: juliangruber/merge-pull-request-action@v1
+              env:
+                  PULL_REQUEST_NUMBER: ${{ steps.create-pull-request.outputs.pull-request-number }}
+              with:
+                  github-token: ${{ secrets.GH_TOKEN }}
+                  number: ${{ env.PULL_REQUEST_NUMBER }}
+                  method: squash
