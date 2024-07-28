@@ -1,11 +1,11 @@
 {
     "job": "build",
     "ref": "refs/heads/main",
-    "sha": "3b60533742c59123a2ec4f225fe2bc419258464d",
+    "sha": "6f46fcb6bba87f7309111fad18ba1814954a421e",
     "repository": "ResiSense/ResiSense.github.io",
     "repository_Url": null,
-    "run_id": "10134840574",
-    "run_number": "113",
+    "run_id": "10134933388",
+    "run_number": "114",
     "run_attempt": "1",
     "artifact_cache_size_limit": "10",
     "actor": "CCheukKa",
@@ -13,8 +13,8 @@
     "workflow": "Full CI Pipeline",
     "event_name": "push",
     "event": {
-        "after": "3b60533742c59123a2ec4f225fe2bc419258464d",
-        "before": "061ad267684e305774e6b8e49dd16526b20eecd5",
+        "after": "6f46fcb6bba87f7309111fad18ba1814954a421e",
+        "before": "52773ba90605a2207040d9694560ea18bf75b6a4",
         "commits": [
             {
                 "author": {
@@ -28,17 +28,17 @@
                     "username": "CCheukKa"
                 },
                 "distinct": true,
-                "id": "3b60533742c59123a2ec4f225fe2bc419258464d",
-                "message": "update GitHub CI to follow branch ruleset",
-                "timestamp": "2024-07-29T05:18:32+08:00",
-                "tree_id": "3201776feaa8322cebbcd6b8ce7d410347cabeec",
-                "url": "https://github.com/ResiSense/ResiSense.github.io/commit/3b60533742c59123a2ec4f225fe2bc419258464d"
+                "id": "6f46fcb6bba87f7309111fad18ba1814954a421e",
+                "message": "Update DEV-WIKI.md with improved commit instructions and branch checkout steps",
+                "timestamp": "2024-07-29T05:33:50+08:00",
+                "tree_id": "1b34b8266cce2ba33615b3b8056e8f422263da08",
+                "url": "https://github.com/ResiSense/ResiSense.github.io/commit/6f46fcb6bba87f7309111fad18ba1814954a421e"
             }
         ],
-        "compare": "https://github.com/ResiSense/ResiSense.github.io/compare/061ad267684e...3b60533742c5",
+        "compare": "https://github.com/ResiSense/ResiSense.github.io/compare/52773ba90605...6f46fcb6bba8",
         "created": false,
         "deleted": false,
-        "forced": true,
+        "forced": false,
         "head_commit": {
             "author": {
                 "email": "ccheukka@gmail.com",
@@ -51,11 +51,11 @@
                 "username": "CCheukKa"
             },
             "distinct": true,
-            "id": "3b60533742c59123a2ec4f225fe2bc419258464d",
-            "message": "update GitHub CI to follow branch ruleset",
-            "timestamp": "2024-07-29T05:18:32+08:00",
-            "tree_id": "3201776feaa8322cebbcd6b8ce7d410347cabeec",
-            "url": "https://github.com/ResiSense/ResiSense.github.io/commit/3b60533742c59123a2ec4f225fe2bc419258464d"
+            "id": "6f46fcb6bba87f7309111fad18ba1814954a421e",
+            "message": "Update DEV-WIKI.md with improved commit instructions and branch checkout steps",
+            "timestamp": "2024-07-29T05:33:50+08:00",
+            "tree_id": "1b34b8266cce2ba33615b3b8056e8f422263da08",
+            "url": "https://github.com/ResiSense/ResiSense.github.io/commit/6f46fcb6bba87f7309111fad18ba1814954a421e"
         },
         "pusher": {
             "email": "ccheukka@gmail.com",
@@ -68,6 +68,6 @@
     "ref_type": "branch",
     "secret_source": "Actions",
     "workflow_ref": "ResiSense/ResiSense.github.io/.github/workflows/full-ci-pipeline.yaml@refs/heads/main",
-    "workflow_sha": "3b60533742c59123a2ec4f225fe2bc419258464d",
+    "workflow_sha": "6f46fcb6bba87f7309111fad18ba1814954a421e",
     "workspace": "/home/runner/work/ResiSense.github.io/ResiSense.github.io"
 }
