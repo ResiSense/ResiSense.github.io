@@ -1,11 +1,11 @@
 {
     "job": "build",
     "ref": "refs/heads/main",
-    "sha": "1659393837a9eeae18fe3fdceb38575dbd8ab36a",
+    "sha": "e89dbf03ca5611b6bee2501f1c3e4190b099eeb8",
     "repository": "ResiSense/ResiSense.github.io",
     "repository_Url": null,
-    "run_id": "10134643851",
-    "run_number": "108",
+    "run_id": "10134820559",
+    "run_number": "112",
     "run_attempt": "1",
     "artifact_cache_size_limit": "10",
     "actor": "CCheukKa",
@@ -13,8 +13,8 @@
     "workflow": "Full CI Pipeline",
     "event_name": "push",
     "event": {
-        "after": "1659393837a9eeae18fe3fdceb38575dbd8ab36a",
-        "before": "3d3e334ad30b0e66ecfa725a04198eab48b64fd0",
+        "after": "e89dbf03ca5611b6bee2501f1c3e4190b099eeb8",
+        "before": "472a17143cdcec06f4084fe6a7fdffb58e264ebe",
         "commits": [
             {
                 "author": {
@@ -28,14 +28,14 @@
                     "username": "CCheukKa"
                 },
                 "distinct": true,
-                "id": "1659393837a9eeae18fe3fdceb38575dbd8ab36a",
-                "message": "chore: Update GitHub Actions workflow to use secrets.GITHUB_TOKEN instead of secrets.GH_TOKEN",
-                "timestamp": "2024-07-29T04:44:36+08:00",
-                "tree_id": "4751f794bec44f8ff38ccd6cae4f1709ec6325bd",
-                "url": "https://github.com/ResiSense/ResiSense.github.io/commit/1659393837a9eeae18fe3fdceb38575dbd8ab36a"
+                "id": "e89dbf03ca5611b6bee2501f1c3e4190b099eeb8",
+                "message": "add github token",
+                "timestamp": "2024-07-29T05:15:41+08:00",
+                "tree_id": "5fb4af701e5c156721a2952e82da07a54cb05fe4",
+                "url": "https://github.com/ResiSense/ResiSense.github.io/commit/e89dbf03ca5611b6bee2501f1c3e4190b099eeb8"
             }
         ],
-        "compare": "https://github.com/ResiSense/ResiSense.github.io/compare/3d3e334ad30b...1659393837a9",
+        "compare": "https://github.com/ResiSense/ResiSense.github.io/compare/472a17143cdc...e89dbf03ca56",
         "created": false,
         "deleted": false,
         "forced": false,
@@ -51,11 +51,11 @@
                 "username": "CCheukKa"
             },
             "distinct": true,
-            "id": "1659393837a9eeae18fe3fdceb38575dbd8ab36a",
-            "message": "chore: Update GitHub Actions workflow to use secrets.GITHUB_TOKEN instead of secrets.GH_TOKEN",
-            "timestamp": "2024-07-29T04:44:36+08:00",
-            "tree_id": "4751f794bec44f8ff38ccd6cae4f1709ec6325bd",
-            "url": "https://github.com/ResiSense/ResiSense.github.io/commit/1659393837a9eeae18fe3fdceb38575dbd8ab36a"
+            "id": "e89dbf03ca5611b6bee2501f1c3e4190b099eeb8",
+            "message": "add github token",
+            "timestamp": "2024-07-29T05:15:41+08:00",
+            "tree_id": "5fb4af701e5c156721a2952e82da07a54cb05fe4",
+            "url": "https://github.com/ResiSense/ResiSense.github.io/commit/e89dbf03ca5611b6bee2501f1c3e4190b099eeb8"
         },
         "pusher": {
             "email": "ccheukka@gmail.com",
@@ -68,6 +68,6 @@
     "ref_type": "branch",
     "secret_source": "Actions",
     "workflow_ref": "ResiSense/ResiSense.github.io/.github/workflows/full-ci-pipeline.yaml@refs/heads/main",
-    "workflow_sha": "1659393837a9eeae18fe3fdceb38575dbd8ab36a",
+    "workflow_sha": "e89dbf03ca5611b6bee2501f1c3e4190b099eeb8",
     "workspace": "/home/runner/work/ResiSense.github.io/ResiSense.github.io"
 }
