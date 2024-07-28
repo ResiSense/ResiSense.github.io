@@ -132,12 +132,17 @@ Live reloading should be enabled so that changes to the source code are automati
 # ✍🏻Committing changes
 > 0. You are recommended to read up on the basics of Git and GitHub if you are not familiar with them
 > 1. Open the source control sidebar with `Ctrl` + `Shift` + `G`
-> 2. Sign in to your GitHub account as necessary
-> 3. Stage the changes by clicking the `+` button next to each file name
-> 4. Write a commit message in the text box at the top of the sidebar to describe the changes
-> 5. Click `Commit & Create Pull Request`; you can find this button under the dropdown menu next to the commit button if it is not already visible
-> 6. Follow the instructions in the new browser window to create a pull request
-> 7. Wait for the pull request to be reviewed and merged by the repository owner
+> 2. Sign in to your GitHub account as necessary, make sure your account is in the [website team](https://github.com/orgs/ResiSense/teams/website-team)
+> 3. Check at the bottom left corner of VSCode and make sure you are checking out to the correct branch ***(don't commit to `main` directly!)***
+>    - To create a new branch:
+>      - Go to the "more actions" menu (`...`), select `Branch` > `Create new branch` and name the branch after the changes you are making
+>    - To checkout to an existing branch:
+>      - Go to the "more actions" menu (`...`), select `Checkout to...` and select the branch you want to checkout to
+> 4. Stage the changes by clicking the `+` button next to each file name
+> 5. Write a commit message in the text box at the top of the sidebar to describe the changes
+> 6. Click `Commit & Create Pull Request`; you can find this button under the dropdown menu next to the commit button if it is not already visible
+> 7. Follow the instructions in the new browser window to create a pull request
+> 8. Wait for the pull request to be reviewed and merged by the repository owner
 
 Feel free to make changes here as a test if you wish. (This file is `/DEV-WIKI.md` btw.)
 ```markdown
