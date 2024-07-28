@@ -70,7 +70,7 @@ jobs:
                   COMMIT_MESSAGE: ${{ steps.set-env-vars.outputs.COMMIT_MESSAGE }}
                   BRANCH_NAME: ${{ steps.set-env-vars.outputs.BRANCH_NAME }}
               with:
-                  token: ${{ secrets.RESISENSE_PAT }}
+                  token: ${{ secrets.GITHUB_TOKEN }}
                   commit-message: ${{ env.COMMIT_MESSAGE }}
                   committer: ${{ env.BOT_COMMITTER }}
                   author: '${{ github.actor }} <${{ github.actor }}@users.noreply.github.com>'
@@ -83,6 +83,6 @@ jobs:
               env:
                   PULL_REQUEST_NUMBER: ${{ steps.create-pull-request.outputs.pull-request-number }}
               with:
-                  github-token: ${{ secrets.RESISENSE_PAT }}
+                  github-token: ${{ secrets.GITHUB_TOKEN }}
                   number: ${{ env.PULL_REQUEST_NUMBER }}
                   method: squash
