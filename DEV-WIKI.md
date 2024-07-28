@@ -155,7 +155,7 @@ Live reloading should be enabled so that changes to the source code are automati
 >    - If you can't describe the changes clearly and concisely, you are probably doing too much in one commit
 > 6. Click `Commit & Create Pull Request`; you can find this button under the dropdown menu next to the commit button if it is not already visible
 > 7. Follow the instructions in the new browser window to create a pull request
-> 8. Wait for the pull request to be reviewed and merged by the repository owner
+> 8. Wait for the pull request to be reviewed and merged by the repository owner (or do it yourself ¯\\\_(ツ)\_/¯)
 
 Feel free to make changes here as a test if you wish. (This file is `/DEV-WIKI.md` btw.)
 ```markdown
