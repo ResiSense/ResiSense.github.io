@@ -9,5 +9,5 @@ Lead: [CCheukKa](https://github.com/CCheukKa)
 # 🙋🏻‍♂️ Questions?
 If you have any questions or would like to know how to help contribute, please refer to the [developer wiki](/DEV-WIKI.md) or contact [CCheukKa](https://github.com/CCheukKa).  
 
-> [!CAUTION]
+> [!CAUTION]  
 > ***DO NOT*** directly commit to the repository. Always create a pull request before merging changes ...unless you are very confident or can't be bothered ¯\\\_(ツ)\_/¯.  
