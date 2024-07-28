@@ -9,13 +9,13 @@ on:
     workflow_dispatch:
         inputs:
             commitMessage:
-                description: "Commit message for static site build"
-                default: "Manual build trigger"
+                description: 'Commit message for static site build'
+                default: 'Manual build trigger'
                 required: true
                 type: string
 
 concurrency:
-    group: "build-static-site"
+    group: 'build-static-site'
     cancel-in-progress: true
 
 permissions:
@@ -32,7 +32,7 @@ jobs:
               uses: actions/setup-node@v4
               with:
                   node-version: 20.x
-                  cache: "npm"
+                  cache: 'npm'
 
             - name: Install dependencies
               run: npm ci
@@ -53,9 +53,20 @@ jobs:
               run: npm run prettify --if-present
 
             - name: Commit built site to main branch
-              uses: stefanzweifel/git-auto-commit-action@v5
-              with:
-                  commit_message: "STATIC BUILD: ${{ github.event.head_commit.message || inputs.commitMessage }}"
-                  commit_user_name: static-site-builder[bot]
-                  commit_user_email: static-site-builder[bot]@users.noreply.github.com
-                  tagging_message: prod
+              run: |
+                  COMMIT_MESSAGE="STATIC BUILD: ${{ github.event.head_commit.message || inputs.commitMessage }}"
+                  BRANCH_NAME=$(echo "$COMMIT_MESSAGE" | tr -cd '[:alnum:]-_ ')
+                  echo "Branch name: $BRANCH_NAME"
+
+                  git config user.name static-site-builder[bot]
+                  git config user.email static-site-builder[bot]@users.noreply.github.com
+                  git add --all
+                  git status
+                  git checkout -b "$BRANCH_NAME"
+                  git commit -m "$COMMIT_MESSAGE"
+                  git tag prod
+                  git push --set-upstream origin "$BRANCH_NAME" --follow-tags
+
+                  gh pr create --assignee @me --base main --fill-verbose --title "$COMMIT_MESSAGE"
+                  gh pr merge --squash
+              shell: bash
