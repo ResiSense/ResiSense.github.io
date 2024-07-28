@@ -133,7 +133,7 @@ Live reloading should be enabled so that changes to the source code are automati
 > 0. You are recommended to read up on the basics of Git and GitHub if you are not familiar with them
 > 1. Open the source control sidebar with `Ctrl` + `Shift` + `G`
 > 2. Sign in to your GitHub account as necessary, make sure your account is in the [website team](https://github.com/orgs/ResiSense/teams/website-team)
-> 3. Check at the bottom left corner of VSCode and make sure you are checking out to the correct branch ***(don't commit to `main` directly!)***
+> 3. At the bottom left corner of VSCode, check to make sure you are checking out to the correct branch ***(don't commit to `main` directly!)***
 >    - To create a new branch:
 >      - Under the "more actions" menu (`...`), select `Branch` > `Create new branch` and name the branch after the changes you are making
 >    - To checkout to an existing branch:
