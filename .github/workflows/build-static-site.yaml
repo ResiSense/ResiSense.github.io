@@ -28,12 +28,12 @@ jobs:
 
         steps:
             - name: Set environment variables
-              id: set-vars
+              id: set-env-vars
               run: |
                   COMMIT_MESSAGE="STATIC BUILD: ${{ github.event.head_commit.message || 'Automated build' }}"
                   BRANCH_NAME=$(echo "$COMMIT_MESSAGE" | tr -c '[:alnum:]_-' '-' | sed 's/-\{2,\}/-/g' | sed 's/^-//;s/-$//')
-                  echo "::set-output name=COMMIT_MESSAGE::$COMMIT_MESSAGE"
-                  echo "::set-output name=BRANCH_NAME::$BRANCH_NAME"
+                  echo "COMMIT_MESSAGE=$COMMIT_MESSAGE" >> "$GITHUB_OUTPUT"
+                  echo "BRANCH_NAME=$BRANCH_NAME" >> "$GITHUB_OUTPUT"
               shell: bash
 
             - uses: actions/checkout@v4
@@ -67,8 +67,8 @@ jobs:
               uses: peter-evans/create-pull-request@v6
               env:
                   BOT_COMMITTER: 'staic-site-builder[bot] <static-site-builder[bot]@users.noreply.github.com>'
-                  COMMIT_MESSAGE: ${{ steps.set-vars.outputs.COMMIT_MESSAGE }}
-                  BRANCH_NAME: ${{ steps.set-vars.outputs.BRANCH_NAME }}
+                  COMMIT_MESSAGE: ${{ steps.set-env-vars.outputs.COMMIT_MESSAGE }}
+                  BRANCH_NAME: ${{ steps.set-env-vars.outputs.BRANCH_NAME }}
               with:
                   token: ${{ secrets.GH_TOKEN }}
                   commit-message: ${{ env.COMMIT_MESSAGE }}
