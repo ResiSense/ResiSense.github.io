@@ -36,14 +36,6 @@ jobs:
                   echo "::set-output name=BRANCH_NAME::$BRANCH_NAME"
               shell: bash
 
-            - name: Setup actions bot
-              id: setup-actions-bot
-              uses: devlooped/actions-bot@v1
-              with:
-                  name: static-site-builder[bot]
-                  email: static-site-builder[bot]@users.noreply.github.com
-                  gh_token: ${{ secrets.GH_TOKEN }}
-
             - uses: actions/checkout@v4
 
             - name: Use Node.js 20.x
@@ -74,18 +66,17 @@ jobs:
               id: create-pull-request
               uses: peter-evans/create-pull-request@v6
               env:
-                  BOT_AUTHOR: ${{ steps.setup-actions-bot.outputs.bot-author }}
+                  BOT_COMMITTER: 'staic-site-builder[bot] <static-site-builder[bot]@users.noreply.github.com>'
                   COMMIT_MESSAGE: ${{ steps.set-vars.outputs.COMMIT_MESSAGE }}
                   BRANCH_NAME: ${{ steps.set-vars.outputs.BRANCH_NAME }}
-                  GH_TOKEN: ${{ secrets.GH_TOKEN }}
               with:
                   token: ${{ secrets.GH_TOKEN }}
                   commit-message: ${{ env.COMMIT_MESSAGE }}
-                  committer: ${{ env.BOT_AUTHOR }}
-                  author: ${{ github.actor }} <${{ github.actor }}@users.noreply.github.com>
+                  committer: ${{ env.BOT_COMMITTER }}
+                  author: '${{ github.actor }} <${{ github.actor }}@users.noreply.github.com>'
                   branch: ${{ env.BRANCH_NAME }}
                   title: ${{ env.COMMIT_MESSAGE }}
-                  body: Automated build by ${{ env.BOT_AUTHOR }}
+                  body: 'Automated build by ${{ env.BOT_COMMITTER }}'
 
             - name: Merge pull request
               uses: juliangruber/merge-pull-request-action@v1
