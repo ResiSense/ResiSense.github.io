@@ -1,11 +1,11 @@
 {
     "job": "build",
     "ref": "refs/heads/main",
-    "sha": "1f1e2e75345f6074c917250fdb403e0b8772ea22",
+    "sha": "3b60533742c59123a2ec4f225fe2bc419258464d",
     "repository": "ResiSense/ResiSense.github.io",
     "repository_Url": null,
-    "run_id": "10133599377",
-    "run_number": "83",
+    "run_id": "10134840574",
+    "run_number": "113",
     "run_attempt": "1",
     "artifact_cache_size_limit": "10",
     "actor": "CCheukKa",
@@ -13,8 +13,8 @@
     "workflow": "Full CI Pipeline",
     "event_name": "push",
     "event": {
-        "after": "1f1e2e75345f6074c917250fdb403e0b8772ea22",
-        "before": "0c27b787b4d1d91083a7cd6f267a9346f0893e42",
+        "after": "3b60533742c59123a2ec4f225fe2bc419258464d",
+        "before": "061ad267684e305774e6b8e49dd16526b20eecd5",
         "commits": [
             {
                 "author": {
@@ -28,17 +28,17 @@
                     "username": "CCheukKa"
                 },
                 "distinct": true,
-                "id": "1f1e2e75345f6074c917250fdb403e0b8772ea22",
-                "message": "change Amgen to HKABE",
-                "timestamp": "2024-07-29T01:41:10+08:00",
-                "tree_id": "14a6fc878f09543f416f2f0d59819a3446188c38",
-                "url": "https://github.com/ResiSense/ResiSense.github.io/commit/1f1e2e75345f6074c917250fdb403e0b8772ea22"
+                "id": "3b60533742c59123a2ec4f225fe2bc419258464d",
+                "message": "update GitHub CI to follow branch ruleset",
+                "timestamp": "2024-07-29T05:18:32+08:00",
+                "tree_id": "3201776feaa8322cebbcd6b8ce7d410347cabeec",
+                "url": "https://github.com/ResiSense/ResiSense.github.io/commit/3b60533742c59123a2ec4f225fe2bc419258464d"
             }
         ],
-        "compare": "https://github.com/ResiSense/ResiSense.github.io/compare/0c27b787b4d1...1f1e2e75345f",
+        "compare": "https://github.com/ResiSense/ResiSense.github.io/compare/061ad267684e...3b60533742c5",
         "created": false,
         "deleted": false,
-        "forced": false,
+        "forced": true,
         "head_commit": {
             "author": {
                 "email": "ccheukka@gmail.com",
@@ -51,11 +51,11 @@
                 "username": "CCheukKa"
             },
             "distinct": true,
-            "id": "1f1e2e75345f6074c917250fdb403e0b8772ea22",
-            "message": "change Amgen to HKABE",
-            "timestamp": "2024-07-29T01:41:10+08:00",
-            "tree_id": "14a6fc878f09543f416f2f0d59819a3446188c38",
-            "url": "https://github.com/ResiSense/ResiSense.github.io/commit/1f1e2e75345f6074c917250fdb403e0b8772ea22"
+            "id": "3b60533742c59123a2ec4f225fe2bc419258464d",
+            "message": "update GitHub CI to follow branch ruleset",
+            "timestamp": "2024-07-29T05:18:32+08:00",
+            "tree_id": "3201776feaa8322cebbcd6b8ce7d410347cabeec",
+            "url": "https://github.com/ResiSense/ResiSense.github.io/commit/3b60533742c59123a2ec4f225fe2bc419258464d"
         },
         "pusher": {
             "email": "ccheukka@gmail.com",
@@ -64,10 +64,10 @@
         "ref": "refs/heads/main"
     },
     "ref_name": "main",
-    "ref_protected": false,
+    "ref_protected": true,
     "ref_type": "branch",
     "secret_source": "Actions",
     "workflow_ref": "ResiSense/ResiSense.github.io/.github/workflows/full-ci-pipeline.yaml@refs/heads/main",
-    "workflow_sha": "1f1e2e75345f6074c917250fdb403e0b8772ea22",
+    "workflow_sha": "3b60533742c59123a2ec4f225fe2bc419258464d",
     "workspace": "/home/runner/work/ResiSense.github.io/ResiSense.github.io"
 }
