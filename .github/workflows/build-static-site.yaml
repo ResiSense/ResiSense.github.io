@@ -53,6 +53,8 @@ jobs:
               run: npm run prettify --if-present
 
             - name: Commit built site to main branch
+              env:
+                  GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
               run: |
                   COMMIT_MESSAGE="STATIC BUILD: ${{ github.event.head_commit.message || inputs.commitMessage }}"
                   BRANCH_NAME=$(echo "$COMMIT_MESSAGE" | tr -c '[:alnum:]_-' '-' | sed 's/-\{2,\}/-/g' | sed 's/^-//;s/-$//')
