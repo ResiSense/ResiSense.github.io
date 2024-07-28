@@ -1,143 +1,110 @@
+@import "font.css";
+
 footer {
-    --footer-background-color: var(--bright-brown);
-    --footer-horizontal-padding: 1rem;
-    background-color: var(--footer-background-color);
+    --footer-background-color: var(#ead6a3);
+    background-color: #efe5cb;
+    height: 25%;
+
+
+    & .footer-text {
+        font-family: montserrat;
+        font-weight: 500;
+        color: #3C240A;
+        font-weight: 500;
+        font-size: 15px;
+    }
 
     &>.footer-banner {
-        /* background-color: var(--footer-background-color); */
-        width: 100%;
-        height: 7rem;
-        display: flex;
-        box-sizing: border-box;
-        padding: 1rem var(--footer-horizontal-padding) 0.5rem;
-        align-items: center;
-        overflow: hidden;
-
-        &>div {
-            height: 100%;
-        }
-
-        & img {
-            height: 100%;
-            width: auto;
-        }
+        display: grid;
+        grid-template-columns: 1fr 3fr;
 
         &>.resisense {
             display: flex;
-            gap: 1rem;
+            flex-direction: column;
+            margin: 2rem 3rem;
+            border-right: 2px solid #404231;
+            gap: 0.5rem;
 
-            &>.resisense-logo-aside {
+            &>.resisense-logo {
                 display: flex;
                 flex-direction: column;
-                justify-content: space-between;
-                color: var(--deep-green);
+                margin-right: 4rem;
 
-                &>.resisense-name {
-                    --size: 2.6rem;
-                    font-size: var(--size);
-                    line-height: var(--size);
-                    font-weight: 700;
-                    flex-grow: 1;
-                    display: flex;
-                    align-items: center;
+                &>.resisense-logo-pic {
+
+                    height: 90px;
+
                 }
 
-                &>.socials {
-                    font-size: 1rem;
-                    display: flex;
-                    flex-direction: column;
-
-                    &>.social {
-                        width: fit-content;
-
-                        &>a {
-                            line-height: 1rem;
-                            display: flex;
-                            align-items: center;
-                            gap: 0.2rem;
-                            width: fit-content;
-                            padding-right: 1rem;
-
-                            &>img {
-                                max-width: 1rem;
-                            }
-                        }
-                    }
-                }
             }
-        }
 
-        & .divider {
-            margin: 0 1rem;
-            border-left: 2px dashed var(--desaturated-orange);
+            &>.socials {
+                display: flex;
+                margin-right: 4rem;
+                flex-direction: column;
+                justify-content: left;
+                align-items: center;
+
+                & .footer-text {
+                    letter-spacing: 3px;
+                }
+
+                & img {
+                    height: 1rem;
+                    position: relative;
+                    top: 0.1rem;
+                    margin-right: 0.3rem;
+                }
+
+                &>.instagram {
+                    position: relative;
+                    right: 17%;
+                    margin-bottom: 0.3rem;
+
+                    & img {
+                        height: 1.1rem;
+                    }
+
+
+                }
+
+                &>.email {
+                    position: relative;
+                    left: 1.8%;
+                }
+
+            }
+
         }
 
         &>.logo-container-wrapper {
-            display: grid;
-            grid-template-columns: auto auto;
-            grid-template-rows: 50% 50%;
-            gap: 0.2rem;
+            display: flex;
+            flex-direction: column;
+            margin: 2rem 3rem;
+            gap: 0.5rem;x   
 
-            &>.cuhk-department-logo-container,
+            &>.cuhk-department-logo-container {
+                display: flex;
+                gap: 1rem;
+            }
+
             &>.sponsor-logo-container {
                 display: flex;
-                flex-direction: row;
-                align-items: center;
-                gap: 0.5rem;
-
-                &>a {
-                    height: 100%;
-
-                    &>img {
-                        width: 100%;
-                        height: 100%;
-                        object-fit: contain;
-                    }
-                }
+                gap: 1rem;
             }
-        }
-    }
 
-    &>.footer-spacer {
-        --footer-spacer-height: awaiting-js-definition;
-        height: var(--footer-spacer-height);
-        background-color: var(--footer-background-color);
-        position: sticky;
-        bottom: 0;
-    }
+            & img {
+                height: 40px;
+            }
 
-    &>.footer-persistent {
-        background-color: var(--footer-background-color);
-        position: fixed;
-        bottom: 0;
-        display: flex;
-        padding: 0.1rem var(--footer-horizontal-padding);
-        width: calc(100% - 2rem);
-        justify-content: space-between;
-        align-items: center;
-        flex-direction: row;
+            &>.license-container {
 
-        &>div {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: row;
-
-            &>span>a {
-                height: 100%;
-
-                &>img {
-                    vertical-align: middle;
+                & img {
                     height: 20px;
-                    aspect-ratio: 1/1;
-                    object-fit: contain;
                 }
-            }
-
-            &.license-container a {
-                font-weight: 700;
-                text-decoration: underline;
             }
         }
     }
+
+
 }

@@ -83,6 +83,17 @@
                     "/styles/acknowledgements.css"
                 ]
             }
+        },
+        {
+            "name": "groject-description-update",
+           
+            "populator": "html-frame",
+            "includes": {
+                "css": [
+                    "/styles/groject-description-update.css"
+                ]
+            }
         }
+       
     ]
 }
