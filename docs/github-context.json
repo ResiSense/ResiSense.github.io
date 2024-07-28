@@ -1,11 +1,11 @@
 {
     "job": "build",
     "ref": "refs/heads/main",
-    "sha": "9d5d8d373a627f32c4fe7250690ba2d063f5c9d0",
+    "sha": "1659393837a9eeae18fe3fdceb38575dbd8ab36a",
     "repository": "ResiSense/ResiSense.github.io",
     "repository_Url": null,
-    "run_id": "10134318793",
-    "run_number": "104",
+    "run_id": "10134643851",
+    "run_number": "108",
     "run_attempt": "1",
     "artifact_cache_size_limit": "10",
     "actor": "CCheukKa",
@@ -13,8 +13,8 @@
     "workflow": "Full CI Pipeline",
     "event_name": "push",
     "event": {
-        "after": "9d5d8d373a627f32c4fe7250690ba2d063f5c9d0",
-        "before": "dfe4036d313c0a26d4645aad4ea843a05e3f1e76",
+        "after": "1659393837a9eeae18fe3fdceb38575dbd8ab36a",
+        "before": "3d3e334ad30b0e66ecfa725a04198eab48b64fd0",
         "commits": [
             {
                 "author": {
@@ -28,17 +28,17 @@
                     "username": "CCheukKa"
                 },
                 "distinct": true,
-                "id": "9d5d8d373a627f32c4fe7250690ba2d063f5c9d0",
-                "message": "add PR permission",
-                "timestamp": "2024-07-29T03:48:53+08:00",
-                "tree_id": "07fc7d7302919ada5e1dcbb261bc489a1ad25b9e",
-                "url": "https://github.com/ResiSense/ResiSense.github.io/commit/9d5d8d373a627f32c4fe7250690ba2d063f5c9d0"
+                "id": "1659393837a9eeae18fe3fdceb38575dbd8ab36a",
+                "message": "chore: Update GitHub Actions workflow to use secrets.GITHUB_TOKEN instead of secrets.GH_TOKEN",
+                "timestamp": "2024-07-29T04:44:36+08:00",
+                "tree_id": "4751f794bec44f8ff38ccd6cae4f1709ec6325bd",
+                "url": "https://github.com/ResiSense/ResiSense.github.io/commit/1659393837a9eeae18fe3fdceb38575dbd8ab36a"
             }
         ],
-        "compare": "https://github.com/ResiSense/ResiSense.github.io/compare/dfe4036d313c...9d5d8d373a62",
+        "compare": "https://github.com/ResiSense/ResiSense.github.io/compare/3d3e334ad30b...1659393837a9",
         "created": false,
         "deleted": false,
-        "forced": true,
+        "forced": false,
         "head_commit": {
             "author": {
                 "email": "ccheukka@gmail.com",
@@ -51,11 +51,11 @@
                 "username": "CCheukKa"
             },
             "distinct": true,
-            "id": "9d5d8d373a627f32c4fe7250690ba2d063f5c9d0",
-            "message": "add PR permission",
-            "timestamp": "2024-07-29T03:48:53+08:00",
-            "tree_id": "07fc7d7302919ada5e1dcbb261bc489a1ad25b9e",
-            "url": "https://github.com/ResiSense/ResiSense.github.io/commit/9d5d8d373a627f32c4fe7250690ba2d063f5c9d0"
+            "id": "1659393837a9eeae18fe3fdceb38575dbd8ab36a",
+            "message": "chore: Update GitHub Actions workflow to use secrets.GITHUB_TOKEN instead of secrets.GH_TOKEN",
+            "timestamp": "2024-07-29T04:44:36+08:00",
+            "tree_id": "4751f794bec44f8ff38ccd6cae4f1709ec6325bd",
+            "url": "https://github.com/ResiSense/ResiSense.github.io/commit/1659393837a9eeae18fe3fdceb38575dbd8ab36a"
         },
         "pusher": {
             "email": "ccheukka@gmail.com",
@@ -68,6 +68,6 @@
     "ref_type": "branch",
     "secret_source": "Actions",
     "workflow_ref": "ResiSense/ResiSense.github.io/.github/workflows/full-ci-pipeline.yaml@refs/heads/main",
-    "workflow_sha": "9d5d8d373a627f32c4fe7250690ba2d063f5c9d0",
+    "workflow_sha": "1659393837a9eeae18fe3fdceb38575dbd8ab36a",
     "workspace": "/home/runner/work/ResiSense.github.io/ResiSense.github.io"
 }
