@@ -135,10 +135,10 @@ Live reloading should be enabled so that changes to the source code are automati
 > 2. Sign in to your GitHub account as necessary, make sure your account is in the [website team](https://github.com/orgs/ResiSense/teams/website-team)
 > 3. At the bottom left corner of VSCode, check to make sure you are checking out to the correct branch ***(don't commit to `main` directly!)***
 >    - To create a new branch:
->      > 0. If you have already made changes, stash them by selecting `Stash` > `Stash (Include Untracked)` under the `...` menu
->      > 1. Under the `...` menu, select `Branch` > `Create new branch` and name the branch after the changes you are making
->      > 2. Click `Publish`
->      > 3. If you have stashed changes, retrieve them back by selecting `Stash` > `Pop Stash` under the `...` menu
+>      > 1. If you have already made changes, stash them by selecting `Stash` > `Stash (Include Untracked)` under the `...` menu
+>      > 2. Under the `...` menu, select `Branch` > `Create new branch` and name the branch after the changes you are making
+>      > 3. Click `Publish`
+>      > 4. If you have stashed changes, retrieve them back by selecting `Stash` > `Pop Stash` under the `...` menu
 >    - To checkout to an existing branch:
 >      > 1. Under the `...` menu, select `Checkout to...` and select the branch you want to checkout to
 > 4. Stage the changes by clicking the `+` button next to each file name
