@@ -55,7 +55,7 @@ jobs:
             - name: Commit built site to main branch
               run: |
                   COMMIT_MESSAGE="STATIC BUILD: ${{ github.event.head_commit.message || inputs.commitMessage }}"
-                  BRANCH_NAME=$(echo "$COMMIT_MESSAGE" | tr -cd '[:alnum:]-_ ')
+                  BRANCH_NAME=$(echo "$COMMIT_MESSAGE" | tr -cd '[:alnum:]-_' '-')
                   echo "Branch name: $BRANCH_NAME"
 
                   git config user.name static-site-builder[bot]
