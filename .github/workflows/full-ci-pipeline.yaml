@@ -2,18 +2,18 @@ name: Full CI Pipeline
 
 on:
     push:
-        branches: "main"
-        tags-ignore: "prod"
+        branches: 'main'
+        tags-ignore: 'prod'
     workflow_dispatch:
         inputs:
             commitMessage:
-                description: "Commit message for full CI pipeline"
-                default: "Manual full CI pipeline trigger"
+                description: 'Commit message for full CI pipeline'
+                default: 'Manual full CI pipeline trigger'
                 required: true
                 type: string
 
 concurrency:
-    group: "full-ci-pipeline"
+    group: 'full-ci-pipeline'
     cancel-in-progress: true
 
 permissions:
@@ -24,6 +24,7 @@ jobs:
         uses: ./.github/workflows/build-static-site.yaml
         with:
             commitMessage: ${{ github.event.head_commit.message || inputs.commitMessage }}
+        secrets: inherit
 
     sync_repo_to_gitlab:
         needs: build_static_site
