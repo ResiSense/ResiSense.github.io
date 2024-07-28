@@ -72,4 +72,4 @@ jobs:
 
                   gh pr create --assignee @me --base main --fill-verbose --title "$COMMIT_MESSAGE"
                   gh pr merge --squash
-              shell: /usr/bin/bash --noprofile --norc -e -o pipefail
+              shell: bash --noprofile --norc -e -o pipefail
