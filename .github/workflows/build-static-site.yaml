@@ -62,27 +62,24 @@ jobs:
             - name: Prettify all files
               run: npm run prettify --if-present
 
-            - name: Commit and create pull request
-              id: create-pull-request
-              uses: peter-evans/create-pull-request@v6
+            - name: Commit changes
+              uses: stefanzweifel/git-auto-commit-action@v5
               env:
-                  BOT_COMMITTER: 'staic-site-builder[bot] <static-site-builder[bot]@users.noreply.github.com>'
                   COMMIT_MESSAGE: ${{ steps.set-env-vars.outputs.COMMIT_MESSAGE }}
                   BRANCH_NAME: ${{ steps.set-env-vars.outputs.BRANCH_NAME }}
               with:
-                  token: ${{ secrets.GITHUB_TOKEN }}
-                  commit-message: ${{ env.COMMIT_MESSAGE }}
-                  committer: ${{ env.BOT_COMMITTER }}
-                  author: '${{ github.actor }} <${{ github.actor }}@users.noreply.github.com>'
+                  commit_message: ${{ env.COMMIT_MESSAGE }}
                   branch: ${{ env.BRANCH_NAME }}
-                  title: ${{ env.COMMIT_MESSAGE }}
-                  body: 'Automated build by ${{ env.BOT_COMMITTER }}'
+                  commit_user_name: staic-site-builder[bot]
+                  commit_user_email: staic-site-builder[bot]@users.noreply.github.com
+                  create_branch: true
+                  add_options: '--all'
+                  tagging_message: 'prod'
 
-            - name: Merge pull request
-              uses: juliangruber/merge-pull-request-action@v1
+            - name: Create and merge pull request
               env:
-                  PULL_REQUEST_NUMBER: ${{ steps.create-pull-request.outputs.pull-request-number }}
-              with:
-                  github-token: ${{ secrets.GITHUB_TOKEN }}
-                  number: ${{ env.PULL_REQUEST_NUMBER }}
-                  method: squash
+                  COMMIT_MESSAGE: ${{ steps.set-env-vars.outputs.COMMIT_MESSAGE }}
+              run: |
+                  gh pr create --base main --fill-verbose --title "${{ env.COMMIT_MESSAGE }}"
+                  gh pr merge --squash
+              shell: bash
