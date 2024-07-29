@@ -5,7 +5,6 @@ footer {
     background-color: #efe5cb;
     height: 25%;
 
-
     & .footer-text {
         font-family: montserrat;
         font-weight: 500;
@@ -33,11 +32,8 @@ footer {
                 margin-right: 4rem;
 
                 &>.resisense-logo-pic {
-
                     height: 90px;
-
                 }
-
             }
 
             &>.socials {
@@ -66,17 +62,13 @@ footer {
                     & img {
                         height: 1.1rem;
                     }
-
-
                 }
 
                 &>.email {
                     position: relative;
                     left: 1.8%;
                 }
-
             }
-
         }
 
         &>.logo-container-wrapper {
@@ -100,13 +92,10 @@ footer {
             }
 
             &>.license-container {
-
                 & img {
                     height: 20px;
                 }
             }
         }
     }
-
-
 }
