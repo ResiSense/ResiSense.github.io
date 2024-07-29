@@ -81,7 +81,7 @@ async function compileTemplates(): Promise<TemplateCache> {
     function paintTemplate(template: Template): Template {
         if (template.painted) { return template; }
         // 
-        if (!template.html.match(templateRegex)) {
+        if (!htmlStripMatch(template.html, templateRegex)) {
             template.painted = true;
             return template;
         }
@@ -96,7 +96,7 @@ function paintHtmlFragment(paintableHtml: PaintableHtml, templateCache: Template
     paintableHtml.css = paintableHtml.css || { embed: [] };
 
     // templates
-    paintableHtml.html.match(templateRegex)?.forEach(customTag => {
+    htmlStripMatch(paintableHtml.html, templateRegex)?.forEach(customTag => {
         const customTagName = customTag.replace('<custom-', '').replace(' />', '');
         const customTemplate = templateCache[customTagName];
         if (!customTemplate) { throw new Error(`Template not found: ${customTagName}`); }
@@ -121,7 +121,7 @@ function paintHtmlFragment(paintableHtml: PaintableHtml, templateCache: Template
     return paintableHtml;
 
     function paint(html: string, regex: RegExp, replaceHead: string, replaceTail: string, includeList: string[]) {
-        html.match(regex)?.forEach(match => {
+        htmlStripMatch(html, regex)?.forEach(match => {
             const path = match.replace(replaceHead, '').replace(replaceTail, '');
             html = html.replace(match, '');
             includeList.push(path);
@@ -135,10 +135,23 @@ function paintHtmlFragment(paintableHtml: PaintableHtml, templateCache: Template
 // }
 
 function paintPageHtml(paintableHtml: PaintableHtml, templateCache: TemplateCache): PaintableHtml {
-    while (paintableHtml.html.match(templateRegex)) {
+    while (htmlStripMatch(paintableHtml.html, templateRegex)) {
         paintHtmlFragment(paintableHtml, templateCache);
     }
     return paintableHtml;
+}
+
+/**
+ * Strips HTML comments from the given HTML string and returns the result of string.prototype.match() against the provided regular expression.
+ * @param html - The HTML string to strip comments from.
+ * @param arg - The regular expression to match against the stripped HTML.
+ * @returns The result of matching the stripped HTML against the provided regular expression, or null if there is no match.
+ */
+function htmlStripMatch(html: string, regexp: string | RegExp): RegExpMatchArray | null;
+function htmlStripMatch(html: string, matcher: { [Symbol.match](string: string): RegExpMatchArray | null; }): RegExpMatchArray | null;
+function htmlStripMatch(html: string, arg: any): RegExpMatchArray | null {
+    const strippedHtml = html.replace(/<!--[\s\S]*?-->/g, '');
+    return strippedHtml.match(arg);
 }
 
 export default class TemplatePainter {
