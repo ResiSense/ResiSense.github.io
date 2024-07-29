@@ -8,7 +8,7 @@ on:
 
 concurrency:
     group: 'remove-prod-tag'
-    cancel-in-progress: true
+    cancel-in-progress: false
 
 permissions:
     contents: write
