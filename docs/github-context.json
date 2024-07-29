@@ -1,11 +1,11 @@
 {
     "job": "build",
     "ref": "refs/heads/main",
-    "sha": "131f9675d44387f86b80ea1368fd18dd3074f47e",
+    "sha": "dd136730a36a1a40b21d9746650f375bb5436733",
     "repository": "ResiSense/ResiSense.github.io",
     "repository_Url": null,
-    "run_id": "10151809690",
-    "run_number": "147",
+    "run_id": "10152424724",
+    "run_number": "148",
     "run_attempt": "1",
     "artifact_cache_size_limit": "10",
     "actor": "CCheukKa",
@@ -13,8 +13,8 @@
     "workflow": "Full CI pipeline",
     "event_name": "push",
     "event": {
-        "after": "131f9675d44387f86b80ea1368fd18dd3074f47e",
-        "before": "df1d5da358be16c1a0f752bed0677c5977f42c27",
+        "after": "dd136730a36a1a40b21d9746650f375bb5436733",
+        "before": "2f1973c0a607f40b2f30ebabf0ee644cf280fba9",
         "commits": [
             {
                 "author": {
@@ -28,14 +28,50 @@
                     "username": "CCheukKa"
                 },
                 "distinct": true,
-                "id": "131f9675d44387f86b80ea1368fd18dd3074f47e",
-                "message": "remove reliance on prod tags",
-                "timestamp": "2024-07-30T05:03:43+08:00",
-                "tree_id": "e739e1961566ab7aa69217e275255d45df4ea5d7",
-                "url": "https://github.com/ResiSense/ResiSense.github.io/commit/131f9675d44387f86b80ea1368fd18dd3074f47e"
+                "id": "14be42456ebc08f48daa20be026422988bb51665",
+                "message": "allow builder to ignore commented embed tags",
+                "timestamp": "2024-07-30T05:49:32+08:00",
+                "tree_id": "7bba0313ca661f2003d880b799c2e9d7335620de",
+                "url": "https://github.com/ResiSense/ResiSense.github.io/commit/14be42456ebc08f48daa20be026422988bb51665"
+            },
+            {
+                "author": {
+                    "email": "ccheukka@gmail.com",
+                    "name": "CCheukKa",
+                    "username": "CCheukKa"
+                },
+                "committer": {
+                    "email": "ccheukka@gmail.com",
+                    "name": "CCheukKa",
+                    "username": "CCheukKa"
+                },
+                "distinct": true,
+                "id": "0dae1fabf792017b061ac84e0741b5d3c506780a",
+                "message": "chore: Refactor TemplatePainter.ts to remove unused code",
+                "timestamp": "2024-07-30T05:49:40+08:00",
+                "tree_id": "289eb07272cd64c176f3be410a09c2217204525c",
+                "url": "https://github.com/ResiSense/ResiSense.github.io/commit/0dae1fabf792017b061ac84e0741b5d3c506780a"
+            },
+            {
+                "author": {
+                    "email": "ccheukka@gmail.com",
+                    "name": "CCheukKa",
+                    "username": "CCheukKa"
+                },
+                "committer": {
+                    "email": "ccheukka@gmail.com",
+                    "name": "CCheukKa",
+                    "username": "CCheukKa"
+                },
+                "distinct": true,
+                "id": "dd136730a36a1a40b21d9746650f375bb5436733",
+                "message": "Refactor TemplatePainter.ts to use constants for regex patterns",
+                "timestamp": "2024-07-30T05:53:24+08:00",
+                "tree_id": "c60536fc6cfa4580051ba196aa2f203b07f63561",
+                "url": "https://github.com/ResiSense/ResiSense.github.io/commit/dd136730a36a1a40b21d9746650f375bb5436733"
             }
         ],
-        "compare": "https://github.com/ResiSense/ResiSense.github.io/compare/df1d5da358be...131f9675d443",
+        "compare": "https://github.com/ResiSense/ResiSense.github.io/compare/2f1973c0a607...dd136730a36a",
         "created": false,
         "deleted": false,
         "forced": false,
@@ -51,11 +87,11 @@
                 "username": "CCheukKa"
             },
             "distinct": true,
-            "id": "131f9675d44387f86b80ea1368fd18dd3074f47e",
-            "message": "remove reliance on prod tags",
-            "timestamp": "2024-07-30T05:03:43+08:00",
-            "tree_id": "e739e1961566ab7aa69217e275255d45df4ea5d7",
-            "url": "https://github.com/ResiSense/ResiSense.github.io/commit/131f9675d44387f86b80ea1368fd18dd3074f47e"
+            "id": "dd136730a36a1a40b21d9746650f375bb5436733",
+            "message": "Refactor TemplatePainter.ts to use constants for regex patterns",
+            "timestamp": "2024-07-30T05:53:24+08:00",
+            "tree_id": "c60536fc6cfa4580051ba196aa2f203b07f63561",
+            "url": "https://github.com/ResiSense/ResiSense.github.io/commit/dd136730a36a1a40b21d9746650f375bb5436733"
         },
         "pusher": {
             "email": "ccheukka@gmail.com",
@@ -68,6 +104,6 @@
     "ref_type": "branch",
     "secret_source": "Actions",
     "workflow_ref": "ResiSense/ResiSense.github.io/.github/workflows/full-ci-pipeline.yaml@refs/heads/main",
-    "workflow_sha": "131f9675d44387f86b80ea1368fd18dd3074f47e",
+    "workflow_sha": "dd136730a36a1a40b21d9746650f375bb5436733",
     "workspace": "/home/runner/work/ResiSense.github.io/ResiSense.github.io"
 }
