@@ -1,12 +1,10 @@
-@import "font.css";
-
 footer {
     --footer-background-color: var(#ead6a3);
     background-color: #efe5cb;
     height: 25%;
 
     & .footer-text {
-        font-family: montserrat;
+        font-family: "Montserrat", sans-serif;
         font-weight: 500;
         color: #3C240A;
         font-weight: 500;
