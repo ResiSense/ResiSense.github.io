@@ -1,4 +1,4 @@
-name: Sync Repo to GitLab
+name: Sync repo to GitLab
 
 on:
     workflow_call:
@@ -16,13 +16,13 @@ on:
     workflow_dispatch:
         inputs:
             commitMessage:
-                description: "Commit message for repo sync"
-                default: "Manual sync trigger"
+                description: 'Commit message for repo sync'
+                default: 'Manual sync trigger'
                 required: true
                 type: string
 
 concurrency:
-    group: "sync-repo-to-gitlab"
+    group: 'sync-repo-to-gitlab'
     cancel-in-progress: true
 
 jobs:
