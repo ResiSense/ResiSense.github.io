@@ -22,4 +22,4 @@ jobs:
 
             - env:
                   GITHUB_TOKEN: ${{ github.token }}
-              run: git push --delete origin :refs/tags/prod
+              run: git push --delete origin refs/tags/prod
