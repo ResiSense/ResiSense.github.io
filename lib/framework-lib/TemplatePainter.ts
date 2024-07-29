@@ -130,10 +130,6 @@ function paintHtmlFragment(paintableHtml: PaintableHtml, templateCache: Template
     }
 }
 
-// function regexMatchAny(text: string, ...regexes: RegExp[]): RegExpMatchArray {
-//     return regexes.reduce((acc: RegExpMatchArray, regex) => acc || text.match(regex), null);
-// }
-
 function paintPageHtml(paintableHtml: PaintableHtml, templateCache: TemplateCache): PaintableHtml {
     while (htmlStripMatch(paintableHtml.html, templateRegex)) {
         paintHtmlFragment(paintableHtml, templateCache);
