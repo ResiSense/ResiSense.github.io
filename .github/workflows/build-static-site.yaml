@@ -82,5 +82,5 @@ jobs:
                   COMMIT_MESSAGE: ${{ steps.set-env-vars.outputs.COMMIT_MESSAGE }}
               run: |
                   gh pr create --base main --fill-verbose --title "${{ env.COMMIT_MESSAGE }}"
-                  gh pr merge --squash --auto --admin
+                  gh pr merge --squash --admin
               shell: bash
