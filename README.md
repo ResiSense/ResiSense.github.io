@@ -17,7 +17,8 @@ Please note that this repository can be accessed in many locations via clones, b
 *The repository is automatically cloned and deployed to [iGEM's GitLab repository](https://gitlab.igem.org/2024/hongkong-cuhk) on commits (See [#post-commit-ci](/DEV-WIKI.md#post-commit-ci)). GitLab-exclusive commits will be lost on automatic clones.*  
 
 # ✍🏻 Contributors
-Lead: [CCheukKa](https://github.com/CCheukKa)
+- [CCheukKa](https://github.com/CCheukKa) (Lead)
+- [Tommy](https://github.com/ttoommyywyk)
 
 # 🙋🏻‍♂️ Questions?
 If you have any questions or would like to know how to help contribute, please refer to the [developer wiki](/DEV-WIKI.md) or contact [CCheukKa](https://github.com/CCheukKa).  
