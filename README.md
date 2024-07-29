@@ -1,9 +1,9 @@
 <div align="center">
 
 <picture>
-    <source width="400px" media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/ResiSense/ResiSense.github.io/main/assets/logos/resisense/ResiSense%20Brown%20Logo.svg">
-    <source width="400px" media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/ResiSense/ResiSense.github.io/main/assets/logos/resisense/ResiSense%20Green%20Logo.svg">
-    <img width="400px" src="https://raw.githubusercontent.com/ResiSense/ResiSense.github.io/main/assets/logos/resisense/ResiSense%20Green%20Logo.svg">
+    <source width="100px" media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/ResiSense/ResiSense.github.io/main/assets/logos/resisense/ResiSense%20Brown%20Logo.svg">
+    <source width="100px" media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/ResiSense/ResiSense.github.io/main/assets/logos/resisense/ResiSense%20Green%20Logo.svg">
+    <img width="100px" src="https://raw.githubusercontent.com/ResiSense/ResiSense.github.io/main/assets/logos/resisense/ResiSense%20Green%20Logo.svg">
 </picture>
 
 **This repository contains the source code for the ResiSense site ([GitHub Pages](https://resisense.github.io) | [GitLab Pages](https://2024.igem.wiki/hongkong-cuhk)).**  
