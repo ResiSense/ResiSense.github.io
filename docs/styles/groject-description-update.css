@@ -1,0 +1,99 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #fcfcf7;
+    overflow-y: scroll;
+}
+body::-webkit-scrollbar {
+    display: none;
+}
+
+a {
+    font-family: Montserrat;
+    font-size: 14.5px;
+}
+.navbar {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background: linear-gradient(#f9f4eb, #fcfcf7);
+}
+.white-space {
+    flex: 2;
+}
+.Menu-Team-Icon {
+    height: 87px;
+    width: 250px;
+    flex: 1;
+    margin-top: 7px;
+    margin-left: 10px;
+}
+.right-section {
+    display: flex;
+    flex: 4;
+    justify-content: space-evenly;
+    align-items: baseline;
+}
+.project-description-content {
+    display: grid;
+    column-count: 2;
+    grid-template-columns: 1fr 3fr;
+    padding-right: 3rem;
+}
+.project-descritpion-citation-list {
+    display: flex;
+    flex-direction: column;
+}
+.project-descritpion-citation-list-order {
+    margin-right: 1rem;
+}
+.project-descritpion-citation-list-contect {
+    display: flex;
+    justify-items: start;
+
+    margin-bottom: 1rem;
+}
+h1.project-description-titile {
+    font-family: Montserrat;
+    font-weight: bold;
+    font-size: 28px;
+    color: #768748;
+    position: relative;
+    right: 1.5rem;
+}
+p.project-description-text {
+    font-family: inter;
+    font-weight: 600;
+    font-size: 20px;
+    margin-top: 24px;
+    margin-bottom: 20px;
+    line-height: 1.6;
+    color: #404231;
+    padding: 0 2rem 0 2rem;
+}
+h3.project-description-title {
+    font-family: inter;
+    font-weight: 600;
+    font-style: italic;
+    font-size: 20px;
+    margin-top: 30px;
+    color: #f3922d;
+}
+p.project-descritpion-citation-list-order,
+p.project-descritpion-citation-list-paper-ref {
+    font-family: inter;
+    font-weight: 600;
+    font-size: 20px;
+    color: #404231;
+}
+p.project-descritpion-citation-list-paper-ref {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+p.project-descritpion-citation-list-order {
+    margin-top: 2px;
+}
+.project-description-page-banner {
+    width: 100%;
+}
