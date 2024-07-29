@@ -8,6 +8,9 @@
 
 **This repository contains the source code for the ResiSense site ([GitHub Pages](https://resisense.github.io) | [GitLab Pages](https://2024.igem.wiki/hongkong-cuhk)).**  
 
+[![](https://img.shields.io/github/actions/workflow/status/ResiSense/ResiSense.github.io/full-ci-pipeline.yaml?branch=main&style=flat-square&label=GitHub%20CI&labelColor=%236e5494&cacheSeconds=0)](https://github.com/ResiSense/ResiSense.github.io/actions/workflows/full-ci-pipeline.yaml)
+[![](https://img.shields.io/gitlab/pipeline-status/2024%2Fhongkong-cuhk?gitlab_url=https%3A%2F%2Fgitlab.igem.org&branch=main&style=flat-square&label=GitLab%20CI&labelColor=%23fc6d26&cacheSeconds=0)](https://gitlab.igem.org/2024/hongkong-cuhk/-/pipelines)
+
 </div>
 
 Please note that this repository can be accessed in many locations via clones, but the one hosted on [GitHub](https://github.com/ResiSense/ResiSense.github.io) should always be regarded as the authoritative version.  
