@@ -1,12 +1,11 @@
 footer {
-    --footer-background-color: var(#ead6a3);
-    background-color: #efe5cb;
+    background-color: var(--bright-brown);
+    color: var(--deep-green);
     height: 25%;
 
     & .footer-text {
         font-family: "Montserrat", sans-serif;
         font-weight: 500;
-        color: #3C240A;
         font-weight: 500;
         font-size: 15px;
     }
@@ -21,7 +20,7 @@ footer {
             display: flex;
             flex-direction: column;
             margin: 2rem 3rem;
-            border-right: 2px solid #404231;
+            border-right: 2px solid var(--deep-green);
             gap: 0.5rem;
 
             &>.resisense-logo {
