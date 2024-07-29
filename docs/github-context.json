@@ -1,11 +1,11 @@
 {
     "job": "build",
     "ref": "refs/heads/main",
-    "sha": "89e95d58f9109ef85bd76bdfd52ec90240bd56ee",
+    "sha": "0119bde71186b8e0cecce2e99d7fe0015ca693ea",
     "repository": "ResiSense/ResiSense.github.io",
     "repository_Url": null,
-    "run_id": "10137821839",
-    "run_number": "121",
+    "run_id": "10137828419",
+    "run_number": "122",
     "run_attempt": "1",
     "artifact_cache_size_limit": "10",
     "actor": "CCheukKa",
@@ -13,8 +13,8 @@
     "workflow": "Full CI Pipeline",
     "event_name": "push",
     "event": {
-        "after": "89e95d58f9109ef85bd76bdfd52ec90240bd56ee",
-        "before": "38395dec23481e2d8dc4a051b0f29213bc481d08",
+        "after": "0119bde71186b8e0cecce2e99d7fe0015ca693ea",
+        "before": "06c7543a408bd80695bc9a3ba0347329e33b68a1",
         "commits": [
             {
                 "author": {
@@ -28,14 +28,14 @@
                     "username": "CCheukKa"
                 },
                 "distinct": true,
-                "id": "89e95d58f9109ef85bd76bdfd52ec90240bd56ee",
-                "message": "add logo to README",
-                "timestamp": "2024-07-29T11:56:34+08:00",
-                "tree_id": "bcfda3794d5d05b1854ba96a509726357daa43e0",
-                "url": "https://github.com/ResiSense/ResiSense.github.io/commit/89e95d58f9109ef85bd76bdfd52ec90240bd56ee"
+                "id": "0119bde71186b8e0cecce2e99d7fe0015ca693ea",
+                "message": "Update logo size in README",
+                "timestamp": "2024-07-29T11:57:35+08:00",
+                "tree_id": "084dff4db046c68495549b822c1fc6c30f2bdd28",
+                "url": "https://github.com/ResiSense/ResiSense.github.io/commit/0119bde71186b8e0cecce2e99d7fe0015ca693ea"
             }
         ],
-        "compare": "https://github.com/ResiSense/ResiSense.github.io/compare/38395dec2348...89e95d58f910",
+        "compare": "https://github.com/ResiSense/ResiSense.github.io/compare/06c7543a408b...0119bde71186",
         "created": false,
         "deleted": false,
         "forced": false,
@@ -51,11 +51,11 @@
                 "username": "CCheukKa"
             },
             "distinct": true,
-            "id": "89e95d58f9109ef85bd76bdfd52ec90240bd56ee",
-            "message": "add logo to README",
-            "timestamp": "2024-07-29T11:56:34+08:00",
-            "tree_id": "bcfda3794d5d05b1854ba96a509726357daa43e0",
-            "url": "https://github.com/ResiSense/ResiSense.github.io/commit/89e95d58f9109ef85bd76bdfd52ec90240bd56ee"
+            "id": "0119bde71186b8e0cecce2e99d7fe0015ca693ea",
+            "message": "Update logo size in README",
+            "timestamp": "2024-07-29T11:57:35+08:00",
+            "tree_id": "084dff4db046c68495549b822c1fc6c30f2bdd28",
+            "url": "https://github.com/ResiSense/ResiSense.github.io/commit/0119bde71186b8e0cecce2e99d7fe0015ca693ea"
         },
         "pusher": {
             "email": "ccheukka@gmail.com",
@@ -68,6 +68,6 @@
     "ref_type": "branch",
     "secret_source": "Actions",
     "workflow_ref": "ResiSense/ResiSense.github.io/.github/workflows/full-ci-pipeline.yaml@refs/heads/main",
-    "workflow_sha": "89e95d58f9109ef85bd76bdfd52ec90240bd56ee",
+    "workflow_sha": "0119bde71186b8e0cecce2e99d7fe0015ca693ea",
     "workspace": "/home/runner/work/ResiSense.github.io/ResiSense.github.io"
 }
