@@ -1,0 +1,25 @@
+name: Remove prod tag
+
+on:
+    push:
+        branches: 'main'
+        tags: 'prod'
+    workflow_dispatch:
+
+concurrency:
+    group: 'remove-prod-tag'
+    cancel-in-progress: true
+
+permissions:
+    contents: write
+
+jobs:
+    remove_prod_tag:
+        runs-on: ubuntu-latest
+
+        steps:
+            - uses: actions/checkout@v4
+
+            - env:
+                  GITHUB_TOKEN: ${{ github.token }}
+              run: git push --delete origin :refs/tags/prod
