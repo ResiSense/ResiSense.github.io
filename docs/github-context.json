@@ -1,137 +1,65 @@
 {
     "job": "build",
     "ref": "refs/heads/main",
-    "sha": "72002d9cd8a7b8bc1b7ecc7d817c70c4097ad37d",
+    "sha": "4dd2dc9d2b070b878312674cb471faa289417904",
     "repository": "ResiSense/ResiSense.github.io",
     "repository_Url": null,
-    "run_id": "10148441988",
-    "run_number": "124",
+    "run_id": "10151004838",
+    "run_number": "131",
     "run_attempt": "1",
     "artifact_cache_size_limit": "10",
-    "actor": "ttoommyywyk",
+    "actor": "CCheukKa",
     "trigerring_actor": null,
     "workflow": "Full CI Pipeline",
     "event_name": "push",
     "event": {
-        "after": "72002d9cd8a7b8bc1b7ecc7d817c70c4097ad37d",
-        "before": "9fdcec26afb9546a93bd8b4d77b85f888afb76b6",
+        "after": "4dd2dc9d2b070b878312674cb471faa289417904",
+        "before": "6499faf7615db6e811788a1085b8d6e18c50f29f",
         "commits": [
             {
                 "author": {
-                    "email": "ttoommyywyk@gmail.com",
-                    "name": "Tommy Li",
-                    "username": "ttoommyywyk"
+                    "email": "ccheukka@gmail.com",
+                    "name": "CCheukKa",
+                    "username": "CCheukKa"
                 },
                 "committer": {
-                    "email": "ttoommyywyk@gmail.com",
-                    "name": "Tommy Li",
-                    "username": "ttoommyywyk"
-                },
-                "distinct": false,
-                "id": "fa5d764e4f814f04cd18a07e1fe30a25199c7260",
-                "message": "update footer template but with the font source file  which will upload later",
-                "timestamp": "2024-07-28T11:47:44+08:00",
-                "tree_id": "15d16e6edee715269a32472ae88c2333f4de315d",
-                "url": "https://github.com/ResiSense/ResiSense.github.io/commit/fa5d764e4f814f04cd18a07e1fe30a25199c7260"
-            },
-            {
-                "author": {
-                    "email": "ttoommyywyk@gmail.com",
-                    "name": "Tommy Li",
-                    "username": "ttoommyywyk"
-                },
-                "committer": {
-                    "email": "ttoommyywyk@gmail.com",
-                    "name": "Tommy Li",
-                    "username": "ttoommyywyk"
-                },
-                "distinct": false,
-                "id": "78d589e6cff574d00817ac3cff00fae4bc40f35a",
-                "message": "update footer thmplate html file",
-                "timestamp": "2024-07-28T11:52:57+08:00",
-                "tree_id": "e1a64d674a3c6d291cc4ce3f30bfd978294d6e53",
-                "url": "https://github.com/ResiSense/ResiSense.github.io/commit/78d589e6cff574d00817ac3cff00fae4bc40f35a"
-            },
-            {
-                "author": {
-                    "email": "ttoommyywyk@gmail.com",
-                    "name": "Tommy Li",
-                    "username": "ttoommyywyk"
-                },
-                "committer": {
-                    "email": "ttoommyywyk@gmail.com",
-                    "name": "Tommy Li",
-                    "username": "ttoommyywyk"
-                },
-                "distinct": false,
-                "id": "5d685e0b59071a0a5499a249b2517e2dd69058bb",
-                "message": "upload inter font source file",
-                "timestamp": "2024-07-28T11:53:51+08:00",
-                "tree_id": "2ffed2b5d0a687db6007beda92d6dc8b0cf597a2",
-                "url": "https://github.com/ResiSense/ResiSense.github.io/commit/5d685e0b59071a0a5499a249b2517e2dd69058bb"
-            },
-            {
-                "author": {
-                    "email": "ttoommyywyk@gmail.com",
-                    "name": "Tommy Li",
-                    "username": "ttoommyywyk"
-                },
-                "committer": {
-                    "email": "ttoommyywyk@gmail.com",
-                    "name": "Tommy Li",
-                    "username": "ttoommyywyk"
-                },
-                "distinct": false,
-                "id": "2f20266503130736a799942163bf1ede219a754a",
-                "message": "upload montserrat font source file",
-                "timestamp": "2024-07-28T11:55:49+08:00",
-                "tree_id": "cb701c4273caaec102ca63a185582b367f1887d8",
-                "url": "https://github.com/ResiSense/ResiSense.github.io/commit/2f20266503130736a799942163bf1ede219a754a"
-            },
-            {
-                "author": {
-                    "email": "ttoommyywyk@gmail.com",
-                    "name": "Tommy Li",
-                    "username": "ttoommyywyk"
-                },
-                "committer": {
-                    "email": "ttoommyywyk@gmail.com",
-                    "name": "Tommy Li",
-                    "username": "ttoommyywyk"
+                    "email": "ccheukka@gmail.com",
+                    "name": "CCheukKa",
+                    "username": "CCheukKa"
                 },
                 "distinct": true,
-                "id": "72002d9cd8a7b8bc1b7ecc7d817c70c4097ad37d",
-                "message": "Merge branch main of https://github.com/ResiSense/ResiSense.github.io",
-                "timestamp": "2024-07-30T00:50:17+08:00",
-                "tree_id": "6457f91f912587034a118dce66ea4b3a2a2e0930",
-                "url": "https://github.com/ResiSense/ResiSense.github.io/commit/72002d9cd8a7b8bc1b7ecc7d817c70c4097ad37d"
+                "id": "4dd2dc9d2b070b878312674cb471faa289417904",
+                "message": "delete unused file",
+                "timestamp": "2024-07-30T04:02:25+08:00",
+                "tree_id": "a9b92299129cb4935021cff911881d8a98c85c10",
+                "url": "https://github.com/ResiSense/ResiSense.github.io/commit/4dd2dc9d2b070b878312674cb471faa289417904"
             }
         ],
-        "compare": "https://github.com/ResiSense/ResiSense.github.io/compare/9fdcec26afb9...72002d9cd8a7",
+        "compare": "https://github.com/ResiSense/ResiSense.github.io/compare/6499faf7615d...4dd2dc9d2b07",
         "created": false,
         "deleted": false,
         "forced": false,
         "head_commit": {
             "author": {
-                "email": "ttoommyywyk@gmail.com",
-                "name": "Tommy Li",
-                "username": "ttoommyywyk"
+                "email": "ccheukka@gmail.com",
+                "name": "CCheukKa",
+                "username": "CCheukKa"
             },
             "committer": {
-                "email": "ttoommyywyk@gmail.com",
-                "name": "Tommy Li",
-                "username": "ttoommyywyk"
+                "email": "ccheukka@gmail.com",
+                "name": "CCheukKa",
+                "username": "CCheukKa"
             },
             "distinct": true,
-            "id": "72002d9cd8a7b8bc1b7ecc7d817c70c4097ad37d",
-            "message": "Merge branch main of https://github.com/ResiSense/ResiSense.github.io",
-            "timestamp": "2024-07-30T00:50:17+08:00",
-            "tree_id": "6457f91f912587034a118dce66ea4b3a2a2e0930",
-            "url": "https://github.com/ResiSense/ResiSense.github.io/commit/72002d9cd8a7b8bc1b7ecc7d817c70c4097ad37d"
+            "id": "4dd2dc9d2b070b878312674cb471faa289417904",
+            "message": "delete unused file",
+            "timestamp": "2024-07-30T04:02:25+08:00",
+            "tree_id": "a9b92299129cb4935021cff911881d8a98c85c10",
+            "url": "https://github.com/ResiSense/ResiSense.github.io/commit/4dd2dc9d2b070b878312674cb471faa289417904"
         },
         "pusher": {
-            "email": "59217426+ttoommyywyk@users.noreply.github.com",
-            "name": "ttoommyywyk"
+            "email": "ccheukka@gmail.com",
+            "name": "CCheukKa"
         },
         "ref": "refs/heads/main"
     },
@@ -140,6 +68,6 @@
     "ref_type": "branch",
     "secret_source": "Actions",
     "workflow_ref": "ResiSense/ResiSense.github.io/.github/workflows/full-ci-pipeline.yaml@refs/heads/main",
-    "workflow_sha": "72002d9cd8a7b8bc1b7ecc7d817c70c4097ad37d",
+    "workflow_sha": "4dd2dc9d2b070b878312674cb471faa289417904",
     "workspace": "/home/runner/work/ResiSense.github.io/ResiSense.github.io"
 }
