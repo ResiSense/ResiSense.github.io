@@ -30,7 +30,7 @@ jobs:
             - name: Set environment variables
               id: set-env-vars
               run: |
-                  COMMIT_MESSAGE="STATIC BUILD: ${{ github.event.head_commit.message || 'Automated build' }}"
+                  COMMIT_MESSAGE="STATIC BUILD: ${{ github.event.head_commit.message || 'Automated build' }} [skip ci]"
                   BRANCH_NAME=$(echo "$COMMIT_MESSAGE" | tr -c '[:alnum:]_-' '-' | sed 's/-\{2,\}/-/g' | sed 's/^-//;s/-$//')
                   echo "COMMIT_MESSAGE=$COMMIT_MESSAGE" >> "$GITHUB_OUTPUT"
                   echo "BRANCH_NAME=$BRANCH_NAME" >> "$GITHUB_OUTPUT"
@@ -68,13 +68,12 @@ jobs:
                   COMMIT_MESSAGE: ${{ steps.set-env-vars.outputs.COMMIT_MESSAGE }}
                   BRANCH_NAME: ${{ steps.set-env-vars.outputs.BRANCH_NAME }}
               with:
-                  commit_message: ${{ env.COMMIT_MESSAGE }}
+                  commit_message: '${{ env.COMMIT_MESSAGE }}'
                   branch: ${{ env.BRANCH_NAME }}
                   commit_user_name: staic-site-builder[bot]
                   commit_user_email: staic-site-builder[bot]@users.noreply.github.com
                   create_branch: true
                   add_options: '--all'
-                  tagging_message: 'prod'
 
             - name: Create and merge pull request
               env:
