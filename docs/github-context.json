@@ -1,11 +1,11 @@
 {
     "job": "build",
     "ref": "refs/heads/main",
-    "sha": "2a10f9d97c27d99403a9e2c30c988f6b75b4ef41",
+    "sha": "131f9675d44387f86b80ea1368fd18dd3074f47e",
     "repository": "ResiSense/ResiSense.github.io",
     "repository_Url": null,
-    "run_id": "10151787777",
-    "run_number": "146",
+    "run_id": "10151809690",
+    "run_number": "147",
     "run_attempt": "1",
     "artifact_cache_size_limit": "10",
     "actor": "CCheukKa",
@@ -13,8 +13,8 @@
     "workflow": "Full CI pipeline",
     "event_name": "push",
     "event": {
-        "after": "2a10f9d97c27d99403a9e2c30c988f6b75b4ef41",
-        "before": "dee65ec2160014e8048c7767262531ae1d022199",
+        "after": "131f9675d44387f86b80ea1368fd18dd3074f47e",
+        "before": "df1d5da358be16c1a0f752bed0677c5977f42c27",
         "commits": [
             {
                 "author": {
@@ -28,14 +28,14 @@
                     "username": "CCheukKa"
                 },
                 "distinct": true,
-                "id": "2a10f9d97c27d99403a9e2c30c988f6b75b4ef41",
-                "message": "chore: Update build-static-site.yaml to skip CI for automated builds",
-                "timestamp": "2024-07-30T05:02:01+08:00",
-                "tree_id": "5db580a73961a14a6052e894465188aef0d518d7",
-                "url": "https://github.com/ResiSense/ResiSense.github.io/commit/2a10f9d97c27d99403a9e2c30c988f6b75b4ef41"
+                "id": "131f9675d44387f86b80ea1368fd18dd3074f47e",
+                "message": "remove reliance on prod tags",
+                "timestamp": "2024-07-30T05:03:43+08:00",
+                "tree_id": "e739e1961566ab7aa69217e275255d45df4ea5d7",
+                "url": "https://github.com/ResiSense/ResiSense.github.io/commit/131f9675d44387f86b80ea1368fd18dd3074f47e"
             }
         ],
-        "compare": "https://github.com/ResiSense/ResiSense.github.io/compare/dee65ec21600...2a10f9d97c27",
+        "compare": "https://github.com/ResiSense/ResiSense.github.io/compare/df1d5da358be...131f9675d443",
         "created": false,
         "deleted": false,
         "forced": false,
@@ -51,11 +51,11 @@
                 "username": "CCheukKa"
             },
             "distinct": true,
-            "id": "2a10f9d97c27d99403a9e2c30c988f6b75b4ef41",
-            "message": "chore: Update build-static-site.yaml to skip CI for automated builds",
-            "timestamp": "2024-07-30T05:02:01+08:00",
-            "tree_id": "5db580a73961a14a6052e894465188aef0d518d7",
-            "url": "https://github.com/ResiSense/ResiSense.github.io/commit/2a10f9d97c27d99403a9e2c30c988f6b75b4ef41"
+            "id": "131f9675d44387f86b80ea1368fd18dd3074f47e",
+            "message": "remove reliance on prod tags",
+            "timestamp": "2024-07-30T05:03:43+08:00",
+            "tree_id": "e739e1961566ab7aa69217e275255d45df4ea5d7",
+            "url": "https://github.com/ResiSense/ResiSense.github.io/commit/131f9675d44387f86b80ea1368fd18dd3074f47e"
         },
         "pusher": {
             "email": "ccheukka@gmail.com",
@@ -68,6 +68,6 @@
     "ref_type": "branch",
     "secret_source": "Actions",
     "workflow_ref": "ResiSense/ResiSense.github.io/.github/workflows/full-ci-pipeline.yaml@refs/heads/main",
-    "workflow_sha": "2a10f9d97c27d99403a9e2c30c988f6b75b4ef41",
+    "workflow_sha": "131f9675d44387f86b80ea1368fd18dd3074f47e",
     "workspace": "/home/runner/work/ResiSense.github.io/ResiSense.github.io"
 }
