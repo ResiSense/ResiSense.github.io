@@ -78,9 +78,9 @@ jobs:
 
             - name: Create and merge pull request
               env:
-                  GH_TOKEN: ${{ github.token }}
+                  GH_TOKEN: ${{ secrets.ADMIN_TOKEN }}
                   COMMIT_MESSAGE: ${{ steps.set-env-vars.outputs.COMMIT_MESSAGE }}
               run: |
                   gh pr create --base main --fill-verbose --title "${{ env.COMMIT_MESSAGE }}"
-                  gh pr merge --squash
+                  gh pr merge --squash --auto --admin
               shell: bash
