@@ -132,12 +132,30 @@ Live reloading should be enabled so that changes to the source code are automati
 # ✍🏻Committing changes
 > 0. You are recommended to read up on the basics of Git and GitHub if you are not familiar with them
 > 1. Open the source control sidebar with `Ctrl` + `Shift` + `G`
-> 2. Sign in to your GitHub account as necessary
-> 3. Stage the changes by clicking the `+` button next to each file name
-> 4. Write a commit message in the text box at the top of the sidebar to describe the changes
-> 5. Click `Commit & Create Pull Request`; you can find this button under the dropdown menu next to the commit button if it is not already visible
-> 6. Follow the instructions in the new browser window to create a pull request
-> 7. Wait for the pull request to be reviewed and merged by the repository owner
+> 2. Sign in to your GitHub account as necessary, make sure your account is in the [website team](https://github.com/orgs/ResiSense/teams/website-team)
+> 3. At the bottom left corner of VSCode, check to make sure you are checking out to the correct branch ***(don't commit to `main` directly!)***
+>    - To create a new branch:
+>      > 1. If you have already made changes, stash them by selecting `Stash` > `Stash (Include Untracked)` under the `...` menu
+>      > 2. Under the `...` menu, select `Branch` > `Create new branch` and name the branch after the changes you are making
+>      > 3. Click `Publish`
+>      > 4. If you have stashed changes, retrieve them back by selecting `Stash` > `Pop Stash` under the `...` menu
+>    - To checkout to an existing branch:
+>      > 1. Under the `...` menu, select `Checkout to...` and select the branch you want to checkout to
+> 4. Stage the changes by clicking the `+` button next to each file name
+> 5. Write a commit message in the text box at the top of the sidebar to describe the changes
+>    - You are recommended to make a new commit by each change or feature you are making
+>      - **❌ Don't do this:**
+>        - One commit for everything you have changed (e.g. `add new page & update styles & fix bugs`)
+>        - Commit messages that are too vague (e.g. `update stuff`)
+>      - **✔️ Do this:**
+>        - One commit for one feature (e.g. `add responsive scrolling`)
+>        - One commit for one bug fix (e.g. `fix page not updating`)
+>        - Group changes to multiple files in one commit if they are related (e.g. `update page content`)
+>        - Put a `minor:` prefix if you are only fixing typos or something (e.g. `minor: fix typo`)
+>    - If you can't describe the changes clearly and concisely, you are probably doing too much in one commit
+> 6. Click `Commit & Create Pull Request`; you can find this button under the dropdown menu next to the commit button if it is not already visible
+> 7. Follow the instructions in the new browser window to create a pull request
+> 8. Wait for the pull request to be reviewed and merged by the repository owner (or do it yourself ¯\\\_(ツ)\_/¯)
 
 Feel free to make changes here as a test if you wish. (This file is `/DEV-WIKI.md` btw.)
 ```markdown

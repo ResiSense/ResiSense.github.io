@@ -1,29 +1,73 @@
 {
     "job": "build",
     "ref": "refs/heads/main",
-    "sha": "62dde49a954efd526ac15ab8578f5385b60e32d0",
+    "sha": "005e56f533c86c72fd608015db6ceec63df8fbe0",
     "repository": "ResiSense/ResiSense.github.io",
     "repository_Url": null,
-    "run_id": "10125485849",
-    "run_number": "82",
+    "run_id": "10137936676",
+    "run_number": "123",
     "run_attempt": "1",
     "artifact_cache_size_limit": "10",
     "actor": "CCheukKa",
     "trigerring_actor": null,
     "workflow": "Full CI Pipeline",
-    "event_name": "workflow_dispatch",
+    "event_name": "push",
     "event": {
-        "inputs": {
-            "commitMessage": "Manual full CI pipeline trigger"
+        "after": "005e56f533c86c72fd608015db6ceec63df8fbe0",
+        "before": "f41011fa4dbb25e79d7511abccb2c372c7765271",
+        "commits": [
+            {
+                "author": {
+                    "email": "ccheukka@gmail.com",
+                    "name": "CCheukKa",
+                    "username": "CCheukKa"
+                },
+                "committer": {
+                    "email": "ccheukka@gmail.com",
+                    "name": "CCheukKa",
+                    "username": "CCheukKa"
+                },
+                "distinct": true,
+                "id": "005e56f533c86c72fd608015db6ceec63df8fbe0",
+                "message": "add CI status badges",
+                "timestamp": "2024-07-29T12:09:14+08:00",
+                "tree_id": "14dd095832ea6d95e8eac03547b77f9ba4f50b4d",
+                "url": "https://github.com/ResiSense/ResiSense.github.io/commit/005e56f533c86c72fd608015db6ceec63df8fbe0"
+            }
+        ],
+        "compare": "https://github.com/ResiSense/ResiSense.github.io/compare/f41011fa4dbb...005e56f533c8",
+        "created": false,
+        "deleted": false,
+        "forced": false,
+        "head_commit": {
+            "author": {
+                "email": "ccheukka@gmail.com",
+                "name": "CCheukKa",
+                "username": "CCheukKa"
+            },
+            "committer": {
+                "email": "ccheukka@gmail.com",
+                "name": "CCheukKa",
+                "username": "CCheukKa"
+            },
+            "distinct": true,
+            "id": "005e56f533c86c72fd608015db6ceec63df8fbe0",
+            "message": "add CI status badges",
+            "timestamp": "2024-07-29T12:09:14+08:00",
+            "tree_id": "14dd095832ea6d95e8eac03547b77f9ba4f50b4d",
+            "url": "https://github.com/ResiSense/ResiSense.github.io/commit/005e56f533c86c72fd608015db6ceec63df8fbe0"
         },
-        "ref": "refs/heads/main",
-        "workflow": ".github/workflows/full-ci-pipeline.yaml"
+        "pusher": {
+            "email": "ccheukka@gmail.com",
+            "name": "CCheukKa"
+        },
+        "ref": "refs/heads/main"
     },
     "ref_name": "main",
-    "ref_protected": false,
+    "ref_protected": true,
     "ref_type": "branch",
     "secret_source": "Actions",
     "workflow_ref": "ResiSense/ResiSense.github.io/.github/workflows/full-ci-pipeline.yaml@refs/heads/main",
-    "workflow_sha": "62dde49a954efd526ac15ab8578f5385b60e32d0",
+    "workflow_sha": "005e56f533c86c72fd608015db6ceec63df8fbe0",
     "workspace": "/home/runner/work/ResiSense.github.io/ResiSense.github.io"
 }

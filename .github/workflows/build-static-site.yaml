@@ -9,30 +9,40 @@ on:
     workflow_dispatch:
         inputs:
             commitMessage:
-                description: "Commit message for static site build"
-                default: "Manual build trigger"
+                description: 'Commit message for static site build'
+                default: 'Manual build trigger'
                 required: true
                 type: string
 
 concurrency:
-    group: "build-static-site"
+    group: 'build-static-site'
     cancel-in-progress: true
 
 permissions:
     contents: write
+    pull-requests: write
 
 jobs:
     build:
         runs-on: ubuntu-latest
 
         steps:
+            - name: Set environment variables
+              id: set-env-vars
+              run: |
+                  COMMIT_MESSAGE="STATIC BUILD: ${{ github.event.head_commit.message || 'Automated build' }}"
+                  BRANCH_NAME=$(echo "$COMMIT_MESSAGE" | tr -c '[:alnum:]_-' '-' | sed 's/-\{2,\}/-/g' | sed 's/^-//;s/-$//')
+                  echo "COMMIT_MESSAGE=$COMMIT_MESSAGE" >> "$GITHUB_OUTPUT"
+                  echo "BRANCH_NAME=$BRANCH_NAME" >> "$GITHUB_OUTPUT"
+              shell: bash
+
             - uses: actions/checkout@v4
 
             - name: Use Node.js 20.x
               uses: actions/setup-node@v4
               with:
                   node-version: 20.x
-                  cache: "npm"
+                  cache: 'npm'
 
             - name: Install dependencies
               run: npm ci
@@ -52,10 +62,25 @@ jobs:
             - name: Prettify all files
               run: npm run prettify --if-present
 
-            - name: Commit built site to main branch
+            - name: Commit changes
               uses: stefanzweifel/git-auto-commit-action@v5
+              env:
+                  COMMIT_MESSAGE: ${{ steps.set-env-vars.outputs.COMMIT_MESSAGE }}
+                  BRANCH_NAME: ${{ steps.set-env-vars.outputs.BRANCH_NAME }}
               with:
-                  commit_message: "STATIC BUILD: ${{ github.event.head_commit.message || inputs.commitMessage }}"
-                  commit_user_name: static-site-builder[bot]
-                  commit_user_email: static-site-builder[bot]@users.noreply.github.com
-                  tagging_message: prod
+                  commit_message: ${{ env.COMMIT_MESSAGE }}
+                  branch: ${{ env.BRANCH_NAME }}
+                  commit_user_name: staic-site-builder[bot]
+                  commit_user_email: staic-site-builder[bot]@users.noreply.github.com
+                  create_branch: true
+                  add_options: '--all'
+                  tagging_message: 'prod'
+
+            - name: Create and merge pull request
+              env:
+                  GH_TOKEN: ${{ github.token }}
+                  COMMIT_MESSAGE: ${{ steps.set-env-vars.outputs.COMMIT_MESSAGE }}
+              run: |
+                  gh pr create --base main --fill-verbose --title "${{ env.COMMIT_MESSAGE }}"
+                  gh pr merge --squash
+              shell: bash
