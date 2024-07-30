@@ -10,7 +10,7 @@ import { PageData } from "../types/PageData";
 
 const baseFilename = 'boiler-plate.html';
 
-async function populatePageFromMarkdown(pageData: PageData) {
+async function populatePageWithHtmlFrame(pageData: PageData) {
     const page = pageData.page;
     const document = pageData.document;
     // 
@@ -25,5 +25,5 @@ async function populatePageFromMarkdown(pageData: PageData) {
 
 export default class HtmlFramePopulator {
     static baseFilename = baseFilename;
-    static populatePageFromMarkdown = populatePageFromMarkdown;
+    static populatePageWithHtmlFrame = populatePageWithHtmlFrame;
 }

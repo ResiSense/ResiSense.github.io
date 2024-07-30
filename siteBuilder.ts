@@ -102,7 +102,7 @@ async function buildFile(page: Page, templateCache: TemplateCache): Promise<void
             await HtmlFullReplacer.replacePageWithFullHtml(pageData);
             break;
         case 'html-frame':
-            await HtmlFramePopulator.populatePageFromMarkdown(pageData);
+            await HtmlFramePopulator.populatePageWithHtmlFrame(pageData);
             break;
         case 'markdown':
             await MarkdownPopulator.populatePageFromMarkdown(pageData);
