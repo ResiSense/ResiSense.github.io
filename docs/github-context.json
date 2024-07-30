@@ -1,11 +1,11 @@
 {
     "job": "build",
     "ref": "refs/heads/main",
-    "sha": "03e24bd840748aea8a33c66d97d1aa4d4985af95",
+    "sha": "95b8a2d603393672f00f81efa1e171ae80be98c0",
     "repository": "ResiSense/ResiSense.github.io",
     "repository_Url": null,
-    "run_id": "10168334602",
-    "run_number": "156",
+    "run_id": "10168481343",
+    "run_number": "157",
     "run_attempt": "1",
     "artifact_cache_size_limit": "10",
     "actor": "CCheukKa",
@@ -13,8 +13,8 @@
     "workflow": "Full CI pipeline",
     "event_name": "push",
     "event": {
-        "after": "03e24bd840748aea8a33c66d97d1aa4d4985af95",
-        "before": "a64c1b8d432670e0012e2660b82d0433f365d6d1",
+        "after": "95b8a2d603393672f00f81efa1e171ae80be98c0",
+        "before": "0bf78a8d2f8ee80dafab6534ccea296bdde58af5",
         "commits": [
             {
                 "author": {
@@ -28,14 +28,14 @@
                     "username": "CCheukKa"
                 },
                 "distinct": true,
-                "id": "03e24bd840748aea8a33c66d97d1aa4d4985af95",
-                "message": "chore: Update build script to handle multi-line commit messages",
-                "timestamp": "2024-07-31T03:10:46+08:00",
-                "tree_id": "1981cb15271982b425a6df75e80b5017220795c6",
-                "url": "https://github.com/ResiSense/ResiSense.github.io/commit/03e24bd840748aea8a33c66d97d1aa4d4985af95"
+                "id": "95b8a2d603393672f00f81efa1e171ae80be98c0",
+                "message": "update heuristic equation",
+                "timestamp": "2024-07-31T03:22:00+08:00",
+                "tree_id": "ee5937eb2dd0b5db23e8720ba749cd886434512b",
+                "url": "https://github.com/ResiSense/ResiSense.github.io/commit/95b8a2d603393672f00f81efa1e171ae80be98c0"
             }
         ],
-        "compare": "https://github.com/ResiSense/ResiSense.github.io/compare/a64c1b8d4326...03e24bd84074",
+        "compare": "https://github.com/ResiSense/ResiSense.github.io/compare/0bf78a8d2f8e...95b8a2d60339",
         "created": false,
         "deleted": false,
         "forced": false,
@@ -51,11 +51,11 @@
                 "username": "CCheukKa"
             },
             "distinct": true,
-            "id": "03e24bd840748aea8a33c66d97d1aa4d4985af95",
-            "message": "chore: Update build script to handle multi-line commit messages",
-            "timestamp": "2024-07-31T03:10:46+08:00",
-            "tree_id": "1981cb15271982b425a6df75e80b5017220795c6",
-            "url": "https://github.com/ResiSense/ResiSense.github.io/commit/03e24bd840748aea8a33c66d97d1aa4d4985af95"
+            "id": "95b8a2d603393672f00f81efa1e171ae80be98c0",
+            "message": "update heuristic equation",
+            "timestamp": "2024-07-31T03:22:00+08:00",
+            "tree_id": "ee5937eb2dd0b5db23e8720ba749cd886434512b",
+            "url": "https://github.com/ResiSense/ResiSense.github.io/commit/95b8a2d603393672f00f81efa1e171ae80be98c0"
         },
         "pusher": {
             "email": "ccheukka@gmail.com",
@@ -68,6 +68,6 @@
     "ref_type": "branch",
     "secret_source": "Actions",
     "workflow_ref": "ResiSense/ResiSense.github.io/.github/workflows/full-ci-pipeline.yaml@refs/heads/main",
-    "workflow_sha": "03e24bd840748aea8a33c66d97d1aa4d4985af95",
+    "workflow_sha": "95b8a2d603393672f00f81efa1e171ae80be98c0",
     "workspace": "/home/runner/work/ResiSense.github.io/ResiSense.github.io"
 }
