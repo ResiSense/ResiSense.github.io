@@ -1,11 +1,11 @@
 {
     "job": "build",
     "ref": "refs/heads/main",
-    "sha": "9283f75a5ec95e14d4ae1869ddb489c9ab0ff423",
+    "sha": "f6755d45f31ab7b2f946cf87af2d906b48953447",
     "repository": "ResiSense/ResiSense.github.io",
     "repository_Url": null,
-    "run_id": "10168705068",
-    "run_number": "158",
+    "run_id": "10168850593",
+    "run_number": "159",
     "run_attempt": "1",
     "artifact_cache_size_limit": "10",
     "actor": "CCheukKa",
@@ -13,8 +13,8 @@
     "workflow": "Full CI pipeline",
     "event_name": "push",
     "event": {
-        "after": "9283f75a5ec95e14d4ae1869ddb489c9ab0ff423",
-        "before": "c6576d122d7044c455da3f2c8bdd1be314c882e9",
+        "after": "f6755d45f31ab7b2f946cf87af2d906b48953447",
+        "before": "403aa9ddad8504dd230e05fbf88a28a3c825bd83",
         "commits": [
             {
                 "author": {
@@ -28,32 +28,14 @@
                     "username": "CCheukKa"
                 },
                 "distinct": true,
-                "id": "e1fd914326b17600d655c627b00a129d23fe01d2",
-                "message": "remove deprecated script",
-                "timestamp": "2024-07-31T03:40:38+08:00",
-                "tree_id": "a3a1da565f9eca1474a96f05617e842e5475aa7f",
-                "url": "https://github.com/ResiSense/ResiSense.github.io/commit/e1fd914326b17600d655c627b00a129d23fe01d2"
-            },
-            {
-                "author": {
-                    "email": "ccheukka@gmail.com",
-                    "name": "CCheukKa",
-                    "username": "CCheukKa"
-                },
-                "committer": {
-                    "email": "ccheukka@gmail.com",
-                    "name": "CCheukKa",
-                    "username": "CCheukKa"
-                },
-                "distinct": true,
-                "id": "9283f75a5ec95e14d4ae1869ddb489c9ab0ff423",
-                "message": "limit scope of scripts to prevent global variable leaking",
-                "timestamp": "2024-07-31T03:40:57+08:00",
-                "tree_id": "4af247ce932a22ad7d8ec2c9f98822e774505043",
-                "url": "https://github.com/ResiSense/ResiSense.github.io/commit/9283f75a5ec95e14d4ae1869ddb489c9ab0ff423"
+                "id": "f6755d45f31ab7b2f946cf87af2d906b48953447",
+                "message": "optimise parallax doodles",
+                "timestamp": "2024-07-31T03:53:33+08:00",
+                "tree_id": "3a8b2bccdf7ddc9bfc66077c7b4a44d8d9b2df9c",
+                "url": "https://github.com/ResiSense/ResiSense.github.io/commit/f6755d45f31ab7b2f946cf87af2d906b48953447"
             }
         ],
-        "compare": "https://github.com/ResiSense/ResiSense.github.io/compare/c6576d122d70...9283f75a5ec9",
+        "compare": "https://github.com/ResiSense/ResiSense.github.io/compare/403aa9ddad85...f6755d45f31a",
         "created": false,
         "deleted": false,
         "forced": false,
@@ -69,11 +51,11 @@
                 "username": "CCheukKa"
             },
             "distinct": true,
-            "id": "9283f75a5ec95e14d4ae1869ddb489c9ab0ff423",
-            "message": "limit scope of scripts to prevent global variable leaking",
-            "timestamp": "2024-07-31T03:40:57+08:00",
-            "tree_id": "4af247ce932a22ad7d8ec2c9f98822e774505043",
-            "url": "https://github.com/ResiSense/ResiSense.github.io/commit/9283f75a5ec95e14d4ae1869ddb489c9ab0ff423"
+            "id": "f6755d45f31ab7b2f946cf87af2d906b48953447",
+            "message": "optimise parallax doodles",
+            "timestamp": "2024-07-31T03:53:33+08:00",
+            "tree_id": "3a8b2bccdf7ddc9bfc66077c7b4a44d8d9b2df9c",
+            "url": "https://github.com/ResiSense/ResiSense.github.io/commit/f6755d45f31ab7b2f946cf87af2d906b48953447"
         },
         "pusher": {
             "email": "ccheukka@gmail.com",
@@ -86,6 +68,6 @@
     "ref_type": "branch",
     "secret_source": "Actions",
     "workflow_ref": "ResiSense/ResiSense.github.io/.github/workflows/full-ci-pipeline.yaml@refs/heads/main",
-    "workflow_sha": "9283f75a5ec95e14d4ae1869ddb489c9ab0ff423",
+    "workflow_sha": "f6755d45f31ab7b2f946cf87af2d906b48953447",
     "workspace": "/home/runner/work/ResiSense.github.io/ResiSense.github.io"
 }
