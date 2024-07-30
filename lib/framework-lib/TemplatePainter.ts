@@ -38,11 +38,13 @@ export type PaintableHtml = {
     },
 }
 
-const templateRegex = /<custom-([a-z]|-)+ \/>/g;
-const tsPostPaintRegex = /<ts-post-paint src=".*\.ts" \/>/g;
-const jsEmbedRegex = /<js-embed src=".*\.js" \/>/g;
-const tsPostPopulationRegex = /<ts-post-population src=".*\.ts" \/>/g;
-const cssEmbedRegex = /<css-embed href=".*\.css" \/>/g;
+const REGEX = {
+    template: /<custom-([a-z]|-)+ \/>/g,
+    tsPostPaint: /<ts-post-paint src=".*\.ts" \/>/g,
+    jsEmbed: /<js-embed src=".*\.js" \/>/g,
+    tsPostPopulation: /<ts-post-population src=".*\.ts" \/>/g,
+    cssEmbed: /<css-embed href=".*\.css" \/>/g,
+} as const;
 
 async function compileTemplates(): Promise<TemplateCache> {
     const templateCache = await cacheTemplates();
@@ -81,7 +83,7 @@ async function compileTemplates(): Promise<TemplateCache> {
     function paintTemplate(template: Template): Template {
         if (template.painted) { return template; }
         // 
-        if (!template.html.match(templateRegex)) {
+        if (!htmlStripMatch(template.html, REGEX.template)) {
             template.painted = true;
             return template;
         }
@@ -96,7 +98,7 @@ function paintHtmlFragment(paintableHtml: PaintableHtml, templateCache: Template
     paintableHtml.css = paintableHtml.css || { embed: [] };
 
     // templates
-    paintableHtml.html.match(templateRegex)?.forEach(customTag => {
+    htmlStripMatch(paintableHtml.html, REGEX.template)?.forEach(customTag => {
         const customTagName = customTag.replace('<custom-', '').replace(' />', '');
         const customTemplate = templateCache[customTagName];
         if (!customTemplate) { throw new Error(`Template not found: ${customTagName}`); }
@@ -111,17 +113,17 @@ function paintHtmlFragment(paintableHtml: PaintableHtml, templateCache: Template
     });
 
     // js
-    paintableHtml.html = paint(paintableHtml.html, tsPostPaintRegex, '<ts-post-paint src="', '" />', paintableHtml.ts.postPaint);
-    paintableHtml.html = paint(paintableHtml.html, jsEmbedRegex, '<js-embed src="', '" />', paintableHtml.js.embed);
-    paintableHtml.html = paint(paintableHtml.html, tsPostPopulationRegex, '<ts-post-population src="', '" />', paintableHtml.ts.postPopulation);
+    paintableHtml.html = paint(paintableHtml.html, REGEX.tsPostPaint, '<ts-post-paint src="', '" />', paintableHtml.ts.postPaint);
+    paintableHtml.html = paint(paintableHtml.html, REGEX.jsEmbed, '<js-embed src="', '" />', paintableHtml.js.embed);
+    paintableHtml.html = paint(paintableHtml.html, REGEX.tsPostPopulation, '<ts-post-population src="', '" />', paintableHtml.ts.postPopulation);
 
     // css
-    paintableHtml.html = paint(paintableHtml.html, cssEmbedRegex, '<css-embed href="', '" />', paintableHtml.css.embed);
+    paintableHtml.html = paint(paintableHtml.html, REGEX.cssEmbed, '<css-embed href="', '" />', paintableHtml.css.embed);
 
     return paintableHtml;
 
     function paint(html: string, regex: RegExp, replaceHead: string, replaceTail: string, includeList: string[]) {
-        html.match(regex)?.forEach(match => {
+        htmlStripMatch(html, regex)?.forEach(match => {
             const path = match.replace(replaceHead, '').replace(replaceTail, '');
             html = html.replace(match, '');
             includeList.push(path);
@@ -130,15 +132,24 @@ function paintHtmlFragment(paintableHtml: PaintableHtml, templateCache: Template
     }
 }
 
-// function regexMatchAny(text: string, ...regexes: RegExp[]): RegExpMatchArray {
-//     return regexes.reduce((acc: RegExpMatchArray, regex) => acc || text.match(regex), null);
-// }
-
 function paintPageHtml(paintableHtml: PaintableHtml, templateCache: TemplateCache): PaintableHtml {
-    while (paintableHtml.html.match(templateRegex)) {
+    while (htmlStripMatch(paintableHtml.html, REGEX.template)) {
         paintHtmlFragment(paintableHtml, templateCache);
     }
     return paintableHtml;
+}
+
+/**
+ * Strips HTML comments from the given HTML string and returns the result of string.prototype.match() against the provided regular expression.
+ * @param html - The HTML string to strip comments from.
+ * @param arg - The regular expression to match against the stripped HTML.
+ * @returns The result of matching the stripped HTML against the provided regular expression, or null if there is no match.
+ */
+function htmlStripMatch(html: string, regexp: string | RegExp): RegExpMatchArray | null;
+function htmlStripMatch(html: string, matcher: { [Symbol.match](string: string): RegExpMatchArray | null; }): RegExpMatchArray | null;
+function htmlStripMatch(html: string, arg: any): RegExpMatchArray | null {
+    const strippedHtml = html.replace(/<!--[\s\S]*?-->/g, '');
+    return strippedHtml.match(arg);
 }
 
 export default class TemplatePainter {

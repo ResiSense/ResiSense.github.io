@@ -1,17 +1,15 @@
-<ts-post-population src="/lib/template-scripts/nameLegend.ts" />
-<js-embed src="/scripts/legend.js" />
 <js-embed src="/scripts/content.js" />
 
 <css-embed href="/styles/body.css" />
 <css-embed href="/styles/content.css" />
 
 <div class="body-container">
-    <custom-outline />
-    <main>
-        <fieldset>
-            <legend id="content-legend">page name</legend>
+    <custom-title-card />
+    <div class="main-container">
+        <custom-outline />
+        <main>
             <paintable-content />
-        </fieldset>
-    </main>
-    <custom-sidebar />
+        </main>
+        <custom-sidebar />
+    </div>
 </div>

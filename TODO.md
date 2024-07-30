@@ -7,7 +7,7 @@
   - [ ] lowercase alphanumeric + `-`
   - [ ] [award URLs](https://competition.igem.org/judging/pages-for-awards)
 - [ ] only open-source or CC assets are allowed ([check](https://tools.igem.org/wiki/external-content-check))
-- [ ] all assets (-videos) are uploaded [here](https://tools.igem.org/uploads/teams)
+- [x] all assets (-videos) are uploaded [here](https://tools.igem.org/uploads/teams)
 - [ ] videos are uploaded [here](https://tools.igem.org/wiki/non-deliverable-videos)
 
 ## Actually important stuff

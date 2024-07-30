@@ -1,0 +1,165 @@
+painted-title-card {
+    width: 100%;
+    padding-bottom: 2rem;
+    overflow: clip;
+
+    &>.title-card-container {
+        --card-rotate-degrees: 1deg;
+        height: 20rem;
+        width: 100%;
+        overflow: clip;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        rotate: var(--card-rotate-degrees);
+
+        &>* {
+            position: absolute;
+            transform: rotate(calc(-1 * var(--card-rotate-degrees)));
+        }
+
+        & .use-parallax {
+            animation: parallax-title-card 1s linear forwards;
+            animation-play-state: paused;
+            animation-delay: var(--parallax-sticker-animation-delay);
+            --parallax-amount-x: 0;
+            --parallax-amount-y: 0;
+
+            @media (prefers-reduced-motion: reduce) {
+                animation: none;
+            }
+        }
+
+        &>.background-box {
+            width: 70%;
+            height: 80%;
+            justify-self: flex-end;
+            bottom: 0;
+            rotate: var(--card-rotate-degrees);
+            background-color: var(--bright-brown);
+
+            &>.pattern {
+                height: 100%;
+                width: 100%;
+                background-color: var(--pale-brown);
+                mask-image: url('/assets/backgrounds/OX.svg');
+                opacity: 20%;
+                mask-position: center;
+                mask-size: 5rem auto;
+            }
+        }
+
+        &>.page-title {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 3rem;
+            font-weight: bolder;
+            font-size: 3rem;
+            top: 35%;
+
+            &#title-name {
+                color: var(--deep-green);
+                z-index: 2;
+                --parallax-amount-x: 2rem;
+                --parallax-amount-y: 11rem;
+            }
+
+            &#title-name-shadow {
+                color: transparent;
+                -webkit-text-stroke: 6px var(--white);
+                z-index: 1;
+                user-select: none;
+                --parallax-amount-x: 2.1rem;
+                --parallax-amount-y: 11.5rem;
+            }
+
+            &#title-name-box {
+                color: transparent;
+                background-color: var(--white);
+                padding: 0.2rem 0.5rem;
+                rotate: -2deg;
+                user-select: none;
+                --parallax-amount-x: -2rem;
+                --parallax-amount-y: 9rem;
+            }
+        }
+
+        &>#sticker-container {
+            height: 100%;
+            width: 100%;
+            z-index: 0;
+            isolation: isolate;
+
+            &>* {
+                position: absolute;
+                height: 10rem;
+                user-select: none;
+
+                /* For easier modification: */
+                --blue-pills-parallax-amount: -40%;
+                --globe-parallax-amount: 60%;
+                --orange-pills-parallax-amount: 20%;
+                --gurney-parallax-amount: 40%;
+                --hold-pills-parallax-amount: 20%;
+                --colourful-pills-parallax-amount: -60%;
+            }
+
+            &>#blue-pills {
+                rotate: -70deg;
+                scale: 1.5;
+                left: 6%;
+                top: 30%;
+                z-index: 1;
+                --parallax-amount-y: var(--blue-pills-parallax-amount);
+            }
+
+            &>#globe {
+                scale: 1.8;
+                left: 20%;
+                top: 32%;
+                --parallax-amount-y: var(--globe-parallax-amount);
+            }
+
+            &>#orange-pills {
+                rotate: 120deg;
+                scale: 1.2;
+                left: 32%;
+                top: 65%;
+                z-index: 1;
+                --parallax-amount-y: var(--orange-pills-parallax-amount);
+            }
+
+            &>#gurney {
+                scale: 1.5;
+                left: 55%;
+                top: 60%;
+                --parallax-amount-y: var(--gurney-parallax-amount);
+            }
+
+            &>#hold-pills {
+                rotate: 20deg;
+                scale: 2;
+                left: 75%;
+                top: 40%;
+                --parallax-amount-y: var(--hold-pills-parallax-amount);
+            }
+
+            &>#colourful-pills {
+                rotate: 40deg;
+                scale: 1.5;
+                left: 90%;
+                top: 20%;
+                z-index: 1;
+                --parallax-amount-y: var(--colourful-pills-parallax-amount);
+            }
+        }
+    }
+}
+
+@keyframes parallax-title-card {
+    to {
+        translate: var(--parallax-amount-x) var(--parallax-amount-y);
+    }
+}

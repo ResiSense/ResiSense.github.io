@@ -6,6 +6,8 @@
         <link rel="icon" type="image/x-icon" href="/assets/favicon.png" />
         <title>Acknowledgements</title>
 
+        <link rel="preconnect" href="https://static.igem.wiki" />
+
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" />
         <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400..800&amp;display=swap" rel="stylesheet" />
@@ -23,7 +25,10 @@
             href="/styles/footer.css" /><link rel="stylesheet" type="text/css" href="/styles/searchbar.css" /><link
             rel="stylesheet"
             type="text/css"
-            href="/styles/catalogue.css" /><link rel="stylesheet" type="text/css" href="/styles/outline.css" /><link
+            href="/styles/catalogue.css" /><link rel="stylesheet" type="text/css" href="/styles/title-card.css" /><link
+            rel="stylesheet"
+            type="text/css"
+            href="/styles/outline.css" /><link
             rel="stylesheet"
             type="text/css"
             href="/styles/acknowledgements.css" /><script
@@ -31,11 +36,11 @@
             src="/scripts/responsivenessHandler.js"
             defer=""
         ></script
-        ><script type="text/javascript" src="/scripts/legend.js" defer=""></script
         ><script type="text/javascript" src="/scripts/footer.js" defer=""></script
         ><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/fuse.js/dist/fuse.min.js" defer=""></script
         ><script type="text/javascript" src="/scripts/searchbar.js" defer=""></script
         ><script type="text/javascript" src="/scripts/catalogue.js" defer=""></script
+        ><script type="text/javascript" src="/scripts/title-card.js" defer=""></script
         ><script type="text/javascript" src="/scripts/outline.js" defer=""></script
     ></head>
 
@@ -68,6 +73,7 @@
                                 </painted-searchbar>
                                 <painted-hamburger-menu> 🍔 </painted-hamburger-menu>
                             </div>
+                            <div class="page-title hidden" id="header-page-title">Acknowledgements</div>
                         </div>
                         <div class="header-catalogue-container">
                             <painted-catalogue>
@@ -78,46 +84,46 @@
                                         </div>
                                     </template>
                                     <template id="catalogue-divider-template">
-                                        <div class="catalogue-item catalogue-divider"> | </div>
+                                        <div class="catalogue-item catalogue-divider"><span> | </span></div>
                                     </template>
                                     <!--  -->
-                                    <div class="catalogue-item catalogue-arrow"> &gt; </div>
+                                    <div class="catalogue-item catalogue-arrow"><span> &gt; </span></div>
 
                                     <div class="catalogue-item">
                                         <a href="/home">home</a>
                                     </div>
 
-                                    <div class="catalogue-item catalogue-divider"> | </div>
+                                    <div class="catalogue-item catalogue-divider"><span> | </span></div>
 
                                     <div class="catalogue-item">
                                         <a href="/project">project</a>
                                     </div>
 
-                                    <div class="catalogue-item catalogue-divider"> | </div>
+                                    <div class="catalogue-item catalogue-divider"><span> | </span></div>
 
                                     <div class="catalogue-item">
                                         <a href="/project/description">project description</a>
                                     </div>
 
-                                    <div class="catalogue-item catalogue-divider"> | </div>
+                                    <div class="catalogue-item catalogue-divider"><span> | </span></div>
 
                                     <div class="catalogue-item">
                                         <a href="/project/design">design</a>
                                     </div>
 
-                                    <div class="catalogue-item catalogue-divider"> | </div>
+                                    <div class="catalogue-item catalogue-divider"><span> | </span></div>
 
                                     <div class="catalogue-item">
                                         <a href="/integrated-human-practice">integrated human practice</a>
                                     </div>
 
-                                    <div class="catalogue-item catalogue-divider"> | </div>
+                                    <div class="catalogue-item catalogue-divider"><span> | </span></div>
 
                                     <div class="catalogue-item catalogue-item-active">
                                         <a href="/acknowledgements">acknowledgements</a>
                                     </div>
 
-                                    <div class="catalogue-item catalogue-divider"> | </div>
+                                    <div class="catalogue-item catalogue-divider"><span> | </span></div>
                                 </div>
                             </painted-catalogue>
                         </div>
@@ -127,127 +133,173 @@
             </painted-header>
             <painted-body>
                 <div class="body-container">
-                    <painted-outline>
-                        <nav>
-                            <div id="outline-progress-pointer">➡️</div>
-                            <div class="outline">
-                                <ul id="outline-tree">
-                                    <template id="outline-heading-template">
+                    <painted-title-card>
+                        <div class="title-card-container">
+                            <div class="background-box">
+                                <div class="pattern"></div>
+                            </div>
+                            <div class="page-title use-parallax" id="title-name">Acknowledgements</div>
+                            <div class="page-title use-parallax" id="title-name-shadow">Acknowledgements</div>
+                            <div class="page-title use-parallax" id="title-name-box">Acknowledgements</div>
+                            <div id="sticker-container">
+                                <img
+                                    class="use-parallax"
+                                    id="blue-pills"
+                                    src="/assets/stickers/blue pills-Enhanced-SR.png"
+                                />
+                                <img
+                                    class="use-parallax"
+                                    id="colourful-pills"
+                                    src="/assets/stickers/colourful pills-Enhanced-SR.png"
+                                />
+                                <img
+                                    class="use-parallax"
+                                    id="hold-pills"
+                                    src="/assets/stickers/hold pills-Enhanced-SR.png"
+                                />
+                                <img
+                                    class="use-parallax"
+                                    id="orange-pills"
+                                    src="/assets/stickers/orange pills-Enhanced-SR.png"
+                                />
+                                <img class="use-parallax" id="globe" src="/assets/stickers/globe-Enhanced-SR.png" />
+                                <img class="use-parallax" id="gurney" src="/assets/stickers/gurney-Enhanced-SR.png" />
+                            </div>
+                        </div>
+                    </painted-title-card>
+                    <div class="main-container">
+                        <painted-outline>
+                            <nav>
+                                <div id="outline-progress-pointer">➡️</div>
+                                <div class="outline">
+                                    <ul id="outline-tree">
+                                        <template id="outline-heading-template">
+                                            <li>
+                                                <a>heading</a>
+                                                <ul></ul>
+                                            </li>
+                                        </template>
+
                                         <li>
-                                            <a>heading</a>
+                                            <a href="#affiliations" id="--outline-affiliations">Affiliations</a>
+                                            <ul>
+                                                <li>
+                                                    <a
+                                                        href="#the-chinese-university-of-hong-kong"
+                                                        id="--outline-the-chinese-university-of-hong-kong"
+                                                        >The Chinese University of Hong Kong</a
+                                                    >
+                                                    <ul></ul>
+                                                </li>
+
+                                                <li>
+                                                    <a
+                                                        href="#department-of-biomedical-engineering"
+                                                        id="--outline-department-of-biomedical-engineering"
+                                                        >Department of Biomedical Engineering</a
+                                                    >
+                                                    <ul></ul>
+                                                </li>
+
+                                                <li>
+                                                    <a
+                                                        href="#school-of-life-sciences"
+                                                        id="--outline-school-of-life-sciences"
+                                                        >School of Life Sciences</a
+                                                    >
+                                                    <ul></ul>
+                                                </li>
+                                            </ul>
+                                        </li>
+
+                                        <li>
+                                            <a href="#sponsors" id="--outline-sponsors">Sponsors</a>
+                                            <ul>
+                                                <li>
+                                                    <a href="#opentrons" id="--outline-opentrons">Opentrons</a>
+                                                    <ul></ul>
+                                                </li>
+
+                                                <li>
+                                                    <a
+                                                        href="#integrated-dna-technologies"
+                                                        id="--outline-integrated-dna-technologies"
+                                                        >Integrated DNA Technologies</a
+                                                    >
+                                                    <ul></ul>
+                                                </li>
+
+                                                <li>
+                                                    <a href="#new-england-biolabs" id="--outline-new-england-biolabs"
+                                                        >New England Biolabs</a
+                                                    >
+                                                    <ul></ul>
+                                                </li>
+
+                                                <li>
+                                                    <a
+                                                        href="#hong-kong-life-sciences-society"
+                                                        id="--outline-hong-kong-life-sciences-society"
+                                                        >Hong Kong Life Sciences Society</a
+                                                    >
+                                                    <ul></ul>
+                                                </li>
+
+                                                <li>
+                                                    <a
+                                                        href="#hong-kong-amgen-biotech-experience"
+                                                        id="--outline-hong-kong-amgen-biotech-experience"
+                                                        >Hong Kong Amgen Biotech Experience</a
+                                                    >
+                                                    <ul></ul>
+                                                </li>
+                                            </ul>
+                                        </li>
+
+                                        <li>
+                                            <a href="#collaborators" id="--outline-collaborators">Collaborators</a>
                                             <ul></ul>
                                         </li>
-                                    </template>
 
-                                    <li>
-                                        <a href="#affiliations" id="--outline-affiliations">Affiliations</a>
-                                        <ul>
-                                            <li>
-                                                <a
-                                                    href="#the-chinese-university-of-hong-kong"
-                                                    id="--outline-the-chinese-university-of-hong-kong"
-                                                    >The Chinese University of Hong Kong</a
-                                                >
-                                                <ul></ul>
-                                            </li>
+                                        <li>
+                                            <a href="#advisors" id="--outline-advisors">Advisors</a>
+                                            <ul></ul>
+                                        </li>
 
-                                            <li>
-                                                <a
-                                                    href="#department-of-biomedical-engineering"
-                                                    id="--outline-department-of-biomedical-engineering"
-                                                    >Department of Biomedical Engineering</a
-                                                >
-                                                <ul></ul>
-                                            </li>
+                                        <li>
+                                            <a href="#interviewees" id="--outline-interviewees">Interviewees</a>
+                                            <ul>
+                                                <li>
+                                                    <a
+                                                        href="#professor-margaret-ip"
+                                                        id="--outline-professor-margaret-ip"
+                                                        >Professor Margaret Ip</a
+                                                    >
+                                                    <ul></ul>
+                                                </li>
 
-                                            <li>
-                                                <a
-                                                    href="#school-of-life-sciences"
-                                                    id="--outline-school-of-life-sciences"
-                                                    >School of Life Sciences</a
-                                                >
-                                                <ul></ul>
-                                            </li>
-                                        </ul>
-                                    </li>
+                                                <li>
+                                                    <a
+                                                        href="#professor-stephen-tsui"
+                                                        id="--outline-professor-stephen-tsui"
+                                                        >Professor Stephen Tsui</a
+                                                    >
+                                                    <ul></ul>
+                                                </li>
 
-                                    <li>
-                                        <a href="#sponsors" id="--outline-sponsors">Sponsors</a>
-                                        <ul>
-                                            <li>
-                                                <a href="#opentrons" id="--outline-opentrons">Opentrons</a>
-                                                <ul></ul>
-                                            </li>
-
-                                            <li>
-                                                <a
-                                                    href="#integrated-dna-technologies"
-                                                    id="--outline-integrated-dna-technologies"
-                                                    >Integrated DNA Technologies</a
-                                                >
-                                                <ul></ul>
-                                            </li>
-
-                                            <li>
-                                                <a href="#new-england-biolabs" id="--outline-new-england-biolabs"
-                                                    >New England Biolabs</a
-                                                >
-                                                <ul></ul>
-                                            </li>
-
-                                            <li>
-                                                <a
-                                                    href="#hong-kong-life-sciences-society"
-                                                    id="--outline-hong-kong-life-sciences-society"
-                                                    >Hong Kong Life Sciences Society</a
-                                                >
-                                                <ul></ul>
-                                            </li>
-                                        </ul>
-                                    </li>
-
-                                    <li>
-                                        <a href="#collaborators" id="--outline-collaborators">Collaborators</a>
-                                        <ul></ul>
-                                    </li>
-
-                                    <li>
-                                        <a href="#advisors" id="--outline-advisors">Advisors</a>
-                                        <ul></ul>
-                                    </li>
-
-                                    <li>
-                                        <a href="#interviewees" id="--outline-interviewees">Interviewees</a>
-                                        <ul>
-                                            <li>
-                                                <a href="#professor-margaret-ip" id="--outline-professor-margaret-ip"
-                                                    >Professor Margaret Ip</a
-                                                >
-                                                <ul></ul>
-                                            </li>
-
-                                            <li>
-                                                <a href="#professor-stephen-tsui" id="--outline-professor-stephen-tsui"
-                                                    >Professor Stephen Tsui</a
-                                                >
-                                                <ul></ul>
-                                            </li>
-
-                                            <li>
-                                                <a href="#doctor-pierre-chan" id="--outline-doctor-pierre-chan"
-                                                    >Doctor Pierre Chan</a
-                                                >
-                                                <ul></ul>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                </ul>
-                            </div>
-                        </nav>
-                    </painted-outline>
-                    <main>
-                        <fieldset>
-                            <legend id="content-legend">Acknowledgements</legend>
+                                                <li>
+                                                    <a href="#doctor-pierre-chan" id="--outline-doctor-pierre-chan"
+                                                        >Doctor Pierre Chan</a
+                                                    >
+                                                    <ul></ul>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </nav>
+                        </painted-outline>
+                        <main>
                             <painted-content
                                 ><p>🚧 Under construction</p>
                                 <p
@@ -411,6 +463,34 @@
                                             to support our project. </p
                                         ><div
                                             class="scroll-marker"
+                                            data-scroll-marker-level="H2"
+                                            id="hong-kong-amgen-biotech-experience"
+                                        ></div></section
+                                    ><section
+                                        ><h2 id="hong-kong-amgen-biotech-experience"
+                                            >Hong Kong Amgen Biotech Experience</h2
+                                        ><p
+                                            ><a
+                                                href="https://abehk.fed.cuhk.edu.hk"
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                                ><img src="/assets/logos/hkabe%20logo.svg" alt="HKABE Logo" /></a
+                                            ><br /><a
+                                                href="https://abehk.fed.cuhk.edu.hk"
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                                >Hong Kong Amgen Biotech Experience</a
+                                            >
+                                            has kindly provided us with various cells, plasmids, and reagents totalling
+                                            <a
+                                                href="https://www.google.com/search?q=1000HKD"
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                                >1000HKD</a
+                                            >
+                                            for our experiments. </p
+                                        ><div
+                                            class="scroll-marker"
                                             data-scroll-marker-level="H1"
                                             id="collaborators"
                                         ></div></section
@@ -476,13 +556,13 @@
                                                     src="/assets/humans/pierre%20chan%20full-Enhanced-SR.png"
                                                     alt="Portrait of Doctor Pierre Chan" /></a></p></section
                                 ></section> </painted-content
-                        ></fieldset>
-                    </main>
-                    <painted-sidebar>
-                        <aside>
-                            <a href="#"> 🔝 </a>
-                        </aside>
-                    </painted-sidebar>
+                        ></main>
+                        <painted-sidebar>
+                            <aside>
+                                <a href="#"> 🔝 </a>
+                            </aside>
+                        </painted-sidebar>
+                    </div>
                 </div>
             </painted-body>
             <painted-footer>
@@ -545,6 +625,9 @@
                                 </a>
                                 <a href="https://www.hklss.org" target="_blank" rel="noopener noreferrer">
                                     <img src="/assets/logos/hklss logo repacked.svg" alt="HKLSS logo" />
+                                </a>
+                                <a href="https://abehk.fed.cuhk.edu.hk" target="_blank" rel="noopener noreferrer">
+                                    <img src="/assets/logos/hkabe logo.svg" alt="HKABE logo" />
                                 </a>
                             </div>
                         </div>

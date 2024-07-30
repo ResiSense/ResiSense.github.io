@@ -6,6 +6,8 @@
         <link rel="icon" type="image/x-icon" href="/assets/favicon.png" />
         <title>Project Description</title>
 
+        <link rel="preconnect" href="https://static.igem.wiki" />
+
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" />
         <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400..800&amp;display=swap" rel="stylesheet" />
@@ -23,16 +25,19 @@
             href="/styles/footer.css" /><link rel="stylesheet" type="text/css" href="/styles/searchbar.css" /><link
             rel="stylesheet"
             type="text/css"
-            href="/styles/catalogue.css" /><link rel="stylesheet" type="text/css" href="/styles/outline.css" /><script
+            href="/styles/catalogue.css" /><link rel="stylesheet" type="text/css" href="/styles/title-card.css" /><link
+            rel="stylesheet"
+            type="text/css"
+            href="/styles/outline.css" /><script
             type="text/javascript"
             src="/scripts/responsivenessHandler.js"
             defer=""
         ></script
-        ><script type="text/javascript" src="/scripts/legend.js" defer=""></script
         ><script type="text/javascript" src="/scripts/footer.js" defer=""></script
         ><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/fuse.js/dist/fuse.min.js" defer=""></script
         ><script type="text/javascript" src="/scripts/searchbar.js" defer=""></script
         ><script type="text/javascript" src="/scripts/catalogue.js" defer=""></script
+        ><script type="text/javascript" src="/scripts/title-card.js" defer=""></script
         ><script type="text/javascript" src="/scripts/outline.js" defer=""></script
     ></head>
 
@@ -65,6 +70,7 @@
                                 </painted-searchbar>
                                 <painted-hamburger-menu> 🍔 </painted-hamburger-menu>
                             </div>
+                            <div class="page-title hidden" id="header-page-title">Project Description</div>
                         </div>
                         <div class="header-catalogue-container">
                             <painted-catalogue>
@@ -75,46 +81,46 @@
                                         </div>
                                     </template>
                                     <template id="catalogue-divider-template">
-                                        <div class="catalogue-item catalogue-divider"> | </div>
+                                        <div class="catalogue-item catalogue-divider"><span> | </span></div>
                                     </template>
                                     <!--  -->
-                                    <div class="catalogue-item catalogue-arrow"> &gt; </div>
+                                    <div class="catalogue-item catalogue-arrow"><span> &gt; </span></div>
 
                                     <div class="catalogue-item">
                                         <a href="/home">home</a>
                                     </div>
 
-                                    <div class="catalogue-item catalogue-divider"> | </div>
+                                    <div class="catalogue-item catalogue-divider"><span> | </span></div>
 
                                     <div class="catalogue-item">
                                         <a href="/project">project</a>
                                     </div>
 
-                                    <div class="catalogue-item catalogue-divider"> | </div>
+                                    <div class="catalogue-item catalogue-divider"><span> | </span></div>
 
                                     <div class="catalogue-item catalogue-item-active">
                                         <a href="/project/description">project description</a>
                                     </div>
 
-                                    <div class="catalogue-item catalogue-divider"> | </div>
+                                    <div class="catalogue-item catalogue-divider"><span> | </span></div>
 
                                     <div class="catalogue-item">
                                         <a href="/project/design">design</a>
                                     </div>
 
-                                    <div class="catalogue-item catalogue-divider"> | </div>
+                                    <div class="catalogue-item catalogue-divider"><span> | </span></div>
 
                                     <div class="catalogue-item">
                                         <a href="/integrated-human-practice">integrated human practice</a>
                                     </div>
 
-                                    <div class="catalogue-item catalogue-divider"> | </div>
+                                    <div class="catalogue-item catalogue-divider"><span> | </span></div>
 
                                     <div class="catalogue-item">
                                         <a href="/acknowledgements">acknowledgements</a>
                                     </div>
 
-                                    <div class="catalogue-item catalogue-divider"> | </div>
+                                    <div class="catalogue-item catalogue-divider"><span> | </span></div>
                                 </div>
                             </painted-catalogue>
                         </div>
@@ -124,63 +130,100 @@
             </painted-header>
             <painted-body>
                 <div class="body-container">
-                    <painted-outline>
-                        <nav>
-                            <div id="outline-progress-pointer">➡️</div>
-                            <div class="outline">
-                                <ul id="outline-tree">
-                                    <template id="outline-heading-template">
+                    <painted-title-card>
+                        <div class="title-card-container">
+                            <div class="background-box">
+                                <div class="pattern"></div>
+                            </div>
+                            <div class="page-title use-parallax" id="title-name">Project Description</div>
+                            <div class="page-title use-parallax" id="title-name-shadow">Project Description</div>
+                            <div class="page-title use-parallax" id="title-name-box">Project Description</div>
+                            <div id="sticker-container">
+                                <img
+                                    class="use-parallax"
+                                    id="blue-pills"
+                                    src="/assets/stickers/blue pills-Enhanced-SR.png"
+                                />
+                                <img
+                                    class="use-parallax"
+                                    id="colourful-pills"
+                                    src="/assets/stickers/colourful pills-Enhanced-SR.png"
+                                />
+                                <img
+                                    class="use-parallax"
+                                    id="hold-pills"
+                                    src="/assets/stickers/hold pills-Enhanced-SR.png"
+                                />
+                                <img
+                                    class="use-parallax"
+                                    id="orange-pills"
+                                    src="/assets/stickers/orange pills-Enhanced-SR.png"
+                                />
+                                <img class="use-parallax" id="globe" src="/assets/stickers/globe-Enhanced-SR.png" />
+                                <img class="use-parallax" id="gurney" src="/assets/stickers/gurney-Enhanced-SR.png" />
+                            </div>
+                        </div>
+                    </painted-title-card>
+                    <div class="main-container">
+                        <painted-outline>
+                            <nav>
+                                <div id="outline-progress-pointer">➡️</div>
+                                <div class="outline">
+                                    <ul id="outline-tree">
+                                        <template id="outline-heading-template">
+                                            <li>
+                                                <a>heading</a>
+                                                <ul></ul>
+                                            </li>
+                                        </template>
+
                                         <li>
-                                            <a>heading</a>
+                                            <a href="#inspiration" id="--outline-inspiration">Inspiration</a>
                                             <ul></ul>
                                         </li>
-                                    </template>
 
-                                    <li>
-                                        <a href="#inspiration" id="--outline-inspiration">Inspiration</a>
-                                        <ul></ul>
-                                    </li>
+                                        <li>
+                                            <a href="#background" id="--outline-background">Background</a>
+                                            <ul>
+                                                <li>
+                                                    <a
+                                                        href="#antibiotic-resistance"
+                                                        id="--outline-antibiotic-resistance"
+                                                        >Antibiotic Resistance</a
+                                                    >
+                                                    <ul></ul>
+                                                </li>
 
-                                    <li>
-                                        <a href="#background" id="--outline-background">Background</a>
-                                        <ul>
-                                            <li>
-                                                <a href="#antibiotic-resistance" id="--outline-antibiotic-resistance"
-                                                    >Antibiotic Resistance</a
-                                                >
-                                                <ul></ul>
-                                            </li>
+                                                <li>
+                                                    <a
+                                                        href="#klebsiella-pneumoniae"
+                                                        id="--outline-klebsiella-pneumoniae"
+                                                        >Klebsiella pneumoniae</a
+                                                    >
+                                                    <ul></ul>
+                                                </li>
+                                            </ul>
+                                        </li>
 
-                                            <li>
-                                                <a href="#klebsiella-pneumoniae" id="--outline-klebsiella-pneumoniae"
-                                                    >Klebsiella pneumoniae</a
-                                                >
-                                                <ul></ul>
-                                            </li>
-                                        </ul>
-                                    </li>
+                                        <li>
+                                            <a href="#our-solution" id="--outline-our-solution">Our Solution</a>
+                                            <ul></ul>
+                                        </li>
 
-                                    <li>
-                                        <a href="#our-solution" id="--outline-our-solution">Our Solution</a>
-                                        <ul></ul>
-                                    </li>
+                                        <li>
+                                            <a href="#our-vision" id="--outline-our-vision">Our Vision</a>
+                                            <ul></ul>
+                                        </li>
 
-                                    <li>
-                                        <a href="#our-vision" id="--outline-our-vision">Our Vision</a>
-                                        <ul></ul>
-                                    </li>
-
-                                    <li>
-                                        <a href="#references" id="--outline-references">References</a>
-                                        <ul></ul>
-                                    </li>
-                                </ul>
-                            </div>
-                        </nav>
-                    </painted-outline>
-                    <main>
-                        <fieldset>
-                            <legend id="content-legend">Project Description</legend>
+                                        <li>
+                                            <a href="#references" id="--outline-references">References</a>
+                                            <ul></ul>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </nav>
+                        </painted-outline>
+                        <main>
                             <painted-content
                                 ><p>🚧 Under construction</p>
                                 <div class="scroll-marker" data-scroll-marker-level="H1" id="inspiration"></div
@@ -581,14 +624,14 @@
                                         >
                                     </ol></section
                                 >
-                            </painted-content></fieldset
+                            </painted-content></main
                         >
-                    </main>
-                    <painted-sidebar>
-                        <aside>
-                            <a href="#"> 🔝 </a>
-                        </aside>
-                    </painted-sidebar>
+                        <painted-sidebar>
+                            <aside>
+                                <a href="#"> 🔝 </a>
+                            </aside>
+                        </painted-sidebar>
+                    </div>
                 </div>
             </painted-body>
             <painted-footer>
@@ -651,6 +694,9 @@
                                 </a>
                                 <a href="https://www.hklss.org" target="_blank" rel="noopener noreferrer">
                                     <img src="/assets/logos/hklss logo repacked.svg" alt="HKLSS logo" />
+                                </a>
+                                <a href="https://abehk.fed.cuhk.edu.hk" target="_blank" rel="noopener noreferrer">
+                                    <img src="/assets/logos/hkabe logo.svg" alt="HKABE logo" />
                                 </a>
                             </div>
                         </div>

@@ -1,20 +1,20 @@
 {
     "job": "build",
     "ref": "refs/heads/main",
-    "sha": "24597c5092e795946e8689f3d45fc968e24709ea",
+    "sha": "715540862db215aed9b16e1670c8497b8b4e4bf4",
     "repository": "ResiSense/ResiSense.github.io",
     "repository_Url": null,
-    "run_id": "10099576308",
-    "run_number": "75",
+    "run_id": "10163728941",
+    "run_number": "154",
     "run_attempt": "1",
     "artifact_cache_size_limit": "10",
     "actor": "CCheukKa",
     "trigerring_actor": null,
-    "workflow": "Full CI Pipeline",
+    "workflow": "Full CI pipeline",
     "event_name": "push",
     "event": {
-        "after": "24597c5092e795946e8689f3d45fc968e24709ea",
-        "before": "81f3d4fd13ce59d1cbf615a72545fe2ac35bff46",
+        "after": "715540862db215aed9b16e1670c8497b8b4e4bf4",
+        "before": "9211885f4e359b8c4e8e7c32c510aee23fb943f2",
         "commits": [
             {
                 "author": {
@@ -28,14 +28,14 @@
                     "username": "CCheukKa"
                 },
                 "distinct": true,
-                "id": "24597c5092e795946e8689f3d45fc968e24709ea",
-                "message": "chore: update template script file paths for lazy loading",
-                "timestamp": "2024-07-26T01:02:46+08:00",
-                "tree_id": "6af2622b193304418ea680024d1a7072b9181ddb",
-                "url": "https://github.com/ResiSense/ResiSense.github.io/commit/24597c5092e795946e8689f3d45fc968e24709ea"
+                "id": "715540862db215aed9b16e1670c8497b8b4e4bf4",
+                "message": "wrap bash variable in echo",
+                "timestamp": "2024-07-30T21:54:54+08:00",
+                "tree_id": "876f2e210aaa0756137fbd72a09c49bfacba86f5",
+                "url": "https://github.com/ResiSense/ResiSense.github.io/commit/715540862db215aed9b16e1670c8497b8b4e4bf4"
             }
         ],
-        "compare": "https://github.com/ResiSense/ResiSense.github.io/compare/81f3d4fd13ce...24597c5092e7",
+        "compare": "https://github.com/ResiSense/ResiSense.github.io/compare/9211885f4e35...715540862db2",
         "created": false,
         "deleted": false,
         "forced": false,
@@ -51,11 +51,11 @@
                 "username": "CCheukKa"
             },
             "distinct": true,
-            "id": "24597c5092e795946e8689f3d45fc968e24709ea",
-            "message": "chore: update template script file paths for lazy loading",
-            "timestamp": "2024-07-26T01:02:46+08:00",
-            "tree_id": "6af2622b193304418ea680024d1a7072b9181ddb",
-            "url": "https://github.com/ResiSense/ResiSense.github.io/commit/24597c5092e795946e8689f3d45fc968e24709ea"
+            "id": "715540862db215aed9b16e1670c8497b8b4e4bf4",
+            "message": "wrap bash variable in echo",
+            "timestamp": "2024-07-30T21:54:54+08:00",
+            "tree_id": "876f2e210aaa0756137fbd72a09c49bfacba86f5",
+            "url": "https://github.com/ResiSense/ResiSense.github.io/commit/715540862db215aed9b16e1670c8497b8b4e4bf4"
         },
         "pusher": {
             "email": "ccheukka@gmail.com",
@@ -64,10 +64,10 @@
         "ref": "refs/heads/main"
     },
     "ref_name": "main",
-    "ref_protected": false,
+    "ref_protected": true,
     "ref_type": "branch",
     "secret_source": "Actions",
     "workflow_ref": "ResiSense/ResiSense.github.io/.github/workflows/full-ci-pipeline.yaml@refs/heads/main",
-    "workflow_sha": "24597c5092e795946e8689f3d45fc968e24709ea",
+    "workflow_sha": "715540862db215aed9b16e1670c8497b8b4e4bf4",
     "workspace": "/home/runner/work/ResiSense.github.io/ResiSense.github.io"
 }
