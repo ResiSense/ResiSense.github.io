@@ -106,6 +106,8 @@ painted-header {
 
                     &.hidden {
                         bottom: -1rem;
+                        opacity: 0;
+                        user-select: none;
                     }
                 }
             }
