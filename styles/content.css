@@ -48,7 +48,6 @@ painted-content {
     h6 {
         margin: 0;
         position: sticky;
-        /* outline: 1px dashed magenta; */
         box-shadow: 0 -20px 0 0 var(--pale-green);
         top: var(--this-top);
         scroll-margin-top: var(--this-top);
