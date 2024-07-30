@@ -68,9 +68,7 @@ painted-content {
             width: var(--grid-right-percent);
 
             &>h3 {
-                position: initial;
-                background: transparent;
-                box-shadow: none;
+                --background-colour: transparent;
             }
 
             &>p {

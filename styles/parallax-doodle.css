@@ -1,0 +1,33 @@
+#parallax-doodle-container {
+    transition: none;
+    pointer-events: none;
+    width: 0;
+    height: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5rem;
+    overflow: visible;
+    position: fixed;
+    background-color: rgba(255, 0, 0, 0.2);
+
+    &>* {
+        font-size: 10rem;
+        font-weight: bolder;
+        height: 10rem;
+        width: 10rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        object-fit: cover;
+        overflow: visible;
+        position: absolute;
+        animation: linear forwards;
+        animation-timeline: scroll();
+        opacity: 0.2;
+
+        @media (prefers-reduced-motion: reduce) {
+            animation: none;
+        }
+    }
+}
