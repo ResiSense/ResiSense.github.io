@@ -1,9 +1,7 @@
 {
-    const parallaxDoodleContainer = document.getElementById('parallax-doodle-container');
-
-    window.addEventListener('scroll', scrollParallaxDoodleContainer);
-    function scrollParallaxDoodleContainer() {
-        const yOffset = window.scrollY;
-        parallaxDoodleContainer.style.translate = `0 -${yOffset}px`;
+    window.addEventListener('DOMContentLoaded', setParallaxDoodleContainerHeight);
+    function setParallaxDoodleContainerHeight() {
+        const parallaxDoodleContainer = document.getElementById('parallax-doodle-container');
+        parallaxDoodleContainer.style.height = `${document.body.clientHeight}px`;
     }
 }

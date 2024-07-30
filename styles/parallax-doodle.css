@@ -9,7 +9,8 @@
     gap: 5rem;
     overflow: visible;
     position: fixed;
-    background-color: rgba(255, 0, 0, 0.2);
+    animation: scroll-up linear forwards;
+    animation-timeline: scroll();
 
     &>* {
         font-size: 10rem;
@@ -29,5 +30,11 @@
         @media (prefers-reduced-motion: reduce) {
             animation: none;
         }
+    }
+}
+
+@keyframes scroll-up {
+    to {
+        translate: 0 -100%
     }
 }
