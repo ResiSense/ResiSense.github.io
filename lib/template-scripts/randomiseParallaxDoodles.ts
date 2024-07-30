@@ -1,37 +1,16 @@
 import { PageData } from "../types/PageData";
 import fs = require('fs-extra');
+import PDFGrid from "./randomiseParallaxDoodles-PDFGrid";
+import Vector2 from "../types/Vector2";
 
-const Y_DENSITY_PER_PX = 5 / 1000; // in count per px
-const GRADATION_HEIGHT = 100; // in px
+const DOODLE_Y_DENSITY_PER_PX = 3 / 1000;
+const GRID_Y_CELL_SIZE_PX = 20;
 
-class Vector2 {
-    constructor(public x: number, public y: number) { }
-    add(other: Vector2): Vector2 {
-        return new Vector2(this.x + other.x, this.y + other.y);
-    }
-    subtract(other: Vector2): Vector2 {
-        return new Vector2(this.x - other.x, this.y - other.y);
-    }
-    multiply(scalar: number): Vector2 {
-        return new Vector2(this.x * scalar, this.y * scalar);
-    }
-    divide(scalar: number): Vector2 {
-        return new Vector2(this.x / scalar, this.y / scalar);
-    }
-    get magnitude(): number {
-        return Math.sqrt(this.x * this.x + this.y * this.y);
-    }
-    get normalised(): Vector2 {
-        return this.divide(this.magnitude);
-    }
-    distanceTo(other: Vector2): number {
-        return this.subtract(other).magnitude;
-    }
-
-    static distanceTo(a: Vector2, b: Vector2): number {
-        return a.distanceTo(b);
-    }
-}
+const PDF_σ = 16; //! Infinite loop potential if this is too high
+const PDF_RADIUS_PX = 240; //! Infinite loop potential if this is too high
+//? This is a Gaussian function that returns a value between 0 and 1 based on the distance between two doodles, modified with a radius where the value is 1
+const PDF_REPULSION_PROBABILITY_FUNCTION =
+    (d: number) => d > PDF_RADIUS_PX / GRID_Y_CELL_SIZE_PX ? Math.exp(-d * d / (2 * PDF_σ * PDF_σ)) : 1;
 
 function randomFromRange(min: number, max: number) {
     return Math.random() * (max - min) + min;
@@ -47,7 +26,7 @@ function calculatePageSizeHeuristic(contentLength: number): number {
 
 function cloneDoodlesToFillPool(parallaxDoodleContainer: HTMLElement, Y_PAGE_SIZE_HEURISTIC: number) {
     // 
-    const requiredDoodleCount = Y_DENSITY_PER_PX * Y_PAGE_SIZE_HEURISTIC * 2;
+    const requiredDoodleCount = DOODLE_Y_DENSITY_PER_PX * Y_PAGE_SIZE_HEURISTIC * 2;
     // make a doodle bag to clone from
     const doodleBag: HTMLElement[] = Array.from(parallaxDoodleContainer.children).map(child => child.cloneNode(true) as HTMLElement);
     // fill the pool
@@ -72,32 +51,27 @@ function cloneDoodlesToFillPool(parallaxDoodleContainer: HTMLElement, Y_PAGE_SIZ
     }
 }
 
-const randomDoodleOffsets: Vector2[] = [];
-function calculateRandomDoodleOffset(siblingCount: number): Vector2 {
-    // I'm not sure doing the randomisation in two steps is any better than doing it in one step?
-    const gradationCount = siblingCount / Y_DENSITY_PER_PX / GRADATION_HEIGHT;
-    const gradationNumber = Math.floor(Math.random() * gradationCount);
-    const offset = new Vector2(
-        randomFromRange(0, 100), // in vw
-        (gradationNumber + randomFromRange(0, 1)) * GRADATION_HEIGHT, // in px
-    );
-    const repulsedOffset = applyRepulsion(offset);
-    randomDoodleOffsets.push(repulsedOffset);
-    return repulsedOffset;
-    // 
-    function applyRepulsion(offset: Vector2): Vector2 {
-        const repulsionFalloff = 10;
-        const repulsionStrength = 20;
-        const repulsedOffset = new Vector2(offset.x, offset.y);
-        for (let otherOffset of randomDoodleOffsets) {
-            // use a repulsion force based on distance, exponential decay
-            const distance = Vector2.distanceTo(offset, otherOffset);
-            const repulsion = Math.exp(-distance / repulsionFalloff) * repulsionStrength;
-            const repulsionDirection = offset.subtract(otherOffset).normalised;
-            repulsedOffset.add(repulsionDirection.multiply(repulsion));
-        }
-        return repulsedOffset;
-    }
+const randomDoodleOffsets: Map<PDFGrid, Vector2[]> = new Map();
+const placeRandomTimes: Map<PDFGrid, number[]> = new Map();
+const placeRandomAttempts: Map<PDFGrid, number[]> = new Map();
+function calculateRandomDoodleOffset(pdfGrid: PDFGrid): Vector2 {
+    //! PERFORMANCE
+    const startTime = performance.now();
+    //! -----------
+
+    const [randomOffset, attempts] = pdfGrid.placeRandom();
+
+    //! PERFORMANCE
+    const endTime = performance.now();
+    const elapsedTime = endTime - startTime;
+    placeRandomTimes.set(pdfGrid, placeRandomTimes.get(pdfGrid) ? placeRandomTimes.get(pdfGrid).concat(elapsedTime) : [elapsedTime]);
+    placeRandomAttempts.set(pdfGrid, placeRandomAttempts.get(pdfGrid) ? placeRandomAttempts.get(pdfGrid).concat(attempts) : [attempts]);
+    console.log('Doodle placement took', Math.round(elapsedTime * 1000) / 1000, 'ms', 'in', attempts, 'attempts');
+    //! -----------
+
+    randomOffset.y *= GRID_Y_CELL_SIZE_PX;
+    randomDoodleOffsets.set(pdfGrid, randomDoodleOffsets.get(pdfGrid) ? randomDoodleOffsets.get(pdfGrid).concat(randomOffset) : [randomOffset]);
+    return randomOffset;
 }
 
 function calculateRandomTranslateAmount(Y_PAGE_SIZE_HEURISTIC: number) {
@@ -106,6 +80,18 @@ function calculateRandomTranslateAmount(Y_PAGE_SIZE_HEURISTIC: number) {
     const median = -Y_PAGE_SIZE_HEURISTIC * Y_PAGE_SIZE_HEURISTIC * MEDIAN_FACTOR;
     const deviation = Y_PAGE_SIZE_HEURISTIC * Y_PAGE_SIZE_HEURISTIC * DEVIATION_FACTOR;
     return randomFromRange(median - deviation, median + deviation);
+}
+
+function reportDoodleDistribution(pdfGrid: PDFGrid, Y_PAGE_SIZE_HEURISTIC: number) {
+    const offsets = randomDoodleOffsets.get(pdfGrid);
+    const averageDistance = offsets.reduce((acc, offset, i, arr) => {
+        let sum = 0;
+        for (let otherOffset of arr) {
+            sum += Vector2.distanceTo(offset, otherOffset);
+        }
+        return acc + sum / arr.length;
+    }, 0) / offsets.length / Y_PAGE_SIZE_HEURISTIC;
+    console.log('Average distance between doodles:', averageDistance);
 }
 
 export default function (pageData: PageData) {
@@ -122,10 +108,15 @@ export default function (pageData: PageData) {
     const contentLength = document.getElementsByTagName('painted-content')[0].innerHTML.length;
     const Y_PAGE_SIZE_HEURISTIC = calculatePageSizeHeuristic(contentLength);
     cloneDoodlesToFillPool(parallaxDoodleContainer, Y_PAGE_SIZE_HEURISTIC);
+    const pdfGrid = new PDFGrid(100, Y_PAGE_SIZE_HEURISTIC / GRID_Y_CELL_SIZE_PX * 1.5, PDF_REPULSION_PROBABILITY_FUNCTION);
+
+    //! PERFORMANCE
+    const startTime = performance.now();
+    //! -----------
     for (let child of parallaxDoodleContainer.children) {
         const doodleElement = child as HTMLElement;
         // 
-        const offset = calculateRandomDoodleOffset(parallaxDoodleContainer.childElementCount);
+        const offset = calculateRandomDoodleOffset(pdfGrid);
         doodleElement.style.translate = `${offset.x}vw ${offset.y}px`;
         //
         const translateAmount = calculateRandomTranslateAmount(Y_PAGE_SIZE_HEURISTIC);
@@ -133,15 +124,25 @@ export default function (pageData: PageData) {
         doodleElement.style.animationName = `${ANIMATION_NAME_PREFIX}-${hash}`;
         parallaxDoodleAnimations.push({ hash, translateAmount });
     }
-    // calculate the average doodle offset distance from each other
-    const averageDistance = randomDoodleOffsets.reduce((acc, offset, i, arr) => {
-        let sum = 0;
-        for (let otherOffset of arr) {
-            sum += Vector2.distanceTo(offset, otherOffset);
-        }
-        return acc + sum / arr.length;
-    }, 0) / randomDoodleOffsets.length / Y_PAGE_SIZE_HEURISTIC;
-    console.log('Average distance between doodles:', averageDistance);
+    //! PERFORMANCE
+    const endTime = performance.now();
+    const elapsedTime = endTime - startTime;
+    const times = placeRandomTimes.get(pdfGrid);
+    const attempts = placeRandomAttempts.get(pdfGrid);
+    console.log('Placing', times.length, 'doodles for', pageData.page.name, 'took', Math.round(elapsedTime * 1000) / 1000, 'ms');
+    console.log(
+        'Time:',
+        'avg', Math.round(times.reduce((acc, time) => acc + time, 0) / times.length * 1000) / 1000, 'ms;',
+        'max', Math.round(Math.max(...times) * 1000) / 1000, 'ms'
+    );
+    console.log(
+        'Attempts:',
+        'avg', Math.round(attempts.reduce((acc, attempts) => acc + attempts, 0) / attempts.length * 10) / 10, ';',
+        'max', Math.max(...attempts)
+    );
+    //! -----------
+    reportDoodleDistribution(pdfGrid, Y_PAGE_SIZE_HEURISTIC);
+
     //
     const css = fs.readFileSync(PARALLAX_DOODLE_CSS_PATH, 'utf8');
     let newCss = css;
