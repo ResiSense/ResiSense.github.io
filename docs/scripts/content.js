@@ -15,11 +15,15 @@ console.log(`Script running: ${document.currentScript.src}`);
     document.addEventListener('DOMContentLoaded', determineStickiness);
     document.addEventListener('scroll', determineStickiness);
     function determineStickiness() {
-        stickyHeaderElements.forEach(element => {
+        for (const element of stickyHeaderElements) {
             const elementTop = element.getBoundingClientRect().top;
             const stickyTopHeight = stickyTopHeights[element.tagName];
+            const shouldBeSticky = stickyTopHeight && elementTop <= stickyTopHeight;
             element.classList.toggle('sticky', stickyTopHeight && elementTop <= stickyTopHeight);
-        });
+            if (!shouldBeSticky) {
+                break;
+            }
+        }
     }
 
     function convertToPixels(value) {
