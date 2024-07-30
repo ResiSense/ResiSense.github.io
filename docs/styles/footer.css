@@ -2,6 +2,7 @@ footer {
     --footer-background-color: var(--bright-brown);
     --footer-horizontal-padding: 1rem;
     background-color: var(--footer-background-color);
+    position: sticky;
 
     & > .footer-banner {
         /* background-color: var(--footer-background-color); */
