@@ -2,97 +2,117 @@ painted-footer {
     justify-self: flex-end;
 
     &>footer {
+        --footer-height: 10rem;
         background-color: var(--bright-brown);
-        color: var(--deep-green);
-        height: 25%;
+        color: black;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+        padding: 1rem 1rem;
+        gap: 1rem;
+        height: var(--footer-height);
         position: sticky;
 
-        & .footer-text {
-            font-family: "Montserrat", sans-serif;
-            font-weight: 500;
-            font-weight: 500;
-            font-size: 15px;
+        &>div {
+            height: 100%;
         }
 
-        &>.footer-banner {
-            display: grid;
-            grid-template-columns: 1fr 3fr;
+        /* & .footer-text {
+            font-family: "Montserrat", sans-serif;
+            font-weight: 500;
+            font-size: 15px;
+        } */
 
-            &>.resisense {
+        &>.footer-leftside {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+
+            &>.resisense-logo {
                 display: flex;
-                flex-direction: column;
-                margin: 2rem 3rem;
-                border-right: 2px solid var(--deep-green);
-                gap: 0.5rem;
+                justify-content: center;
+                align-items: center;
 
-                &>.resisense-logo {
+                &>img {
+                    height: calc(var(--footer-height) * 0.6);
+                    max-width: 100%;
+                }
+            }
+
+            &>.socials {
+                display: grid;
+                grid-template-rows: 1fr 1fr;
+                letter-spacing: 1px;
+
+                &>a {
                     display: flex;
-                    flex-direction: column;
-                    margin-right: 4rem;
+                    justify-content: flex-start;
+                    align-items: center;
+                    gap: 0.5rem;
 
-                    &>.resisense-logo-pic {
-                        height: 90px;
+                    &:hover {
+                        text-decoration: underline;
                     }
                 }
 
-                &>.socials {
+                & img {
+                    width: 1rem;
+                }
+            }
+        }
+
+        &>.divider {
+            width: 0;
+            border-right: 2px dashed black;
+        }
+
+        &>.footer-rightside {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            gap: 0.5rem;
+            flex-grow: 1;
+
+            &>.footer-rightside-top {
+                display: grid;
+                grid-template-rows: 1fr 1fr;
+                gap: 0.5rem;
+
+                &>div {
                     display: flex;
-                    margin-right: 4rem;
-                    flex-direction: column;
-                    justify-content: left;
-                    align-items: center;
+                    gap: 1rem;
 
-                    & .footer-text {
-                        letter-spacing: 3px;
-                    }
+                    &>a {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
 
-                    & img {
-                        height: 1rem;
-                        position: relative;
-                        top: 0.1rem;
-                        margin-right: 0.3rem;
-                    }
-
-                    &>.instagram {
-                        position: relative;
-                        right: 17%;
-                        margin-bottom: 0.3rem;
-
-                        & img {
-                            height: 1.1rem;
+                        &>img {
+                            height: calc(var(--footer-height) * 0.3);
                         }
-                    }
-
-                    &>.email {
-                        position: relative;
-                        left: 1.8%;
                     }
                 }
             }
 
-            &>.logo-container-wrapper {
+            &>.footer-rightside-bottom {
                 display: flex;
                 flex-direction: column;
-                margin: 2rem 3rem;
-                gap: 0.5rem;
+                justify-content: center;
+                align-items: start;
 
-                &>.cuhk-department-logo-container {
-                    display: flex;
-                    gap: 1rem;
-                }
+                &>span {
+                    height: 1.2rem;
 
-                &>.sponsor-logo-container {
-                    display: flex;
-                    gap: 1rem;
-                }
+                    &>a {
+                        text-decoration: underline;
+                        font-weight: bold;
 
-                & img {
-                    height: 40px;
-                }
-
-                &>.license-container {
-                    & img {
-                        height: 20px;
+                        &>img {
+                            height: 1rem;
+                            vertical-align: middle;
+                        }
                     }
                 }
             }
