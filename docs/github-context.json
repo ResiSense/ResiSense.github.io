@@ -1,11 +1,11 @@
 {
     "job": "build",
     "ref": "refs/heads/main",
-    "sha": "f6755d45f31ab7b2f946cf87af2d906b48953447",
+    "sha": "6eed0fbfc459dd053083a8ac8ab1ea7447f2edb4",
     "repository": "ResiSense/ResiSense.github.io",
     "repository_Url": null,
-    "run_id": "10168850593",
-    "run_number": "159",
+    "run_id": "10168882853",
+    "run_number": "160",
     "run_attempt": "1",
     "artifact_cache_size_limit": "10",
     "actor": "CCheukKa",
@@ -13,8 +13,8 @@
     "workflow": "Full CI pipeline",
     "event_name": "push",
     "event": {
-        "after": "f6755d45f31ab7b2f946cf87af2d906b48953447",
-        "before": "403aa9ddad8504dd230e05fbf88a28a3c825bd83",
+        "after": "6eed0fbfc459dd053083a8ac8ab1ea7447f2edb4",
+        "before": "32a24a70258c4d2b78ed0f8991e67b3aaa0eabb5",
         "commits": [
             {
                 "author": {
@@ -28,14 +28,14 @@
                     "username": "CCheukKa"
                 },
                 "distinct": true,
-                "id": "f6755d45f31ab7b2f946cf87af2d906b48953447",
-                "message": "optimise parallax doodles",
-                "timestamp": "2024-07-31T03:53:33+08:00",
-                "tree_id": "3a8b2bccdf7ddc9bfc66077c7b4a44d8d9b2df9c",
-                "url": "https://github.com/ResiSense/ResiSense.github.io/commit/f6755d45f31ab7b2f946cf87af2d906b48953447"
+                "id": "6eed0fbfc459dd053083a8ac8ab1ea7447f2edb4",
+                "message": "increase parallax amounts",
+                "timestamp": "2024-07-31T03:56:44+08:00",
+                "tree_id": "f2dde60a6c2af9ab9f849d42f542c633150d8809",
+                "url": "https://github.com/ResiSense/ResiSense.github.io/commit/6eed0fbfc459dd053083a8ac8ab1ea7447f2edb4"
             }
         ],
-        "compare": "https://github.com/ResiSense/ResiSense.github.io/compare/403aa9ddad85...f6755d45f31a",
+        "compare": "https://github.com/ResiSense/ResiSense.github.io/compare/32a24a70258c...6eed0fbfc459",
         "created": false,
         "deleted": false,
         "forced": false,
@@ -51,11 +51,11 @@
                 "username": "CCheukKa"
             },
             "distinct": true,
-            "id": "f6755d45f31ab7b2f946cf87af2d906b48953447",
-            "message": "optimise parallax doodles",
-            "timestamp": "2024-07-31T03:53:33+08:00",
-            "tree_id": "3a8b2bccdf7ddc9bfc66077c7b4a44d8d9b2df9c",
-            "url": "https://github.com/ResiSense/ResiSense.github.io/commit/f6755d45f31ab7b2f946cf87af2d906b48953447"
+            "id": "6eed0fbfc459dd053083a8ac8ab1ea7447f2edb4",
+            "message": "increase parallax amounts",
+            "timestamp": "2024-07-31T03:56:44+08:00",
+            "tree_id": "f2dde60a6c2af9ab9f849d42f542c633150d8809",
+            "url": "https://github.com/ResiSense/ResiSense.github.io/commit/6eed0fbfc459dd053083a8ac8ab1ea7447f2edb4"
         },
         "pusher": {
             "email": "ccheukka@gmail.com",
@@ -68,6 +68,6 @@
     "ref_type": "branch",
     "secret_source": "Actions",
     "workflow_ref": "ResiSense/ResiSense.github.io/.github/workflows/full-ci-pipeline.yaml@refs/heads/main",
-    "workflow_sha": "f6755d45f31ab7b2f946cf87af2d906b48953447",
+    "workflow_sha": "6eed0fbfc459dd053083a8ac8ab1ea7447f2edb4",
     "workspace": "/home/runner/work/ResiSense.github.io/ResiSense.github.io"
 }
