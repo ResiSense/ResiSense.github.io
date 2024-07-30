@@ -1,7 +1,7 @@
 import fs = require('fs-extra');
 import path = require('path');
 
-function promisifyCallback(func: Function, ...args: any[]): Promise<void> {
+function promisifyCallback<T extends (...args: any[]) => void>(func: T, ...args: Parameters<T> extends [...infer P, any] ? P : Parameters<T>): Promise<void> {
     return new Promise((resolve, reject) => {
         func(...args, (error: any) => { error ? reject(error) : resolve(); });
     });
