@@ -52,6 +52,11 @@ painted-content {
         top: var(--this-top);
         scroll-margin-top: var(--this-top);
         font-weight: bold;
+
+        &:not(.sticky) {
+            background: none;
+            box-shadow: none;
+        }
     }
 
     .scroll-marker {
@@ -62,9 +67,9 @@ painted-content {
     h1,
     .scroll-marker[data-scroll-marker-level="H1"] {
         z-index: 5;
-        background: linear-gradient(to bottom, var(--pale-green) 80%, transparent 100%);
         --this-top: 5rem;
         font-size: 2em;
+        background: linear-gradient(to bottom, var(--pale-green) 80%, transparent 100%);
     }
 
     h2,
@@ -119,7 +124,11 @@ painted-content {
         h5,
         h6 {
             box-shadow: 0 0px 0 0 var(--blockquote-background);
-            background-image: none;
+
+            &:not(.sticky) {
+                background: none;
+                box-shadow: none;
+            }
         }
 
         h1,
