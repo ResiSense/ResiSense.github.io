@@ -3,14 +3,15 @@ painted-footer {
 
     &>footer {
         --footer-height: 10rem;
+        --horizontal-space: 1rem;
         background-color: var(--bright-brown);
         color: black;
         display: flex;
         flex-direction: row;
         justify-content: flex-start;
         align-items: center;
-        padding: 1rem 1rem;
-        gap: 1rem;
+        padding: 1rem var(--horizontal-space);
+        gap: var(--horizontal-space);
         height: var(--footer-height);
         position: sticky;
 
