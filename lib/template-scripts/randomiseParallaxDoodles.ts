@@ -16,10 +16,12 @@ function randomFromRange(min: number, max: number) {
     return Math.random() * (max - min) + min;
 }
 
-function calculatePageSizeHeuristic(contentLength: number): number {
+function calculatePageSizeHeuristic(contentLength: number, pageName: string): number {
     const x = contentLength;
+    console.log(pageName, 'content length:', x);
     //! This is a magic number heuristic formula from regression
-    return -9E-06 * x ** 2 + 0.3999 * x + 633.12; // quadratic
+    //$ Update this for every major style change
+    return -9E-06 * x ** 2 + 0.4003 * x + 884.25; // quadratic
     // return 0.2332 * x + 1147.2; // linear
     // return 10000; // constant
 }
@@ -106,7 +108,7 @@ export default function (pageData: PageData) {
     const ANIMATION_NAME_PREFIX = 'parallax-doodle';
     const parallaxDoodleAnimations: { hash: string, translateAmount: number }[] = [];
     const contentLength = document.getElementsByTagName('painted-content')[0].innerHTML.length;
-    const Y_PAGE_SIZE_HEURISTIC = calculatePageSizeHeuristic(contentLength);
+    const Y_PAGE_SIZE_HEURISTIC = calculatePageSizeHeuristic(contentLength, pageData.page.name);
     cloneDoodlesToFillPool(parallaxDoodleContainer, Y_PAGE_SIZE_HEURISTIC);
     const pdfGrid = new PDFGrid(100, Y_PAGE_SIZE_HEURISTIC / GRID_Y_CELL_SIZE_PX * 1.5, PDF_REPULSION_PROBABILITY_FUNCTION);
 
