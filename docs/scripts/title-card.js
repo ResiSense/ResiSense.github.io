@@ -1,16 +1,12 @@
-console.log(`Script running: ${document.currentScript.src}`);
-//
-{
-    const titleCardElement = document.getElementsByTagName('painted-title-card')[0];
-    const trueBottom = window.scrollY + titleCardElement.getBoundingClientRect().bottom;
-
-    window.addEventListener('DOMContentLoaded', changeParallaxStickerAnimationDelay);
-    window.addEventListener('scroll', changeParallaxStickerAnimationDelay);
-    function changeParallaxStickerAnimationDelay() {
-        const delay = -window.scrollY / trueBottom;
-        if (delay >= 1.1) {
-            return;
+(() => {
+    {
+        let t = document.getElementsByTagName('painted-title-card')[0],
+            n = window.scrollY + t.getBoundingClientRect().bottom;
+        function e() {
+            let e = -window.scrollY / n;
+            e >= 1.1 || t.style.setProperty('--parallax-sticker-animation-delay', `${e}s`);
         }
-        titleCardElement.style.setProperty('--parallax-sticker-animation-delay', `${delay}s`);
+        window.addEventListener('DOMContentLoaded', e), window.addEventListener('scroll', e);
     }
-}
+})();
+//# sourceMappingURL=title-card.js.map

@@ -1,11 +1,8 @@
-console.log(`Script running: ${document.currentScript.src}`);
-//
-window.addEventListener('message', function (e) {
-    if (e.origin === 'https://teams.igem.org') {
-        const { type, data } = JSON.parse(e.data);
-        if (type === 'igem-attribution-form') {
-            const element = document.getElementById('igem-attribution-form');
-            element.style.height = `${data + 100}px`;
-        }
+window.addEventListener('message', function (t) {
+    if ('https://teams.igem.org' === t.origin) {
+        let { type: e, data: i } = JSON.parse(t.data);
+        'igem-attribution-form' === e &&
+            (document.getElementById('igem-attribution-form').style.height = `${i + 100}px`);
     }
 });
+//# sourceMappingURL=attributions.js.map

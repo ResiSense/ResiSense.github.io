@@ -1,47 +1,97 @@
-console.log(`Script running: ${document.currentScript.src}`);
-//
-{
-    const catalogueItems = document.getElementsByClassName('catalogue-item');
-
-    window.addEventListener(eventType.contentScrollPastHeader, determineCatalogueVisibility);
-    function determineCatalogueVisibility(e) {
-        const shouldHideCatalogue = e.detail;
-
-        // ? hide entire catalogue
-        // catalogueElement.style.transform = shouldHideCatalogue ? "translateY(-100%)" : "translateY(0)";
-
-        // ? hide only inactive items
-        Array.from(catalogueItems).forEach(catalogueElement => {
-            // ? remove this when attr() has better browser support
-            if (catalogueElement.classList.contains('catalogue-arrow')) {
-                return;
+(() => {
+    function e(e, t, n, o) {
+        Object.defineProperty(e, t, { get: n, set: o, enumerable: !0, configurable: !0 });
+    }
+    var t = globalThis,
+        n = {},
+        o = {},
+        r = t.parcelRequire8bfa;
+    null == r &&
+        (((r = function (e) {
+            if (e in n) return n[e].exports;
+            if (e in o) {
+                var t = o[e];
+                delete o[e];
+                var r = { id: e, exports: {} };
+                return (n[e] = r), t.call(r.exports, r, r.exports), r.exports;
             }
-            catalogueElement.style.translate = shouldHideCatalogue
-                ? `${catalogueElement.getAttribute('translate-amount')}px`
-                : 0;
-
-            catalogueElement.classList.toggle('catalogue-item-hidden', shouldHideCatalogue);
+            var a = Error("Cannot find module '" + e + "'");
+            throw ((a.code = 'MODULE_NOT_FOUND'), a);
+        }).register = function (e, t) {
+            o[e] = t;
+        }),
+        (t.parcelRequire8bfa = r));
+    var a = r.register;
+    a('ap5vA', function (t, n) {
+        e(t.exports, 'default', () => a),
+            ((o = r || (r = {}))[(o.contentScrollPastHeader = 0)] = 'contentScrollPastHeader');
+        var o,
+            r,
+            a = r;
+    }),
+        a('h8pS0', function (t, n) {
+            e(t.exports, 'default', () => a);
+            var o = r('ap5vA');
+            class a {
+                static {
+                    this.contentIsPastHeader = { old: void 0, current: void 0 };
+                }
+            }
+            {
+                function d() {
+                    let e = a.contentIsPastHeader;
+                    (e.current = window.scrollY > parseFloat(getComputedStyle(document.documentElement).fontSize)),
+                        e.current !== e.old &&
+                            ((e.old = e.current),
+                            window.dispatchEvent(new CustomEvent((0, o.default).contentScrollPastHeader.toString())));
+                }
+                window.addEventListener('DOMContentLoaded', d),
+                    window.addEventListener('scroll', d),
+                    window.addEventListener('DOMContentLoaded', l),
+                    window.addEventListener('scroll', l);
+                let e =
+                        document.getElementById('header-page-title') ||
+                        (() => {
+                            throw Error('Header page title element not found!');
+                        })(),
+                    t = document.getElementsByTagName('header')[0],
+                    n = document.getElementsByTagName('main')[0];
+                function l() {
+                    let o = n.getBoundingClientRect().top,
+                        r = t.getBoundingClientRect().bottom;
+                    e.classList.toggle('hidden', !(o <= r));
+                }
+            }
         });
+    var d = r('ap5vA'),
+        l = r('h8pS0');
+    {
+        let e = document.getElementsByClassName('catalogue-item');
+        window.addEventListener((0, d.default).contentScrollPastHeader.toString(), function () {
+            let t = l.default.contentIsPastHeader.current;
+            Array.from(e).forEach(e => {
+                e.classList.contains('catalogue-arrow') ||
+                    ((e.style.translate = t ? `${e.getAttribute('translate-amount')}px` : '0'),
+                    e.classList.toggle('catalogue-item-hidden', t));
+            });
+        }),
+            window.addEventListener('DOMContentLoaded', function t() {
+                if (void 0 === l.default.contentIsPastHeader.current) {
+                    requestAnimationFrame(t);
+                    return;
+                }
+                Array.from(e).forEach(e => {
+                    let t = (
+                            document.querySelector('.catalogue-item:not(.catalogue-arrow)') ||
+                            (() => {
+                                throw Error('First catalogue item not found!');
+                            })()
+                        ).getBoundingClientRect().left,
+                        n = e.getBoundingClientRect().left;
+                    e.setAttribute('translate-amount', `${t - n}`),
+                        window.dispatchEvent(new CustomEvent((0, d.default).contentScrollPastHeader.toString()));
+                });
+            });
     }
-
-    window.addEventListener('DOMContentLoaded', calculateTranslateAmount);
-    function calculateTranslateAmount() {
-        if (contentScrollPastHeader.current === undefined) {
-            requestAnimationFrame(calculateTranslateAmount);
-            return;
-        }
-        Array.from(catalogueItems).forEach(catalogueElement => {
-            const firstCatalogueItemLeftBoundClientPosition = document
-                .querySelector('.catalogue-item:not(.catalogue-arrow)')
-                .getBoundingClientRect().left;
-            const catalogueItemLeftBoundClientPosition = catalogueElement.getBoundingClientRect().left;
-            catalogueElement.setAttribute(
-                'translate-amount',
-                firstCatalogueItemLeftBoundClientPosition - catalogueItemLeftBoundClientPosition
-            );
-            window.dispatchEvent(
-                new CustomEvent(eventType.contentScrollPastHeader, { detail: contentScrollPastHeader.current })
-            );
-        });
-    }
-}
+})();
+//# sourceMappingURL=catalogue.js.map
