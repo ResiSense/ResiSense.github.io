@@ -31,7 +31,7 @@ if (!targetDirectory) { throw new Error('Invalid mode!'); }
     await Promise.all([
         cloneDirectory('assets', targetDirectory),
         cloneDirectory('styles', targetDirectory),
-        // cloneDirectory('scripts', targetDirectory).then(addIdentifierLogToJsEmbeds),
+        // cloneDirectory('scripts', targetDirectory).then(addIdentifierLogToTsEmbeds),
     ]);
     console.log(`Cloned directories to ${targetDirectory}.`);
     // 
@@ -53,7 +53,7 @@ function cloneDirectory(source: string, destination: string): Promise<void> {
     return FS_CP;
 }
 /* -------------------------------------------------------------------------- */
-function addIdentifierLogToJsEmbeds() {
+function addIdentifierLogToTsEmbeds() {
     const jsDirectory = path.resolve(targetDirectory, 'scripts');
     const jsFiles = fs.readdirSync(jsDirectory);
     jsFiles.forEach(jsFile => {
@@ -91,7 +91,7 @@ async function buildFile(page: Page, templateCache: TemplateCache): Promise<void
     };
 
     insertCssEmbeds(pageData);
-    insertJsEmbeds(pageData);
+    insertTsEmbeds(pageData);
 
     runTsPostPaints(pageData);
     switch (page.populator || 'markdown ') {
@@ -156,7 +156,7 @@ function runTsPostPopulations(pageData: PageData) {
         postPopulationFunction(pageData);
     });
 }
-function insertJsEmbeds(pageData: PageData) {
+function insertTsEmbeds(pageData: PageData) {
     const paintedHtml = pageData.paintedHtml;
     const document = pageData.document;
     const jsIncludes = pageData.page.includes?.js;

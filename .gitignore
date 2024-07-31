@@ -4,3 +4,4 @@
 /test
 /.parcel-cache
 /lib/**/*.js
+/scripts/**/*.js

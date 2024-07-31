@@ -42,7 +42,8 @@ export type PaintableHtml = {
 const REGEX = {
     template: /<custom-([a-z]|-)+ \/>/g,
     tsPostPaint: /<ts-post-paint src=".*\.ts" \/>/g,
-    jsEmbed: /<js-embed src=".*\.(js|ts)" \/>/g,
+    jsEmbed: /<js-embed src="https:\/\/.*\.js" \/>/g,
+    tsEmbed: /<ts-embed src=".*\.(js|ts)" \/>/g,
     tsPostPopulation: /<ts-post-population src=".*\.ts" \/>/g,
     cssEmbed: /<css-embed href=".*\.css" \/>/g,
 } as const;
@@ -116,7 +117,8 @@ function paintHtmlFragment(paintableHtml: PaintableHtml, templateCache: Template
     // js/ts
     paintableHtml.html = paint(paintableHtml.html, REGEX.tsPostPaint, '<ts-post-paint src="', 'ts', '" />', paintableHtml.ts.postPaint ?? []);
     paintableHtml.html = paint(paintableHtml.html, REGEX.tsPostPopulation, '<ts-post-population src="', 'ts', '" />', paintableHtml.ts.postPopulation ?? []);
-    paintableHtml.html = paint(paintableHtml.html, REGEX.jsEmbed, '<js-embed src="', 'js', '" />', paintableHtml.js.embed ?? []);
+    paintableHtml.html = paint(paintableHtml.html, REGEX.jsEmbed, '<js-embed src="', 'js', '" />', []);
+    paintableHtml.html = paint(paintableHtml.html, REGEX.tsEmbed, '<ts-embed src="', 'js', '" />', paintableHtml.js.embed ?? []);
 
     // css
     paintableHtml.html = paint(paintableHtml.html, REGEX.cssEmbed, '<css-embed href="', 'css', '" />', paintableHtml.css.embed ?? []);

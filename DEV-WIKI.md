@@ -40,6 +40,7 @@
   - [Template](#template)
   - [Template compilation](#template-compilation)
   - [Template painting](#template-painting)
+  - [TS embeds](#ts-embeds)
   - [TS includes](#ts-includes)
 
 <!-- omit in toc -->
@@ -185,7 +186,7 @@ After auto-committing onto GitLab, a CI workflow as defined in [`.gitlab-ci.yml`
 | [`test/`](/test/)                                 | Test build of the site                    |                         | Sandbox for testing; untracked |
 | [`pages/`](/pages/)                               | Content of the site                       | `.md` and `.html` files |                                |
 | [`assets/`](/assets/)                             | Assets used in the site                   | predominantly images    | **is cloned to `docs/`**       |
-| [`scripts/`](/scripts/)                           | JS scripts to be packaged to clients      | `.js` or `.ts` files    | **is cloned to `docs/`**       |
+| [`scripts/`](/scripts/)                           | JS scripts to be packaged to clients      | `.ts` files             | **is cloned to `docs/`**       |
 | [`styles/`](/styles/)                             | CSS stylesheets to be packaged to clients | `.css` files            | **is cloned to `docs/`**       |
 | [`meta/`](/meta/)                                 | Metadata for the site                     |                         |                                |
 | [`templates/`](/templates/)                       | HTML templates for the site               | `.html` files           |                                |
@@ -229,9 +230,9 @@ The framework is how the site is built and how the [content](#content) is displa
 >    1. Templates are embedded into `boiler-plate.html` as necessary
 >       - CSS, JS, and TS are pushed into an array as required by the template
 >       - This step is referred to as **[template painting](#template-painting)**
->    2. CSS and JS are embedded into the HTML (relationally) as required by `pageConfig.jsonc` and the templates
+>    2. CSS and JS/TS are embedded into the HTML (relationally) as required by `pageConfig.jsonc` and the templates
 >       - These CSS are referred to as **[CSS embeds](#css-embeds)**
->       - These JS are referred to as **[JS embeds](#js-embeds)**
+>       - These JS/TS are referred to as **[JS embeds](#js-embeds)**/**[TS embeds](#ts-embeds)**
 >    3. **[Post-paint TS](#post-paint-ts)** functions are run as required by `pageConfig.jsonc` and the templates
 >    4. Page is filled with content using a [populator](#populators) function as described in `pageConfig.jsonc`
 >       - This step is referred to as **[content population](#content-population)**
@@ -246,7 +247,7 @@ The framework is how the site is built and how the [content](#content) is displa
 | :---------------------------------------- | :------------------------------------- | :---------------------- |
 | [Templates](#template)                    | lowercase letters only; `-` for spaces | Name after the page     |
 | [CSS embeds](#css-embeds)                 | lowercase letters only; `-` for spaces | Name after the template |
-| [JS embeds](#js-embeds)                   | lowercase letters only; `-` for spaces | Name after the template |
+| [TS embeds](#ts-embeds)                   | lowercase letters only; `-` for spaces | Name after the template |
 | Markdown files                            | lowercase letters only; `-` for spaces | Name after the page     |
 | TypeScript type declaration files         | PascalCase                             |                         |
 | TypeScript files                          | camelCase                              |                         |
@@ -300,7 +301,7 @@ The HTML full replacer allows you to replace the entire content of a page with a
 > 2. Write your content in HTML format
 >     - Your file should be a full HTML document, including the `<html>`, `<head>`, and `<body>` tags
 >     - You can use all the features of HTML and [templates](#template)
-> 3. If you wish to use custom scripts or styles, create a new `.js` or `.css` file in the `scripts/` or `styles/` folder respectively; it is recommended that the scripts and styles are named after the page `name`
+> 3. If you wish to use custom scripts or styles, create a new `.ts` or `.css` file in the `scripts/` or `styles/` folder respectively; it is recommended that the scripts and styles are named after the page `name`
 > 4. [Update `pageConfig.jsonc`](#updating-pageconfigjsonc) to include the new page
 > 5. [Test the site](#testing-the-site) to ensure that the changes are displayed correctly
 > 6. [Commit the changes](#committing-changes) to the repository
@@ -338,7 +339,7 @@ You can just get a file and upload/dump it [here](https://github.com/ResiSense/R
 > [!TIP]
 > Copy-and-pasting is your friend!  
 
-The frontend primarily makes use of [templates](#template), [CSS embeds](#css-embeds), and [JS embeds](#js-embeds) to structure the site. Your domain should mainly be `templates/`, `styles/`, and `scripts/`. Make sure you [understand the repository structure](#understanding-the-repository-structure).  
+The frontend primarily makes use of [templates](#template), [CSS embeds](#css-embeds), [JS embeds](#js-embeds), and [TS embeds](#ts-embeds) to structure the site. Your domain should mainly be `templates/`, `styles/`, and `scripts/`. Make sure you [understand the repository structure](#understanding-the-repository-structure).  
 [Test the site](#testing-the-site) after making changes to ensure that they are displayed correctly.  
 
 # 🖼️Working on the framework
@@ -370,9 +371,8 @@ The HTML full replacer is a function that replaces the entire content of a page 
 It is recommended to read the comments in the file itself to understand how it works.
 
 ## JS embeds
-JS embeds are JS scripts that are run during browsing. It is embedded into the HTML relationally as a `<script>` tag.  
-Variables that reference [templates](#template) should use the [painted](#template-painting) tag name.  
-[CSS embeds](#css-embeds) are in scope.  
+JS embeds are **external** JS scripts that are embedded into the HTML relationally as a `<script>` tag.  
+Only use them to refer to external scripts.  
 
 ## [Markdown populator](/lib/framework-lib/MarkdownPopulator.ts)
 The markdown populator is a function that fills the [content](#content) of a page with a markdown file during [content population](#content-population).  
@@ -409,8 +409,8 @@ Templates can recursively require CSS, JS, TS, and other templates in them with 
 - `<custom-example />`: Paints a `templates/example.html` template
 - `<ts-post-paint src="/lib/template-scripts/example.ts" />`: Runs `lib/template-scripts/example.ts` after [painting](#template-painting)
 - `<ts-post-population src="/lib/template-scripts/example.ts" />`: Runs `lib/template-scripts/example.ts` after [populating](#content-population) the [content](#content)
-- `<js-embed src="/scripts/example.js" />`: Embeds `scripts/example.js` as a [JS embed](#js-embeds)
-- `<js-embed src="/scripts/example.ts" />`: Embeds `scripts/example.ts` as a transpiled [JS embed](#js-embeds)
+- `<ts-embed src="/scripts/example.ts" />`: Embeds `scripts/example.ts` as a [TS embed](#ts-embeds)
+- `<js-embed src="https://.../example.js" />`: Embeds `https://.../example.js` as a [JS embed](#js-embeds)
 - `<css-embed href="/styles/example.css" />`: Embeds `styles/example.css` as a [CSS embed](#css-embeds)
 
 Note that the exact syntax of these tags must be followed for the framework to work correctly. Change only `example` to the name of the file.  
@@ -423,6 +423,12 @@ Template compilation is the process of recursively compiling [templates](#templa
 ## Template painting
 Template painting is the process of embedding [templates](#template) into the boilerplate HTML.  
 CSS, JS, and TS files are also pushed into arrays as required by the template.  
+
+## TS embeds
+TS embeds are TS scripts that are **transpiled back to JS** and embedded into the HTML relationally as a `<script>` tag.  
+Variables that reference [templates](#template) should use the [painted](#template-painting) tag name.  
+[CSS embeds](#css-embeds) are in scope.  
+Writing TS embeds in plain JS is also fine but discouraged.  
 
 ## TS includes
 TS includes are the TS files that are run after [post-population TS](#post-population-ts).  
