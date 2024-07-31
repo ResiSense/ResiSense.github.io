@@ -50,10 +50,12 @@ const flattenedPageConfig: FlattenedPageConfig = ((): FlattenedPageConfig => {
 })();
 
 function getFlattenedPage(page: Page | FlattenedPage): FlattenedPage {
-    return flattenedPageConfig.pages.find(flattenedPage => flattenedPage.name === page.name);
+    return flattenedPageConfig.pages.find(flattenedPage => flattenedPage.name === page.name)
+        ?? (() => { throw new Error(`Flattened page not found for ${page.name}!`) })();
 }
 function getTrace(page: Page | FlattenedPage): string[] {
-    return getFlattenedPage(page).trace;
+    return getFlattenedPage(page).trace
+        ?? (() => { throw new Error(`Trace not found for ${page.name}!`) })();
 }
 
 export default class Pages {

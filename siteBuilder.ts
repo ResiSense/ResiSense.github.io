@@ -69,6 +69,7 @@ function addIdentifierLogToJsEmbeds() {
 }
 /* -------------------------------------------------------------------------- */
 async function buildFile(page: Page, templateCache: TemplateCache): Promise<void> {
+    if (page.trace === undefined) { throw new Error(`Page ${page.name} has no trace!`); }
     const filename: string = (() => {
         switch (page.populator || 'markdown ') {
             case 'html-full':

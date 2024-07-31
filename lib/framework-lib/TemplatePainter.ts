@@ -106,19 +106,19 @@ function paintHtmlFragment(paintableHtml: PaintableHtml, templateCache: Template
             `<painted-${customTagName}> ${customTemplate.html} </painted-${customTagName}>`
         );
 
-        paintableHtml.ts.postPaint.push(...customTemplate.ts?.postPaint || []);
-        paintableHtml.js.embed.push(...customTemplate.js?.embed || []);
-        paintableHtml.ts.postPopulation.push(...customTemplate.ts?.postPopulation || []);
-        paintableHtml.css.embed.push(...customTemplate.css?.embed || []);
+        paintableHtml.ts?.postPaint?.push(...customTemplate.ts?.postPaint || []);
+        paintableHtml.ts?.postPopulation?.push(...customTemplate.ts?.postPopulation || []);
+        paintableHtml.js?.embed?.push(...customTemplate.js?.embed || []);
+        paintableHtml.css?.embed?.push(...customTemplate.css?.embed || []);
     });
 
     // js
-    paintableHtml.html = paint(paintableHtml.html, REGEX.tsPostPaint, '<ts-post-paint src="', '" />', paintableHtml.ts.postPaint);
-    paintableHtml.html = paint(paintableHtml.html, REGEX.jsEmbed, '<js-embed src="', '" />', paintableHtml.js.embed);
-    paintableHtml.html = paint(paintableHtml.html, REGEX.tsPostPopulation, '<ts-post-population src="', '" />', paintableHtml.ts.postPopulation);
+    paintableHtml.html = paint(paintableHtml.html, REGEX.tsPostPaint, '<ts-post-paint src="', '" />', paintableHtml.ts.postPaint ?? []);
+    paintableHtml.html = paint(paintableHtml.html, REGEX.jsEmbed, '<js-embed src="', '" />', paintableHtml.js.embed ?? []);
+    paintableHtml.html = paint(paintableHtml.html, REGEX.tsPostPopulation, '<ts-post-population src="', '" />', paintableHtml.ts.postPopulation ?? []);
 
     // css
-    paintableHtml.html = paint(paintableHtml.html, REGEX.cssEmbed, '<css-embed href="', '" />', paintableHtml.css.embed);
+    paintableHtml.html = paint(paintableHtml.html, REGEX.cssEmbed, '<css-embed href="', '" />', paintableHtml.css.embed ?? []);
 
     return paintableHtml;
 

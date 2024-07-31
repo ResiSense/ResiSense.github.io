@@ -18,7 +18,9 @@ async function populatePageWithHtmlFrame(pageData: PageData) {
     console.log(`Populating ${page.name}.html from ${htmlPath}...`);
     const html = await fs.readFile(htmlPath, 'utf8').catch(() => { throw new Error(`Failed to read ${htmlPath}!`) });
     const paintableContentElement = document.createElement('painted-content');
-    document.querySelector('paintable-content').replaceWith(paintableContentElement);
+    (document.querySelector('paintable-content')
+        || (() => { throw new Error('<paintable-content> not found!') })()
+    ).replaceWith(paintableContentElement);
     paintableContentElement.innerHTML = html;
     return;
 }

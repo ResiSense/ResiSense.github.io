@@ -49,7 +49,7 @@ function cloneDoodlesToFillPool(parallaxDoodleContainer: HTMLElement, Y_PAGE_SIZ
     pool.forEach(doodle => parallaxDoodleContainer.appendChild(doodle));
     // remove excess doodles
     while (parallaxDoodleContainer.childElementCount > requiredDoodleCount) {
-        parallaxDoodleContainer.removeChild(parallaxDoodleContainer.lastElementChild);
+        (parallaxDoodleContainer.lastElementChild as HTMLElement).remove();
     }
 }
 
@@ -66,13 +66,13 @@ function calculateRandomDoodleOffset(pdfGrid: PDFGrid): Vector2 {
     //! PERFORMANCE
     const endTime = performance.now();
     const elapsedTime = endTime - startTime;
-    placeRandomTimes.set(pdfGrid, placeRandomTimes.get(pdfGrid) ? placeRandomTimes.get(pdfGrid).concat(elapsedTime) : [elapsedTime]);
-    placeRandomAttempts.set(pdfGrid, placeRandomAttempts.get(pdfGrid) ? placeRandomAttempts.get(pdfGrid).concat(attempts) : [attempts]);
+    placeRandomTimes.set(pdfGrid, (placeRandomTimes.get(pdfGrid) ?? []).concat(elapsedTime));
+    placeRandomAttempts.set(pdfGrid, (placeRandomAttempts.get(pdfGrid) ?? []).concat(attempts));
     console.log('Doodle placement took', Math.round(elapsedTime * 1000) / 1000, 'ms', 'in', attempts, 'attempts');
     //! -----------
 
     randomOffset.y *= GRID_Y_CELL_SIZE_PX;
-    randomDoodleOffsets.set(pdfGrid, randomDoodleOffsets.get(pdfGrid) ? randomDoodleOffsets.get(pdfGrid).concat(randomOffset) : [randomOffset]);
+    randomDoodleOffsets.set(pdfGrid, (randomDoodleOffsets.get(pdfGrid) ?? []).concat(randomOffset));
     return randomOffset;
 }
 
@@ -86,6 +86,7 @@ function calculateRandomTranslateAmount(Y_PAGE_SIZE_HEURISTIC: number) {
 
 function reportDoodleDistribution(pdfGrid: PDFGrid, Y_PAGE_SIZE_HEURISTIC: number) {
     const offsets = randomDoodleOffsets.get(pdfGrid);
+    if (offsets === undefined) { return; }
     const averageDistance = offsets.reduce((acc, offset, i, arr) => {
         let sum = 0;
         for (let otherOffset of arr) {
@@ -100,7 +101,8 @@ export default function (pageData: PageData) {
     const PARALLAX_DOODLE_CSS_PATH = `${pageData.targetDirectory}/styles/parallax-doodle.css`;
     const document = pageData.document;
     // 
-    const parallaxDoodleContainer = document.getElementById('parallax-doodle-container');
+    const parallaxDoodleContainer = document.getElementById('parallax-doodle-container')
+        || (() => { throw new Error('Parallax doodle container not found!') })();
     if (parallaxDoodleContainer.childElementCount === 0) {
         console.warn('Parallax doodle container is empty!');
         return;
@@ -129,8 +131,8 @@ export default function (pageData: PageData) {
     //! PERFORMANCE
     const endTime = performance.now();
     const elapsedTime = endTime - startTime;
-    const times = placeRandomTimes.get(pdfGrid);
-    const attempts = placeRandomAttempts.get(pdfGrid);
+    const times = placeRandomTimes.get(pdfGrid) ?? [];
+    const attempts = placeRandomAttempts.get(pdfGrid) ?? [];
     console.log('Placing', times.length, 'doodles for', pageData.page.name, 'took', Math.round(elapsedTime * 1000) / 1000, 'ms');
     console.log(
         'Time:',
