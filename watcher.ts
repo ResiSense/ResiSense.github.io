@@ -1,13 +1,18 @@
 import chokidar = require('chokidar');
 import fs = require('fs-extra');
 import { ChildProcess, spawn } from 'child_process';
+import ignore from 'ignore';
+import path = require('path');
 
-const ignoredArray =
-    fs.readFileSync('.gitignore', 'utf8')
-        .split('\n')
-        .filter(line => line.length > 0 && !line.startsWith('#'))
-        .map(line => line.trim().replace(/^\//, ''));
-const ignored = (testString: string) => !!testString.match(/^\.[^\/]+/) || ignoredArray.some(ignoredString => !!testString.match(ignoredString));
+const gitignoreContent = fs.readFileSync('.gitignore', 'utf8');
+const ig = ignore().add(gitignoreContent);
+const ignored = (testString: string) => {
+    if (testString.match(/^\.[^\/]+/)) { return true; }
+    const relativePath = path.relative(process.cwd(), testString);
+    if (!relativePath) { return false; }
+    return ig.ignores(relativePath);
+};
+
 const fastWatcher = chokidar.watch('./', {
     ignored,
     persistent: true,
@@ -32,7 +37,7 @@ slowWatcherEvents.forEach(event => slowWatcher.on(event, path => {
 
 console.log(`Watcher is watching for changes... Press Ctrl+C to stop watching.`);
 
-let currentBuildProcess: ChildProcess = null;
+let currentBuildProcess: ChildProcess | null = null;
 function rebuildSite() {
     if (currentBuildProcess) {
         console.log('Killing previous build process...');
@@ -40,7 +45,7 @@ function rebuildSite() {
         currentBuildProcess = null;
     }
     console.log('Auto rebuilding...');
-    currentBuildProcess = spawn('npm', ['run', 'dev-watch-build'], { stdio: 'inherit', shell: true, });
+    currentBuildProcess = spawn('npm', ['run', 'watch-do'], { stdio: 'inherit', shell: true, });
     currentBuildProcess.on('exit', () => {
         console.log('Auto rebuild done!');
         currentBuildProcess = null;

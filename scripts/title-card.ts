@@ -7,6 +7,6 @@
     function changeParallaxStickerAnimationDelay() {
         const delay = -window.scrollY / trueBottom;
         if (delay >= 1.1) { return; }
-        titleCardElement.style.setProperty('--parallax-sticker-animation-delay', `${delay}s`);
+        (titleCardElement as HTMLElement).style.setProperty('--parallax-sticker-animation-delay', `${delay}s`);
     }
 }

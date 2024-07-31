@@ -2,12 +2,37 @@
     "name": "resisense.github.io",
     "version": "1.0.0",
     "description": "ResiSense team site",
-    "main": "siteBuilder.ts",
+    "targets": {
+        "prod": {
+            "context": "browser",
+            "distDir": "./docs/scripts",
+            "optimize": true
+        },
+        "dev": {
+            "context": "browser",
+            "distDir": "./test/scripts",
+            "optimize": true
+        },
+        "test": {
+            "context": "browser",
+            "source": "./test.ts",
+            "distDir": "./test/scripts",
+            "optimize": true
+        }
+    },
     "scripts": {
-        "prod-build": "echo Running prod build script && cross-env NODE_ENV=prod npx ts-node ./siteBuilder.ts",
-        "dev-build": "echo Running dev build script && cross-env NODE_ENV=dev npx ts-node ./siteBuilder.ts",
-        "dev-watch-build": "echo Running dev watch build script && cross-env NODE_ENV=dev npx ts-node ./siteBuilder.ts --watch",
-        "dev-watch": "echo Running dev watch script && npx ts-node ./watcher.ts",
+        "#prod": "",
+        "prod": "echo Running prod script && rimraf ./docs && npm run prod-build & npm run prod-pack",
+        "prod-build": "cross-env NODE_ENV=prod npx ts-node ./siteBuilder.ts",
+        "prod-pack": "parcel build ./scripts/*.js ./scripts/*.ts --target prod",
+        "#dev": "",
+        "dev": "echo Running dev script && rimraf ./test && npm run dev-build & npm run dev-pack",
+        "dev-build": "cross-env NODE_ENV=dev npx ts-node ./siteBuilder.ts",
+        "dev-pack": "parcel build ./scripts/*.js ./scripts/*.ts --target dev",
+        "#watch": "",
+        "watch": "echo Running dev watch script && npx ts-node ./watcher.ts",
+        "watch-do": "echo Running watch do script && npm run dev-build & npm run dev-pack",
+        "#misc": "",
         "gitlab-actions": "echo Running gitlab actions script && npx ts-node ./.gitlab/gitlabActions.ts",
         "prettify": "echo Prettifying HTML and JSON files && npx prettier \"docs/**/*.(html|css|js|json)\" --write"
     },
@@ -22,7 +47,6 @@
     },
     "homepage": "https://github.com/ResiSense/ResiSense.github.io#readme",
     "dependencies": {
-        "chokidar": "^3.6.0",
         "fs-extra": "^11.2.0",
         "glob": "^11.0.0",
         "igem-upload-api": "^1.2.5",
@@ -34,8 +58,12 @@
         "@types/he": "^1.2.3",
         "@types/jsdom": "^21.1.7",
         "@types/node": "^22.0.0",
+        "chokidar": "^3.6.0",
         "cross-env": "^7.0.3",
+        "ignore": "^5.3.1",
+        "parcel": "^2.12.0",
         "prettier": "^3.3.3",
+        "rimraf": "^6.0.1",
         "typescript": "^5.5.4"
     },
     "prettier": {

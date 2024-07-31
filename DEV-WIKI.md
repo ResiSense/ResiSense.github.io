@@ -112,9 +112,9 @@ This bare-bones wiki contains information for developers working on the site. If
 
 # 🧪Testing the site
 > 1. Open the terminal with `Ctrl` + `` ` `` (backtick)
-> 2. Run `npm run dev-build` to build the site for testing, you should find a new `test` folder in the repository
->    - For frequent testing, you can run `npm run dev-watch` to automatically rebuild the site on changes not in `.gitignore`
->      - `npm run dev-build` is automatically run under the hood
+> 2. Run `npm run dev` to build the site for testing, you should find a new `test` folder in the repository
+>    - For frequent testing, you can run `npm run watch` to automatically rebuild the site on changes not in `.gitignore`
+>      - `npm run dev` is automatically run under the hood
 > 3. In file explorer, navigate to the `test` folder
 > 4. Right-click the folder and select `Open with Code` to open the test site in another VSCode window
 > 5. Open the command palette with `Ctrl` + `Shift` + `P`
@@ -124,7 +124,7 @@ The test site should now be running in your browser.
 > [!NOTE]
 > **Navigating to `.../<page>` does not automatically serve `.../<page>.html` and you will see an error. Please manually append `.html` to the URL. This issue only affect the test site and not the live site.**  
 
-Live reloading should be enabled so that changes to the source code are automatically reflected in the browser after running `npm run dev-build`. You can also refresh manually if live reloading fails.  
+Live reloading should be enabled so that changes to the source code are automatically reflected in the browser after running `npm run dev`. You can also refresh manually if live reloading fails.  
 
 > [!TIP]
 > The `test` folder is not tracked by Git and can be deleted or modified at any time without consequence. Feel free to use it as a sandbox to test stuff with!
@@ -185,7 +185,7 @@ After auto-committing onto GitLab, a CI workflow as defined in [`.gitlab-ci.yml`
 | [`test/`](/test/)                                 | Test build of the site                    |                         | Sandbox for testing; untracked |
 | [`pages/`](/pages/)                               | Content of the site                       | `.md` and `.html` files |                                |
 | [`assets/`](/assets/)                             | Assets used in the site                   | predominantly images    | **is cloned to `docs/`**       |
-| [`scripts/`](/scripts/)                           | JS scripts to be packaged to clients      | `.js` files             | **is cloned to `docs/`**       |
+| [`scripts/`](/scripts/)                           | JS scripts to be packaged to clients      | `.js` or `.ts` files    | **is cloned to `docs/`**       |
 | [`styles/`](/styles/)                             | CSS stylesheets to be packaged to clients | `.css` files            | **is cloned to `docs/`**       |
 | [`meta/`](/meta/)                                 | Metadata for the site                     |                         |                                |
 | [`templates/`](/templates/)                       | HTML templates for the site               | `.html` files           |                                |
@@ -205,7 +205,7 @@ After auto-committing onto GitLab, a CI workflow as defined in [`.gitlab-ci.yml`
 | [`TODO.md`](/TODO.md)                             | To-do list                                     | Try to keep it updated       |
 | [`meta/pageConfig.jsonc`](/meta/pageConfig.jsonc) | Metadata for pages; ***VERY IMPORTANT!***      | See [this](#pageconfigjsonc) |
 | [`siteBuilder.ts`](/siteBuilder.ts)               | Framework code entry point                     |                              |
-| [`watcher.ts`](/watcher.ts)                       | Watcher code entry point for `dev-watch`       |                              |
+| [`watcher.ts`](/watcher.ts)                       | Watcher code entry point for `watch`           |                              |
 | [`boiler-plate.html`](/boiler-plate.html)         | Boilerplate HTML template for site builders    |                              |
 | [`redirect.html`](/redirect.html)                 | Redirect HTML template page for aliases        | ***DO NOT TOUCH***           |
 | [`.gitignore`](/.gitignore)                       | Files and folders to be ignored by Git         | *edit with caution*          |
@@ -222,8 +222,8 @@ The framework is how the site is built and how the [content](#content) is displa
 > You can refer to the [glossary](#glossary) as necessary.  
 
 ## 🚲Life cycle of a build
-> 0. `siteBuilder.ts` is run, via `npm run dev-build` (manual testing) or `npm run prod-build` (auto on push)
-> 1. `assets/`, `scripts/`, and `styles/` are copied to `docs/`
+> 0. `siteBuilder.ts` is run, via `npm run dev` (manual testing) or `npm run prod` (auto on push)
+> 1. `assets/` and `styles/` are copied to `docs/`
 > 2. The templates in `templates/` are [compiled](#template-compilation) recursively and cached
 > 3. For each page described in [`meta/pageConfig.jsonc`](#pageconfigjsonc):
 >    1. Templates are embedded into `boiler-plate.html` as necessary
@@ -238,7 +238,8 @@ The framework is how the site is built and how the [content](#content) is displa
 >    5. **[Post-population TS](#post-population-ts)** functions are run as required by `pageConfig.jsonc` and the templates
 >    6. **[TS includes](#ts-includes)** are run as required by `pageConfig.jsonc`
 >    7. The final HTML is written to `docs/` as `<page>.html`
-> 4. The `docs/` or `test/` folder is now a static build of the site
+> 4. JS and TS scripts in `scripts/` are bundled and minified and copied to `docs/`
+> 5. The `docs/` or `test/` folder is now a static build of the site
 
 ## Naming conventions
 | Type                                      | Naming convention                      | Remarks                 |
@@ -409,6 +410,7 @@ Templates can recursively require CSS, JS, TS, and other templates in them with 
 - `<ts-post-paint src="/lib/template-scripts/example.ts" />`: Runs `lib/template-scripts/example.ts` after [painting](#template-painting)
 - `<ts-post-population src="/lib/template-scripts/example.ts" />`: Runs `lib/template-scripts/example.ts` after [populating](#content-population) the [content](#content)
 - `<js-embed src="/scripts/example.js" />`: Embeds `scripts/example.js` as a [JS embed](#js-embeds)
+- `<js-embed src="/scripts/example.ts" />`: Embeds `scripts/example.ts` as a transpiled [JS embed](#js-embeds)
 - `<css-embed href="/styles/example.css" />`: Embeds `styles/example.css` as a [CSS embed](#css-embeds)
 
 Note that the exact syntax of these tags must be followed for the framework to work correctly. Change only `example` to the name of the file.  

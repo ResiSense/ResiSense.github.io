@@ -48,7 +48,7 @@ jobs:
               run: npm ci
 
             - name: Build static site
-              run: npm run prod-build --if-present
+              run: npm run prod --if-present
 
             - name: Run test
               run: npm test --if-present

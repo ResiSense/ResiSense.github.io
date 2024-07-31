@@ -16,8 +16,13 @@ function writeFileSyncWithMakeDirectory(filePath: string, data: string) {
     fs.writeFileSync(filePath, data, 'utf8');
 }
 
+function stripHtmlComments(html: string) {
+    return html.replace(/<!--[\s\S]*?-->/g, '');
+}
+
 export default class Utils {
     static promisifyCallback = promisifyCallback;
     static toTitleCase = toTitleCase;
     static writeFileSyncWithMakeDirectory = writeFileSyncWithMakeDirectory;
+    static stripHtmlComments = stripHtmlComments;
 }

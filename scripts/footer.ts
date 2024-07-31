@@ -4,7 +4,7 @@
 
     document.addEventListener('DOMContentLoaded', calculateFooterSpacerHeight);
     function calculateFooterSpacerHeight() {
-        const footerPersistentHeight = footerPersistentElement.clientHeight;
-        footerSpacerElement.style.setProperty('--footer-spacer-height', `${footerPersistentHeight}px`);
+        const footerPersistentHeight = (footerPersistentElement as HTMLElement).clientHeight;
+        (footerSpacerElement as HTMLElement).style.setProperty('--footer-spacer-height', `${footerPersistentHeight}px`);
     }
 }
