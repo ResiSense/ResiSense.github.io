@@ -20,9 +20,14 @@ function stripHtmlComments(html: string) {
     return html.replace(/<!--[\s\S]*?-->/g, '');
 }
 
+function reverse(string: string) {
+    return string.split('').reverse().join('');
+}
+
 export default class Utils {
     static promisifyCallback = promisifyCallback;
     static toTitleCase = toTitleCase;
     static writeFileSyncWithMakeDirectory = writeFileSyncWithMakeDirectory;
     static stripHtmlComments = stripHtmlComments;
+    static reverse = reverse;
 }

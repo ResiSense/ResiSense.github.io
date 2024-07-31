@@ -127,7 +127,7 @@ function paintHtmlFragment(paintableHtml: PaintableHtml, templateCache: Template
         Utils.stripHtmlComments(html).match(regex)?.forEach(match => {
             const path = match.replace(replaceHead, '').replace(replaceTail, '');
             html = html.replace(match, '');
-            includeList.push(path.replace(/\..*$/, `.${coerceFormat}`));
+            includeList.push(Utils.reverse(Utils.reverse(path).replace(/^.*?\./, Utils.reverse(`.${coerceFormat}`))));
         });
         return html;
     }
