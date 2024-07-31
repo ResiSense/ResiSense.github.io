@@ -1,9 +1,4 @@
-console.log(`Script running: ${document.currentScript.src}`);
-//
-{
-    window.addEventListener('DOMContentLoaded', setParallaxDoodleContainerHeight);
-    function setParallaxDoodleContainerHeight() {
-        const parallaxDoodleContainer = document.getElementById('parallax-doodle-container');
-        parallaxDoodleContainer.style.height = `${document.body.clientHeight}px`;
-    }
-}
+window.addEventListener('DOMContentLoaded', function () {
+    document.getElementById('parallax-doodle-container').style.height = `${document.body.clientHeight}px`;
+});
+//# sourceMappingURL=parallax-doodle.js.map
