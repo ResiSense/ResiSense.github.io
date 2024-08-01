@@ -1,3 +1,8 @@
 {
-    "recommendations": ["GitHub.vscode-pull-request-github", "ritwickdey.LiveServer"]
+    "recommendations": [
+        "GitHub.vscode-pull-request-github",
+        "ritwickdey.LiveServer",
+        "yoavbls.pretty-ts-errors",
+        "kamikillerto.vscode-colorize"
+    ]
 }
