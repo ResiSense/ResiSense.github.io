@@ -1,11 +1,11 @@
 {
     "job": "build",
     "ref": "refs/heads/main",
-    "sha": "de57fc84484cb71d8576dbb2b07de52247c925db",
+    "sha": "97cbf60e69cc3ddeb25d3f103c89726586bbcbf8",
     "repository": "ResiSense/ResiSense.github.io",
     "repository_Url": null,
-    "run_id": "10188540944",
-    "run_number": "165",
+    "run_id": "10189399309",
+    "run_number": "167",
     "run_attempt": "1",
     "artifact_cache_size_limit": "10",
     "actor": "CCheukKa",
@@ -13,8 +13,8 @@
     "workflow": "Full CI pipeline",
     "event_name": "push",
     "event": {
-        "after": "de57fc84484cb71d8576dbb2b07de52247c925db",
-        "before": "80c75794f9a4456451de74adb79229831a87525c",
+        "after": "97cbf60e69cc3ddeb25d3f103c89726586bbcbf8",
+        "before": "2a0d56af2741faac15e1785495eb2e96e65c4ea7",
         "commits": [
             {
                 "author": {
@@ -28,17 +28,17 @@
                     "username": "CCheukKa"
                 },
                 "distinct": true,
-                "id": "de57fc84484cb71d8576dbb2b07de52247c925db",
-                "message": "fix regex jank in extension coercion",
-                "timestamp": "2024-08-01T06:24:11+08:00",
-                "tree_id": "fd4649c570ce022a8912656f2afe7b79c0c73d68",
-                "url": "https://github.com/ResiSense/ResiSense.github.io/commit/de57fc84484cb71d8576dbb2b07de52247c925db"
+                "id": "97cbf60e69cc3ddeb25d3f103c89726586bbcbf8",
+                "message": "using TS for client scripts is no longer just a suggestion",
+                "timestamp": "2024-08-01T07:59:50+08:00",
+                "tree_id": "6ca7b18422d8105be0caeadece861d1c878c6631",
+                "url": "https://github.com/ResiSense/ResiSense.github.io/commit/97cbf60e69cc3ddeb25d3f103c89726586bbcbf8"
             }
         ],
-        "compare": "https://github.com/ResiSense/ResiSense.github.io/compare/80c75794f9a4...de57fc84484c",
+        "compare": "https://github.com/ResiSense/ResiSense.github.io/compare/2a0d56af2741...97cbf60e69cc",
         "created": false,
         "deleted": false,
-        "forced": false,
+        "forced": true,
         "head_commit": {
             "author": {
                 "email": "ccheukka@gmail.com",
@@ -51,11 +51,11 @@
                 "username": "CCheukKa"
             },
             "distinct": true,
-            "id": "de57fc84484cb71d8576dbb2b07de52247c925db",
-            "message": "fix regex jank in extension coercion",
-            "timestamp": "2024-08-01T06:24:11+08:00",
-            "tree_id": "fd4649c570ce022a8912656f2afe7b79c0c73d68",
-            "url": "https://github.com/ResiSense/ResiSense.github.io/commit/de57fc84484cb71d8576dbb2b07de52247c925db"
+            "id": "97cbf60e69cc3ddeb25d3f103c89726586bbcbf8",
+            "message": "using TS for client scripts is no longer just a suggestion",
+            "timestamp": "2024-08-01T07:59:50+08:00",
+            "tree_id": "6ca7b18422d8105be0caeadece861d1c878c6631",
+            "url": "https://github.com/ResiSense/ResiSense.github.io/commit/97cbf60e69cc3ddeb25d3f103c89726586bbcbf8"
         },
         "pusher": {
             "email": "ccheukka@gmail.com",
@@ -68,6 +68,6 @@
     "ref_type": "branch",
     "secret_source": "Actions",
     "workflow_ref": "ResiSense/ResiSense.github.io/.github/workflows/full-ci-pipeline.yaml@refs/heads/main",
-    "workflow_sha": "de57fc84484cb71d8576dbb2b07de52247c925db",
+    "workflow_sha": "97cbf60e69cc3ddeb25d3f103c89726586bbcbf8",
     "workspace": "/home/runner/work/ResiSense.github.io/ResiSense.github.io"
 }
