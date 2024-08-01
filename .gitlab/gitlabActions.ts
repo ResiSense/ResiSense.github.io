@@ -13,9 +13,15 @@ if (!Number.isSafeInteger(TEAM_NUMBER)) { throw new Error('TEAM_NUMBER must be a
 const remoteDirectoryPath = ['assets'];
 const localDirectoryPath = ['docs', 'assets'];
 
+const PROD_DIRECTORY = localDirectoryPath[0];
+const BASE_URL = 'hongkong-cuhk';
+const htmlFiles = glob.sync(`${PROD_DIRECTORY}/**/*.html`);
+const cssFiles = glob.sync(`${PROD_DIRECTORY}/**/*.css`);
+
 (async () => {
     const remoteResourceData: RemoteResourceData[] = await uploadAssets();
     await relinkUrls(remoteResourceData);
+    await changeBaseUrlTags();
     await fs.remove(localDirectoryPath.join('/'));
 })();
 
@@ -35,14 +41,11 @@ async function relinkUrls(remoteResourceData: RemoteResourceData[]) {
     const cssRegex1 = /(?<=url\(')\/.*?(?='\))/g;
     const cssRegex2 = /(?<=url\(")\/.*?(?="\))/g;
     // 
-    const PROD_DIRECTORY = localDirectoryPath[0];
-    const BASE_URL = 'hongkong-cuhk';
-    const htmlFiles = glob.sync(`${PROD_DIRECTORY}/**/*.html`);
-    const cssFiles = glob.sync(`${PROD_DIRECTORY}/**/*.css`);
     await Promise.all([
         ...htmlFiles.map(filePath => relinkFileUrls(filePath, [htmlRegex])),
         ...cssFiles.map(filePath => relinkFileUrls(filePath, [cssRegex1, cssRegex2]))
     ]);
+    return;
     // 
     async function relinkFileUrls(filePath: string, regexes: RegExp[]) {
         console.log(`Processing ${filePath}`);
@@ -57,6 +60,19 @@ async function relinkUrls(remoteResourceData: RemoteResourceData[]) {
                 return relinkedUrl;
             });
         }
+        await fs.writeFile(filePath, fileContent);
+    }
+}
+
+async function changeBaseUrlTags() {
+    const baseUrlTagRegex = /<meta base-url="[^"]*">/g;
+    //
+    await Promise.all(htmlFiles.map(filePath => changeBaseUrlTag(filePath, baseUrlTagRegex)));
+    return;
+    //
+    async function changeBaseUrlTag(filePath: string, regex: RegExp) {
+        let fileContent = await fs.readFile(filePath, 'utf8');
+        fileContent = fileContent.replace(regex, `<meta base-url="/${BASE_URL}/">`);
         await fs.writeFile(filePath, fileContent);
     }
 }
