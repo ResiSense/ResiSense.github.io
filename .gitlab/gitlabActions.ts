@@ -72,7 +72,7 @@ async function changeBaseUrlTags() {
     //
     async function changeBaseUrlTag(filePath: string, regex: RegExp) {
         let fileContent = await fs.readFile(filePath, 'utf8');
-        fileContent = fileContent.replace(regex, `<meta base-url="/${BASE_URL}/">`);
+        fileContent = fileContent.replace(regex, `<meta base-url="${BASE_URL}">`);
         await fs.writeFile(filePath, fileContent);
     }
 }
