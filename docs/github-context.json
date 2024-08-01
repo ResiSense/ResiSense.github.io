@@ -1,11 +1,11 @@
 {
     "job": "build",
     "ref": "refs/heads/main",
-    "sha": "97cbf60e69cc3ddeb25d3f103c89726586bbcbf8",
+    "sha": "445674705a0df2daf6b5217a48b4582d2e8bd919",
     "repository": "ResiSense/ResiSense.github.io",
     "repository_Url": null,
-    "run_id": "10189399309",
-    "run_number": "167",
+    "run_id": "10189448938",
+    "run_number": "168",
     "run_attempt": "1",
     "artifact_cache_size_limit": "10",
     "actor": "CCheukKa",
@@ -13,8 +13,8 @@
     "workflow": "Full CI pipeline",
     "event_name": "push",
     "event": {
-        "after": "97cbf60e69cc3ddeb25d3f103c89726586bbcbf8",
-        "before": "2a0d56af2741faac15e1785495eb2e96e65c4ea7",
+        "after": "445674705a0df2daf6b5217a48b4582d2e8bd919",
+        "before": "cd92adac1cbfb938758db614ce5199f641e7cab4",
         "commits": [
             {
                 "author": {
@@ -28,17 +28,17 @@
                     "username": "CCheukKa"
                 },
                 "distinct": true,
-                "id": "97cbf60e69cc3ddeb25d3f103c89726586bbcbf8",
-                "message": "using TS for client scripts is no longer just a suggestion",
-                "timestamp": "2024-08-01T07:59:50+08:00",
-                "tree_id": "6ca7b18422d8105be0caeadece861d1c878c6631",
-                "url": "https://github.com/ResiSense/ResiSense.github.io/commit/97cbf60e69cc3ddeb25d3f103c89726586bbcbf8"
+                "id": "445674705a0df2daf6b5217a48b4582d2e8bd919",
+                "message": "add more extension recommendations",
+                "timestamp": "2024-08-01T08:04:42+08:00",
+                "tree_id": "297724282094229b69246f780ae6b72b0a9b8dce",
+                "url": "https://github.com/ResiSense/ResiSense.github.io/commit/445674705a0df2daf6b5217a48b4582d2e8bd919"
             }
         ],
-        "compare": "https://github.com/ResiSense/ResiSense.github.io/compare/2a0d56af2741...97cbf60e69cc",
+        "compare": "https://github.com/ResiSense/ResiSense.github.io/compare/cd92adac1cbf...445674705a0d",
         "created": false,
         "deleted": false,
-        "forced": true,
+        "forced": false,
         "head_commit": {
             "author": {
                 "email": "ccheukka@gmail.com",
@@ -51,11 +51,11 @@
                 "username": "CCheukKa"
             },
             "distinct": true,
-            "id": "97cbf60e69cc3ddeb25d3f103c89726586bbcbf8",
-            "message": "using TS for client scripts is no longer just a suggestion",
-            "timestamp": "2024-08-01T07:59:50+08:00",
-            "tree_id": "6ca7b18422d8105be0caeadece861d1c878c6631",
-            "url": "https://github.com/ResiSense/ResiSense.github.io/commit/97cbf60e69cc3ddeb25d3f103c89726586bbcbf8"
+            "id": "445674705a0df2daf6b5217a48b4582d2e8bd919",
+            "message": "add more extension recommendations",
+            "timestamp": "2024-08-01T08:04:42+08:00",
+            "tree_id": "297724282094229b69246f780ae6b72b0a9b8dce",
+            "url": "https://github.com/ResiSense/ResiSense.github.io/commit/445674705a0df2daf6b5217a48b4582d2e8bd919"
         },
         "pusher": {
             "email": "ccheukka@gmail.com",
@@ -68,6 +68,6 @@
     "ref_type": "branch",
     "secret_source": "Actions",
     "workflow_ref": "ResiSense/ResiSense.github.io/.github/workflows/full-ci-pipeline.yaml@refs/heads/main",
-    "workflow_sha": "97cbf60e69cc3ddeb25d3f103c89726586bbcbf8",
+    "workflow_sha": "445674705a0df2daf6b5217a48b4582d2e8bd919",
     "workspace": "/home/runner/work/ResiSense.github.io/ResiSense.github.io"
 }
