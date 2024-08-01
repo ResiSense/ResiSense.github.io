@@ -34,7 +34,7 @@ The following organizations have provided financial support to the project.
 The [Hong Kong Life Sciences Society](https://www.hklss.org) has kindly provided us with [5000HKD](https://www.google.com/search?q=5000HKD) to support our project.  
 
 ## Hong Kong Amgen Biotech Experience
-[![HKABE Logo](/assets/logos/hkabe%20logo.svg)](https://abehk.fed.cuhk.edu.hk)  
+[![ABEHK Logo](/assets/logos/abehk%20logo.svg)](https://abehk.fed.cuhk.edu.hk)  
 [Hong Kong Amgen Biotech Experience](https://abehk.fed.cuhk.edu.hk) has kindly provided us with various cells, plasmids, and reagents totalling [1000HKD](https://www.google.com/search?q=1000HKD) for our experiments.  
 
 # Collaborators
