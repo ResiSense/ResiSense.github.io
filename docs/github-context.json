@@ -1,11 +1,11 @@
 {
     "job": "build",
     "ref": "refs/heads/main",
-    "sha": "c2880d2b49d1c0662b0ffbdae5a08ea86b27def7",
+    "sha": "c04177d3f3d933624b0c682305e24af8c11c6b5d",
     "repository": "ResiSense/ResiSense.github.io",
     "repository_Url": null,
-    "run_id": "10198033776",
-    "run_number": "170",
+    "run_id": "10199196760",
+    "run_number": "171",
     "run_attempt": "1",
     "artifact_cache_size_limit": "10",
     "actor": "CCheukKa",
@@ -13,8 +13,8 @@
     "workflow": "Full CI pipeline",
     "event_name": "push",
     "event": {
-        "after": "c2880d2b49d1c0662b0ffbdae5a08ea86b27def7",
-        "before": "2bee17b3f72d048956a951814f457e94ddc770ff",
+        "after": "c04177d3f3d933624b0c682305e24af8c11c6b5d",
+        "before": "7c415935c61e0048cc3656f990236fe108dc6d65",
         "commits": [
             {
                 "author": {
@@ -28,14 +28,14 @@
                     "username": "CCheukKa"
                 },
                 "distinct": true,
-                "id": "c2880d2b49d1c0662b0ffbdae5a08ea86b27def7",
-                "message": "improve page title styling",
-                "timestamp": "2024-08-01T20:11:38+08:00",
-                "tree_id": "28f9f7609faf1e5e372bc7ae3224c0f865d6df4b",
-                "url": "https://github.com/ResiSense/ResiSense.github.io/commit/c2880d2b49d1c0662b0ffbdae5a08ea86b27def7"
+                "id": "c04177d3f3d933624b0c682305e24af8c11c6b5d",
+                "message": "add base-url meta tag in header",
+                "timestamp": "2024-08-01T21:23:07+08:00",
+                "tree_id": "b8386f651eff4ee1acfc52cc8cdba67e17906aa7",
+                "url": "https://github.com/ResiSense/ResiSense.github.io/commit/c04177d3f3d933624b0c682305e24af8c11c6b5d"
             }
         ],
-        "compare": "https://github.com/ResiSense/ResiSense.github.io/compare/2bee17b3f72d...c2880d2b49d1",
+        "compare": "https://github.com/ResiSense/ResiSense.github.io/compare/7c415935c61e...c04177d3f3d9",
         "created": false,
         "deleted": false,
         "forced": false,
@@ -51,11 +51,11 @@
                 "username": "CCheukKa"
             },
             "distinct": true,
-            "id": "c2880d2b49d1c0662b0ffbdae5a08ea86b27def7",
-            "message": "improve page title styling",
-            "timestamp": "2024-08-01T20:11:38+08:00",
-            "tree_id": "28f9f7609faf1e5e372bc7ae3224c0f865d6df4b",
-            "url": "https://github.com/ResiSense/ResiSense.github.io/commit/c2880d2b49d1c0662b0ffbdae5a08ea86b27def7"
+            "id": "c04177d3f3d933624b0c682305e24af8c11c6b5d",
+            "message": "add base-url meta tag in header",
+            "timestamp": "2024-08-01T21:23:07+08:00",
+            "tree_id": "b8386f651eff4ee1acfc52cc8cdba67e17906aa7",
+            "url": "https://github.com/ResiSense/ResiSense.github.io/commit/c04177d3f3d933624b0c682305e24af8c11c6b5d"
         },
         "pusher": {
             "email": "ccheukka@gmail.com",
@@ -68,6 +68,6 @@
     "ref_type": "branch",
     "secret_source": "Actions",
     "workflow_ref": "ResiSense/ResiSense.github.io/.github/workflows/full-ci-pipeline.yaml@refs/heads/main",
-    "workflow_sha": "c2880d2b49d1c0662b0ffbdae5a08ea86b27def7",
+    "workflow_sha": "c04177d3f3d933624b0c682305e24af8c11c6b5d",
     "workspace": "/home/runner/work/ResiSense.github.io/ResiSense.github.io"
 }
