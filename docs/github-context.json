@@ -1,11 +1,11 @@
 {
     "job": "build",
     "ref": "refs/heads/main",
-    "sha": "c04177d3f3d933624b0c682305e24af8c11c6b5d",
+    "sha": "44bd3ffdbd15c6ec7b85a31077c871e03f758b89",
     "repository": "ResiSense/ResiSense.github.io",
     "repository_Url": null,
-    "run_id": "10199196760",
-    "run_number": "171",
+    "run_id": "10199293585",
+    "run_number": "172",
     "run_attempt": "1",
     "artifact_cache_size_limit": "10",
     "actor": "CCheukKa",
@@ -13,8 +13,8 @@
     "workflow": "Full CI pipeline",
     "event_name": "push",
     "event": {
-        "after": "c04177d3f3d933624b0c682305e24af8c11c6b5d",
-        "before": "7c415935c61e0048cc3656f990236fe108dc6d65",
+        "after": "44bd3ffdbd15c6ec7b85a31077c871e03f758b89",
+        "before": "4c40310266b8cfc05243e07447a50ecca1a8f4a7",
         "commits": [
             {
                 "author": {
@@ -28,14 +28,14 @@
                     "username": "CCheukKa"
                 },
                 "distinct": true,
-                "id": "c04177d3f3d933624b0c682305e24af8c11c6b5d",
-                "message": "add base-url meta tag in header",
-                "timestamp": "2024-08-01T21:23:07+08:00",
-                "tree_id": "b8386f651eff4ee1acfc52cc8cdba67e17906aa7",
-                "url": "https://github.com/ResiSense/ResiSense.github.io/commit/c04177d3f3d933624b0c682305e24af8c11c6b5d"
+                "id": "44bd3ffdbd15c6ec7b85a31077c871e03f758b89",
+                "message": "update base url syntax",
+                "timestamp": "2024-08-01T21:28:51+08:00",
+                "tree_id": "6c3dfdf8307bc87ca34455edba05cc63502d8270",
+                "url": "https://github.com/ResiSense/ResiSense.github.io/commit/44bd3ffdbd15c6ec7b85a31077c871e03f758b89"
             }
         ],
-        "compare": "https://github.com/ResiSense/ResiSense.github.io/compare/7c415935c61e...c04177d3f3d9",
+        "compare": "https://github.com/ResiSense/ResiSense.github.io/compare/4c40310266b8...44bd3ffdbd15",
         "created": false,
         "deleted": false,
         "forced": false,
@@ -51,11 +51,11 @@
                 "username": "CCheukKa"
             },
             "distinct": true,
-            "id": "c04177d3f3d933624b0c682305e24af8c11c6b5d",
-            "message": "add base-url meta tag in header",
-            "timestamp": "2024-08-01T21:23:07+08:00",
-            "tree_id": "b8386f651eff4ee1acfc52cc8cdba67e17906aa7",
-            "url": "https://github.com/ResiSense/ResiSense.github.io/commit/c04177d3f3d933624b0c682305e24af8c11c6b5d"
+            "id": "44bd3ffdbd15c6ec7b85a31077c871e03f758b89",
+            "message": "update base url syntax",
+            "timestamp": "2024-08-01T21:28:51+08:00",
+            "tree_id": "6c3dfdf8307bc87ca34455edba05cc63502d8270",
+            "url": "https://github.com/ResiSense/ResiSense.github.io/commit/44bd3ffdbd15c6ec7b85a31077c871e03f758b89"
         },
         "pusher": {
             "email": "ccheukka@gmail.com",
@@ -68,6 +68,6 @@
     "ref_type": "branch",
     "secret_source": "Actions",
     "workflow_ref": "ResiSense/ResiSense.github.io/.github/workflows/full-ci-pipeline.yaml@refs/heads/main",
-    "workflow_sha": "c04177d3f3d933624b0c682305e24af8c11c6b5d",
+    "workflow_sha": "44bd3ffdbd15c6ec7b85a31077c871e03f758b89",
     "workspace": "/home/runner/work/ResiSense.github.io/ResiSense.github.io"
 }
