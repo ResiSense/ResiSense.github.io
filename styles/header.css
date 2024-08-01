@@ -58,7 +58,10 @@ painted-header {
                 pointer-events: initial;
                 position: relative;
                 z-index: -1;
-                overflow: clip;
+
+                &>* {
+                    height: 100%;
+                }
 
                 &>.header-leftside {
                     display: flex;
@@ -82,33 +85,43 @@ painted-header {
                     }
                 }
 
+                &>.page-title-container {
+                    justify-self: center;
+                    align-self: center;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    flex-grow: 1;
+                    overflow: clip;
+
+                    &>#header-page-title {
+                        position: relative;
+                        width: 0;
+                        height: 0;
+                        text-wrap: nowrap;
+                        font-weight: bold;
+                        font-size: 2rem;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        color: var(--deep-green);
+                        right: 3rem;
+                        top: 0.5rem;
+
+                        &.hidden {
+                            top: calc(50% + 1.2rem);
+                            opacity: 0;
+                            user-select: none;
+                        }
+                    }
+                }
+
                 &>.header-rightside {
                     display: flex;
                     justify-content: space-between;
                     align-items: center;
                     gap: 1rem;
                     flex-direction: row;
-                }
-
-                &>#header-page-title {
-                    position: absolute;
-                    width: 0;
-                    height: 0;
-                    text-wrap: nowrap;
-                    font-weight: bold;
-                    font-size: 2rem;
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    color: var(--deep-green);
-                    bottom: calc(var(--header-height) * 0.6 / 2);
-                    left: 55%;
-
-                    &.hidden {
-                        bottom: -1rem;
-                        opacity: 0;
-                        user-select: none;
-                    }
                 }
             }
 
