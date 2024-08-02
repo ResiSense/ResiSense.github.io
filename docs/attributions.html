@@ -40,7 +40,6 @@
         ><script type="text/javascript" src="/scripts/parallax-doodle.js" defer=""></script
         ><script type="text/javascript" src="/scripts/content.js" defer=""></script
         ><script type="text/javascript" src="/scripts/footer.js" defer=""></script
-        ><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/fuse.js/dist/fuse.min.js" defer=""></script
         ><script type="text/javascript" src="/scripts/searchbar.js" defer=""></script
         ><script type="text/javascript" src="/scripts/catalogue.js" defer=""></script
         ><script type="text/javascript" src="/scripts/title-card.js" defer=""></script
@@ -54,15 +53,15 @@
                 <div id="parallax-doodle-container"
                     ><img
                         src="/assets/doodles/red blood cell.svg"
-                        style="translate: 17vw 1200px; animation-name: parallax-doodle-40r9bf" /><img
-                        src="/assets/doodles/dna.svg"
-                        style="translate: 90vw 220px; animation-name: parallax-doodle-7oignf" /><img
-                        src="/assets/doodles/syringe.svg"
-                        style="translate: 47vw 980px; animation-name: parallax-doodle-kzydla" /><img
+                        style="translate: 93vw 120px; animation-name: parallax-doodle-cqa4zn" /><img
+                        src="/assets/doodles/e coli.svg"
+                        style="translate: 57vw 900px; animation-name: parallax-doodle-kva954" /><img
                         src="/assets/logos/resisense/ResiSense Orange Logo.svg"
-                        style="translate: 88vw 1040px; animation-name: parallax-doodle-be1ho3" /><img
-                        src="/assets/doodles/bacteria.svg"
-                        style="translate: 12vw 460px; animation-name: parallax-doodle-78yxr6"
+                        style="translate: 51vw 60px; animation-name: parallax-doodle-ta52rv" /><img
+                        src="/assets/doodles/drug.svg"
+                        style="translate: 92vw 1200px; animation-name: parallax-doodle-fx4ld" /><img
+                        src="/assets/doodles/syringe.svg"
+                        style="translate: 96vw 560px; animation-name: parallax-doodle-gc88u"
                 /></div>
             </painted-parallax-doodle>
             <painted-header>
@@ -83,14 +82,44 @@
                             </div>
                             <div class="header-rightside">
                                 <painted-searchbar>
-                                    <search class="searchbar">
+                                    <search id="searchbar">
                                         <input
+                                            id="header-search-field"
                                             type="search"
-                                            class="searchfield"
-                                            id="searchfield"
-                                            placeholder="Search for a page..."
+                                            placeholder="Search... (Ctrl + Shift + F)"
+                                            autocomplete="off"
                                         />
-                                        <button type="submit" class="search-button" id="search-button">🔍</button>
+                                        <button id="search-button" type="submit">🔍</button>
+                                        <dialog id="search-dialog">
+                                            <div class="main-search-field-container">
+                                                <div class="search-icon">🔍</div>
+                                                <input
+                                                    id="main-search-field"
+                                                    type="search"
+                                                    placeholder="Search for a page..."
+                                                    autocomplete="off"
+                                                />
+                                            </div>
+                                            <div id="search-results">
+                                                <template id="search-result-template">
+                                                    <a id="search-result">
+                                                        <div class="result-leftside">
+                                                            <div id="result-title"></div>
+                                                            <div id="result-path"></div>
+                                                        </div>
+                                                        <div class="result-divider"></div>
+                                                        <div class="result-rightside">
+                                                            <div id="result-content"></div>
+                                                        </div>
+                                                    </a>
+                                                </template>
+                                                <template id="search-results-end-template">
+                                                    <fieldset class="search-results-end">
+                                                        <legend>There's nothing more to see here 🙈</legend>
+                                                    </fieldset>
+                                                </template>
+                                            </div>
+                                        </dialog>
                                     </search>
                                 </painted-searchbar>
                                 <painted-hamburger-menu> 🍔 </painted-hamburger-menu>
