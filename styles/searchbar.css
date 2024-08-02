@@ -249,6 +249,7 @@
 
             &>.search-results-end {
                 width: 60%;
+                min-width: fit-content;
                 height: 0;
                 overflow: visible;
                 display: flex;
