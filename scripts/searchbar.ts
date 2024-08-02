@@ -26,6 +26,12 @@ import SearchResults from './SearchResults';
         ) as HTMLTemplateElement;
         return searchResultTemplateElement.content.cloneNode(true) as HTMLDivElement;
     })();
+    const searchResultsEndTemplate = (() => {
+        const searchResultsEndTemplateElement = (document.getElementById('search-results-end-template')
+            ?? (() => { throw new Error('Search results end template not found') })()
+        ) as HTMLTemplateElement;
+        return searchResultsEndTemplateElement.content.cloneNode(true) as HTMLDivElement;
+    })();
     //
     const BASE_URL = document.head.querySelector('meta[base-url]')?.getAttribute('base-url') ?? '.';
     Searchable.index = await (await fetch(`/${BASE_URL}/search-index.json`)).json();
@@ -93,5 +99,7 @@ import SearchResults from './SearchResults';
             // I have no idea why this jank is necessary
             (searchResultsElement.lastElementChild as HTMLAnchorElement).href = `/${BASE_URL}/${searchResult.path}`;
         }
+
+        searchResultsElement.appendChild(searchResultsEndTemplate.cloneNode(true));
     }
 })();
