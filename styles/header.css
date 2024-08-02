@@ -26,6 +26,7 @@ painted-header {
             background-color: var(--bright-brown);
             border-radius: 0 0 50% 50%;
             pointer-events: initial;
+            z-index: 1;
 
             &>.logo {
                 display: block;
@@ -57,7 +58,6 @@ painted-header {
                 box-shadow: var(--bright-brown) -10rem 0px 0px 0px;
                 pointer-events: initial;
                 position: relative;
-                z-index: -1;
 
                 &>* {
                     height: 100%;

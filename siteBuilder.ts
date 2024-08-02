@@ -9,6 +9,7 @@ import Utils from './lib/framework-lib/Utils';
 import { PageData } from './lib/types/PageData';
 import HtmlFullReplacer from './lib/framework-lib/HtmlFullReplacer';
 import HtmlFramePopulator from './lib/framework-lib/HtmlFramePopulator';
+import Searchable from './lib/types/Searchable';
 
 const mode = process.env.NODE_ENV?.trim() as typeof MODES[keyof typeof MODES];
 console.log(`Running ${path.basename(__filename)}...`);
@@ -43,6 +44,10 @@ if (!targetDirectory) { throw new Error('Invalid mode!'); }
     // 
     await Promise.all(Pages.flattenedPageConfig.pages.map(page => buildAliasFile(page).catch(error => console.error(error))));
     console.log(`Built all aliases.`);
+    //
+    await fs.writeJson(path.resolve(targetDirectory, 'search-index.json'), Searchable.index);
+    //? This has serialisation issues
+    // await fs.writeJson(path.resolve(targetDirectory, 'search-targets.json'), Searchable.targets);
     // 
     console.log(`${path.basename(__filename)} is done!`);
 })();
@@ -81,7 +86,9 @@ async function buildFile(page: Page, templateCache: TemplateCache): Promise<void
     const rawHtml = fs.readFileSync(filename, 'utf8');
     const paintedHtml: PaintableHtml = TemplatePainter.paintPageHtml({ html: rawHtml }, templateCache);
     const document = new JSDOM(paintedHtml.html).window.document;
-    document.title = page.title || Utils.toTitleCase(page.name);
+    console.warn(page.title);
+    page.title = page.title || Utils.toTitleCase(page.name);
+    document.title = page.title;
 
     const pageData: PageData = {
         targetDirectory,
@@ -111,6 +118,14 @@ async function buildFile(page: Page, templateCache: TemplateCache): Promise<void
     runTsIncludes(pageData);
 
     if (mode === MODES.DEV) { addHtmlExtensionsToAnchorHrefs(pageData); }
+
+    if (pageData.page.hideFromCatalogue) {
+        console.log(`Skipping indexing ${Pages.getTrace(page).join('/')}...`);
+    } else {
+        pageData.htmlPollutedRawContent === undefined
+            ? console.warn(`htmlPollutedRawContent not found for ${Pages.getTrace(page).join('/')}`)
+            : Searchable.addEntry(page.trace.join('/'), page.title, pageData);
+    }
 
     const htmlFileContent = `<!DOCTYPE html>\n${document.documentElement.outerHTML}`;
     Utils.writeFileSyncWithMakeDirectory(path.resolve(targetDirectory, `${Pages.getTrace(page).join('/')}.html`), htmlFileContent);

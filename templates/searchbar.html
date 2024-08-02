@@ -1,9 +1,25 @@
-<ts-embed src="https://cdn.jsdelivr.net/npm/fuse.js/dist/fuse.min.js" />
+<js-embed src="https://cdn.jsdelivr.net/npm/fuzzysort/fuzzysort.min.js" />
 <ts-embed src="/scripts/searchbar.ts" />
 
 <css-embed href="/styles/searchbar.css" />
 
-<search class="searchbar">
-    <input type="search" class="searchfield" id="searchfield" placeholder="Search for a page..." />
-    <button type="submit" class="search-button" id="search-button">🔍</button>
+<search id="searchbar">
+    <input id="search-field" type="search" placeholder="Search for a page..." autocomplete="off" />
+    <button id="search-button" type="submit">🔍</button>
+    <dialog id="search-dialog">
+        <div id="search-results">
+            <template id="search-result-template">
+                <a id="search-result">
+                    <div class="result-leftside">
+                        <div id="result-title"></div>
+                        <div id="result-path"></div>
+                    </div>
+                    <div class="result-divider"></div>
+                    <div class="result-rightside">
+                        <div id="result-content"></div>
+                    </div>
+                </a>
+            </template>
+        </div>
+    </dialog>
 </search>
