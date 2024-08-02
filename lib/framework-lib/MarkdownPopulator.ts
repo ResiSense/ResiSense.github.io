@@ -31,6 +31,7 @@ async function populatePageFromMarkdown(pageData: PageData) {
     wrapHeadingSectionsInSections();
     coerceRedirectsToNewTabs();
     pageData.contentHeadingElements = contentHeadingElements;
+    pageData.htmlPollutedRawContent = parsedMarkdown;
     return;
 
     function addIdsToHeadings() {

@@ -19,6 +19,7 @@ async function replacePageWithFullHtml(pageData: PageData) {
     console.log(`Replacing ${page.name}.html with ${htmlPath}...`);
     const html = await fs.readFile(htmlPath, 'utf8').catch(() => { throw new Error(`Failed to read ${htmlPath}!`) });
     pageData.paintedHtml.html = html;
+    pageData.htmlPollutedRawContent = html;
     return;
 }
 

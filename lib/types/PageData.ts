@@ -6,5 +6,6 @@ export type PageData = {
     page: Page;
     document: Document;
     paintedHtml: PaintableHtml;
+    htmlPollutedRawContent?: string;
     [key: string]: any;
 }

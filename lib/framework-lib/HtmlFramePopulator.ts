@@ -22,6 +22,7 @@ async function populatePageWithHtmlFrame(pageData: PageData) {
         || (() => { throw new Error('<paintable-content> not found!') })()
     ).replaceWith(paintableContentElement);
     paintableContentElement.innerHTML = html;
+    pageData.htmlPollutedRawContent = html;
     return;
 }
 

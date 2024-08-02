@@ -5,3 +5,4 @@
 /.parcel-cache
 /lib/**/*.js
 /scripts/**/*.js
+/test.ts

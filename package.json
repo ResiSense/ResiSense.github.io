@@ -48,7 +48,9 @@
     "homepage": "https://github.com/ResiSense/ResiSense.github.io#readme",
     "dependencies": {
         "fs-extra": "^11.2.0",
+        "fuzzysort": "^3.0.2",
         "glob": "^11.0.0",
+        "html-to-text": "^9.0.5",
         "igem-upload-api": "^1.2.5",
         "jsdom": "^24.1.1",
         "marked": "^13.0.3"
@@ -56,6 +58,7 @@
     "devDependencies": {
         "@types/fs-extra": "^11.0.4",
         "@types/he": "^1.2.3",
+        "@types/html-to-text": "^9.0.4",
         "@types/jsdom": "^21.1.7",
         "@types/node": "^22.0.0",
         "chokidar": "^3.6.0",
