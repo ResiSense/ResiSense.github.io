@@ -1,143 +1,147 @@
-footer {
+painted-footer {
+    justify-self: flex-end;
     --footer-background-color: var(--bright-brown);
-    --footer-horizontal-padding: 1rem;
     background-color: var(--footer-background-color);
-    position: sticky;
 
-    &>.footer-banner {
-        /* background-color: var(--footer-background-color); */
-        width: 100%;
-        height: 7rem;
-        display: flex;
-        box-sizing: border-box;
-        padding: 1rem var(--footer-horizontal-padding) 0.5rem;
-        align-items: center;
-        overflow: hidden;
+    &>footer {
+        --footer-persistent-height: 2rem;
+        position: sticky;
 
-        &>div {
-            height: 100%;
+        &>* {
+            padding-left: 1rem;
+            padding-right: 1rem;
+            box-sizing: border-box;
         }
 
-        & img {
-            height: 100%;
-            width: auto;
-        }
-
-        &>.resisense {
+        &>.footer-banner {
+            width: 100%;
+            height: 7rem;
             display: flex;
-            gap: 1rem;
+            padding-top: 1rem;
+            padding-bottom: 0.5rem;
+            margin-bottom: var(--footer-persistent-height);
+            align-items: center;
+            overflow: hidden;
 
-            &>.resisense-logo-aside {
+            &>div {
+                height: 100%;
+            }
+
+            & img {
+                height: 100%;
+                width: auto;
+            }
+
+            &>.resisense {
                 display: flex;
-                flex-direction: column;
-                justify-content: space-between;
-                color: var(--deep-green);
+                gap: 1rem;
 
-                &>.resisense-name {
-                    --size: 2.6rem;
-                    font-size: var(--size);
-                    line-height: var(--size);
-                    font-weight: 700;
-                    flex-grow: 1;
-                    display: flex;
-                    align-items: center;
-                }
-
-                &>.socials {
-                    font-size: 1rem;
+                &>.resisense-logo-aside {
                     display: flex;
                     flex-direction: column;
+                    justify-content: space-between;
+                    color: var(--deep-green);
 
-                    &>.social {
-                        width: fit-content;
+                    &>.resisense-name {
+                        --size: 2.6rem;
+                        font-size: var(--size);
+                        line-height: var(--size);
+                        font-weight: 700;
+                        flex-grow: 1;
+                        display: flex;
+                        align-items: center;
+                    }
 
-                        &>a {
-                            line-height: 1rem;
-                            display: flex;
-                            align-items: center;
-                            gap: 0.2rem;
+                    &>.socials {
+                        font-size: 1rem;
+                        display: flex;
+                        flex-direction: column;
+
+                        &>.social {
                             width: fit-content;
-                            padding-right: 1rem;
 
-                            &>img {
-                                max-width: 1rem;
+                            &>a {
+                                line-height: 1rem;
+                                display: flex;
+                                align-items: center;
+                                gap: 0.2rem;
+                                width: fit-content;
+                                padding-right: 1rem;
+
+                                &>img {
+                                    max-width: 1rem;
+                                }
                             }
+                        }
+                    }
+                }
+            }
+
+            & .divider {
+                margin: 0 1rem;
+                border-left: 2px dashed var(--desaturated-orange);
+            }
+
+            &>.logo-container-wrapper {
+                display: grid;
+                grid-template-columns: auto auto;
+                grid-template-rows: 50% 50%;
+                gap: 0.2rem;
+
+                &>.cuhk-department-logo-container,
+                &>.sponsor-logo-container {
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    gap: 0.5rem;
+
+                    &>a {
+                        height: 100%;
+
+                        &>img {
+                            width: 100%;
+                            height: 100%;
+                            object-fit: contain;
                         }
                     }
                 }
             }
         }
 
-        & .divider {
-            margin: 0 1rem;
-            border-left: 2px dashed var(--desaturated-orange);
-        }
-
-        &>.logo-container-wrapper {
-            display: grid;
-            grid-template-columns: auto auto;
-            grid-template-rows: 50% 50%;
-            gap: 0.2rem;
-
-            &>.cuhk-department-logo-container,
-            &>.sponsor-logo-container {
-                display: flex;
-                flex-direction: row;
-                align-items: center;
-                gap: 0.5rem;
-
-                &>a {
-                    height: 100%;
-
-                    &>img {
-                        width: 100%;
-                        height: 100%;
-                        object-fit: contain;
-                    }
-                }
-            }
-        }
-    }
-
-    &>.footer-spacer {
-        --footer-spacer-height: awaiting-js-definition;
-        height: var(--footer-spacer-height);
-        background-color: var(--footer-background-color);
-        position: sticky;
-        bottom: 0;
-    }
-
-    &>.footer-persistent {
-        background-color: var(--footer-background-color);
-        position: fixed;
-        bottom: 0;
-        display: flex;
-        padding: 0.1rem var(--footer-horizontal-padding);
-        width: calc(100% - 2rem);
-        justify-content: space-between;
-        align-items: center;
-        flex-direction: row;
-
-        &>div {
+        &>.footer-persistent {
+            background-color: var(--footer-background-color);
+            position: fixed;
+            bottom: 0;
             display: flex;
-            justify-content: center;
+            padding-top: 0.1rem;
+            padding-bottom: 0.1rem;
+            height: var(--footer-persistent-height);
+            width: 100%;
+            justify-content: space-between;
             align-items: center;
             flex-direction: row;
 
-            &>span>a {
-                height: 100%;
+            &>div {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: row;
 
-                &>img {
-                    vertical-align: middle;
-                    height: 20px;
-                    aspect-ratio: 1/1;
-                    object-fit: contain;
+                &>span>a {
+                    height: 100%;
+
+                    &>img {
+                        vertical-align: middle;
+                        height: 20px;
+                        aspect-ratio: 1/1;
+                        object-fit: contain;
+                    }
                 }
-            }
 
-            &.license-container a {
-                font-weight: 700;
-                text-decoration: underline;
+                &.license-container a {
+                    font-weight: 700;
+                    text-decoration: underline;
+                }
             }
         }
     }
