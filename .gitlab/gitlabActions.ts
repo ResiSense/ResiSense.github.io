@@ -65,14 +65,15 @@ async function relinkUrls(remoteResourceData: RemoteResourceData[]) {
 }
 
 async function changeBaseUrlTags() {
-    const baseUrlTagRegex = /<meta base-url="[^"]*">/g;
+    const baseUrlTagRegex = /<meta base-url="[^"]*" \/>/g;
     //
     await Promise.all(htmlFiles.map(filePath => changeBaseUrlTag(filePath, baseUrlTagRegex)));
     return;
     //
     async function changeBaseUrlTag(filePath: string, regex: RegExp) {
         let fileContent = await fs.readFile(filePath, 'utf8');
-        fileContent = fileContent.replace(regex, `<meta base-url="${BASE_URL}">`);
+        fileContent = fileContent.replace(regex, `<meta base-url="${BASE_URL}" />`);
+        console.log(`Changed base-url meta tag in ${filePath} to ${BASE_URL}`);
         await fs.writeFile(filePath, fileContent);
     }
 }
