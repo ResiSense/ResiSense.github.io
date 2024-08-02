@@ -15,6 +15,8 @@ painted-outline {
         border-radius: 1rem;
         padding: 0.8rem 0.5rem;
         --line-height: 1.2rem;
+        backdrop-filter: blur(5px);
+        box-shadow: inset 0 0 10px white;
 
         &>.outline {
             --list-indentation: 0.5rem;
