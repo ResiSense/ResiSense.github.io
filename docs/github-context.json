@@ -1,11 +1,11 @@
 {
     "job": "build",
     "ref": "refs/heads/main",
-    "sha": "036a47fd48d96545388907871b5e9f2ec8395a9a",
+    "sha": "5bb9b827a723c8fe16e9ff002397e8b0b9a782d2",
     "repository": "ResiSense/ResiSense.github.io",
     "repository_Url": null,
-    "run_id": "10220021893",
-    "run_number": "181",
+    "run_id": "10220378766",
+    "run_number": "183",
     "run_attempt": "1",
     "artifact_cache_size_limit": "10",
     "actor": "CCheukKa",
@@ -13,8 +13,8 @@
     "workflow": "Full CI pipeline",
     "event_name": "push",
     "event": {
-        "after": "036a47fd48d96545388907871b5e9f2ec8395a9a",
-        "before": "82a2711115abd6f5f985954af443ae35175bfc12",
+        "after": "5bb9b827a723c8fe16e9ff002397e8b0b9a782d2",
+        "before": "98d9a41c1058fa13dd8ede002841a0d55457b5c0",
         "commits": [
             {
                 "author": {
@@ -28,17 +28,17 @@
                     "username": "CCheukKa"
                 },
                 "distinct": true,
-                "id": "036a47fd48d96545388907871b5e9f2ec8395a9a",
-                "message": "fix footer not always sticking to the bottom",
-                "timestamp": "2024-08-03T02:04:12+08:00",
-                "tree_id": "1a14f4d42c1fd1f3492382c17507a7516761f373",
-                "url": "https://github.com/ResiSense/ResiSense.github.io/commit/036a47fd48d96545388907871b5e9f2ec8395a9a"
+                "id": "5bb9b827a723c8fe16e9ff002397e8b0b9a782d2",
+                "message": "clean up",
+                "timestamp": "2024-08-03T02:32:47+08:00",
+                "tree_id": "ccad19a5da34efea3516b2a3c4052edec1a7a4dd",
+                "url": "https://github.com/ResiSense/ResiSense.github.io/commit/5bb9b827a723c8fe16e9ff002397e8b0b9a782d2"
             }
         ],
-        "compare": "https://github.com/ResiSense/ResiSense.github.io/compare/82a2711115ab...036a47fd48d9",
+        "compare": "https://github.com/ResiSense/ResiSense.github.io/compare/98d9a41c1058...5bb9b827a723",
         "created": false,
         "deleted": false,
-        "forced": false,
+        "forced": true,
         "head_commit": {
             "author": {
                 "email": "ccheukka@gmail.com",
@@ -51,11 +51,11 @@
                 "username": "CCheukKa"
             },
             "distinct": true,
-            "id": "036a47fd48d96545388907871b5e9f2ec8395a9a",
-            "message": "fix footer not always sticking to the bottom",
-            "timestamp": "2024-08-03T02:04:12+08:00",
-            "tree_id": "1a14f4d42c1fd1f3492382c17507a7516761f373",
-            "url": "https://github.com/ResiSense/ResiSense.github.io/commit/036a47fd48d96545388907871b5e9f2ec8395a9a"
+            "id": "5bb9b827a723c8fe16e9ff002397e8b0b9a782d2",
+            "message": "clean up",
+            "timestamp": "2024-08-03T02:32:47+08:00",
+            "tree_id": "ccad19a5da34efea3516b2a3c4052edec1a7a4dd",
+            "url": "https://github.com/ResiSense/ResiSense.github.io/commit/5bb9b827a723c8fe16e9ff002397e8b0b9a782d2"
         },
         "pusher": {
             "email": "ccheukka@gmail.com",
@@ -68,6 +68,6 @@
     "ref_type": "branch",
     "secret_source": "Actions",
     "workflow_ref": "ResiSense/ResiSense.github.io/.github/workflows/full-ci-pipeline.yaml@refs/heads/main",
-    "workflow_sha": "036a47fd48d96545388907871b5e9f2ec8395a9a",
+    "workflow_sha": "5bb9b827a723c8fe16e9ff002397e8b0b9a782d2",
     "workspace": "/home/runner/work/ResiSense.github.io/ResiSense.github.io"
 }
