@@ -1,11 +1,11 @@
 {
     "job": "build",
     "ref": "refs/heads/main",
-    "sha": "3876dce0ae319aeea2ccc5e923917dbfa7529e89",
+    "sha": "036a47fd48d96545388907871b5e9f2ec8395a9a",
     "repository": "ResiSense/ResiSense.github.io",
     "repository_Url": null,
-    "run_id": "10219199504",
-    "run_number": "180",
+    "run_id": "10220021893",
+    "run_number": "181",
     "run_attempt": "1",
     "artifact_cache_size_limit": "10",
     "actor": "CCheukKa",
@@ -13,8 +13,8 @@
     "workflow": "Full CI pipeline",
     "event_name": "push",
     "event": {
-        "after": "3876dce0ae319aeea2ccc5e923917dbfa7529e89",
-        "before": "d814ec0fbf4e30cc82cc48d05f28906179d1dbd6",
+        "after": "036a47fd48d96545388907871b5e9f2ec8395a9a",
+        "before": "82a2711115abd6f5f985954af443ae35175bfc12",
         "commits": [
             {
                 "author": {
@@ -28,17 +28,17 @@
                     "username": "CCheukKa"
                 },
                 "distinct": true,
-                "id": "3876dce0ae319aeea2ccc5e923917dbfa7529e89",
-                "message": "fix base url replace jank",
-                "timestamp": "2024-08-03T00:53:57+08:00",
-                "tree_id": "7a67f566970ec1df5c02b05644d1c4f61d683d27",
-                "url": "https://github.com/ResiSense/ResiSense.github.io/commit/3876dce0ae319aeea2ccc5e923917dbfa7529e89"
+                "id": "036a47fd48d96545388907871b5e9f2ec8395a9a",
+                "message": "fix footer not always sticking to the bottom",
+                "timestamp": "2024-08-03T02:04:12+08:00",
+                "tree_id": "1a14f4d42c1fd1f3492382c17507a7516761f373",
+                "url": "https://github.com/ResiSense/ResiSense.github.io/commit/036a47fd48d96545388907871b5e9f2ec8395a9a"
             }
         ],
-        "compare": "https://github.com/ResiSense/ResiSense.github.io/compare/d814ec0fbf4e...3876dce0ae31",
+        "compare": "https://github.com/ResiSense/ResiSense.github.io/compare/82a2711115ab...036a47fd48d9",
         "created": false,
         "deleted": false,
-        "forced": true,
+        "forced": false,
         "head_commit": {
             "author": {
                 "email": "ccheukka@gmail.com",
@@ -51,11 +51,11 @@
                 "username": "CCheukKa"
             },
             "distinct": true,
-            "id": "3876dce0ae319aeea2ccc5e923917dbfa7529e89",
-            "message": "fix base url replace jank",
-            "timestamp": "2024-08-03T00:53:57+08:00",
-            "tree_id": "7a67f566970ec1df5c02b05644d1c4f61d683d27",
-            "url": "https://github.com/ResiSense/ResiSense.github.io/commit/3876dce0ae319aeea2ccc5e923917dbfa7529e89"
+            "id": "036a47fd48d96545388907871b5e9f2ec8395a9a",
+            "message": "fix footer not always sticking to the bottom",
+            "timestamp": "2024-08-03T02:04:12+08:00",
+            "tree_id": "1a14f4d42c1fd1f3492382c17507a7516761f373",
+            "url": "https://github.com/ResiSense/ResiSense.github.io/commit/036a47fd48d96545388907871b5e9f2ec8395a9a"
         },
         "pusher": {
             "email": "ccheukka@gmail.com",
@@ -68,6 +68,6 @@
     "ref_type": "branch",
     "secret_source": "Actions",
     "workflow_ref": "ResiSense/ResiSense.github.io/.github/workflows/full-ci-pipeline.yaml@refs/heads/main",
-    "workflow_sha": "3876dce0ae319aeea2ccc5e923917dbfa7529e89",
+    "workflow_sha": "036a47fd48d96545388907871b5e9f2ec8395a9a",
     "workspace": "/home/runner/work/ResiSense.github.io/ResiSense.github.io"
 }
