@@ -30,21 +30,20 @@ html {
     scroll-behavior: smooth;
     height: 100%;
 
-    &>body.post-buffered * {
-        transition: all 0.2s ease-in-out;
-    }
 
     &>body {
         color-scheme: light;
         background-color: var(--white);
         color: black;
         margin: 0;
-        /* padding: 0 5rem; */
         font-family: 'Baloo 2', 'Trebuchet MS', 'Lucida Sans Unicode', Arial, sans-serif;
-        /* font-family: 'Bellota Text', 'Trebuchet MS', 'Lucida Sans Unicode', Arial, sans-serif; */
         font-weight: 500;
         height: 100%;
         display: flex;
+
+        &.post-buffered * {
+            transition: all 0.2s ease-in-out;
+        }
     }
 
     & a {
