@@ -4859,11 +4859,7 @@ ${''.padEnd(t)}${'^'.repeat(r)}`;
             }
             s.appendChild(o.cloneNode(!0));
         }
-        i.addEventListener('keydown', function (e) {
-            if ('Escape' === e.key && '' === i.value) {
-                n.toggleAttribute('open', !1);
-                return;
-            }
+        i.addEventListener('keydown', function () {
             requestAnimationFrame(u);
         }),
             t.addEventListener('keydown', e => {
@@ -4892,6 +4888,10 @@ ${''.padEnd(t)}${'^'.repeat(r)}`;
                         let o = Math.min(a + (t ? 1 : -1), r.length - 1),
                             l = r[o] || i;
                         l.focus(), l.scrollIntoView({ block: 'start', behavior: 'instant' });
+                        return;
+                    }
+                    if ('Escape' === e.key && '' === i.value) {
+                        i.focus(), i.blur();
                         return;
                     }
                     i.focus(),
