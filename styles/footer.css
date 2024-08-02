@@ -1,9 +1,12 @@
 painted-footer {
     justify-self: flex-end;
+    --footer-background-color: var(--bright-brown);
+    background-color: var(--footer-background-color);
 
     &>footer {
         --footer-height: 10rem;
         --horizontal-space: 3rem;
+        position: sticky;
         background-color: var(--bright-brown);
         color: black;
         display: flex;
@@ -13,17 +16,15 @@ painted-footer {
         padding: 2rem var(--horizontal-space);
         gap: var(--horizontal-space);
         height: var(--footer-height);
-        position: sticky;
 
         &>div {
             height: 100%;
         }
 
-        /* & .footer-text {
-            font-family: "Montserrat", sans-serif;
-            font-weight: 500;
-            font-size: 15px;
-        } */
+        & img {
+            height: 100%;
+            width: auto;
+        }
 
         &>.footer-leftside {
             display: flex;
