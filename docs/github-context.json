@@ -1,11 +1,11 @@
 {
     "job": "build",
     "ref": "refs/heads/main",
-    "sha": "9ff889a5037e67e73a0be24e75de547e4548e8bf",
+    "sha": "10be7eacd5467b8d580fca66693b5fcb4b23e9be",
     "repository": "ResiSense/ResiSense.github.io",
     "repository_Url": null,
-    "run_id": "10220642408",
-    "run_number": "184",
+    "run_id": "10221135523",
+    "run_number": "185",
     "run_attempt": "1",
     "artifact_cache_size_limit": "10",
     "actor": "CCheukKa",
@@ -13,8 +13,8 @@
     "workflow": "Full CI pipeline",
     "event_name": "push",
     "event": {
-        "after": "9ff889a5037e67e73a0be24e75de547e4548e8bf",
-        "before": "14a7d4183a9b3df8ac6e16ae33701a140b21db6c",
+        "after": "10be7eacd5467b8d580fca66693b5fcb4b23e9be",
+        "before": "cb223c706ffd49c788cf52f3b364ed888d7aaf75",
         "commits": [
             {
                 "author": {
@@ -28,14 +28,14 @@
                     "username": "CCheukKa"
                 },
                 "distinct": true,
-                "id": "9ff889a5037e67e73a0be24e75de547e4548e8bf",
-                "message": "add glass texture to outline",
-                "timestamp": "2024-08-03T02:55:33+08:00",
-                "tree_id": "6a2dda03596f1614a1e49c47767774d8b7ecf02a",
-                "url": "https://github.com/ResiSense/ResiSense.github.io/commit/9ff889a5037e67e73a0be24e75de547e4548e8bf"
+                "id": "10be7eacd5467b8d580fca66693b5fcb4b23e9be",
+                "message": "add scrollbar to search results",
+                "timestamp": "2024-08-03T03:39:08+08:00",
+                "tree_id": "a517f74559bc94f220e743df823ac7725d9607a5",
+                "url": "https://github.com/ResiSense/ResiSense.github.io/commit/10be7eacd5467b8d580fca66693b5fcb4b23e9be"
             }
         ],
-        "compare": "https://github.com/ResiSense/ResiSense.github.io/compare/14a7d4183a9b...9ff889a5037e",
+        "compare": "https://github.com/ResiSense/ResiSense.github.io/compare/cb223c706ffd...10be7eacd546",
         "created": false,
         "deleted": false,
         "forced": false,
@@ -51,11 +51,11 @@
                 "username": "CCheukKa"
             },
             "distinct": true,
-            "id": "9ff889a5037e67e73a0be24e75de547e4548e8bf",
-            "message": "add glass texture to outline",
-            "timestamp": "2024-08-03T02:55:33+08:00",
-            "tree_id": "6a2dda03596f1614a1e49c47767774d8b7ecf02a",
-            "url": "https://github.com/ResiSense/ResiSense.github.io/commit/9ff889a5037e67e73a0be24e75de547e4548e8bf"
+            "id": "10be7eacd5467b8d580fca66693b5fcb4b23e9be",
+            "message": "add scrollbar to search results",
+            "timestamp": "2024-08-03T03:39:08+08:00",
+            "tree_id": "a517f74559bc94f220e743df823ac7725d9607a5",
+            "url": "https://github.com/ResiSense/ResiSense.github.io/commit/10be7eacd5467b8d580fca66693b5fcb4b23e9be"
         },
         "pusher": {
             "email": "ccheukka@gmail.com",
@@ -68,6 +68,6 @@
     "ref_type": "branch",
     "secret_source": "Actions",
     "workflow_ref": "ResiSense/ResiSense.github.io/.github/workflows/full-ci-pipeline.yaml@refs/heads/main",
-    "workflow_sha": "9ff889a5037e67e73a0be24e75de547e4548e8bf",
+    "workflow_sha": "10be7eacd5467b8d580fca66693b5fcb4b23e9be",
     "workspace": "/home/runner/work/ResiSense.github.io/ResiSense.github.io"
 }
