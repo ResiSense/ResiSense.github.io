@@ -1,11 +1,11 @@
 {
     "job": "build",
     "ref": "refs/heads/main",
-    "sha": "0c806478fcefdb08ef25994104d15bbdb7f8e518",
+    "sha": "d7f963e302a669f0325ee3902dd6d038ea761f47",
     "repository": "ResiSense/ResiSense.github.io",
     "repository_Url": null,
-    "run_id": "10209711892",
-    "run_number": "175",
+    "run_id": "10209953022",
+    "run_number": "176",
     "run_attempt": "1",
     "artifact_cache_size_limit": "10",
     "actor": "CCheukKa",
@@ -13,8 +13,8 @@
     "workflow": "Full CI pipeline",
     "event_name": "push",
     "event": {
-        "after": "0c806478fcefdb08ef25994104d15bbdb7f8e518",
-        "before": "00564ac714f6cb7f41189dd7f16f59f045af77e9",
+        "after": "d7f963e302a669f0325ee3902dd6d038ea761f47",
+        "before": "a4904d3defaee2beaa4cedd4673f1df99616891c",
         "commits": [
             {
                 "author": {
@@ -28,14 +28,14 @@
                     "username": "CCheukKa"
                 },
                 "distinct": true,
-                "id": "0c806478fcefdb08ef25994104d15bbdb7f8e518",
-                "message": "chore: update searchbar.css to include min-width for search results end",
-                "timestamp": "2024-08-02T11:53:38+08:00",
-                "tree_id": "dde9ede3f756961d48ef22776a6abd3c4befc8b4",
-                "url": "https://github.com/ResiSense/ResiSense.github.io/commit/0c806478fcefdb08ef25994104d15bbdb7f8e518"
+                "id": "d7f963e302a669f0325ee3902dd6d038ea761f47",
+                "message": "fix incorrect header spacing",
+                "timestamp": "2024-08-02T12:23:29+08:00",
+                "tree_id": "bace75deb1274ba5af53aa85cc1a3758ca9e316e",
+                "url": "https://github.com/ResiSense/ResiSense.github.io/commit/d7f963e302a669f0325ee3902dd6d038ea761f47"
             }
         ],
-        "compare": "https://github.com/ResiSense/ResiSense.github.io/compare/00564ac714f6...0c806478fcef",
+        "compare": "https://github.com/ResiSense/ResiSense.github.io/compare/a4904d3defae...d7f963e302a6",
         "created": false,
         "deleted": false,
         "forced": false,
@@ -51,11 +51,11 @@
                 "username": "CCheukKa"
             },
             "distinct": true,
-            "id": "0c806478fcefdb08ef25994104d15bbdb7f8e518",
-            "message": "chore: update searchbar.css to include min-width for search results end",
-            "timestamp": "2024-08-02T11:53:38+08:00",
-            "tree_id": "dde9ede3f756961d48ef22776a6abd3c4befc8b4",
-            "url": "https://github.com/ResiSense/ResiSense.github.io/commit/0c806478fcefdb08ef25994104d15bbdb7f8e518"
+            "id": "d7f963e302a669f0325ee3902dd6d038ea761f47",
+            "message": "fix incorrect header spacing",
+            "timestamp": "2024-08-02T12:23:29+08:00",
+            "tree_id": "bace75deb1274ba5af53aa85cc1a3758ca9e316e",
+            "url": "https://github.com/ResiSense/ResiSense.github.io/commit/d7f963e302a669f0325ee3902dd6d038ea761f47"
         },
         "pusher": {
             "email": "ccheukka@gmail.com",
@@ -68,6 +68,6 @@
     "ref_type": "branch",
     "secret_source": "Actions",
     "workflow_ref": "ResiSense/ResiSense.github.io/.github/workflows/full-ci-pipeline.yaml@refs/heads/main",
-    "workflow_sha": "0c806478fcefdb08ef25994104d15bbdb7f8e518",
+    "workflow_sha": "d7f963e302a669f0325ee3902dd6d038ea761f47",
     "workspace": "/home/runner/work/ResiSense.github.io/ResiSense.github.io"
 }
