@@ -51,7 +51,7 @@ html {
         cursor: pointer;
     }
 
-    & ::-webkit-scrollbar {
+    & :not(.require-scrollbar)::-webkit-scrollbar {
         display: none;
     }
 }
