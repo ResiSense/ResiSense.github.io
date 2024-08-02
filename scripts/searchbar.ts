@@ -48,26 +48,62 @@ import SearchResults from './SearchResults';
         //
         //? the query is inexplicably one character behind if we don't use requestAnimationFrame
         //? + slight throttling
-        requestAnimationFrame(() => {
-            headerSearchFieldElement.value = mainSearchFieldElement.value;
-            const query = mainSearchFieldElement.value.trim();
-            if (query === oldSearchFieldQuery) { return; }
-            oldSearchFieldQuery = query;
-            if (query === '') {
-                searchResultsElement.innerHTML = '';
-            } else {
-                redrawSearchResults(query)
-            }
-        });
+        requestAnimationFrame(updateSearch);
+    }
+    function updateSearch() {
+        headerSearchFieldElement.value = mainSearchFieldElement.value;
+        const query = mainSearchFieldElement.value.trim();
+        if (query === oldSearchFieldQuery) { return; }
+        oldSearchFieldQuery = query;
+        if (query === '') {
+            searchResultsElement.innerHTML = '';
+        } else {
+            redrawSearchResults(query)
+        }
     }
 
-    searchbarElement.addEventListener('keydown', () => {
+    searchbarElement.addEventListener('keydown', (event: KeyboardEvent) => {
+        // allow non-typing keys pass through
+        const nonTypingKeys = [
+            'Shift', 'Control', 'Alt', 'Meta',
+            'Enter', 'Tab', 'CapsLock', 'Home', 'End', 'PageUp', 'PageDown'
+        ];
+        if (nonTypingKeys.includes(event.key)) { return; }
+
+        // allow arrow up down navigation
+        if (['ArrowUp', 'ArrowDown'].includes(event.key)) {
+            event.preventDefault();
+            const isDown = event.key === 'ArrowDown';
+
+            // focus on the next or previous search result
+            const searchResults = searchResultsElement.children;
+            const focusedElement = document.activeElement;
+            const focusedIndex = Array.from(searchResults).indexOf(focusedElement as HTMLElement);
+            if (focusedIndex === -1 && !isDown) { return; }
+            const nextIndex = Math.min(focusedIndex + (isDown ? 1 : -1), searchResults.length - 1);
+            const elementToFocus = (searchResults[nextIndex] || mainSearchFieldElement) as HTMLElement;
+            elementToFocus.focus();
+            elementToFocus.scrollIntoView({ block: 'start', behavior: 'instant' });
+            return;
+        }
+
+        // regular typing
         mainSearchFieldElement.focus();
-        requestAnimationFrame(() => { headerSearchFieldElement.value = mainSearchFieldElement.value; });
+        searchResultsElement.scrollTo(0, 0);
+        requestAnimationFrame(() => {
+            headerSearchFieldElement.value = mainSearchFieldElement.value;
+            updateSearch();
+        });
     });
     searchbarElement.addEventListener('focusin', () => { searchDialogElement.toggleAttribute('open', true); });
     searchbarElement.addEventListener('focusout', () => { searchDialogElement.toggleAttribute('open', false); });
-
+    //
+    document.addEventListener('keydown', (event: KeyboardEvent) => {
+        if (event.ctrlKey && event.shiftKey && event.key === 'F') {
+            event.preventDefault();
+            mainSearchFieldElement.focus();
+        }
+    });
     //
     async function redrawSearchResults(query: string) {
         //! PERFORMANCE
