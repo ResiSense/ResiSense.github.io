@@ -65,7 +65,7 @@ painted-header {
 
                 & > .header-leftside {
                     display: flex;
-                    justify-content: space-between;
+                    justify-content: center;
                     flex-direction: column;
                     gap: 0.4rem;
 
