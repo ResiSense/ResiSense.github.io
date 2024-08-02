@@ -97,7 +97,8 @@ import SearchResults from './SearchResults';
             searchResultsElement.appendChild(newSearchResultElement);
 
             // I have no idea why this jank is necessary
-            (searchResultsElement.lastElementChild as HTMLAnchorElement).href = `/${BASE_URL}/${searchResult.path}`;
+            (searchResultsElement.lastElementChild as HTMLAnchorElement).href =
+                `/${BASE_URL}/${searchResult.path}${window.location.pathname.endsWith('.html') ? '.html' : ''}`;
         }
 
         searchResultsElement.appendChild(searchResultsEndTemplate.cloneNode(true));
