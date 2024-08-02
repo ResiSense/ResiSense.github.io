@@ -29,6 +29,7 @@
         font-size: 0.9rem;
         padding: 0.1rem 0.1rem 0.1rem 0.5rem;
         color: var(--dark-green);
+        caret-color: var(--dark-green);
 
         &::placeholder {
             color: var(--light-green);
@@ -125,6 +126,7 @@
                 flex-grow: 1;
                 font-weight: bold;
                 color: black;
+                caret-color: var(--saturated-orange);
 
                 &::placeholder {
                     color: var(--dim-colour);
