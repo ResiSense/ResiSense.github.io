@@ -65,14 +65,14 @@ const cssFiles = glob.sync(`${PROD_DIRECTORY}/**/*.css`);
 // }
 
 async function changeBaseUrlTags() {
-    const baseUrlTagRegex = /<meta base-url="[^"]*">/g;
+    const baseUrlTagRegex = /<meta base-url="[^"]*" \/>/g;
     //
     await Promise.all(htmlFiles.map(filePath => changeBaseUrlTag(filePath, baseUrlTagRegex)));
     return;
     //
     async function changeBaseUrlTag(filePath: string, regex: RegExp) {
         let fileContent = await fs.readFile(filePath, 'utf8');
-        fileContent = fileContent.replace(regex, `<meta base-url="${BASE_URL}">`);
+        fileContent = fileContent.replace(regex, `<meta base-url="${BASE_URL}" />`);
         console.log(`Changed base-url tag in ${filePath}`);
         console.log(fileContent);
         await fs.writeFile(filePath, fileContent);
