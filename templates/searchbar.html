@@ -4,9 +4,13 @@
 <css-embed href="/styles/searchbar.css" />
 
 <search id="searchbar">
-    <input id="search-field" type="search" placeholder="Search for a page..." autocomplete="off" />
+    <input id="header-search-field" type="search" placeholder="Search for a page..." autocomplete="off" />
     <button id="search-button" type="submit">🔍</button>
     <dialog id="search-dialog">
+        <div class="main-search-field-container">
+            <div class="search-icon">🔍</div>
+            <input id="main-search-field" type="search" placeholder="Search for a page..." autocomplete="off" />
+        </div>
         <div id="search-results">
             <template id="search-result-template">
                 <a id="search-result">

@@ -5,7 +5,10 @@ import SearchResults from './SearchResults';
     const searchbarElement = (document.getElementById('searchbar')
         ?? (() => { throw new Error('Searchbar not found') })()
     ) as HTMLElement;
-    const searchFieldElement = (document.getElementById('search-field')
+    const headerSearchFieldElement = (document.getElementById('header-search-field')
+        ?? (() => { throw new Error('Search field not found') })()
+    ) as HTMLInputElement;
+    const mainSearchFieldElement = (document.getElementById('main-search-field')
         ?? (() => { throw new Error('Search field not found') })()
     ) as HTMLInputElement;
     const searchButtonElement = (document.getElementById('search-button')
@@ -30,25 +33,32 @@ import SearchResults from './SearchResults';
     // console.log({ index: Searchable.index, targets: Searchable.targets });
 
     let oldSearchFieldQuery: string;
-    searchFieldElement.addEventListener('keydown', onSearchFieldKeyDown);
+    mainSearchFieldElement.addEventListener('keydown', onSearchFieldKeyDown);
     function onSearchFieldKeyDown(event: KeyboardEvent) {
-        if (event.key === 'Enter') {
-            event.preventDefault();
-            searchButtonElement.click();
+        if (event.key === 'Escape' && mainSearchFieldElement.value === '') {
+            searchDialogElement.toggleAttribute('open', false);
+            return;
         }
+        //
         //? the query is inexplicably one character behind if we don't use requestAnimationFrame
         //? + slight throttling
         requestAnimationFrame(() => {
-            const query = searchFieldElement.value.trim();
+            headerSearchFieldElement.value = mainSearchFieldElement.value;
+            const query = mainSearchFieldElement.value.trim();
             if (query === oldSearchFieldQuery) { return; }
             oldSearchFieldQuery = query;
-            searchDialogElement.toggleAttribute('open', query !== '');
-            if (query === '') { return; }
-            redrawSearchResults(query)
+            if (query === '') {
+                searchResultsElement.innerHTML = '';
+            } else {
+                redrawSearchResults(query)
+            }
         });
     }
 
-    searchbarElement.addEventListener('keydown', () => { searchFieldElement.focus(); });
+    searchbarElement.addEventListener('keydown', () => {
+        mainSearchFieldElement.focus();
+        requestAnimationFrame(() => { headerSearchFieldElement.value = mainSearchFieldElement.value; });
+    });
     searchbarElement.addEventListener('focusin', () => { searchDialogElement.toggleAttribute('open', true); });
     searchbarElement.addEventListener('focusout', () => { searchDialogElement.toggleAttribute('open', false); });
 
