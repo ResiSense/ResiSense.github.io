@@ -40,12 +40,7 @@ import SearchResults from './SearchResults';
 
     let oldSearchFieldQuery: string;
     mainSearchFieldElement.addEventListener('keydown', onSearchFieldKeyDown);
-    function onSearchFieldKeyDown(event: KeyboardEvent) {
-        if (event.key === 'Escape' && mainSearchFieldElement.value === '') {
-            searchDialogElement.toggleAttribute('open', false);
-            return;
-        }
-        //
+    function onSearchFieldKeyDown() {
         //? the query is inexplicably one character behind if we don't use requestAnimationFrame
         //? + slight throttling
         requestAnimationFrame(updateSearch);
@@ -84,6 +79,13 @@ import SearchResults from './SearchResults';
             const elementToFocus = (searchResults[nextIndex] || mainSearchFieldElement) as HTMLElement;
             elementToFocus.focus();
             elementToFocus.scrollIntoView({ block: 'start', behavior: 'instant' });
+            return;
+        }
+
+        // allow escape to close the search dialog when the search field is empty
+        if (event.key === 'Escape' && mainSearchFieldElement.value === '') {
+            mainSearchFieldElement.focus();
+            mainSearchFieldElement.blur();
             return;
         }
 
