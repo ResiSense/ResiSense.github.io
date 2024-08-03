@@ -163,6 +163,7 @@ painted-searchbar {
                 padding: var(--search-result-shadow-width);
                 overflow-x: hidden;
                 overflow-y: auto;
+                user-select: initial;
                 --scrollbar-width: 0.6rem;
                 --scrollbar-border-radius: calc(var(--scrollbar-width) / 2);
 

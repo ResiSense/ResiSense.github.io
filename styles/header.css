@@ -143,6 +143,7 @@ painted-header {
                         border-radius: 0.5rem;
                         border-style: solid;
                         border-width: 0.2rem;
+                        user-select: none;
                     }
                 }
             }

@@ -13,6 +13,11 @@ painted-catalogue {
         flex-direction: row;
         pointer-events: none;
 
+        & .catalogue-arrow,
+        & .catalogue-divider {
+            user-select: none;
+        }
+
         &>.catalogue-item {
             color: var(--desaturated-orange);
             font-size: 1rem;

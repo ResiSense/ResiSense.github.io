@@ -113,6 +113,7 @@ painted-outline {
             line-height: var(--line-height);
             z-index: 1;
             pointer-events: none;
+            user-select: none;
         }
     }
 }

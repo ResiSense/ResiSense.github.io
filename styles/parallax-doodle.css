@@ -11,6 +11,7 @@
     position: fixed;
     animation: scroll-up linear forwards;
     animation-timeline: scroll();
+    user-select: none;
 
     &>* {
         font-size: 10rem;
