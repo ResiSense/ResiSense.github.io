@@ -37,7 +37,9 @@ import SearchResults from './SearchResults';
     Searchable.index = await (await fetch(`/${BASE_URL}/search-index.json`)).json();
     const searchTargets: SearchTarget[] = Searchable.targets;
     // console.log({ index: Searchable.index, targets: Searchable.targets });
-
+    /* -------------------------------------------------------------------------- */
+    headerSearchFieldElement.addEventListener('focusin', () => { mainSearchFieldElement.focus(); });
+    /* -------------------------------------------------------------------------- */
     let oldSearchFieldQuery: string;
     mainSearchFieldElement.addEventListener('keydown', onSearchFieldKeyDown);
     function onSearchFieldKeyDown() {
@@ -56,7 +58,7 @@ import SearchResults from './SearchResults';
             redrawSearchResults(query)
         }
     }
-
+    /* -------------------------------------------------------------------------- */
     searchbarElement.addEventListener('keydown', (event: KeyboardEvent) => {
         // allow non-typing keys pass through
         const nonTypingKeys = [
@@ -117,7 +119,7 @@ import SearchResults from './SearchResults';
         console.log(`Querying for "${query}" took`, endTime - startTime, 'ms', usedCache ? '(from cache)' : '');
         //! -----------
         console.log(searchResults);
-
+        //
         searchResultsElement.innerHTML = '';
         for (const searchResult of searchResults.sort((a, b) => b.score - a.score)) {
             const newSearchResultElement = searchResultTemplate.cloneNode(true) as DocumentFragment;
@@ -133,12 +135,10 @@ import SearchResults from './SearchResults';
             }
             //
             searchResultsElement.appendChild(newSearchResultElement);
-
             // I have no idea why this jank is necessary
             (searchResultsElement.lastElementChild as HTMLAnchorElement).href =
                 `/${BASE_URL}/${searchResult.path}${window.location.pathname.endsWith('.html') ? '.html' : ''}`;
         }
-
         searchResultsElement.appendChild(searchResultsEndTemplate.cloneNode(true));
     }
 })();
