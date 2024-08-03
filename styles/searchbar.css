@@ -105,10 +105,6 @@ painted-searchbar {
                 transform: translateY(-1rem);
             }
 
-            &[open] {
-                animation: var(--animation-slide-in-up) forwards;
-            }
-
             &>* {
                 align-self: stretch;
             }
