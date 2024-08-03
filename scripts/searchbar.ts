@@ -124,20 +124,21 @@ import SearchResults from './SearchResults';
         for (const searchResult of searchResults.sort((a, b) => b.score - a.score)) {
             const newSearchResultElement = searchResultTemplate.cloneNode(true) as DocumentFragment;
             //
+            const resultHref = `/${BASE_URL}/${searchResult.path}${window.location.pathname.endsWith('.html') ? '.html' : ''}`;
             (newSearchResultElement.querySelector('#result-title') as HTMLDivElement).innerHTML = searchResult.highlightedTitleChunks.join(' ').trim() || searchResult.title;
             (newSearchResultElement.querySelector('#result-path') as HTMLDivElement).textContent = searchResult.path;
             //
             const contentElement = newSearchResultElement.querySelector('#result-content') as HTMLDivElement;
             for (const contentChunk of searchResult.highlightedContentChunks) {
-                const contentChunkElement = document.createElement('div');
+                const contentChunkElement = document.createElement('a');
                 contentChunkElement.innerHTML = contentChunk;
+                contentChunkElement.href = `${resultHref}#:~:text=${contentChunkElement.textContent}`;
                 contentElement.appendChild(contentChunkElement);
             }
             //
             searchResultsElement.appendChild(newSearchResultElement);
             // I have no idea why this jank is necessary
-            (searchResultsElement.lastElementChild as HTMLAnchorElement).href =
-                `/${BASE_URL}/${searchResult.path}${window.location.pathname.endsWith('.html') ? '.html' : ''}`;
+            (searchResultsElement.lastElementChild as HTMLAnchorElement).href = resultHref;
         }
         searchResultsElement.appendChild(searchResultsEndTemplate.cloneNode(true));
     }
