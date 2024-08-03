@@ -9,6 +9,7 @@
 - [🧪Testing the site](#testing-the-site)
 - [✍🏻Committing changes](#committing-changes)
   - [Post-commit CI](#post-commit-ci)
+    - [`github-context.json`](#github-contextjson)
 - [📂Understanding the repository structure](#understanding-the-repository-structure)
 - [🧠Understanding the framework](#understanding-the-framework)
   - [🚲Life cycle of a build](#life-cycle-of-a-build)
@@ -169,7 +170,7 @@ Sign here if you read this:
 After committing onto GitHub, a CI pipeline as defined in [`.github/workflows/full-ci-pipeline.yaml`](/.github/workflows/full-ci-pipeline.yaml) is run automatically.  
 *This usually takes ~30 seconds.*  
 - The site is automatically built and deployed to [GitHub Pages](https://ResiSense.github.io)
-  - The build job will fail if there is no site-related changes (e.g. metadata changes only). It is normal behaviour.
+  - A [GitHub context JSON](#github-contextjson) file is generated for logging purposes
 - The site is automatically cloned and committed to GitLab
 
 After auto-committing onto GitLab, a CI workflow as defined in [`.gitlab-ci.yml`](/.gitlab-ci.yml) is run automatically.  
@@ -179,6 +180,13 @@ After auto-committing onto GitLab, a CI workflow as defined in [`.gitlab-ci.yml`
 
 > [!NOTE]  
 > Concurrent CI runs will automatically kill all old jobs. Only the most recent job will execute.
+
+### [`github-context.json`](/docs/github-context.json)
+This context file includes a lot of information about the most recent commit, grabbed from the GitHub context object during the CI pipeline runs. Its main use is to determine if a build is successful at a glance.  
+
+The context file can be found at `/github-context.json` in both mirrors.
+- [GitHub Pages](https://ResiSense.github.io/github-context.json)
+- [GitLab Pages](https://2024.igem.wiki/hongkong-cuhk/github-context.json)
 
 # 📂Understanding the repository structure
 | Folder                                            | Description                               | Content                 | Remarks                        |
