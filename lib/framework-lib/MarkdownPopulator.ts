@@ -40,7 +40,6 @@ async function populatePageFromMarkdown(pageData: PageData) {
             const heading = qs as HTMLHeadingElement;
             const scrollMarker = document.createElement('div');
             scrollMarker.classList.add('scroll-marker');
-            scrollMarker.dataset.scrollMarkerLevel = heading.tagName;
             var id = (heading.textContent
                 || (() => { throw new Error('Heading text content is null!') })()
             ).replace(/[^a-zA-Z0-9]/g, '-').replace(/-+/g, '-').replace(/^-|-$/g, '').toLowerCase();

@@ -32,7 +32,10 @@
             href="/styles/searchbar.css" /><link rel="stylesheet" type="text/css" href="/styles/catalogue.css" /><link
             rel="stylesheet"
             type="text/css"
-            href="/styles/title-card.css" /><link rel="stylesheet" type="text/css" href="/styles/outline.css" /><script
+            href="/styles/title-card.css" /><link rel="stylesheet" type="text/css" href="/styles/outline.css" /><link
+            rel="stylesheet"
+            type="text/css"
+            href="/styles/sidebar.css" /><script
             type="text/javascript"
             src="/scripts/responsivenessHandler.js"
             defer=""
@@ -50,18 +53,18 @@
             <painted-parallax-doodle>
                 <div id="parallax-doodle-container"
                     ><img
-                        src="/assets/doodles/red blood cell.svg"
-                        style="translate: 97vw 200px; animation-name: parallax-doodle-xq2cij" /><img
-                        src="/assets/doodles/virus.svg"
-                        style="translate: 20vw 340px; animation-name: parallax-doodle-hoaj7t" /><img
-                        src="/assets/doodles/dna.svg"
-                        style="translate: 77vw 960px; animation-name: parallax-doodle-9gpkek" /><img
-                        src="/assets/doodles/syringe.svg"
-                        style="translate: 8vw 1480px; animation-name: parallax-doodle-uhsoru" /><img
-                        src="/assets/logos/resisense/ResiSense Orange Logo.svg"
-                        style="translate: 26vw 1120px; animation-name: parallax-doodle-svc6rc" /><img
                         src="/assets/doodles/e coli.svg"
-                        style="translate: 80vw 320px; animation-name: parallax-doodle-9y0wyi"
+                        style="translate: 61vw 1400px; animation-name: parallax-doodle-w8hgda" /><img
+                        src="/assets/logos/resisense/ResiSense Orange Logo.svg"
+                        style="translate: 14vw 240px; animation-name: parallax-doodle-506as" /><img
+                        src="/assets/doodles/drug.svg"
+                        style="translate: 40vw 220px; animation-name: parallax-doodle-ba67a6" /><img
+                        src="/assets/doodles/virus.svg"
+                        style="translate: 64vw 80px; animation-name: parallax-doodle-8fdb6n" /><img
+                        src="/assets/doodles/bacteria.svg"
+                        style="translate: 81vw 1480px; animation-name: parallax-doodle-8k4326" /><img
+                        src="/assets/doodles/red blood cell.svg"
+                        style="translate: 4vw 1100px; animation-name: parallax-doodle-cwsy42"
                 /></div>
             </painted-parallax-doodle>
             <painted-header>
@@ -82,7 +85,7 @@
                             </div>
                             <div class="header-rightside">
                                 <painted-searchbar>
-                                    <search id="searchbar">
+                                    <search id="searchbar" class="header-rightside-button">
                                         <input
                                             id="header-search-field"
                                             type="search"
@@ -100,7 +103,7 @@
                                                     autocomplete="off"
                                                 />
                                             </div>
-                                            <div id="search-results">
+                                            <div id="search-results" class="require-scrollbar">
                                                 <template id="search-result-template">
                                                     <a id="search-result">
                                                         <div class="result-leftside">
@@ -251,7 +254,7 @@
                         >
                         <painted-sidebar>
                             <aside>
-                                <a href="#"> 🔝 </a>
+                                <a href="#" class="top-button"> 🔝 </a>
                             </aside>
                         </painted-sidebar>
                     </div>

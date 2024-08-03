@@ -1,5 +1,11 @@
 painted-content {
     isolation: isolate;
+    font-size: 1rem;
+    --top-margin: calc(var(--header-height) * 0.6);
+
+    @media screen and (max-width: 1100px) {
+        font-size: 6mm;
+    }
 
     a {
         color: var(--saturated-orange);
@@ -51,6 +57,7 @@ painted-content {
         scroll-margin-top: var(--this-top);
         font-weight: bold;
         --background-colour: var(--pale-green);
+        --this-top: calc(var(--top-margin) + var(--top-internal-margin));
 
         &::before {
             content: '';
@@ -60,7 +67,9 @@ painted-content {
             top: 0;
             left: 0;
             z-index: -1;
-            box-shadow: 0 -20px 0 0 var(--background-colour);
+            box-shadow:
+                0 -20px 0 0 var(--background-colour),
+                0 -80px 0 0 var(--background-colour);
             background: var(--background);
             /* transition: opacity 0.1s ease-in-out; */
         }
@@ -70,52 +79,65 @@ painted-content {
         }
     }
 
-    .scroll-marker {
-        top: var(--this-top);
-        scroll-margin-top: var(--this-top);
-    }
-
-    h1,
-    .scroll-marker[data-scroll-marker-level='H1'] {
+    h1 {
         z-index: 5;
         font-size: 2em;
-        --this-top: 5rem;
+        --top-internal-margin: 0.1em;
         --background: linear-gradient(to bottom, var(--background-colour) 80%, transparent 100%);
+
+        @media screen and (max-width: 1100px) {
+            --top-internal-margin: 1em;
+        }
     }
 
-    h2,
-    .scroll-marker[data-scroll-marker-level='H2'] {
+    h2 {
         z-index: 4;
-        --this-top: 7.5rem;
+        --top-internal-margin: 1.8em;
         --background: linear-gradient(to bottom, var(--background-colour) 90%, transparent 100%);
+
+        @media screen and (max-width: 1100px) {
+            --top-internal-margin: 3em;
+        }
     }
 
-    h3,
-    .scroll-marker[data-scroll-marker-level='H3'] {
+    h3 {
         z-index: 3;
-        --this-top: 9.5rem;
+        --top-internal-margin: 4em;
         --background: linear-gradient(to bottom, var(--background-colour) 95%, transparent 100%);
+
+        @media screen and (max-width: 1100px) {
+            --top-internal-margin: 5.5em;
+        }
     }
 
-    h4,
-    .scroll-marker[data-scroll-marker-level='H4'] {
+    h4 {
         z-index: 2;
-        --this-top: 11rem;
+        --top-internal-margin: 6.5em;
         --background: linear-gradient(to bottom, var(--background-colour) 95%, transparent 100%);
+
+        @media screen and (max-width: 1100px) {
+            --top-internal-margin: 8em;
+        }
     }
 
-    h5,
-    .scroll-marker[data-scroll-marker-level='H5'] {
+    h5 {
         z-index: 1;
-        --this-top: 12.4rem;
+        --top-internal-margin: 9.5em;
         --background: linear-gradient(to bottom, var(--background-colour) 95%, transparent 100%);
+
+        @media screen and (max-width: 1100px) {
+            --top-internal-margin: 11.2em;
+        }
     }
 
-    h6,
-    .scroll-marker[data-scroll-marker-level='H6'] {
+    h6 {
         z-index: 0;
-        --this-top: 13.5rem;
+        --top-internal-margin: 13.5em;
         --background: linear-gradient(to bottom, var(--background-colour) 95%, transparent 100%);
+
+        @media screen and (max-width: 1100px) {
+            --top-internal-margin: 15.5em;
+        }
     }
 
     blockquote {

@@ -35,6 +35,9 @@
             href="/styles/title-card.css" /><link rel="stylesheet" type="text/css" href="/styles/outline.css" /><link
             rel="stylesheet"
             type="text/css"
+            href="/styles/sidebar.css" /><link
+            rel="stylesheet"
+            type="text/css"
             href="/styles/attributions.css" /><script
             type="text/javascript"
             src="/scripts/responsivenessHandler.js"
@@ -54,16 +57,16 @@
             <painted-parallax-doodle>
                 <div id="parallax-doodle-container"
                     ><img
-                        src="/assets/doodles/e coli.svg"
-                        style="translate: 88vw 900px; animation-name: parallax-doodle-mbkblm" /><img
-                        src="/assets/doodles/drug.svg"
-                        style="translate: 8vw 120px; animation-name: parallax-doodle-q68kit" /><img
+                        src="/assets/doodles/syringe.svg"
+                        style="translate: 45vw 920px; animation-name: parallax-doodle-4y997c" /><img
+                        src="/assets/doodles/red blood cell.svg"
+                        style="translate: 28vw 1340px; animation-name: parallax-doodle-2nifpq" /><img
+                        src="/assets/logos/resisense/ResiSense Orange Logo.svg"
+                        style="translate: 59vw 360px; animation-name: parallax-doodle-ewa82r" /><img
                         src="/assets/doodles/dna.svg"
-                        style="translate: 47vw 260px; animation-name: parallax-doodle-qgcrk5" /><img
-                        src="/assets/doodles/bacteria.svg"
-                        style="translate: 43vw 900px; animation-name: parallax-doodle-bkuhh8" /><img
-                        src="/assets/doodles/virus.svg"
-                        style="translate: 94vw 360px; animation-name: parallax-doodle-c3lttt"
+                        style="translate: 84vw 0px; animation-name: parallax-doodle-651s65" /><img
+                        src="/assets/doodles/e coli.svg"
+                        style="translate: 68vw 1180px; animation-name: parallax-doodle-40eh3l"
                 /></div>
             </painted-parallax-doodle>
             <painted-header>
@@ -84,7 +87,7 @@
                             </div>
                             <div class="header-rightside">
                                 <painted-searchbar>
-                                    <search id="searchbar">
+                                    <search id="searchbar" class="header-rightside-button">
                                         <input
                                             id="header-search-field"
                                             type="search"
@@ -102,7 +105,7 @@
                                                     autocomplete="off"
                                                 />
                                             </div>
-                                            <div id="search-results">
+                                            <div id="search-results" class="require-scrollbar">
                                                 <template id="search-result-template">
                                                     <a id="search-result">
                                                         <div class="result-leftside">
@@ -245,7 +248,7 @@
                         ></main>
                         <painted-sidebar>
                             <aside>
-                                <a href="#"> 🔝 </a>
+                                <a href="#" class="top-button"> 🔝 </a>
                             </aside>
                         </painted-sidebar>
                     </div>

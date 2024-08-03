@@ -1,11 +1,11 @@
 {
     "job": "build",
     "ref": "refs/heads/main",
-    "sha": "036a47fd48d96545388907871b5e9f2ec8395a9a",
+    "sha": "ddecc0ae995a225a95381f128f03ea6294c10848",
     "repository": "ResiSense/ResiSense.github.io",
     "repository_Url": null,
-    "run_id": "10220021893",
-    "run_number": "181",
+    "run_id": "10230982811",
+    "run_number": "189",
     "run_attempt": "1",
     "artifact_cache_size_limit": "10",
     "actor": "CCheukKa",
@@ -13,8 +13,8 @@
     "workflow": "Full CI pipeline",
     "event_name": "push",
     "event": {
-        "after": "036a47fd48d96545388907871b5e9f2ec8395a9a",
-        "before": "82a2711115abd6f5f985954af443ae35175bfc12",
+        "after": "ddecc0ae995a225a95381f128f03ea6294c10848",
+        "before": "7290add0950e98c20b016cade597e33d50e0c4e6",
         "commits": [
             {
                 "author": {
@@ -27,15 +27,87 @@
                     "name": "CCheukKa",
                     "username": "CCheukKa"
                 },
+                "distinct": false,
+                "id": "9cc92bc9fa9a3fd7ebc0df6606040f3001d51f07",
+                "message": "add links going to clicked text",
+                "timestamp": "2024-08-04T03:49:07+08:00",
+                "tree_id": "57fec514f3eb17f2380900417c17862905deebc7",
+                "url": "https://github.com/ResiSense/ResiSense.github.io/commit/9cc92bc9fa9a3fd7ebc0df6606040f3001d51f07"
+            },
+            {
+                "author": {
+                    "email": "ccheukka@gmail.com",
+                    "name": "CCheukKa",
+                    "username": "CCheukKa"
+                },
+                "committer": {
+                    "email": "ccheukka@gmail.com",
+                    "name": "CCheukKa",
+                    "username": "CCheukKa"
+                },
+                "distinct": false,
+                "id": "27087298009126e99315b488b44fe4499581d15a",
+                "message": "add safer URI encoding",
+                "timestamp": "2024-08-04T04:22:28+08:00",
+                "tree_id": "d8bf9da01ac6e2971a0b28f8b00bfcea8f39afcf",
+                "url": "https://github.com/ResiSense/ResiSense.github.io/commit/27087298009126e99315b488b44fe4499581d15a"
+            },
+            {
+                "author": {
+                    "email": "ccheukka@gmail.com",
+                    "name": "CCheukKa",
+                    "username": "CCheukKa"
+                },
+                "committer": {
+                    "email": "ccheukka@gmail.com",
+                    "name": "CCheukKa",
+                    "username": "CCheukKa"
+                },
+                "distinct": false,
+                "id": "8d53f844139d8d09a403a650eae64d98cc264985",
+                "message": "fix text links working inconsistently",
+                "timestamp": "2024-08-04T05:09:51+08:00",
+                "tree_id": "800beeab62856a593d2dd30357efb7f796a07ec5",
+                "url": "https://github.com/ResiSense/ResiSense.github.io/commit/8d53f844139d8d09a403a650eae64d98cc264985"
+            },
+            {
+                "author": {
+                    "email": "ccheukka@gmail.com",
+                    "name": "CCheukKa",
+                    "username": "CCheukKa"
+                },
+                "committer": {
+                    "email": "ccheukka@gmail.com",
+                    "name": "CCheukKa",
+                    "username": "CCheukKa"
+                },
+                "distinct": false,
+                "id": "55b082e42be08ec365738568b4f3b7b2d5df2d3d",
+                "message": "fix result not taking up the entire row",
+                "timestamp": "2024-08-04T05:13:00+08:00",
+                "tree_id": "6d8d25171ee1a5cd733d2514bc030eda2a4e69ed",
+                "url": "https://github.com/ResiSense/ResiSense.github.io/commit/55b082e42be08ec365738568b4f3b7b2d5df2d3d"
+            },
+            {
+                "author": {
+                    "email": "ccheukka@gmail.com",
+                    "name": "CCheukKa",
+                    "username": "CCheukKa"
+                },
+                "committer": {
+                    "email": "noreply@github.com",
+                    "name": "GitHub",
+                    "username": "web-flow"
+                },
                 "distinct": true,
-                "id": "036a47fd48d96545388907871b5e9f2ec8395a9a",
-                "message": "fix footer not always sticking to the bottom",
-                "timestamp": "2024-08-03T02:04:12+08:00",
-                "tree_id": "1a14f4d42c1fd1f3492382c17507a7516761f373",
-                "url": "https://github.com/ResiSense/ResiSense.github.io/commit/036a47fd48d96545388907871b5e9f2ec8395a9a"
+                "id": "ddecc0ae995a225a95381f128f03ea6294c10848",
+                "message": "Merge pull request #88 from ResiSense/search-link-goto-text\n\nadd links with text highlight",
+                "timestamp": "2024-08-04T05:14:34+08:00",
+                "tree_id": "a3d5fece166fde64698b2a031bf7d35f468a7b3f",
+                "url": "https://github.com/ResiSense/ResiSense.github.io/commit/ddecc0ae995a225a95381f128f03ea6294c10848"
             }
         ],
-        "compare": "https://github.com/ResiSense/ResiSense.github.io/compare/82a2711115ab...036a47fd48d9",
+        "compare": "https://github.com/ResiSense/ResiSense.github.io/compare/7290add0950e...ddecc0ae995a",
         "created": false,
         "deleted": false,
         "forced": false,
@@ -46,16 +118,16 @@
                 "username": "CCheukKa"
             },
             "committer": {
-                "email": "ccheukka@gmail.com",
-                "name": "CCheukKa",
-                "username": "CCheukKa"
+                "email": "noreply@github.com",
+                "name": "GitHub",
+                "username": "web-flow"
             },
             "distinct": true,
-            "id": "036a47fd48d96545388907871b5e9f2ec8395a9a",
-            "message": "fix footer not always sticking to the bottom",
-            "timestamp": "2024-08-03T02:04:12+08:00",
-            "tree_id": "1a14f4d42c1fd1f3492382c17507a7516761f373",
-            "url": "https://github.com/ResiSense/ResiSense.github.io/commit/036a47fd48d96545388907871b5e9f2ec8395a9a"
+            "id": "ddecc0ae995a225a95381f128f03ea6294c10848",
+            "message": "Merge pull request #88 from ResiSense/search-link-goto-text\n\nadd links with text highlight",
+            "timestamp": "2024-08-04T05:14:34+08:00",
+            "tree_id": "a3d5fece166fde64698b2a031bf7d35f468a7b3f",
+            "url": "https://github.com/ResiSense/ResiSense.github.io/commit/ddecc0ae995a225a95381f128f03ea6294c10848"
         },
         "pusher": {
             "email": "ccheukka@gmail.com",
@@ -68,6 +140,6 @@
     "ref_type": "branch",
     "secret_source": "Actions",
     "workflow_ref": "ResiSense/ResiSense.github.io/.github/workflows/full-ci-pipeline.yaml@refs/heads/main",
-    "workflow_sha": "036a47fd48d96545388907871b5e9f2ec8395a9a",
+    "workflow_sha": "ddecc0ae995a225a95381f128f03ea6294c10848",
     "workspace": "/home/runner/work/ResiSense.github.io/ResiSense.github.io"
 }
