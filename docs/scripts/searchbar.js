@@ -22,8 +22,8 @@
         y,
         x,
         w,
-        k,
         E,
+        k,
         v,
         S,
         L,
@@ -247,13 +247,13 @@
                         },
                         f = e => {
                             if (e.length > 999) return a(e);
-                            var t = k.get(e);
-                            return void 0 !== t || ((t = a(e)), k.set(e, t)), t;
+                            var t = E.get(e);
+                            return void 0 !== t || ((t = a(e)), E.set(e, t)), t;
                         },
                         p = e => {
                             if (e.length > 999) return h(e);
-                            var t = E.get(e);
-                            return void 0 !== t || ((t = h(e)), E.set(e, t)), t;
+                            var t = k.get(e);
+                            return void 0 !== t || ((t = h(e)), k.set(e, t)), t;
                         },
                         m = (e, t) => {
                             var r = [];
@@ -339,15 +339,15 @@
                                             ++h;
                                         } else h = y[h];
                                     }
-                            var k = c <= 1 ? -1 : t._targetLower.indexOf(n, v[0]),
-                                E = !!~k,
-                                L = !!E && (0 === k || t._nextBeginningIndexes[k - 1] === k);
-                            if (E && !L) {
+                            var E = c <= 1 ? -1 : t._targetLower.indexOf(n, v[0]),
+                                k = !!~E,
+                                L = !!k && (0 === E || t._nextBeginningIndexes[E - 1] === E);
+                            if (k && !L) {
                                 for (var A = 0; A < y.length; A = y[A])
-                                    if (!(A <= k)) {
+                                    if (!(A <= E)) {
                                         for (var I = 0; I < c && s[I] === t._targetLowerCodes[A + I]; I++);
                                         if (I === c) {
-                                            (k = A), (L = !0);
+                                            (E = A), (L = !0);
                                             break;
                                         }
                                     }
@@ -364,21 +364,21 @@
                                 } else t *= 1e3;
                                 return (
                                     (t -= (u - c) / 2),
-                                    E && (t /= 1 + c * c * 1),
+                                    k && (t /= 1 + c * c * 1),
                                     L && (t /= 1 + c * c * 1),
                                     (t -= (u - c) / 2)
                                 );
                             };
                             if (m) {
                                 if (L) {
-                                    for (var A = 0; A < c; ++A) v[A] = k + A;
+                                    for (var A = 0; A < c; ++A) v[A] = E + A;
                                     var T = v,
                                         B = N(v);
                                 } else
                                     var T = S,
                                         B = N(S);
                             } else {
-                                if (E) for (var A = 0; A < c; ++A) v[A] = k + A;
+                                if (k) for (var A = 0; A < c; ++A) v[A] = E + A;
                                 var T = v,
                                     B = N(T);
                             }
@@ -472,8 +472,8 @@
                                 n > a ? (i[a] = n) : ((n = r[++s]), (i[a] = void 0 === n ? t : n));
                             return i;
                         },
-                        k = new Map(),
                         E = new Map(),
+                        k = new Map(),
                         v = [],
                         S = [],
                         L = [],
@@ -557,10 +557,10 @@
                             if (r?.key)
                                 for (var y = r.key, x = 0; x < h; ++x) {
                                     var w = t[x],
-                                        k = B(w, y);
-                                    if (k && (C(k) || (k = f(k)), (n & k._bitflags) === n)) {
-                                        var E = g(i, k);
-                                        E !== R && (E._score < a || ((E.obj = w), b(E)));
+                                        E = B(w, y);
+                                    if (E && (C(E) || (E = f(E)), (n & E._bitflags) === n)) {
+                                        var k = g(i, E);
+                                        k !== R && (k._score < a || ((k.obj = w), b(k)));
                                     }
                                 }
                             else if (r?.keys) {
@@ -569,17 +569,17 @@
                                 e: for (var x = 0; x < h; ++x) {
                                     for (var w = t[x], L = 0, O = 0; O < S; ++O) {
                                         var y = v[O],
-                                            k = B(w, y);
-                                        if (!k) {
+                                            E = B(w, y);
+                                        if (!E) {
                                             N[O] = P;
                                             continue;
                                         }
-                                        C(k) || (k = f(k)), (N[O] = k), (L |= k._bitflags);
+                                        C(E) || (E = f(E)), (N[O] = E), (L |= E._bitflags);
                                     }
                                     if ((n & L) === n) {
                                         if (s) for (let e = 0; e < i.spaceSearches.length; e++) A[e] = _;
                                         for (var O = 0; O < S; ++O) {
-                                            if ((k = N[O]) === P || ((T[O] = g(i, k, !1, s)), T[O] === R)) {
+                                            if ((E = N[O]) === P || ((T[O] = g(i, E, !1, s)), T[O] === R)) {
                                                 T[O] = P;
                                                 continue;
                                             }
@@ -611,12 +611,12 @@
                                         } else {
                                             var H = _;
                                             for (let e = 0; e < S; e++) {
-                                                var E = V[e];
-                                                if (E._score > -1e3 && H > _) {
-                                                    var W = (H + E._score) / 4;
+                                                var k = V[e];
+                                                if (k._score > -1e3 && H > _) {
+                                                    var W = (H + k._score) / 4;
                                                     W > H && (H = W);
                                                 }
-                                                E._score > H && (H = E._score);
+                                                k._score > H && (H = k._score);
                                             }
                                         }
                                         if (((V.obj = w), (V._score = H), r?.scoreFn)) {
@@ -628,10 +628,10 @@
                                 }
                             } else
                                 for (var x = 0; x < h; ++x) {
-                                    var k = t[x];
-                                    if (k && (C(k) || (k = f(k)), (n & k._bitflags) === n)) {
-                                        var E = g(i, k);
-                                        E !== R && (E._score < a || b(E));
+                                    var E = t[x];
+                                    if (E && (C(E) || (E = f(E)), (n & E._bitflags) === n)) {
+                                        var k = g(i, E);
+                                        k !== R && (k._score < a || b(k));
                                     }
                                 }
                             if (0 === c) return D;
@@ -640,7 +640,7 @@
                         },
                         prepare: a,
                         cleanup: () => {
-                            k.clear(), E.clear();
+                            E.clear(), k.clear();
                         },
                     };
                 }),
@@ -1007,12 +1007,12 @@
             { name: '^' },
             { name: '$' },
         ]),
-        ek = Z([
+        eE = Z([
             { name: 'unicode', regex: RegExp(eh, 'i') },
             { name: 'escape', regex: RegExp(ef, 'i') },
             { name: 'any', regex: RegExp('[\\s\\S]', 'i') },
         ]);
-    function eE([e, t, r], [i, n, s]) {
+    function ek([e, t, r], [i, n, s]) {
         return [e + i, t + n, r + s];
     }
     let ev = ee(
@@ -1026,7 +1026,7 @@
         e => e.join('')
     );
     function eS(e) {
-        return ev({ tokens: ek(e).tokens, options: void 0 }, 0).value;
+        return ev({ tokens: eE(e).tokens, options: void 0 }, 0).value;
     }
     function eL(e) {
         return X(t => t.name === e || void 0);
@@ -1113,7 +1113,7 @@
                 })(eH, en(e$)),
                 es(e$, en(e$), (e, t) => [e, ...t])
             ),
-            e => ({ type: 'compound', list: e, specificity: e.map(e => e.specificity).reduce(eE, [0, 0, 0]) })
+            e => ({ type: 'compound', list: e, specificity: e.map(e => e.specificity).reduce(ek, [0, 0, 0]) })
         ),
         eF = ei(
             eN(
@@ -1131,7 +1131,7 @@
             ee(eF, e => (t, r) => ({
                 type: 'compound',
                 list: [...r.list, { type: 'combinator', combinator: e, left: t, specificity: t.specificity }],
-                specificity: eE(t.specificity, r.specificity),
+                specificity: ek(t.specificity, r.specificity),
             })),
             ej
         );
@@ -1908,13 +1908,13 @@ ${''.padEnd(t)}${'^'.repeat(r)}`;
     var tb = tm(tu.default),
         ty = tm(td.default);
     function tx(e) {
-        return e === k.Space || e === k.NewLine || e === k.Tab || e === k.FormFeed || e === k.CarriageReturn;
+        return e === E.Space || e === E.NewLine || e === E.Tab || e === E.FormFeed || e === E.CarriageReturn;
     }
     function tw(e) {
-        return e === k.Slash || e === k.Gt || tx(e);
+        return e === E.Slash || e === E.Gt || tx(e);
     }
-    function tk(e) {
-        return e >= k.Zero && e <= k.Nine;
+    function tE(e) {
+        return e >= E.Zero && e <= E.Nine;
     }
     (ts.decodeHTML = function (e, t) {
         return void 0 === t && (t = w.Legacy), tb(e, t);
@@ -1928,7 +1928,7 @@ ${''.padEnd(t)}${'^'.repeat(r)}`;
         (ts.decodeXML = function (e) {
             return ty(e, w.Strict);
         }),
-        ((a = k || (k = {}))[(a.Tab = 9)] = 'Tab'),
+        ((a = E || (E = {}))[(a.Tab = 9)] = 'Tab'),
         (a[(a.NewLine = 10)] = 'NewLine'),
         (a[(a.FormFeed = 12)] = 'FormFeed'),
         (a[(a.CarriageReturn = 13)] = 'CarriageReturn'),
@@ -1955,7 +1955,7 @@ ${''.padEnd(t)}${'^'.repeat(r)}`;
         (a[(a.LowerZ = 122)] = 'LowerZ'),
         (a[(a.LowerX = 120)] = 'LowerX'),
         (a[(a.OpeningSquareBracket = 91)] = 'OpeningSquareBracket'),
-        ((o = E || (E = {}))[(o.Text = 1)] = 'Text'),
+        ((o = k || (k = {}))[(o.Text = 1)] = 'Text'),
         (o[(o.BeforeTagName = 2)] = 'BeforeTagName'),
         (o[(o.InTagName = 3)] = 'InTagName'),
         (o[(o.InSelfClosingTag = 4)] = 'InSelfClosingTag'),
@@ -1988,7 +1988,7 @@ ${''.padEnd(t)}${'^'.repeat(r)}`;
         (l[(l.Unquoted = 1)] = 'Unquoted'),
         (l[(l.Single = 2)] = 'Single'),
         (l[(l.Double = 3)] = 'Double');
-    let tE = {
+    let tk = {
         Cdata: new Uint8Array([67, 68, 65, 84, 65, 91]),
         CdataEnd: new Uint8Array([93, 93, 62]),
         CommentEnd: new Uint8Array([45, 45, 62]),
@@ -1999,11 +1999,11 @@ ${''.padEnd(t)}${'^'.repeat(r)}`;
     class tv {
         constructor({ xmlMode: e = !1, decodeEntities: t = !0 }, r) {
             (this.cbs = r),
-                (this.state = E.Text),
+                (this.state = k.Text),
                 (this.buffer = ''),
                 (this.sectionStart = 0),
                 (this.index = 0),
-                (this.baseState = E.Text),
+                (this.baseState = k.Text),
                 (this.isSpecial = !1),
                 (this.running = !0),
                 (this.offset = 0),
@@ -2018,11 +2018,11 @@ ${''.padEnd(t)}${'^'.repeat(r)}`;
                 (this.entityTrie = e ? ts.xmlDecodeTree : ts.htmlDecodeTree);
         }
         reset() {
-            (this.state = E.Text),
+            (this.state = k.Text),
                 (this.buffer = ''),
                 (this.sectionStart = 0),
                 (this.index = 0),
-                (this.baseState = E.Text),
+                (this.baseState = k.Text),
                 (this.currentSequence = void 0),
                 (this.running = !0),
                 (this.offset = 0);
@@ -2046,11 +2046,11 @@ ${''.padEnd(t)}${'^'.repeat(r)}`;
             return this.sectionStart;
         }
         stateText(e) {
-            e === k.Lt || (!this.decodeEntities && this.fastForwardTo(k.Lt))
+            e === E.Lt || (!this.decodeEntities && this.fastForwardTo(E.Lt))
                 ? (this.index > this.sectionStart && this.cbs.ontext(this.sectionStart, this.index),
-                  (this.state = E.BeforeTagName),
+                  (this.state = k.BeforeTagName),
                   (this.sectionStart = this.index))
-                : this.decodeEntities && e === k.Amp && (this.state = E.BeforeEntity);
+                : this.decodeEntities && e === E.Amp && (this.state = k.BeforeEntity);
         }
         stateSpecialStartSequence(e) {
             let t = this.sequenceIndex === this.currentSequence.length;
@@ -2060,11 +2060,11 @@ ${''.padEnd(t)}${'^'.repeat(r)}`;
                     return;
                 }
             } else this.isSpecial = !1;
-            (this.sequenceIndex = 0), (this.state = E.InTagName), this.stateInTagName(e);
+            (this.sequenceIndex = 0), (this.state = k.InTagName), this.stateInTagName(e);
         }
         stateInSpecialTag(e) {
             if (this.sequenceIndex === this.currentSequence.length) {
-                if (e === k.Gt || tx(e)) {
+                if (e === E.Gt || tx(e)) {
                     let t = this.index - this.currentSequence.length;
                     if (this.sectionStart < t) {
                         let e = this.index;
@@ -2078,19 +2078,19 @@ ${''.padEnd(t)}${'^'.repeat(r)}`;
             (32 | e) === this.currentSequence[this.sequenceIndex]
                 ? (this.sequenceIndex += 1)
                 : 0 === this.sequenceIndex
-                  ? this.currentSequence === tE.TitleEnd
-                      ? this.decodeEntities && e === k.Amp && (this.state = E.BeforeEntity)
-                      : this.fastForwardTo(k.Lt) && (this.sequenceIndex = 1)
-                  : (this.sequenceIndex = Number(e === k.Lt));
+                  ? this.currentSequence === tk.TitleEnd
+                      ? this.decodeEntities && e === E.Amp && (this.state = k.BeforeEntity)
+                      : this.fastForwardTo(E.Lt) && (this.sequenceIndex = 1)
+                  : (this.sequenceIndex = Number(e === E.Lt));
         }
         stateCDATASequence(e) {
-            e === tE.Cdata[this.sequenceIndex]
-                ? ++this.sequenceIndex === tE.Cdata.length &&
-                  ((this.state = E.InCommentLike),
-                  (this.currentSequence = tE.CdataEnd),
+            e === tk.Cdata[this.sequenceIndex]
+                ? ++this.sequenceIndex === tk.Cdata.length &&
+                  ((this.state = k.InCommentLike),
+                  (this.currentSequence = tk.CdataEnd),
                   (this.sequenceIndex = 0),
                   (this.sectionStart = this.index + 1))
-                : ((this.sequenceIndex = 0), (this.state = E.InDeclaration), this.stateInDeclaration(e));
+                : ((this.sequenceIndex = 0), (this.state = k.InDeclaration), this.stateInDeclaration(e));
         }
         fastForwardTo(e) {
             for (; ++this.index < this.buffer.length + this.offset; )
@@ -2100,181 +2100,181 @@ ${''.padEnd(t)}${'^'.repeat(r)}`;
         stateInCommentLike(e) {
             e === this.currentSequence[this.sequenceIndex]
                 ? ++this.sequenceIndex === this.currentSequence.length &&
-                  (this.currentSequence === tE.CdataEnd
+                  (this.currentSequence === tk.CdataEnd
                       ? this.cbs.oncdata(this.sectionStart, this.index, 2)
                       : this.cbs.oncomment(this.sectionStart, this.index, 2),
                   (this.sequenceIndex = 0),
                   (this.sectionStart = this.index + 1),
-                  (this.state = E.Text))
+                  (this.state = k.Text))
                 : 0 === this.sequenceIndex
                   ? this.fastForwardTo(this.currentSequence[0]) && (this.sequenceIndex = 1)
                   : e !== this.currentSequence[this.sequenceIndex - 1] && (this.sequenceIndex = 0);
         }
         isTagStartChar(e) {
-            return this.xmlMode ? !tw(e) : (e >= k.LowerA && e <= k.LowerZ) || (e >= k.UpperA && e <= k.UpperZ);
+            return this.xmlMode ? !tw(e) : (e >= E.LowerA && e <= E.LowerZ) || (e >= E.UpperA && e <= E.UpperZ);
         }
         startSpecial(e, t) {
             (this.isSpecial = !0),
                 (this.currentSequence = e),
                 (this.sequenceIndex = t),
-                (this.state = E.SpecialStartSequence);
+                (this.state = k.SpecialStartSequence);
         }
         stateBeforeTagName(e) {
-            if (e === k.ExclamationMark) (this.state = E.BeforeDeclaration), (this.sectionStart = this.index + 1);
-            else if (e === k.Questionmark)
-                (this.state = E.InProcessingInstruction), (this.sectionStart = this.index + 1);
+            if (e === E.ExclamationMark) (this.state = k.BeforeDeclaration), (this.sectionStart = this.index + 1);
+            else if (e === E.Questionmark)
+                (this.state = k.InProcessingInstruction), (this.sectionStart = this.index + 1);
             else if (this.isTagStartChar(e)) {
                 let t = 32 | e;
                 (this.sectionStart = this.index),
-                    this.xmlMode || t !== tE.TitleEnd[2]
-                        ? (this.state = this.xmlMode || t !== tE.ScriptEnd[2] ? E.InTagName : E.BeforeSpecialS)
-                        : this.startSpecial(tE.TitleEnd, 3);
-            } else e === k.Slash ? (this.state = E.BeforeClosingTagName) : ((this.state = E.Text), this.stateText(e));
+                    this.xmlMode || t !== tk.TitleEnd[2]
+                        ? (this.state = this.xmlMode || t !== tk.ScriptEnd[2] ? k.InTagName : k.BeforeSpecialS)
+                        : this.startSpecial(tk.TitleEnd, 3);
+            } else e === E.Slash ? (this.state = k.BeforeClosingTagName) : ((this.state = k.Text), this.stateText(e));
         }
         stateInTagName(e) {
             tw(e) &&
                 (this.cbs.onopentagname(this.sectionStart, this.index),
                 (this.sectionStart = -1),
-                (this.state = E.BeforeAttributeName),
+                (this.state = k.BeforeAttributeName),
                 this.stateBeforeAttributeName(e));
         }
         stateBeforeClosingTagName(e) {
             tx(e) ||
-                (e === k.Gt
-                    ? (this.state = E.Text)
-                    : ((this.state = this.isTagStartChar(e) ? E.InClosingTagName : E.InSpecialComment),
+                (e === E.Gt
+                    ? (this.state = k.Text)
+                    : ((this.state = this.isTagStartChar(e) ? k.InClosingTagName : k.InSpecialComment),
                       (this.sectionStart = this.index)));
         }
         stateInClosingTagName(e) {
-            (e === k.Gt || tx(e)) &&
+            (e === E.Gt || tx(e)) &&
                 (this.cbs.onclosetag(this.sectionStart, this.index),
                 (this.sectionStart = -1),
-                (this.state = E.AfterClosingTagName),
+                (this.state = k.AfterClosingTagName),
                 this.stateAfterClosingTagName(e));
         }
         stateAfterClosingTagName(e) {
-            (e === k.Gt || this.fastForwardTo(k.Gt)) &&
-                ((this.state = E.Text), (this.baseState = E.Text), (this.sectionStart = this.index + 1));
+            (e === E.Gt || this.fastForwardTo(E.Gt)) &&
+                ((this.state = k.Text), (this.baseState = k.Text), (this.sectionStart = this.index + 1));
         }
         stateBeforeAttributeName(e) {
-            e === k.Gt
+            e === E.Gt
                 ? (this.cbs.onopentagend(this.index),
-                  this.isSpecial ? ((this.state = E.InSpecialTag), (this.sequenceIndex = 0)) : (this.state = E.Text),
+                  this.isSpecial ? ((this.state = k.InSpecialTag), (this.sequenceIndex = 0)) : (this.state = k.Text),
                   (this.baseState = this.state),
                   (this.sectionStart = this.index + 1))
-                : e === k.Slash
-                  ? (this.state = E.InSelfClosingTag)
-                  : tx(e) || ((this.state = E.InAttributeName), (this.sectionStart = this.index));
+                : e === E.Slash
+                  ? (this.state = k.InSelfClosingTag)
+                  : tx(e) || ((this.state = k.InAttributeName), (this.sectionStart = this.index));
         }
         stateInSelfClosingTag(e) {
-            e === k.Gt
+            e === E.Gt
                 ? (this.cbs.onselfclosingtag(this.index),
-                  (this.state = E.Text),
-                  (this.baseState = E.Text),
+                  (this.state = k.Text),
+                  (this.baseState = k.Text),
                   (this.sectionStart = this.index + 1),
                   (this.isSpecial = !1))
-                : tx(e) || ((this.state = E.BeforeAttributeName), this.stateBeforeAttributeName(e));
+                : tx(e) || ((this.state = k.BeforeAttributeName), this.stateBeforeAttributeName(e));
         }
         stateInAttributeName(e) {
-            (e === k.Eq || tw(e)) &&
+            (e === E.Eq || tw(e)) &&
                 (this.cbs.onattribname(this.sectionStart, this.index),
                 (this.sectionStart = -1),
-                (this.state = E.AfterAttributeName),
+                (this.state = k.AfterAttributeName),
                 this.stateAfterAttributeName(e));
         }
         stateAfterAttributeName(e) {
-            e === k.Eq
-                ? (this.state = E.BeforeAttributeValue)
-                : e === k.Slash || e === k.Gt
+            e === E.Eq
+                ? (this.state = k.BeforeAttributeValue)
+                : e === E.Slash || e === E.Gt
                   ? (this.cbs.onattribend(v.NoValue, this.index),
-                    (this.state = E.BeforeAttributeName),
+                    (this.state = k.BeforeAttributeName),
                     this.stateBeforeAttributeName(e))
                   : tx(e) ||
                     (this.cbs.onattribend(v.NoValue, this.index),
-                    (this.state = E.InAttributeName),
+                    (this.state = k.InAttributeName),
                     (this.sectionStart = this.index));
         }
         stateBeforeAttributeValue(e) {
-            e === k.DoubleQuote
-                ? ((this.state = E.InAttributeValueDq), (this.sectionStart = this.index + 1))
-                : e === k.SingleQuote
-                  ? ((this.state = E.InAttributeValueSq), (this.sectionStart = this.index + 1))
+            e === E.DoubleQuote
+                ? ((this.state = k.InAttributeValueDq), (this.sectionStart = this.index + 1))
+                : e === E.SingleQuote
+                  ? ((this.state = k.InAttributeValueSq), (this.sectionStart = this.index + 1))
                   : tx(e) ||
                     ((this.sectionStart = this.index),
-                    (this.state = E.InAttributeValueNq),
+                    (this.state = k.InAttributeValueNq),
                     this.stateInAttributeValueNoQuotes(e));
         }
         handleInAttributeValue(e, t) {
             e === t || (!this.decodeEntities && this.fastForwardTo(t))
                 ? (this.cbs.onattribdata(this.sectionStart, this.index),
                   (this.sectionStart = -1),
-                  this.cbs.onattribend(t === k.DoubleQuote ? v.Double : v.Single, this.index),
-                  (this.state = E.BeforeAttributeName))
-                : this.decodeEntities && e === k.Amp && ((this.baseState = this.state), (this.state = E.BeforeEntity));
+                  this.cbs.onattribend(t === E.DoubleQuote ? v.Double : v.Single, this.index),
+                  (this.state = k.BeforeAttributeName))
+                : this.decodeEntities && e === E.Amp && ((this.baseState = this.state), (this.state = k.BeforeEntity));
         }
         stateInAttributeValueDoubleQuotes(e) {
-            this.handleInAttributeValue(e, k.DoubleQuote);
+            this.handleInAttributeValue(e, E.DoubleQuote);
         }
         stateInAttributeValueSingleQuotes(e) {
-            this.handleInAttributeValue(e, k.SingleQuote);
+            this.handleInAttributeValue(e, E.SingleQuote);
         }
         stateInAttributeValueNoQuotes(e) {
-            tx(e) || e === k.Gt
+            tx(e) || e === E.Gt
                 ? (this.cbs.onattribdata(this.sectionStart, this.index),
                   (this.sectionStart = -1),
                   this.cbs.onattribend(v.Unquoted, this.index),
-                  (this.state = E.BeforeAttributeName),
+                  (this.state = k.BeforeAttributeName),
                   this.stateBeforeAttributeName(e))
-                : this.decodeEntities && e === k.Amp && ((this.baseState = this.state), (this.state = E.BeforeEntity));
+                : this.decodeEntities && e === E.Amp && ((this.baseState = this.state), (this.state = k.BeforeEntity));
         }
         stateBeforeDeclaration(e) {
-            e === k.OpeningSquareBracket
-                ? ((this.state = E.CDATASequence), (this.sequenceIndex = 0))
-                : (this.state = e === k.Dash ? E.BeforeComment : E.InDeclaration);
+            e === E.OpeningSquareBracket
+                ? ((this.state = k.CDATASequence), (this.sequenceIndex = 0))
+                : (this.state = e === E.Dash ? k.BeforeComment : k.InDeclaration);
         }
         stateInDeclaration(e) {
-            (e === k.Gt || this.fastForwardTo(k.Gt)) &&
+            (e === E.Gt || this.fastForwardTo(E.Gt)) &&
                 (this.cbs.ondeclaration(this.sectionStart, this.index),
-                (this.state = E.Text),
+                (this.state = k.Text),
                 (this.sectionStart = this.index + 1));
         }
         stateInProcessingInstruction(e) {
-            (e === k.Gt || this.fastForwardTo(k.Gt)) &&
+            (e === E.Gt || this.fastForwardTo(E.Gt)) &&
                 (this.cbs.onprocessinginstruction(this.sectionStart, this.index),
-                (this.state = E.Text),
+                (this.state = k.Text),
                 (this.sectionStart = this.index + 1));
         }
         stateBeforeComment(e) {
-            e === k.Dash
-                ? ((this.state = E.InCommentLike),
-                  (this.currentSequence = tE.CommentEnd),
+            e === E.Dash
+                ? ((this.state = k.InCommentLike),
+                  (this.currentSequence = tk.CommentEnd),
                   (this.sequenceIndex = 2),
                   (this.sectionStart = this.index + 1))
-                : (this.state = E.InDeclaration);
+                : (this.state = k.InDeclaration);
         }
         stateInSpecialComment(e) {
-            (e === k.Gt || this.fastForwardTo(k.Gt)) &&
+            (e === E.Gt || this.fastForwardTo(E.Gt)) &&
                 (this.cbs.oncomment(this.sectionStart, this.index, 0),
-                (this.state = E.Text),
+                (this.state = k.Text),
                 (this.sectionStart = this.index + 1));
         }
         stateBeforeSpecialS(e) {
             let t = 32 | e;
-            t === tE.ScriptEnd[3]
-                ? this.startSpecial(tE.ScriptEnd, 4)
-                : t === tE.StyleEnd[3]
-                  ? this.startSpecial(tE.StyleEnd, 4)
-                  : ((this.state = E.InTagName), this.stateInTagName(e));
+            t === tk.ScriptEnd[3]
+                ? this.startSpecial(tk.ScriptEnd, 4)
+                : t === tk.StyleEnd[3]
+                  ? this.startSpecial(tk.StyleEnd, 4)
+                  : ((this.state = k.InTagName), this.stateInTagName(e));
         }
         stateBeforeEntity(e) {
             (this.entityExcess = 1),
                 (this.entityResult = 0),
-                e === k.Number
-                    ? (this.state = E.BeforeNumericEntity)
-                    : e === k.Amp ||
+                e === E.Number
+                    ? (this.state = k.BeforeNumericEntity)
+                    : e === E.Amp ||
                       ((this.trieIndex = 0),
                       (this.trieCurrent = this.entityTrie[0]),
-                      (this.state = E.InNamedEntity),
+                      (this.state = k.InNamedEntity),
                       this.stateInNamedEntity(e));
         }
         stateInNamedEntity(e) {
@@ -2290,7 +2290,7 @@ ${''.padEnd(t)}${'^'.repeat(r)}`;
             let t = this.trieCurrent & ts.BinTrieFlags.VALUE_LENGTH;
             if (t) {
                 let r = (t >> 14) - 1;
-                if (this.allowLegacyEntity() || e === k.Semi) {
+                if (this.allowLegacyEntity() || e === E.Semi) {
                     let e = this.index - this.entityExcess + 1;
                     e > this.sectionStart && this.emitPartial(this.sectionStart, e),
                         (this.entityResult = this.trieIndex),
@@ -2316,47 +2316,47 @@ ${''.padEnd(t)}${'^'.repeat(r)}`;
                 }
         }
         stateBeforeNumericEntity(e) {
-            (32 | e) === k.LowerX
-                ? (this.entityExcess++, (this.state = E.InHexEntity))
-                : ((this.state = E.InNumericEntity), this.stateInNumericEntity(e));
+            (32 | e) === E.LowerX
+                ? (this.entityExcess++, (this.state = k.InHexEntity))
+                : ((this.state = k.InNumericEntity), this.stateInNumericEntity(e));
         }
         emitNumericEntity(e) {
             let t = this.index - this.entityExcess - 1;
-            t + 2 + Number(this.state === E.InHexEntity) !== this.index &&
+            t + 2 + Number(this.state === k.InHexEntity) !== this.index &&
                 (t > this.sectionStart && this.emitPartial(this.sectionStart, t),
                 (this.sectionStart = this.index + Number(e)),
                 this.emitCodePoint((0, ts.replaceCodePoint)(this.entityResult))),
                 (this.state = this.baseState);
         }
         stateInNumericEntity(e) {
-            e === k.Semi
+            e === E.Semi
                 ? this.emitNumericEntity(!0)
-                : tk(e)
-                  ? ((this.entityResult = 10 * this.entityResult + (e - k.Zero)), this.entityExcess++)
+                : tE(e)
+                  ? ((this.entityResult = 10 * this.entityResult + (e - E.Zero)), this.entityExcess++)
                   : (this.allowLegacyEntity() ? this.emitNumericEntity(!1) : (this.state = this.baseState),
                     this.index--);
         }
         stateInHexEntity(e) {
-            e === k.Semi
+            e === E.Semi
                 ? this.emitNumericEntity(!0)
-                : tk(e)
-                  ? ((this.entityResult = 16 * this.entityResult + (e - k.Zero)), this.entityExcess++)
-                  : (e >= k.UpperA && e <= k.UpperF) || (e >= k.LowerA && e <= k.LowerF)
-                    ? ((this.entityResult = 16 * this.entityResult + ((32 | e) - k.LowerA + 10)), this.entityExcess++)
+                : tE(e)
+                  ? ((this.entityResult = 16 * this.entityResult + (e - E.Zero)), this.entityExcess++)
+                  : (e >= E.UpperA && e <= E.UpperF) || (e >= E.LowerA && e <= E.LowerF)
+                    ? ((this.entityResult = 16 * this.entityResult + ((32 | e) - E.LowerA + 10)), this.entityExcess++)
                     : (this.allowLegacyEntity() ? this.emitNumericEntity(!1) : (this.state = this.baseState),
                       this.index--);
         }
         allowLegacyEntity() {
-            return !this.xmlMode && (this.baseState === E.Text || this.baseState === E.InSpecialTag);
+            return !this.xmlMode && (this.baseState === k.Text || this.baseState === k.InSpecialTag);
         }
         cleanup() {
             this.running &&
                 this.sectionStart !== this.index &&
-                (this.state === E.Text || (this.state === E.InSpecialTag && 0 === this.sequenceIndex)
+                (this.state === k.Text || (this.state === k.InSpecialTag && 0 === this.sequenceIndex)
                     ? (this.cbs.ontext(this.sectionStart, this.index), (this.sectionStart = this.index))
-                    : (this.state === E.InAttributeValueDq ||
-                          this.state === E.InAttributeValueSq ||
-                          this.state === E.InAttributeValueNq) &&
+                    : (this.state === k.InAttributeValueDq ||
+                          this.state === k.InAttributeValueSq ||
+                          this.state === k.InAttributeValueNq) &&
                       (this.cbs.onattribdata(this.sectionStart, this.index), (this.sectionStart = this.index)));
         }
         shouldContinue() {
@@ -2366,88 +2366,88 @@ ${''.padEnd(t)}${'^'.repeat(r)}`;
             for (; this.shouldContinue(); ) {
                 let e = this.buffer.charCodeAt(this.index - this.offset);
                 switch (this.state) {
-                    case E.Text:
+                    case k.Text:
                         this.stateText(e);
                         break;
-                    case E.SpecialStartSequence:
+                    case k.SpecialStartSequence:
                         this.stateSpecialStartSequence(e);
                         break;
-                    case E.InSpecialTag:
+                    case k.InSpecialTag:
                         this.stateInSpecialTag(e);
                         break;
-                    case E.CDATASequence:
+                    case k.CDATASequence:
                         this.stateCDATASequence(e);
                         break;
-                    case E.InAttributeValueDq:
+                    case k.InAttributeValueDq:
                         this.stateInAttributeValueDoubleQuotes(e);
                         break;
-                    case E.InAttributeName:
+                    case k.InAttributeName:
                         this.stateInAttributeName(e);
                         break;
-                    case E.InCommentLike:
+                    case k.InCommentLike:
                         this.stateInCommentLike(e);
                         break;
-                    case E.InSpecialComment:
+                    case k.InSpecialComment:
                         this.stateInSpecialComment(e);
                         break;
-                    case E.BeforeAttributeName:
+                    case k.BeforeAttributeName:
                         this.stateBeforeAttributeName(e);
                         break;
-                    case E.InTagName:
+                    case k.InTagName:
                         this.stateInTagName(e);
                         break;
-                    case E.InClosingTagName:
+                    case k.InClosingTagName:
                         this.stateInClosingTagName(e);
                         break;
-                    case E.BeforeTagName:
+                    case k.BeforeTagName:
                         this.stateBeforeTagName(e);
                         break;
-                    case E.AfterAttributeName:
+                    case k.AfterAttributeName:
                         this.stateAfterAttributeName(e);
                         break;
-                    case E.InAttributeValueSq:
+                    case k.InAttributeValueSq:
                         this.stateInAttributeValueSingleQuotes(e);
                         break;
-                    case E.BeforeAttributeValue:
+                    case k.BeforeAttributeValue:
                         this.stateBeforeAttributeValue(e);
                         break;
-                    case E.BeforeClosingTagName:
+                    case k.BeforeClosingTagName:
                         this.stateBeforeClosingTagName(e);
                         break;
-                    case E.AfterClosingTagName:
+                    case k.AfterClosingTagName:
                         this.stateAfterClosingTagName(e);
                         break;
-                    case E.BeforeSpecialS:
+                    case k.BeforeSpecialS:
                         this.stateBeforeSpecialS(e);
                         break;
-                    case E.InAttributeValueNq:
+                    case k.InAttributeValueNq:
                         this.stateInAttributeValueNoQuotes(e);
                         break;
-                    case E.InSelfClosingTag:
+                    case k.InSelfClosingTag:
                         this.stateInSelfClosingTag(e);
                         break;
-                    case E.InDeclaration:
+                    case k.InDeclaration:
                         this.stateInDeclaration(e);
                         break;
-                    case E.BeforeDeclaration:
+                    case k.BeforeDeclaration:
                         this.stateBeforeDeclaration(e);
                         break;
-                    case E.BeforeComment:
+                    case k.BeforeComment:
                         this.stateBeforeComment(e);
                         break;
-                    case E.InProcessingInstruction:
+                    case k.InProcessingInstruction:
                         this.stateInProcessingInstruction(e);
                         break;
-                    case E.InNamedEntity:
+                    case k.InNamedEntity:
                         this.stateInNamedEntity(e);
                         break;
-                    case E.BeforeEntity:
+                    case k.BeforeEntity:
                         this.stateBeforeEntity(e);
                         break;
-                    case E.InHexEntity:
+                    case k.InHexEntity:
                         this.stateInHexEntity(e);
                         break;
-                    case E.InNumericEntity:
+                    case k.InNumericEntity:
                         this.stateInNumericEntity(e);
                         break;
                     default:
@@ -2458,38 +2458,38 @@ ${''.padEnd(t)}${'^'.repeat(r)}`;
             this.cleanup();
         }
         finish() {
-            this.state === E.InNamedEntity && this.emitNamedEntity(),
+            this.state === k.InNamedEntity && this.emitNamedEntity(),
                 this.sectionStart < this.index && this.handleTrailingData(),
                 this.cbs.onend();
         }
         handleTrailingData() {
             let e = this.buffer.length + this.offset;
-            this.state === E.InCommentLike
-                ? this.currentSequence === tE.CdataEnd
+            this.state === k.InCommentLike
+                ? this.currentSequence === tk.CdataEnd
                     ? this.cbs.oncdata(this.sectionStart, e, 0)
                     : this.cbs.oncomment(this.sectionStart, e, 0)
-                : this.state === E.InNumericEntity && this.allowLegacyEntity()
+                : this.state === k.InNumericEntity && this.allowLegacyEntity()
                   ? this.emitNumericEntity(!1)
-                  : this.state === E.InHexEntity && this.allowLegacyEntity()
+                  : this.state === k.InHexEntity && this.allowLegacyEntity()
                     ? this.emitNumericEntity(!1)
-                    : this.state === E.InTagName ||
-                      this.state === E.BeforeAttributeName ||
-                      this.state === E.BeforeAttributeValue ||
-                      this.state === E.AfterAttributeName ||
-                      this.state === E.InAttributeName ||
-                      this.state === E.InAttributeValueSq ||
-                      this.state === E.InAttributeValueDq ||
-                      this.state === E.InAttributeValueNq ||
-                      this.state === E.InClosingTagName ||
+                    : this.state === k.InTagName ||
+                      this.state === k.BeforeAttributeName ||
+                      this.state === k.BeforeAttributeValue ||
+                      this.state === k.AfterAttributeName ||
+                      this.state === k.InAttributeName ||
+                      this.state === k.InAttributeValueSq ||
+                      this.state === k.InAttributeValueDq ||
+                      this.state === k.InAttributeValueNq ||
+                      this.state === k.InClosingTagName ||
                       this.cbs.ontext(this.sectionStart, e);
         }
         emitPartial(e, t) {
-            this.baseState !== E.Text && this.baseState !== E.InSpecialTag
+            this.baseState !== k.Text && this.baseState !== k.InSpecialTag
                 ? this.cbs.onattribdata(e, t)
                 : this.cbs.ontext(e, t);
         }
         emitCodePoint(e) {
-            this.baseState !== E.Text && this.baseState !== E.InSpecialTag
+            this.baseState !== k.Text && this.baseState !== k.InSpecialTag
                 ? this.cbs.onattribentity(e)
                 : this.cbs.ontextentity(e);
         }
@@ -3755,13 +3755,13 @@ ${''.padEnd(t)}${'^'.repeat(r)}`;
             .join('');
     }
     let rw = ['I', 'X', 'C', 'M'],
-        rk = ['V', 'L', 'D'];
-    function rE(e) {
+        rE = ['V', 'L', 'D'];
+    function rk(e) {
         return [...(e + '')]
             .map(e => +e)
             .reverse()
             .map((e, t) =>
-                e % 5 < 4 ? (e < 5 ? '' : rk[t]) + rw[t].repeat(e % 5) : rw[t] + (e < 5 ? rk[t] : rw[t + 1])
+                e % 5 < 4 ? (e < 5 ? '' : rE[t]) + rw[t].repeat(e % 5) : rw[t] + (e < 5 ? rE[t] : rw[t + 1])
             )
             .reverse()
             .join('');
@@ -4477,9 +4477,9 @@ ${''.padEnd(t)}${'^'.repeat(r)}`;
                         case 'A':
                             return e => rx(e, 'A');
                         case 'i':
-                            return e => rE(e).toLowerCase();
+                            return e => rk(e).toLowerCase();
                         case 'I':
-                            return e => rE(e);
+                            return e => rk(e);
                         default:
                             return e => e.toString();
                     }
@@ -4859,9 +4859,12 @@ ${''.padEnd(t)}${'^'.repeat(r)}`;
             }
             s.appendChild(o.cloneNode(!0));
         }
-        i.addEventListener('keydown', function () {
-            requestAnimationFrame(u);
+        r.addEventListener('focusin', () => {
+            i.focus();
         }),
+            i.addEventListener('keydown', function () {
+                requestAnimationFrame(u);
+            }),
             t.addEventListener('keydown', e => {
                 if (
                     ![

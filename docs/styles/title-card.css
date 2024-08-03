@@ -39,6 +39,10 @@ painted-title-card {
             rotate: var(--card-rotate-degrees);
             background-color: var(--bright-brown);
 
+            @media screen and (max-width: 1000px) {
+                width: 90%;
+            }
+
             & > .pattern {
                 height: 100%;
                 width: 100%;
@@ -64,6 +68,10 @@ painted-title-card {
                 z-index: 2;
                 --parallax-amount-x: 2rem;
                 --parallax-amount-y: 11rem;
+
+                @media screen and (max-width: 1000px) {
+                    --parallax-amount-y: 13rem;
+                }
             }
 
             &#title-name-shadow {
@@ -73,6 +81,10 @@ painted-title-card {
                 user-select: none;
                 --parallax-amount-x: 2.1rem;
                 --parallax-amount-y: 11.5rem;
+
+                @media screen and (max-width: 1000px) {
+                    --parallax-amount-y: 13.5rem;
+                }
             }
 
             &#title-name-box {
@@ -83,6 +95,11 @@ painted-title-card {
                 user-select: none;
                 --parallax-amount-x: -2rem;
                 --parallax-amount-y: 9rem;
+
+                @media screen and (max-width: 1000px) {
+                    --parallax-amount-y: 11rem;
+                    z-index: 1;
+                }
             }
         }
 
@@ -91,6 +108,14 @@ painted-title-card {
             width: 100%;
             z-index: 0;
             isolation: isolate;
+
+            @media screen and (max-width: 1000px) {
+                & > #blue-pills,
+                & > #hold-pills,
+                & > #orange-pills {
+                    opacity: 0;
+                }
+            }
 
             & > * {
                 position: absolute;
@@ -120,6 +145,10 @@ painted-title-card {
                 left: 20%;
                 top: 32%;
                 --parallax-amount-y: var(--globe-parallax-amount);
+
+                @media screen and (max-width: 1000px) {
+                    left: 8%;
+                }
             }
 
             & > #orange-pills {
@@ -136,6 +165,11 @@ painted-title-card {
                 left: 55%;
                 top: 60%;
                 --parallax-amount-y: var(--gurney-parallax-amount);
+
+                @media screen and (max-width: 1000px) {
+                    --parallax-amount-y: calc(var(--gurney-parallax-amount) + 50%);
+                    left: 45%;
+                }
             }
 
             & > #hold-pills {

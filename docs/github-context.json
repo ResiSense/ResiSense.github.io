@@ -1,11 +1,11 @@
 {
     "job": "build",
     "ref": "refs/heads/main",
-    "sha": "9602457dd5e29b4a50aff83c45414000167a6a86",
+    "sha": "656cea19cfcad9867afd8f3e006cf3eff0832ed8",
     "repository": "ResiSense/ResiSense.github.io",
     "repository_Url": null,
-    "run_id": "10228568135",
-    "run_number": "186",
+    "run_id": "10230375817",
+    "run_number": "187",
     "run_attempt": "1",
     "artifact_cache_size_limit": "10",
     "actor": "CCheukKa",
@@ -13,8 +13,8 @@
     "workflow": "Full CI pipeline",
     "event_name": "push",
     "event": {
-        "after": "9602457dd5e29b4a50aff83c45414000167a6a86",
-        "before": "c4f19ada7afb3d666ec3bd16cef9d0f8668f0f8e",
+        "after": "656cea19cfcad9867afd8f3e006cf3eff0832ed8",
+        "before": "87873c054948726bf4aa02319a5c29fc2f8dddf7",
         "commits": [
             {
                 "author": {
@@ -28,11 +28,11 @@
                     "username": "CCheukKa"
                 },
                 "distinct": true,
-                "id": "2d986494e2a46b71f826ed14c5ea41e7ebd808a1",
-                "message": "fix footer being behind doodles",
-                "timestamp": "2024-08-03T21:58:36+08:00",
-                "tree_id": "300b117478cc25d0fd3900f2245075fcd167c8bd",
-                "url": "https://github.com/ResiSense/ResiSense.github.io/commit/2d986494e2a46b71f826ed14c5ea41e7ebd808a1"
+                "id": "4ec247d220a87311c29ccad28c6ebb8c53785eb9",
+                "message": "fix scrolling and heading jank",
+                "timestamp": "2024-08-04T01:57:22+08:00",
+                "tree_id": "1e99f65bde4701be26ef1a992cdfbef42a6ea4d0",
+                "url": "https://github.com/ResiSense/ResiSense.github.io/commit/4ec247d220a87311c29ccad28c6ebb8c53785eb9"
             },
             {
                 "author": {
@@ -46,14 +46,104 @@
                     "username": "CCheukKa"
                 },
                 "distinct": true,
-                "id": "9602457dd5e29b4a50aff83c45414000167a6a86",
-                "message": "prefix internal npm script names with _",
-                "timestamp": "2024-08-03T22:03:29+08:00",
-                "tree_id": "53cfe868aced25119152725fe1e2e5f530031441",
-                "url": "https://github.com/ResiSense/ResiSense.github.io/commit/9602457dd5e29b4a50aff83c45414000167a6a86"
+                "id": "a9a8b7efedb78e54d4e274fba59c45679e0859e3",
+                "message": "make responsive",
+                "timestamp": "2024-08-04T02:25:18+08:00",
+                "tree_id": "690beceb7db7f57cfa6cdab86a29d4feaf6ea870",
+                "url": "https://github.com/ResiSense/ResiSense.github.io/commit/a9a8b7efedb78e54d4e274fba59c45679e0859e3"
+            },
+            {
+                "author": {
+                    "email": "ccheukka@gmail.com",
+                    "name": "CCheukKa",
+                    "username": "CCheukKa"
+                },
+                "committer": {
+                    "email": "ccheukka@gmail.com",
+                    "name": "CCheukKa",
+                    "username": "CCheukKa"
+                },
+                "distinct": true,
+                "id": "3934230b7d3c16e6426d9bccbef737b6d433c08a",
+                "message": "header search field auto transfer focus to main search field",
+                "timestamp": "2024-08-04T02:25:54+08:00",
+                "tree_id": "8e2bcb4207e04f81aa5fa629cc434e7d7f51cb32",
+                "url": "https://github.com/ResiSense/ResiSense.github.io/commit/3934230b7d3c16e6426d9bccbef737b6d433c08a"
+            },
+            {
+                "author": {
+                    "email": "ccheukka@gmail.com",
+                    "name": "CCheukKa",
+                    "username": "CCheukKa"
+                },
+                "committer": {
+                    "email": "ccheukka@gmail.com",
+                    "name": "CCheukKa",
+                    "username": "CCheukKa"
+                },
+                "distinct": true,
+                "id": "f77059c700c5801d1d82fa1150af251893d346d9",
+                "message": "add responsiveness",
+                "timestamp": "2024-08-04T02:42:39+08:00",
+                "tree_id": "701fe0d420048faa1db0a1fe140eae7e2b17575d",
+                "url": "https://github.com/ResiSense/ResiSense.github.io/commit/f77059c700c5801d1d82fa1150af251893d346d9"
+            },
+            {
+                "author": {
+                    "email": "ccheukka@gmail.com",
+                    "name": "CCheukKa",
+                    "username": "CCheukKa"
+                },
+                "committer": {
+                    "email": "ccheukka@gmail.com",
+                    "name": "CCheukKa",
+                    "username": "CCheukKa"
+                },
+                "distinct": true,
+                "id": "43d9b19378af334b2b880eb3e489656268bf0a16",
+                "message": "remove unused styles",
+                "timestamp": "2024-08-04T03:06:38+08:00",
+                "tree_id": "cc8f26c3368539111c41f118f0344579f1bcc73d",
+                "url": "https://github.com/ResiSense/ResiSense.github.io/commit/43d9b19378af334b2b880eb3e489656268bf0a16"
+            },
+            {
+                "author": {
+                    "email": "ccheukka@gmail.com",
+                    "name": "CCheukKa",
+                    "username": "CCheukKa"
+                },
+                "committer": {
+                    "email": "ccheukka@gmail.com",
+                    "name": "CCheukKa",
+                    "username": "CCheukKa"
+                },
+                "distinct": true,
+                "id": "2f20c54fdc9a14923466bb122b7d3e35ddc15b70",
+                "message": "refactor styles",
+                "timestamp": "2024-08-04T03:13:05+08:00",
+                "tree_id": "bc4087f5da6888c8ab9c4f0af6db7a21747a33d8",
+                "url": "https://github.com/ResiSense/ResiSense.github.io/commit/2f20c54fdc9a14923466bb122b7d3e35ddc15b70"
+            },
+            {
+                "author": {
+                    "email": "ccheukka@gmail.com",
+                    "name": "CCheukKa",
+                    "username": "CCheukKa"
+                },
+                "committer": {
+                    "email": "ccheukka@gmail.com",
+                    "name": "CCheukKa",
+                    "username": "CCheukKa"
+                },
+                "distinct": true,
+                "id": "656cea19cfcad9867afd8f3e006cf3eff0832ed8",
+                "message": "disallow selection of non-text",
+                "timestamp": "2024-08-04T03:18:35+08:00",
+                "tree_id": "9cf4f8778c1d9e3a241a3a7aeb8bc5fd5b798b8b",
+                "url": "https://github.com/ResiSense/ResiSense.github.io/commit/656cea19cfcad9867afd8f3e006cf3eff0832ed8"
             }
         ],
-        "compare": "https://github.com/ResiSense/ResiSense.github.io/compare/c4f19ada7afb...9602457dd5e2",
+        "compare": "https://github.com/ResiSense/ResiSense.github.io/compare/87873c054948...656cea19cfca",
         "created": false,
         "deleted": false,
         "forced": false,
@@ -69,11 +159,11 @@
                 "username": "CCheukKa"
             },
             "distinct": true,
-            "id": "9602457dd5e29b4a50aff83c45414000167a6a86",
-            "message": "prefix internal npm script names with _",
-            "timestamp": "2024-08-03T22:03:29+08:00",
-            "tree_id": "53cfe868aced25119152725fe1e2e5f530031441",
-            "url": "https://github.com/ResiSense/ResiSense.github.io/commit/9602457dd5e29b4a50aff83c45414000167a6a86"
+            "id": "656cea19cfcad9867afd8f3e006cf3eff0832ed8",
+            "message": "disallow selection of non-text",
+            "timestamp": "2024-08-04T03:18:35+08:00",
+            "tree_id": "9cf4f8778c1d9e3a241a3a7aeb8bc5fd5b798b8b",
+            "url": "https://github.com/ResiSense/ResiSense.github.io/commit/656cea19cfcad9867afd8f3e006cf3eff0832ed8"
         },
         "pusher": {
             "email": "ccheukka@gmail.com",
@@ -86,6 +176,6 @@
     "ref_type": "branch",
     "secret_source": "Actions",
     "workflow_ref": "ResiSense/ResiSense.github.io/.github/workflows/full-ci-pipeline.yaml@refs/heads/main",
-    "workflow_sha": "9602457dd5e29b4a50aff83c45414000167a6a86",
+    "workflow_sha": "656cea19cfcad9867afd8f3e006cf3eff0832ed8",
     "workspace": "/home/runner/work/ResiSense.github.io/ResiSense.github.io"
 }
