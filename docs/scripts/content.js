@@ -1,33 +1,75 @@
 (() => {
+    var e = globalThis,
+        t = {},
+        o = {},
+        r = e.parcelRequire8bfa;
+    null == r &&
+        (((r = function (e) {
+            if (e in t) return t[e].exports;
+            if (e in o) {
+                var r = o[e];
+                delete o[e];
+                var n = { id: e, exports: {} };
+                return (t[e] = n), r.call(n.exports, n, n.exports), n.exports;
+            }
+            var i = Error("Cannot find module '" + e + "'");
+            throw ((i.code = 'MODULE_NOT_FOUND'), i);
+        }).register = function (e, t) {
+            o[e] = t;
+        }),
+        (e.parcelRequire8bfa = r)),
+        (0, r.register)('df1N6', function (e, t) {
+            function o(e, t) {
+                let o = document.createElement('div');
+                (o.style.position = 'absolute'),
+                    (o.style.visibility = 'hidden'),
+                    (o.style.height = t),
+                    e.appendChild(o);
+                let r = window.getComputedStyle(o).height;
+                return e.removeChild(o), parseFloat(r);
+            }
+            Object.defineProperty(e.exports, 'convertToPixels', {
+                get: () => o,
+                set: void 0,
+                enumerable: !0,
+                configurable: !0,
+            }),
+                window.setTimeout(() => {
+                    document.body.classList.add('post-buffered');
+                }, 100);
+        });
+    var n = r('df1N6');
     {
-        let t = ['h1', 'h2', 'h3', 'h4', 'h5', 'h6'],
-            o = document.getElementsByTagName('painted-content')[0],
-            n = o.querySelectorAll(t.join(', ')),
-            l = {};
-        function e() {
-            for (let e of n) {
+        let e = ['h1', 'h2', 'h3', 'h4', 'h5', 'h6'],
+            t = document.getElementsByTagName('painted-content')[0],
+            o = t.querySelectorAll(e.join(', ')),
+            r = {};
+        function i() {
+            for (let e of o) {
                 let t = e.tagName.toLowerCase(),
-                    o = e.getBoundingClientRect().top,
-                    n = l[t] ?? 0,
-                    d = o <= n;
-                if ((e.classList.toggle('sticky', o <= n), !d)) break;
+                    o = e.getBoundingClientRect().top <= (r[t] ?? 0);
+                if ((e.classList.toggle('sticky', o), !o)) break;
             }
         }
-        t.forEach(e => {
-            let t = o.getElementsByTagName(e)[0];
-            t &&
-                (l[e] = (function (e) {
-                    let t = document.createElement('div');
-                    (t.style.position = 'absolute'),
-                        (t.style.visibility = 'hidden'),
-                        (t.style.height = e),
-                        document.body.appendChild(t);
-                    let o = window.getComputedStyle(t).height;
-                    return document.body.removeChild(t), parseFloat(o);
-                })(getComputedStyle(t).getPropertyValue('--this-top')));
+        function l() {
+            (
+                document.querySelector('painted-content')?.querySelectorAll('h1, h2, h3, h4, h5, h6') ||
+                (() => {
+                    throw Error('Heading elements not found!');
+                })()
+            ).forEach(e => {
+                t.querySelector(`.scroll-marker[id="${e.id}"]`).style.scrollMarginTop =
+                    getComputedStyle(e).scrollMarginTop;
+            });
+        }
+        e.forEach(e => {
+            let o = t.getElementsByTagName(e)[0];
+            o && (r[e] = (0, n.convertToPixels)(o, getComputedStyle(o).getPropertyValue('--this-top')) + 1);
         }),
-            document.addEventListener('DOMContentLoaded', e),
-            document.addEventListener('scroll', e);
+            document.addEventListener('DOMContentLoaded', i),
+            document.addEventListener('scroll', i),
+            document.addEventListener('DOMContentLoaded', l),
+            document.addEventListener('resize', l);
     }
 })();
 //# sourceMappingURL=content.js.map

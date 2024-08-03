@@ -32,7 +32,10 @@
             href="/styles/searchbar.css" /><link rel="stylesheet" type="text/css" href="/styles/catalogue.css" /><link
             rel="stylesheet"
             type="text/css"
-            href="/styles/title-card.css" /><link rel="stylesheet" type="text/css" href="/styles/outline.css" /><script
+            href="/styles/title-card.css" /><link rel="stylesheet" type="text/css" href="/styles/outline.css" /><link
+            rel="stylesheet"
+            type="text/css"
+            href="/styles/sidebar.css" /><script
             type="text/javascript"
             src="/scripts/responsivenessHandler.js"
             defer=""
@@ -50,38 +53,38 @@
             <painted-parallax-doodle>
                 <div id="parallax-doodle-container"
                     ><img
-                        src="/assets/doodles/dna.svg"
-                        style="translate: 31vw 1120px; animation-name: parallax-doodle-f3emgt" /><img
+                        src="/assets/doodles/bacteria.svg"
+                        style="translate: 92vw 1820px; animation-name: parallax-doodle-hormzqf" /><img
                         src="/assets/logos/resisense/ResiSense Orange Logo.svg"
-                        style="translate: 39vw 3140px; animation-name: parallax-doodle-ms4q7h" /><img
-                        src="/assets/doodles/red blood cell.svg"
-                        style="translate: 29vw 2860px; animation-name: parallax-doodle-fxsw0f" /><img
+                        style="translate: 8vw 3300px; animation-name: parallax-doodle-h9ho5k" /><img
                         src="/assets/doodles/syringe.svg"
-                        style="translate: 48vw 660px; animation-name: parallax-doodle-ctmvx8" /><img
+                        style="translate: 85vw 3840px; animation-name: parallax-doodle-kr2q9z" /><img
                         src="/assets/doodles/virus.svg"
-                        style="translate: 27vw 3860px; animation-name: parallax-doodle-gatl8p" /><img
-                        src="/assets/doodles/dna.svg"
-                        style="translate: 76vw 2100px; animation-name: parallax-doodle-5y0ibr" /><img
-                        src="/assets/doodles/e coli.svg"
-                        style="translate: 31vw 1840px; animation-name: parallax-doodle-34809" /><img
-                        src="/assets/doodles/syringe.svg"
-                        style="translate: 87vw 100px; animation-name: parallax-doodle-ymft69" /><img
-                        src="/assets/doodles/dna.svg"
-                        style="translate: 69vw 700px; animation-name: parallax-doodle-qp1pv" /><img
-                        src="/assets/doodles/red blood cell.svg"
-                        style="translate: 51vw 0px; animation-name: parallax-doodle-hu9ujb" /><img
-                        src="/assets/doodles/virus.svg"
-                        style="translate: 29vw 60px; animation-name: parallax-doodle-61dd6h" /><img
+                        style="translate: 9vw 2700px; animation-name: parallax-doodle-n1083x" /><img
                         src="/assets/logos/resisense/ResiSense Orange Logo.svg"
-                        style="translate: 91vw 1640px; animation-name: parallax-doodle-i061quh" /><img
+                        style="translate: 35vw 820px; animation-name: parallax-doodle-mgq8iq" /><img
+                        src="/assets/doodles/virus.svg"
+                        style="translate: 8vw 1120px; animation-name: parallax-doodle-v5z7ge" /><img
+                        src="/assets/doodles/virus.svg"
+                        style="translate: 76vw 2260px; animation-name: parallax-doodle-b570jx" /><img
                         src="/assets/doodles/bacteria.svg"
-                        style="translate: 88vw 3160px; animation-name: parallax-doodle-w1jmaj" /><img
+                        style="translate: 31vw 3060px; animation-name: parallax-doodle-14xnn" /><img
+                        src="/assets/doodles/dna.svg"
+                        style="translate: 84vw 3080px; animation-name: parallax-doodle-njyfvc" /><img
+                        src="/assets/doodles/syringe.svg"
+                        style="translate: 68vw 400px; animation-name: parallax-doodle-9qo5q" /><img
+                        src="/assets/logos/resisense/ResiSense Orange Logo.svg"
+                        style="translate: 36vw 1700px; animation-name: parallax-doodle-1s87xx" /><img
+                        src="/assets/doodles/drug.svg"
+                        style="translate: 29vw 2400px; animation-name: parallax-doodle-2evj8l" /><img
+                        src="/assets/doodles/red blood cell.svg"
+                        style="translate: 18vw 1940px; animation-name: parallax-doodle-c273td" /><img
                         src="/assets/doodles/e coli.svg"
-                        style="translate: 22vw 820px; animation-name: parallax-doodle-tow2" /><img
-                        src="/assets/doodles/bacteria.svg"
-                        style="translate: 66vw 2680px; animation-name: parallax-doodle-w2t11c" /><img
-                        src="/assets/doodles/bacteria.svg"
-                        style="translate: 4vw 1380px; animation-name: parallax-doodle-vpi6ww"
+                        style="translate: 46vw 3320px; animation-name: parallax-doodle-4oqnbwl" /><img
+                        src="/assets/doodles/e coli.svg"
+                        style="translate: 7vw 3800px; animation-name: parallax-doodle-yxhwp" /><img
+                        src="/assets/doodles/e coli.svg"
+                        style="translate: 91vw 1500px; animation-name: parallax-doodle-84cpzt"
                 /></div>
             </painted-parallax-doodle>
             <painted-header>
@@ -102,7 +105,7 @@
                             </div>
                             <div class="header-rightside">
                                 <painted-searchbar>
-                                    <search id="searchbar">
+                                    <search id="searchbar" class="header-rightside-button">
                                         <input
                                             id="header-search-field"
                                             type="search"
@@ -294,14 +297,10 @@
                                     >ResiSense is a project that aims to provide a cheaper and faster alternative to
                                     detecting antibiotic-resistant pathogens via DNA sensing.
                                 </p>
-                                <div class="scroll-marker" data-scroll-marker-level="H1" id="problem-background"></div
+                                <div class="scroll-marker" id="problem-background"></div
                                 ><section
                                     ><h1 id="problem-background">Problem Background</h1
-                                    ><div
-                                        class="scroll-marker"
-                                        data-scroll-marker-level="H2"
-                                        id="antibiotic-resistance-prevalence"
-                                    ></div
+                                    ><div class="scroll-marker" id="antibiotic-resistance-prevalence"></div
                                     ><section
                                         ><h2 id="antibiotic-resistance-prevalence">Antibiotic Resistance Prevalence</h2
                                         ><p
@@ -339,11 +338,7 @@
                                                 rel="noopener noreferrer"
                                                 >⤴️</a
                                             >. </p
-                                        ><div
-                                            class="scroll-marker"
-                                            data-scroll-marker-level="H2"
-                                            id="current-methods"
-                                        ></div></section
+                                        ><div class="scroll-marker" id="current-methods"></div></section
                                     ><section
                                         ><h2 id="current-methods">Current Methods</h2
                                         ><p
@@ -352,11 +347,7 @@
                                             and potential utility
                                             <a href="/integrated-human-practice#current-methods">⤵️</a>. A cheaper,
                                             faster, and simpler technology is needed. </p
-                                        ><div
-                                            class="scroll-marker"
-                                            data-scroll-marker-level="H1"
-                                            id="our-solution"
-                                        ></div></section
+                                        ><div class="scroll-marker" id="our-solution"></div></section
                                 ></section>
 
                                 <section
@@ -393,11 +384,7 @@
                                             src="../assets/diagrams/mechanism%20overview%20diagram.png"
                                             alt="picture 1"
                                         /> </p
-                                    ><div
-                                        class="scroll-marker"
-                                        data-scroll-marker-level="H1"
-                                        id="expected-results"
-                                    ></div
+                                    ><div class="scroll-marker" id="expected-results"></div
                                 ></section>
 
                                 <section
@@ -454,7 +441,7 @@
                         >
                         <painted-sidebar>
                             <aside>
-                                <a href="#"> 🔝 </a>
+                                <a href="#" class="top-button"> 🔝 </a>
                             </aside>
                         </painted-sidebar>
                     </div>

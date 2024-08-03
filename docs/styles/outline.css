@@ -1,11 +1,9 @@
-@media screen and (max-width: 1100px) {
-    painted-outline {
-        display: none;
-    }
-}
-
 painted-outline {
     max-width: 20%;
+
+    @media screen and (max-width: 1100px) {
+        display: none;
+    }
 
     & > nav {
         display: flex;
@@ -115,6 +113,7 @@ painted-outline {
             line-height: var(--line-height);
             z-index: 1;
             pointer-events: none;
+            user-select: none;
         }
     }
 }
