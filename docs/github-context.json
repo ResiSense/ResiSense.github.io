@@ -1,11 +1,11 @@
 {
     "job": "build",
     "ref": "refs/heads/main",
-    "sha": "70349db25c8065f1ead13a9d282eebfe68311a7c",
+    "sha": "4fa503179f56e65bc9303c6d14b548cdf3e360c3",
     "repository": "ResiSense/ResiSense.github.io",
     "repository_Url": null,
-    "run_id": "10231405047",
-    "run_number": "190",
+    "run_id": "10231431062",
+    "run_number": "191",
     "run_attempt": "1",
     "artifact_cache_size_limit": "10",
     "actor": "CCheukKa",
@@ -13,8 +13,8 @@
     "workflow": "Full CI pipeline",
     "event_name": "push",
     "event": {
-        "after": "70349db25c8065f1ead13a9d282eebfe68311a7c",
-        "before": "f63d519aa11f302b0b5d74d0d9301ecf06af8f01",
+        "after": "4fa503179f56e65bc9303c6d14b548cdf3e360c3",
+        "before": "f5e2c4df6b79c0206318245f85a2758b614abfe7",
         "commits": [
             {
                 "author": {
@@ -28,14 +28,32 @@
                     "username": "CCheukKa"
                 },
                 "distinct": true,
-                "id": "70349db25c8065f1ead13a9d282eebfe68311a7c",
-                "message": "add auto text fragment stripping",
-                "timestamp": "2024-08-04T06:32:05+08:00",
-                "tree_id": "1463cab8800bd798c416e3f1e42b769ad2febfec",
-                "url": "https://github.com/ResiSense/ResiSense.github.io/commit/70349db25c8065f1ead13a9d282eebfe68311a7c"
+                "id": "24eaf1bf25b0a38912fb44f5ee168271e3f7aa99",
+                "message": "chore: Remove unused search button element in searchbar.ts",
+                "timestamp": "2024-08-04T06:36:41+08:00",
+                "tree_id": "96bc635396124bdf6d4f2e9150a95bf69f252444",
+                "url": "https://github.com/ResiSense/ResiSense.github.io/commit/24eaf1bf25b0a38912fb44f5ee168271e3f7aa99"
+            },
+            {
+                "author": {
+                    "email": "ccheukka@gmail.com",
+                    "name": "CCheukKa",
+                    "username": "CCheukKa"
+                },
+                "committer": {
+                    "email": "ccheukka@gmail.com",
+                    "name": "CCheukKa",
+                    "username": "CCheukKa"
+                },
+                "distinct": true,
+                "id": "4fa503179f56e65bc9303c6d14b548cdf3e360c3",
+                "message": "Merge branch main of https://github.com/ResiSense/ResiSense.github.io",
+                "timestamp": "2024-08-04T06:36:45+08:00",
+                "tree_id": "056ca30c8461e3c4acf580808e4a7bf78faa1125",
+                "url": "https://github.com/ResiSense/ResiSense.github.io/commit/4fa503179f56e65bc9303c6d14b548cdf3e360c3"
             }
         ],
-        "compare": "https://github.com/ResiSense/ResiSense.github.io/compare/f63d519aa11f...70349db25c80",
+        "compare": "https://github.com/ResiSense/ResiSense.github.io/compare/f5e2c4df6b79...4fa503179f56",
         "created": false,
         "deleted": false,
         "forced": false,
@@ -51,11 +69,11 @@
                 "username": "CCheukKa"
             },
             "distinct": true,
-            "id": "70349db25c8065f1ead13a9d282eebfe68311a7c",
-            "message": "add auto text fragment stripping",
-            "timestamp": "2024-08-04T06:32:05+08:00",
-            "tree_id": "1463cab8800bd798c416e3f1e42b769ad2febfec",
-            "url": "https://github.com/ResiSense/ResiSense.github.io/commit/70349db25c8065f1ead13a9d282eebfe68311a7c"
+            "id": "4fa503179f56e65bc9303c6d14b548cdf3e360c3",
+            "message": "Merge branch main of https://github.com/ResiSense/ResiSense.github.io",
+            "timestamp": "2024-08-04T06:36:45+08:00",
+            "tree_id": "056ca30c8461e3c4acf580808e4a7bf78faa1125",
+            "url": "https://github.com/ResiSense/ResiSense.github.io/commit/4fa503179f56e65bc9303c6d14b548cdf3e360c3"
         },
         "pusher": {
             "email": "ccheukka@gmail.com",
@@ -68,6 +86,6 @@
     "ref_type": "branch",
     "secret_source": "Actions",
     "workflow_ref": "ResiSense/ResiSense.github.io/.github/workflows/full-ci-pipeline.yaml@refs/heads/main",
-    "workflow_sha": "70349db25c8065f1ead13a9d282eebfe68311a7c",
+    "workflow_sha": "4fa503179f56e65bc9303c6d14b548cdf3e360c3",
     "workspace": "/home/runner/work/ResiSense.github.io/ResiSense.github.io"
 }
