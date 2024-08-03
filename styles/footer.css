@@ -1,3 +1,4 @@
+@import url(font.css);
 painted-footer {
     justify-self: flex-end;
     --footer-background-color: var(--bright-brown);
@@ -8,7 +9,7 @@ painted-footer {
         --horizontal-space: 3rem;
         position: sticky;
         background-color: var(--bright-brown);
-        color: black;
+        color: #3C240A;
         display: flex;
         flex-direction: row;
         justify-content: flex-start;
@@ -67,7 +68,7 @@ painted-footer {
 
         &>.divider {
             width: 0;
-            border-right: 2px dashed black;
+            border-right: 2px solid #3C240A;
         }
 
         &>.footer-rightside {
