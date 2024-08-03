@@ -1,4 +1,5 @@
 import Searchable, { SearchTarget } from './../lib/types/Searchable';
+import { safeURIEncode } from './globalLibrary';
 import SearchResults from './SearchResults';
 
 (async () => {
@@ -132,7 +133,7 @@ import SearchResults from './SearchResults';
             for (const contentChunk of searchResult.highlightedContentChunks) {
                 const contentChunkElement = document.createElement('a');
                 contentChunkElement.innerHTML = contentChunk;
-                contentChunkElement.href = `${resultHref}#:~:text=${contentChunkElement.textContent}`;
+                contentChunkElement.href = `${resultHref}#:~:text=${safeURIEncode(contentChunkElement.textContent || (() => { throw new Error('Empty content chunk') })())}`;
                 contentElement.appendChild(contentChunkElement);
             }
             //
