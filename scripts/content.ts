@@ -18,6 +18,7 @@ import { convertToPixels } from "./globalLibrary";
     document.addEventListener('DOMContentLoaded', determineStickiness);
     document.addEventListener('scroll', determineStickiness);
     function determineStickiness() {
+        for (const element of stickyHeaderElements) { element.classList.toggle('sticky', false); }
         for (const element of stickyHeaderElements) {
             //
             const tagName = element.tagName.toLowerCase() as StickyTag;
