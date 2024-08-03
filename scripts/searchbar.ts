@@ -12,9 +12,6 @@ import SearchResults from './SearchResults';
     const mainSearchFieldElement = (document.getElementById('main-search-field')
         ?? (() => { throw new Error('Search field not found') })()
     ) as HTMLInputElement;
-    const searchButtonElement = (document.getElementById('search-button')
-        ?? (() => { throw new Error('Search button not found') })()
-    ) as HTMLButtonElement;
     const searchDialogElement = (document.getElementById('search-dialog')
         ?? (() => { throw new Error('Search dialog not found') })()
     ) as HTMLDialogElement;
