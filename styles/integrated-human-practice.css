@@ -1,25 +1,20 @@
 painted-content {
     blockquote {
-
-        h3,
-        .scroll-marker[data-scroll-marker-level="H3"] {
-            --this-top: 7rem;
+        h3 {
+            top: 0;
         }
 
-        h4,
-        .scroll-marker[data-scroll-marker-level="H4"] {
-            font-size: 1.17rem;
-            --this-top: 9.5rem;
+        h4 {
+            font-size: 1.17em;
+            --top-internal-margin: 4em;
         }
 
-        h5,
-        .scroll-marker[data-scroll-marker-level="H5"] {
-            --this-top: 11rem;
+        h5 {
+            --top-internal-margin: 7.8em;
         }
 
-        h6,
-        .scroll-marker[data-scroll-marker-level="H6"] {
-            --this-top: 12.4rem;
+        h6 {
+            --top-internal-margin: 11.5em;
         }
     }
 }
