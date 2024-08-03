@@ -136,6 +136,14 @@ painted-header {
                     align-items: center;
                     gap: 1rem;
                     flex-direction: row;
+
+                    & .header-rightside-button {
+                        background-color: var(--pale-green);
+                        border-color: var(--light-green);
+                        border-radius: 0.5rem;
+                        border-style: solid;
+                        border-width: 0.2rem;
+                    }
                 }
             }
 
