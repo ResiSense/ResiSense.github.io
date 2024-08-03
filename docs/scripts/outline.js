@@ -47,7 +47,11 @@
                 e(t.exports, 'convertToPixels', () => i),
                 window.setTimeout(() => {
                     document.body.classList.add('post-buffered');
-                }, 100);
+                }, 100),
+                window.addEventListener('DOMContentLoaded', function () {
+                    let e = performance.getEntriesByType('navigation')[0].name;
+                    e.includes('#:~:text=') && window.history.replaceState(null, '', e.split('#')[0]);
+                });
         });
     var l = i('df1N6');
     {
