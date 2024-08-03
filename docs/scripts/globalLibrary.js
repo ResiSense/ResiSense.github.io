@@ -1,28 +1,28 @@
 (() => {
-    function e(e, t, r, o) {
-        Object.defineProperty(e, t, { get: r, set: o, enumerable: !0, configurable: !0 });
+    function e(e, t, r, n) {
+        Object.defineProperty(e, t, { get: r, set: n, enumerable: !0, configurable: !0 });
     }
     var t = globalThis,
         r = {},
-        o = {},
-        n = t.parcelRequire8bfa;
-    null == n &&
-        (((n = function (e) {
+        n = {},
+        o = t.parcelRequire8bfa;
+    null == o &&
+        (((o = function (e) {
             if (e in r) return r[e].exports;
-            if (e in o) {
-                var t = o[e];
-                delete o[e];
-                var n = { id: e, exports: {} };
-                return (r[e] = n), t.call(n.exports, n, n.exports), n.exports;
+            if (e in n) {
+                var t = n[e];
+                delete n[e];
+                var o = { id: e, exports: {} };
+                return (r[e] = o), t.call(o.exports, o, o.exports), o.exports;
             }
             var i = Error("Cannot find module '" + e + "'");
             throw ((i.code = 'MODULE_NOT_FOUND'), i);
         }).register = function (e, t) {
-            o[e] = t;
+            n[e] = t;
         }),
-        (t.parcelRequire8bfa = n)),
-        (0, n.register)('df1N6', function (t, r) {
-            function o(e) {
+        (t.parcelRequire8bfa = o)),
+        (0, o.register)('df1N6', function (t, r) {
+            function n(e) {
                 return encodeURIComponent(e)
                     .replace(/[-]/g, '%2D')
                     .replace(/[.]/g, '%2E')
@@ -34,21 +34,25 @@
                     .replace(/[)]/g, '%29')
                     .replace(/[,]/g, '%2C');
             }
-            function n(e, t) {
+            function o(e, t) {
                 let r = document.createElement('div');
                 (r.style.position = 'absolute'),
                     (r.style.visibility = 'hidden'),
                     (r.style.height = t),
                     e.appendChild(r);
-                let o = window.getComputedStyle(r).height;
-                return e.removeChild(r), parseFloat(o);
+                let n = window.getComputedStyle(r).height;
+                return e.removeChild(r), parseFloat(n);
             }
-            e(t.exports, 'safeURIEncode', () => o),
-                e(t.exports, 'convertToPixels', () => n),
+            e(t.exports, 'safeURIEncode', () => n),
+                e(t.exports, 'convertToPixels', () => o),
                 window.setTimeout(() => {
                     document.body.classList.add('post-buffered');
-                }, 100);
+                }, 100),
+                window.addEventListener('DOMContentLoaded', function () {
+                    let e = performance.getEntriesByType('navigation')[0].name;
+                    e.includes('#:~:text=') && window.history.replaceState(null, '', e.split('#')[0]);
+                });
         }),
-        n('df1N6');
+        o('df1N6');
 })();
 //# sourceMappingURL=globalLibrary.js.map

@@ -679,7 +679,11 @@
                 e(t.exports, 'convertToPixels', () => n),
                 window.setTimeout(() => {
                     document.body.classList.add('post-buffered');
-                }, 100);
+                }, 100),
+                window.addEventListener('DOMContentLoaded', function () {
+                    let e = performance.getEntriesByType('navigation')[0].name;
+                    e.includes('#:~:text=') && window.history.replaceState(null, '', e.split('#')[0]);
+                });
         }),
         M('kyWZn', function (r, i) {
             e(r.exports, 'default', () => o);
