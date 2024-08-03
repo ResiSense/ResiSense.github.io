@@ -12,8 +12,8 @@
                 var n = { id: e, exports: {} };
                 return (t[e] = n), r.call(n.exports, n, n.exports), n.exports;
             }
-            var i = Error("Cannot find module '" + e + "'");
-            throw ((i.code = 'MODULE_NOT_FOUND'), i);
+            var l = Error("Cannot find module '" + e + "'");
+            throw ((l.code = 'MODULE_NOT_FOUND'), l);
         }).register = function (e, t) {
             o[e] = t;
         }),
@@ -44,14 +44,15 @@
             t = document.getElementsByTagName('painted-content')[0],
             o = t.querySelectorAll(e.join(', ')),
             r = {};
-        function i() {
+        function l() {
+            for (let e of o) e.classList.toggle('sticky', !1);
             for (let e of o) {
                 let t = e.tagName.toLowerCase(),
                     o = e.getBoundingClientRect().top <= (r[t] ?? 0);
                 if ((e.classList.toggle('sticky', o), !o)) break;
             }
         }
-        function l() {
+        function i() {
             (
                 document.querySelector('painted-content')?.querySelectorAll('h1, h2, h3, h4, h5, h6') ||
                 (() => {
@@ -66,10 +67,10 @@
             let o = t.getElementsByTagName(e)[0];
             o && (r[e] = (0, n.convertToPixels)(o, getComputedStyle(o).getPropertyValue('--this-top')) + 1);
         }),
-            document.addEventListener('DOMContentLoaded', i),
-            document.addEventListener('scroll', i),
             document.addEventListener('DOMContentLoaded', l),
-            document.addEventListener('resize', l);
+            document.addEventListener('scroll', l),
+            document.addEventListener('DOMContentLoaded', i),
+            document.addEventListener('resize', i);
     }
 })();
 //# sourceMappingURL=content.js.map
