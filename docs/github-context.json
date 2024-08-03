@@ -1,11 +1,11 @@
 {
     "job": "build",
     "ref": "refs/heads/main",
-    "sha": "c42804a860e3cbffb431bce17be7390f0da5b618",
+    "sha": "ec2443f2e16208ccd479734dd482589662fa2779",
     "repository": "ResiSense/ResiSense.github.io",
     "repository_Url": null,
-    "run_id": "10231522490",
-    "run_number": "192",
+    "run_id": "10231537402",
+    "run_number": "193",
     "run_attempt": "1",
     "artifact_cache_size_limit": "10",
     "actor": "CCheukKa",
@@ -13,8 +13,8 @@
     "workflow": "Full CI pipeline",
     "event_name": "push",
     "event": {
-        "after": "c42804a860e3cbffb431bce17be7390f0da5b618",
-        "before": "1e04b50918e92332f7b901a23ac97a7f32a70352",
+        "after": "ec2443f2e16208ccd479734dd482589662fa2779",
+        "before": "9dd2325e22a752f0c58a5fd4419171104fbe5846",
         "commits": [
             {
                 "author": {
@@ -23,37 +23,19 @@
                     "username": "CCheukKa"
                 },
                 "committer": {
-                    "email": "ccheukka@gmail.com",
-                    "name": "CCheukKa",
-                    "username": "CCheukKa"
+                    "email": "noreply@github.com",
+                    "name": "GitHub",
+                    "username": "web-flow"
                 },
                 "distinct": true,
-                "id": "0ce8a3fd650c5fe08e14c7b1188e3822c0d33cd3",
-                "message": "add trailing spaces in DEV-WIKI.md",
-                "timestamp": "2024-08-04T06:51:53+08:00",
-                "tree_id": "8ae62e51a0b09b1b46db9db436f62c55b5a8ffff",
-                "url": "https://github.com/ResiSense/ResiSense.github.io/commit/0ce8a3fd650c5fe08e14c7b1188e3822c0d33cd3"
-            },
-            {
-                "author": {
-                    "email": "ccheukka@gmail.com",
-                    "name": "CCheukKa",
-                    "username": "CCheukKa"
-                },
-                "committer": {
-                    "email": "ccheukka@gmail.com",
-                    "name": "CCheukKa",
-                    "username": "CCheukKa"
-                },
-                "distinct": true,
-                "id": "c42804a860e3cbffb431bce17be7390f0da5b618",
-                "message": "add documentation about github-context.json",
-                "timestamp": "2024-08-04T06:59:55+08:00",
-                "tree_id": "e95e2eb5b513eaada9d1cb849fcfd35a79191427",
-                "url": "https://github.com/ResiSense/ResiSense.github.io/commit/c42804a860e3cbffb431bce17be7390f0da5b618"
+                "id": "ec2443f2e16208ccd479734dd482589662fa2779",
+                "message": "Update DEV-WIKI.md",
+                "timestamp": "2024-08-04T07:02:36+08:00",
+                "tree_id": "4719a42acf87539aca0792a1ed1a823af0d94b04",
+                "url": "https://github.com/ResiSense/ResiSense.github.io/commit/ec2443f2e16208ccd479734dd482589662fa2779"
             }
         ],
-        "compare": "https://github.com/ResiSense/ResiSense.github.io/compare/1e04b50918e9...c42804a860e3",
+        "compare": "https://github.com/ResiSense/ResiSense.github.io/compare/9dd2325e22a7...ec2443f2e162",
         "created": false,
         "deleted": false,
         "forced": false,
@@ -64,16 +46,16 @@
                 "username": "CCheukKa"
             },
             "committer": {
-                "email": "ccheukka@gmail.com",
-                "name": "CCheukKa",
-                "username": "CCheukKa"
+                "email": "noreply@github.com",
+                "name": "GitHub",
+                "username": "web-flow"
             },
             "distinct": true,
-            "id": "c42804a860e3cbffb431bce17be7390f0da5b618",
-            "message": "add documentation about github-context.json",
-            "timestamp": "2024-08-04T06:59:55+08:00",
-            "tree_id": "e95e2eb5b513eaada9d1cb849fcfd35a79191427",
-            "url": "https://github.com/ResiSense/ResiSense.github.io/commit/c42804a860e3cbffb431bce17be7390f0da5b618"
+            "id": "ec2443f2e16208ccd479734dd482589662fa2779",
+            "message": "Update DEV-WIKI.md",
+            "timestamp": "2024-08-04T07:02:36+08:00",
+            "tree_id": "4719a42acf87539aca0792a1ed1a823af0d94b04",
+            "url": "https://github.com/ResiSense/ResiSense.github.io/commit/ec2443f2e16208ccd479734dd482589662fa2779"
         },
         "pusher": {
             "email": "ccheukka@gmail.com",
@@ -86,6 +68,6 @@
     "ref_type": "branch",
     "secret_source": "Actions",
     "workflow_ref": "ResiSense/ResiSense.github.io/.github/workflows/full-ci-pipeline.yaml@refs/heads/main",
-    "workflow_sha": "c42804a860e3cbffb431bce17be7390f0da5b618",
+    "workflow_sha": "ec2443f2e16208ccd479734dd482589662fa2779",
     "workspace": "/home/runner/work/ResiSense.github.io/ResiSense.github.io"
 }
