@@ -182,7 +182,7 @@ After auto-committing onto GitLab, a CI workflow as defined in [`.gitlab-ci.yml`
 > Concurrent CI runs will automatically kill all old jobs. Only the most recent job will execute.
 
 ### [`github-context.json`](/docs/github-context.json)
-This context file includes a lot of information about the most recent commit, grabbed from the GitHub context object during the CI pipeline runs. Its main use is to determine if a build is successful at a glance.  
+This context file includes a lot of information about the most recent commit, grabbed from the GitHub context object during the CI pipeline runs. Its main use is to determine which commit the deploy was built on at a glance.  
 
 The context file can be found at `/github-context.json` in both mirrors.
 - [GitHub Pages](https://ResiSense.github.io/github-context.json)
