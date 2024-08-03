@@ -235,21 +235,39 @@ painted-searchbar {
                         line-height: 1rem;
                     }
 
-                    & #result-content>div {
-                        --arrow-padding: 1rem;
-                        padding-left: var(--arrow-padding);
+                    & #result-content {
+                        align-self: stretch;
 
-                        &::before {
-                            content: '>';
-                            padding: 0;
-                            margin: 0;
-                            width: 0;
-                            height: 0;
-                            position: relative;
-                            right: var(--arrow-padding);
+                        &>a {
+                            --arrow-padding: 1rem;
+                            --internal-padding-left: 0.5rem;
+                            padding-left: calc(var(--arrow-padding) + var(--internal-padding-left));
+                            margin-left: calc(var(--internal-padding-left) * -1);
                             display: block;
-                            font-weight: bolder;
-                            color: var(--saturated-orange);
+                            border-radius: calc(var(--border-radius) / 2);
+                            transition: backdrop-filter 0s;
+
+                            &::before {
+                                content: '>';
+                                padding: 0;
+                                margin: 0;
+                                width: 0;
+                                height: 0;
+                                position: relative;
+                                right: var(--arrow-padding);
+                                display: block;
+                                font-weight: bolder;
+                                color: var(--saturated-orange);
+                                text-decoration: none;
+                                user-select: none;
+                            }
+
+                            &:hover {
+                                backdrop-filter: saturate(150%) brightness(200%);
+                                text-decoration: underline 2px var(--saturated-orange);
+                                font-weight: bolder;
+                                font-stretch: 100%;
+                            }
                         }
                     }
                 }
