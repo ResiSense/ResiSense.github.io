@@ -2,6 +2,7 @@ painted-footer {
     justify-self: flex-end;
     --footer-background-color: var(--bright-brown);
     background-color: var(--footer-background-color);
+    z-index: 1;
 
     &>footer {
         --footer-persistent-height: 2rem;
