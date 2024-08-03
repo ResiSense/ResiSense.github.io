@@ -4830,12 +4830,8 @@ ${''.padEnd(t)}${'^'.repeat(r)}`;
                 document.getElementById('main-search-field') ??
                 (() => {
                     throw Error('Search field not found');
-                })();
-        document.getElementById('search-button') ??
-            (() => {
-                throw Error('Search button not found');
-            })();
-        let n =
+                })(),
+            n =
                 document.getElementById('search-dialog') ??
                 (() => {
                     throw Error('Search dialog not found');
