@@ -47,7 +47,7 @@
 # 🔍Developer Wiki
 This bare-bones wiki contains information for developers working on the site. If you are not sure how something works, please don't hesitate to ask!  
 
-> [!TIP]
+> [!TIP]  
 > You can use the [glossary](#glossary) to understand the terms used in this wiki.  
 
 **To get yourself familiarised, you are recommended to follow one of the tracks depending on what you are trying to do.**  
@@ -122,12 +122,12 @@ This bare-bones wiki contains information for developers working on the site. If
 > 6. Search for `Live Server: Open with Live Server` and select it to open the test site in your browser
 
 The test site should now be running in your browser.  
-> [!NOTE]
+> [!NOTE]  
 > **Navigating to `.../<page>` does not automatically serve `.../<page>.html` and you will see an error. Please manually append `.html` to the URL. This issue only affect the test site and not the live site.**  
 
 Live reloading should be enabled so that changes to the source code are automatically reflected in the browser after running `npm run dev`. You can also refresh manually if live reloading fails.  
 
-> [!TIP]
+> [!TIP]  
 > The `test` folder is not tracked by Git and can be deleted or modified at any time without consequence. Feel free to use it as a sandbox to test stuff with!
 
 # ✍🏻Committing changes
@@ -177,7 +177,7 @@ After auto-committing onto GitLab, a CI workflow as defined in [`.gitlab-ci.yml`
 - `.ts` scripts in [`.gitlab/`](/.gitlab/) are run
 - The site is automatically deployed to [GitLab Pages](https://2024.igem.wiki/hongkong-cuhk)
 
-> [!NOTE]
+> [!NOTE]  
 > Concurrent CI runs will automatically kill all old jobs. Only the most recent job will execute.
 
 # 📂Understanding the repository structure
@@ -219,7 +219,7 @@ After auto-committing onto GitLab, a CI workflow as defined in [`.gitlab-ci.yml`
 This is a very stripped-down and very custom framework specifically designed for the ResiSense website.  
 The framework is how the site is built and how the [content](#content) is displayed.  
 
-> [!TIP]
+> [!TIP]  
 > You can refer to the [glossary](#glossary) as necessary.  
 
 ## 🚲Life cycle of a build
@@ -269,7 +269,7 @@ Choosing a [populator](#populator) is the first step to writing content for the 
 ### Using the [markdown populator](#markdown-populator)
 The markdown populator allows you to write content in markdown format and have it displayed on the site in the [content](#content) field.  
 
-> [!TIP]
+> [!TIP]  
 > You are recommended to read up on the basics of markdown if you are not familiar with it, or use the [markdown cheat sheet](https://www.markdownguide.org/cheat-sheet/); it is really very simple  
 
 > 1. Create a new `.md` file in the `pages/` folder, see [#naming-conventions](#naming-conventions)
@@ -316,7 +316,7 @@ The HTML full replacer allows you to replace the entire content of a page with a
 See [`meta/pageConfig.jsonc`](meta/pageConfig.jsonc) for more information.  
 
 ### Adding a new entry
-> [!TIP]
+> [!TIP]  
 > Copy-and-pasting is your friend!  
 
 > 1. Add a new entry(/object) to the `pages` array in `pageConfig.jsonc`
@@ -336,7 +336,7 @@ I recommend you to go through the steps above to understand how the site works. 
 You can just get a file and upload/dump it [here](https://github.com/ResiSense/ResiSense.github.io/tree/main/pages) and I will take care of the rest. Use the ResiSense GitHub account to do this maybe despite it normally being [a terrible idea](#committing-changes).  
 
 # ✨Working on the frontend
-> [!TIP]
+> [!TIP]  
 > Copy-and-pasting is your friend!  
 
 The frontend primarily makes use of [templates](#template), [CSS embeds](#css-embeds), [JS embeds](#js-embeds), and [TS embeds](#ts-embeds) to structure the site. Your domain should mainly be `templates/`, `styles/`, and `scripts/`. Make sure you [understand the repository structure](#understanding-the-repository-structure).  
