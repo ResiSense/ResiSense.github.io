@@ -194,7 +194,7 @@ The context file can be found at `/github-context.json` in both mirrors.
 | [`test/`](/test/)                                 | Test build of the site                    |                         | Sandbox for testing; untracked |
 | [`pages/`](/pages/)                               | Content of the site                       | `.md` and `.html` files |                                |
 | [`assets/`](/assets/)                             | Assets used in the site                   | predominantly images    | **is cloned to `docs/`**       |
-| [`scripts/`](/scripts/)                           | JS scripts to be packaged to clients      | `.ts` files             | **is cloned to `docs/`**       |
+| [`scripts/`](/scripts/)                           | JS scripts to be packaged to clients      | `.ts` files             | **is compiled to `docs/`**     |
 | [`styles/`](/styles/)                             | CSS stylesheets to be packaged to clients | `.css` files            | **is cloned to `docs/`**       |
 | [`meta/`](/meta/)                                 | Metadata for the site                     |                         |                                |
 | [`templates/`](/templates/)                       | HTML templates for the site               | `.html` files           |                                |
