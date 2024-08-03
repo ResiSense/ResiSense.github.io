@@ -1,25 +1,40 @@
 (() => {
-    var e = globalThis,
-        t = {},
+    function e(e, t, o, r) {
+        Object.defineProperty(e, t, { get: o, set: r, enumerable: !0, configurable: !0 });
+    }
+    var t = globalThis,
         o = {},
-        r = e.parcelRequire8bfa;
-    null == r &&
-        (((r = function (e) {
-            if (e in t) return t[e].exports;
-            if (e in o) {
-                var r = o[e];
-                delete o[e];
+        r = {},
+        n = t.parcelRequire8bfa;
+    null == n &&
+        (((n = function (e) {
+            if (e in o) return o[e].exports;
+            if (e in r) {
+                var t = r[e];
+                delete r[e];
                 var n = { id: e, exports: {} };
-                return (t[e] = n), r.call(n.exports, n, n.exports), n.exports;
+                return (o[e] = n), t.call(n.exports, n, n.exports), n.exports;
             }
             var l = Error("Cannot find module '" + e + "'");
             throw ((l.code = 'MODULE_NOT_FOUND'), l);
         }).register = function (e, t) {
-            o[e] = t;
+            r[e] = t;
         }),
-        (e.parcelRequire8bfa = r)),
-        (0, r.register)('df1N6', function (e, t) {
-            function o(e, t) {
+        (t.parcelRequire8bfa = n)),
+        (0, n.register)('df1N6', function (t, o) {
+            function r(e) {
+                return encodeURIComponent(e)
+                    .replace(/[-]/g, '%2D')
+                    .replace(/[.]/g, '%2E')
+                    .replace(/[_]/g, '%5F')
+                    .replace(/[~]/g, '%7E')
+                    .replace(/[*]/g, '%2A')
+                    .replace(/['']/g, '%27')
+                    .replace(/[(]/g, '%28')
+                    .replace(/[)]/g, '%29')
+                    .replace(/[,]/g, '%2C');
+            }
+            function n(e, t) {
                 let o = document.createElement('div');
                 (o.style.position = 'absolute'),
                     (o.style.visibility = 'hidden'),
@@ -28,23 +43,19 @@
                 let r = window.getComputedStyle(o).height;
                 return e.removeChild(o), parseFloat(r);
             }
-            Object.defineProperty(e.exports, 'convertToPixels', {
-                get: () => o,
-                set: void 0,
-                enumerable: !0,
-                configurable: !0,
-            }),
+            e(t.exports, 'safeURIEncode', () => r),
+                e(t.exports, 'convertToPixels', () => n),
                 window.setTimeout(() => {
                     document.body.classList.add('post-buffered');
                 }, 100);
         });
-    var n = r('df1N6');
+    var l = n('df1N6');
     {
         let e = ['h1', 'h2', 'h3', 'h4', 'h5', 'h6'],
             t = document.getElementsByTagName('painted-content')[0],
             o = t.querySelectorAll(e.join(', ')),
             r = {};
-        function l() {
+        function i() {
             for (let e of o) e.classList.toggle('sticky', !1);
             for (let e of o) {
                 let t = e.tagName.toLowerCase(),
@@ -52,7 +63,7 @@
                 if ((e.classList.toggle('sticky', o), !o)) break;
             }
         }
-        function i() {
+        function a() {
             (
                 document.querySelector('painted-content')?.querySelectorAll('h1, h2, h3, h4, h5, h6') ||
                 (() => {
@@ -65,12 +76,12 @@
         }
         e.forEach(e => {
             let o = t.getElementsByTagName(e)[0];
-            o && (r[e] = (0, n.convertToPixels)(o, getComputedStyle(o).getPropertyValue('--this-top')) + 1);
+            o && (r[e] = (0, l.convertToPixels)(o, getComputedStyle(o).getPropertyValue('--this-top')) + 1);
         }),
-            document.addEventListener('DOMContentLoaded', l),
-            document.addEventListener('scroll', l),
             document.addEventListener('DOMContentLoaded', i),
-            document.addEventListener('resize', i);
+            document.addEventListener('scroll', i),
+            document.addEventListener('DOMContentLoaded', a),
+            document.addEventListener('resize', a);
     }
 })();
 //# sourceMappingURL=content.js.map
