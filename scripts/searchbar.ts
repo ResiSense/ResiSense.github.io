@@ -100,7 +100,7 @@ import SearchResults from './SearchResults';
     searchbarElement.addEventListener('focusin', () => { searchDialogElement.toggleAttribute('open', true); });
     searchbarElement.addEventListener('focusout', () => { searchDialogElement.toggleAttribute('open', false); });
     //
-    document.addEventListener('keydown', (event: KeyboardEvent) => {
+    window.addEventListener('keydown', (event: KeyboardEvent) => {
         if (event.ctrlKey && event.shiftKey && event.key === 'F') {
             event.preventDefault();
             mainSearchFieldElement.focus();

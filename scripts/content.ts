@@ -15,8 +15,8 @@ import { convertToPixels } from "./globalLibrary";
         }
     });
     /* -------------------------------------------------------------------------- */
-    document.addEventListener('DOMContentLoaded', determineStickiness);
-    document.addEventListener('scroll', determineStickiness);
+    window.addEventListener('DOMContentLoaded', determineStickiness);
+    window.addEventListener('scroll', determineStickiness);
     function determineStickiness() {
         for (const element of stickyHeaderElements) { element.classList.toggle('sticky', false); }
         for (const element of stickyHeaderElements) {
@@ -30,8 +30,8 @@ import { convertToPixels } from "./globalLibrary";
         };
     }
     /* -------------------------------------------------------------------------- */
-    document.addEventListener('DOMContentLoaded', updateScrollMarkerMargins);
-    document.addEventListener('resize', updateScrollMarkerMargins);
+    window.addEventListener('DOMContentLoaded', updateScrollMarkerMargins);
+    window.addEventListener('resize', updateScrollMarkerMargins);
     function updateScrollMarkerMargins() {
         const headingElements = document.querySelector('painted-content')?.querySelectorAll('h1, h2, h3, h4, h5, h6')
             || (() => { throw new Error('Heading elements not found!') })();
