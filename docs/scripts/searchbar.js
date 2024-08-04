@@ -4959,7 +4959,7 @@ ${''.padEnd(t)}${'^'.repeat(r)}`;
             t.addEventListener('focusout', () => {
                 n.toggleAttribute('open', !1);
             }),
-            document.addEventListener('keydown', e => {
+            window.addEventListener('keydown', e => {
                 e.ctrlKey && e.shiftKey && 'F' === e.key && (e.preventDefault(), i.focus());
             });
     })();
