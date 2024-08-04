@@ -1,6 +1,5 @@
 :root {
     --header-height: 8rem;
-    --padding-size: 0.5rem;
 }
 
 painted-header {
@@ -14,17 +13,18 @@ painted-header {
         flex-direction: row;
         z-index: 1;
         pointer-events: none;
+        --header-padding-size: 0.5rem;
 
         & > .logo-container {
             margin-left: 1rem;
             height: var(--header-height);
             box-sizing: border-box;
             aspect-ratio: 1;
-            padding: calc(var(--padding-size) * 2);
+            padding: calc(var(--header-padding-size) * 2);
             background-color: var(--bright-brown);
             border-radius: 0 0 50% 50%;
             pointer-events: initial;
-            z-index: 1;
+            z-index: 2;
 
             & > .logo {
                 display: block;
@@ -52,10 +52,11 @@ painted-header {
                 background-color: var(--bright-brown);
                 width: 100%;
                 box-sizing: border-box;
-                padding-right: var(--padding-size);
+                padding-right: var(--header-padding-size);
                 box-shadow: var(--bright-brown) -10rem 0px 0px 0px;
                 pointer-events: initial;
                 position: relative;
+                z-index: 1;
 
                 & > * {
                     height: 100%;
@@ -135,13 +136,15 @@ painted-header {
                     align-items: center;
                     gap: 1rem;
                     flex-direction: row;
+                    --header-rightside-button-border-radius: 0.5rem;
+                    --header-rightside-button-border-width: 0.2rem;
 
                     & .header-rightside-button {
                         background-color: var(--pale-green);
                         border-color: var(--light-green);
-                        border-radius: 0.5rem;
+                        border-radius: var(--header-rightside-button-border-radius);
                         border-style: solid;
-                        border-width: 0.2rem;
+                        border-width: var(--header-rightside-button-border-width);
                         user-select: none;
                     }
                 }
@@ -153,7 +156,7 @@ painted-header {
                 display: flex;
                 align-items: center;
                 justify-content: space-between;
-                padding: 0 var(--padding-size);
+                padding: 0 var(--header-padding-size);
                 margin-top: 0.5rem;
                 margin-bottom: auto;
                 pointer-events: none;

@@ -29,13 +29,16 @@
             href="/styles/content.css" /><link rel="stylesheet" type="text/css" href="/styles/footer.css" /><link
             rel="stylesheet"
             type="text/css"
-            href="/styles/searchbar.css" /><link rel="stylesheet" type="text/css" href="/styles/catalogue.css" /><link
+            href="/styles/searchbar.css" /><link
             rel="stylesheet"
             type="text/css"
-            href="/styles/title-card.css" /><link rel="stylesheet" type="text/css" href="/styles/outline.css" /><link
+            href="/styles/hamburger-menu.css" /><link
             rel="stylesheet"
             type="text/css"
-            href="/styles/sidebar.css" /><script
+            href="/styles/catalogue.css" /><link rel="stylesheet" type="text/css" href="/styles/title-card.css" /><link
+            rel="stylesheet"
+            type="text/css"
+            href="/styles/outline.css" /><link rel="stylesheet" type="text/css" href="/styles/sidebar.css" /><script
             type="text/javascript"
             src="/scripts/responsivenessHandler.js"
             defer=""
@@ -43,6 +46,7 @@
         ><script type="text/javascript" src="/scripts/parallax-doodle.js" defer=""></script
         ><script type="text/javascript" src="/scripts/content.js" defer=""></script
         ><script type="text/javascript" src="/scripts/searchbar.js" defer=""></script
+        ><script type="text/javascript" src="/scripts/hamburger-menu.js" defer=""></script
         ><script type="text/javascript" src="/scripts/catalogue.js" defer=""></script
         ><script type="text/javascript" src="/scripts/title-card.js" defer=""></script
         ><script type="text/javascript" src="/scripts/outline.js" defer=""></script
@@ -53,18 +57,18 @@
             <painted-parallax-doodle>
                 <div id="parallax-doodle-container"
                     ><img
-                        src="/assets/doodles/dna.svg"
-                        style="translate: 82vw 840px; animation-name: parallax-doodle-mkus57" /><img
-                        src="/assets/doodles/virus.svg"
-                        style="translate: 93vw 1000px; animation-name: parallax-doodle-s2r3w5" /><img
-                        src="/assets/doodles/red blood cell.svg"
-                        style="translate: 43vw 900px; animation-name: parallax-doodle-s19vnr" /><img
-                        src="/assets/doodles/e coli.svg"
-                        style="translate: 66vw 100px; animation-name: parallax-doodle-pxotbv" /><img
-                        src="/assets/logos/resisense/ResiSense Orange Logo.svg"
-                        style="translate: 1vw 180px; animation-name: parallax-doodle-vjqtl7" /><img
                         src="/assets/doodles/syringe.svg"
-                        style="translate: 28vw 1140px; animation-name: parallax-doodle-d1f2f"
+                        style="translate: 42vw 80px; animation-name: parallax-doodle-n8dvkt" /><img
+                        src="/assets/doodles/red blood cell.svg"
+                        style="translate: 6vw 1480px; animation-name: parallax-doodle-pj12sq" /><img
+                        src="/assets/doodles/drug.svg"
+                        style="translate: 29vw 180px; animation-name: parallax-doodle-lbs15k" /><img
+                        src="/assets/doodles/e coli.svg"
+                        style="translate: 8vw 960px; animation-name: parallax-doodle-2mm1x6" /><img
+                        src="/assets/doodles/bacteria.svg"
+                        style="translate: 98vw 700px; animation-name: parallax-doodle-bb4kir" /><img
+                        src="/assets/doodles/virus.svg"
+                        style="translate: 52vw 1360px; animation-name: parallax-doodle-ev4cdh"
                 /></div>
             </painted-parallax-doodle>
             <painted-header>
@@ -125,7 +129,42 @@
                                         </dialog>
                                     </search>
                                 </painted-searchbar>
-                                <painted-hamburger-menu> 🍔 </painted-hamburger-menu>
+                                <painted-hamburger-menu>
+                                    <button id="hamburger-button" class="header-rightside-button">🍔</button>
+                                    <div class="hamburger-menu-container">
+                                        <dialog id="hamburger-menu">
+                                            <template id="hamburger-menu-item-template">
+                                                <div id="hamburger-menu-item">
+                                                    <a href=""></a>
+                                                </div>
+                                            </template>
+
+                                            <div id="hamburger-menu-item">
+                                                <a href="/home">home</a>
+                                            </div>
+
+                                            <div id="hamburger-menu-item">
+                                                <a href="/project">project</a>
+                                            </div>
+
+                                            <div id="hamburger-menu-item">
+                                                <a href="/project/description">project description</a>
+                                            </div>
+
+                                            <div id="hamburger-menu-item">
+                                                <a href="/project/design">design</a>
+                                            </div>
+
+                                            <div id="hamburger-menu-item">
+                                                <a href="/integrated-human-practice">integrated human practice</a>
+                                            </div>
+
+                                            <div id="hamburger-menu-item">
+                                                <a href="/acknowledgements">acknowledgements</a>
+                                            </div>
+                                        </dialog>
+                                    </div>
+                                </painted-hamburger-menu>
                             </div>
                         </div>
                         <div class="header-catalogue-container">
