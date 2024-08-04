@@ -5,6 +5,10 @@ painted-hamburger-menu {
         font-size: 6mm;
     }
 
+    &:focus-within > #hamburger-button {
+        background-color: var(--saturated-orange);
+    }
+
     & > #hamburger-button {
         margin: 0;
         height: 2rem;
@@ -13,7 +17,8 @@ painted-hamburger-menu {
         justify-content: center;
         align-items: center;
         text-align: center;
-        background-color: var(--pale-green);
+        background-color: var(--desaturated-orange);
+        border-color: var(--saturated-orange);
         cursor: pointer;
         z-index: 1;
     }
@@ -33,7 +38,7 @@ painted-hamburger-menu {
             margin: 0;
             margin-right: var(--header-padding-size);
             margin-top: 2rem;
-            background: var(--desaturated-orange);
+            background-color: var(--desaturated-orange);
             border-color: var(--saturated-orange);
             border-radius: var(--header-rightside-button-border-radius);
             border-width: var(--header-rightside-button-border-width);
@@ -42,7 +47,7 @@ painted-hamburger-menu {
             &:not([open]) {
                 pointer-events: none;
                 opacity: 0;
-                transform: 2rem -2rem;
+                transform: 0 -2rem;
                 scale: 0;
                 margin-top: 0;
             }

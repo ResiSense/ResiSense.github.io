@@ -1,11 +1,11 @@
 {
     "job": "build",
     "ref": "refs/heads/main",
-    "sha": "762314473e1316654a39833aed0fa97d5bac3c02",
+    "sha": "8ff8a11d1be6e2bf2eb7a55d6e72272303818685",
     "repository": "ResiSense/ResiSense.github.io",
     "repository_Url": null,
-    "run_id": "10237710087",
-    "run_number": "197",
+    "run_id": "10237753734",
+    "run_number": "198",
     "run_attempt": "1",
     "artifact_cache_size_limit": "10",
     "actor": "CCheukKa",
@@ -13,8 +13,8 @@
     "workflow": "Full CI pipeline",
     "event_name": "push",
     "event": {
-        "after": "762314473e1316654a39833aed0fa97d5bac3c02",
-        "before": "057fb290d9b53e015e879fe41c541b86131e3a23",
+        "after": "8ff8a11d1be6e2bf2eb7a55d6e72272303818685",
+        "before": "601e726e33af8b0bc845b8a108366d1567731e98",
         "commits": [
             {
                 "author": {
@@ -28,11 +28,11 @@
                     "username": "CCheukKa"
                 },
                 "distinct": false,
-                "id": "55e58951733e56c8a8763648a1ed27a101f5fcbd",
-                "message": "add functional hamburger menu",
-                "timestamp": "2024-08-05T00:18:36+08:00",
-                "tree_id": "9b50033b397c0267425eea64e07daa14d83b0e57",
-                "url": "https://github.com/ResiSense/ResiSense.github.io/commit/55e58951733e56c8a8763648a1ed27a101f5fcbd"
+                "id": "dc93498334eae2af0e802d366bbd6a01eaadb97f",
+                "message": "change colour",
+                "timestamp": "2024-08-05T00:37:14+08:00",
+                "tree_id": "1f8180aa229199f7ab0c69d49f05a19c36d9da0c",
+                "url": "https://github.com/ResiSense/ResiSense.github.io/commit/dc93498334eae2af0e802d366bbd6a01eaadb97f"
             },
             {
                 "author": {
@@ -44,34 +44,16 @@
                     "email": "ccheukka@gmail.com",
                     "name": "CCheukKa",
                     "username": "CCheukKa"
-                },
-                "distinct": false,
-                "id": "9c192fe9cd402571250d6b011fdc54c0a98d026b",
-                "message": "add responsiveness",
-                "timestamp": "2024-08-05T00:30:53+08:00",
-                "tree_id": "07642d43a4a8152a5d98bbe1a1feeee0512e7425",
-                "url": "https://github.com/ResiSense/ResiSense.github.io/commit/9c192fe9cd402571250d6b011fdc54c0a98d026b"
-            },
-            {
-                "author": {
-                    "email": "ccheukka@gmail.com",
-                    "name": "CCheukKa",
-                    "username": "CCheukKa"
-                },
-                "committer": {
-                    "email": "noreply@github.com",
-                    "name": "GitHub",
-                    "username": "web-flow"
                 },
                 "distinct": true,
-                "id": "762314473e1316654a39833aed0fa97d5bac3c02",
-                "message": "Merge pull request #97 from ResiSense/hamburger-function\n\nAdd function to hamburger menu",
-                "timestamp": "2024-08-05T00:31:48+08:00",
-                "tree_id": "d882ae31629c5bc6aff3df938f560bdef4e80222",
-                "url": "https://github.com/ResiSense/ResiSense.github.io/commit/762314473e1316654a39833aed0fa97d5bac3c02"
+                "id": "8ff8a11d1be6e2bf2eb7a55d6e72272303818685",
+                "message": "Merge branch hamburger-function",
+                "timestamp": "2024-08-05T00:38:09+08:00",
+                "tree_id": "3b0f4c320db1b18d940b2e873db45d02dad01628",
+                "url": "https://github.com/ResiSense/ResiSense.github.io/commit/8ff8a11d1be6e2bf2eb7a55d6e72272303818685"
             }
         ],
-        "compare": "https://github.com/ResiSense/ResiSense.github.io/compare/057fb290d9b5...762314473e13",
+        "compare": "https://github.com/ResiSense/ResiSense.github.io/compare/601e726e33af...8ff8a11d1be6",
         "created": false,
         "deleted": false,
         "forced": false,
@@ -82,16 +64,16 @@
                 "username": "CCheukKa"
             },
             "committer": {
-                "email": "noreply@github.com",
-                "name": "GitHub",
-                "username": "web-flow"
+                "email": "ccheukka@gmail.com",
+                "name": "CCheukKa",
+                "username": "CCheukKa"
             },
             "distinct": true,
-            "id": "762314473e1316654a39833aed0fa97d5bac3c02",
-            "message": "Merge pull request #97 from ResiSense/hamburger-function\n\nAdd function to hamburger menu",
-            "timestamp": "2024-08-05T00:31:48+08:00",
-            "tree_id": "d882ae31629c5bc6aff3df938f560bdef4e80222",
-            "url": "https://github.com/ResiSense/ResiSense.github.io/commit/762314473e1316654a39833aed0fa97d5bac3c02"
+            "id": "8ff8a11d1be6e2bf2eb7a55d6e72272303818685",
+            "message": "Merge branch hamburger-function",
+            "timestamp": "2024-08-05T00:38:09+08:00",
+            "tree_id": "3b0f4c320db1b18d940b2e873db45d02dad01628",
+            "url": "https://github.com/ResiSense/ResiSense.github.io/commit/8ff8a11d1be6e2bf2eb7a55d6e72272303818685"
         },
         "pusher": {
             "email": "ccheukka@gmail.com",
@@ -104,6 +86,6 @@
     "ref_type": "branch",
     "secret_source": "Actions",
     "workflow_ref": "ResiSense/ResiSense.github.io/.github/workflows/full-ci-pipeline.yaml@refs/heads/main",
-    "workflow_sha": "762314473e1316654a39833aed0fa97d5bac3c02",
+    "workflow_sha": "8ff8a11d1be6e2bf2eb7a55d6e72272303818685",
     "workspace": "/home/runner/work/ResiSense.github.io/ResiSense.github.io"
 }
