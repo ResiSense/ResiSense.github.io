@@ -1,6 +1,10 @@
 painted-hamburger-menu {
     isolation: isolate;
 
+    @media screen and (max-width: 1100px) {
+        font-size: 6mm;
+    }
+
     &>#hamburger-button {
         margin: 0;
         height: 2rem;
@@ -28,7 +32,7 @@ painted-hamburger-menu {
             display: block;
             margin: 0;
             margin-right: var(--header-padding-size);
-            margin-top: var(--header-padding-size);
+            margin-top: 2rem;
             background: var(--desaturated-orange);
             border-color: var(--saturated-orange);
             border-radius: var(--header-rightside-button-border-radius);
