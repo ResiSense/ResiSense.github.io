@@ -1,0 +1,5 @@
+aside {
+    &>.top-button {
+        user-select: none;
+    }
+}

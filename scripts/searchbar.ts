@@ -1,4 +1,5 @@
 import Searchable, { SearchTarget } from './../lib/types/Searchable';
+import { safeURIEncode } from './globalLibrary';
 import SearchResults from './SearchResults';
 
 (async () => {
@@ -11,9 +12,6 @@ import SearchResults from './SearchResults';
     const mainSearchFieldElement = (document.getElementById('main-search-field')
         ?? (() => { throw new Error('Search field not found') })()
     ) as HTMLInputElement;
-    const searchButtonElement = (document.getElementById('search-button')
-        ?? (() => { throw new Error('Search button not found') })()
-    ) as HTMLButtonElement;
     const searchDialogElement = (document.getElementById('search-dialog')
         ?? (() => { throw new Error('Search dialog not found') })()
     ) as HTMLDialogElement;
@@ -37,7 +35,9 @@ import SearchResults from './SearchResults';
     Searchable.index = await (await fetch(`/${BASE_URL}/search-index.json`)).json();
     const searchTargets: SearchTarget[] = Searchable.targets;
     // console.log({ index: Searchable.index, targets: Searchable.targets });
-
+    /* -------------------------------------------------------------------------- */
+    headerSearchFieldElement.addEventListener('focusin', () => { mainSearchFieldElement.focus(); });
+    /* -------------------------------------------------------------------------- */
     let oldSearchFieldQuery: string;
     mainSearchFieldElement.addEventListener('keydown', onSearchFieldKeyDown);
     function onSearchFieldKeyDown() {
@@ -56,7 +56,7 @@ import SearchResults from './SearchResults';
             redrawSearchResults(query)
         }
     }
-
+    /* -------------------------------------------------------------------------- */
     searchbarElement.addEventListener('keydown', (event: KeyboardEvent) => {
         // allow non-typing keys pass through
         const nonTypingKeys = [
@@ -100,7 +100,7 @@ import SearchResults from './SearchResults';
     searchbarElement.addEventListener('focusin', () => { searchDialogElement.toggleAttribute('open', true); });
     searchbarElement.addEventListener('focusout', () => { searchDialogElement.toggleAttribute('open', false); });
     //
-    document.addEventListener('keydown', (event: KeyboardEvent) => {
+    window.addEventListener('keydown', (event: KeyboardEvent) => {
         if (event.ctrlKey && event.shiftKey && event.key === 'F') {
             event.preventDefault();
             mainSearchFieldElement.focus();
@@ -117,28 +117,45 @@ import SearchResults from './SearchResults';
         console.log(`Querying for "${query}" took`, endTime - startTime, 'ms', usedCache ? '(from cache)' : '');
         //! -----------
         console.log(searchResults);
-
+        //
         searchResultsElement.innerHTML = '';
         for (const searchResult of searchResults.sort((a, b) => b.score - a.score)) {
             const newSearchResultElement = searchResultTemplate.cloneNode(true) as DocumentFragment;
             //
+            const baselessResultPageHref = `/${searchResult.path}${window.location.pathname.endsWith('.html') ? '.html' : ''}`;
+            const resultPageHref = `/${BASE_URL}${baselessResultPageHref}`;
             (newSearchResultElement.querySelector('#result-title') as HTMLDivElement).innerHTML = searchResult.highlightedTitleChunks.join(' ').trim() || searchResult.title;
             (newSearchResultElement.querySelector('#result-path') as HTMLDivElement).textContent = searchResult.path;
             //
             const contentElement = newSearchResultElement.querySelector('#result-content') as HTMLDivElement;
             for (const contentChunk of searchResult.highlightedContentChunks) {
-                const contentChunkElement = document.createElement('div');
+                const contentChunkElement = document.createElement('a');
                 contentChunkElement.innerHTML = contentChunk;
+                //
+                const safeText = safeURIEncode((
+                    contentChunkElement.textContent
+                    || (() => { throw new Error('Empty content chunk') })()
+                ).trim());
+                const resultTextHref = `${resultPageHref}#:~:text=${safeText}`;
+                contentChunkElement.href = resultTextHref;
+                if (window.location.href.endsWith(baselessResultPageHref)) {
+                    // same page search
+                    contentChunkElement.addEventListener('click', () => {
+                        searchDialogElement.toggleAttribute('open', false);
+                        const oParent = searchDialogElement.parentNode;
+                        document.body.appendChild(searchDialogElement);
+                        window.location.href = resultTextHref;
+                        requestAnimationFrame(() => { oParent?.appendChild(searchDialogElement); });
+                    });
+                }
+                //
                 contentElement.appendChild(contentChunkElement);
             }
             //
             searchResultsElement.appendChild(newSearchResultElement);
-
             // I have no idea why this jank is necessary
-            (searchResultsElement.lastElementChild as HTMLAnchorElement).href =
-                `/${BASE_URL}/${searchResult.path}${window.location.pathname.endsWith('.html') ? '.html' : ''}`;
+            (searchResultsElement.lastElementChild as HTMLAnchorElement).href = resultPageHref;
         }
-
         searchResultsElement.appendChild(searchResultsEndTemplate.cloneNode(true));
     }
 })();

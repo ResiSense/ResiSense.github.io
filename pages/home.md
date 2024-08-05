@@ -1,3 +1,7 @@
+🚧 Under construction
+
+***See [project description](/project/description) for now.***
+
 Never start with a heading otherwise it will look weird with the page title; hence this sentence is here. Maybe use this space to broadly introduce the page.  
 
 # This is home

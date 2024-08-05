@@ -45,7 +45,7 @@ function rebuildSite() {
         currentBuildProcess = null;
     }
     console.log('Auto rebuilding...');
-    currentBuildProcess = spawn('npm', ['run', 'watch-do'], { stdio: 'inherit', shell: true, });
+    currentBuildProcess = spawn('npm', ['run', '_watch-do'], { stdio: 'inherit', shell: true, });
     currentBuildProcess.on('exit', () => {
         console.log('Auto rebuild done!');
         currentBuildProcess = null;

@@ -25,20 +25,32 @@ export type FlattenedPage = {
     redirectAliasPaths?: string[];
 }
 
+type Entry = {
+    name: string;
+    path: string;
+}
 
+let _pageConfig: PageConfig | undefined = undefined;
 const pageConfig: PageConfig = ((): PageConfig => {
+    if (_pageConfig !== undefined) { return _pageConfig; }
+    //
     const rawJsonc = fs.readFileSync('./meta/pageConfig.jsonc', 'utf8');
     const singleLineCommentRegex = /\/\/.*/g;
     const multiLineCommentRegex = /\/\*[\s\S]*?\*\//g;
     const json = rawJsonc.replace(singleLineCommentRegex, '').replace(multiLineCommentRegex, '');
-    return JSON.parse(json);
+    _pageConfig = JSON.parse(json) as PageConfig;
+    return _pageConfig!;
 })();
 
+let _flattenedPageConfig: FlattenedPageConfig | undefined = undefined;
 const flattenedPageConfig: FlattenedPageConfig = ((): FlattenedPageConfig => {
+    if (_flattenedPageConfig !== undefined) { return _flattenedPageConfig; }
+    //
     const flattenedPageConfig: FlattenedPageConfig = { pages: [] };
     flattenPages(pageConfig.pages);
-    return flattenedPageConfig;
-
+    _flattenedPageConfig = flattenedPageConfig;
+    return _flattenedPageConfig;
+    //  
     function flattenPages(pages: Page[], trace: string[] = []) {
         pages.forEach(page => {
             flattenedPageConfig.pages.push({ ...page, trace: [...trace, page.name] });
@@ -46,6 +58,26 @@ const flattenedPageConfig: FlattenedPageConfig = ((): FlattenedPageConfig => {
                 flattenPages(page.pages, [...trace, page.name]);
             }
         });
+    }
+})();
+
+let _pageEntries: Entry[] | undefined = undefined;
+const pageEntries: Entry[] = (() => {
+    if (_pageEntries !== undefined) { return _pageEntries; }
+    //
+    const entries: Entry[] = [];
+    pageConfig.pages.forEach(page => addFlattenedPageToEntries(page));
+    _pageEntries = entries;
+    return _pageEntries;
+    // 
+    function addFlattenedPageToEntries(page: Page, pathTrace = '') {
+        if (page.hideFromCatalogue) { return; }
+        const entry: Entry = {
+            name: page.title ? page.title.toLowerCase() : page.name,
+            path: `${pathTrace}/${page.name}`,
+        }
+        entries.push(entry);
+        if (page.pages) { page.pages.forEach(subPage => addFlattenedPageToEntries(subPage, entry.path)); }
     }
 })();
 
@@ -61,5 +93,6 @@ function getTrace(page: Page | FlattenedPage): string[] {
 export default class Pages {
     static pageConfig = pageConfig;
     static flattenedPageConfig = flattenedPageConfig;
+    static pageEntries = pageEntries;
     static getTrace = getTrace;
 }

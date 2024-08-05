@@ -3,7 +3,7 @@
 
 <css-embed href="/styles/searchbar.css" />
 
-<search id="searchbar">
+<search id="searchbar" class="header-rightside-button">
     <input id="header-search-field" type="search" placeholder="Search... (Ctrl + Shift + F)" autocomplete="off" />
     <button id="search-button" type="submit">🔍</button>
     <dialog id="search-dialog">
@@ -11,7 +11,7 @@
             <div class="search-icon">🔍</div>
             <input id="main-search-field" type="search" placeholder="Search for a page..." autocomplete="off" />
         </div>
-        <div id="search-results">
+        <div id="search-results" class="require-scrollbar">
             <template id="search-result-template">
                 <a id="search-result">
                     <div class="result-leftside">
