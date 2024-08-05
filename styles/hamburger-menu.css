@@ -25,6 +25,7 @@ painted-hamburger-menu {
 
     &>.hamburger-menu-container {
         width: 100%;
+        height: 0;
         position: fixed;
         display: flex;
         flex-direction: row;
