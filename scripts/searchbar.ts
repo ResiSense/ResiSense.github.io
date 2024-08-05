@@ -12,9 +12,6 @@ import SearchResults from './SearchResults';
     const mainSearchFieldElement = (document.getElementById('main-search-field')
         ?? (() => { throw new Error('Search field not found') })()
     ) as HTMLInputElement;
-    const searchButtonElement = (document.getElementById('search-button')
-        ?? (() => { throw new Error('Search button not found') })()
-    ) as HTMLButtonElement;
     const searchDialogElement = (document.getElementById('search-dialog')
         ?? (() => { throw new Error('Search dialog not found') })()
     ) as HTMLDialogElement;
@@ -103,7 +100,7 @@ import SearchResults from './SearchResults';
     searchbarElement.addEventListener('focusin', () => { searchDialogElement.toggleAttribute('open', true); });
     searchbarElement.addEventListener('focusout', () => { searchDialogElement.toggleAttribute('open', false); });
     //
-    document.addEventListener('keydown', (event: KeyboardEvent) => {
+    window.addEventListener('keydown', (event: KeyboardEvent) => {
         if (event.ctrlKey && event.shiftKey && event.key === 'F') {
             event.preventDefault();
             mainSearchFieldElement.focus();

@@ -2,6 +2,14 @@ window.setTimeout(() => {
     document.body.classList.add('post-buffered');
 }, 100);
 
+window.addEventListener('DOMContentLoaded', stripUrlTextFragment);
+function stripUrlTextFragment() {
+    const rawURL = performance.getEntriesByType("navigation")[0].name;
+    if (rawURL.includes('#:~:text=')) {
+        window.history.replaceState(null, '', rawURL.split('#')[0]);
+    }
+}
+
 function safeURIEncode(string: string): string {
     return encodeURIComponent(string)
         .replace(/[-]/g, '%2D')

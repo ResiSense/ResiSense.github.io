@@ -679,7 +679,11 @@
                 e(t.exports, 'convertToPixels', () => n),
                 window.setTimeout(() => {
                     document.body.classList.add('post-buffered');
-                }, 100);
+                }, 100),
+                window.addEventListener('DOMContentLoaded', function () {
+                    let e = performance.getEntriesByType('navigation')[0].name;
+                    e.includes('#:~:text=') && window.history.replaceState(null, '', e.split('#')[0]);
+                });
         }),
         M('kyWZn', function (r, i) {
             e(r.exports, 'default', () => o);
@@ -4826,12 +4830,8 @@ ${''.padEnd(t)}${'^'.repeat(r)}`;
                 document.getElementById('main-search-field') ??
                 (() => {
                     throw Error('Search field not found');
-                })();
-        document.getElementById('search-button') ??
-            (() => {
-                throw Error('Search button not found');
-            })();
-        let n =
+                })(),
+            n =
                 document.getElementById('search-dialog') ??
                 (() => {
                     throw Error('Search dialog not found');
@@ -4959,7 +4959,7 @@ ${''.padEnd(t)}${'^'.repeat(r)}`;
             t.addEventListener('focusout', () => {
                 n.toggleAttribute('open', !1);
             }),
-            document.addEventListener('keydown', e => {
+            window.addEventListener('keydown', e => {
                 e.ctrlKey && e.shiftKey && 'F' === e.key && (e.preventDefault(), i.focus());
             });
     })();
