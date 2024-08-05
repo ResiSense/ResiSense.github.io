@@ -44,6 +44,7 @@ painted-hamburger-menu {
             border-radius: var(--header-rightside-button-border-radius);
             border-width: var(--header-rightside-button-border-width);
             transform-origin: top right;
+            pointer-events: initial;
 
             &:not([open]) {
                 pointer-events: none;
