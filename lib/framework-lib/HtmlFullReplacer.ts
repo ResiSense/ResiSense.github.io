@@ -5,17 +5,17 @@
 
 import fs = require('fs-extra');
 
-import Pages, { Page } from '../types/Pages';
+import { Page } from '../types/Pages';
 import { PageData } from '../types/PageData';
 
 const baseFilename = (page: Page) => {
-    return `pages/${Pages.getTrace(page).join('.')}.html`;
+    return `pages/${page.trace.join('.')}.html`;
 };
 
 async function replacePageWithFullHtml(pageData: PageData) {
     const page = pageData.page;
     // 
-    const htmlPath = `pages/${Pages.getTrace(page).join('.')}.html`;
+    const htmlPath = `pages/${page.trace.join('.')}.html`;
     console.log(`Replacing ${page.name}.html with ${htmlPath}...`);
     const html = await fs.readFile(htmlPath, 'utf8').catch(() => { throw new Error(`Failed to read ${htmlPath}!`) });
     pageData.paintedHtml.html = html;

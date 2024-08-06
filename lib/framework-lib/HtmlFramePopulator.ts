@@ -5,7 +5,6 @@
 
 import fs = require('fs-extra');
 
-import Pages from "../types/Pages";
 import { PageData } from "../types/PageData";
 
 const baseFilename = 'boiler-plate.html';
@@ -14,7 +13,7 @@ async function populatePageWithHtmlFrame(pageData: PageData) {
     const page = pageData.page;
     const document = pageData.document;
     // 
-    const htmlPath = `pages/${Pages.getTrace(page).join('.')}.html`;
+    const htmlPath = `pages/${page.trace.join('.')}.html`;
     console.log(`Populating ${page.name}.html from ${htmlPath}...`);
     const html = await fs.readFile(htmlPath, 'utf8').catch(() => { throw new Error(`Failed to read ${htmlPath}!`) });
     const paintableContentElement = document.createElement('painted-content');

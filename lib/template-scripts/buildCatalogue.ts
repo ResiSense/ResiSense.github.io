@@ -17,7 +17,7 @@ export default function (pageData: PageData) {
         anchorElement.href = entry.path;
         anchorElement.textContent = entry.name;
 
-        if (entry.path.replace(/^\//, '') === Pages.getTrace(page).join('/')) {
+        if (entry.path.replace(/^\//, '') === page.trace.join('/')) {
             ((catalogueItemElement as HTMLDivElement).querySelector('div')
                 || (() => { throw new Error('Catalogue div element not found!') })()
             ).classList.add('catalogue-item-active');
