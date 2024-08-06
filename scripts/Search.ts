@@ -11,18 +11,23 @@ type CompiledSearchResult = {
     highlightedContentChunks: string[];
 };
 
+export type SearchResponse = {
+    results: CompiledSearchResult[];
+    usedCache: boolean;
+};
+
 const searchResultsCache: Map<string, CompiledSearchResult[]> = new Map();
-async function search(query: string, searchTargets: SearchTarget[]): Promise<[CompiledSearchResult[], boolean]> {
+async function doSearch(query: string, searchTargets: SearchTarget[]): Promise<SearchResponse> {
     const cacheResult = searchResultsCache.get(query);
-    return [
-        cacheResult
-        ?? await (async () => {
-            const compiledResults: CompiledSearchResult[] = await compileSearchResults(query, searchTargets);
-            searchResultsCache.set(query, compiledResults);
-            return compiledResults;
-        })(),
-        cacheResult !== undefined
-    ];
+    return {
+        results: cacheResult
+            ?? await (async () => {
+                const compiledResults: CompiledSearchResult[] = await compileSearchResults(query, searchTargets);
+                searchResultsCache.set(query, compiledResults);
+                return compiledResults;
+            })(),
+        usedCache: cacheResult !== undefined
+    };
     //
     async function compileSearchResults(query: string, searchTargets: SearchTarget[]): Promise<CompiledSearchResult[]> {
         const compiledResults: CompiledSearchResult[] = [];
@@ -183,6 +188,6 @@ async function search(query: string, searchTargets: SearchTarget[]): Promise<[Co
     }
 }
 
-export default class SearchResults {
-    static search = search;
+export default class Search {
+    static doSearch = doSearch;
 }
