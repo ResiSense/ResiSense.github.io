@@ -359,7 +359,7 @@ painted-searchbar {
                     }
 
                     &:has(>.prefix-tips) {
-                        padding-top: 5%;
+                        padding-top: 10%;
                     }
 
                     &>.prefix-tips {
