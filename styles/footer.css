@@ -6,142 +6,117 @@ painted-footer {
     margin-top: auto;
 
     &>footer {
-        --footer-persistent-height: 2rem;
+        --footer-height: 10rem;
+        --horizontal-space: 3rem;
+        background-color: var(--bright-brown);
+        color: #3C240A;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+        padding: 2rem var(--horizontal-space);
+        gap: var(--horizontal-space);
+        height: var(--footer-height);
 
-        &>* {
-            padding-left: 1rem;
-            padding-right: 1rem;
-            box-sizing: border-box;
+        &>div {
+            height: 100%;
         }
 
-        &>.footer-banner {
-            width: 100%;
-            height: 7rem;
-            display: flex;
-            padding-top: 1rem;
-            padding-bottom: 0.5rem;
-            margin-bottom: var(--footer-persistent-height);
-            align-items: center;
-            overflow: hidden;
-
-            &>div {
-                height: 100%;
-            }
-
-            & img {
-                height: 100%;
-                width: auto;
-            }
-
-            &>.resisense {
-                display: flex;
-                gap: 1rem;
-
-                &>.resisense-logo-aside {
-                    display: flex;
-                    flex-direction: column;
-                    justify-content: space-between;
-                    color: var(--deep-green);
-
-                    &>.resisense-name {
-                        --size: 2.6rem;
-                        font-size: var(--size);
-                        line-height: var(--size);
-                        font-weight: 700;
-                        flex-grow: 1;
-                        display: flex;
-                        align-items: center;
-                    }
-
-                    &>.socials {
-                        font-size: 1rem;
-                        display: flex;
-                        flex-direction: column;
-
-                        &>.social {
-                            width: fit-content;
-
-                            &>a {
-                                line-height: 1rem;
-                                display: flex;
-                                align-items: center;
-                                gap: 0.2rem;
-                                width: fit-content;
-                                padding-right: 1rem;
-
-                                &>img {
-                                    max-width: 1rem;
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-
-            & .divider {
-                margin: 0 1rem;
-                border-left: 2px dashed var(--desaturated-orange);
-            }
-
-            &>.logo-container-wrapper {
-                display: grid;
-                grid-template-columns: auto auto;
-                grid-template-rows: 50% 50%;
-                gap: 0.2rem;
-
-                &>.cuhk-department-logo-container,
-                &>.sponsor-logo-container {
-                    display: flex;
-                    flex-direction: row;
-                    align-items: center;
-                    gap: 0.5rem;
-
-                    &>a {
-                        height: 100%;
-
-                        &>img {
-                            width: 100%;
-                            height: 100%;
-                            object-fit: contain;
-                        }
-                    }
-                }
-            }
+        & img {
+            height: 100%;
+            width: auto;
         }
 
-        &>.footer-persistent {
-            background-color: var(--footer-background-color);
-            position: fixed;
-            bottom: 0;
+        &>.footer-leftside {
             display: flex;
-            padding-top: 0.1rem;
-            padding-bottom: 0.1rem;
-            height: var(--footer-persistent-height);
-            width: 100%;
+            flex-direction: column;
             justify-content: space-between;
             align-items: center;
-            flex-direction: row;
 
-            &>div {
+            &>.resisense-logo {
                 display: flex;
                 justify-content: center;
                 align-items: center;
-                flex-direction: row;
 
-                &>span>a {
-                    height: 100%;
+                &>img {
+                    height: calc(var(--footer-height) * 0.6);
+                    max-width: 100%;
+                }
+            }
 
-                    &>img {
-                        vertical-align: middle;
-                        height: 20px;
-                        aspect-ratio: 1/1;
-                        object-fit: contain;
+            &>.socials {
+                display: grid;
+                grid-template-rows: 1fr 1fr;
+                letter-spacing: 1px;
+
+                &>a {
+                    display: flex;
+                    justify-content: flex-start;
+                    align-items: center;
+                    gap: 0.5rem;
+
+                    &:hover {
+                        text-decoration: underline;
                     }
                 }
 
-                &.license-container a {
-                    font-weight: 700;
-                    text-decoration: underline;
+                & img {
+                    width: 1rem;
+                }
+            }
+        }
+
+        &>.divider {
+            width: 0;
+            border-right: 2px solid #3C240A;
+        }
+
+        &>.footer-rightside {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            gap: 0.5rem;
+            flex-grow: 1;
+
+            &>.footer-rightside-top {
+                display: grid;
+                grid-template-rows: 1fr 1fr;
+                gap: 0.5rem;
+
+                &>div {
+                    display: flex;
+                    gap: 1rem;
+
+                    &>a {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+
+                        &>img {
+                            height: calc(var(--footer-height) * 0.3);
+                        }
+                    }
+                }
+            }
+
+            &>.footer-rightside-bottom {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: start;
+
+                &>span {
+                    height: 1.2rem;
+
+                    &>a {
+                        text-decoration: underline;
+                        font-weight: bold;
+
+                        &>img {
+                            height: 1rem;
+                            vertical-align: middle;
+                        }
+                    }
                 }
             }
         }
