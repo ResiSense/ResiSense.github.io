@@ -50,11 +50,7 @@ import Search, { SearchResponse } from './Search';
         const query = mainSearchFieldElement.value.trim();
         if (query === oldSearchFieldQuery) { return; }
         oldSearchFieldQuery = query;
-        if (query === '') {
-            searchResultsElement.innerHTML = '';
-        } else {
-            updateSearchResults(query)
-        }
+        updateSearchResults(query);
     }
     /* -------------------------------------------------------------------------- */
     searchbarElement.addEventListener('keydown', (event: KeyboardEvent) => {
@@ -114,14 +110,18 @@ import Search, { SearchResponse } from './Search';
         const searchResponse: SearchResponse = await Search.doSearch(query, searchTargets);
         //! PERFORMANCE
         const endTime = performance.now();
-        console.log(`Querying for "${query}" took`, endTime - startTime, 'ms', searchResponse.usedCache ? '(from cache)' : '');
+        searchResponse.aborted
+            ? console.log(`Query for "${query}" aborted`)
+            : console.log(`Querying for "${query}" in`, searchResponse.searchMode, 'mode took', endTime - startTime, 'ms', searchResponse.usedCache ? '(from cache)' : '');
         //! -----------
-        console.log(searchResponse.results);
         redrawSearchResults(searchResponse);
         return;
         //
         function redrawSearchResults(searchResponse: SearchResponse) {
             searchResultsElement.innerHTML = '';
+            if (searchResponse.aborted) { return; }
+            //
+            console.log(searchResponse.results);
             for (const result of searchResponse.results.sort((a, b) => b.score - a.score)) {
                 const newSearchResultElement = searchResultTemplate.cloneNode(true) as DocumentFragment;
                 //
