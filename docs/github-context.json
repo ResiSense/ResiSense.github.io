@@ -1,11 +1,11 @@
 {
     "job": "build",
     "ref": "refs/heads/main",
-    "sha": "57a482731ccb63323e1a8656b7f1ec03473035c3",
+    "sha": "83d45fbcc024f7b3c55e041ac206b134d14d955c",
     "repository": "ResiSense/ResiSense.github.io",
     "repository_Url": null,
-    "run_id": "10249950461",
-    "run_number": "203",
+    "run_id": "10260871346",
+    "run_number": "204",
     "run_attempt": "1",
     "artifact_cache_size_limit": "10",
     "actor": "CCheukKa",
@@ -13,27 +13,9 @@
     "workflow": "Full CI pipeline",
     "event_name": "push",
     "event": {
-        "after": "57a482731ccb63323e1a8656b7f1ec03473035c3",
-        "before": "d2c8fbc3312164875d244c9acfaadf6d6f44d85c",
+        "after": "83d45fbcc024f7b3c55e041ac206b134d14d955c",
+        "before": "16fa0a54efda4d885fa5b56ddfdc9f5d17a228b7",
         "commits": [
-            {
-                "author": {
-                    "email": "49699333+dependabot[bot]@users.noreply.github.com",
-                    "name": "dependabot[bot]",
-                    "username": "dependabot[bot]"
-                },
-                "committer": {
-                    "email": "noreply@github.com",
-                    "name": "GitHub",
-                    "username": "web-flow"
-                },
-                "distinct": false,
-                "id": "1ebf3d45c3c95641152b714b3f1796f39e8e12d2",
-                "message": "Chore(deps-dev): Bump @types/node from 22.0.2 to 22.1.0\n\nBumps [@types/node](https://github.com/DefinitelyTyped/DefinitelyTyped/tree/HEAD/types/node) from 22.0.2 to 22.1.0.\n- [Release notes](https://github.com/DefinitelyTyped/DefinitelyTyped/releases)\n- [Commits](https://github.com/DefinitelyTyped/DefinitelyTyped/commits/HEAD/types/node)\n\n---\nupdated-dependencies:\n- dependency-name: \"@types/node\"\n  dependency-type: direct:development\n  update-type: version-update:semver-minor\n...\n\nSigned-off-by: dependabot[bot] <support@github.com>",
-                "timestamp": "2024-08-05T13:38:46Z",
-                "tree_id": "0e03006fa558066d0f765f3b29cb7be0a600335f",
-                "url": "https://github.com/ResiSense/ResiSense.github.io/commit/1ebf3d45c3c95641152b714b3f1796f39e8e12d2"
-            },
             {
                 "author": {
                     "email": "ccheukka@gmail.com",
@@ -41,19 +23,19 @@
                     "username": "CCheukKa"
                 },
                 "committer": {
-                    "email": "noreply@github.com",
-                    "name": "GitHub",
-                    "username": "web-flow"
+                    "email": "ccheukka@gmail.com",
+                    "name": "CCheukKa",
+                    "username": "CCheukKa"
                 },
                 "distinct": true,
-                "id": "57a482731ccb63323e1a8656b7f1ec03473035c3",
-                "message": "Merge pull request #103 from ResiSense/dependabot/npm_and_yarn/types/node-22.1.0\n\nChore(deps-dev): Bump @types/node from 22.0.2 to 22.1.0",
-                "timestamp": "2024-08-05T21:40:27+08:00",
-                "tree_id": "0e03006fa558066d0f765f3b29cb7be0a600335f",
-                "url": "https://github.com/ResiSense/ResiSense.github.io/commit/57a482731ccb63323e1a8656b7f1ec03473035c3"
+                "id": "83d45fbcc024f7b3c55e041ac206b134d14d955c",
+                "message": "fix footer not always sticking to the bottom",
+                "timestamp": "2024-08-06T13:29:29+08:00",
+                "tree_id": "cd48bf87a66141db3974af8f96510944dfe0ab0d",
+                "url": "https://github.com/ResiSense/ResiSense.github.io/commit/83d45fbcc024f7b3c55e041ac206b134d14d955c"
             }
         ],
-        "compare": "https://github.com/ResiSense/ResiSense.github.io/compare/d2c8fbc33121...57a482731ccb",
+        "compare": "https://github.com/ResiSense/ResiSense.github.io/compare/16fa0a54efda...83d45fbcc024",
         "created": false,
         "deleted": false,
         "forced": false,
@@ -64,16 +46,16 @@
                 "username": "CCheukKa"
             },
             "committer": {
-                "email": "noreply@github.com",
-                "name": "GitHub",
-                "username": "web-flow"
+                "email": "ccheukka@gmail.com",
+                "name": "CCheukKa",
+                "username": "CCheukKa"
             },
             "distinct": true,
-            "id": "57a482731ccb63323e1a8656b7f1ec03473035c3",
-            "message": "Merge pull request #103 from ResiSense/dependabot/npm_and_yarn/types/node-22.1.0\n\nChore(deps-dev): Bump @types/node from 22.0.2 to 22.1.0",
-            "timestamp": "2024-08-05T21:40:27+08:00",
-            "tree_id": "0e03006fa558066d0f765f3b29cb7be0a600335f",
-            "url": "https://github.com/ResiSense/ResiSense.github.io/commit/57a482731ccb63323e1a8656b7f1ec03473035c3"
+            "id": "83d45fbcc024f7b3c55e041ac206b134d14d955c",
+            "message": "fix footer not always sticking to the bottom",
+            "timestamp": "2024-08-06T13:29:29+08:00",
+            "tree_id": "cd48bf87a66141db3974af8f96510944dfe0ab0d",
+            "url": "https://github.com/ResiSense/ResiSense.github.io/commit/83d45fbcc024f7b3c55e041ac206b134d14d955c"
         },
         "pusher": {
             "email": "ccheukka@gmail.com",
@@ -86,6 +68,6 @@
     "ref_type": "branch",
     "secret_source": "Actions",
     "workflow_ref": "ResiSense/ResiSense.github.io/.github/workflows/full-ci-pipeline.yaml@refs/heads/main",
-    "workflow_sha": "57a482731ccb63323e1a8656b7f1ec03473035c3",
+    "workflow_sha": "83d45fbcc024f7b3c55e041ac206b134d14d955c",
     "workspace": "/home/runner/work/ResiSense.github.io/ResiSense.github.io"
 }
