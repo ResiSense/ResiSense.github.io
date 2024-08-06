@@ -1,11 +1,11 @@
 {
     "job": "build",
     "ref": "refs/heads/main",
-    "sha": "bfe3bac645a2502adb8af4f6be4e84bb67fc6c97",
+    "sha": "3360f288fafe5658d55e6ca60100a53cbf9525c8",
     "repository": "ResiSense/ResiSense.github.io",
     "repository_Url": null,
-    "run_id": "10274339216",
-    "run_number": "208",
+    "run_id": "10275014116",
+    "run_number": "209",
     "run_attempt": "1",
     "artifact_cache_size_limit": "10",
     "actor": "CCheukKa",
@@ -13,8 +13,8 @@
     "workflow": "Full CI pipeline",
     "event_name": "push",
     "event": {
-        "after": "bfe3bac645a2502adb8af4f6be4e84bb67fc6c97",
-        "before": "7e8cf6ffa3e0b1d128443fee528d9d4211c89244",
+        "after": "3360f288fafe5658d55e6ca60100a53cbf9525c8",
+        "before": "78af864212b74e1f3ab366636c818d47f81b3d47",
         "commits": [
             {
                 "author": {
@@ -28,14 +28,32 @@
                     "username": "CCheukKa"
                 },
                 "distinct": true,
-                "id": "bfe3bac645a2502adb8af4f6be4e84bb67fc6c97",
-                "message": "fix nested pages being skipped during build",
-                "timestamp": "2024-08-07T05:40:33+08:00",
-                "tree_id": "f0c21b2b0ef19293769355fe734d89c72edef694",
-                "url": "https://github.com/ResiSense/ResiSense.github.io/commit/bfe3bac645a2502adb8af4f6be4e84bb67fc6c97"
+                "id": "170255286d4a59cf8d4bc6919ae2c884092c0415",
+                "message": "improve responsiveness",
+                "timestamp": "2024-08-07T06:46:11+08:00",
+                "tree_id": "1b0f06ad96661f2e7c9c68178e4dc35848e3718c",
+                "url": "https://github.com/ResiSense/ResiSense.github.io/commit/170255286d4a59cf8d4bc6919ae2c884092c0415"
+            },
+            {
+                "author": {
+                    "email": "ccheukka@gmail.com",
+                    "name": "CCheukKa",
+                    "username": "CCheukKa"
+                },
+                "committer": {
+                    "email": "ccheukka@gmail.com",
+                    "name": "CCheukKa",
+                    "username": "CCheukKa"
+                },
+                "distinct": true,
+                "id": "3360f288fafe5658d55e6ca60100a53cbf9525c8",
+                "message": "Merge branch main of https://github.com/ResiSense/ResiSense.github.io",
+                "timestamp": "2024-08-07T06:46:29+08:00",
+                "tree_id": "122a30aa0fe8be083861d880d8ae70ddfe55d403",
+                "url": "https://github.com/ResiSense/ResiSense.github.io/commit/3360f288fafe5658d55e6ca60100a53cbf9525c8"
             }
         ],
-        "compare": "https://github.com/ResiSense/ResiSense.github.io/compare/7e8cf6ffa3e0...bfe3bac645a2",
+        "compare": "https://github.com/ResiSense/ResiSense.github.io/compare/78af864212b7...3360f288fafe",
         "created": false,
         "deleted": false,
         "forced": false,
@@ -51,11 +69,11 @@
                 "username": "CCheukKa"
             },
             "distinct": true,
-            "id": "bfe3bac645a2502adb8af4f6be4e84bb67fc6c97",
-            "message": "fix nested pages being skipped during build",
-            "timestamp": "2024-08-07T05:40:33+08:00",
-            "tree_id": "f0c21b2b0ef19293769355fe734d89c72edef694",
-            "url": "https://github.com/ResiSense/ResiSense.github.io/commit/bfe3bac645a2502adb8af4f6be4e84bb67fc6c97"
+            "id": "3360f288fafe5658d55e6ca60100a53cbf9525c8",
+            "message": "Merge branch main of https://github.com/ResiSense/ResiSense.github.io",
+            "timestamp": "2024-08-07T06:46:29+08:00",
+            "tree_id": "122a30aa0fe8be083861d880d8ae70ddfe55d403",
+            "url": "https://github.com/ResiSense/ResiSense.github.io/commit/3360f288fafe5658d55e6ca60100a53cbf9525c8"
         },
         "pusher": {
             "email": "ccheukka@gmail.com",
@@ -68,6 +86,6 @@
     "ref_type": "branch",
     "secret_source": "Actions",
     "workflow_ref": "ResiSense/ResiSense.github.io/.github/workflows/full-ci-pipeline.yaml@refs/heads/main",
-    "workflow_sha": "bfe3bac645a2502adb8af4f6be4e84bb67fc6c97",
+    "workflow_sha": "3360f288fafe5658d55e6ca60100a53cbf9525c8",
     "workspace": "/home/runner/work/ResiSense.github.io/ResiSense.github.io"
 }

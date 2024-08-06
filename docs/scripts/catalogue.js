@@ -47,8 +47,8 @@
                 }
                 window.addEventListener('DOMContentLoaded', d),
                     window.addEventListener('scroll', d),
-                    window.addEventListener('DOMContentLoaded', l),
-                    window.addEventListener('scroll', l);
+                    window.addEventListener('DOMContentLoaded', i),
+                    window.addEventListener('scroll', i);
                 let e =
                         document.getElementById('header-page-title') ||
                         (() => {
@@ -56,7 +56,7 @@
                         })(),
                     t = document.getElementsByTagName('header')[0],
                     n = document.getElementsByTagName('main')[0];
-                function l() {
+                function i() {
                     let o = n.getBoundingClientRect().top,
                         r = t.getBoundingClientRect().bottom;
                     e.classList.toggle('hidden', !(o <= r));
@@ -64,34 +64,36 @@
             }
         });
     var d = r('ap5vA'),
-        l = r('h8pS0');
+        i = r('h8pS0');
     {
         let e = document.getElementsByClassName('catalogue-item');
+        function l() {
+            if (void 0 === i.default.contentIsPastHeader.current) {
+                requestAnimationFrame(l);
+                return;
+            }
+            Array.from(e).forEach(e => {
+                let t = (
+                        document.querySelector('.catalogue-item:not(.catalogue-arrow)') ||
+                        (() => {
+                            throw Error('First catalogue item not found!');
+                        })()
+                    ).getBoundingClientRect().left,
+                    n = e.getBoundingClientRect().left;
+                e.setAttribute('translate-amount', `${t - n}`),
+                    window.dispatchEvent(new CustomEvent((0, d.default).contentScrollPastHeader.toString()));
+            });
+        }
         window.addEventListener((0, d.default).contentScrollPastHeader.toString(), function () {
-            let t = l.default.contentIsPastHeader.current;
+            let t = i.default.contentIsPastHeader.current;
             Array.from(e).forEach(e => {
                 e.classList.contains('catalogue-arrow') ||
                     ((e.style.translate = t ? `${e.getAttribute('translate-amount')}px` : '0'),
                     e.classList.toggle('catalogue-item-hidden', t));
             });
         }),
-            window.addEventListener('DOMContentLoaded', function t() {
-                if (void 0 === l.default.contentIsPastHeader.current) {
-                    requestAnimationFrame(t);
-                    return;
-                }
-                Array.from(e).forEach(e => {
-                    let t = (
-                            document.querySelector('.catalogue-item:not(.catalogue-arrow)') ||
-                            (() => {
-                                throw Error('First catalogue item not found!');
-                            })()
-                        ).getBoundingClientRect().left,
-                        n = e.getBoundingClientRect().left;
-                    e.setAttribute('translate-amount', `${t - n}`),
-                        window.dispatchEvent(new CustomEvent((0, d.default).contentScrollPastHeader.toString()));
-                });
-            });
+            window.addEventListener('DOMContentLoaded', l),
+            window.addEventListener('resize', l);
     }
 })();
 //# sourceMappingURL=catalogue.js.map
