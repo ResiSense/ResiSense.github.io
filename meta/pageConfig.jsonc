@@ -55,10 +55,6 @@
                     "name": "description",
                     "title": "Project Description",
                     "populator": "markdown"
-                },
-                {
-                    "name": "design",
-                    "populator": "markdown"
                 }
             ]
         },

@@ -3,10 +3,10 @@ painted-footer {
     --footer-background-color: var(--bright-brown);
     background-color: var(--footer-background-color);
     z-index: 1;
+    margin-top: auto;
 
     & > footer {
         --footer-persistent-height: 2rem;
-        position: sticky;
 
         & > * {
             padding-left: 1rem;

@@ -3,11 +3,11 @@ painted-footer {
     --footer-background-color: var(--bright-brown);
     background-color: var(--footer-background-color);
     z-index: 1;
+    margin-top: auto;
 
     &>footer {
         --footer-height: 10rem;
         --horizontal-space: 3rem;
-        position: sticky;
         background-color: var(--bright-brown);
         color: #3C240A;
         display: flex;
