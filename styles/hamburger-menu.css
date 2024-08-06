@@ -5,13 +5,12 @@ painted-hamburger-menu {
         font-size: 6mm;
     }
 
-    &:focus-within>#hamburger-button {
+    &:has(#hamburger-menu[open])>#hamburger-button {
         background-color: var(--saturated-orange);
     }
 
     &>#hamburger-button {
         margin: 0;
-        height: 2rem;
         box-sizing: border-box;
         display: flex;
         justify-content: center;
@@ -21,6 +20,11 @@ painted-hamburger-menu {
         border-color: var(--saturated-orange);
         cursor: pointer;
         z-index: 1;
+        padding: var(--padding);
+
+        @media screen and (max-width: 1100px) {
+            font-size: var(--font-size);
+        }
     }
 
     &>.hamburger-menu-container {
@@ -44,6 +48,13 @@ painted-hamburger-menu {
             border-radius: var(--header-rightside-button-border-radius);
             border-width: var(--header-rightside-button-border-width);
             transform-origin: top right;
+
+            @media screen and (max-width: 1100px) {
+                font-size: 2rem;
+                margin-top: 1em;
+                border-radius: 1em;
+                border-width: 0.2em;
+            }
 
             &:not([open]) {
                 pointer-events: none;
