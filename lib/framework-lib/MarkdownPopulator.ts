@@ -7,7 +7,6 @@
 import { marked } from "marked";
 import fs = require('fs-extra');
 
-import Pages from "../types/Pages";
 import { PageData } from "../types/PageData";
 
 const baseFilename = 'boiler-plate.html';
@@ -16,7 +15,7 @@ async function populatePageFromMarkdown(pageData: PageData) {
     const page = pageData.page;
     const document = pageData.document;
     // 
-    const markdownPath = `pages/${Pages.getTrace(page).join('.')}.md`;
+    const markdownPath = `pages/${page.trace.join('.')}.md`;
     console.log(`Populating ${page.name}.html from ${markdownPath}...`);
     const markdown = await fs.readFile(markdownPath, 'utf8').catch(() => { throw new Error(`Failed to read ${markdownPath}!`) });
     const parsedMarkdown = await marked.parse(markdown);

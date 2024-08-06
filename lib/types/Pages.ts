@@ -21,7 +21,7 @@ export type FlattenedPage = {
     title: string;
     populator?: 'html-full' | 'html-frame' | 'markdown' | 'custom';
     hideFromCatalogue?: boolean;
-    trace?: string[];
+    trace: string[];
     redirectAliasPaths?: string[];
 }
 
@@ -46,18 +46,18 @@ let _flattenedPageConfig: FlattenedPageConfig | undefined = undefined;
 const flattenedPageConfig: FlattenedPageConfig = ((): FlattenedPageConfig => {
     if (_flattenedPageConfig !== undefined) { return _flattenedPageConfig; }
     //
-    const flattenedPageConfig: FlattenedPageConfig = { pages: [] };
-    flattenPages(pageConfig.pages);
-    _flattenedPageConfig = flattenedPageConfig;
+    _flattenedPageConfig = flattenPages(pageConfig.pages);
     return _flattenedPageConfig;
     //  
-    function flattenPages(pages: Page[], trace: string[] = []) {
+    function flattenPages(pages: Page[], trace: string[] = []): FlattenedPageConfig {
+        const config: FlattenedPageConfig = { pages: [] };
         pages.forEach(page => {
-            flattenedPageConfig.pages.push({ ...page, trace: [...trace, page.name] });
+            config.pages.push({ ...page, trace: [...trace, page.name] });
             if (page.pages) {
                 flattenPages(page.pages, [...trace, page.name]);
             }
         });
+        return config;
     }
 })();
 
@@ -81,18 +81,8 @@ const pageEntries: Entry[] = (() => {
     }
 })();
 
-function getFlattenedPage(page: Page | FlattenedPage): FlattenedPage {
-    return flattenedPageConfig.pages.find(flattenedPage => flattenedPage.name === page.name)
-        ?? (() => { throw new Error(`Flattened page not found for ${page.name}!`) })();
-}
-function getTrace(page: Page | FlattenedPage): string[] {
-    return getFlattenedPage(page).trace
-        ?? (() => { throw new Error(`Trace not found for ${page.name}!`) })();
-}
-
 export default class Pages {
     static pageConfig = pageConfig;
     static flattenedPageConfig = flattenedPageConfig;
     static pageEntries = pageEntries;
-    static getTrace = getTrace;
 }

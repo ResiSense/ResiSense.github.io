@@ -70,7 +70,8 @@ function addIdentifierLogToTsEmbeds() {
 }
 /* -------------------------------------------------------------------------- */
 async function buildFile(page: Page, templateCache: TemplateCache): Promise<void> {
-    if (page.trace === undefined) { throw new Error(`Page ${page.name} has no trace!`); }
+    console.log(`Building ${page.trace.join('/')}...`);
+    //
     const filename: string = (() => {
         switch (page.populator || 'markdown ') {
             case 'html-full':
@@ -86,7 +87,6 @@ async function buildFile(page: Page, templateCache: TemplateCache): Promise<void
     const rawHtml = fs.readFileSync(filename, 'utf8');
     const paintedHtml: PaintableHtml = TemplatePainter.paintPageHtml({ html: rawHtml }, templateCache);
     const document = new JSDOM(paintedHtml.html).window.document;
-    console.warn(page.title);
     page.title = page.title || Utils.toTitleCase(page.name);
     document.title = page.title;
 
@@ -120,15 +120,15 @@ async function buildFile(page: Page, templateCache: TemplateCache): Promise<void
     if (mode === MODES.DEV) { addHtmlExtensionsToAnchorHrefs(pageData); }
 
     if (pageData.page.hideFromCatalogue) {
-        console.log(`Skipping indexing ${Pages.getTrace(page).join('/')}...`);
+        console.log(`Skipping indexing ${page.trace.join('/')}...`);
     } else {
         pageData.htmlPollutedRawContent === undefined
-            ? console.warn(`htmlPollutedRawContent not found for ${Pages.getTrace(page).join('/')}`)
+            ? console.warn(`htmlPollutedRawContent not found for ${page.trace.join('/')}`)
             : Searchable.addEntry(page.trace.join('/'), page.title, pageData);
     }
 
     const htmlFileContent = `<!DOCTYPE html>\n${document.documentElement.outerHTML}`;
-    Utils.writeFileSyncWithMakeDirectory(path.resolve(targetDirectory, `${Pages.getTrace(page).join('/')}.html`), htmlFileContent);
+    Utils.writeFileSyncWithMakeDirectory(path.resolve(targetDirectory, `${page.trace.join('/')}.html`), htmlFileContent);
 }
 /* -------------------------------------------------------------------------- */
 function insertCssEmbeds(pageData: PageData) {
@@ -218,7 +218,7 @@ function addHtmlExtensionsToAnchorHrefs(pageData: PageData) {
 /* -------------------------------------------------------------------------- */
 async function buildAliasFile(page: Page): Promise<void> {
     if (!page.redirectAliasPaths) { return; }
-    const pathName = Pages.getTrace(page).join('/');
+    const pathName = page.trace.join('/');
     const redirectHtml = await fs.readFile('./redirect.html', 'utf8');
 
     console.log(`Building aliases for ${pathName}...`);

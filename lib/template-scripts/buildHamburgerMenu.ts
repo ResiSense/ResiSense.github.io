@@ -17,7 +17,7 @@ export default function (pageData: PageData) {
         anchorElement.textContent = entry.name;
 
         hamburgerMenuElement.appendChild(hamburgerMenuItemElement);
-        if (entry.path.replace(/^\//, '') === Pages.getTrace(page).join('/')) {
+        if (entry.path.replace(/^\//, '') === page.trace.join('/')) {
             // I have no idea why this jank is necessary
             (hamburgerMenuElement.lastElementChild as HTMLAnchorElement).classList.add('hamburger-menu-item-active');
         }
