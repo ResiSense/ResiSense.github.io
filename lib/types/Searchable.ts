@@ -8,6 +8,10 @@ type SearchIndexEntry = {
     title: string;
     content: string;
 }
+export enum IndexableFields {
+    TITLE = 'title',
+    CONTENT = 'content',
+}
 export type SearchTarget = { path: string, title: Fuzzysort.Prepared, content: Fuzzysort.Prepared };
 
 function sanitiseRawContent(htmlPollutedRawContent: string): string {

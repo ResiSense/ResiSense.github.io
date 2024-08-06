@@ -1,6 +1,6 @@
 import Searchable, { SearchTarget } from './../lib/types/Searchable';
 import { safeURIEncode } from './globalLibrary';
-import SearchResults from './SearchResults';
+import Search, { SearchResponse } from './Search';
 
 (async () => {
     const searchbarElement = (document.getElementById('searchbar')
@@ -30,6 +30,20 @@ import SearchResults from './SearchResults';
         ) as HTMLTemplateElement;
         return searchResultsEndTemplateElement.content.cloneNode(true) as HTMLDivElement;
     })();
+    const prefixTipsTemplate = (() => {
+        const prefixTipsTemplateElement = (document.getElementById('prefix-tips-template')
+            ?? (() => { throw new Error('Prefix tips template not found') })()
+        ) as HTMLTemplateElement;
+        return prefixTipsTemplateElement.content.cloneNode(true) as HTMLDivElement;
+    })();
+    const queryTimeElement = (document.getElementById('query-time')
+        ?? (() => { throw new Error('Query time element not found') })()
+    ) as HTMLSpanElement;
+    const redrawTimeElement = (document.getElementById('redraw-time')
+        ?? (() => { throw new Error('Redraw time element not found') })()
+    ) as HTMLSpanElement;
+    //
+    searchResultsElement.appendChild(prefixTipsTemplate.cloneNode(true));
     //
     const BASE_URL = document.head.querySelector('meta[base-url]')?.getAttribute('base-url') ?? '.';
     Searchable.index = await (await fetch(`/${BASE_URL}/search-index.json`)).json();
@@ -50,11 +64,7 @@ import SearchResults from './SearchResults';
         const query = mainSearchFieldElement.value.trim();
         if (query === oldSearchFieldQuery) { return; }
         oldSearchFieldQuery = query;
-        if (query === '') {
-            searchResultsElement.innerHTML = '';
-        } else {
-            redrawSearchResults(query)
-        }
+        updateSearchResults(query);
     }
     /* -------------------------------------------------------------------------- */
     searchbarElement.addEventListener('keydown', (event: KeyboardEvent) => {
@@ -107,55 +117,68 @@ import SearchResults from './SearchResults';
         }
     });
     //
-    async function redrawSearchResults(query: string) {
-        //! PERFORMANCE
+    async function updateSearchResults(query: string) {
         const startTime = performance.now();
-        //! -----------
-        const [searchResults, usedCache] = await SearchResults.search(query, searchTargets);
-        //! PERFORMANCE
-        const endTime = performance.now();
-        console.log(`Querying for "${query}" took`, endTime - startTime, 'ms', usedCache ? '(from cache)' : '');
-        //! -----------
-        console.log(searchResults);
+        const searchResponse: SearchResponse = await Search.doSearch(query, searchTargets);
+        const queryEndTime = performance.now();
+        const queryElapsedTime = queryEndTime - startTime;
+        searchResponse.aborted
+            ? console.log(`Query for "${query}" aborted`)
+            : console.log(`Querying for "${query}" in`, searchResponse.searchMode, 'mode took', queryElapsedTime, 'ms', searchResponse.usedCache ? '(from cache)' : '');
+        redrawSearchResults(searchResponse);
+        const redrawEndTime = performance.now();
+        const redrawElapsedTime = redrawEndTime - queryEndTime;
+        console.log('Redrawing search results took', redrawElapsedTime, 'ms');
+        queryTimeElement.textContent = queryElapsedTime.toFixed(2);
+        redrawTimeElement.textContent = redrawElapsedTime.toFixed(2);
+        return;
         //
-        searchResultsElement.innerHTML = '';
-        for (const searchResult of searchResults.sort((a, b) => b.score - a.score)) {
-            const newSearchResultElement = searchResultTemplate.cloneNode(true) as DocumentFragment;
-            //
-            const baselessResultPageHref = `/${searchResult.path}${window.location.pathname.endsWith('.html') ? '.html' : ''}`;
-            const resultPageHref = `/${BASE_URL}${baselessResultPageHref}`;
-            (newSearchResultElement.querySelector('#result-title') as HTMLDivElement).innerHTML = searchResult.highlightedTitleChunks.join(' ').trim() || searchResult.title;
-            (newSearchResultElement.querySelector('#result-path') as HTMLDivElement).textContent = searchResult.path;
-            //
-            const contentElement = newSearchResultElement.querySelector('#result-content') as HTMLDivElement;
-            for (const contentChunk of searchResult.highlightedContentChunks) {
-                const contentChunkElement = document.createElement('a');
-                contentChunkElement.innerHTML = contentChunk;
-                //
-                const safeText = safeURIEncode((
-                    contentChunkElement.textContent
-                    || (() => { throw new Error('Empty content chunk') })()
-                ).trim());
-                const resultTextHref = `${resultPageHref}#:~:text=${safeText}`;
-                contentChunkElement.href = resultTextHref;
-                if (window.location.href.endsWith(baselessResultPageHref)) {
-                    // same page search
-                    contentChunkElement.addEventListener('click', () => {
-                        searchDialogElement.toggleAttribute('open', false);
-                        const oParent = searchDialogElement.parentNode;
-                        document.body.appendChild(searchDialogElement);
-                        window.location.href = resultTextHref;
-                        requestAnimationFrame(() => { oParent?.appendChild(searchDialogElement); });
-                    });
-                }
-                //
-                contentElement.appendChild(contentChunkElement);
+        function redrawSearchResults(searchResponse: SearchResponse) {
+            searchResultsElement.innerHTML = '';
+            if (searchResponse.aborted) {
+                searchResultsElement.appendChild(prefixTipsTemplate.cloneNode(true));
+                return;
             }
             //
-            searchResultsElement.appendChild(newSearchResultElement);
-            // I have no idea why this jank is necessary
-            (searchResultsElement.lastElementChild as HTMLAnchorElement).href = resultPageHref;
+            console.log(searchResponse.results);
+            for (const result of searchResponse.results.sort((a, b) => b.score - a.score)) {
+                const newSearchResultElement = searchResultTemplate.cloneNode(true) as DocumentFragment;
+                //
+                const baselessResultPageHref = `/${result.path}${window.location.pathname.endsWith('.html') ? '.html' : ''}`;
+                const resultPageHref = `/${BASE_URL}${baselessResultPageHref}`;
+                (newSearchResultElement.querySelector('#result-title') as HTMLDivElement).innerHTML = result.highlightedTitleChunks.join(' ').trim() || result.title;
+                (newSearchResultElement.querySelector('#result-path') as HTMLDivElement).textContent = result.path;
+                //
+                const contentElement = newSearchResultElement.querySelector('#result-content') as HTMLDivElement;
+                for (const contentChunk of result.highlightedContentChunks) {
+                    const contentChunkElement = document.createElement('a');
+                    contentChunkElement.innerHTML = contentChunk;
+                    //
+                    const safeText = safeURIEncode((
+                        contentChunkElement.textContent
+                        || (() => { throw new Error('Empty content chunk') })()
+                    ).trim());
+                    const resultTextHref = `${resultPageHref}#:~:text=${safeText}`;
+                    contentChunkElement.href = resultTextHref;
+                    if (window.location.href.endsWith(baselessResultPageHref)) {
+                        // same page search
+                        contentChunkElement.addEventListener('click', () => {
+                            searchDialogElement.toggleAttribute('open', false);
+                            const oParent = searchDialogElement.parentNode;
+                            document.body.appendChild(searchDialogElement);
+                            window.location.href = resultTextHref;
+                            requestAnimationFrame(() => { oParent?.appendChild(searchDialogElement); });
+                        });
+                    }
+                    //
+                    contentElement.appendChild(contentChunkElement);
+                }
+                //
+                searchResultsElement.appendChild(newSearchResultElement);
+                // I have no idea why this jank is necessary
+                (searchResultsElement.lastElementChild as HTMLAnchorElement).href = resultPageHref;
+            }
+            searchResultsElement.appendChild(searchResultsEndTemplate.cloneNode(true));
         }
-        searchResultsElement.appendChild(searchResultsEndTemplate.cloneNode(true));
     }
 })();
