@@ -50,7 +50,7 @@ painted-searchbar {
                 cursor: pointer;
             }
 
-            @media screen and (max-width: 900px) {
+            @media screen and (max-width: 1100px) {
                 display: none;
             }
         }
@@ -62,7 +62,13 @@ painted-searchbar {
             font-family: 'Baloo 2', 'Trebuchet MS', 'Lucida Sans Unicode', Arial, sans-serif;
             font-weight: 600;
             font-size: 0.9rem;
-            padding: 0.1em 0.2rem 0.1rem 0.3rem;
+            padding: var(--padding);
+
+            @media screen and (max-width: 1100px) {
+                height: 100%;
+                width: 100%;
+                font-size: 2rem;
+            }
         }
 
         &>#search-dialog {
@@ -117,7 +123,7 @@ painted-searchbar {
                 gap: 0.2rem;
 
                 &>.search-icon {
-                    font-size: 2rem;
+                    font-size: var(--font-size);
                 }
 
                 &>#main-search-field {
@@ -195,6 +201,7 @@ painted-searchbar {
 
                 &>#search-results {
                     flex-grow: 1;
+                    align-self: stretch;
                     overflow: scroll;
                     font-weight: normal;
                     color: black;
