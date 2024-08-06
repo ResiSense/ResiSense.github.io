@@ -1,11 +1,11 @@
 {
     "job": "build",
     "ref": "refs/heads/main",
-    "sha": "8c54b826369ccffeb0f7024bde8d9a8a0e6fff2e",
+    "sha": "bfe3bac645a2502adb8af4f6be4e84bb67fc6c97",
     "repository": "ResiSense/ResiSense.github.io",
     "repository_Url": null,
-    "run_id": "10274238421",
-    "run_number": "207",
+    "run_id": "10274339216",
+    "run_number": "208",
     "run_attempt": "1",
     "artifact_cache_size_limit": "10",
     "actor": "CCheukKa",
@@ -13,8 +13,8 @@
     "workflow": "Full CI pipeline",
     "event_name": "push",
     "event": {
-        "after": "8c54b826369ccffeb0f7024bde8d9a8a0e6fff2e",
-        "before": "98fbe6dc2f673a11651c5f2885b12aaa9e466a3a",
+        "after": "bfe3bac645a2502adb8af4f6be4e84bb67fc6c97",
+        "before": "7e8cf6ffa3e0b1d128443fee528d9d4211c89244",
         "commits": [
             {
                 "author": {
@@ -27,87 +27,15 @@
                     "name": "CCheukKa",
                     "username": "CCheukKa"
                 },
-                "distinct": false,
-                "id": "2909e64053fbc9b12dedf846f02aec16a78a9256",
-                "message": "minor refactor",
-                "timestamp": "2024-08-06T14:40:12+08:00",
-                "tree_id": "62914170cd3ad6a98c33adb5ef269681244c5db1",
-                "url": "https://github.com/ResiSense/ResiSense.github.io/commit/2909e64053fbc9b12dedf846f02aec16a78a9256"
-            },
-            {
-                "author": {
-                    "email": "ccheukka@gmail.com",
-                    "name": "CCheukKa",
-                    "username": "CCheukKa"
-                },
-                "committer": {
-                    "email": "ccheukka@gmail.com",
-                    "name": "CCheukKa",
-                    "username": "CCheukKa"
-                },
-                "distinct": false,
-                "id": "94eb8f11e45c2011507ae21d9f11e53d75cb546c",
-                "message": "add prefix searching",
-                "timestamp": "2024-08-07T04:08:59+08:00",
-                "tree_id": "d57f84ebae55efdf67f8791ee8501d626b71b8e7",
-                "url": "https://github.com/ResiSense/ResiSense.github.io/commit/94eb8f11e45c2011507ae21d9f11e53d75cb546c"
-            },
-            {
-                "author": {
-                    "email": "ccheukka@gmail.com",
-                    "name": "CCheukKa",
-                    "username": "CCheukKa"
-                },
-                "committer": {
-                    "email": "ccheukka@gmail.com",
-                    "name": "CCheukKa",
-                    "username": "CCheukKa"
-                },
-                "distinct": false,
-                "id": "e2b50fd5dc5480a17c1f03584eca7e9cd4d31794",
-                "message": "add tooltips",
-                "timestamp": "2024-08-07T05:23:59+08:00",
-                "tree_id": "32be8d1d45dba3a107e4328779dcf3b4b864279b",
-                "url": "https://github.com/ResiSense/ResiSense.github.io/commit/e2b50fd5dc5480a17c1f03584eca7e9cd4d31794"
-            },
-            {
-                "author": {
-                    "email": "ccheukka@gmail.com",
-                    "name": "CCheukKa",
-                    "username": "CCheukKa"
-                },
-                "committer": {
-                    "email": "ccheukka@gmail.com",
-                    "name": "CCheukKa",
-                    "username": "CCheukKa"
-                },
-                "distinct": false,
-                "id": "ffa9ae6bc62735c3c63840fdd284ade7bc9c4dbe",
-                "message": "adjust styling",
-                "timestamp": "2024-08-07T05:30:32+08:00",
-                "tree_id": "e9fd3f05e8e182acf858ca1c60585b2e17a8563a",
-                "url": "https://github.com/ResiSense/ResiSense.github.io/commit/ffa9ae6bc62735c3c63840fdd284ade7bc9c4dbe"
-            },
-            {
-                "author": {
-                    "email": "ccheukka@gmail.com",
-                    "name": "CCheukKa",
-                    "username": "CCheukKa"
-                },
-                "committer": {
-                    "email": "noreply@github.com",
-                    "name": "GitHub",
-                    "username": "web-flow"
-                },
                 "distinct": true,
-                "id": "8c54b826369ccffeb0f7024bde8d9a8a0e6fff2e",
-                "message": "Merge pull request #109 from ResiSense/prefix-searching\n\nAdd prefixed searching for title and content",
-                "timestamp": "2024-08-07T05:31:49+08:00",
-                "tree_id": "02f5523299fbaf65023f40ccd34d80cc4256b00d",
-                "url": "https://github.com/ResiSense/ResiSense.github.io/commit/8c54b826369ccffeb0f7024bde8d9a8a0e6fff2e"
+                "id": "bfe3bac645a2502adb8af4f6be4e84bb67fc6c97",
+                "message": "fix nested pages being skipped during build",
+                "timestamp": "2024-08-07T05:40:33+08:00",
+                "tree_id": "f0c21b2b0ef19293769355fe734d89c72edef694",
+                "url": "https://github.com/ResiSense/ResiSense.github.io/commit/bfe3bac645a2502adb8af4f6be4e84bb67fc6c97"
             }
         ],
-        "compare": "https://github.com/ResiSense/ResiSense.github.io/compare/98fbe6dc2f67...8c54b826369c",
+        "compare": "https://github.com/ResiSense/ResiSense.github.io/compare/7e8cf6ffa3e0...bfe3bac645a2",
         "created": false,
         "deleted": false,
         "forced": false,
@@ -118,16 +46,16 @@
                 "username": "CCheukKa"
             },
             "committer": {
-                "email": "noreply@github.com",
-                "name": "GitHub",
-                "username": "web-flow"
+                "email": "ccheukka@gmail.com",
+                "name": "CCheukKa",
+                "username": "CCheukKa"
             },
             "distinct": true,
-            "id": "8c54b826369ccffeb0f7024bde8d9a8a0e6fff2e",
-            "message": "Merge pull request #109 from ResiSense/prefix-searching\n\nAdd prefixed searching for title and content",
-            "timestamp": "2024-08-07T05:31:49+08:00",
-            "tree_id": "02f5523299fbaf65023f40ccd34d80cc4256b00d",
-            "url": "https://github.com/ResiSense/ResiSense.github.io/commit/8c54b826369ccffeb0f7024bde8d9a8a0e6fff2e"
+            "id": "bfe3bac645a2502adb8af4f6be4e84bb67fc6c97",
+            "message": "fix nested pages being skipped during build",
+            "timestamp": "2024-08-07T05:40:33+08:00",
+            "tree_id": "f0c21b2b0ef19293769355fe734d89c72edef694",
+            "url": "https://github.com/ResiSense/ResiSense.github.io/commit/bfe3bac645a2502adb8af4f6be4e84bb67fc6c97"
         },
         "pusher": {
             "email": "ccheukka@gmail.com",
@@ -140,6 +68,6 @@
     "ref_type": "branch",
     "secret_source": "Actions",
     "workflow_ref": "ResiSense/ResiSense.github.io/.github/workflows/full-ci-pipeline.yaml@refs/heads/main",
-    "workflow_sha": "8c54b826369ccffeb0f7024bde8d9a8a0e6fff2e",
+    "workflow_sha": "bfe3bac645a2502adb8af4f6be4e84bb67fc6c97",
     "workspace": "/home/runner/work/ResiSense.github.io/ResiSense.github.io"
 }
