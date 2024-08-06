@@ -83,7 +83,10 @@ async function populatePageFromMarkdown(pageData: PageData) {
     function coerceRedirectsToNewTabs() {
         // console.log('Coercing redirects to new tabs...');
         paintableContentElement.querySelectorAll('a').forEach(link => {
+            console.log(link.href);
             if (link.href.startsWith('/')) { return; } // Internal link - do nothing
+            if (link.href.startsWith('#')) { return; } // Internal link - do nothing
+            if (link.href.startsWith('about:blank#')) { return; } // Internal link - do nothing
             link.target = '_blank';
             link.rel = 'noopener noreferrer';
         });
