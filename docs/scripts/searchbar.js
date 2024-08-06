@@ -7214,6 +7214,9 @@ ${''.padEnd(t)}${'^'.repeat(r)}`;
             i.addEventListener('keydown', function () {
                 requestAnimationFrame(g);
             }),
+            i.addEventListener('input', function (e) {
+                '' === e.target.value && (console.log('Cancel button clicked'), requestAnimationFrame(g));
+            }),
             t.addEventListener('keydown', e => {
                 if (
                     ![
