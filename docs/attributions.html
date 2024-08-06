@@ -61,16 +61,16 @@
             <painted-parallax-doodle>
                 <div id="parallax-doodle-container"
                     ><img
+                        src="/assets/doodles/virus.svg"
+                        style="translate: 75vw 660px; animation-name: parallax-doodle-u3arf" /><img
                         src="/assets/logos/resisense/ResiSense Orange Logo.svg"
-                        style="translate: 1vw 1040px; animation-name: parallax-doodle-awg4yj" /><img
+                        style="translate: 96vw 440px; animation-name: parallax-doodle-u66b6c" /><img
+                        src="/assets/doodles/bacteria.svg"
+                        style="translate: 8vw 420px; animation-name: parallax-doodle-ucfx54" /><img
                         src="/assets/doodles/red blood cell.svg"
-                        style="translate: 64vw 300px; animation-name: parallax-doodle-83x9g" /><img
-                        src="/assets/doodles/e coli.svg"
-                        style="translate: 79vw 660px; animation-name: parallax-doodle-htdls4" /><img
-                        src="/assets/doodles/drug.svg"
-                        style="translate: 23vw 1220px; animation-name: parallax-doodle-5vc9jw" /><img
-                        src="/assets/doodles/dna.svg"
-                        style="translate: 23vw 120px; animation-name: parallax-doodle-zkt60l"
+                        style="translate: 19vw 280px; animation-name: parallax-doodle-jurroo" /><img
+                        src="/assets/doodles/syringe.svg"
+                        style="translate: 44vw 640px; animation-name: parallax-doodle-8ld5e9"
                 /></div>
             </painted-parallax-doodle>
             <painted-header>
@@ -109,24 +109,53 @@
                                                     autocomplete="off"
                                                 />
                                             </div>
-                                            <div id="search-results" class="require-scrollbar">
-                                                <template id="search-result-template">
-                                                    <a id="search-result">
-                                                        <div class="result-leftside">
-                                                            <div id="result-title"></div>
-                                                            <div id="result-path"></div>
+                                            <div class="search-results-container">
+                                                <div class="tooltips">
+                                                    <div class="navigation-tips">
+                                                        <div>
+                                                            Use <kbd>↑</kbd>, <kbd>↓</kbd>, and <kbd>Enter</kbd> to
+                                                            navigate the results.
                                                         </div>
-                                                        <div class="result-divider"></div>
-                                                        <div class="result-rightside">
-                                                            <div id="result-content"></div>
+                                                    </div>
+                                                    <div class="query-stats">
+                                                        Querying took <span id="query-time">0</span>ms. Redrawing took
+                                                        <span id="redraw-time">0</span>ms.
+                                                    </div>
+                                                </div>
+                                                <div id="search-results" class="require-scrollbar">
+                                                    <template id="search-result-template">
+                                                        <a id="search-result">
+                                                            <div class="result-leftside">
+                                                                <div id="result-title"></div>
+                                                                <div id="result-path"></div>
+                                                            </div>
+                                                            <div class="result-divider"></div>
+                                                            <div class="result-rightside">
+                                                                <div id="result-content"></div>
+                                                            </div>
+                                                        </a>
+                                                    </template>
+                                                    <template id="search-results-end-template">
+                                                        <fieldset class="search-results-end">
+                                                            <legend>There's nothing more to see here 🙈</legend>
+                                                        </fieldset>
+                                                    </template>
+                                                    <template id="prefix-tips-template">
+                                                        <div class="prefix-tips">
+                                                            <div>Tips:</div>
+                                                            <ul>
+                                                                <li>
+                                                                    Prefix query with <kbd>:</kbd> to only search for
+                                                                    content
+                                                                </li>
+                                                                <li>
+                                                                    Prefix query with <kbd>!</kbd> to only search for
+                                                                    titles
+                                                                </li>
+                                                            </ul>
                                                         </div>
-                                                    </a>
-                                                </template>
-                                                <template id="search-results-end-template">
-                                                    <fieldset class="search-results-end">
-                                                        <legend>There's nothing more to see here 🙈</legend>
-                                                    </fieldset>
-                                                </template>
+                                                    </template>
+                                                </div>
                                             </div>
                                         </dialog>
                                     </search>
