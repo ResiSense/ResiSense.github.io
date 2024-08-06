@@ -39,10 +39,10 @@ if (!targetDirectory) { throw new Error('Invalid mode!'); }
     const templateCache: TemplateCache = await TemplatePainter.compileTemplates();
     console.log(`Compiled templates.`);
     // 
-    await Promise.all(Pages.flattenedPageConfig.pages.map(page => buildFile(page, templateCache).catch(error => console.error(error))));
+    await Promise.all(Pages.flattenedPageConfig.pages.map(page => buildFile(page, templateCache)));
     console.log(`Built all pages.`);
     // 
-    await Promise.all(Pages.flattenedPageConfig.pages.map(page => buildAliasFile(page).catch(error => console.error(error))));
+    await Promise.all(Pages.flattenedPageConfig.pages.map(page => buildAliasFile(page)));
     console.log(`Built all aliases.`);
     //
     await fs.writeJson(path.resolve(targetDirectory, 'search-index.json'), Searchable.index);
