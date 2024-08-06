@@ -30,6 +30,20 @@ import Search, { SearchResponse } from './Search';
         ) as HTMLTemplateElement;
         return searchResultsEndTemplateElement.content.cloneNode(true) as HTMLDivElement;
     })();
+    const prefixTipsTemplate = (() => {
+        const prefixTipsTemplateElement = (document.getElementById('prefix-tips-template')
+            ?? (() => { throw new Error('Prefix tips template not found') })()
+        ) as HTMLTemplateElement;
+        return prefixTipsTemplateElement.content.cloneNode(true) as HTMLDivElement;
+    })();
+    const queryTimeElement = (document.getElementById('query-time')
+        ?? (() => { throw new Error('Query time element not found') })()
+    ) as HTMLSpanElement;
+    const redrawTimeElement = (document.getElementById('redraw-time')
+        ?? (() => { throw new Error('Redraw time element not found') })()
+    ) as HTMLSpanElement;
+    //
+    searchResultsElement.appendChild(prefixTipsTemplate.cloneNode(true));
     //
     const BASE_URL = document.head.querySelector('meta[base-url]')?.getAttribute('base-url') ?? '.';
     Searchable.index = await (await fetch(`/${BASE_URL}/search-index.json`)).json();
@@ -104,22 +118,27 @@ import Search, { SearchResponse } from './Search';
     });
     //
     async function updateSearchResults(query: string) {
-        //! PERFORMANCE
         const startTime = performance.now();
-        //! -----------
         const searchResponse: SearchResponse = await Search.doSearch(query, searchTargets);
-        //! PERFORMANCE
-        const endTime = performance.now();
+        const queryEndTime = performance.now();
+        const queryElapsedTime = queryEndTime - startTime;
         searchResponse.aborted
             ? console.log(`Query for "${query}" aborted`)
-            : console.log(`Querying for "${query}" in`, searchResponse.searchMode, 'mode took', endTime - startTime, 'ms', searchResponse.usedCache ? '(from cache)' : '');
-        //! -----------
+            : console.log(`Querying for "${query}" in`, searchResponse.searchMode, 'mode took', queryElapsedTime, 'ms', searchResponse.usedCache ? '(from cache)' : '');
         redrawSearchResults(searchResponse);
+        const redrawEndTime = performance.now();
+        const redrawElapsedTime = redrawEndTime - queryEndTime;
+        console.log('Redrawing search results took', redrawElapsedTime, 'ms');
+        queryTimeElement.textContent = queryElapsedTime.toFixed(2);
+        redrawTimeElement.textContent = redrawElapsedTime.toFixed(2);
         return;
         //
         function redrawSearchResults(searchResponse: SearchResponse) {
             searchResultsElement.innerHTML = '';
-            if (searchResponse.aborted) { return; }
+            if (searchResponse.aborted) {
+                searchResultsElement.appendChild(prefixTipsTemplate.cloneNode(true));
+                return;
+            }
             //
             console.log(searchResponse.results);
             for (const result of searchResponse.results.sort((a, b) => b.score - a.score)) {
