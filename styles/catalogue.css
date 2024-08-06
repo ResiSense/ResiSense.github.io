@@ -1,10 +1,6 @@
 painted-catalogue {
     pointer-events: none;
 
-    @media screen and (max-width: 1000px) {
-        display: none;
-    }
-
     &>.catalogue {
         display: flex;
         justify-content: left;
@@ -13,6 +9,20 @@ painted-catalogue {
         flex-direction: row;
         pointer-events: none;
 
+        @media screen and (max-width: 1100px) {
+            font-size: 2rem;
+
+            &>* {
+                display: none;
+            }
+
+            & .catalogue-arrow,
+            & .catalogue-item-active {
+                display: initial;
+                transition: translate 10000000000000000000s;
+            }
+        }
+
         & .catalogue-arrow,
         & .catalogue-divider {
             user-select: none;
@@ -20,7 +30,7 @@ painted-catalogue {
 
         &>.catalogue-item {
             color: var(--desaturated-orange);
-            font-size: 1rem;
+            font-size: 1em;
             font-weight: 500;
             pointer-events: initial;
 

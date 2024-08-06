@@ -54,7 +54,7 @@ const flattenedPageConfig: FlattenedPageConfig = ((): FlattenedPageConfig => {
         pages.forEach(page => {
             config.pages.push({ ...page, trace: [...trace, page.name] });
             if (page.pages) {
-                flattenPages(page.pages, [...trace, page.name]);
+                config.pages.push(...flattenPages(page.pages, [...trace, page.name]).pages);
             }
         });
         return config;

@@ -1,5 +1,9 @@
 :root {
     --header-height: 8rem;
+
+    @media screen and (max-width: 1100px) {
+        --header-height: 12rem;
+    }
 }
 
 painted-header {
@@ -32,6 +36,10 @@ painted-header {
                 height: 100%;
                 background-image: url('/assets/logos/resisense/ResiSense Green Logo.svg');
                 background-size: 100% 100%;
+
+                @media screen and (max-width: 1100px) {
+                    scale: 0.9;
+                }
             }
         }
 
@@ -53,7 +61,7 @@ painted-header {
                 width: 100%;
                 box-sizing: border-box;
                 padding-right: var(--header-padding-size);
-                box-shadow: var(--bright-brown) -10rem 0px 0px 0px;
+                box-shadow: var(--bright-brown) -20rem 0px 0px 0px;
                 pointer-events: initial;
                 position: relative;
                 z-index: 1;
@@ -75,6 +83,11 @@ painted-header {
                         color: var(--deep-green);
                         display: flex;
                         align-items: center;
+
+                        @media screen and (max-width: 1100px) {
+                            font-size: 4rem;
+                            translate: 0 0.8rem;
+                        }
                     }
 
                     &>.logo-flavour-text {
@@ -85,7 +98,7 @@ painted-header {
                         text-indent: 1rem;
                         margin-bottom: -0.8rem;
 
-                        @media screen and (max-width: 700px) {
+                        @media screen and (max-width: 1100px) {
                             display: none;
                         }
                     }
@@ -147,6 +160,15 @@ painted-header {
                         border-style: solid;
                         border-width: var(--header-rightside-button-border-width);
                         user-select: none;
+                        --font-size: 2rem;
+                        --button-size: calc(var(--header-height) * 0.3);
+                        --padding: 0.1em 0.2rem 0.1rem 0.3rem;
+                        height: 2rem;
+
+                        @media screen and (max-width: 1100px) {
+                            height: var(--button-size);
+                            width: var(--button-size);
+                        }
                     }
                 }
             }

@@ -2,7 +2,7 @@ import EventType from './EventType';
 import ResponsivenessHandler from './responsivenessHandler';
 {
     const catalogueItems = document.getElementsByClassName("catalogue-item");
-
+    /* -------------------------------------------------------------------------- */
     window.addEventListener(EventType.contentScrollPastHeader.toString(), determineCatalogueVisibility);
     function determineCatalogueVisibility() {
         const shouldHideCatalogue = ResponsivenessHandler.contentIsPastHeader.current;
@@ -20,8 +20,9 @@ import ResponsivenessHandler from './responsivenessHandler';
             catalogueElement.classList.toggle("catalogue-item-hidden", shouldHideCatalogue);
         });
     }
-
+    /* -------------------------------------------------------------------------- */
     window.addEventListener('DOMContentLoaded', calculateTranslateAmount);
+    window.addEventListener('resize', calculateTranslateAmount);
     function calculateTranslateAmount() {
         const contentIsPastHeader = ResponsivenessHandler.contentIsPastHeader;
         if (contentIsPastHeader.current === undefined) {
