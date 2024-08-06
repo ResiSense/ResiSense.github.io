@@ -66,6 +66,15 @@ import Search, { SearchResponse } from './Search';
         oldSearchFieldQuery = query;
         updateSearchResults(query);
     }
+    //
+    mainSearchFieldElement.addEventListener('input', onSearchFieldInput);
+    function onSearchFieldInput(event: Event) {
+        const inputElement = event.target as HTMLInputElement;
+        if (inputElement.value === '') {
+            console.log('Cancel button clicked');
+            requestAnimationFrame(updateSearch);
+        }
+    }
     /* -------------------------------------------------------------------------- */
     searchbarElement.addEventListener('keydown', (event: KeyboardEvent) => {
         // allow non-typing keys pass through
