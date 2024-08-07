@@ -1,11 +1,11 @@
 {
     "job": "build",
     "ref": "refs/heads/main",
-    "sha": "26b6bbc493cca4458670c90d899c0146936f30d9",
+    "sha": "05e922b4b80ff70ca2152d4d3024cd1d0ecad18c",
     "repository": "ResiSense/ResiSense.github.io",
     "repository_Url": null,
-    "run_id": "10277401703",
-    "run_number": "216",
+    "run_id": "10277771686",
+    "run_number": "217",
     "run_attempt": "1",
     "artifact_cache_size_limit": "10",
     "actor": "CCheukKa",
@@ -13,8 +13,8 @@
     "workflow": "Full CI pipeline",
     "event_name": "push",
     "event": {
-        "after": "26b6bbc493cca4458670c90d899c0146936f30d9",
-        "before": "fe56ed62fe89766bd7087a953cdcc6ceb9afaa4c",
+        "after": "05e922b4b80ff70ca2152d4d3024cd1d0ecad18c",
+        "before": "7e468396990ef64fa76fd8283a7fdb1a056c7942",
         "commits": [
             {
                 "author": {
@@ -27,51 +27,15 @@
                     "name": "CCheukKa",
                     "username": "CCheukKa"
                 },
-                "distinct": false,
-                "id": "a308689600a30575842c6c3bd3d88dc0d7aeb991",
-                "message": "embed fonts",
-                "timestamp": "2024-08-07T08:21:48+08:00",
-                "tree_id": "54477d49c33b046ebbad7fe374595b6622f4f111",
-                "url": "https://github.com/ResiSense/ResiSense.github.io/commit/a308689600a30575842c6c3bd3d88dc0d7aeb991"
-            },
-            {
-                "author": {
-                    "email": "ccheukka@gmail.com",
-                    "name": "CCheukKa",
-                    "username": "CCheukKa"
-                },
-                "committer": {
-                    "email": "ccheukka@gmail.com",
-                    "name": "CCheukKa",
-                    "username": "CCheukKa"
-                },
-                "distinct": false,
-                "id": "f4ce44a3cc74938a15db129bb628fce331577552",
-                "message": "remove unused font",
-                "timestamp": "2024-08-07T11:03:10+08:00",
-                "tree_id": "3e8102b6655d98dd335c9b05552ede30ba5d134b",
-                "url": "https://github.com/ResiSense/ResiSense.github.io/commit/f4ce44a3cc74938a15db129bb628fce331577552"
-            },
-            {
-                "author": {
-                    "email": "ccheukka@gmail.com",
-                    "name": "CCheukKa",
-                    "username": "CCheukKa"
-                },
-                "committer": {
-                    "email": "ccheukka@gmail.com",
-                    "name": "CCheukKa",
-                    "username": "CCheukKa"
-                },
                 "distinct": true,
-                "id": "26b6bbc493cca4458670c90d899c0146936f30d9",
-                "message": "Merge branch embed-fonts",
-                "timestamp": "2024-08-07T11:03:23+08:00",
-                "tree_id": "dfef581f7cadb351a1edb2e00ec4c46892f0fad5",
-                "url": "https://github.com/ResiSense/ResiSense.github.io/commit/26b6bbc493cca4458670c90d899c0146936f30d9"
+                "id": "05e922b4b80ff70ca2152d4d3024cd1d0ecad18c",
+                "message": "fix hamburger button padding being uneven",
+                "timestamp": "2024-08-07T11:44:06+08:00",
+                "tree_id": "e37dc2d0eba13f8b2d56ae8256750a0d563a5316",
+                "url": "https://github.com/ResiSense/ResiSense.github.io/commit/05e922b4b80ff70ca2152d4d3024cd1d0ecad18c"
             }
         ],
-        "compare": "https://github.com/ResiSense/ResiSense.github.io/compare/fe56ed62fe89...26b6bbc493cc",
+        "compare": "https://github.com/ResiSense/ResiSense.github.io/compare/7e468396990e...05e922b4b80f",
         "created": false,
         "deleted": false,
         "forced": false,
@@ -87,11 +51,11 @@
                 "username": "CCheukKa"
             },
             "distinct": true,
-            "id": "26b6bbc493cca4458670c90d899c0146936f30d9",
-            "message": "Merge branch embed-fonts",
-            "timestamp": "2024-08-07T11:03:23+08:00",
-            "tree_id": "dfef581f7cadb351a1edb2e00ec4c46892f0fad5",
-            "url": "https://github.com/ResiSense/ResiSense.github.io/commit/26b6bbc493cca4458670c90d899c0146936f30d9"
+            "id": "05e922b4b80ff70ca2152d4d3024cd1d0ecad18c",
+            "message": "fix hamburger button padding being uneven",
+            "timestamp": "2024-08-07T11:44:06+08:00",
+            "tree_id": "e37dc2d0eba13f8b2d56ae8256750a0d563a5316",
+            "url": "https://github.com/ResiSense/ResiSense.github.io/commit/05e922b4b80ff70ca2152d4d3024cd1d0ecad18c"
         },
         "pusher": {
             "email": "ccheukka@gmail.com",
@@ -104,6 +68,6 @@
     "ref_type": "branch",
     "secret_source": "Actions",
     "workflow_ref": "ResiSense/ResiSense.github.io/.github/workflows/full-ci-pipeline.yaml@refs/heads/main",
-    "workflow_sha": "26b6bbc493cca4458670c90d899c0146936f30d9",
+    "workflow_sha": "05e922b4b80ff70ca2152d4d3024cd1d0ecad18c",
     "workspace": "/home/runner/work/ResiSense.github.io/ResiSense.github.io"
 }
