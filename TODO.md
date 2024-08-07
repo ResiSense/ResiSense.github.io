@@ -11,5 +11,6 @@
 - [ ] videos are uploaded [here](https://tools.igem.org/wiki/non-deliverable-videos)
 
 ## Actually important stuff
-- [ ] add responsiveness
+- [x] add responsiveness
+- [ ] add multiple sizes for images
 - [ ] add catalogue nesting
