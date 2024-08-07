@@ -12,5 +12,7 @@
 
 ## Actually important stuff
 - [x] add responsiveness
-- [ ] add multiple sizes for images
 - [ ] add catalogue nesting
+- [ ] add multiple sizes for images
+- [ ] fix catalogue being janky on resize
+- [ ] rework hamburger menu design
