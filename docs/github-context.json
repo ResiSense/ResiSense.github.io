@@ -1,11 +1,11 @@
 {
     "job": "build",
     "ref": "refs/heads/main",
-    "sha": "05e922b4b80ff70ca2152d4d3024cd1d0ecad18c",
+    "sha": "cfaab9c4e2df1ac7c2bfbdd8e690ca38a00979b0",
     "repository": "ResiSense/ResiSense.github.io",
     "repository_Url": null,
-    "run_id": "10277771686",
-    "run_number": "217",
+    "run_id": "10277788403",
+    "run_number": "218",
     "run_attempt": "1",
     "artifact_cache_size_limit": "10",
     "actor": "CCheukKa",
@@ -13,8 +13,8 @@
     "workflow": "Full CI pipeline",
     "event_name": "push",
     "event": {
-        "after": "05e922b4b80ff70ca2152d4d3024cd1d0ecad18c",
-        "before": "7e468396990ef64fa76fd8283a7fdb1a056c7942",
+        "after": "cfaab9c4e2df1ac7c2bfbdd8e690ca38a00979b0",
+        "before": "fcd16ae15fa029e5824a91007165c1b0916f9bbe",
         "commits": [
             {
                 "author": {
@@ -28,14 +28,32 @@
                     "username": "CCheukKa"
                 },
                 "distinct": true,
-                "id": "05e922b4b80ff70ca2152d4d3024cd1d0ecad18c",
-                "message": "fix hamburger button padding being uneven",
-                "timestamp": "2024-08-07T11:44:06+08:00",
-                "tree_id": "e37dc2d0eba13f8b2d56ae8256750a0d563a5316",
-                "url": "https://github.com/ResiSense/ResiSense.github.io/commit/05e922b4b80ff70ca2152d4d3024cd1d0ecad18c"
+                "id": "a99cc40f3dd3c16566db6bef46bfa22db86a9a3c",
+                "message": "update TODO.md",
+                "timestamp": "2024-08-07T11:46:10+08:00",
+                "tree_id": "3e9764de4228694e3ee95c94b83aa02f8602b2f8",
+                "url": "https://github.com/ResiSense/ResiSense.github.io/commit/a99cc40f3dd3c16566db6bef46bfa22db86a9a3c"
+            },
+            {
+                "author": {
+                    "email": "ccheukka@gmail.com",
+                    "name": "CCheukKa",
+                    "username": "CCheukKa"
+                },
+                "committer": {
+                    "email": "ccheukka@gmail.com",
+                    "name": "CCheukKa",
+                    "username": "CCheukKa"
+                },
+                "distinct": true,
+                "id": "cfaab9c4e2df1ac7c2bfbdd8e690ca38a00979b0",
+                "message": "Merge branch main of https://github.com/ResiSense/ResiSense.github.io",
+                "timestamp": "2024-08-07T11:46:17+08:00",
+                "tree_id": "affcce8e9e2100761df66e76e5804817489f8d35",
+                "url": "https://github.com/ResiSense/ResiSense.github.io/commit/cfaab9c4e2df1ac7c2bfbdd8e690ca38a00979b0"
             }
         ],
-        "compare": "https://github.com/ResiSense/ResiSense.github.io/compare/7e468396990e...05e922b4b80f",
+        "compare": "https://github.com/ResiSense/ResiSense.github.io/compare/fcd16ae15fa0...cfaab9c4e2df",
         "created": false,
         "deleted": false,
         "forced": false,
@@ -51,11 +69,11 @@
                 "username": "CCheukKa"
             },
             "distinct": true,
-            "id": "05e922b4b80ff70ca2152d4d3024cd1d0ecad18c",
-            "message": "fix hamburger button padding being uneven",
-            "timestamp": "2024-08-07T11:44:06+08:00",
-            "tree_id": "e37dc2d0eba13f8b2d56ae8256750a0d563a5316",
-            "url": "https://github.com/ResiSense/ResiSense.github.io/commit/05e922b4b80ff70ca2152d4d3024cd1d0ecad18c"
+            "id": "cfaab9c4e2df1ac7c2bfbdd8e690ca38a00979b0",
+            "message": "Merge branch main of https://github.com/ResiSense/ResiSense.github.io",
+            "timestamp": "2024-08-07T11:46:17+08:00",
+            "tree_id": "affcce8e9e2100761df66e76e5804817489f8d35",
+            "url": "https://github.com/ResiSense/ResiSense.github.io/commit/cfaab9c4e2df1ac7c2bfbdd8e690ca38a00979b0"
         },
         "pusher": {
             "email": "ccheukka@gmail.com",
@@ -68,6 +86,6 @@
     "ref_type": "branch",
     "secret_source": "Actions",
     "workflow_ref": "ResiSense/ResiSense.github.io/.github/workflows/full-ci-pipeline.yaml@refs/heads/main",
-    "workflow_sha": "05e922b4b80ff70ca2152d4d3024cd1d0ecad18c",
+    "workflow_sha": "cfaab9c4e2df1ac7c2bfbdd8e690ca38a00979b0",
     "workspace": "/home/runner/work/ResiSense.github.io/ResiSense.github.io"
 }
