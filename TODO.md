@@ -16,3 +16,4 @@
 - [ ] add multiple sizes for images
 - [ ] fix catalogue being janky on resize
 - [ ] rework hamburger menu design
+- [ ] add responsiveness to human cards
