@@ -13,7 +13,7 @@ painted-searchbar {
         & input {
             background-color: transparent;
             border: none;
-            font-family: 'Baloo 2', 'Trebuchet MS', 'Lucida Sans Unicode', Arial, sans-serif;
+            font-family: inherit;
 
             &:focus {
                 outline: none;
@@ -74,7 +74,7 @@ painted-searchbar {
             background-color: var(--light-green);
             border: none;
             cursor: pointer;
-            font-family: 'Baloo 2', 'Trebuchet MS', 'Lucida Sans Unicode', Arial, sans-serif;
+            font-family: inherit;
             font-weight: 600;
             font-size: 0.9rem;
             padding: var(--padding);
