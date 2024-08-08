@@ -196,6 +196,8 @@ painted-footer>footer {
         height: var(--fh-a);
         bottom: 0;
         left: 0;
+        overflow: clip;
+        --tolerance: 0.1rem;
 
         &>div {
             position: absolute;
@@ -214,8 +216,18 @@ painted-footer>footer {
             border-radius: 0 100% 0 0;
             clip-path: polygon(0 0,
                     100% 0,
-                    100% calc(var(--h1-r-raw) * var(--y-abs-per-rel) * var(--abs-unit) - var(--py-a)),
-                    0 calc(var(--h1-r-raw)* var(--y-abs-per-rel) * var(--abs-unit) - var(--py-a)));
+                    100% calc(var(--h1-r-raw) * var(--y-abs-per-rel) * var(--abs-unit) - var(--py-a) + var(--tolerance)),
+                    0 calc(var(--h1-r-raw)* var(--y-abs-per-rel) * var(--abs-unit) - var(--py-a) + var(--tolerance)));
+
+            &::before {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: -100%;
+                width: 100%;
+                height: 100%;
+                background-color: inherit;
+            }
         }
 
         &>.negative-circle {
@@ -224,10 +236,24 @@ painted-footer>footer {
             --w: var(--r2-a);
             --h: var(--r2-a);
             translate: -100% 100%;
-            --mask: radial-gradient(var(--r2-a) at 100% 0, transparent 99.9%, black 99.9%);
+            --mask: radial-gradient(var(--r2-a) at 100% 0, transparent 99%, black 99%);
             -webkit-mask: var(--mask);
             mask: var(--mask);
-            clip-path: polygon(0 calc(var(--y2-a) - var(--py-a)), 100% calc(var(--y2-a) - var(--py-a)), 100% 100%, 0 100%);
+            clip-path: polygon(0 calc(var(--y2-a) - var(--py-a)),
+                    100% calc(var(--y2-a) - var(--py-a)),
+                    100% 200%,
+                    0 200%);
+            scale: 1.015 1.015;
+
+            &::before {
+                content: '';
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background-color: inherit;
+            }
         }
 
         &>.left-background {
@@ -242,6 +268,16 @@ painted-footer>footer {
             --y: 0;
             --w: calc(var(--xc-a) - var(--x1-a-a));
             --h: var(--py-a);
+
+            &::before {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: -100%;
+                width: 100%;
+                height: 100%;
+                background-color: inherit;
+            }
         }
 
         &>.right-background {
@@ -249,6 +285,16 @@ painted-footer>footer {
             --y: 0;
             --w: calc(var(--fw-r) - var(--xc-a));
             --h: var(--h2-r);
+
+            &::before {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: -100%;
+                width: 100%;
+                height: 100%;
+                background-color: inherit;
+            }
         }
     }
 }
