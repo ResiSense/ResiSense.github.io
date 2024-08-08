@@ -133,10 +133,14 @@ painted-footer {
             width: calc(var(--fw-r) - var(--xc-a));
             height: var(--h2-r);
             display: grid;
-            grid-template-columns: auto 1fr;
+            grid-template-columns: min-content max-content;
             grid-template-rows: 50% 50%;
             gap: 0.2rem;
             padding: 1rem;
+
+            &>.logo-text {
+                text-wrap: nowrap;
+            }
 
             &>.cuhk-department-logo-container,
             &>.sponsor-logo-container {
@@ -144,6 +148,9 @@ painted-footer {
                 flex-direction: row;
                 align-items: center;
                 gap: 0.5rem;
+                width: fit-content;
+                text-wrap: nowrap;
+                white-space: nowrap;
 
                 &>a {
                     height: 100%;
