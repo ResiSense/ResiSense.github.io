@@ -1,11 +1,11 @@
 {
     "job": "build",
     "ref": "refs/heads/main",
-    "sha": "bf9509286ce0eaaef72d40eed18a3adb14710c02",
+    "sha": "bcd2476536d849ab1bb6e07de80b177c44422439",
     "repository": "ResiSense/ResiSense.github.io",
     "repository_Url": null,
-    "run_id": "10277803840",
-    "run_number": "219",
+    "run_id": "10285184605",
+    "run_number": "220",
     "run_attempt": "1",
     "artifact_cache_size_limit": "10",
     "actor": "CCheukKa",
@@ -13,8 +13,8 @@
     "workflow": "Full CI pipeline",
     "event_name": "push",
     "event": {
-        "after": "bf9509286ce0eaaef72d40eed18a3adb14710c02",
-        "before": "44062940a11230aa6ba7149d62fd0037bc4a6922",
+        "after": "bcd2476536d849ab1bb6e07de80b177c44422439",
+        "before": "f82610917ea66c4640c23ef60834346f460d2902",
         "commits": [
             {
                 "author": {
@@ -23,19 +23,19 @@
                     "username": "CCheukKa"
                 },
                 "committer": {
-                    "email": "noreply@github.com",
-                    "name": "GitHub",
-                    "username": "web-flow"
+                    "email": "ccheukka@gmail.com",
+                    "name": "CCheukKa",
+                    "username": "CCheukKa"
                 },
                 "distinct": true,
-                "id": "bf9509286ce0eaaef72d40eed18a3adb14710c02",
-                "message": "Update TODO.md",
-                "timestamp": "2024-08-07T11:48:43+08:00",
-                "tree_id": "d16ee0a80f4bd1a1ef219f9300826f6372c68396",
-                "url": "https://github.com/ResiSense/ResiSense.github.io/commit/bf9509286ce0eaaef72d40eed18a3adb14710c02"
+                "id": "bcd2476536d849ab1bb6e07de80b177c44422439",
+                "message": "speed up hot reload",
+                "timestamp": "2024-08-07T21:22:21+08:00",
+                "tree_id": "7cbae492c5784e17b591b23303895e3f4cb9728e",
+                "url": "https://github.com/ResiSense/ResiSense.github.io/commit/bcd2476536d849ab1bb6e07de80b177c44422439"
             }
         ],
-        "compare": "https://github.com/ResiSense/ResiSense.github.io/compare/44062940a112...bf9509286ce0",
+        "compare": "https://github.com/ResiSense/ResiSense.github.io/compare/f82610917ea6...bcd2476536d8",
         "created": false,
         "deleted": false,
         "forced": false,
@@ -46,16 +46,16 @@
                 "username": "CCheukKa"
             },
             "committer": {
-                "email": "noreply@github.com",
-                "name": "GitHub",
-                "username": "web-flow"
+                "email": "ccheukka@gmail.com",
+                "name": "CCheukKa",
+                "username": "CCheukKa"
             },
             "distinct": true,
-            "id": "bf9509286ce0eaaef72d40eed18a3adb14710c02",
-            "message": "Update TODO.md",
-            "timestamp": "2024-08-07T11:48:43+08:00",
-            "tree_id": "d16ee0a80f4bd1a1ef219f9300826f6372c68396",
-            "url": "https://github.com/ResiSense/ResiSense.github.io/commit/bf9509286ce0eaaef72d40eed18a3adb14710c02"
+            "id": "bcd2476536d849ab1bb6e07de80b177c44422439",
+            "message": "speed up hot reload",
+            "timestamp": "2024-08-07T21:22:21+08:00",
+            "tree_id": "7cbae492c5784e17b591b23303895e3f4cb9728e",
+            "url": "https://github.com/ResiSense/ResiSense.github.io/commit/bcd2476536d849ab1bb6e07de80b177c44422439"
         },
         "pusher": {
             "email": "ccheukka@gmail.com",
@@ -68,6 +68,6 @@
     "ref_type": "branch",
     "secret_source": "Actions",
     "workflow_ref": "ResiSense/ResiSense.github.io/.github/workflows/full-ci-pipeline.yaml@refs/heads/main",
-    "workflow_sha": "bf9509286ce0eaaef72d40eed18a3adb14710c02",
+    "workflow_sha": "bcd2476536d849ab1bb6e07de80b177c44422439",
     "workspace": "/home/runner/work/ResiSense.github.io/ResiSense.github.io"
 }

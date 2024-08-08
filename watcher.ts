@@ -16,7 +16,8 @@ const ignored = (testString: string) => {
 const watcher = chokidar.watch('./', {
     ignored,
     persistent: true,
-    ignoreInitial: true
+    ignoreInitial: true,
+    awaitWriteFinish: true,
 });
 
 const slowWatcherEvents = ['add', 'change', 'unlink'];
