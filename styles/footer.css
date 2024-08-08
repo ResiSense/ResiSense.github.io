@@ -158,35 +158,35 @@ painted-footer {
     height: 30rem;
     bottom: 0;
     left: 0;
-    /* independent parameters */
-    --fw: 1200px;
+
+    /*! independent parameters */
+    --unit: 1px;
+    --fw: 100%;
     --h1-raw: 400;
     --h2-raw: 250;
-    --r1-raw: 100;
-    --r2-raw: 100;
+    --r1-raw: 200;
+    --r2-raw: 200;
     --px-raw: 600;
-    --h1: calc(1px * var(--h1-raw));
-    --h2: calc(1px * var(--h2-raw));
-    --r1: calc(1px * var(--r1-raw));
-    --r2: calc(1px * var(--r2-raw));
-    --px: calc(1px * var(--px-raw));
-    /* dependent variables */
-    --y1: calc(1px * var(--y1-raw));
-    --y2: calc(1px * var(--y2-raw));
+    /*? unit shenanigans */
+    --h1: calc(var(--unit) * var(--h1-raw));
+    --h2: calc(var(--unit) * var(--h2-raw));
+    --r1: calc(var(--unit) * var(--r1-raw));
+    --r2: calc(var(--unit) * var(--r2-raw));
+    --px: calc(var(--unit) * var(--px-raw));
+
+    /*! dependent variables */
     --y1-raw: calc(var(--h1-raw) - var(--r1-raw));
     --y2-raw: calc(var(--h2-raw) + var(--r2-raw));
-
-    --r-ratio: calc(var(--r2-raw) / var(--r1-raw));
-
-    --x1: calc(1px * var(--x1-raw));
-    --x2: calc(1px * var(--x2-raw));
-    --x1-raw: calc(-1 * sqrt(pow(var(--r1-raw) + var(--r2-raw), 2) - pow(var(--y1-raw) - var(--y2-raw), 2)) / (1 + var(--r-ratio)));
-    --x2-raw: calc(-1 * var(--r-ratio) * var(--x1-raw));
-
+    --x1-raw: calc(-1 * sqrt(pow(var(--r1-raw) + var(--r2-raw), 2) - pow(var(--y1-raw) - var(--y2-raw), 2)) / (1 + var(--r2-raw) / var(--r1-raw)));
+    --x2-raw: calc(-1 * var(--r2-raw) / var(--r1-raw) * var(--x1-raw));
     --py-raw: calc(-1 * var(--x2-raw) * (var(--h1-raw) - var(--h2-raw)) / (var(--x1-raw) - var(--x2-raw)) + var(--h2-raw));
-    --py: calc(1px * var(--py-raw));
-
     --x1-a: calc(var(--px) + var(--x1));
+    /*? unit shenanigans */
+    --y1: calc(var(--unit) * var(--y1-raw));
+    --y2: calc(var(--unit) * var(--y2-raw));
+    --x1: calc(var(--unit) * var(--x1-raw));
+    --x2: calc(var(--unit) * var(--x2-raw));
+    --py: calc(var(--unit) * var(--py-raw));
 
     & div {
         position: absolute;
@@ -201,9 +201,9 @@ painted-footer {
         --y: var(--y1);
         --w: var(--r1);
         --h: var(--r1);
-        background-color: rgba(255, 255, 0, 0.2);
+        background-color: rgba(255, 0, 255, 0.2);
         border-radius: 0 100% 0 0;
-        clip-path: polygon(0 0, 100% 0, 100% calc(var(--h1) - var(--py)), 0 100%);
+        clip-path: polygon(0 0, 100% 0, 100% calc(var(--h1) - var(--py)), 0 calc(var(--h1) - var(--py)));
     }
 
     &>.negative-circle {
@@ -213,7 +213,7 @@ painted-footer {
         --y: calc(var(--yc) - var(--r2));
         --w: var(--r2);
         --h: var(--r2);
-        background-color: rgba(255, 0, 255, 0.2);
+        background-color: rgba(0, 0, 255, 0.2);
         --mask: radial-gradient(var(--r2) at 100% 0, transparent 100%, black);
         -webkit-mask: var(--mask);
         mask: var(--mask);
@@ -233,7 +233,7 @@ painted-footer {
         --y: 0;
         --w: calc(var(--px) - var(--x1-a));
         --h: var(--py);
-        background-color: rgba(0, 255, 0, 0.2);
+        background-color: rgba(0, 255, 255, 0.2);
     }
 
     &>.right-background {
@@ -241,6 +241,6 @@ painted-footer {
         --y: 0;
         --w: calc(var(--fw) - var(--px));
         --h: var(--h2);
-        background-color: rgba(0, 0, 255, 0.2);
+        background-color: rgba(0, 255, 0, 0.2);
     }
 }
