@@ -1,51 +1,57 @@
 painted-footer {
     justify-self: flex-end;
     --footer-background-color: var(--bright-brown);
-    background-color: var(--footer-background-color);
     z-index: 1;
     margin-top: auto;
 
     &>footer {
-        --footer-persistent-height: 2rem;
+        width: 100%;
+        height: var(--fh-a);
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-end;
+        position: relative;
 
         &>* {
-            padding-left: 1rem;
-            padding-right: 1rem;
             box-sizing: border-box;
         }
 
-        &>.footer-banner {
-            width: 100%;
-            height: 7rem;
+        &>.footer-leftside {
+            height: var(--h1-r);
+            width: var(--xc-a);
             display: flex;
-            padding-top: 1rem;
-            padding-bottom: 0.5rem;
-            margin-bottom: var(--footer-persistent-height);
-            align-items: center;
-            /* overflow: hidden; */
-            position: relative;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: flex-start;
+            padding: 1rem;
+            padding-right: 0;
 
-            &>div:not(.fancy-background) {
-                height: 100%;
-            }
-
-            & img {
-                height: 100%;
-                width: auto;
-            }
-
-            &>.resisense {
+            &>.resisense-container {
                 display: flex;
+                flex-direction: row;
                 gap: 1rem;
+
+                &>.resisense-logo {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+
+                    &>img {
+                        height: 100%;
+                        aspect-ratio: 1/1;
+                        object-fit: contain;
+                    }
+                }
 
                 &>.resisense-logo-aside {
                     display: flex;
                     flex-direction: column;
                     justify-content: space-between;
                     color: var(--deep-green);
+                    --size: 3.3rem;
 
                     &>.resisense-name {
-                        --size: 2.6rem;
                         font-size: var(--size);
                         line-height: var(--size);
                         font-weight: 700;
@@ -55,7 +61,7 @@ painted-footer {
                     }
 
                     &>.socials {
-                        font-size: 1rem;
+                        font-size: calc(var(--size) / 3);
                         display: flex;
                         flex-direction: column;
 
@@ -79,175 +85,170 @@ painted-footer {
                 }
             }
 
-            & .divider {
-                margin: 0 1rem;
-                border-left: 2px dashed var(--desaturated-orange);
-            }
+            &>.small-text-container {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                justify-content: center;
 
-            &>.logo-container-wrapper {
-                display: grid;
-                grid-template-columns: auto auto;
-                grid-template-rows: 50% 50%;
-                gap: 0.2rem;
-
-                &>.cuhk-department-logo-container,
-                &>.sponsor-logo-container {
-                    display: flex;
-                    flex-direction: row;
-                    align-items: center;
-                    gap: 0.5rem;
+                &>span {
+                    line-height: 1.2rem;
 
                     &>a {
                         height: 100%;
 
                         &>img {
-                            width: 100%;
-                            height: 100%;
+                            vertical-align: middle;
+                            height: 1rem;
+                            aspect-ratio: 1/1;
                             object-fit: contain;
+                            margin: auto;
                         }
                     }
+                }
+
+                &>.license>a {
+                    font-weight: 700;
+                    text-decoration: underline;
                 }
             }
         }
 
-        &>.footer-persistent {
-            background-color: var(--footer-background-color);
-            position: fixed;
-            bottom: 0;
-            display: flex;
-            padding-top: 0.1rem;
-            padding-bottom: 0.1rem;
-            height: var(--footer-persistent-height);
-            width: 100%;
-            justify-content: space-between;
-            align-items: center;
-            flex-direction: row;
+        &>.divider {
+            margin: 0 1rem;
+            border-left: 2px dashed var(--desaturated-orange);
+        }
 
-            &>div {
+        &>.footer-rightside {
+            width: calc(var(--fw-r) - var(--xc-a));
+            height: var(--h2-r);
+            display: grid;
+            grid-template-columns: auto 1fr;
+            grid-template-rows: 50% 50%;
+            gap: 0.2rem;
+            padding: 1rem;
+            padding-left: 0;
+
+            &>.cuhk-department-logo-container,
+            &>.sponsor-logo-container {
                 display: flex;
-                justify-content: center;
-                align-items: center;
                 flex-direction: row;
+                align-items: center;
+                gap: 0.5rem;
 
-                &>span>a {
+                &>a {
                     height: 100%;
 
                     &>img {
-                        vertical-align: middle;
-                        height: 20px;
-                        aspect-ratio: 1/1;
+                        width: 100%;
+                        height: 100%;
                         object-fit: contain;
                     }
-                }
-
-                &.license-container a {
-                    font-weight: 700;
-                    text-decoration: underline;
                 }
             }
         }
     }
 }
 
-.fancy-background {
-    isolation: isolate;
-    z-index: -1;
-    position: absolute;
-    background-color: rgba(0, 0, 0, 0.02);
-    width: var(--fw-r);
-    height: var(--fh-r);
-    bottom: 0;
-    left: 0;
+painted-footer>footer {
+    /*& See this: https://www.desmos.com/calculator/xuze2wyg4f */
 
     /*! independent parameters */
     --fw-r: 100%;
-    --fh-r-raw: 10;
+    --fh-a-raw: 12;
     --h1-r-raw: 100;
     --h2-r-raw: 60;
-    --xc-r: 20%;
-    --r-a-raw: 10;
+    --xc-a-raw: 25;
+    --r-a-raw: 8;
     --r1-a-raw: var(--r-a-raw);
     --r2-a-raw: var(--r-a-raw);
     /*? unit shenanigans */
     --abs-unit: 1rem;
     --rel-unit: 1%;
-    --y-abs-per-rel: calc(var(--fh-r-raw) / 100);
-    --fh-r: calc(var(--abs-unit) * var(--fh-r-raw));
+    --y-abs-per-rel: calc(var(--fh-a-raw) / 100);
+    --fh-a: calc(var(--abs-unit) * var(--fh-a-raw));
     --h1-r: calc(var(--rel-unit) * var(--h1-r-raw));
     --h2-r: calc(var(--rel-unit) * var(--h2-r-raw));
+    --xc-a: calc(var(--abs-unit) * var(--xc-a-raw));
     --r1-a: calc(var(--abs-unit) * var(--r1-a-raw));
     --r2-a: calc(var(--abs-unit) * var(--r2-a-raw));
 
     /*! dependent variables */
-    --y1-raw: calc(var(--h1-r-raw) * var(--y-abs-per-rel) - var(--r1-a-raw));
-    --y2-raw: calc(var(--h2-r-raw) * var(--y-abs-per-rel) + var(--r2-a-raw));
-    --x1-raw: calc(-1 * sqrt(pow(var(--r1-a-raw) + var(--r2-a-raw), 2) - pow(var(--y1-raw) - var(--y2-raw), 2)) / (1 + var(--r2-a-raw) / var(--r1-a-raw)));
-    --x2-raw: calc(-1 * var(--r2-a-raw) / var(--r1-a-raw) * var(--x1-raw));
-    --py-raw: calc(-1 * var(--x2-raw) * (var(--h1-r-raw) - var(--h2-r-raw)) * var(--y-abs-per-rel) / (var(--x1-raw) - var(--x2-raw)) + var(--h2-r-raw) * var(--y-abs-per-rel));
-    --x1-a: calc(var(--xc-r) + var(--x1));
-    --x2-a: calc(var(--xc-r) + var(--x2));
+    --y1-a-raw: calc(var(--h1-r-raw) * var(--y-abs-per-rel) - var(--r1-a-raw));
+    --y2-a-raw: calc(var(--h2-r-raw) * var(--y-abs-per-rel) + var(--r2-a-raw));
+    --x1-a-raw: calc(-1 * sqrt(pow(var(--r1-a-raw) + var(--r2-a-raw), 2) - pow(var(--y1-a-raw) - var(--y2-a-raw), 2)) / (1 + var(--r2-a-raw) / var(--r1-a-raw)));
+    --x2-a-raw: calc(-1 * var(--r2-a-raw) / var(--r1-a-raw) * var(--x1-a-raw));
+    --py-a-raw: calc(-1 * var(--x2-a-raw) * (var(--h1-r-raw) - var(--h2-r-raw)) * var(--y-abs-per-rel) / (var(--x1-a-raw) - var(--x2-a-raw)) + var(--h2-r-raw) * var(--y-abs-per-rel));
+    --x1-a-a: calc(var(--xc-a) + var(--x1-a));
+    --x2-a-a: calc(var(--xc-a) + var(--x2-a));
     /*? unit shenanigans */
-    --y1: calc(var(--abs-unit) * var(--y1-raw));
-    --y2: calc(var(--abs-unit) * var(--y2-raw));
-    --x1: calc(var(--abs-unit) * var(--x1-raw));
-    --x2: calc(var(--abs-unit) * var(--x2-raw));
-    --py: calc(var(--abs-unit) * var(--py-raw));
+    --y1-a: calc(var(--abs-unit) * var(--y1-a-raw));
+    --y2-a: calc(var(--abs-unit) * var(--y2-a-raw));
+    --x1-a: calc(var(--abs-unit) * var(--x1-a-raw));
+    --x2-a: calc(var(--abs-unit) * var(--x2-a-raw));
+    --py-a: calc(var(--abs-unit) * var(--py-a-raw));
 
-    & div {
+    &>.fancy-background {
+        isolation: isolate;
+        z-index: -1;
         position: absolute;
-        left: var(--x);
-        bottom: var(--y);
-        height: var(--h);
-        width: var(--w);
-    }
+        width: var(--fw-r);
+        height: var(--fh-a);
+        bottom: 0;
+        left: 0;
 
-    &>.positive-circle {
-        --x: var(--x1-a);
-        --y: var(--y1);
-        --w: var(--r1-a);
-        --h: var(--r1-a);
-        background-color: rgba(255, 0, 255, 0.2);
-        border-radius: 0 100% 0 0;
-        clip-path: polygon(0 0,
-                100% 0,
-                100% calc(var(--h1-r-raw) * var(--y-abs-per-rel) * var(--abs-unit) - var(--py)),
-                0 calc(var(--h1-r-raw)* var(--y-abs-per-rel) * var(--abs-unit) - var(--py)));
-    }
+        &>div {
+            position: absolute;
+            left: var(--x);
+            bottom: var(--y);
+            height: var(--h);
+            width: var(--w);
+            background-color: var(--footer-background-color);
+        }
 
-    &>.negative-circle {
-        --x: var(--x2-a);
-        --y: var(--y2);
-        --w: var(--r2-a);
-        --h: var(--r2-a);
-        translate: -100% 100%;
-        background-color: rgba(0, 0, 255, 0.2);
-        --mask: radial-gradient(var(--r2-a) at 100% 0, transparent 99.9%, black 99.9%);
-        -webkit-mask: var(--mask);
-        mask: var(--mask);
-        clip-path: polygon(0 calc(var(--y2) - var(--py)), 100% calc(var(--y2) - var(--py)), 100% 100%, 0 100%);
-    }
+        &>.positive-circle {
+            --x: var(--x1-a-a);
+            --y: var(--y1-a);
+            --w: var(--r1-a);
+            --h: var(--r1-a);
+            border-radius: 0 100% 0 0;
+            clip-path: polygon(0 0,
+                    100% 0,
+                    100% calc(var(--h1-r-raw) * var(--y-abs-per-rel) * var(--abs-unit) - var(--py-a)),
+                    0 calc(var(--h1-r-raw)* var(--y-abs-per-rel) * var(--abs-unit) - var(--py-a)));
+        }
 
-    &>.left-background {
-        --x: 0;
-        --y: 0;
-        --w: var(--x1-a);
-        --h: var(--h1-r);
-        background-color: rgba(255, 0, 0, 0.2);
-    }
+        &>.negative-circle {
+            --x: var(--x2-a-a);
+            --y: var(--y2-a);
+            --w: var(--r2-a);
+            --h: var(--r2-a);
+            translate: -100% 100%;
+            --mask: radial-gradient(var(--r2-a) at 100% 0, transparent 99.9%, black 99.9%);
+            -webkit-mask: var(--mask);
+            mask: var(--mask);
+            clip-path: polygon(0 calc(var(--y2-a) - var(--py-a)), 100% calc(var(--y2-a) - var(--py-a)), 100% 100%, 0 100%);
+        }
 
-    &>.middle-background {
-        --x: var(--x1-a);
-        --y: 0;
-        --w: calc(var(--xc-r) - var(--x1-a));
-        --h: var(--py);
-        background-color: rgba(0, 255, 255, 0.2);
-    }
+        &>.left-background {
+            --x: 0;
+            --y: 0;
+            --w: var(--x1-a-a);
+            --h: var(--h1-r);
+        }
 
-    &>.right-background {
-        --x: var(--xc-r);
-        --y: 0;
-        --w: calc(var(--fw-r) - var(--xc-r));
-        --h: var(--h2-r);
-        background-color: rgba(0, 255, 0, 0.2);
+        &>.middle-background {
+            --x: var(--x1-a-a);
+            --y: 0;
+            --w: calc(var(--xc-a) - var(--x1-a-a));
+            --h: var(--py-a);
+        }
+
+        &>.right-background {
+            --x: var(--xc-a);
+            --y: 0;
+            --w: calc(var(--fw-r) - var(--xc-a));
+            --h: var(--h2-r);
+        }
     }
 }
