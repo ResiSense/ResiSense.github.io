@@ -22,9 +22,10 @@ painted-footer {
             padding-bottom: 0.5rem;
             margin-bottom: var(--footer-persistent-height);
             align-items: center;
-            overflow: hidden;
+            /* overflow: hidden; */
+            position: relative;
 
-            &>div {
+            &>div:not(.fancy-background) {
                 height: 100%;
             }
 
@@ -145,5 +146,101 @@ painted-footer {
                 }
             }
         }
+    }
+}
+
+.fancy-background {
+    isolation: isolate;
+    z-index: -1;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.02);
+    width: var(--fw);
+    height: 30rem;
+    bottom: 0;
+    left: 0;
+    /* independent parameters */
+    --fw: 1200px;
+    --h1-raw: 400;
+    --h2-raw: 250;
+    --r1-raw: 100;
+    --r2-raw: 100;
+    --px-raw: 600;
+    --h1: calc(1px * var(--h1-raw));
+    --h2: calc(1px * var(--h2-raw));
+    --r1: calc(1px * var(--r1-raw));
+    --r2: calc(1px * var(--r2-raw));
+    --px: calc(1px * var(--px-raw));
+    /* dependent variables */
+    --y1: calc(1px * var(--y1-raw));
+    --y2: calc(1px * var(--y2-raw));
+    --y1-raw: calc(var(--h1-raw) - var(--r1-raw));
+    --y2-raw: calc(var(--h2-raw) + var(--r2-raw));
+
+    --r-ratio: calc(var(--r2-raw) / var(--r1-raw));
+
+    --x1: calc(1px * var(--x1-raw));
+    --x2: calc(1px * var(--x2-raw));
+    --x1-raw: calc(-1 * sqrt(pow(var(--r1-raw) + var(--r2-raw), 2) - pow(var(--y1-raw) - var(--y2-raw), 2)) / (1 + var(--r-ratio)));
+    --x2-raw: calc(-1 * var(--r-ratio) * var(--x1-raw));
+
+    --py-raw: calc(-1 * var(--x2-raw) * (var(--h1-raw) - var(--h2-raw)) / (var(--x1-raw) - var(--x2-raw)) + var(--h2-raw));
+    --py: calc(1px * var(--py-raw));
+
+    --x1-a: calc(var(--px) + var(--x1));
+
+    & div {
+        position: absolute;
+        left: var(--x);
+        bottom: var(--y);
+        height: var(--h);
+        width: var(--w);
+    }
+
+    &>.positive-circle {
+        --x: calc(var(--px) + var(--x1));
+        --y: var(--y1);
+        --w: var(--r1);
+        --h: var(--r1);
+        background-color: rgba(255, 255, 0, 0.2);
+        border-radius: 0 100% 0 0;
+        clip-path: polygon(0 0, 100% 0, 100% calc(var(--h1) - var(--py)), 0 100%);
+    }
+
+    &>.negative-circle {
+        --xc: calc(var(--px) + var(--x2));
+        --yc: var(--y2);
+        --x: calc(var(--xc) - var(--r2));
+        --y: calc(var(--yc) - var(--r2));
+        --w: var(--r2);
+        --h: var(--r2);
+        background-color: rgba(255, 0, 255, 0.2);
+        --mask: radial-gradient(var(--r2) at 100% 0, transparent 100%, black);
+        -webkit-mask: var(--mask);
+        mask: var(--mask);
+        clip-path: polygon(0 calc(var(--yc) - var(--py)), 100% calc(var(--yc) - var(--py)), 100% 100%, 0 100%);
+    }
+
+    &>.left-background {
+        --x: 0;
+        --y: 0;
+        --w: var(--x1-a);
+        --h: var(--h1);
+        background-color: rgba(255, 0, 0, 0.2);
+    }
+
+    &>.middle-background {
+        --x: var(--x1-a);
+        --y: 0;
+        --w: calc(var(--px) - var(--x1-a));
+        --h: var(--py);
+        background-color: rgba(0, 255, 0, 0.2);
+    }
+
+    &>.right-background {
+        --x: var(--px);
+        --y: 0;
+        --w: calc(var(--fw) - var(--px));
+        --h: var(--h2);
+        background-color: rgba(0, 0, 255, 0.2);
     }
 }
