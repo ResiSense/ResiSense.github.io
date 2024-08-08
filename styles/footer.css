@@ -166,13 +166,12 @@ painted-footer {
     --h2-raw: 250;
     --r1-raw: 200;
     --r2-raw: 200;
-    --px-raw: 600;
+    --xc: 50%;
     /*? unit shenanigans */
     --h1: calc(var(--unit) * var(--h1-raw));
     --h2: calc(var(--unit) * var(--h2-raw));
     --r1: calc(var(--unit) * var(--r1-raw));
     --r2: calc(var(--unit) * var(--r2-raw));
-    --px: calc(var(--unit) * var(--px-raw));
 
     /*! dependent variables */
     --y1-raw: calc(var(--h1-raw) - var(--r1-raw));
@@ -180,8 +179,8 @@ painted-footer {
     --x1-raw: calc(-1 * sqrt(pow(var(--r1-raw) + var(--r2-raw), 2) - pow(var(--y1-raw) - var(--y2-raw), 2)) / (1 + var(--r2-raw) / var(--r1-raw)));
     --x2-raw: calc(-1 * var(--r2-raw) / var(--r1-raw) * var(--x1-raw));
     --py-raw: calc(-1 * var(--x2-raw) * (var(--h1-raw) - var(--h2-raw)) / (var(--x1-raw) - var(--x2-raw)) + var(--h2-raw));
-    --x1-a: calc(var(--px) + var(--x1));
-    --x2-a: calc(var(--px) + var(--x2));
+    --x1-a: calc(var(--xc) + var(--x1));
+    --x2-a: calc(var(--xc) + var(--x2));
     /*? unit shenanigans */
     --y1: calc(var(--unit) * var(--y1-raw));
     --y2: calc(var(--unit) * var(--y2-raw));
@@ -231,15 +230,15 @@ painted-footer {
     &>.middle-background {
         --x: var(--x1-a);
         --y: 0;
-        --w: calc(var(--px) - var(--x1-a));
+        --w: calc(var(--xc) - var(--x1-a));
         --h: var(--py);
         background-color: rgba(0, 255, 255, 0.2);
     }
 
     &>.right-background {
-        --x: var(--px);
+        --x: var(--xc);
         --y: 0;
-        --w: calc(var(--fw) - var(--px));
+        --w: calc(var(--fw) - var(--xc));
         --h: var(--h2);
         background-color: rgba(0, 255, 0, 0.2);
     }
