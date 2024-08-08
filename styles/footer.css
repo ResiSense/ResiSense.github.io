@@ -181,6 +181,7 @@ painted-footer {
     --x2-raw: calc(-1 * var(--r2-raw) / var(--r1-raw) * var(--x1-raw));
     --py-raw: calc(-1 * var(--x2-raw) * (var(--h1-raw) - var(--h2-raw)) / (var(--x1-raw) - var(--x2-raw)) + var(--h2-raw));
     --x1-a: calc(var(--px) + var(--x1));
+    --x2-a: calc(var(--px) + var(--x2));
     /*? unit shenanigans */
     --y1: calc(var(--unit) * var(--y1-raw));
     --y2: calc(var(--unit) * var(--y2-raw));
@@ -197,7 +198,7 @@ painted-footer {
     }
 
     &>.positive-circle {
-        --x: calc(var(--px) + var(--x1));
+        --x: var(--x1-a);
         --y: var(--y1);
         --w: var(--r1);
         --h: var(--r1);
@@ -207,17 +208,16 @@ painted-footer {
     }
 
     &>.negative-circle {
-        --xc: calc(var(--px) + var(--x2));
-        --yc: var(--y2);
-        --x: calc(var(--xc) - var(--r2));
-        --y: calc(var(--yc) - var(--r2));
+        --x: var(--x2-a);
+        --y: var(--y2);
         --w: var(--r2);
         --h: var(--r2);
+        translate: -100% 100%;
         background-color: rgba(0, 0, 255, 0.2);
         --mask: radial-gradient(var(--r2) at 100% 0, transparent 99.9%, black 99.9%);
         -webkit-mask: var(--mask);
         mask: var(--mask);
-        clip-path: polygon(0 calc(var(--yc) - var(--py)), 100% calc(var(--yc) - var(--py)), 100% 100%, 0 100%);
+        clip-path: polygon(0 calc(var(--y2) - var(--py)), 100% calc(var(--y2) - var(--py)), 100% 100%, 0 100%);
     }
 
     &>.left-background {
