@@ -214,7 +214,7 @@ painted-footer {
         --w: var(--r2);
         --h: var(--r2);
         background-color: rgba(0, 0, 255, 0.2);
-        --mask: radial-gradient(var(--r2) at 100% 0, transparent 100%, black);
+        --mask: radial-gradient(var(--r2) at 100% 0, transparent 99.9%, black 99.9%);
         -webkit-mask: var(--mask);
         mask: var(--mask);
         clip-path: polygon(0 calc(var(--yc) - var(--py)), 100% calc(var(--yc) - var(--py)), 100% 100%, 0 100%);
