@@ -1,11 +1,11 @@
 {
     "job": "build",
     "ref": "refs/heads/main",
-    "sha": "bcd2476536d849ab1bb6e07de80b177c44422439",
+    "sha": "bcdfbb7720b204e6e49e29eb7e6133eb3b9086ea",
     "repository": "ResiSense/ResiSense.github.io",
     "repository_Url": null,
-    "run_id": "10285184605",
-    "run_number": "220",
+    "run_id": "10301384738",
+    "run_number": "221",
     "run_attempt": "1",
     "artifact_cache_size_limit": "10",
     "actor": "CCheukKa",
@@ -13,8 +13,8 @@
     "workflow": "Full CI pipeline",
     "event_name": "push",
     "event": {
-        "after": "bcd2476536d849ab1bb6e07de80b177c44422439",
-        "before": "f82610917ea66c4640c23ef60834346f460d2902",
+        "after": "bcdfbb7720b204e6e49e29eb7e6133eb3b9086ea",
+        "before": "9d6e6b8601bcd878f309e34d928cbf779fa96a6e",
         "commits": [
             {
                 "author": {
@@ -28,14 +28,14 @@
                     "username": "CCheukKa"
                 },
                 "distinct": true,
-                "id": "bcd2476536d849ab1bb6e07de80b177c44422439",
-                "message": "speed up hot reload",
-                "timestamp": "2024-08-07T21:22:21+08:00",
-                "tree_id": "7cbae492c5784e17b591b23303895e3f4cb9728e",
-                "url": "https://github.com/ResiSense/ResiSense.github.io/commit/bcd2476536d849ab1bb6e07de80b177c44422439"
+                "id": "bcdfbb7720b204e6e49e29eb7e6133eb3b9086ea",
+                "message": "slow watcher back down a bit to prevent dual-access",
+                "timestamp": "2024-08-08T19:40:55+08:00",
+                "tree_id": "4c667a3f2a3566e602d26b425662bad389d4aaca",
+                "url": "https://github.com/ResiSense/ResiSense.github.io/commit/bcdfbb7720b204e6e49e29eb7e6133eb3b9086ea"
             }
         ],
-        "compare": "https://github.com/ResiSense/ResiSense.github.io/compare/f82610917ea6...bcd2476536d8",
+        "compare": "https://github.com/ResiSense/ResiSense.github.io/compare/9d6e6b8601bc...bcdfbb7720b2",
         "created": false,
         "deleted": false,
         "forced": false,
@@ -51,11 +51,11 @@
                 "username": "CCheukKa"
             },
             "distinct": true,
-            "id": "bcd2476536d849ab1bb6e07de80b177c44422439",
-            "message": "speed up hot reload",
-            "timestamp": "2024-08-07T21:22:21+08:00",
-            "tree_id": "7cbae492c5784e17b591b23303895e3f4cb9728e",
-            "url": "https://github.com/ResiSense/ResiSense.github.io/commit/bcd2476536d849ab1bb6e07de80b177c44422439"
+            "id": "bcdfbb7720b204e6e49e29eb7e6133eb3b9086ea",
+            "message": "slow watcher back down a bit to prevent dual-access",
+            "timestamp": "2024-08-08T19:40:55+08:00",
+            "tree_id": "4c667a3f2a3566e602d26b425662bad389d4aaca",
+            "url": "https://github.com/ResiSense/ResiSense.github.io/commit/bcdfbb7720b204e6e49e29eb7e6133eb3b9086ea"
         },
         "pusher": {
             "email": "ccheukka@gmail.com",
@@ -68,6 +68,6 @@
     "ref_type": "branch",
     "secret_source": "Actions",
     "workflow_ref": "ResiSense/ResiSense.github.io/.github/workflows/full-ci-pipeline.yaml@refs/heads/main",
-    "workflow_sha": "bcd2476536d849ab1bb6e07de80b177c44422439",
+    "workflow_sha": "bcdfbb7720b204e6e49e29eb7e6133eb3b9086ea",
     "workspace": "/home/runner/work/ResiSense.github.io/ResiSense.github.io"
 }
