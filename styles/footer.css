@@ -8,12 +8,108 @@ painted-footer {
         width: 100%;
         height: var(--fh-a);
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
         justify-content: space-between;
-        align-items: flex-end;
+        align-items: flex-start;
         position: relative;
+        box-sizing: border-box;
+        --padding: 1rem;
 
         &>* {
+            box-sizing: border-box;
+        }
+
+        & .resisense-container {
+            display: flex;
+            flex-direction: row;
+            gap: 1rem;
+            font-size: 1rem;
+            height: 8em;
+
+            &>.resisense-logo {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                &>img {
+                    height: 100%;
+                    aspect-ratio: 1/1;
+                    object-fit: contain;
+                }
+            }
+
+            &>.resisense-logo-aside {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                color: var(--deep-green);
+                --size: 4em;
+
+                &>.resisense-name {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    flex-grow: 1;
+
+                    &>span {
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        font-size: var(--size);
+                        font-weight: 700;
+                        height: 0;
+                    }
+                }
+
+                &>.socials {
+                    font-size: calc(var(--size) / 3);
+                    display: flex;
+                    flex-direction: column;
+
+                    &>.social {
+                        width: fit-content;
+
+                        &>a {
+                            line-height: 1rem;
+                            display: flex;
+                            align-items: center;
+                            gap: 0.2rem;
+                            width: fit-content;
+                            padding-right: 1em;
+
+                            &>img {
+                                max-width: 1em;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        & .logo-container>a {
+            height: 100%;
+
+            &>img {
+                height: 100%;
+                object-fit: contain;
+            }
+        }
+
+        &>.notch {
+            padding: var(--padding);
+            width: 100%;
+            height: calc(var(--h1-r) - var(--h2-r));
+            box-sizing: border-box;
+        }
+
+        &>.bottom {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            height: var(--h2-r);
+            padding: var(--padding);
             box-sizing: border-box;
         }
 
@@ -27,61 +123,64 @@ painted-footer {
             padding: 1rem;
             padding-right: 0;
 
-            &>.resisense-container {
+            & .logo-container {
+                display: flex;
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            &>.affiliations {
+                display: flex;
+                flex-direction: column;
+                gap: 0.5rem;
+            }
+        }
+
+        &>.footer-divider {
+            height: var(--h2-r);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding-bottom: 1rem;
+            box-sizing: border-box;
+
+            &>.footer-divider-line {
+                height: 100%;
+                width: 100%;
+                border-left: 2px dashed var(--desaturated-orange);
+            }
+        }
+
+        &>.footer-rightside {
+            width: calc(var(--fw-r) - var(--xc-a));
+            height: var(--h2-r);
+
+            & .logo-container {
                 display: flex;
                 flex-direction: row;
+                align-items: center;
                 gap: 1rem;
+                width: fit-content;
+                text-wrap: nowrap;
+                white-space: nowrap;
+                padding: 1rem;
+            }
 
-                &>.resisense-logo {
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
+            &>.sponsorships {
+                display: grid;
+                grid-template-columns: min-content max-content;
+                grid-auto-rows: auto;
+                gap: 0.2rem;
+                padding: 1rem;
 
-                    &>img {
-                        height: 100%;
-                        aspect-ratio: 1/1;
-                        object-fit: contain;
-                    }
-                }
-
-                &>.resisense-logo-aside {
+                &>.logo-text {
+                    text-wrap: nowrap;
+                    height: 100%;
                     display: flex;
                     flex-direction: column;
-                    justify-content: space-between;
-                    color: var(--deep-green);
-                    --size: 3.3rem;
-
-                    &>.resisense-name {
-                        font-size: var(--size);
-                        line-height: var(--size);
-                        font-weight: 700;
-                        flex-grow: 1;
-                        display: flex;
-                        align-items: center;
-                    }
-
-                    &>.socials {
-                        font-size: calc(var(--size) / 3);
-                        display: flex;
-                        flex-direction: column;
-
-                        &>.social {
-                            width: fit-content;
-
-                            &>a {
-                                line-height: 1rem;
-                                display: flex;
-                                align-items: center;
-                                gap: 0.2rem;
-                                width: fit-content;
-                                padding-right: 1rem;
-
-                                &>img {
-                                    max-width: 1rem;
-                                }
-                            }
-                        }
-                    }
+                    justify-content: center;
+                    align-items: flex-start;
+                    font-size: larger;
                 }
             }
 
@@ -113,56 +212,6 @@ painted-footer {
                 }
             }
         }
-
-        &>.footer-divider {
-            height: var(--h2-r);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            padding-bottom: 1rem;
-            box-sizing: border-box;
-
-            &>.footer-divider-line {
-                height: 100%;
-                width: 100%;
-                border-left: 2px dashed var(--desaturated-orange);
-            }
-        }
-
-        &>.footer-rightside {
-            width: calc(var(--fw-r) - var(--xc-a));
-            height: var(--h2-r);
-            display: grid;
-            grid-template-columns: min-content max-content;
-            grid-template-rows: 50% 50%;
-            gap: 0.2rem;
-            padding: 1rem;
-
-            &>.logo-text {
-                text-wrap: nowrap;
-            }
-
-            &>.cuhk-department-logo-container,
-            &>.sponsor-logo-container {
-                display: flex;
-                flex-direction: row;
-                align-items: center;
-                gap: 0.5rem;
-                width: fit-content;
-                text-wrap: nowrap;
-                white-space: nowrap;
-
-                &>a {
-                    height: 100%;
-
-                    &>img {
-                        width: 100%;
-                        height: 100%;
-                        object-fit: contain;
-                    }
-                }
-            }
-        }
     }
 }
 
@@ -171,10 +220,10 @@ painted-footer>footer {
 
     /*! independent parameters */
     --fw-r: 100%;
-    --fh-a-raw: 12;
+    --fh-a-raw: 30;
     --h1-r-raw: 100;
-    --h2-r-raw: 60;
-    --xc-a-raw: 25;
+    --h2-r-raw: 70;
+    --xc-a-raw: 32;
     --r-a-raw: 8;
     --r1-a-raw: var(--r-a-raw);
     --r2-a-raw: var(--r-a-raw);
