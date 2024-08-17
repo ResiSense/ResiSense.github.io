@@ -11,5 +11,9 @@
 - [ ] videos are uploaded [here](https://tools.igem.org/wiki/non-deliverable-videos)
 
 ## Actually important stuff
-- [ ] add responsiveness
+- [x] add responsiveness
 - [ ] add catalogue nesting
+- [ ] add multiple sizes for images
+- [ ] fix catalogue being janky on resize
+- [ ] rework hamburger menu design
+- [ ] add responsiveness to human cards

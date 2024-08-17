@@ -13,26 +13,21 @@ const ignored = (testString: string) => {
     return ig.ignores(relativePath);
 };
 
-const fastWatcher = chokidar.watch('./', {
+const watcher = chokidar.watch('./', {
     ignored,
     persistent: true,
-    ignoreInitial: true
-});
-const slowWatcher = chokidar.watch('./', {
-    ignored,
-    persistent: true,
+    ignoreInitial: true,
     awaitWriteFinish: true,
-    ignoreInitial: true
 });
-
-const fastWatcherWaitingMessage = (path: string) => `${'='.repeat(80)}\nAwaiting file write: ${path}...`;
-const fastWatcherEvents = ['add', 'change', 'unlink'];
-fastWatcherEvents.forEach(event => fastWatcher.on(event, path => console.log(fastWatcherWaitingMessage(path))));
 
 const slowWatcherEvents = ['add', 'change', 'unlink'];
-slowWatcherEvents.forEach(event => slowWatcher.on(event, path => {
+slowWatcherEvents.forEach(event => watcher.on(event, path => {
     console.log(`File ${event}: ${path}`);
-    rebuildSite();
+    if (path.endsWith('.css')) {
+        fs.copyFileSync(path, `test/${path}`);
+    } else {
+        rebuildSite();
+    }
 }));
 
 console.log(`Watcher is watching for changes... Press Ctrl+C to stop watching.`);
