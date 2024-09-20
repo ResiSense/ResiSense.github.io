@@ -14,7 +14,7 @@ html {
         background-color: var(--white);
         color: black;
         margin: 0;
-        font-family: 'Baloo 2', 'Trebuchet MS', 'Lucida Sans Unicode', Arial, sans-serif, 'Segoe UI Emoji';
+        font-family: 'Inter','Baloo 2', 'Trebuchet MS', 'Lucida Sans Unicode', Arial, sans-serif, 'Segoe UI Emoji';
         font-weight: 500;
 
         &.post-buffered * {
