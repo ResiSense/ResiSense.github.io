@@ -13,10 +13,11 @@ a{
 }
 /* url */
 header ul {
-   position: relative;
-   display:flex;
-   flex-direction: column;
-   align-items: center;
+    position: relative;
+    display:flex;
+    flex-direction: column;
+    align-items: start;
+    padding:0;
 }
 
 header ul li {
@@ -32,8 +33,10 @@ header ul li a {
 }
 
 .category-menu {
-   text-align: left;
-   margin: 0;
+    text-align: left;
+    margin: 0;
+    position: relative;
+    left:2rem;
 }
 
 /*header*/
