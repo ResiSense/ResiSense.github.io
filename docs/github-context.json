@@ -1,11 +1,11 @@
 {
     "job": "build",
     "ref": "refs/heads/main",
-    "sha": "58d076df08d9f7a488e07db89e5f4a5a0a58d7ab",
+    "sha": "724473c3798c91ecbcd0b4c04ff4dc8516ed0ae4",
     "repository": "ResiSense/ResiSense.github.io",
     "repository_Url": null,
-    "run_id": "10981857132",
-    "run_number": "231",
+    "run_id": "10981903678",
+    "run_number": "232",
     "run_attempt": "1",
     "artifact_cache_size_limit": "10",
     "actor": "CCheukKa",
@@ -13,8 +13,8 @@
     "workflow": "Full CI pipeline",
     "event_name": "push",
     "event": {
-        "after": "58d076df08d9f7a488e07db89e5f4a5a0a58d7ab",
-        "before": "906e2235f3d941d832e8001f97a3d0b7073aed97",
+        "after": "724473c3798c91ecbcd0b4c04ff4dc8516ed0ae4",
+        "before": "69ee419e4076ab8666fa51dbc39fea196bc3fbf7",
         "commits": [
             {
                 "author": {
@@ -28,29 +28,11 @@
                     "username": "web-flow"
                 },
                 "distinct": false,
-                "id": "4a4a27ca6aa8ddc8ec2b9024935feba970aa8d6d",
-                "message": "Chore(deps-dev): Bump typescript from 5.5.4 to 5.6.2\n\nBumps [typescript](https://github.com/microsoft/TypeScript) from 5.5.4 to 5.6.2.\n- [Release notes](https://github.com/microsoft/TypeScript/releases)\n- [Changelog](https://github.com/microsoft/TypeScript/blob/main/azure-pipelines.release.yml)\n- [Commits](https://github.com/microsoft/TypeScript/compare/v5.5.4...v5.6.2)\n\n---\nupdated-dependencies:\n- dependency-name: typescript\n  dependency-type: direct:development\n  update-type: version-update:semver-minor\n...\n\nSigned-off-by: dependabot[bot] <support@github.com>",
-                "timestamp": "2024-09-16T09:11:15Z",
-                "tree_id": "3b7635959e19dbe79df667c1546273f492c3d6f6",
-                "url": "https://github.com/ResiSense/ResiSense.github.io/commit/4a4a27ca6aa8ddc8ec2b9024935feba970aa8d6d"
-            },
-            {
-                "author": {
-                    "email": "ccheukka@gmail.com",
-                    "name": "CCheukKa",
-                    "username": "CCheukKa"
-                },
-                "committer": {
-                    "email": "noreply@github.com",
-                    "name": "GitHub",
-                    "username": "web-flow"
-                },
-                "distinct": false,
-                "id": "c1ab59f842955a5df14cca9a4a210131080a4932",
-                "message": "Merge branch main into dependabot/npm_and_yarn/typescript-5.6.2",
-                "timestamp": "2024-09-22T22:12:34+08:00",
-                "tree_id": "5def078e50e4b4fbcd9e8ca1fb4cbae3ac782477",
-                "url": "https://github.com/ResiSense/ResiSense.github.io/commit/c1ab59f842955a5df14cca9a4a210131080a4932"
+                "id": "18360a405b52afd4538564339e473fa81ef2479c",
+                "message": "Chore(deps-dev): Bump chokidar from 3.6.0 to 4.0.1\n\nBumps [chokidar](https://github.com/paulmillr/chokidar) from 3.6.0 to 4.0.1.\n- [Release notes](https://github.com/paulmillr/chokidar/releases)\n- [Commits](https://github.com/paulmillr/chokidar/compare/3.6.0...4.0.1)\n\n---\nupdated-dependencies:\n- dependency-name: chokidar\n  dependency-type: direct:development\n  update-type: version-update:semver-major\n...\n\nSigned-off-by: dependabot[bot] <support@github.com>",
+                "timestamp": "2024-09-22T14:21:20Z",
+                "tree_id": "12e03d3c0f7ea30bcd3b937a2e2e317a859d6432",
+                "url": "https://github.com/ResiSense/ResiSense.github.io/commit/18360a405b52afd4538564339e473fa81ef2479c"
             },
             {
                 "author": {
@@ -64,14 +46,14 @@
                     "username": "web-flow"
                 },
                 "distinct": true,
-                "id": "58d076df08d9f7a488e07db89e5f4a5a0a58d7ab",
-                "message": "Merge pull request #143 from ResiSense/dependabot/npm_and_yarn/typescript-5.6.2\n\nChore(deps-dev): Bump typescript from 5.5.4 to 5.6.2",
-                "timestamp": "2024-09-22T22:15:43+08:00",
-                "tree_id": "7cc13161272ed05b176b392d86ea62e6259b3a8e",
-                "url": "https://github.com/ResiSense/ResiSense.github.io/commit/58d076df08d9f7a488e07db89e5f4a5a0a58d7ab"
+                "id": "724473c3798c91ecbcd0b4c04ff4dc8516ed0ae4",
+                "message": "Merge pull request #147 from ResiSense/dependabot/npm_and_yarn/chokidar-4.0.1\n\nChore(deps-dev): Bump chokidar from 3.6.0 to 4.0.1",
+                "timestamp": "2024-09-22T22:22:05+08:00",
+                "tree_id": "12e03d3c0f7ea30bcd3b937a2e2e317a859d6432",
+                "url": "https://github.com/ResiSense/ResiSense.github.io/commit/724473c3798c91ecbcd0b4c04ff4dc8516ed0ae4"
             }
         ],
-        "compare": "https://github.com/ResiSense/ResiSense.github.io/compare/906e2235f3d9...58d076df08d9",
+        "compare": "https://github.com/ResiSense/ResiSense.github.io/compare/69ee419e4076...724473c3798c",
         "created": false,
         "deleted": false,
         "forced": false,
@@ -87,11 +69,11 @@
                 "username": "web-flow"
             },
             "distinct": true,
-            "id": "58d076df08d9f7a488e07db89e5f4a5a0a58d7ab",
-            "message": "Merge pull request #143 from ResiSense/dependabot/npm_and_yarn/typescript-5.6.2\n\nChore(deps-dev): Bump typescript from 5.5.4 to 5.6.2",
-            "timestamp": "2024-09-22T22:15:43+08:00",
-            "tree_id": "7cc13161272ed05b176b392d86ea62e6259b3a8e",
-            "url": "https://github.com/ResiSense/ResiSense.github.io/commit/58d076df08d9f7a488e07db89e5f4a5a0a58d7ab"
+            "id": "724473c3798c91ecbcd0b4c04ff4dc8516ed0ae4",
+            "message": "Merge pull request #147 from ResiSense/dependabot/npm_and_yarn/chokidar-4.0.1\n\nChore(deps-dev): Bump chokidar from 3.6.0 to 4.0.1",
+            "timestamp": "2024-09-22T22:22:05+08:00",
+            "tree_id": "12e03d3c0f7ea30bcd3b937a2e2e317a859d6432",
+            "url": "https://github.com/ResiSense/ResiSense.github.io/commit/724473c3798c91ecbcd0b4c04ff4dc8516ed0ae4"
         },
         "pusher": {
             "email": "ccheukka@gmail.com",
@@ -104,6 +86,6 @@
     "ref_type": "branch",
     "secret_source": "Actions",
     "workflow_ref": "ResiSense/ResiSense.github.io/.github/workflows/full-ci-pipeline.yaml@refs/heads/main",
-    "workflow_sha": "58d076df08d9f7a488e07db89e5f4a5a0a58d7ab",
+    "workflow_sha": "724473c3798c91ecbcd0b4c04ff4dc8516ed0ae4",
     "workspace": "/home/runner/work/ResiSense.github.io/ResiSense.github.io"
 }
