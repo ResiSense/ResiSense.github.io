@@ -79,6 +79,17 @@
                     "/styles/acknowledgements.css"
                 ]
             }
+        },
+
+        {
+            "name": "proof-of-concept",
+            "title": "Proof of Concept",
+            "populator": "html-frame",
+            "includes": {
+                "css": [
+                    "/styles/proof-of-concept.css"
+                ]
+            }
         }
     ]
 }

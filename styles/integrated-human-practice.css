@@ -1,5 +1,7 @@
 painted-content {
     blockquote {
+        
+        background-color: transparent;
         h3 {
             top: 0;
         }

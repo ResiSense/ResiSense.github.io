@@ -1,5 +1,5 @@
 :root {
-    --header-height: 5rem;
+    --header-height: 7rem;
 
     @media screen and (max-width: 1100px) {
         --header-height: 12rem;
@@ -43,6 +43,7 @@ header ul li a {
 
 /*header*/
 header {
+    height: 7rem;
     position: fixed;
     background-color: #FCFCF7;
     padding: 1.5rem 0;
