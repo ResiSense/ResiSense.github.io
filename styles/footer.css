@@ -1,13 +1,13 @@
 painted-footer {
     justify-self: flex-end;
     --footer-background-color: var(--bright-brown);
-    background-color: var(--footer-background-color);
+    background-color: #FCFCF7;
     z-index: 1;
     margin-top: auto;
 
     &>footer {
         --footer-persistent-height: 2rem;
-
+        
         &>* {
             padding-left: 1rem;
             padding-right: 1rem;
@@ -15,10 +15,12 @@ painted-footer {
         }
 
         &>.footer-banner {
+            padding-top: 2rem;
+            border-top: 2px solid #404231;
             width: 100%;
-            height: 7rem;
+            height: 11rem;
             display: flex;
-            padding-top: 1rem;
+           
             padding-bottom: 0.5rem;
             margin-bottom: var(--footer-persistent-height);
             align-items: center;
@@ -35,29 +37,30 @@ painted-footer {
 
             &>.resisense {
                 display: flex;
-                gap: 1rem;
+                
 
                 &>.resisense-logo-aside {
+                    margin-left: 1.5rem;
                     display: flex;
                     flex-direction: column;
-                    justify-content: space-between;
-                    color: var(--deep-green);
+                    justify-content: start;
+                    gap: 1rem;
+                    position:relative;
+                    color: #404231;
 
-                    &>.resisense-name {
-                        --size: 2.6rem;
-                        font-size: var(--size);
-                        line-height: var(--size);
-                        font-weight: 700;
-                        flex-grow: 1;
-                        display: flex;
-                        align-items: center;
+                    &>.resisense-logo {
+                        height: 50%;
+                        width: auto;
+                        margin-bottom: 0.5rem;
                     }
 
                     &>.socials {
+                        gap: 0.5rem;
                         font-size: 1rem;
                         display: flex;
                         flex-direction: column;
-
+                        position: relative;
+                        left: 7%;
                         &>.social {
                             width: fit-content;
 
@@ -79,8 +82,8 @@ painted-footer {
             }
 
             & .divider {
-                margin: 0 1rem;
-                border-left: 2px dashed var(--desaturated-orange);
+                margin: 0 6rem 0 4rem ;
+                border-left: 2px solid #404231 ;
             }
 
             &>.logo-container-wrapper {
@@ -100,8 +103,8 @@ painted-footer {
                         height: 100%;
 
                         &>img {
-                            width: 100%;
-                            height: 100%;
+                            width: auto;
+                            height: 50%;
                             object-fit: contain;
                         }
                     }
@@ -110,7 +113,7 @@ painted-footer {
         }
 
         &>.footer-persistent {
-            background-color: var(--footer-background-color);
+            background-color: #FCFCF7 ;
             position: fixed;
             bottom: 0;
             display: flex;

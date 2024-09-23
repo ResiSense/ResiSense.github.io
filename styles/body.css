@@ -16,14 +16,16 @@
         &>painted-outline {
             margin-right: 1rem;
             position: sticky;
-            top: var(--header-height);
+            /* top: var(--header-height ); */
+            top: 10rem;
+          margin-right: 4rem;
         }
 
         &>main {
             width: 60%;
             color: var(--deep-green);
             margin-bottom: 50vh;
-            background-color: var(--pale-green);
+            /* background-color: var(--pale-green); */
             border-radius: 2rem;
             padding: 0 2rem 1rem 2rem;
 
