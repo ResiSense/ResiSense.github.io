@@ -16,3 +16,15 @@
         font-size: 2rem;
     }
 }
+.reference-list {
+    list-style-type: none;
+    padding: 0;
+}
+.reference-list li {
+    margin-bottom: 10px;
+}
+.reference-title {
+    font-size: 1.5rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
