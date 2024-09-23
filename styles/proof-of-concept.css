@@ -1,0 +1,18 @@
+.paragraph-container {
+    & img {
+        margin: 2rem 0;
+    }
+    & p {
+        font-size: 17px;
+        font-weight: 500;
+    }
+    & a{
+        text-decoration: none;
+    }
+    
+    &>.page-subtitle {
+        margin: 2rem 0;
+        font-weight: 600;
+        font-size: 2rem;
+    }
+}
