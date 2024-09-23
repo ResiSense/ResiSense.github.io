@@ -52,7 +52,7 @@
         "glob": "^11.0.0",
         "html-to-text": "^9.0.5",
         "igem-upload-api": "^1.2.7",
-        "jsdom": "^25.0.0",
+        "jsdom": "^25.0.1",
         "marked": "^14.1.2"
     },
     "devDependencies": {
