@@ -90,6 +90,16 @@
                     "/styles/proof-of-concept.css"
                 ]
             }
+        },
+        {
+            "name": "team-member",
+            "title" : "Team Member",
+            "populator": "html-frame",
+            "includes": {
+                "css" : [
+                    "/styles/team-member.css"
+                ]
+            }
         }
     ]
 }

@@ -1,0 +1,110 @@
+
+.team-intro{
+   
+    display: grid;
+    grid-template-columns: 1fr 1fr ;
+    grid-gap:2rem;
+}
+.team-member-intro-container{
+    
+    display: flex;
+    padding: 1rem 0;
+    justify-content: center;
+    align-items: center ;
+}
+.team-intro-detail div{
+    margin-right: 1rem;
+    margin-top: 0;
+    margin-bottom: 1rem;
+}
+.team-intro-detail h3{
+    margin-bottom: 1rem;
+}
+.team-intro-detail{
+    display: flex;
+    
+    flex-direction: column;
+    align-items: start ;
+    justify-content: center;
+    height: 18rem;
+    font-family: inter;
+    color:#404231;
+    font-weight: 600;
+    background-color: #FBF0DA;
+}
+.team-member-pic{
+    object-position: center;
+    height: 18rem;
+    width: 18rem;
+    
+    width: auto;
+    object-position: -5% 50%;
+    border-radius: 0rem;
+    object-fit: none;
+    background-color: #FBF0DA;
+}
+
+#Rickey div {
+    margin-top: 0;
+    margin-bottom: 1rem;
+  
+}
+#Rickey h3{
+    margin-bottom: 1rem;
+}
+#Rickey-pic{
+    height: 18rem;
+    width: 16rem;
+}
+#Michelle div {
+    margin-top: 0;
+    margin-bottom: 1rem;
+  
+}
+#Michelle h3{
+    margin-bottom: 1rem;
+}
+#Michelle-pic{
+    object-position: 50% -10%;
+    height: 18rem;
+    width: auto;
+}
+#Martin div {
+    margin-top: 0;
+    margin-bottom: 1rem;
+  
+}
+#Martin h3{
+    margin-bottom: 1rem;
+}
+#Martin-pic{
+    object-position: center;
+    height: 18rem;
+    width: 18rem;
+}
+
+#Tommy-pic{
+    object-position: center;
+    height: 18rem;
+    width: 18rem;
+}
+#Ka-pic {
+    object-position: center;
+    height: 18rem;
+    width: 18rem;
+}
+#Courtney-pic{
+    object-position: 50% 1.2rem;
+    height: 18rem;
+    width: 18rem;
+}
+#Jeffrey-pic {
+    object-position: 1.2rem 1.2rem;
+    height: 18rem;
+    width: 18rem;
+}
+#Raymond-pic {
+    object-position: -1rem 0.8rem;
+    height: 18rem;
+    width: 21rem;
+}

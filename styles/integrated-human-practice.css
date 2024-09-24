@@ -1,6 +1,6 @@
 painted-content {
     blockquote {
-        
+       
         background-color: transparent;
         h3 {
             top: 0;
@@ -66,7 +66,7 @@ painted-content {
         justify-content: end;
         border-radius: var(--border-radius);
         width: 100%;
-
+        height: 50%;
         &>.human-card-text-container {
             display: flex;
             box-sizing: border-box;

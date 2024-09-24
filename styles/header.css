@@ -1,5 +1,5 @@
 :root {
-    --header-height: 7rem;
+    --header-height: 5rem;
 
     @media screen and (max-width: 1100px) {
         --header-height: 12rem;
@@ -43,7 +43,7 @@ header ul li a {
 
 /*header*/
 header {
-    height: 7rem;
+    height: 5rem;
     position: fixed;
     background-color: #FCFCF7;
     padding: 1.5rem 0;
@@ -115,7 +115,7 @@ header {
 }
 
 .category-menu-list-container.active {
-    height: 15rem;
+    height: 13rem;
     
     transition: all 0.1s ease-out;
 }
@@ -128,7 +128,7 @@ header:has(.category-menu-list-container){
         transition: all 0.3s linear;
         opacity: 0;
         position: absolute;
-        top: 15rem;
+        top: 13rem;
         left: 0;
         content: '';
         width: 100vw;
