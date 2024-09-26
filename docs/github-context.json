@@ -1,11 +1,11 @@
 {
     "job": "build",
     "ref": "refs/heads/main",
-    "sha": "8868feceae04120d889fcb5e5ead3a898c7b91c7",
+    "sha": "07346eb17495f8e8188cbe0d91c7bc00b532e70c",
     "repository": "ResiSense/ResiSense.github.io",
     "repository_Url": null,
-    "run_id": "11010769706",
-    "run_number": "234",
+    "run_id": "11058919521",
+    "run_number": "235",
     "run_attempt": "1",
     "artifact_cache_size_limit": "10",
     "actor": "CCheukKa",
@@ -13,27 +13,9 @@
     "workflow": "Full CI pipeline",
     "event_name": "push",
     "event": {
-        "after": "8868feceae04120d889fcb5e5ead3a898c7b91c7",
-        "before": "6e446afbce774e4bad4351598da67c7caf381925",
+        "after": "07346eb17495f8e8188cbe0d91c7bc00b532e70c",
+        "before": "d87959b2d0e8ff62cee6b1290a273dbbe7fdbfab",
         "commits": [
-            {
-                "author": {
-                    "email": "49699333+dependabot[bot]@users.noreply.github.com",
-                    "name": "dependabot[bot]",
-                    "username": "dependabot[bot]"
-                },
-                "committer": {
-                    "email": "noreply@github.com",
-                    "name": "GitHub",
-                    "username": "web-flow"
-                },
-                "distinct": false,
-                "id": "0dbd30d2308087fa15367ed82c6c692189eadf96",
-                "message": "Chore(deps): Bump jsdom from 25.0.0 to 25.0.1\n\nBumps [jsdom](https://github.com/jsdom/jsdom) from 25.0.0 to 25.0.1.\n- [Release notes](https://github.com/jsdom/jsdom/releases)\n- [Changelog](https://github.com/jsdom/jsdom/blob/main/Changelog.md)\n- [Commits](https://github.com/jsdom/jsdom/compare/25.0.0...25.0.1)\n\n---\nupdated-dependencies:\n- dependency-name: jsdom\n  dependency-type: direct:production\n  update-type: version-update:semver-patch\n...\n\nSigned-off-by: dependabot[bot] <support@github.com>",
-                "timestamp": "2024-09-23T09:59:37Z",
-                "tree_id": "10f95219728eca0b07915fe14e7f74e15cd0068c",
-                "url": "https://github.com/ResiSense/ResiSense.github.io/commit/0dbd30d2308087fa15367ed82c6c692189eadf96"
-            },
             {
                 "author": {
                     "email": "ccheukka@gmail.com",
@@ -41,19 +23,19 @@
                     "username": "CCheukKa"
                 },
                 "committer": {
-                    "email": "noreply@github.com",
-                    "name": "GitHub",
-                    "username": "web-flow"
+                    "email": "ccheukka@gmail.com",
+                    "name": "CCheukKa",
+                    "username": "CCheukKa"
                 },
                 "distinct": true,
-                "id": "8868feceae04120d889fcb5e5ead3a898c7b91c7",
-                "message": "Merge pull request #150 from ResiSense/dependabot/npm_and_yarn/jsdom-25.0.1\n\nChore(deps): Bump jsdom from 25.0.0 to 25.0.1",
-                "timestamp": "2024-09-24T17:17:30+08:00",
-                "tree_id": "24f13a786833ba70415852e09a4dfd35c7ff64a3",
-                "url": "https://github.com/ResiSense/ResiSense.github.io/commit/8868feceae04120d889fcb5e5ead3a898c7b91c7"
+                "id": "07346eb17495f8e8188cbe0d91c7bc00b532e70c",
+                "message": "add HP articles",
+                "timestamp": "2024-09-27T03:26:07+08:00",
+                "tree_id": "06bbf668e81aed06c63d50b3da6ead1cdfb90ec5",
+                "url": "https://github.com/ResiSense/ResiSense.github.io/commit/07346eb17495f8e8188cbe0d91c7bc00b532e70c"
             }
         ],
-        "compare": "https://github.com/ResiSense/ResiSense.github.io/compare/6e446afbce77...8868feceae04",
+        "compare": "https://github.com/ResiSense/ResiSense.github.io/compare/d87959b2d0e8...07346eb17495",
         "created": false,
         "deleted": false,
         "forced": false,
@@ -64,16 +46,16 @@
                 "username": "CCheukKa"
             },
             "committer": {
-                "email": "noreply@github.com",
-                "name": "GitHub",
-                "username": "web-flow"
+                "email": "ccheukka@gmail.com",
+                "name": "CCheukKa",
+                "username": "CCheukKa"
             },
             "distinct": true,
-            "id": "8868feceae04120d889fcb5e5ead3a898c7b91c7",
-            "message": "Merge pull request #150 from ResiSense/dependabot/npm_and_yarn/jsdom-25.0.1\n\nChore(deps): Bump jsdom from 25.0.0 to 25.0.1",
-            "timestamp": "2024-09-24T17:17:30+08:00",
-            "tree_id": "24f13a786833ba70415852e09a4dfd35c7ff64a3",
-            "url": "https://github.com/ResiSense/ResiSense.github.io/commit/8868feceae04120d889fcb5e5ead3a898c7b91c7"
+            "id": "07346eb17495f8e8188cbe0d91c7bc00b532e70c",
+            "message": "add HP articles",
+            "timestamp": "2024-09-27T03:26:07+08:00",
+            "tree_id": "06bbf668e81aed06c63d50b3da6ead1cdfb90ec5",
+            "url": "https://github.com/ResiSense/ResiSense.github.io/commit/07346eb17495f8e8188cbe0d91c7bc00b532e70c"
         },
         "pusher": {
             "email": "ccheukka@gmail.com",
@@ -86,6 +68,6 @@
     "ref_type": "branch",
     "secret_source": "Actions",
     "workflow_ref": "ResiSense/ResiSense.github.io/.github/workflows/full-ci-pipeline.yaml@refs/heads/main",
-    "workflow_sha": "8868feceae04120d889fcb5e5ead3a898c7b91c7",
+    "workflow_sha": "07346eb17495f8e8188cbe0d91c7bc00b532e70c",
     "workspace": "/home/runner/work/ResiSense.github.io/ResiSense.github.io"
 }
