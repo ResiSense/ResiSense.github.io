@@ -72,6 +72,22 @@
             }
         },
         {
+            "name": "wet-lab",
+            "title": "Wet Lab",
+            "populator": "markdown",
+            "pages": [
+                {
+                    "name": "proof-of-concept",
+                    "title": "Proof of Concept",
+                    "populator": "markdown"
+                },
+                {
+                    "name": "results",
+                    "populator": "markdown"
+                }
+            ]
+        },
+        {
             "name": "acknowledgements",
             "populator": "markdown",
             "includes": {
