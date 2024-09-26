@@ -1,3 +1,7 @@
+main:has(iframe.attributions-frame) {
+    padding: 1rem 2rem;
+}
+
 iframe.attributions-frame {
     width: 100%;
     height: 100%;
