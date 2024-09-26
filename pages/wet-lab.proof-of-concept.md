@@ -20,7 +20,7 @@ After cell lysis, a snippet of the target gene, which is responsible for antibio
 
 Following the digestion, phi29 DNA polymerase (New England Biolabs and Beyotime Biotechnology) releases a single-stranded DNA (ssDNA) through linear strand displacement amplification (LSDA). Phi-29 binds to the nicked 5’ end of the gene, which is the pSB1C3-KPC-2-surrogate in this proof of concept, and then amplifies one strand of the plasmid up to the HhaI cutting site. This process is expected to amplify a 32 nt ssDNA from the pSB1C3-KPC-2-surrogate plasmid, which will serve as the primer for the following steps, along with 724 and 534 nt ssDNA strands as the side products of this LSDA process.  
 
-An experiment has also been conducted to test this process, and the results are shown [here](/wet-lab/results#ntbsmaihhai-lsda).  
+An experiment has also been conducted to test this process, and the results are shown [here](/wet-lab/results#nt-bsmai-hhai-lsda).  
 
 # Rolling Circle Amplification (RCA)
 The circularised RCA template consists of a primer binding site, where the 32 nt ssDNA from the previous step will bind to. Upon this binding, phi-29 DNA polymerase will start to add nucleotides following the primer 3’-end, according to sequences complementary to the RCA template [3]. During this step, we expect cells that do not carry KPC-2 gene will not produce complementary primer, thus, will not trigger the RCA process.  
