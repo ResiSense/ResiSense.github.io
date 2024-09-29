@@ -80,6 +80,10 @@ section {
     padding-left: 25px;
     text-indent: -25px;
 }
+
+.reference-list li a {
+ text-decoration: none;
+}
 .reference-list li::before{
     content: "[" counter(list) "]";
     font-size: bold;
