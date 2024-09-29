@@ -97,6 +97,15 @@
             ]
         },
         {
+            "name": "notebook",
+            "populator": "markdown",
+            "includes": {
+                "css": [
+                    "/styles/notebook.css"
+                ]
+            }
+        },
+        {
             "name": "acknowledgements",
             "populator": "markdown",
             "includes": {
