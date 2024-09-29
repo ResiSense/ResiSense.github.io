@@ -1,148 +1,184 @@
-<section class="paragraph-container">
-    <p>
-        As described in our Project Description, we are developing a point-of-care test kit, ResiSense, for the
-        screening of
-        antibiotic resistance genes. Our proposed detection system consists of three parts: target gene extraction,
-        rolling
-        circle amplification (RCA), and signal expression. This page describes how we designed the experimental settings
-        to
-        prove the concept that we proposed, and the rationale behind those designs. Due to safety concerns, all of our
-        experiments are carried out using Escherichia coli (E. coli) as the chassis instead of the actual pathogenic
-        resistant bacteria.
-    </p>
+<section id="introduction">
+    As described in our Project Description, we are developing a point-of-care test kit, ResiSense, for the screening of
+    antibiotic resistance genes. Our proposed detection system consists of three parts: target gene extraction, rolling
+    circle amplification (RCA), and signal expression. This page describes how we designed the experimental settings to
+    prove the concept that we proposed, and the rationale behind those designs. Due to safety concerns, all of our
+    experiments are carried out using Escherichia coli (E. coli) as the chassis instead of the actual pathogenic
+    resistant bacteria.
 </section>
-<section class="paragraph-container">
-    <h3 class="page-subtitle">
+
+<section>
+    <h3 class="section-subtitle">
         Plasmid Construction
     </h3>
-    <p>
+    <div class="section-text">
         For proof of concept purposes, we constructed a pSB1C3-KPC-2-surrogate plasmid that carries a short snippet of
-        the KPC-2 gene by assembling the KPC-2-surrogate gene fragment [PARTS NO] with pSB1C3 backbone using the RFC 10
-        BioBricks assembly standard [1]. First, we performed PCR to the KPC-2 surrogate gene fragment to amplify its
-        quantity. The KPC-2-surrogate is designed to be compatible with RFC[10], thus, both the KPC-2-surrogate PCR
-        product and pSB1C3 backbone (from Interlab 2018 Test Device 5, Distribution Kit 2024 [PARTS NO]) were cut using
-        EcoRI and PstI (Anza, Thermo Fisher Scientific) and ligated using T4 DNA ligase (New England Biolabs). This
-        ligation product was then cloned with chemically competent DH5ɑ E. coli cells and extracted using the miniprep
-        kit (iNtRON Biotechnology). The cloned plasmid was then sent for sequencing (BGI Genomics) and the result was
-        satisfactory.
-
-    </p>
+        the KPC-2 gene by assembling the KPC-2-surrogate gene fragment (<a
+            href="https://parts.igem.org/Part:BBa_K5041000">BBa_K5041000</a>) with pSB1C3 backbone using the RFC
+        10 BioBricks assembly standard [1]. Briefly, the partial sequence of KPC-2-surrogate gene was PCR amplified
+        (TaKaRa Bio). Both the RFC 10-compatible amplicons and pSB1C3 (from Interlab 2018 Test Device 5 BBa_J364008,
+        Distribution Kit 2024) were then double digested with EcoRI and PstI restriction enzymes (Anza, Thermo Fisher
+        Scientific) and assembled with T4 ligation (New England Biolabs). Ligation product was used to transform
+        chemically competent DH5α E.coli, and cloned plasmid was later on harvested using DNA-spin™ Plasmid DNA
+        Purification Kit (iNtRON Biotechnology) and verified by Sanger sequencing (BGI Genomics).
+    </div>
 </section>
-<section class="paragraph-container">
-    <h3 class="page-subtitle">
+
+
+<section>
+    <h3 class="section-subtitle">
         Rolling Circle Amplification (RCA) Template Construction
     </h3>
-    <p>
-        To facilitate the RCA process, we have constructed a circularised RCA template [<a>PARTS NO</a>] with the
-        following
-        sequence: <img src="/assets/proof-of-concept/RCA-dna.png">
+    <div class="section-text">
+        To facilitate the RCA process, we have constructed a circularised third-generation (v3) RCA template
+        (BBa_K5041004) with the following sequence in fig 1:
+    </div>
+    <img src="/assets/proof-of-concept/Proof of Concept 1_ template.jpeg">
+    <div class="figure-label"> fig. 1 <a href="https://parts.igem.org/Part:BBa_K5041004">BBa_K5041004 sequence</a></div>
+    <div class="section-text">
         The linear oligonucleotide strand was synthesised by IDT and assembled into circular ssDNA form using
-        IDT-synthesised scaffold (5’-gccaccgcggtctcacgggt-3’) and T4 DNA ligase (New England Biolabs) , and thus,
-        treated
+        IDT-synthesised scaffold (5’-gccaccgcggtctcacgggt-3’) and T4 DNA ligase (New England Biolabs), and thus, treated
         with Exonuclease I and III (Thermo Fisher Scientific and Takara Bio) to remove the remaining scaffold.
-    </p>
-
+    </div>
 </section>
-<section class="paragraph-container">
-    <h3 class="page-subtitle">
+
+<section>
+    <h3 class="section-subtitle">
         Cell Lysis
     </h3>
-    <p>
+    <div class="section-text">
         Prior to the detection system, the collected bacterial sample must be lysed to release its bacterial DNA. In
         this proof of concept stage, we choose to lyse the cells using SDS. Using SDS to lyse bacterial cells has been
-        an established procedure, which is used in the extraction of plasmids from bacteria using miniprep kits [2], SDS
+        an established procedure, which is used in the extraction of plasmids from bacteria using miniprep kits [2]. SDS
         lysis could serve as a benchmark for lysis efficiency and plasmid yield when compared to other lysis methods or
-        buffer compositions. The proof of our methodology in lysing the cells using SDS can be viewed in our results
-        page.
-    </p>
+        buffer compositions. The proof of our methodology in lysing the cells using SDS can be viewed in our <a
+            href="[TK]">Results</a>
+        page. Fig. 2 and fig. 3 illustrate the process of cell lysis and its significance in the downstream reactions.
+    </div>
+    <img src="/assets/proof-of-concept/Proof of Concept 2_ lysis.png">
+    <div class="figure-label"> fig. 2 Cell lysis and release of genomic material for sample bacteria </div>
+    <img src="/assets/proof-of-concept/Proof of Concept 3_ lysis.png">
+    <div class="figure-label"> fig. 3 Indication of antibiotic resistance gene </div>
+
 </section>
-<section class="paragraph-container">
-    <h3 class="page-subtitle">
-        Target Gene Extraction
-    </h3>
-    <p>
-        After cell lysis, a snippet of the target gene, which is responsible for antibiotic resistance, is cut using a
-        restriction enzyme and a nickase. The nickase is used to cut the 3’ side of the double-stranded DNA (dsDNA),
-        while a restriction enzyme cuts the 5’ side of the gene snippet. The restriction enzyme and nickase used to
-        digest the plasmid in the proof of concept stage are HhaI and Nt.BsmAI (New England Biolabs) respectively.
 
-        Following the digestion, phi-29 DNA polymerase (New England Biolabs and Beyotime Biotechnology) releases a
-        single-stranded DNA (ssDNA) through linear strand displacement amplification (LSDA). Phi-29 binds to the nicked
-        5’ end of the gene, which is the pSB1C3-KPC-2-surrogate in this proof of concept, and then amplifies one strand
-        of the plasmid up to the HhaI cutting site. This process is expected to amplify a 32 nt ssDNA from the
-        pSB1C3-KPC-2-surrogate plasmid, which will serve as the primer for the following steps, along with 724 and 534
-        nt ssDNA strands as the side products of this LSDA process.
+<section>
+<h3 class="section-subtitle">
+    Target Gene Extraction
+</h3>
+<div class="section-text">
 
-        An experiment has also been conducted to test this process, and the results are shown here.
+    After cell lysis, a snippet of the target gene, which is responsible for antibiotic resistance, is cut using a
+    restriction enzyme and a nickase, as illustrated in fig. 4. The nickase is used to cut the 3’ side of the
+    double-stranded DNA (dsDNA), while a restriction enzyme cuts the 5’ side of the gene snippet. The restriction enzyme
+    and nickase used to digest the plasmid in the proof of concept stage are HhaI and Nt.BsmAI (New England Biolabs)
+    respectively.
+</div>
+<img src="/assets/proof-of-concept/Proof of Concept 4_ Extraction.png">
+<div class="figure-label"> fig. 4 Digestion site of Restriction Enzyme (HhaI) and Nikase (Nt.BsmAI) </div>
+<div class="section-text">
+    Following the digestion, phi29 DNA polymerase (New England Biolabs and Beyotime Biotechnology) releases a
+    single-stranded DNA (ssDNA) through linear strand displacement amplification (LSDA) as illustrated in fig. 5. Phi-29
+    binds to the nicked 5’ end of the gene, which is the pSB1C3-KPC-2-surrogate in this proof of concept, and then
+    amplifies one strand of the plasmid up to the HhaI cutting site. This process is expected to amplify a 32 nt ssDNA
+    from the pSB1C3-KPC-2-surrogate plasmid, which will serve as the primer for the following steps, along with 724 and
+    534 nt ssDNA strands as the side products of this LSDA process.
+</div>
+<img src="/assets/proof-of-concept/Proof of Concept 5_ Extraction.png">
+<div class="figure-label"> fig. 5 Working mechanism of phi-29 polymerase </div>
+<div class="section-text">
 
-    </p>
+    An experiment has also been conducted to test this process, and the results are shown <a
+        href="[TK] link to result page">here</a>.
+</div>
+
 </section>
-<section class="paragraph-container">
-    <h3 class="page-subtitle">
-        Rolling Circle Amplification (RCA)
-    </h3>
-    <p>
-        The circularised RCA template consists of a primer binding site, where the 32 nt ssDNA from the previous step
-        will bind to. Upon this binding, phi-29 DNA polymerase will start to add nucleotides following the primer
-        3’-end, according to sequences complementary to the RCA template [3]. During this step, we expect cells that do
-        not carry KPC-2 gene will not produce complementary primer, thus, will not trigger the RCA process.
 
-        After completing its first round along the RCA template, phi-29 will continue to replicate the RCA template
-        while displacing the complementary strands that it has formed during its previous round [4]. By including the
-        complementary strand of our peroxidase-mimicking G-quadruplex DNAzyme into the RCA template, the RCA process is
-        expected to generate repeats of the G-quadruplex DNAzyme upon the primer binding.
+<section>
+<h3 class="section-subtitle">
+    Rolling Circle Amplification (RCA)
+</h3>
+<div class="section-text">
 
-        The RCA template also includes the recognition site of the Nt.BsmAI nicking endonuclease. Without Nt.BsmAI, this
-        RCA process will generate a long continuous strand that consists of repeats of the RCA template. However, with
-        the addition of Nt.BsmAI, the phi-29-produced strands will be nicked by the nickase prior to its displacement,
-        producing shorter products out of the amplification process. This aims to increase the detection sensitivity by
-        mediating exponential RCA [5].
+    The circularised RCA template consists of a primer binding site, where the 32 nt ssDNA from the previous step will
+    bind to. As presented in fig. 6, upon this binding, phi-29 DNA polymerase will start to add nucleotides following
+    the primer 3’-end, according to sequences complementary to the RCA template [3]. During this step, we expect cells
+    that do not carry KPC-2 gene will not produce complementary primer, thus, will not trigger the RCA process. <br>
+    <div class="white-space"></div>
+    After completing its first round along the RCA template, phi-29 will continue to replicate the RCA template while
+    displacing the complementary strands that it has formed during its previous round [4]. By including the
+    complementary strand of our peroxidase-mimicking G-quadruplex DNAzyme into the RCA template, the RCA process is
+    expected to generate repeats of the G-quadruplex DNAzyme upon the primer binding.
+</div>
 
-        To test the RCA reactions and to eliminate interfering factors, we have also conducted the RCA experiments with
-        synthetic RCA primer from IDT. We tested several conditions for the RCA process and the results can be viewed
-        here.
 
-    </p>
+<img src="/assets/proof-of-concept/Proof of Concept 6_ RCA.png">
+<div class="figure-label"> fig. 6 Step of Rolling Circle Amplification (RCA) </div>
+<div class="section-text">
+    The RCA template also includes the recognition site of the Nt.BsmAI nicking endonuclease. Without Nt.BsmAI, this RCA
+    process will generate a long continuous strand that consists of repeats of the RCA template. However, with the
+    addition of Nt.BsmAI, the phi-29-produced strands will be nicked by the nickase prior to its displacement, producing
+    shorter products out of the amplification process, as shown in fig. 7. This aims to increase the detection
+    sensitivity by mediating exponential RCA [5].
+</div>
+<img src="/assets/proof-of-concept/Proof of Concept 7_ RCA.png">
+<div class="figure-label"> fig. 7 Product of Rolling Circle Amplification (RCA) after nikase digestion</div>
+<div class="section-text">
+
+
+    To test the RCA reactions and to eliminate interfering factors, we have also conducted the RCA experiments with
+    synthetic RCA primer from IDT. We tested several conditions for the RCA process and the results can be viewed <a
+        href="[TK] link to result page">here</a>.
+
+</div>
+
 </section>
-<section class="paragraph-container">
-    <h3 class="page-subtitle">
-        Signal Expression
-    </h3>
-    <p>
-        The previous step of the system generates G-quadruplex structures that act as peroxidase-mimicking DNAzymes. The
-        products from RCA are then set up into a reaction consisting of Hemin, TMB, and H2O2. If the RCA process was
-        triggered, G-quadruplex DNAzyme will be formed, and thus produce a colour change of the reaction due to the
-        oxidation of TMB to TMB+. The positive reaction is hence indicated by a blue colour while the negative reaction
-        does not change colour from transparent.
 
-        It is understood that the working mechanism of the DNAzyme involves the attachment of Hemin to the G-quadruplex
-        structure, a guanine-rich DNA sequence stabilised by hydrogen bonds, to produce a stable complex [6]. Hemin's
-        iron has the ability to move electrons around to catalyse the conversion of TMB to TMB+ [6].
+<section>
+<h3 class="section-subtitle">
+    Signal Expression
+</h3>
+<div class="section-text">
 
-        To confirm the process of the G-quadruplex DNAzyme reaction, we have also acquired an IDT-synthesised DNA [PARTS
-        NO] that will fold into a G-quadruplex structure. All of the experiment results can be found here.
+    The previous step of the system generates G-quadruplex structures that act as peroxidase-mimicking DNAzymes. The
+    products from RCA are then set up into a reaction consisting of Hemin, TMB, and H2O2. If the RCA process was
+    triggered, G-quadruplex DNAzyme will be formed, and thus produce a colour change of the reaction due to the
+    oxidation of tetramethylbenzidine (TMB) to TMB+. The positive reaction is hence indicated by a blue colour while the
+    negative reaction does not change colour from transparent. Fig. 8 presents the colour change reaction in the
+    presence of the G-Quadruplex DNAzyme.
 
-    </p>
+</div>
+
+
+<img src="/assets/proof-of-concept/Proof of Concept 8_ Signal.png">
+<div class="figure-label"> fig. 8 Reaction mixture when combined with G-Quadruplex DNAzyme </div>
+<div class="section-text">
+    It is understood that the working mechanism of the DNAzyme involves the attachment of Hemin to the G-quadruplex
+    structure, a guanine-rich DNA sequence stabilised by hydrogen bonds, to produce a stable complex [6]. Hemin's iron
+    has the ability to move electrons around to catalyse the conversion of TMB to TMB+ [6].
+    <br> <div class="white-space"></div>
+    To confirm the process of the G-quadruplex DNAzyme reaction, we have also acquired an IDT-synthesised DNA (<a href="https://parts.igem.org/Part:BBa_K5041001">BBa_K5041001</a>) that will fold into a G-quadruplex structure. All of the experiment results can be found <a href="[TK] result page">here</a>. 
+</div>
+
 </section>
-<section class="paragraph-container">
 
+<section>
+<h3 class="section-subtitle">
+    Remarks
+</h3>
+<div class="section-text">
 
-    <h3 class="page-subtitle">
-        Remarks
-    </h3>
-    <p>
-        All processes in our detection system are aimed to be completed in isothermal conditions, specifically in room
-        temperature. However, in the proof of concept stage, we mostly performed our experiments in the suggested
-        optimum temperatures of the enzyme. Although we confirmed that most of the reactions can be carried out at 37°C
-        or lower, further verification is required to assess its performance fully at room temperature.
-    </p>
+    All processes in our detection system are aimed to be completed in isothermal conditions, specifically in room temperature. However, in the proof of concept stage, we mostly performed our experiments in the suggested optimum temperatures of the enzyme. Although we confirmed that most of the reactions can be carried out at 37°C or lower, further verification is required to assess its performance fully at room temperature. 
+
+</div>
 </section>
-<h2 class="reference-title">REFERENCES</h2>
+<h3>References</h3>
 <ol class="reference-list">
-    <li>[1] “Help:Standards/Assembly/RFC10,” Registry of Standard Biological Parts, <a href="https://parts.igem.org/Help:Standards/Assembly/RFC10">https://parts.igem.org/Help:Standards/Assembly/RFC10</a> (accessed Sep. 24, 2024).</li>
-    <li>[2] “DNA-spin<sup>TM</sup> Plasmid DNA Purification Kit,” iNtRON Biotechnology, <a href="https://intronbio.com:6001/intronbioen/product/product_view.php?PRDT_ID=1">https://intronbio.com:6001/intronbioen/product/product_view.php?PRDT_ID=1</a> (accessed Sep. 24, 2024).</li>
-    <li>[3] F. Li, Y. Zhou, H. Yin, and S. Ai, “Recent advances on signal amplification strategies in photoelectrochemical sensing of micrornas,” <em>Biosensors and Bioelectronics</em>, vol. 166, p. 112476, Oct. 2020. doi:10.1016/j.bios.2020.112476</li>
-    <li>[4] R. Hull, “Assay, detection, and diagnosis of plant viruses,” <em>Plant Virology</em>, pp. 755–808, 2014. doi:10.1016/b978-0-12-384871-0.00013-3</li>
-    <li>[5] H.-X. Jiang, Z.-Z. Liang, Y.-H. Ma, D.-M. Kong, and Z.-Y. Hong, “G-quadruplex fluorescent probe-mediated real-time rolling circle amplification strategy for highly sensitive microrna detection,” <em>Analytica Chimica Acta</em>, vol. 943, pp. 114–122, Nov. 2016. doi:10.1016/j.aca.2016.09.019</li>
-    <li>[6] N. Alizadeh, A. Salimi, and R. Hallaj, “Hemin/G-quadruplex horseradish peroxidase-mimicking dnazyme: Principle and biosensing application,” <em>Advances in Biochemical Engineering/Biotechnology</em>, pp. 85–106, 2017. doi:10.1007/10_2017_37</li>
+  
+    <li> “Help:Standards/Assembly/RFC10,” Registry of Standard Biological Parts, <a href="https://parts.igem.org/Help:Standards/Assembly/RFC10">https://parts.igem.org/Help:Standards/Assembly/RFC10</a> (accessed Sep. 24, 2024).</li>
+    <li> “DNA-spin<sup>TM</sup> Plasmid DNA Purification Kit,” iNtRON Biotechnology, <a href="https://intronbio.com:6001/intronbioen/product/product_view.php?PRDT_ID=1">https://intronbio.com:6001/intronbioen/product/product_view.php?PRDT_ID=1</a> (accessed Sep. 24, 2024).</li>
+    <li> F. Li, Y. Zhou, H. Yin, and S. Ai, “Recent advances on signal amplification strategies in photoelectrochemical sensing of micrornas,” <em>Biosensors and Bioelectronics</em>, vol. 166, p. 112476, Oct. 2020. doi:10.1016/j.bios.2020.112476</li>
+    <li> R. Hull, “Assay, detection, and diagnosis of plant viruses,” <em>Plant Virology</em>, pp. 755–808, 2014. doi:10.1016/b978-0-12-384871-0.00013-3</li>
+    <li> H.-X. Jiang, Z.-Z. Liang, Y.-H. Ma, D.-M. Kong, and Z.-Y. Hong, “G-quadruplex fluorescent probe-mediated real-time rolling circle amplification strategy for highly sensitive microrna detection,” <em>Analytica Chimica Acta</em>, vol. 943, pp. 114–122, Nov. 2016. doi:10.1016/j.aca.2016.09.019</li>
+    <li> N. Alizadeh, A. Salimi, and R. Hallaj, “Hemin/G-quadruplex horseradish peroxidase-mimicking dnazyme: Principle and biosensing application,” <em>Advances in Biochemical Engineering/Biotechnology</em>, pp. 85–106, 2017. doi:10.1007/10_2017_37</li>
 </ol>
