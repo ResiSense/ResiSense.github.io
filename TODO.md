@@ -4,9 +4,9 @@
 - [x] CC 4.0 License (don't touch the file), footer of every page
 - [x] add [`attributions.html`](https://competition.igem.org/deliverables/project-attribution)
 - [ ] standard URL compliance
-  - [ ] lowercase alphanumeric + `-`
+  - [x] lowercase alphanumeric + `-`
   - [ ] [award URLs](https://competition.igem.org/judging/pages-for-awards)
-    - [ ] attributions
+    - [x] attributions
     - [ ] description
     - [ ] contribution
     - [ ] engineering
