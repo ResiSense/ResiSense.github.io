@@ -1,5 +1,3 @@
-🚧 Under construction
-
 This page is dedicated to acknowledging the contributions of various individuals and organisations that have helped in the development of the project.
 
 # Affiliations
