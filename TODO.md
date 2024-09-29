@@ -11,7 +11,7 @@
     - [ ] contribution
     - [ ] engineering
     - [x] human-practices
-    - [ ] education
+    - [x] education
     - [ ] model
 - [ ] only open-source or CC assets are allowed ([check](https://tools.igem.org/wiki/external-content-check))
 - [x] all assets (-videos) are uploaded [here](https://tools.igem.org/uploads/teams)
