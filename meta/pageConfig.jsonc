@@ -81,6 +81,20 @@
             }
         },
         {
+            "name": "model",
+            "title": "Modelling",
+            "populator": "markdown",
+            "includes": {
+                "css": [
+                    "/styles/model.css",
+                    "/styles/references.css"
+                ],
+                "ts": [
+                    "/lib/template-scripts/idReferences.ts"
+                ]
+            }
+        },
+        {
             "name": "wet-lab",
             "title": "Wet Lab",
             "populator": "markdown",

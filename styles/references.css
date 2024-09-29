@@ -1,0 +1,24 @@
+painted-content {
+    & section:has(h1#references) {
+        & ol {
+            list-style-type: none;
+            counter-reset: list;
+            padding-left: 0;
+        }
+
+        & li {
+            scroll-margin-top: calc(var(--top-margin) + 3.5rem);
+            counter-increment: list;
+            margin: 1rem 0;
+            position: relative;
+            padding-left: 2rem;
+
+            &::before {
+                content: '[' counter(list) ']';
+                font-weight: bold;
+                position: absolute;
+                left: 0;
+            }
+        }
+    }
+}

@@ -46,6 +46,12 @@ painted-content {
 
     }
 
+    code {
+        background-color: #ffffff60;
+        padding-inline: 0.2rem;
+        border-radius: 0.2rem;
+    }
+
     h1,
     h2,
     h3,
