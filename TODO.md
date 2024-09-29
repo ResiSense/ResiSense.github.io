@@ -7,6 +7,7 @@
   - [x] lowercase alphanumeric + `-`
   - [ ] [award URLs](https://competition.igem.org/judging/pages-for-awards)
     - [x] attributions
+    - [x] acknowledgements
     - [ ] description
     - [ ] contribution
     - [ ] engineering
