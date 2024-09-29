@@ -1,0 +1,125 @@
+h2 {
+    font-size: 1.5rem;
+}
+
+.page-title {
+    margin-bottom: 2rem;
+}
+
+h3 {
+    color: #768748;
+}
+
+section {
+    margin: 2rem 0;
+
+    & h2 {
+        margin: 1rem 0;
+        font-size: 2rem;
+    }
+
+    & h3 {
+        margin-bottom: 1rem;
+        font-size: 25px;
+    }
+
+    &>.section-subtitle {
+        margin: 2rem 0 1rem 0;
+        color: #768748;
+    }
+
+    &>.section-subtitle-rca {
+        margin: 0 0 1rem 0;
+        text-decoration: underline;
+    }
+
+    &>.section-subtitle-test {
+        margin: 2rem 0 1rem 0;
+        text-decoration: underline;
+    }
+
+    &>.figure-label {
+        margin-top: 1rem;
+        margin-bottom: 2rem;
+        justify-content: center;
+        display: flex;
+        font-size: 18px;
+        font-weight: 700;
+        align-items: center;
+
+        &>a {
+            margin-left: 0.5rem;
+            font-size: 18px;
+        }
+    }
+
+    & img {
+        margin-top: 1rem;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: auto;
+    }
+
+    &>.section-text {
+        font-size: 1.1rem;
+
+
+
+        &>.white-space {
+
+            width: 100vw;
+            height: 1rem;
+            pointer-events: none;
+        }
+
+        &>.itatlic {
+            font-family: Inter Italic;
+        }
+        & i {
+            font-size: 10px;
+            position: relative;
+            top: 2px;
+            font-family: Inter;
+            font-style: normal;
+        }
+    }
+
+    & a {
+        text-decoration: none;
+    }
+
+    &>.section-subtitle-orange-itatlic {
+      margin-top: 1rem;
+        font-size: 25px;
+        color: #e69745;
+    }
+
+}
+
+
+.reference-list {
+    list-style-type: none;
+    counter-reset: none;
+    margin: 1rem 0 0 0;
+    padding: 0;
+}
+
+.reference-list li {
+    counter-increment: list;
+    margin: 5px 0;
+    padding-left: 25px;
+    text-indent: -25px;
+    
+}
+
+.reference-list li a {
+    text-decoration: none;
+   
+}
+
+.reference-list li::before {
+    content: "[" counter(list) "]";
+    font-size: bold;
+
+}
