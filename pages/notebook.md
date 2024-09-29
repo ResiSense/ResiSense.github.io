@@ -59,15 +59,15 @@
 
 1. Into each PCR tube, add:
 
-|                             | (1)                                | (2)                               | (-) control           | (+) control                        |
-| :-------------------------- | :--------------------------------- | :-------------------------------- | :-------------------- | :--------------------------------- |
-| 10× G-Quadruplex buffer     | 12.5 μL                            | 12.5 μL                           | 12.5 μL               | 12.5 μL                            |
-| G-Quadruplex sample         | 10 μL from (1) (+) With IDT primer | 10 μL from (2) (-) Without primer | 10 μL from failed RCA | 6.25 μL from IDT G-Quad 8 µM stock |
-| Hemin, in DMSO (1 mM stock) | 1 μL                               | 1 μL                              | 1 μL                  | 1 μL                               |
-| ddH₂O                       | 98.5 μL                            | 98.5 μL                           | 98.5 μL               | 102.25 μL                          |
-| TMB (50 mM stock in DMSO)   | 1.5 μL                             | 1.5 μL                            | 1.5 μL                | 1.5 μL                             |
-| H₂O₂                        | 1.5 μL                             | 1.5 μL                            | 1.5 μL                | 1.5 μL                             |
-| **TOTAL**                   | **125 μL**                         | **125 μL**                        | **125 μL**            | **125 μL**                         |
+|                              | (1)                                | (2)                               | (-) control           | (+) control                        |
+| :--------------------------- | :--------------------------------- | :-------------------------------- | :-------------------- | :--------------------------------- |
+| 10× G-Quadruplex buffer      | 12.5 μL                            | 12.5 μL                           | 12.5 μL               | 12.5 μL                            |
+| G-Quadruplex sample          | 10 μL from (1) (+) With IDT primer | 10 μL from (2) (-) Without primer | 10 μL from failed RCA | 6.25 μL from IDT G-Quad 8 µM stock |
+| Haemin, in DMSO (1 mM stock) | 1 μL                               | 1 μL                              | 1 μL                  | 1 μL                               |
+| ddH₂O                        | 98.5 μL                            | 98.5 μL                           | 98.5 μL               | 102.25 μL                          |
+| TMB (50 mM stock in DMSO)    | 1.5 μL                             | 1.5 μL                            | 1.5 μL                | 1.5 μL                             |
+| H₂O₂                         | 1.5 μL                             | 1.5 μL                            | 1.5 μL                | 1.5 μL                             |
+| **TOTAL**                    | **125 μL**                         | **125 μL**                        | **125 μL**            | **125 μL**                         |
 
 ## Entry [P04]
 
@@ -249,15 +249,15 @@
 
 1. Into each PCR tube, add:
 
-|                             | (1) (+) ExoI & ExoIII-treated, with IDT primer, cut with Nt.BsmAI | (2) (+) ExoI & ExoIII-treated, with IDT primer | (3) (-) ExoI & ExoIII-treated, without primer | (+) control, from IDT G-Quad 8 µM stock |
-| :-------------------------- | :---------------------------------------------------------------- | :--------------------------------------------- | :-------------------------------------------- | :-------------------------------------- |
-| 10× G-Quadruplex buffer     | 12.5 μL                                                           | 12.5 μL                                        | 12.5 μL                                       | 12.5 μL                                 |
-| G-Quadruplex sample         | 10 μL                                                             | 10 μL                                          | 10 μL                                         | 6.25 μL                                 |
-| Hemin, in DMSO (1 mM stock) | 1 μL                                                              | 1 μL                                           | 1 μL                                          | 1 μL                                    |
-| ddH₂O                       | 98.5 μL                                                           | 98.5 μL                                        | 98.5 μL                                       | 102.25 μL                               |
-| TMB (50 mM stock in DMSO)   | 1.5 μL                                                            | 1.5 μL                                         | 1.5 μL                                        | 1.5 μL                                  |
-| H₂O₂                        | 1.5 μL                                                            | 1.5 μL                                         | 1.5 μL                                        | 1.5 μL                                  |
-| **TOTAL**                   | **125 μL**                                                        | **125 μL**                                     | **125 μL**                                    | **125 μL**                              |
+|                              | (1) (+) ExoI & ExoIII-treated, with IDT primer, cut with Nt.BsmAI | (2) (+) ExoI & ExoIII-treated, with IDT primer | (3) (-) ExoI & ExoIII-treated, without primer | (+) control, from IDT G-Quad 8 µM stock |
+| :--------------------------- | :---------------------------------------------------------------- | :--------------------------------------------- | :-------------------------------------------- | :-------------------------------------- |
+| 10× G-Quadruplex buffer      | 12.5 μL                                                           | 12.5 μL                                        | 12.5 μL                                       | 12.5 μL                                 |
+| G-Quadruplex sample          | 10 μL                                                             | 10 μL                                          | 10 μL                                         | 6.25 μL                                 |
+| Haemin, in DMSO (1 mM stock) | 1 μL                                                              | 1 μL                                           | 1 μL                                          | 1 μL                                    |
+| ddH₂O                        | 98.5 μL                                                           | 98.5 μL                                        | 98.5 μL                                       | 102.25 μL                               |
+| TMB (50 mM stock in DMSO)    | 1.5 μL                                                            | 1.5 μL                                         | 1.5 μL                                        | 1.5 μL                                  |
+| H₂O₂                         | 1.5 μL                                                            | 1.5 μL                                         | 1.5 μL                                        | 1.5 μL                                  |
+| **TOTAL**                    | **125 μL**                                                        | **125 μL**                                     | **125 μL**                                    | **125 μL**                              |
 
 
 ## Entry [P11]
@@ -343,16 +343,16 @@
 
 1. Into each PCR tube, add:
 
-|                             | (+) RCA-generated G-quadruplex | (+) IDT-synthesized G-quadruplex with DTT | (+) IDT-synthesized G-quadruplex |
-| :-------------------------- | :----------------------------- | :---------------------------------------- | :------------------------------- |
-| 10× G-Quadruplex buffer     | 25 μL                          | 25 μL                                     | 25 μL                            |
-| G-Quadruplex sample         | 10 μL                          | 12.5 μL                                   | 12.5 μL                          |
-| DTT (0.1 M stock)           | -                              | 0.6 μL                                    | -                                |
-| Hemin, in DMSO (1 mM stock) | 2 μL                           | 2 μL                                      | 2 μL                             |
-| ddH₂O                       | 207 μL                         | 203.9 μL                                  | 204.5 μL                         |
-| TMB (50 mM stock in DMSO)   | 3 μL                           | 3 μL                                      | 3 μL                             |
-| H₂O₂                        | 3 μL                           | 3 μL                                      | 3 μL                             |
-| **TOTAL**                   | **250 μL**                     | **250 μL**                                | **250  μL**                      |
+|                              | (+) RCA-generated G-quadruplex | (+) IDT-synthesized G-quadruplex with DTT | (+) IDT-synthesized G-quadruplex |
+| :--------------------------- | :----------------------------- | :---------------------------------------- | :------------------------------- |
+| 10× G-Quadruplex buffer      | 25 μL                          | 25 μL                                     | 25 μL                            |
+| G-Quadruplex sample          | 10 μL                          | 12.5 μL                                   | 12.5 μL                          |
+| DTT (0.1 M stock)            | -                              | 0.6 μL                                    | -                                |
+| Haemin, in DMSO (1 mM stock) | 2 μL                           | 2 μL                                      | 2 μL                             |
+| ddH₂O                        | 207 μL                         | 203.9 μL                                  | 204.5 μL                         |
+| TMB (50 mM stock in DMSO)    | 3 μL                           | 3 μL                                      | 3 μL                             |
+| H₂O₂                         | 3 μL                           | 3 μL                                      | 3 μL                             |
+| **TOTAL**                    | **250 μL**                     | **250 μL**                                | **250  μL**                      |
 
 
 ## Entry [P15]
@@ -414,15 +414,15 @@
 
 1. Into each PCR tube, add:
 
-|                             | (1) (+) RCA-generated G-quadruplex | (2) (-) false positive RCA result |
-| :-------------------------- | :--------------------------------- | :-------------------------------- |
-| 10× G-Quadruplex buffer     | 12.5 μL                            | 12.5 μL                           |
-| G-Quadruplex sample         | 10 μL from (1) (+) With IDT primer | 10 μL from (2) (-) Without primer |
-| Hemin, in DMSO (1 mM stock) | 1 μL                               | 1 μL                              |
-| ddH₂O                       | 98.5 μL                            | 98.5 μL                           |
-| TMB (50 mM stock in DMSO)   | 1.5 μL                             | 1.5 μL                            |
-| H₂O₂                        | 1.5 μL                             | 1.5 μL                            |
-| **TOTAL**                   | **125 μL**                         | **125 μL**                        |
+|                              | (1) (+) RCA-generated G-quadruplex | (2) (-) false positive RCA result |
+| :--------------------------- | :--------------------------------- | :-------------------------------- |
+| 10× G-Quadruplex buffer      | 12.5 μL                            | 12.5 μL                           |
+| G-Quadruplex sample          | 10 μL from (1) (+) With IDT primer | 10 μL from (2) (-) Without primer |
+| Haemin, in DMSO (1 mM stock) | 1 μL                               | 1 μL                              |
+| ddH₂O                        | 98.5 μL                            | 98.5 μL                           |
+| TMB (50 mM stock in DMSO)    | 1.5 μL                             | 1.5 μL                            |
+| H₂O₂                         | 1.5 μL                             | 1.5 μL                            |
+| **TOTAL**                    | **125 μL**                         | **125 μL**                        |
 
 
 ## Entry [P18]
@@ -433,7 +433,7 @@
 | :----------------------------------------------- | :--------- | :--------- | :---------- | :--------- |
 | 10× G-Quadruplex buffer                          | 12.5 μL    | 12.5 μL    | 12.5 μL     | 12.5 μL    |
 | G-Quadruplex sample (from IDT G-Quad 8 µM stock) | 18.75 μL   | 12.5 μL    | 6.25 μL     | 0.625 μL   |
-| Hemin, in DMSO (1 mM stock)                      | 1 μL       | 1 μL       | 1 μL        | 1 μL       |
+| Haemin, in DMSO (1 mM stock)                     | 1 μL       | 1 μL       | 1 μL        | 1 μL       |
 | ddH₂O                                            | 89.75 μL   | 96 μL      | 102.25 μL   | 107.875 μL |
 | TMB (50 mM stock in DMSO)                        | 1.5 μL     | 1.5 μL     | 1.5 μL      | 1.5 μL     |
 | H₂O₂                                             | 1.5 μL     | 1.5 μL     | 1.5 μL      | 1.5 μL     |
@@ -494,15 +494,15 @@
 
 1. Into each PCR tube, add:
 
-|                             | (1) RCA(v3)/Nt.BsmAI-GQuad | (2) RCA(v3)-GQuad | (+) control |
-| :-------------------------- | :------------------------- | :---------------- | :---------- |
-| 10× G-Quadruplex buffer     | 12.5 μL                    | 12.5 μL           | 12.5 μL     |
-| G-Quadruplex sample         | 10 μL                      | 10 μL             | 6.25 μL     |
-| Hemin, in DMSO (1 mM stock) | 1 μL                       | 1 μL              | 1 μL        |
-| ddH₂O                       | 98.5 μL                    | 98.5 μL           | 102.25 μL   |
-| TMB (50 mM stock in DMSO)   | 1.5 μL                     | 1.5 μL            | 1.5 μL      |
-| H₂O₂                        | 1.5 μL                     | 1.5 μL            | 1.5 μL      |
-| **TOTAL**                   | **125 μL**                 | **125 μL**        | **125 μL**  |
+|                              | (1) RCA(v3)/Nt.BsmAI-GQuad | (2) RCA(v3)-GQuad | (+) control |
+| :--------------------------- | :------------------------- | :---------------- | :---------- |
+| 10× G-Quadruplex buffer      | 12.5 μL                    | 12.5 μL           | 12.5 μL     |
+| G-Quadruplex sample          | 10 μL                      | 10 μL             | 6.25 μL     |
+| Haemin, in DMSO (1 mM stock) | 1 μL                       | 1 μL              | 1 μL        |
+| ddH₂O                        | 98.5 μL                    | 98.5 μL           | 102.25 μL   |
+| TMB (50 mM stock in DMSO)    | 1.5 μL                     | 1.5 μL            | 1.5 μL      |
+| H₂O₂                         | 1.5 μL                     | 1.5 μL            | 1.5 μL      |
+| **TOTAL**                    | **125 μL**                 | **125 μL**        | **125 μL**  |
 
 
 ## Entry [P22]
@@ -574,15 +574,15 @@
 
 1. Into each PCR tube, add:
 
-|                             | (1) 1 ng   | (2) 2 ng   | (3) 4 ng   | (4) 8 ng   | (5) uncut  | (6) (-)    | (7) (+) control |
-| :-------------------------- | :--------- | :--------- | :--------- | :--------- | :--------- | :--------- | :-------------- |
-| 10× G-Quadruplex buffer     | 12.5 μL    | 12.5 μL    | 12.5 μL    | 12.5 μL    | 12.5 μL    | 12.5 μL    | 12.5 μL         |
-| G-Quadruplex sample         | 10 μL      | 10 μL      | 10 μL      | 10 μL      | 10 μL      | 10 μL      | 6.25 μL         |
-| Hemin, in DMSO (1 mM stock) | 1 μL       | 1 μL       | 1 μL       | 1 μL       | 1 μL       | 1 μL       | 1 μL            |
-| ddH₂O                       | 98.5 μL    | 98.5 μL    | 98.5 μL    | 98.5 μL    | 98.5 μL    | 98.5 μL    | 102.25 μL       |
-| TMB (50 mM stock in DMSO)   | 1.5 μL     | 1.5 μL     | 1.5 μL     | 1.5 μL     | 1.5 μL     | 1.5 μL     | 1.5 μL          |
-| H₂O₂                        | 1.5 μL     | 1.5 μL     | 1.5 μL     | 1.5 μL     | 1.5 μL     | 1.5 μL     | 1.5 μL          |
-| **TOTAL**                   | **125 μL** | **125 μL** | **125 μL** | **125 μL** | **125 μL** | **125 μL** | **125 μL**      |
+|                              | (1) 1 ng   | (2) 2 ng   | (3) 4 ng   | (4) 8 ng   | (5) uncut  | (6) (-)    | (7) (+) control |
+| :--------------------------- | :--------- | :--------- | :--------- | :--------- | :--------- | :--------- | :-------------- |
+| 10× G-Quadruplex buffer      | 12.5 μL    | 12.5 μL    | 12.5 μL    | 12.5 μL    | 12.5 μL    | 12.5 μL    | 12.5 μL         |
+| G-Quadruplex sample          | 10 μL      | 10 μL      | 10 μL      | 10 μL      | 10 μL      | 10 μL      | 6.25 μL         |
+| Haemin, in DMSO (1 mM stock) | 1 μL       | 1 μL       | 1 μL       | 1 μL       | 1 μL       | 1 μL       | 1 μL            |
+| ddH₂O                        | 98.5 μL    | 98.5 μL    | 98.5 μL    | 98.5 μL    | 98.5 μL    | 98.5 μL    | 102.25 μL       |
+| TMB (50 mM stock in DMSO)    | 1.5 μL     | 1.5 μL     | 1.5 μL     | 1.5 μL     | 1.5 μL     | 1.5 μL     | 1.5 μL          |
+| H₂O₂                         | 1.5 μL     | 1.5 μL     | 1.5 μL     | 1.5 μL     | 1.5 μL     | 1.5 μL     | 1.5 μL          |
+| **TOTAL**                    | **125 μL** | **125 μL** | **125 μL** | **125 μL** | **125 μL** | **125 μL** | **125 μL**      |
 
 ## Entry [P25]
 
