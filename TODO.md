@@ -27,3 +27,4 @@
 - [ ] add responsiveness to human cards
 - [ ] fix footer being over search box
 - [ ] /contact
+- [ ] fix doodles speed being inconsistent

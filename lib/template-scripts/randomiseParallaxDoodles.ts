@@ -21,9 +21,7 @@ function calculatePageSizeHeuristic(contentLength: number, pageName: string): nu
     console.log(pageName, 'content length:', x);
     //! This is a magic number heuristic formula from regression
     //$ Update this for every major style change
-    return -9E-06 * x ** 2 + 0.4003 * x + 884.25; // quadratic
-    // return 0.2332 * x + 1147.2; // linear
-    // return 10000; // constant
+    return -1E-06 * x ** 2 + 0.3693 * x + 824.75; // quadratic
 }
 
 function cloneDoodlesToFillPool(parallaxDoodleContainer: HTMLElement, Y_PAGE_SIZE_HEURISTIC: number) {
@@ -111,7 +109,13 @@ export default function (pageData: PageData) {
     const parallaxDoodleAnimations: { hash: string, translateAmount: number }[] = [];
     const contentLength = document.getElementsByTagName('painted-content')[0].innerHTML.length;
     const Y_PAGE_SIZE_HEURISTIC = calculatePageSizeHeuristic(contentLength, pageData.page.name);
-    cloneDoodlesToFillPool(parallaxDoodleContainer, Y_PAGE_SIZE_HEURISTIC);
+    try {
+        cloneDoodlesToFillPool(parallaxDoodleContainer, Y_PAGE_SIZE_HEURISTIC);
+    } catch (e) {
+        console.error(e);
+        console.warn(`Skipping doodles for ${pageData.page.name}`);
+        return;
+    }
     const pdfGrid = new PDFGrid(100, Y_PAGE_SIZE_HEURISTIC / GRID_Y_CELL_SIZE_PX * 1.5, PDF_REPULSION_PROBABILITY_FUNCTION);
 
     //! PERFORMANCE
