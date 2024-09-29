@@ -8,7 +8,7 @@ Antibiotic resistance is a growing problem in the world. The [World Health Organ
 
 ## Current Methods
 
-The current methods for detecting antibiotic-resistant pathogens are **expensive and time-consuming**, limiting its accessibility and potential utility [⤵️](/integrated-human-practice#current-methods). A cheaper, faster, and simpler technology is needed.  
+The current methods for detecting antibiotic-resistant pathogens are **expensive and time-consuming**, limiting its accessibility and potential utility [⤵️](/human-practices#current-methods). A cheaper, faster, and simpler technology is needed.  
 
 # Our Solution
 

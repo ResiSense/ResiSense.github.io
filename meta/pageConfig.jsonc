@@ -59,15 +59,15 @@
             ]
         },
         {
-            "name": "integrated-human-practice",
-            "title": "Integrated Human Practice",
+            "name": "human-practices",
+            "title": "Integrated Human Practices",
             "populator": "markdown",
             "includes": {
                 "ts": [
-                    "/lib/page-scripts/integrated-human-practice.ts"
+                    "/lib/page-scripts/human-practices.ts"
                 ],
                 "css": [
-                    "/styles/integrated-human-practice.css"
+                    "/styles/human-practices.css"
                 ]
             }
         },

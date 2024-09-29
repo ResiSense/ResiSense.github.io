@@ -6,9 +6,16 @@
 - [ ] standard URL compliance
   - [ ] lowercase alphanumeric + `-`
   - [ ] [award URLs](https://competition.igem.org/judging/pages-for-awards)
+    - [ ] attributions
+    - [ ] description
+    - [ ] contribution
+    - [ ] engineering
+    - [x] human-practices
+    - [ ] education
+    - [ ] model
 - [ ] only open-source or CC assets are allowed ([check](https://tools.igem.org/wiki/external-content-check))
 - [x] all assets (-videos) are uploaded [here](https://tools.igem.org/uploads/teams)
-- [ ] videos are uploaded [here](https://tools.igem.org/wiki/non-deliverable-videos)
+- [x] videos are uploaded [here](https://tools.igem.org/wiki/non-deliverable-videos)
 
 ## Actually important stuff
 - [x] add responsiveness
@@ -17,3 +24,4 @@
 - [ ] fix catalogue being janky on resize
 - [ ] rework hamburger menu design
 - [ ] add responsiveness to human cards
+- [ ] fix footer being over search box
