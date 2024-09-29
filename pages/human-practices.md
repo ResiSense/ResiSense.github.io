@@ -1,4 +1,4 @@
-Integrated human practice refers to the collaboration with various parties with aims of furthering our project.  
+Integrated human practices refer to the collaborations with various parties with aims of furthering our project.  
 
 # Overview
 
