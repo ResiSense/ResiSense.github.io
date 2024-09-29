@@ -8,11 +8,15 @@ The ResiSense team is a group of undergraduate students from the Chinese Univers
 ## The Chinese University of Hong Kong
 [![CUHK Logo](/assets/logos/cuhk%20logo%20horizontal.svg)](https://www.cuhk.edu.hk)  
 
+## School of Life Sciences
+[![CUHK SLS Logo](/assets/logos/sls%20logo.svg)](https://www.sls.cuhk.edu.hk)  
+
+## Faculty of Engineering
+[![CUHK FoE Logo](/assets/logos/foe%20logo.svg)](https://www.erg.cuhk.edu.hk)
+
 ## Department of Biomedical Engineering
 [![CUHK BME Logo](/assets/logos/bme%20logo.svg)](https://www.bme.cuhk.edu.hk)  
 
-## School of Life Sciences
-[![CUHK SLS Logo](/assets/logos/sls%20logo.svg)](https://www.sls.cuhk.edu.hk)  
 
 # Sponsors
 The following organisations have provided financial support to the project.  
