@@ -25,3 +25,4 @@
 - [ ] rework hamburger menu design
 - [ ] add responsiveness to human cards
 - [ ] fix footer being over search box
+- [ ] /contact
