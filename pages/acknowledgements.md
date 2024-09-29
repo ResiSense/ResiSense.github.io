@@ -36,19 +36,3 @@ The [Hong Kong Life Sciences Society](https://www.hklss.org) has kindly provided
 ## Hong Kong Amgen Biotech Experience
 [![ABEHK Logo](/assets/logos/abehk%20logo.svg)](https://abehk.fed.cuhk.edu.hk)  
 [Hong Kong Amgen Biotech Experience](https://abehk.fed.cuhk.edu.hk) has kindly provided us with various cells, plasmids, and reagents totalling [1000HKD](https://www.google.com/search?q=1000HKD) for our experiments.  
-
-# Collaborators
-
-# Advisors
-
-# Interviewees
-The following individuals have kindly agreed to be interviewed for the project and have provided us with valuable insights.  
-
-## Professor Margaret Ip
-[![Portrait of Professor Margaret Ip](/assets/humans/margaret%20ip%20full-Enhanced-SR.png)](https://www.med.cuhk.edu.hk/staff/professor-margaret-ip)  
-
-## Professor Stephen Tsui
-[![Portrait of Professor Stephen Tsui](/assets/humans/stephen%20tsui%20full-Enhanced-SR.png)](https://www2.sbs.cuhk.edu.hk/en-gb/people/academic-staff/prof-tsui-kwok-wing-stephen)
-
-## Doctor Pierre Chan
-[![Portrait of Doctor Pierre Chan](/assets/humans/pierre%20chan%20full-Enhanced-SR.png)](https://www.drchanpierre.org/about-me)
