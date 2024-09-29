@@ -1,5 +1,5 @@
 main:has(iframe.attributions-frame) {
-    padding: 1rem 2rem;
+    padding: 1rem 2rem !important;
 }
 
 iframe.attributions-frame {
