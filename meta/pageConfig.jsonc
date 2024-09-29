@@ -106,6 +106,10 @@
             }
         },
         {
+            "name": "contribution",
+            "populator": "markdown"
+        },
+        {
             "name": "acknowledgements",
             "populator": "markdown",
             "includes": {

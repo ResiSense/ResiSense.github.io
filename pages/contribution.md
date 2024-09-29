@@ -1,0 +1,17 @@
+We believe that our team has made the following contributions to the iGEM community.  
+
+# Design of Positive Control DNA Fragment
+
+Many iGEM teams, including us, rely on **external sponsorships** and funds from the university. We understand that most teams are very short on funds and, thus, **cannot replace expired items** at will. Our positive control fragments allow teams to **assay the functionality and activity of the restriction enzymes**, **saving money** from using them to replace expired but functional enzymes and **saving time** from just hoping that the expired enzymes would work. The unique property of the positive control fragment is that it has **many restriction sites in a short sequence**, resulting in the **effective use of dNTPs** for building DNA fragments.  
+
+# Use of Nickase for Producing Short ssDNA Fragments from RCA
+
+In our original design, we planned to **enhance the production speed of G-quadruplex** DNAzyme (G-quad) and, therefore, colour change by **cleaving the primer-G-quad phosphodiester bond** on the product strand, freeing the DNAzyme and the primer for **more reactions**. However, the attempt with 13PD1 DNAzyme failed for us (see [Engineering Cycle](TK link)). This has forced us to think innovatively, and we turned to the enzymes **currently in the reaction mix**, nickase. By leveraging the ability of nickase to **cleave only one strand**, we can achieve **amplification of RCA initiation**, hopefully producing **faster results** for our kit.  
+
+# Development of Robust ssDNA Circularisation Protocol
+
+At the heart of our project lies RCA, which directly controls the **production of G-quad**, leading to **visible colour change**. RCA relies on **circular ssDNA templates**, which are **very expensive** if they were to be synthesised by companies. Our team also could not afford to synthesise circular ssDNA, so we turned to the literature and found a [protocol for **ssDNA circularisation**](/notebook#entry-p01) with limited success. We encountered **false positives** when performing RCA due to the **residual scaffold hybridised to the circularised template**, acting as a perfect primer for RCA. We then [modified the protocol](/notebook#entry-p08) with the use of **exonuclease III** to also **remove the circularised RCA template with RCA scaffold hybridised to it**. With exonuclease III, we have not re-encountered the problem of false positives. Hence, we believe this modified circularisation is **robust**, allowing future iGEM teams to produce circular ssDNA for their experiments **at a low cost**.  
+
+# Parametrisation of Haem Residue in AlphaFold 3 for GROMACS Simulations
+
+During modelling, our most prominent difficulty was the **parametrisation of haem residue** for GROMACS simulations. Since the haem residue contains **iron (III) ions**, which were **not present in ordinary force fields**, they provided significant hurdles during parametrisation, as **quantum calculations are necessary**. Installing **quantum chemistry packages** is time-consuming, and the calculations required to obtain the parameters are **lengthy** and easily consume days. In light of the problems we have encountered along the way, and considering the popularity of the AlphaFold 3 model, we decided to share the **haem topology model** with the synthetic biology community, allowing future teams to **perform simulations containing the haem residue quickly**. The topology file is available for download on the [Modelling page](/model) [TK download].

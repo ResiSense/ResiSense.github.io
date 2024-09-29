@@ -8,8 +8,8 @@
   - [ ] [award URLs](https://competition.igem.org/judging/pages-for-awards)
     - [x] attributions
     - [x] acknowledgements
+    - [x] contribution
     - [ ] description
-    - [ ] contribution
     - [ ] engineering
     - [x] human-practices
     - [x] education
@@ -29,3 +29,4 @@
 - [ ] fix footer being over search box
 - [ ] /contact
 - [ ] fix doodles speed being inconsistent
+- [ ] tend to TKs
