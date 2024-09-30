@@ -39,7 +39,8 @@ There are still improvements to be made to our system, with the following items 
 
 ## [E1.1] First-Generation RCA Template Treated with Exonuclease I
 > See protocols [[P01]](/notebook#p01), [[P02]](/notebook#p02), and [[P03]](/notebook#p03)  
-> Keyword: FALSE POSITIVE  
+
+**Keyword**: FALSE POSITIVE  
 
 ### Design
 Our first-generation (v1) circular template ([BBa_K5041002](https://parts.igem.org/Part:BBa_K5041002)) is a 49bp long ssDNA with a phosphate group at the 5' end. This first-generation circular template contains the G-quadruplex DNAzyme complementary sequences, the annealing sites for the first-generation RCA scaffold and RCA primer, as well as the cutting sites for two DNA-cleaving DNAzymes. The DNA-cleaving DNAzymes, however, were not used in this experiment (see [E2.1](#e21-dna-cleaving-dnazymes-test) for details).   
@@ -78,7 +79,8 @@ The results of this experiment indicate that an interfering factor was present i
 
 ## [E1.2] Second-Generation RCA template Treated with Exonuclease I
 > See protocols [[P04]](/notebook#p04) and [[P05]](/notebook#p05)  
-> Keyword: FAILED RCA, FAILED TEMPLATE CIRCULARISATION  
+
+**Keyword**: FAILED RCA, FAILED TEMPLATE CIRCULARISATION  
 
 ### Design
 
@@ -118,7 +120,8 @@ Moreover, no product larger than 10,000bp was generated from both RCA reaction m
 
 ## [E1.3] Third-Generation RCA Template Treated with Triton X-100 and Exonuclease I
 > See protocols [[P06]](/notebook#p06) and [[P07]](/notebook#p07)  
-> Keyword: FALSE POSITIVE  
+
+**Keyword**: FALSE POSITIVE  
 
 ### Design
 
@@ -148,7 +151,8 @@ This troubleshooting process did not solve our concurring issue of false positiv
 
 ## [E1.4] Third-Generation RCA Template Treated with Exonuclease I and III
 > See protocols [[P08]](/notebook#p08), [[P09]](/notebook#p09), and [[P10]](/notebook#p10)  
-> Keyword: SUCCESSFULLY ELIMINATED FALSE POSITIVE  
+
+**Keyword**: SUCCESSFULLY ELIMINATED FALSE POSITIVE  
 
 ### Design
 The third-generation (v3) RCA template (BBa_K5041004) features one repeat of the G-quadruplex DNAzyme complementary sequence, the Nt.BsmAI cutting site and primer binding site, resulting in a total length of 62nt ssDNA. As described in [E1.3](#e13-third-generation-rca-template-treated-with-triton-x-100-and-exonuclease-i), our third-generation RCA template rendered false positives even after being treated with Triton X-100. To address this problem, we went for another troubleshooting process and decided to modify our circularisation method.  
@@ -191,7 +195,8 @@ This troubleshooting process confirmed that Exonuclease I treatment was not suff
 
 ## [E2.1] DNA-Cleaving DNAzymes Test
 > See protocol [[P11]](/notebook#p11)  
-> Keyword: FAILED DNA-CLEAVING
+
+**Keyword**: FAILED DNA-CLEAVING
 
 ### Design
 
@@ -221,7 +226,8 @@ The results of this experiment indicate that we were unable to use the DNA-cleav
 
 ## [E2.2] First-Generation RCA in rCutSmart Buffer
 > See protocols [[P12]](/notebook#p12), [[P13]](/notebook#p13), and [[P14]](/notebook#p14)  
-> Keyword: Φ29 IN rCUTSMART, FAILED SIGNAL EXPRESSION  
+
+**Keyword**: Φ29 IN rCUTSMART, FAILED SIGNAL EXPRESSION  
 
 ### Design
 
@@ -263,7 +269,8 @@ We thus found out that DTT is a reducing agent, while the colour change in the G
 
 ## [E2.3] First-Generation RCA in rCutSmart Buffer without DTT
 > See protocols [[P15]](/notebook#p15), [[P16]](/notebook#p16), and [[P17]](/notebook#p17)  
-> Keyword: Φ29 IN rCUTSMART WITHOUT DTT, WEAK SIGNAL EXPRESSION  
+
+**Keyword**: Φ29 IN rCUTSMART WITHOUT DTT, WEAK SIGNAL EXPRESSION  
 
 ### Design
 With our discovery in [E2.1](#e21-dna-cleaving-dnazymes-test), we decided to rerun the reaction without additional (dithiothreitol) DTT added into the RCA reaction mixture with first-generation (v1) RCA template ([BBa_K5041002](https://parts.igem.org/Part:BBa_K5041002)) and scaffold ([BBa_K5041003](https://parts.igem.org/Part:BBa_K5041003)).  
@@ -302,7 +309,8 @@ This result provided us with two sets of information. Firstly, of that compatibi
 
 ## [E2.4] G-Quadruplex Concentration and Signal Expression Correlation
 > See protocol [[P18]](/notebook#p18)  
-> Keyword: SIGNAL EXPRESSION CORRELATION  
+
+**Keyword**: SIGNAL EXPRESSION CORRELATION  
 
 ### Design
 With the constantly occurring weak signals, we tried to brainstorm potential factors contributing to the signal expression level. One experiment we did to troubleshoot this problem was assessing the correlation of the G-quadruplex concentration in the reaction mixture and the signal expressed. Thus, we used the IDT-synthesised G-quadruplex sequences ([BBa_K5041001](https://parts.igem.org/Part:BBa_K5041001)) in different concentrations to assess whether it contributed to the strength of the signal.  
@@ -326,7 +334,8 @@ Though the G-quadruplex Structure is a peroxidase-mimicking DNAzyme, which mimic
 
 ## [E2.5] Third-Generation RCA Without Exonuclease I Treatment
 > See protocols [[P19]](/notebook#p19), [[P20]](/notebook#p20), and [[P21]](/notebook#p21)  
-> Keyword: THIRD-GENERATION RCA, STRONG SIGNAL EXPRESSION
+
+**Keyword**: THIRD-GENERATION RCA, STRONG SIGNAL EXPRESSION
 
 ### Design
 The third-generation (v3) RCA template ([BBa_K5041004](https://parts.igem.org/Part:BBa_K5041004)) features one repeat of the G-quadruplex DNAzyme complementary sequence, the Nt.BsmAI cutting site and primer binding site, resulting in a total length of 62nt ssDNA. As described in [E1.3](#e13-third-generation-rca-template-treated-with-triton-x-100-and-exonuclease-i), our third-generation RCA template rendered false positives even after being treated with Triton X-100 and Exonuclease I. Thus, to solve the weak signal generation simultaneously with eliminating false positives, we designed this experiment using a third-generation RCA template without any treatment. This means that the RCA scaffold remains attached to the circularised template.  
@@ -367,7 +376,8 @@ This troubleshooting process indicated that stronger signals can be obtained fro
 
 ## [E2.6] Third-Generation with Different Template Concentrations
 > See protocols [[P22]](/notebook#p22), [[P23]](/notebook#p23), and [[P24]](/notebook#p24)  
-> Keyword: THIRD-GENERATION RCA, SUCCESSFUL  
+
+**Keyword**: THIRD-GENERATION RCA, SUCCESSFUL  
 
 ### Design
 Building upon the successful [E1.4](#e14-third-generation-rca-template-treated-with-exonuclease-i-and-iii), we tried to further optimise the expressed signals. From [E2.4](#e24-g-quadruplex-concentration-and-signal-expression-correlation), we understand that G-quadruplex concentration contributes to the final signals, and it is possible to obtain stronger signals from RCA-generated G-quadruplex DNAzyme (see [E2.5](#e25-third-generation-rca-without-exonuclease-i-treatment)). Hence, we tested different quantities of the third-generation (v3) RCA template ([BBa_K5041004](https://parts.igem.org/Part:BBa_K5041004)) in the RCA reaction to observe its correlation with the signal expression level.  
