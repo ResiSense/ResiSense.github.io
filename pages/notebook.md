@@ -3,6 +3,8 @@ This page contains the protocols for the experiments throughout our project. For
 # Protocol Entries
 
 ## Entry [P01]
+> See experiment [E1.1](/engineering#e1-1-first-generation-rca-template-treated-with-exonuclease-i)  
+> See *[Development of Robust ssDNA Circularisation Protocol](/contribution#development-of-robust-ssdna-circularisation-protocol)*  
 
 1. Into a PCR tube, add:
 
@@ -39,6 +41,7 @@ This page contains the protocols for the experiments throughout our project. For
 9. Measure the sample concentration and dilute to 1 ng/μL.
 
 ## Entry [P02]
+> See experiment [E1.1](/engineering#e1-1-first-generation-rca-template-treated-with-exonuclease-i)
 
 1. Into the PCR tube, add:
 
@@ -58,6 +61,7 @@ This page contains the protocols for the experiments throughout our project. For
 6. Run 10 μL of each sample to gel electrophoresis using 0.8% Agarose/TAE gel with RedSafe.
 
 ## Entry [P03]
+> See experiment [E1.1](/engineering#e1-1-first-generation-rca-template-treated-with-exonuclease-i)
 
 1. Into each PCR tube, add:
 
@@ -72,6 +76,7 @@ This page contains the protocols for the experiments throughout our project. For
 | **TOTAL**                    | **125 μL**                         | **125 μL**                        | **125 μL**            | **125 μL**                         |
 
 ## Entry [P04]
+> See experiment [E1.2](/engineering#e1-2-second-generation-rca-template-treated-with-exonuclease-i)
 
 1. Into a PCR tube, add:
 
@@ -108,6 +113,7 @@ This page contains the protocols for the experiments throughout our project. For
 9. Measure the sample concentration and dilute to 1 ng/μL.
 
 ## Entry [P05]
+> See experiment [E1.2](/engineering#e1-2-second-generation-rca-template-treated-with-exonuclease-i)
 
 1. Into the PCR tubes, add:
 
@@ -127,6 +133,7 @@ This page contains the protocols for the experiments throughout our project. For
 6. Run 10 μL of each sample to gel electrophoresis using 0.8% Agarose/TAE gel with RedSafe.
 
 ## Entry [P06]
+> See experiment [E1.3](/engineering#e1-3-third-generation-rca-template-treated-with-triton-x-100-and-exonuclease-i)
 
 1. Into a PCR tube, add:
 
@@ -164,6 +171,7 @@ This page contains the protocols for the experiments throughout our project. For
 9. Measure the sample concentration and dilute to 1 ng/μL.
 
 ## Entry [P07]
+> See experiment [E1.3](/engineering#e1-3-third-generation-rca-template-treated-with-triton-x-100-and-exonuclease-i)
 
 1. Into the PCR tubes, add:
 
@@ -183,6 +191,8 @@ This page contains the protocols for the experiments throughout our project. For
 6. Run 10 μL of each sample to gel electrophoresis using 0.8% Agarose/TAE gel with GelGreen.
 
 ## Entry [P08]
+> See experiment [E1.4](/engineering#e1-4-third-generation-rca-template-treated-with-exonuclease-i-and-iii)  
+> See *[Development of Robust ssDNA Circularisation Protocol](/contribution#development-of-robust-ssdna-circularisation-protocol)*  
 
 1. Into a PCR tube, add:
 
@@ -221,6 +231,7 @@ This page contains the protocols for the experiments throughout our project. For
 9. Measure the sample concentration and dilute to 1 ng/μL.
 
 ## Entry [P09]
+> See experiment [E1.4](/engineering#e1-4-third-generation-rca-template-treated-with-exonuclease-i-and-iii)
 
 1. Into the PCR tubes, add:
 
@@ -248,6 +259,7 @@ This page contains the protocols for the experiments throughout our project. For
 6. Run 10 μL of each sample to gel electrophoresis using 0.8% Agarose/TAE gel with GelGreen.
 
 ## Entry [P10]
+> See experiment [E1.4](/engineering#e1-4-third-generation-rca-template-treated-with-exonuclease-i-and-iii)
 
 1. Into each PCR tube, add:
 
@@ -263,6 +275,7 @@ This page contains the protocols for the experiments throughout our project. For
 
 
 ## Entry [P11]
+> See experiment [E2.1](/engineering#e2-1-dna-cleaving-dnazymes-test)
 
 1. Into each centrifuge tube, add:
 
@@ -286,6 +299,7 @@ This page contains the protocols for the experiments throughout our project. For
 5. Run the sample to gel electrophoresis using 5% Agarose/TAE gel with GelGreen.
 
 ## Entry [P12]
+> See experiment [E2.2](/engineering#e2-2-first-generation-rca-in-rcutsmart-buffer)
 
 1. Into a PCR tube, add:
 
@@ -322,6 +336,7 @@ This page contains the protocols for the experiments throughout our project. For
 9. Measure the sample concentration and dilute to 1 ng/μL.
 
 ## Entry [P13]
+> See experiment [E2.2](/engineering#e2-2-first-generation-rca-in-rcutsmart-buffer)
 
 1. Into the PCR tube, add:
 
@@ -342,6 +357,7 @@ This page contains the protocols for the experiments throughout our project. For
 6. Run 10 μL of the sample to gel electrophoresis using 0.8% Agarose/TAE gel with GelGreen.
 
 ## Entry [P14]
+> See experiment [E2.2](/engineering#e2-2-first-generation-rca-in-rcutsmart-buffer)
 
 1. Into each PCR tube, add:
 
@@ -358,6 +374,7 @@ This page contains the protocols for the experiments throughout our project. For
 
 
 ## Entry [P15]
+> See experiment [E2.3](/engineering#e2-3-first-generation-rca-in-rcutsmart-buffer-without-dtt)
 
 1. Into a PCR tube, add:
 
@@ -394,6 +411,7 @@ This page contains the protocols for the experiments throughout our project. For
 9. Measure the sample concentration and dilute to 1 ng/μL.
 
 ## Entry [P16]
+> See experiment [E2.3](/engineering#e2-3-first-generation-rca-in-rcutsmart-buffer-without-dtt)
 
 1. Into the PCR tubes, add:
 
@@ -413,6 +431,7 @@ This page contains the protocols for the experiments throughout our project. For
 6. Run 10 μL of each sample to gel electrophoresis using 0.8% Agarose/TAE gel with GelGreen.
 
 ## Entry [P17]
+> See experiment [E2.3](/engineering#e2-3-first-generation-rca-in-rcutsmart-buffer-without-dtt)
 
 1. Into each PCR tube, add:
 
@@ -428,6 +447,7 @@ This page contains the protocols for the experiments throughout our project. For
 
 
 ## Entry [P18]
+> See experiment [E2.4](/engineering#e2-4-g-quadruplex-concentration-and-signal-expression-correlation)
 
 1. Into each PCR tube, add:
 
@@ -442,6 +462,7 @@ This page contains the protocols for the experiments throughout our project. For
 | **TOTAL**                                        | **125 μL** | **125 μL** | **125 μL**  | **125 μL** |
 
 ## Entry [P19]
+> See experiment [E2.5](/engineering#e2-5-third-generation-rca-without-exonuclease-i-treatment)
 
 1. Into a PCR tube, add:
 
@@ -466,6 +487,7 @@ This page contains the protocols for the experiments throughout our project. For
 5. Perform oligonucleotide purification protocol to the reaction mixture, and elute with 20 μL ddH₂O preheated at 65°C.
 
 ## Entry [P20]
+> See experiment [E2.5](/engineering#e2-5-third-generation-rca-without-exonuclease-i-treatment)
 
 1. Into the PCR tubes, add:
 
@@ -493,6 +515,7 @@ This page contains the protocols for the experiments throughout our project. For
 6. Run 10 μL of each sample to gel electrophoresis using 0.8% Agarose/TAE gel with GelGreen.
 
 ## Entry [P21]
+> See experiment [E2.5](/engineering#e2-5-third-generation-rca-without-exonuclease-i-treatment)
 
 1. Into each PCR tube, add:
 
@@ -508,6 +531,8 @@ This page contains the protocols for the experiments throughout our project. For
 
 
 ## Entry [P22]
+> See experiment [E2.6](/engineering#e2-6-third-generation-with-different-template-concentrations)  
+> See *[Third-Generation RCA](/results#third-generation-rca)*  
 
 10. Into a PCR tube, add:
 
@@ -546,6 +571,8 @@ This page contains the protocols for the experiments throughout our project. For
 18. Measure the sample concentration and dilute to 1 ng/μL.
 
 ## Entry [P23]
+> See experiment [E2.6](/engineering#e2-6-third-generation-with-different-template-concentrations)  
+> See *[Third-Generation RCA](/results#third-generation-rca)*  
 
 1. Into the PCR tubes, add:
 
@@ -573,6 +600,8 @@ This page contains the protocols for the experiments throughout our project. For
 6. Run 10 μL of each sample to gel electrophoresis using 0.8% Agarose/TAE gel with GelGreen.
 
 ## Entry [P24]
+> See experiment [E2.6](/engineering#e2-6-third-generation-with-different-template-concentrations)  
+> See *[Signal Expression: G-Quadruplex DNAzyme Assay](/results#signal-expression-g-quadruplex-dnazyme-assay)*  
 
 1. Into each PCR tube, add:
 
@@ -587,6 +616,7 @@ This page contains the protocols for the experiments throughout our project. For
 | **TOTAL**                    | **125 μL** | **125 μL** | **125 μL** | **125 μL** | **125 μL** | **125 μL** | **125 μL**      |
 
 ## Entry [P25]
+> See *[Cell Lysis: SDS Treatment](/results#cell-lysis-sds-treatment)*
 
 1. Into each PCR tube, add:
 
@@ -605,6 +635,7 @@ This page contains the protocols for the experiments throughout our project. For
 6. Secure the cover slip on top of the microscope slide and observe the cells under the microscope.
 
 ## Entry [P26]
+> See *[Target Gene Extraction: Nt.BsmAI/HhaI-LSDA](/results#target-gene-extraction-nt-bsmai-hhai-lsda)*
 
 1. Into each PCR tube, add:
 
@@ -632,6 +663,7 @@ This page contains the protocols for the experiments throughout our project. For
 6. Run 10 μL of each sample to gel electrophoresis using 5% Agarose/TAE gel with GelGreen.
 
 ## Entry [P27]
+> See *[RCA in rCutSmart](/results#rca-in-rcutsmart)*
 
 1. Into a PCR tube, add:
 
@@ -668,6 +700,7 @@ This page contains the protocols for the experiments throughout our project. For
 9. Measure the sample concentration and dilute to 1 ng/μL.
 
 ## Entry [P28]
+> See *[RCA in rCutSmart](/results#rca-in-rcutsmart)*
 
 1. Into the PCR tubes, add:
 

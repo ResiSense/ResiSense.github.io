@@ -37,5 +37,5 @@
 - [x] reference hover
 - [ ] condense iHP outline
 - [ ] add iHP timeline
-- [ ] backlink to notebook entries?
+- [x] backlink to notebook entries?
 - [ ] hide some headings from outline

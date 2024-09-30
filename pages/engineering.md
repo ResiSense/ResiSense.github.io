@@ -38,7 +38,7 @@ There are still improvements to be made to our system, with the following items 
 # [E1] RCA Template Construction
 
 ## [E1.1] First-Generation RCA Template Treated with Exonuclease I
-> Protocols [[P01]](/notebook#entry-p01), [[P02]](/notebook#entry-p02), and [[P03]](/notebook#entry-p03)  
+> See protocols [[P01]](/notebook#entry-p01), [[P02]](/notebook#entry-p02), and [[P03]](/notebook#entry-p03)  
 > Keyword: FALSE POSITIVE  
 
 ### Design
@@ -77,7 +77,7 @@ When coupled with the G-quadruplex DNAzyme assay, both samples 1 and 2 exhibited
 The results of this experiment indicate that an interfering factor was present in the RCA template, triggering the RCA process in both cases, regardless of the presence of the primer. Experiments [E1.3](#e13-third-generation-rca-template-treated-with-triton-x-100-and-exonuclease-i) and [E1.4](#e14-third-generation-rca-template-treated-with-exonuclease-i-and-iii) were conducted to troubleshoot and address this issue. Additionally, [section 2](#e2-rca-gq-coupling-signal-optimisation) discusses the troubleshooting processes for the weak output signal in greater depth.  
 
 ## [E1.2] Second-Generation RCA template Treated with Exonuclease I
-> Protocols [[P04]](/notebook#entry-p04) and [[P05]](/notebook#entry-p05)  
+> See protocols [[P04]](/notebook#entry-p04) and [[P05]](/notebook#entry-p05)  
 > Keyword: FAILED RCA, FAILED TEMPLATE CIRCULARISATION  
 
 ### Design
@@ -117,7 +117,7 @@ While the absence of the RCA primer did not affect the success or failure of the
 Moreover, no product larger than 10,000bp was generated from both RCA reaction mixtures, suggesting a failure in circularising the second-generation RCA template. This issue was troubleshot in our following experiments (see [E1.3](#e13-third-generation-rca-template-treated-with-triton-x-100-and-exonuclease-i) and [E1.4](#e14-third-generation-rca-template-treated-with-exonuclease-i-and-iii)).  
 
 ## [E1.3] Third-Generation RCA Template Treated with Triton X-100 and Exonuclease I
-> Protocols [[P06]](/notebook#entry-p06) and [[P07]](/notebook#entry-p07)  
+> See protocols [[P06]](/notebook#entry-p06) and [[P07]](/notebook#entry-p07)  
 > Keyword: FALSE POSITIVE  
 
 ### Design
@@ -147,7 +147,7 @@ All lanes exhibited similar smeared bands, with a size greater than 10,000bp, wh
 This troubleshooting process did not solve our concurring issue of false positive results. The combined Triton and Exonuclease I treatment was not sufficient to remove the attaching scaffold, which presumably contributed to the constantly occurring false positives. Follow-up troubleshooting is described in [E1.4](#e14-third-generation-rca-template-treated-with-exonuclease-i-and-iii).  
 
 ## [E1.4] Third-Generation RCA Template Treated with Exonuclease I and III
-> Protocols [[P08]](/notebook#entry-p08), [[P09]](/notebook#entry-p09), and [[P10]](/notebook#entry-p10)  
+> See protocols [[P08]](/notebook#entry-p08), [[P09]](/notebook#entry-p09), and [[P10]](/notebook#entry-p10)  
 > Keyword: SUCCESSFULLY ELIMINATED FALSE POSITIVE  
 
 ### Design
@@ -190,7 +190,7 @@ This troubleshooting process confirmed that Exonuclease I treatment was not suff
 # [E2] RCA-GQ Coupling Signal Optimisation
 
 ## [E2.1] DNA-Cleaving DNAzymes Test
-> Protocol [[P11]](/notebook#entry-p11)  
+> See protocol [[P11]](/notebook#entry-p11)  
 > Keyword: FAILED DNA-CLEAVING
 
 ### Design
@@ -220,7 +220,7 @@ The result showed no catalytic activity from the DNA-cleaving DNAzymes since the
 The results of this experiment indicate that we were unable to use the DNA-cleaving DNAzymes to cut our first-generation RCA products. This contributed to the decision not to use the DNA-cleaving DNAzymes during RCA in [E1.1](#e11-first-generation-rca-template-treated-with-exonuclease-i). This also influenced our decision to move our direction to the use of nicking endonuclease in our second- and third-generation RCA templates (see [E1.2](#e12-second-generation-rca-template-treated-with-exonuclease-i)). Additionally, the change of direction was also taken by considering the facilitation of RCA and G-quadruplex DNAzyme assay coupling. In other words, coupling RCA and G-quadruplex DNAzyme assays with this method may not be ideal since the DNA-cleaving DNAzymes require different buffer conditions.  
 
 ## [E2.2] First-Generation RCA in rCutSmart Buffer
-> Protocols [[P12]](/notebook#entry-p12), [[P13]](/notebook#entry-p13), and [[P14]](/notebook#entry-p14)  
+> See protocols [[P12]](/notebook#entry-p12), [[P13]](/notebook#entry-p13), and [[P14]](/notebook#entry-p14)  
 > Keyword: Φ29 IN rCUTSMART, FAILED SIGNAL EXPRESSION  
 
 ### Design
@@ -262,7 +262,7 @@ When coupled with the G-quadruplex DNAzyme assay, the RCA product did not induce
 We thus found out that DTT is a reducing agent, while the colour change in the G-quadruplex assay is dependent on the oxidation of tetramethylbenzidine (TMB) to TMB⁺. The presence of DTT in the reaction mixture most likely inhibited the oxidation of TMB, preventing any observation of colour change. [E2.3](#e23-first-generation-rca-in-rcutsmart-buffer-without-dtt) was conducted to troubleshoot this issue.  
 
 ## [E2.3] First-Generation RCA in rCutSmart Buffer without DTT
-> Protocols [[P15]](/notebook#entry-p15), [[P16]](/notebook#entry-p16), and [[P17]](/notebook#entry-p17)  
+> See protocols [[P15]](/notebook#entry-p15), [[P16]](/notebook#entry-p16), and [[P17]](/notebook#entry-p17)  
 > Keyword: Φ29 IN rCUTSMART WITHOUT DTT, WEAK SIGNAL EXPRESSION  
 
 ### Design
@@ -301,7 +301,7 @@ When coupled with the G-quadruplex DNAzyme assay (*[Figure 12](#figure-12)*), th
 This result provided us with two sets of information. Firstly, of that compatibility of Φ29 in rCutSmart buffer without additional DTT. Secondly, this troubleshooting process does not completely solve the problem since the expressed signal was not strong enough. One possible reason is because of the presence of DTT in the enzymes' storing buffer, which is also transferred to the RCA reaction mixture. A follow-up troubleshooting was conducted to address this problem, as described in [E1.2](#e12-second-generation-rca-template-treated-with-exonuclease-i).  
 
 ## [E2.4] G-Quadruplex Concentration and Signal Expression Correlation
-> Protocol [[P18]](/notebook#entry-p18)  
+> See protocol [[P18]](/notebook#entry-p18)  
 > Keyword: SIGNAL EXPRESSION CORRELATION  
 
 ### Design
@@ -325,7 +325,7 @@ We prepared 4 reaction mixtures, with 1.2µM, 0.8µM, 0.4µM, and 0.04µM of IDT
 Though the G-quadruplex Structure is a peroxidase-mimicking DNAzyme, which mimics the ability of an enzyme, the concentration of the structure in the solution influences the final colour of the reaction. This means we must increase the quantity of the G-quadruplex DNAzyme to obtain a stronger signal.  
 
 ## [E2.5] Third-Generation RCA Without Exonuclease I Treatment
-> Protocols [[P19]](/notebook#entry-p19), [[P20]](/notebook#entry-p20), and [[P21]](/notebook#entry-p21)  
+> See protocols [[P19]](/notebook#entry-p19), [[P20]](/notebook#entry-p20), and [[P21]](/notebook#entry-p21)  
 > Keyword: THIRD-GENERATION RCA, STRONG SIGNAL EXPRESSION
 
 ### Design
@@ -366,7 +366,7 @@ When coupled with the G-quadruplex DNAzyme assay, both samples 1 and 2 exhibited
 This troubleshooting process indicated that stronger signals can be obtained from the RCA-generated G-quadruplex DNAzyme.  
 
 ## [E2.6] Third-Generation with Different Template Concentrations
-> Protocols [[P22]](/notebook#entry-p22), [[P23]](/notebook#entry-p23), and [[P24]](/notebook#entry-p24)  
+> See protocols [[P22]](/notebook#entry-p22), [[P23]](/notebook#entry-p23), and [[P24]](/notebook#entry-p24)  
 > Keyword: THIRD-GENERATION RCA, SUCCESSFUL  
 
 ### Design
