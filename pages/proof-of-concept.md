@@ -16,7 +16,7 @@ Figure 1: *[BBa_K5041004](https://parts.igem.org/Part:BBa_K5041004) template seq
 
 </blockquote>
 
-The **linear oligonucleotide strand** was synthesised by IDT and **assembled into circular ssDNA** form using IDT-synthesised **scaffold (5'-GCCACCGCGGTCTCACGGGT-3')** and **T4 DNA ligase** (New England Biolabs), and thus, treated with **Exonuclease I and III** (Thermo Fisher Scientific and Takara Bio) to remove the remaining scaffold.  
+The **linear oligonucleotide strand** was synthesised by IDT and **assembled into circular ssDNA** form using IDT-synthesised **scaffold (`5'-GCCACCGCGGTCTCACGGGT-3'`)** and **T4 DNA ligase** (New England Biolabs), and thus, treated with **Exonuclease I and III** (Thermo Fisher Scientific and Takara Bio) to remove the remaining scaffold.  
 
 # Cell Lysis
 
@@ -50,7 +50,7 @@ Figure 4: *Restriction Digestion by Restriction Enzyme (HhaI) and Nickase (Nt.Bs
 
 </blockquote>
 
-Following the digestion, **Φ29 DNA polymerase** (New England Biolabs and Beyotime Biotechnology) releases a single-stranded DNA (ssDNA) through **linear strand displacement amplification (LSDA)** as illustrated in *[Figure 5](#figure-5)*. **Φ-29 binds to the nicked 5' end** of the gene, which is the **pSB1C3-KPC-2-surrogate** in this proof of concept, and then **amplifies one strand of the plasmid up to the HhaI cutting site**. This process is expected to **amplify a 32nt ssDNA** from the pSB1C3-KPC-2-surrogate plasmid, which will serve as the **primer** for the following steps, along with **724 and 534 nt ssDNA strands as the side products** of this LSDA process.  
+Following the digestion, **Φ29 DNA polymerase** (New England Biolabs and Beyotime Biotechnology) releases a single-stranded DNA (ssDNA) through **linear strand displacement amplification (LSDA)** as illustrated in *[Figure 5](#figure-5)*. **Φ-29 binds to the nicked 5' end** of the gene, which is the **pSB1C3-KPC-2-surrogate** in this proof of concept, and then **amplifies one strand of the plasmid up to the HhaI cutting site**. This process is expected to **amplify a 32nt ssDNA** from the pSB1C3-KPC-2-surrogate plasmid, which will serve as the **primer** for the following steps, along with **724 and 534nt ssDNA strands as the side products** of this LSDA process.  
 
 <blockquote id="figure-5">
 

@@ -11,7 +11,7 @@
     - [x] acknowledgements
     - [x] contribution
     - [x] description
-    - [ ] engineering
+    - [x] engineering
     - [x] results
     - [x] human-practices
     - [x] education
@@ -37,4 +37,5 @@
 - [x] reference hover
 - [ ] condense iHP outline
 - [ ] add iHP timeline
-- [ ] short name to notebook entries?
+- [ ] backlink to notebook entries?
+- [ ] hide some headings from outline

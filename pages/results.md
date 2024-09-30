@@ -1,4 +1,4 @@
-This page presents critical experimental data from our wet lab activities throughout the project. For more details on the experiment design rationale, please see [Proof of Concept](/proof-of-concept). For further experimental data, including the troubleshooting processes, please see [Engineering Success](/engineering [TK]). Protocols that we used to conduct our experiments in this page are available in our [Notebook](/notebook).  
+This page presents critical experimental data from our wet lab activities throughout the project. For more details on the experiment design rationale, please see [Proof of Concept](/proof-of-concept). For further experimental data, including the troubleshooting processes, please see [Engineering Success](/engineering). Protocols that we used to conduct our experiments in this page are available in our [Notebook](/notebook).  
 
 # Cell Lysis: SDS Treatment
 > Protocol [[P25]](/notebook#entry-p25)  
@@ -24,7 +24,7 @@ Figure 2: *Gel electrophoresis of Nt.BsmAI/HhaI-LSDA*
 
 </blockquote>
 
-In this project, we **extract our primer**, which will be used in downstream reactions through **LSDA**. This process involves the **nicking and cutting of pSB1C3-KPC-2-surrogate by Nt.BsmAI and HhaI**. As illustrated in our [Proof of Concept](/proof-of-concept#target-gene-extraction), this process is expected to **amplify a 32nt ssDNA** from the pSB1C3-KPC-2-surrogate plasmid, along with **724 and 534 nt ssDNA** strands as the side products of this LSDA process. *[Figure 2](#figure-2)* shows that our LSDA reaction has successfully generated the 724 and 534 nt ssDNA. However, we **cannot detect the 32nt primer**, potentially due to its smaller size. To validate this method further, we will combine this reaction with RCA to determine if it can produce a positive RCA result.  
+In this project, we **extract our primer**, which will be used in downstream reactions through **LSDA**. This process involves the **nicking and cutting of pSB1C3-KPC-2-surrogate by Nt.BsmAI and HhaI**. As illustrated in our [Proof of Concept](/proof-of-concept#target-gene-extraction), this process is expected to **amplify a 32nt ssDNA** from the pSB1C3-KPC-2-surrogate plasmid, along with **724 and 534nt ssDNA** strands as the side products of this LSDA process. *[Figure 2](#figure-2)* shows that our LSDA reaction has successfully generated the 724 and 534nt ssDNA. However, we **cannot detect the 32nt primer**, potentially due to its smaller size. To validate this method further, we will combine this reaction with RCA to determine if it can produce a positive RCA result.  
 
 Note that in this preliminary experiment, we performed **45 minutes of digestion**, followed by **incubating with Φ29 for an extra 15 minutes** to **prevent the displaced ssDNA from Φ29 exonuclease activity**. However, this two-step reaction is unnecessary in the target gene extraction-RCA coupling since the extracted primer will immediately bind to the RCA template.  
 
@@ -41,7 +41,7 @@ Figure 3: *Gel electrophoresis of RCA in rCutSmart*
 
 </blockquote>
 
-The reaction mixture **must be compatible with both reactions** to facilitate the **coupling of the target gene extraction and the RCA process**. Therefore, we tested whether Φ29 is compatible with the rCutSmart buffer, which is the **primary buffer for Nt.BsmAI and HhaI**. *[Figure 3](#figure-3)* demonstrates that **the RCA process can be entirely performed in the rCutSmart buffer**. This is indicated by the presence of **smearing bands**, with a size larger than the 10,000 bp DNA ladder, in **both the "10× Reaction Buffer" and "rCutSmart Buffer" lanes**. The smearing bands are expected due to the **continuous amplification by RCA** and the **generation of variable-length amplification products**. The result of experiment [E2.3](/engineering[TK]) also obtains further verification.  
+The reaction mixture **must be compatible with both reactions** to facilitate the **coupling of the target gene extraction and the RCA process**. Therefore, we tested whether Φ29 is compatible with the rCutSmart buffer, which is the **primary buffer for Nt.BsmAI and HhaI**. *[Figure 3](#figure-3)* demonstrates that **the RCA process can be entirely performed in the rCutSmart buffer**. This is indicated by the presence of **smearing bands**, with a size larger than the 10,000bp DNA ladder, in **both the "10× Reaction Buffer" and "rCutSmart Buffer" lanes**. The smearing bands are expected due to the **continuous amplification by RCA** and the **generation of variable-length amplification products**. The result of experiment [E2.3](/engineering#e2-3-first-generation-rca-in-rcutsmart-buffer-without-dtt) also obtains further verification.  
 
 ## Third-generation RCA
 > Protocols [[P22]](/notebook#entry-p22) and [[P23]](/notebook#entry-p23)
@@ -58,7 +58,7 @@ We have also verified both our RCA template circularisation and our RCA methods.
 
 In *[Figure 4](#figure-4)*, lanes 1-4 included both the **third-generation (v3) template (treated with Exonuclease I and III)** and the **RCA primer (from [Integrated DNA Technologies](/acknowledgements#integrated-dna-technologies))**, mixed with the **Nt.BsmAI nicking endonuclease (from [New England Biolabs](/acknowledgements#new-england-biolabs))**. The template amounts were 1ng, 2ng, 4ng, and 8ng, respectively. Lane 5 contained the same template and RCA primer **without Nt.BsmAI**, while lane 6 had only the third-generation template (treated with Exonuclease I and III), with neither the primer nor Nt.BsmAI.  
 
-Lanes 1-4 displayed a **smearing band** throughout, indicating successful RCA and effective cutting by Nt.BsmAI, with band intensity increasing alongside the template amounts. Lane 5 showed a smearing band concentrated at sizes larger than 10,000 bp, suggesting successful RCA in that sample. In contrast, lane 6 had no detected band, confirming that we obtained **true negative results** from this circularisation method.  
+Lanes 1-4 displayed a **smearing band** throughout, indicating successful RCA and effective cutting by Nt.BsmAI, with band intensity increasing alongside the template amounts. Lane 5 showed a smearing band concentrated at sizes larger than 10,000bp, suggesting successful RCA in that sample. In contrast, lane 6 had no detected band, confirming that we obtained **true negative results** from this circularisation method.  
 
 # Signal Expression: G-quadruplex DNAzyme Assay
 > Protocol [[P24]](/notebook#entry-p24)
