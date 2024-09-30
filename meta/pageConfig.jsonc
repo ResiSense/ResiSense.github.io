@@ -48,17 +48,6 @@
             ]
         },
         {
-            "name": "project",
-            "populator": "markdown",
-            "pages": [
-                {
-                    "name": "description",
-                    "title": "Project Description",
-                    "populator": "markdown"
-                }
-            ]
-        },
-        {
             "name": "human-practices",
             "title": "Integrated Human Practices",
             "populator": "markdown",
@@ -96,22 +85,6 @@
                     "/scripts/references.js"
                 ]
             }
-        },
-        {
-            "name": "wet-lab",
-            "title": "Wet Lab",
-            "populator": "markdown",
-            "pages": [
-                {
-                    "name": "proof-of-concept",
-                    "title": "Proof of Concept",
-                    "populator": "markdown"
-                },
-                {
-                    "name": "results",
-                    "populator": "markdown"
-                }
-            ]
         },
         {
             "name": "notebook",
