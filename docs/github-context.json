@@ -1,29 +1,73 @@
 {
     "job": "build",
     "ref": "refs/heads/main",
-    "sha": "243e96cdf1858602b18b74292246cd91edce2ca5",
+    "sha": "6f8af4e56fe0404536eebafde501e0b045d8284f",
     "repository": "ResiSense/ResiSense.github.io",
     "repository_Url": null,
-    "run_id": "11115602918",
-    "run_number": "266",
+    "run_id": "11115857838",
+    "run_number": "267",
     "run_attempt": "1",
     "artifact_cache_size_limit": "10",
     "actor": "CCheukKa",
     "trigerring_actor": null,
     "workflow": "Full CI pipeline",
-    "event_name": "workflow_dispatch",
+    "event_name": "push",
     "event": {
-        "inputs": {
-            "commitMessage": "Manual full CI pipeline trigger"
+        "after": "6f8af4e56fe0404536eebafde501e0b045d8284f",
+        "before": "bf09ead4b4041abea7198787e8a341870b0c5d7c",
+        "commits": [
+            {
+                "author": {
+                    "email": "ccheukka@gmail.com",
+                    "name": "CCheukKa",
+                    "username": "CCheukKa"
+                },
+                "committer": {
+                    "email": "ccheukka@gmail.com",
+                    "name": "CCheukKa",
+                    "username": "CCheukKa"
+                },
+                "distinct": true,
+                "id": "6f8af4e56fe0404536eebafde501e0b045d8284f",
+                "message": "isolate resources",
+                "timestamp": "2024-10-01T07:41:45+08:00",
+                "tree_id": "e188aa60826a288cad8eea25f0e072f9dfd35075",
+                "url": "https://github.com/ResiSense/ResiSense.github.io/commit/6f8af4e56fe0404536eebafde501e0b045d8284f"
+            }
+        ],
+        "compare": "https://github.com/ResiSense/ResiSense.github.io/compare/bf09ead4b404...6f8af4e56fe0",
+        "created": false,
+        "deleted": false,
+        "forced": false,
+        "head_commit": {
+            "author": {
+                "email": "ccheukka@gmail.com",
+                "name": "CCheukKa",
+                "username": "CCheukKa"
+            },
+            "committer": {
+                "email": "ccheukka@gmail.com",
+                "name": "CCheukKa",
+                "username": "CCheukKa"
+            },
+            "distinct": true,
+            "id": "6f8af4e56fe0404536eebafde501e0b045d8284f",
+            "message": "isolate resources",
+            "timestamp": "2024-10-01T07:41:45+08:00",
+            "tree_id": "e188aa60826a288cad8eea25f0e072f9dfd35075",
+            "url": "https://github.com/ResiSense/ResiSense.github.io/commit/6f8af4e56fe0404536eebafde501e0b045d8284f"
         },
-        "ref": "refs/heads/main",
-        "workflow": ".github/workflows/full-ci-pipeline.yaml"
+        "pusher": {
+            "email": "ccheukka@gmail.com",
+            "name": "CCheukKa"
+        },
+        "ref": "refs/heads/main"
     },
     "ref_name": "main",
     "ref_protected": true,
     "ref_type": "branch",
     "secret_source": "Actions",
     "workflow_ref": "ResiSense/ResiSense.github.io/.github/workflows/full-ci-pipeline.yaml@refs/heads/main",
-    "workflow_sha": "243e96cdf1858602b18b74292246cd91edce2ca5",
+    "workflow_sha": "6f8af4e56fe0404536eebafde501e0b045d8284f",
     "workspace": "/home/runner/work/ResiSense.github.io/ResiSense.github.io"
 }
