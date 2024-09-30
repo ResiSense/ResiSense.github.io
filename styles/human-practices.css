@@ -42,6 +42,7 @@ painted-content {
     grid-template-columns: var(--grid-left-percent) var(--grid-right-percent);
     position: relative;
     height: 100%;
+    margin-bottom: 1rem;
 
     &>img {
         --human-outline-width: 0.15rem;
