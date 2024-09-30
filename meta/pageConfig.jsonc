@@ -65,7 +65,8 @@
             "populator": "markdown",
             "includes": {
                 "css": [
-                    "/styles/education.css"
+                    "/styles/education.css",
+                    "/styles/flavour-text.css"
                 ]
             }
         },
