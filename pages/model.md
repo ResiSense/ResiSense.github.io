@@ -1,4 +1,4 @@
-This page details our dry lab work on the G-quad-haemin complex. 
+This page details our dry lab work on the G-quad-haemin complex. To download our various resources, see the [resources page](/resources#modelling-resources).  
 
 # Introduction
 
@@ -169,7 +169,7 @@ Although we focused on evaluating the **stability of the G-quad-haem complex in 
 
 Despite the presence of some inaccuracies due to the factors outlined above, our preliminary modelling results indicate a promising potential that **the binding energy of haem to G-quad is the lowest in fully aqueous solutions**. This exciting discovery could pave the way for a new method to **predict G-quad-haem complex catalytic capability in different solutions**, a possibility that can be further explored in the lab.  
 
-To help future iGEM teams in modelling molecular systems involving the haem residue, we have uploaded the **[parametrised haem topology](resources#parametrised-haem-topology)** for other teams to use.  
+To help future iGEM teams in modelling molecular systems involving the haem residue, we have uploaded the **[parametrised haem topology](/resources#parametrised-haem-topology)** for other teams to use.  
 
 # References
 
