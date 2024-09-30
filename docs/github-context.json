@@ -1,11 +1,11 @@
 {
     "job": "build",
     "ref": "refs/heads/main",
-    "sha": "0015487afeb149870c2b567ad8ed14cb032f3103",
+    "sha": "5a26fcecd17adf324a0c2a25f96d886246ba5d31",
     "repository": "ResiSense/ResiSense.github.io",
     "repository_Url": null,
-    "run_id": "11097293179",
-    "run_number": "250",
+    "run_id": "11097350833",
+    "run_number": "251",
     "run_attempt": "1",
     "artifact_cache_size_limit": "10",
     "actor": "CCheukKa",
@@ -13,8 +13,8 @@
     "workflow": "Full CI pipeline",
     "event_name": "push",
     "event": {
-        "after": "0015487afeb149870c2b567ad8ed14cb032f3103",
-        "before": "fc2a088ad0b3849a0881b844b3801ef9256ef7cf",
+        "after": "5a26fcecd17adf324a0c2a25f96d886246ba5d31",
+        "before": "1af57be0219e0b7b953e2ed9650e36f8659e95db",
         "commits": [
             {
                 "author": {
@@ -28,17 +28,17 @@
                     "username": "CCheukKa"
                 },
                 "distinct": true,
-                "id": "0015487afeb149870c2b567ad8ed14cb032f3103",
-                "message": "add reference peeking",
-                "timestamp": "2024-09-30T08:37:12+08:00",
-                "tree_id": "013ceb2420bd4dbd2b81bb51e25b02680e053b17",
-                "url": "https://github.com/ResiSense/ResiSense.github.io/commit/0015487afeb149870c2b567ad8ed14cb032f3103"
+                "id": "5a26fcecd17adf324a0c2a25f96d886246ba5d31",
+                "message": "fix footer being over search box",
+                "timestamp": "2024-09-30T08:43:53+08:00",
+                "tree_id": "2d9adb4984515088c9e58ec5e5247096970ed63c",
+                "url": "https://github.com/ResiSense/ResiSense.github.io/commit/5a26fcecd17adf324a0c2a25f96d886246ba5d31"
             }
         ],
-        "compare": "https://github.com/ResiSense/ResiSense.github.io/compare/fc2a088ad0b3...0015487afeb1",
+        "compare": "https://github.com/ResiSense/ResiSense.github.io/compare/1af57be0219e...5a26fcecd17a",
         "created": false,
         "deleted": false,
-        "forced": true,
+        "forced": false,
         "head_commit": {
             "author": {
                 "email": "ccheukka@gmail.com",
@@ -51,11 +51,11 @@
                 "username": "CCheukKa"
             },
             "distinct": true,
-            "id": "0015487afeb149870c2b567ad8ed14cb032f3103",
-            "message": "add reference peeking",
-            "timestamp": "2024-09-30T08:37:12+08:00",
-            "tree_id": "013ceb2420bd4dbd2b81bb51e25b02680e053b17",
-            "url": "https://github.com/ResiSense/ResiSense.github.io/commit/0015487afeb149870c2b567ad8ed14cb032f3103"
+            "id": "5a26fcecd17adf324a0c2a25f96d886246ba5d31",
+            "message": "fix footer being over search box",
+            "timestamp": "2024-09-30T08:43:53+08:00",
+            "tree_id": "2d9adb4984515088c9e58ec5e5247096970ed63c",
+            "url": "https://github.com/ResiSense/ResiSense.github.io/commit/5a26fcecd17adf324a0c2a25f96d886246ba5d31"
         },
         "pusher": {
             "email": "ccheukka@gmail.com",
@@ -68,6 +68,6 @@
     "ref_type": "branch",
     "secret_source": "Actions",
     "workflow_ref": "ResiSense/ResiSense.github.io/.github/workflows/full-ci-pipeline.yaml@refs/heads/main",
-    "workflow_sha": "0015487afeb149870c2b567ad8ed14cb032f3103",
+    "workflow_sha": "5a26fcecd17adf324a0c2a25f96d886246ba5d31",
     "workspace": "/home/runner/work/ResiSense.github.io/ResiSense.github.io"
 }
