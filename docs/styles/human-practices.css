@@ -29,6 +29,15 @@ painted-content {
             }
         }
     }
+
+    & p:has(img) {
+        text-align: center;
+
+        & img {
+            max-height: 25em !important;
+            margin-inline: auto;
+        }
+    }
 }
 
 .human-card {
@@ -87,6 +96,22 @@ painted-content {
                 padding: 0;
             }
         }
+    }
+}
+
+.hp-cycle {
+    & img {
+        animation: infinite 30s linear rotate;
+    }
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
     }
 }
 
