@@ -120,6 +120,16 @@
                     "/styles/notebook.css"
                 ]
             }
+        },
+        {
+            "name":"result",
+            "title":"Result",
+            "populator":"html-frame",
+            "includes":{
+                "css": [
+                    "/styles/result.css"
+                ]
+            }
         }
     ]
 }

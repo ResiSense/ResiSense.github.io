@@ -1,0 +1,136 @@
+<section>
+    <h2>RESULTS</h2>
+    <div class="section-text">
+        This page presents critical experimental data from our wet lab activities throughout the project. For more
+        details on the experiment design rationale, please see <a href="https://2024.igem.wiki/hongkong-cuhk/proof
+">Proof of Concept</a>
+        . For further experimental data,
+        including the troubleshooting processes, please see <a
+            href="https://2024.igem.wiki/hongkong-cuhk/engineering">Engineering Success</a>
+        . Protocols that we used to conduct our
+        experiments in this page are available in <a href="https://2024.igem.wiki/hongkong-cuhk/notebook">Notebook</a>
+        .
+    </div>
+</section>
+<section>
+    <h2>Cell Lysis: SDS Treatment</h2>
+    <img src="/assets/result/Figure 1.png">
+    <div class="figure-label">Figure 1</div>
+
+    <div class="section-text">
+        As described in our <a href="https://2024.igem.wiki/hongkong-cuhk/proof
+">Proof of Concept</a>
+        , we selected SDS as a method to lyse our cells. Figure 1 shows the results
+        of our SDS treatment of Escherichia coli (E. coli) in the form of microscopy pictures. We selected an area in
+        both pictures and magnified the selected area for comparison. On the left picture, we are able to observe more
+        intact cells, marked in red circles, compared to the picture on the right. This indicates that the lysis of
+        E.coli using SDS under room temperature is successful. To further verify this method quantitatively, more robust
+        luciferase-based tests are planned to be done in the future.
+    </div>
+    <div class="protocol-list">Protocol: [P25]</div>
+</section>
+
+<section>
+    <h2>Target Gene Extraction: Nt.BsmAI/HhaI-LSDA</h2>
+    <img src="/assets/result/Figure 2.png">
+    <div class="figure-label">Figure 2</div>
+
+    <div class="section-text">
+        In this project, we extract our primer, which will then be used in downstream reactions, through LSDA. This
+        process involves the nicking and cutting of pSB1C3-KPC-2-surrogate by Nt.BsmAI and HhaI. As illustrated in our
+        <a href="https://2024.igem.wiki/hongkong-cuhk/proof
+">Proof of Concept</a>
+        , this process is expected to amplify a 32 nt ssDNA from the pSB1C3-KPC-2-surrogate plasmid, along with 724 and
+        534 nt ssDNA strands as the side products of this LSDA process. Figure 2 shows that our LSDA reaction has
+        successfully generated both the 724 and 534 nt ssDNA. However, we are unable to detect the 32 nt primer,
+        potentially due to its smaller size. To further validate this method, we will combine this reaction with RCA to
+        determine if it can produce a positive RCA result.
+        <br>
+        <div class="white-spaces"></div>
+        Note that In this preliminary experiment, we performed 45 minutes digestion, which was then followed by the
+        incubation with phi29 for an extra 15 minutes in order to prevent the displaced ssDNA from phi29 exonuclease
+        activity. However, this two-step reaction is unnecessary in the target gene extraction-RCA coupling since the
+        extracted primer will immediately bind to the RCA template.
+    </div>
+    <div class="protocol-list">Protocol: [P26]</div>
+</section>
+<section>
+    <h2>Rolling Circle Amplification (RCA)</h2>
+    <h3 class="section-subtitle">RCA in rCutSmart</h3>
+    <img src="/assets/result/Figure 3.png">
+    <div class="figure-label">Figure 3</div>
+
+    <div class="section-text">
+        To facilitate the coupling of the target gene extraction and the RCA process, the reaction mixture must be
+        compatible for both reactions. Therefore, we tested whether phi29 is compatible with the rCutSmart buffer, which
+        is the primary buffer for Nt.BsmAI and HhaI. Figure 3 demonstrated that the RCA process can be fully performed
+        in the rCutSmart buffer. This is indicated by the presence of smearing bands, with a size larger than the 10,000
+        bp DNA ladder, in both “10X Reaction Buffer” and “rCutSmart Buffer” lanes. The smearing bands are expected due
+        to the continuous amplification by RCA and generation of variable-length amplification products. Further
+        verification is also obtained by the result of experiment E2.3 in <a
+            href="https://2024.igem.wiki/hongkong-cuhk/engineering">Engineering Success</a>
+        .
+    </div>
+    <div class="protocol-list">Protocols: [P27], [P28]</div>
+    <h3 class="section-subtitle">Third-generation RCA</h3>
+    <img src="/assets/result/Figure 4.png">
+    <div class="figure-label">Figure 4</div>
+
+    <div class="section-text">
+        We have also verified both our RCA template circularisation and our RCA methods. With our third-generation RCA
+        template (<a href="https://parts.igem.org/Part:BBa_K5041004">BBa_K5041004</a>)
+        , we are able to obtain satisfactory results for our RCA.
+        <br>
+        <div class="white-spaces"></div>
+        In figure 4, lanes (1)-(4) included both the third-generation (v3) template (treated with Exonuclease I and III)
+        and the RCA primer (Integrated DNA Technologies), mixed with the Nt.BsmAI nicking endonuclease (New England
+        Biolabs). The template amounts were 1 ng, 2 ng, 4 ng, and 8 ng, respectively. Lane (5) contained the same
+        template and RCA primer but without Nt.BsmAI, while lane (6) had only the third-generation template (treated
+        with Exonuclease I and III), with neither the primer nor Nt.BsmAI.
+        <br>
+        <div class="white-spaces"></div>
+        Lanes (1)-(4) displayed a smearing band throughout, indicating successful RCA and effective cutting by Nt.BsmAI,
+        with band intensity increasing alongside the template amounts. Lane (5) showed a smearing band concentrated at
+        sizes larger than 10,000 bp, suggesting successful RCA in that sample. In contrast, lane (6) had no detected
+        band, confirming that we obtained true negative results from this circularization method.
+    </div>
+    <div class="protocol-list">Protocols: [P22], [P23]</div>
+</section>
+
+<section>
+    <h2>Signal Expression: G-Quadruplex DNAzyme Assay</h2>
+
+    <img src="/assets/result/Figure 5.png">
+    <div class="figure-label">Figure 5</div>
+
+    <div class="section-text">
+        To verify our project mechanism, we coupled the RCA results we obtained in figure 4 for G-Quadruplex assay. As
+        shown in figure 5, both samples (1) and (2) exhibited a similar slight colour change to blue, while sample (3)
+        and (4) had a stronger colour change. Sample (5) had similar colour change as (1), while sample (6) did not
+        produce observable blue colour. The last shown sample was a positive control reaction mixture using
+        IDT-synthesised G-Quadruplex DNAzyme (<a href="https://parts.igem.org/Part:BBa_K5041001">BBa_K5041001</a>)
+        . These results indicate that we have successfully coupled our third-generation RCA reaction with the
+        G-Quadruplex assay.
+    </div>
+    <div class="protocol-list">Protocol: [P24]</div>
+</section>
+<section>
+    <h2>Conclusion</h2>
+    <div class="section-text">
+        We have individually tested the cell lysis and target gene extraction, and coupled the RCA reaction with the
+        G-Quadruplex DNAzyme assay. The experimental results support the claim that the project is feasible and the
+        mechanism is valid. To further support our claim, more experiments are planned to confirm the coupling of all
+        reactions.
+    </div>
+</section>
+
+<section>
+    <h2>Additional Key Information</h2>
+    <div class="section-text">
+        All processes in our detection system are designed to be completed at room temperature. While we have confirmed
+        that most reactions can occur at 37°C or below, we primarily performed the experiments at the recommended
+        optimal temperature for each enzyme for the ease of detection and so validation of concept. Further optimization
+        on the individual steps are needed to evaluate the product performance at room temperature. In the future, we
+        are also planning to characterise our detection system on its sensitivity and specificity.
+    </div>
+</section>
