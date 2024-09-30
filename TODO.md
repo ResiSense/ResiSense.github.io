@@ -26,7 +26,7 @@
 - [ ] fix catalogue being janky on resize
 - [ ] rework hamburger menu design
 - [ ] add responsiveness to human cards
-- [ ] fix footer being over search box
+- [x] fix footer being over search box
 - [ ] /contact
 - [ ] fix doodles speed being inconsistent
 - [ ] tend to TKs
