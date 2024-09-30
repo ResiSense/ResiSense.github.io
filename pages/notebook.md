@@ -1,4 +1,6 @@
-# Notebook Entries
+This page contains the protocols for the experiments throughout our project.  
+
+# Protocol Entries
 
 ## Entry [P01]
 
