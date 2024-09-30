@@ -1,5 +1,5 @@
 painted-content {
-    & blockquote {
+    & blockquote:not(:has(.human-card)) {
         background: none;
         border: none;
         display: flex;
