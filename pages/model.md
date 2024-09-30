@@ -173,7 +173,7 @@ To help future iGEM teams in modelling molecular systems involving the haem resi
 
 # References
 
-1. Z. Zhang, W. Zhao, C. Hu, Y. Cao, Y. Liu, and Q. Liu, "A Convenient and Label-Free Colorimetric Detection for L-Histidine Based on Inhibition of Oxidation of 3,3′,5,5′-Tetramethylbenzidine-H₂O₂ System Triggered by Copper Ions", vol. 9, p. 773519, Nov. 2021, doi: [10.3389/fchem.2021.773519](https://www.doi.org/10.3389/fchem.2021.773519).
+1. Z. Zhang, W. Zhao, C. Hu, Y. Cao, Y. Liu, and Q. Liu, "A Convenient and Label-Free Colourimetric Detection for L-Histidine Based on Inhibition of Oxidation of 3,3′,5,5′-Tetramethylbenzidine-H₂O₂ System Triggered by Copper Ions", vol. 9, p. 773519, Nov. 2021, doi: [10.3389/fchem.2021.773519](https://www.doi.org/10.3389/fchem.2021.773519).
 2. Y. Cao *et al.*, "Investigation and improvement of catalytic activity of G-quadruplex/haemin DNAzymes using designed terminal G-tetrads with deoxyadenosine caps", vol. 11, no. 26, pp. 6896–696, Jul. 2020, doi: [10.1039/d0sc01905d](https://www.doi.org/10.1039/d0sc01905d).
 3. N. Tariq, T. Kume, L. Luo, Z. Cai, S. Dong, and R. B. Macgregor, "Dimethyl sulphoxide (DMSO) is a stabilising co-solvent for G-quadruplex DNA", vol. 282, p. 106741, Mar. 2022, doi: [10.1016/j.bpc.2021.106741](https://www.doi.org/10.1016/j.bpc.2021.106741).
 4. R. Stiebler, A. N. Hoang, T. J. Egan, D. W. Wright, and M. F. Oliveira, "Increase on the Initial Soluble Haem Levels in Acidic Conditions Is an Important Mechanism for Spontaneous Haem Crystallisation In Vitro", vol. 5, no. 9, p. e12694, Sep. 2010, doi: [10.1371/journal.pone.0012694](https://www.doi.org/10.1371/journal.pone.0012694).
