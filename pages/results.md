@@ -1,4 +1,4 @@
-This page presents critical experimental data from our wet lab activities throughout the project. For more details on the experiment design rationale, please see [Proof of Concept](/proof-of-concept [TK]). For further experimental data, including the troubleshooting processes, please see [Engineering Success](/engineering [TK]). Protocols that we used to conduct our experiments in this page are available in our [Notebook](/notebook).  
+This page presents critical experimental data from our wet lab activities throughout the project. For more details on the experiment design rationale, please see [Proof of Concept](/proof-of-concept). For further experimental data, including the troubleshooting processes, please see [Engineering Success](/engineering [TK]). Protocols that we used to conduct our experiments in this page are available in our [Notebook](/notebook).  
 
 # Cell Lysis: SDS Treatment
 > Protocol [[P25]](/notebook#entry-p25)  
@@ -11,7 +11,7 @@ Figure 1: *Microscopy images of E. coli cells before and after treating with SDS
 
 </blockquote>
 
-As described in our [Proof of Concept](/proof-of-concept [TK]), we selected **SDS** to lyse our cells. *[Figure 1](#figure-1)* shows the results of our SDS treatment of *Escherichia coli (E. coli)* in the form of microscopy pictures. We selected an area in both photographs and magnified the selected area for comparison. We can observe **more intact cells in the left image**, marked in red circles, compared to the picture on the right. This indicates that the **lysis of *E.coli* using SDS at room temperature was successful**. More robust luciferase-based tests are planned to verify this method further quantitatively.  
+As described in our [Proof of Concept](/proof-of-concept#cell-lysis), we selected **SDS** to lyse our cells. *[Figure 1](#figure-1)* shows the results of our SDS treatment of *Escherichia coli (E. coli)* in the form of microscopy pictures. We selected an area in both photographs and magnified the selected area for comparison. We can observe **more intact cells in the left image**, marked in red circles, compared to the picture on the right. This indicates that the **lysis of *E. coli* using SDS at room temperature was successful**. More robust luciferase-based tests are planned to verify this method further quantitatively.  
 
 # Target Gene Extraction: Nt.BsmAI/HhaI-LSDA
 > Protocol [[P26]](/notebook#entry-p26)
@@ -24,7 +24,7 @@ Figure 2: *Gel electrophoresis of Nt.BsmAI/HhaI-LSDA*
 
 </blockquote>
 
-In this project, we **extract our primer**, which will be used in downstream reactions through **LSDA**. This process involves the **nicking and cutting of pSB1C3-KPC-2-surrogate by Nt.BsmAI and HhaI**. As illustrated in our [Proof of Concept](/proof-of-concept [TK]), this process is expected to **amplify a 32 nt ssDNA** from the pSB1C3-KPC-2-surrogate plasmid, along with **724 and 534 nt ssDNA** strands as the side products of this LSDA process. *[Figure 2](#figure-2)* shows that our LSDA reaction has successfully generated the 724 and 534 nt ssDNA. However, we **cannot detect the 32 nt primer**, potentially due to its smaller size. To validate this method further, we will combine this reaction with RCA to determine if it can produce a positive RCA result.  
+In this project, we **extract our primer**, which will be used in downstream reactions through **LSDA**. This process involves the **nicking and cutting of pSB1C3-KPC-2-surrogate by Nt.BsmAI and HhaI**. As illustrated in our [Proof of Concept](/proof-of-concept#target-gene-extraction), this process is expected to **amplify a 32nt ssDNA** from the pSB1C3-KPC-2-surrogate plasmid, along with **724 and 534 nt ssDNA** strands as the side products of this LSDA process. *[Figure 2](#figure-2)* shows that our LSDA reaction has successfully generated the 724 and 534 nt ssDNA. However, we **cannot detect the 32nt primer**, potentially due to its smaller size. To validate this method further, we will combine this reaction with RCA to determine if it can produce a positive RCA result.  
 
 Note that in this preliminary experiment, we performed **45 minutes of digestion**, followed by **incubating with Φ29 for an extra 15 minutes** to **prevent the displaced ssDNA from Φ29 exonuclease activity**. However, this two-step reaction is unnecessary in the target gene extraction-RCA coupling since the extracted primer will immediately bind to the RCA template.  
 
@@ -71,11 +71,11 @@ Figure 5: *G-quadruplex DNAzyme coupling assay results*
 
 </blockquote>
 
-To verify our project mechanism, we coupled the RCA results obtained in *[Figure 4](#figure-4)* for the **G-quadruplex assay**. As shown in *[Figure 5](#figure-5)*, both samples 1 and 2 exhibited **a similar slight colour change to blue**, while samples 3 and 4 had a **more robust colour change**. Sample 5 exhibited a similar colour change as 1, while sample 6 **did not produce an observable blue colour**. The last shown sample was a **positive control reaction mixture** using IDT-synthesised G-Quadruplex DNAzyme ([BBa_K5041001](https://parts.igem.org/Part:BBa_K5041001)). These results indicate that we have successfully coupled our third-generation RCA reaction with the G-Quadruplex assay.  
+To verify our project mechanism, we coupled the RCA results obtained in *[Figure 4](#figure-4)* for the **G-quadruplex assay**. As shown in *[Figure 5](#figure-5)*, both samples 1 and 2 exhibited **a similar slight colour change to blue**, while samples 3 and 4 had a **more robust colour change**. Sample 5 exhibited a similar colour change as 1, while sample 6 **did not produce an observable blue colour**. The last shown sample was a **positive control reaction mixture** using IDT-synthesised G-quadruplex DNAzyme ([BBa_K5041001](https://parts.igem.org/Part:BBa_K5041001)). These results indicate that we have successfully coupled our third-generation RCA reaction with the G-quadruplex assay.  
 
 # Conclusion
 
-We have individually tested the **cell lysis** and **target gene extraction** and **coupled the RCA reaction with the G-Quadruplex DNAzyme assay**. The experimental results support the claim that **the project is feasible** and **the mechanism is valid**. To further support our claim, more experiments are planned to confirm the coupling of all reactions.  
+We have individually tested the **cell lysis** and **target gene extraction** and **coupled the RCA reaction with the G-quadruplex DNAzyme assay**. The experimental results support the claim that **the project is feasible** and **the mechanism is valid**. To further support our claim, more experiments are planned to confirm the coupling of all reactions.  
 
 # Additional Key Information
 

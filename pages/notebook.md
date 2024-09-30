@@ -63,8 +63,8 @@ This page contains the protocols for the experiments throughout our project. For
 
 |                              | (1)                                | (2)                               | (-) control           | (+) control                        |
 | :--------------------------- | :--------------------------------- | :-------------------------------- | :-------------------- | :--------------------------------- |
-| 10× G-Quadruplex buffer      | 12.5 μL                            | 12.5 μL                           | 12.5 μL               | 12.5 μL                            |
-| G-Quadruplex sample          | 10 μL from (1) (+) With IDT primer | 10 μL from (2) (-) Without primer | 10 μL from failed RCA | 6.25 μL from IDT G-Quad 8 µM stock |
+| 10× G-quadruplex buffer      | 12.5 μL                            | 12.5 μL                           | 12.5 μL               | 12.5 μL                            |
+| G-quadruplex sample          | 10 μL from (1) (+) With IDT primer | 10 μL from (2) (-) Without primer | 10 μL from failed RCA | 6.25 μL from IDT G-quad 8 µM stock |
 | Haemin, in DMSO (1 mM stock) | 1 μL                               | 1 μL                              | 1 μL                  | 1 μL                               |
 | ddH₂O                        | 98.5 μL                            | 98.5 μL                           | 98.5 μL               | 102.25 μL                          |
 | TMB (50 mM stock in DMSO)    | 1.5 μL                             | 1.5 μL                            | 1.5 μL                | 1.5 μL                             |
@@ -251,10 +251,10 @@ This page contains the protocols for the experiments throughout our project. For
 
 1. Into each PCR tube, add:
 
-|                              | (1) (+) ExoI & ExoIII-treated, with IDT primer, cut with Nt.BsmAI | (2) (+) ExoI & ExoIII-treated, with IDT primer | (3) (-) ExoI & ExoIII-treated, without primer | (+) control, from IDT G-Quad 8 µM stock |
+|                              | (1) (+) ExoI & ExoIII-treated, with IDT primer, cut with Nt.BsmAI | (2) (+) ExoI & ExoIII-treated, with IDT primer | (3) (-) ExoI & ExoIII-treated, without primer | (+) control, from IDT G-quad 8 µM stock |
 | :--------------------------- | :---------------------------------------------------------------- | :--------------------------------------------- | :-------------------------------------------- | :-------------------------------------- |
-| 10× G-Quadruplex buffer      | 12.5 μL                                                           | 12.5 μL                                        | 12.5 μL                                       | 12.5 μL                                 |
-| G-Quadruplex sample          | 10 μL                                                             | 10 μL                                          | 10 μL                                         | 6.25 μL                                 |
+| 10× G-quadruplex buffer      | 12.5 μL                                                           | 12.5 μL                                        | 12.5 μL                                       | 12.5 μL                                 |
+| G-quadruplex sample          | 10 μL                                                             | 10 μL                                          | 10 μL                                         | 6.25 μL                                 |
 | Haemin, in DMSO (1 mM stock) | 1 μL                                                              | 1 μL                                           | 1 μL                                          | 1 μL                                    |
 | ddH₂O                        | 98.5 μL                                                           | 98.5 μL                                        | 98.5 μL                                       | 102.25 μL                               |
 | TMB (50 mM stock in DMSO)    | 1.5 μL                                                            | 1.5 μL                                         | 1.5 μL                                        | 1.5 μL                                  |
@@ -345,10 +345,10 @@ This page contains the protocols for the experiments throughout our project. For
 
 1. Into each PCR tube, add:
 
-|                              | (+) RCA-generated G-quadruplex | (+) IDT-synthesized G-quadruplex with DTT | (+) IDT-synthesized G-quadruplex |
+|                              | (+) RCA-generated G-quadruplex | (+) IDT-synthesised G-quadruplex with DTT | (+) IDT-synthesised G-quadruplex |
 | :--------------------------- | :----------------------------- | :---------------------------------------- | :------------------------------- |
-| 10× G-Quadruplex buffer      | 25 μL                          | 25 μL                                     | 25 μL                            |
-| G-Quadruplex sample          | 10 μL                          | 12.5 μL                                   | 12.5 μL                          |
+| 10× G-quadruplex buffer      | 25 μL                          | 25 μL                                     | 25 μL                            |
+| G-quadruplex sample          | 10 μL                          | 12.5 μL                                   | 12.5 μL                          |
 | DTT (0.1 M stock)            | -                              | 0.6 μL                                    | -                                |
 | Haemin, in DMSO (1 mM stock) | 2 μL                           | 2 μL                                      | 2 μL                             |
 | ddH₂O                        | 207 μL                         | 203.9 μL                                  | 204.5 μL                         |
@@ -418,8 +418,8 @@ This page contains the protocols for the experiments throughout our project. For
 
 |                              | (1) (+) RCA-generated G-quadruplex | (2) (-) false positive RCA result |
 | :--------------------------- | :--------------------------------- | :-------------------------------- |
-| 10× G-Quadruplex buffer      | 12.5 μL                            | 12.5 μL                           |
-| G-Quadruplex sample          | 10 μL from (1) (+) With IDT primer | 10 μL from (2) (-) Without primer |
+| 10× G-quadruplex buffer      | 12.5 μL                            | 12.5 μL                           |
+| G-quadruplex sample          | 10 μL from (1) (+) With IDT primer | 10 μL from (2) (-) Without primer |
 | Haemin, in DMSO (1 mM stock) | 1 μL                               | 1 μL                              |
 | ddH₂O                        | 98.5 μL                            | 98.5 μL                           |
 | TMB (50 mM stock in DMSO)    | 1.5 μL                             | 1.5 μL                            |
@@ -433,8 +433,8 @@ This page contains the protocols for the experiments throughout our project. For
 
 |                                                  | (1)        | (2)        | (3) control | (4)        |
 | :----------------------------------------------- | :--------- | :--------- | :---------- | :--------- |
-| 10× G-Quadruplex buffer                          | 12.5 μL    | 12.5 μL    | 12.5 μL     | 12.5 μL    |
-| G-Quadruplex sample (from IDT G-Quad 8 µM stock) | 18.75 μL   | 12.5 μL    | 6.25 μL     | 0.625 μL   |
+| 10× G-quadruplex buffer                          | 12.5 μL    | 12.5 μL    | 12.5 μL     | 12.5 μL    |
+| G-quadruplex sample (from IDT G-quad 8 µM stock) | 18.75 μL   | 12.5 μL    | 6.25 μL     | 0.625 μL   |
 | Haemin, in DMSO (1 mM stock)                     | 1 μL       | 1 μL       | 1 μL        | 1 μL       |
 | ddH₂O                                            | 89.75 μL   | 96 μL      | 102.25 μL   | 107.875 μL |
 | TMB (50 mM stock in DMSO)                        | 1.5 μL     | 1.5 μL     | 1.5 μL      | 1.5 μL     |
@@ -498,8 +498,8 @@ This page contains the protocols for the experiments throughout our project. For
 
 |                              | (1) RCA(v3)/Nt.BsmAI-GQuad | (2) RCA(v3)-GQuad | (+) control |
 | :--------------------------- | :------------------------- | :---------------- | :---------- |
-| 10× G-Quadruplex buffer      | 12.5 μL                    | 12.5 μL           | 12.5 μL     |
-| G-Quadruplex sample          | 10 μL                      | 10 μL             | 6.25 μL     |
+| 10× G-quadruplex buffer      | 12.5 μL                    | 12.5 μL           | 12.5 μL     |
+| G-quadruplex sample          | 10 μL                      | 10 μL             | 6.25 μL     |
 | Haemin, in DMSO (1 mM stock) | 1 μL                       | 1 μL              | 1 μL        |
 | ddH₂O                        | 98.5 μL                    | 98.5 μL           | 102.25 μL   |
 | TMB (50 mM stock in DMSO)    | 1.5 μL                     | 1.5 μL            | 1.5 μL      |
@@ -578,8 +578,8 @@ This page contains the protocols for the experiments throughout our project. For
 
 |                              | (1) 1 ng   | (2) 2 ng   | (3) 4 ng   | (4) 8 ng   | (5) uncut  | (6) (-)    | (7) (+) control |
 | :--------------------------- | :--------- | :--------- | :--------- | :--------- | :--------- | :--------- | :-------------- |
-| 10× G-Quadruplex buffer      | 12.5 μL    | 12.5 μL    | 12.5 μL    | 12.5 μL    | 12.5 μL    | 12.5 μL    | 12.5 μL         |
-| G-Quadruplex sample          | 10 μL      | 10 μL      | 10 μL      | 10 μL      | 10 μL      | 10 μL      | 6.25 μL         |
+| 10× G-quadruplex buffer      | 12.5 μL    | 12.5 μL    | 12.5 μL    | 12.5 μL    | 12.5 μL    | 12.5 μL    | 12.5 μL         |
+| G-quadruplex sample          | 10 μL      | 10 μL      | 10 μL      | 10 μL      | 10 μL      | 10 μL      | 6.25 μL         |
 | Haemin, in DMSO (1 mM stock) | 1 μL       | 1 μL       | 1 μL       | 1 μL       | 1 μL       | 1 μL       | 1 μL            |
 | ddH₂O                        | 98.5 μL    | 98.5 μL    | 98.5 μL    | 98.5 μL    | 98.5 μL    | 98.5 μL    | 102.25 μL       |
 | TMB (50 mM stock in DMSO)    | 1.5 μL     | 1.5 μL     | 1.5 μL     | 1.5 μL     | 1.5 μL     | 1.5 μL     | 1.5 μL          |
@@ -689,7 +689,7 @@ This page contains the protocols for the experiments throughout our project. For
 
 # Buffer Preparation Protocols
 
-## G-Quad Buffer Preparation (10×) (in 1L)
+## G-Quadruplex Buffer Preparation (10×) (in 1L)
 
 
 | Reagent      | Quantity                       |

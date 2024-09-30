@@ -31,7 +31,7 @@ It is with sincerity that we say the success of our project is indebted to our h
 > In the consultation with Prof Tam, we presented our initial design for discussion on its feasibility. Our original idea involved using **DNA-cleaving DNAzyme that emits fluorescence** upon binding to the targeted antibiotic-resistance gene. However, Prof Tam pointed out that the **DNA-cleaving DNAzyme binding is not as specific as we had assumed**, and its **working temperature does not align with our goal** of creating a point-of-care device.  
 >
 > #### Project Modification
-> As a result of this meeting, we have made significant changes to our project's mechanism. We realised our initial approach was **overly optimistic** regarding the biochemical reaction involved. Her opinion prompted us to modify the DNA sensing method by **employing a specific enzyme** and **using G-Quadruplex DNAzyme** to indicate the presence of the targeted gene through a **colour change** in the later step.  
+> As a result of this meeting, we have made significant changes to our project's mechanism. We realised our initial approach was **overly optimistic** regarding the biochemical reaction involved. Her opinion prompted us to modify the DNA sensing method by **employing a specific enzyme** and **using G-quadruplex DNAzyme** to indicate the presence of the targeted gene through a **colour change** in the later step.  
 
 > ## Crux of Science Communication
 >

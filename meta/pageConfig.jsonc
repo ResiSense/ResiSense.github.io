@@ -71,6 +71,17 @@
             }
         },
         {
+            "name": "proof-of-concept",
+            "title": "Proof of Concept",
+            "populator": "markdown",
+            "includes": {
+                "css": [
+                    "/styles/figures.css",
+                    "/styles/references.css"
+                ]
+            }
+        },
+        {
             "name": "education",
             "populator": "markdown",
             "includes": {

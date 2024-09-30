@@ -17,6 +17,8 @@
     - [x] education
     - [x] model
     - [x] notebook
+    - [x] proof-of-concept
+    - [ ] team
 - [ ] only open-source or CC assets are allowed ([check](https://tools.igem.org/wiki/external-content-check))
 - [x] all assets (-videos) are uploaded [here](https://tools.igem.org/uploads/teams)
 - [x] videos are uploaded [here](https://tools.igem.org/wiki/non-deliverable-videos)
@@ -35,3 +37,4 @@
 - [x] reference hover
 - [ ] condense iHP outline
 - [ ] add iHP timeline
+- [ ] short name to notebook entries?
