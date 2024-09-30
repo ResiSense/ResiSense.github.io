@@ -1,35 +1,16 @@
 painted-content {
-    & blockquote {
-        background: none;
-        border: none;
-        padding: 0;
-        margin: 0;
+    & blockquote:has(img) {
+        & p {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(0, auto));
+            gap: 0.5rem;
+            justify-content: center;
+            justify-items: center;
+            max-width: 100%;
 
-        &:not(:has(img)) {
-            margin-top: -0.5rem;
-            font-weight: bold;
-            font-size: larger;
-            opacity: 0.6;
-
-            & > p {
-                margin: 0;
-                padding: 0;
-            }
-        }
-
-        &:has(img) {
-            & p {
-                display: grid;
-                grid-template-columns: repeat(auto-fit, minmax(0, auto));
-                gap: 0.5rem;
-                justify-content: center;
-                justify-items: center;
-                max-width: 100%;
-
-                & > img {
-                    height: 18rem;
-                    object-fit: cover;
-                }
+            & > img {
+                height: 18rem;
+                object-fit: cover;
             }
         }
     }
