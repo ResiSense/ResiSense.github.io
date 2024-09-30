@@ -141,7 +141,7 @@ Figure 6: *Change in free energy (ΔG) of binding of haem in G-quad-haem*
 
 From *[Figure 5](#figure-5)*, we could observe that the **free energy change of decoupling** of haem only in solvent decreases as DMSO concentration increases. This is in agreement with the literature, where the **solubility of haemin increases as DMSO concentration increases**. In *[Figure 6](#figure-6)*, we observed a general trend of **increasing binding energy** of haem to G-quad, indicating a prediction of **decreasing binding affinity to G-quad as the DMSO concentration increases**.  
 
-**Some data points do not follow the trend**: the binding energies at 25% and 40% DMSO concentration (v/v). We believe this is due to the **change in G-quad conformation during the simulation**, which **skewed the free energy values**. Through the inspection of **RMSD value over time** of simulations (see [Supporting Information]([TK link])) and comparing with the **non-perturbed simulation (λ = 0)**, we conclude that the **G-quadruplex DNAzyme has changed conformation** in some of the simulations, leading to **inaccurate free energy values**. Potential solutions are discussed [below](#unrestrained-g-quad-skews-free-energy-values).  
+**Some data points do not follow the trend**: the binding energies at 25% and 40% DMSO concentration (v/v). We believe this is due to the **change in G-quad conformation during the simulation**, which **skewed the free energy values**. Through the inspection of **RMSD value over time** of simulations (see [Supporting Information](/resources#supporting-information)) and comparing with the **non-perturbed simulation (λ = 0)**, we conclude that the **G-quadruplex DNAzyme has changed conformation** in some of the simulations, leading to **inaccurate free energy values**. Potential solutions are discussed [below](#unrestrained-g-quad-skews-free-energy-values).  
 
 We have also noticed that the **standard deviations of the change in free energy for G-quad-haem decoupling are large**. Upon inspection of the `gmx bar` output, we noticed that the **relative entropies between some of the lambdas were significant**, indicating **inadequate phase space sampling**. This suggests the need for more sampling in those intervals.  
 
@@ -169,7 +169,7 @@ Although we focused on evaluating the **stability of the G-quad-haem complex in 
 
 Despite the presence of some inaccuracies due to the factors outlined above, our preliminary modelling results indicate a promising potential that **the binding energy of haem to G-quad is the lowest in fully aqueous solutions**. This exciting discovery could pave the way for a new method to **predict G-quad-haem complex catalytic capability in different solutions**, a possibility that can be further explored in the lab.  
 
-To help future iGEM teams in modelling molecular systems involving the haem residue, we have uploaded the **[parametrised haem topology](TK link)** for other teams to use.  
+To help future iGEM teams in modelling molecular systems involving the haem residue, we have uploaded the **[parametrised haem topology](resources#parametrised-haem-topology)** for other teams to use.  
 
 # References
 

@@ -134,6 +134,11 @@
                     "/styles/acknowledgements.css"
                 ]
             }
+        },
+        {
+            "name": "resources",
+            "populator": "markdown",
+            "hideFromCatalogue": true
         }
     ]
 }
