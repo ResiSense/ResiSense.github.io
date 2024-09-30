@@ -10,7 +10,7 @@
     - [x] attributions
     - [x] acknowledgements
     - [x] contribution
-    - [ ] description
+    - [x] description
     - [ ] engineering
     - [x] results
     - [x] human-practices

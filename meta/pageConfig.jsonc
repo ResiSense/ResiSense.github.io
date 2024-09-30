@@ -48,6 +48,16 @@
             ]
         },
         {
+            "name": "description",
+            "title": "Project Description",
+            "populator": "markdown",
+            "includes": {
+                "css": [
+                    "/styles/references.css"
+                ]
+            }
+        },
+        {
             "name": "human-practices",
             "title": "Integrated Human Practices",
             "populator": "markdown",
