@@ -1,7 +1,7 @@
 This page presents critical experimental data from our wet lab activities throughout the project. For more details on the experiment design rationale, please see [Proof of Concept](/proof-of-concept). For further experimental data, including the troubleshooting processes, please see [Engineering Success](/engineering). Protocols that we used to conduct our experiments in this page are available in our [Notebook](/notebook).  
 
 # Cell Lysis: SDS Treatment
-> See protocol [[P25]](/notebook#entry-p25)  
+> See protocol [[P25]](/notebook#p25)  
 
 <blockquote id="figure-1">
 
@@ -14,7 +14,7 @@ Figure 1: *Microscopy images of E. coli cells before and after treating with SDS
 As described in our [Proof of Concept](/proof-of-concept#cell-lysis), we selected **SDS** to lyse our cells. *[Figure 1](#figure-1)* shows the results of our SDS treatment of *Escherichia coli (E. coli)* in the form of microscopy pictures. We selected an area in both photographs and magnified the selected area for comparison. We can observe **more intact cells in the left image**, marked in red circles, compared to the picture on the right. This indicates that the **lysis of *E. coli* using SDS at room temperature was successful**. More robust luciferase-based tests are planned to verify this method further quantitatively.  
 
 # Target Gene Extraction: Nt.BsmAI/HhaI-LSDA
-> See protocol [[P26]](/notebook#entry-p26)
+> See protocol [[P26]](/notebook#p26)
 
 <blockquote id="figure-2">
 
@@ -31,7 +31,7 @@ Note that in this preliminary experiment, we performed **45 minutes of digestion
 # Rolling Circle Amplification
 
 ## RCA in rCutSmart
-> See protocols [[P27]](/notebook#entry-p27) and [[P28]](/notebook#entry-p28)
+> See protocols [[P27]](/notebook#p27) and [[P28]](/notebook#p28)
 
 <blockquote id="figure-3">
 
@@ -44,7 +44,7 @@ Figure 3: *Gel electrophoresis of RCA in rCutSmart*
 The reaction mixture **must be compatible with both reactions** to facilitate the **coupling of the target gene extraction and the RCA process**. Therefore, we tested whether Φ29 is compatible with the rCutSmart buffer, which is the **primary buffer for Nt.BsmAI and HhaI**. *[Figure 3](#figure-3)* demonstrates that **the RCA process can be entirely performed in the rCutSmart buffer**. This is indicated by the presence of **smearing bands**, with a size larger than the 10,000bp DNA ladder, in **both the "10× Reaction Buffer" and "rCutSmart Buffer" lanes**. The smearing bands are expected due to the **continuous amplification by RCA** and the **generation of variable-length amplification products**. The result of experiment [E2.3](/engineering#e2-3-first-generation-rca-in-rcutsmart-buffer-without-dtt) also obtains further verification.  
 
 ## Third-Generation RCA
-> See protocols [[P22]](/notebook#entry-p22) and [[P23]](/notebook#entry-p23)
+> See protocols [[P22]](/notebook#p22) and [[P23]](/notebook#p23)
 
 <blockquote id="figure-4">
 
@@ -61,7 +61,7 @@ In *[Figure 4](#figure-4)*, lanes 1-4 included both the **third-generation (v3) 
 Lanes 1-4 displayed a **smearing band** throughout, indicating successful RCA and effective cutting by Nt.BsmAI, with band intensity increasing alongside the template amounts. Lane 5 showed a smearing band concentrated at sizes larger than 10,000bp, suggesting successful RCA in that sample. In contrast, lane 6 had no detected band, confirming that we obtained **true negative results** from this circularisation method.  
 
 # Signal Expression: G-Quadruplex DNAzyme Assay
-> See protocol [[P24]](/notebook#entry-p24)
+> See protocol [[P24]](/notebook#p24)
 
 <blockquote id="figure-5">
 
