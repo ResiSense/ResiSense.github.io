@@ -88,6 +88,16 @@
             }
         },
         {
+            "name": "results",
+            "populator": "markdown",
+            "includes": {
+                "css": [
+                    "/styles/figures.css",
+                    "/styles/flavour-text.css"
+                ]
+            }
+        },
+        {
             "name": "notebook",
             "populator": "markdown",
             "includes": {

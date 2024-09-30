@@ -6,11 +6,13 @@
 - [ ] standard URL compliance
   - [x] lowercase alphanumeric + `-`
   - [ ] [award URLs](https://competition.igem.org/judging/pages-for-awards)
+    - [ ] home
     - [x] attributions
     - [x] acknowledgements
     - [x] contribution
     - [ ] description
     - [ ] engineering
+    - [x] results
     - [x] human-practices
     - [x] education
     - [x] model
