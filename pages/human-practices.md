@@ -115,8 +115,8 @@ It is with sincerity that we say the success of our project is indebted to our h
 > ## International Regulations and Opportunities
 >
 > ### Dr Edmond Ma
-> ![Portrait of Doctor Edmond Ma]([TK])  
-> [Doctor Edmond Ma]([TK]) is WHO [TK]
+> ![Portrait of Doctor Edmond Ma](/assets/humans/edmond%20ma-Enhanced-SR%20transparent.png)  
+> [Doctor Edmond Ma]([https://www.hksh-hospital.com/en/doctors/search/4c9bea4f72adeaeb9277e42f0d9a466d]) is the director of the clinical and molecular pathology and cancer genetics center at the [Hong Kong Sanatorium Hospital](https://www.hksh-hospital.com/en), as well as the consultant for the [Infection Control Branch](https://www.chp.gov.hk/en/static/24011.html) at the [Centre for Health Protection](https://www.chp.gov.hk/en) of Hong Kong.  
 > <span class="--human-card-above"></span>
 >
 > #### Global AMR Monitoring
