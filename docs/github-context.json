@@ -1,11 +1,11 @@
 {
     "job": "build",
     "ref": "refs/heads/main",
-    "sha": "bcd90ed45b5df2e1d6b0cc6c744d9ed22f03f524",
+    "sha": "281d16bd28ade842e8b5013a57546ca6ba4ba403",
     "repository": "ResiSense/ResiSense.github.io",
     "repository_Url": null,
-    "run_id": "11115031083",
-    "run_number": "262",
+    "run_id": "11115379582",
+    "run_number": "263",
     "run_attempt": "1",
     "artifact_cache_size_limit": "10",
     "actor": "CCheukKa",
@@ -13,9 +13,27 @@
     "workflow": "Full CI pipeline",
     "event_name": "push",
     "event": {
-        "after": "bcd90ed45b5df2e1d6b0cc6c744d9ed22f03f524",
-        "before": "fd80ad4d8cf58932ba0c89f8e07a9accddd94872",
+        "after": "281d16bd28ade842e8b5013a57546ca6ba4ba403",
+        "before": "b517f78dcb6068d136fea287ef103fe25a590c04",
         "commits": [
+            {
+                "author": {
+                    "email": "49699333+dependabot[bot]@users.noreply.github.com",
+                    "name": "dependabot[bot]",
+                    "username": "dependabot[bot]"
+                },
+                "committer": {
+                    "email": "noreply@github.com",
+                    "name": "GitHub",
+                    "username": "web-flow"
+                },
+                "distinct": false,
+                "id": "7b5dd4b799d672042eb175416d444ee18acbb250",
+                "message": "Chore(deps-dev): Bump @types/node from 22.5.5 to 22.7.4\n\nBumps [@types/node](https://github.com/DefinitelyTyped/DefinitelyTyped/tree/HEAD/types/node) from 22.5.5 to 22.7.4.\n- [Release notes](https://github.com/DefinitelyTyped/DefinitelyTyped/releases)\n- [Commits](https://github.com/DefinitelyTyped/DefinitelyTyped/commits/HEAD/types/node)\n\n---\nupdated-dependencies:\n- dependency-name: \"@types/node\"\n  dependency-type: direct:development\n  update-type: version-update:semver-minor\n...\n\nSigned-off-by: dependabot[bot] <support@github.com>",
+                "timestamp": "2024-09-30T09:53:58Z",
+                "tree_id": "45c4a85de086996c4dd8dfc3a26efa671da0dadd",
+                "url": "https://github.com/ResiSense/ResiSense.github.io/commit/7b5dd4b799d672042eb175416d444ee18acbb250"
+            },
             {
                 "author": {
                     "email": "ccheukka@gmail.com",
@@ -23,19 +41,19 @@
                     "username": "CCheukKa"
                 },
                 "committer": {
-                    "email": "ccheukka@gmail.com",
-                    "name": "CCheukKa",
-                    "username": "CCheukKa"
+                    "email": "noreply@github.com",
+                    "name": "GitHub",
+                    "username": "web-flow"
                 },
                 "distinct": true,
-                "id": "bcd90ed45b5df2e1d6b0cc6c744d9ed22f03f524",
-                "message": "clean up pdf",
-                "timestamp": "2024-10-01T06:20:12+08:00",
-                "tree_id": "6d71449fa15adb0193652daadb46b2d48c1b3ba4",
-                "url": "https://github.com/ResiSense/ResiSense.github.io/commit/bcd90ed45b5df2e1d6b0cc6c744d9ed22f03f524"
+                "id": "281d16bd28ade842e8b5013a57546ca6ba4ba403",
+                "message": "Merge pull request #172 from ResiSense/dependabot/npm_and_yarn/types/node-22.7.4\n\nChore(deps-dev): Bump @types/node from 22.5.5 to 22.7.4",
+                "timestamp": "2024-10-01T06:52:53+08:00",
+                "tree_id": "fdd2e248f465e9bd4ec3f6c0c4d4377d00544aef",
+                "url": "https://github.com/ResiSense/ResiSense.github.io/commit/281d16bd28ade842e8b5013a57546ca6ba4ba403"
             }
         ],
-        "compare": "https://github.com/ResiSense/ResiSense.github.io/compare/fd80ad4d8cf5...bcd90ed45b5d",
+        "compare": "https://github.com/ResiSense/ResiSense.github.io/compare/b517f78dcb60...281d16bd28ad",
         "created": false,
         "deleted": false,
         "forced": false,
@@ -46,16 +64,16 @@
                 "username": "CCheukKa"
             },
             "committer": {
-                "email": "ccheukka@gmail.com",
-                "name": "CCheukKa",
-                "username": "CCheukKa"
+                "email": "noreply@github.com",
+                "name": "GitHub",
+                "username": "web-flow"
             },
             "distinct": true,
-            "id": "bcd90ed45b5df2e1d6b0cc6c744d9ed22f03f524",
-            "message": "clean up pdf",
-            "timestamp": "2024-10-01T06:20:12+08:00",
-            "tree_id": "6d71449fa15adb0193652daadb46b2d48c1b3ba4",
-            "url": "https://github.com/ResiSense/ResiSense.github.io/commit/bcd90ed45b5df2e1d6b0cc6c744d9ed22f03f524"
+            "id": "281d16bd28ade842e8b5013a57546ca6ba4ba403",
+            "message": "Merge pull request #172 from ResiSense/dependabot/npm_and_yarn/types/node-22.7.4\n\nChore(deps-dev): Bump @types/node from 22.5.5 to 22.7.4",
+            "timestamp": "2024-10-01T06:52:53+08:00",
+            "tree_id": "fdd2e248f465e9bd4ec3f6c0c4d4377d00544aef",
+            "url": "https://github.com/ResiSense/ResiSense.github.io/commit/281d16bd28ade842e8b5013a57546ca6ba4ba403"
         },
         "pusher": {
             "email": "ccheukka@gmail.com",
@@ -68,6 +86,6 @@
     "ref_type": "branch",
     "secret_source": "Actions",
     "workflow_ref": "ResiSense/ResiSense.github.io/.github/workflows/full-ci-pipeline.yaml@refs/heads/main",
-    "workflow_sha": "bcd90ed45b5df2e1d6b0cc6c744d9ed22f03f524",
+    "workflow_sha": "281d16bd28ade842e8b5013a57546ca6ba4ba403",
     "workspace": "/home/runner/work/ResiSense.github.io/ResiSense.github.io"
 }
