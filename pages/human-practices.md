@@ -6,11 +6,15 @@ Our team, Resisense, is deeply committed to addressing the critical needs of our
 
 We are acutely aware that antibiotic resistance is not just a complex issue but also a pressing one. Our human practice research is far from a mere formality but the cornerstone of our **probe selection**, **kit design**, **market analysis**, and **outreaching education**.  
 
-[TK illustration]  
+![Human Practice Cornerstones](/assets/diagrams/hp-cornerstone.svg)
 
 Our integrated human practice consists of 4 steps: **literature review and brainstorm**, **implementation**, **expert consultations**, and **project modification**. We heavily emphasises the connection of our project design with the **actual needs of society**. In this regard, we consulted numerous experts to invent a product that provides maximum impact to society and matches the requirements of various stakeholders.  
 
-[TK illustration]  
+<div class="hp-cycle">
+
+![Integrated Human Practice Cycle](/assets/diagrams/hp-cycle.svg)  
+
+</div>
 
 It is with sincerity that we say the success of our project is indebted to our human practice interviews. By investing time and effort into these conversations, the invaluable knowledge and broad perspectives we gathered enriched our project greatly, particularly in our wet lab and education events.  
 

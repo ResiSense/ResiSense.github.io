@@ -33,3 +33,5 @@
 - [ ] fix doodles speed being inconsistent
 - [ ] tend to TKs
 - [x] reference hover
+- [ ] condense iHP outline
+- [ ] add iHP timeline
