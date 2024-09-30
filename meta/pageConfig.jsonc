@@ -110,6 +110,16 @@
                 ]
             }
             
+        },
+        {
+            "name":"notebook",
+            "title":"Notebook",
+            "populator":"html-frame",
+            "includes":{
+                "css": [
+                    "/styles/notebook.css"
+                ]
+            }
         }
     ]
 }
