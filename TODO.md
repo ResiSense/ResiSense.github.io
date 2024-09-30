@@ -30,4 +30,4 @@
 - [ ] /contact
 - [ ] fix doodles speed being inconsistent
 - [ ] tend to TKs
-- [ ] reference hover
+- [x] reference hover

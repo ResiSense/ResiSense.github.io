@@ -91,6 +91,9 @@
                 ],
                 "ts": [
                     "/lib/template-scripts/idReferences.ts"
+                ],
+                "js": [
+                    "/scripts/references.js"
                 ]
             }
         },
