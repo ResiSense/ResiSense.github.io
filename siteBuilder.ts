@@ -32,6 +32,7 @@ if (!targetDirectory) { throw new Error('Invalid mode!'); }
     await Promise.all([
         cloneDirectory('assets', targetDirectory),
         cloneDirectory('styles', targetDirectory),
+        cloneDirectory('resources', targetDirectory),
         // cloneDirectory('scripts', targetDirectory).then(addIdentifierLogToTsEmbeds),
     ]);
     console.log(`Cloned directories to ${targetDirectory}.`);
