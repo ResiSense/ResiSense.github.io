@@ -42,10 +42,21 @@
         },
         {
             "name": "home",
-            "populator": "markdown",
+            "populator": "html-full",
             "redirectAliasPaths": [
                 "index"
-            ]
+            ],
+            "includes": {
+                "ts": [
+                    "/lib/page-scripts/home.ts"
+                ],
+                "css": [
+                    "/styles/home.css"
+                ],
+                "js": [
+                    "/scripts/home.js"
+                ]
+            }
         },
         {
             "name": "description",

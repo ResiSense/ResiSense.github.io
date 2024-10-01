@@ -21,6 +21,7 @@ painted-footer {
             padding-top: 1rem;
             padding-bottom: 0.5rem;
             margin-bottom: var(--footer-persistent-height);
+            background-color: var(--footer-background-color);
             align-items: center;
             overflow: hidden;
 
