@@ -39,6 +39,6 @@
 - [ ] add iHP timeline
 - [x] backlink to notebook entries?
 - [ ] hide some headings from outline
-- [ ] fix .pdf and .itp upload
+- [x] fix .pdf and .itp upload
 - [ ] different sticker for different category
 - [ ] add link to YouTube
