@@ -3,7 +3,7 @@
 ## [iGEM compliance 😡](https://competition.igem.org/deliverables/team-wiki)
 - [x] CC 4.0 License (don't touch the file), footer of every page
 - [x] add [`attributions.html`](https://competition.igem.org/deliverables/project-attribution)
-- [ ] standard URL compliance
+- [x] standard URL compliance
   - [x] lowercase alphanumeric + `-`
   - [ ] [award URLs](https://competition.igem.org/judging/pages-for-awards)
     - [ ] home
@@ -25,20 +25,21 @@
 
 ## Actually important stuff
 - [x] add responsiveness
-- [ ] add catalogue nesting
-- [ ] add multiple sizes for images
+- [x] fix footer being over search box
+- [x] reference hover
+- [x] backlink to notebook entries?
+- [x] fix .pdf and .itp upload
+- [x] tend to TKs
+- [ ] add iHP timeline
+- [ ] add link to YouTube
+- [ ] /contact
+- [ ] fix catalogue overflow
 - [ ] fix catalogue being janky on resize
+- [ ] hide some headings from outline
+- [ ] different sticker for different category
+- [ ] add multiple sizes for images
+- [ ] add catalogue nesting
 - [ ] rework hamburger menu design
 - [ ] add responsiveness to human cards
-- [x] fix footer being over search box
-- [ ] /contact
 - [ ] fix doodles speed being inconsistent
-- [ ] tend to TKs
-- [x] reference hover
 - [ ] condense iHP outline
-- [ ] add iHP timeline
-- [x] backlink to notebook entries?
-- [ ] hide some headings from outline
-- [x] fix .pdf and .itp upload
-- [ ] different sticker for different category
-- [ ] add link to YouTube
