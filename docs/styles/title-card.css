@@ -75,7 +75,7 @@ painted-title-card {
             }
 
             &#title-name-shadow {
-                color: transparent;
+                color: var(--white);
                 -webkit-text-stroke: 6px var(--white);
                 z-index: 1;
                 user-select: none;
