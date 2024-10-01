@@ -6,7 +6,7 @@ Many iGEM teams, including us, rely on **external sponsorships** and funds from 
 
 # Use of Nickase for Producing Short ssDNA Fragments from RCA
 
-In our original design, we planned to **enhance the production speed of G-quadruplex** DNAzyme (G-quad) and, therefore, colour change by **cleaving the primer-G-quad phosphodiester bond** on the product strand, freeing the DNAzyme and the primer for **more reactions**. However, the attempt with 13PD1 DNAzyme failed for us (see [Engineering Cycle]([TK])). This has forced us to think innovatively, and we turned to the enzymes **currently in the reaction mix**, nickase. By leveraging the ability of nickase to **cleave only one strand**, we can achieve **amplification of RCA initiation**, hopefully producing **faster results** for our kit.  
+In our original design, we planned to **enhance the production speed of G-quadruplex** DNAzyme (G-quad) and, therefore, colour change by **cleaving the primer-G-quad phosphodiester bond** on the product strand, freeing the DNAzyme and the primer for **more reactions**. However, the attempt with 13PD1 DNAzyme failed for us (see *[DNA-Cleaving DNAzymes Test](/engineering#e2-1-dna-cleaving-dnazymes-test)*). This has forced us to think innovatively, and we turned to the enzymes **currently in the reaction mix**, nickase. By leveraging the ability of nickase to **cleave only one strand**, we can achieve **amplification of RCA initiation**, hopefully producing **faster results** for our kit.  
 
 # Development of Robust ssDNA Circularisation Protocol
 
