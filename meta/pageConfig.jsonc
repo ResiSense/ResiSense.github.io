@@ -156,8 +156,7 @@
         },
         {
             "name": "resources",
-            "populator": "markdown",
-            "hideFromCatalogue": true
+            "populator": "markdown"
         }
     ]
 }
