@@ -1,11 +1,11 @@
 {
     "job": "build",
     "ref": "refs/heads/main",
-    "sha": "40b673710a25d50b18064775fd9b94cb06c9fca4",
+    "sha": "50041b6e1a82a10dc21e85b275de6553c382cba3",
     "repository": "ResiSense/ResiSense.github.io",
     "repository_Url": null,
-    "run_id": "11133561456",
-    "run_number": "272",
+    "run_id": "11133599904",
+    "run_number": "273",
     "run_attempt": "1",
     "artifact_cache_size_limit": "10",
     "actor": "CCheukKa",
@@ -13,8 +13,8 @@
     "workflow": "Full CI pipeline",
     "event_name": "push",
     "event": {
-        "after": "40b673710a25d50b18064775fd9b94cb06c9fca4",
-        "before": "495842f241c419be3c06f6ba11cb0e4815b47aa8",
+        "after": "50041b6e1a82a10dc21e85b275de6553c382cba3",
+        "before": "ab757bd7ac296998cf083b61d7c958f829ee15f2",
         "commits": [
             {
                 "author": {
@@ -28,14 +28,14 @@
                     "username": "CCheukKa"
                 },
                 "distinct": true,
-                "id": "40b673710a25d50b18064775fd9b94cb06c9fca4",
-                "message": "add home page 7 slides",
-                "timestamp": "2024-10-02T05:13:32+08:00",
-                "tree_id": "b82f1199173e1180691c065e107391059cef90ee",
-                "url": "https://github.com/ResiSense/ResiSense.github.io/commit/40b673710a25d50b18064775fd9b94cb06c9fca4"
+                "id": "50041b6e1a82a10dc21e85b275de6553c382cba3",
+                "message": "re-encode pdf to decrease file size",
+                "timestamp": "2024-10-02T05:16:27+08:00",
+                "tree_id": "17ecca37c7ed3c5bf9271082919740e348f4e084",
+                "url": "https://github.com/ResiSense/ResiSense.github.io/commit/50041b6e1a82a10dc21e85b275de6553c382cba3"
             }
         ],
-        "compare": "https://github.com/ResiSense/ResiSense.github.io/compare/495842f241c4...40b673710a25",
+        "compare": "https://github.com/ResiSense/ResiSense.github.io/compare/ab757bd7ac29...50041b6e1a82",
         "created": false,
         "deleted": false,
         "forced": false,
@@ -51,11 +51,11 @@
                 "username": "CCheukKa"
             },
             "distinct": true,
-            "id": "40b673710a25d50b18064775fd9b94cb06c9fca4",
-            "message": "add home page 7 slides",
-            "timestamp": "2024-10-02T05:13:32+08:00",
-            "tree_id": "b82f1199173e1180691c065e107391059cef90ee",
-            "url": "https://github.com/ResiSense/ResiSense.github.io/commit/40b673710a25d50b18064775fd9b94cb06c9fca4"
+            "id": "50041b6e1a82a10dc21e85b275de6553c382cba3",
+            "message": "re-encode pdf to decrease file size",
+            "timestamp": "2024-10-02T05:16:27+08:00",
+            "tree_id": "17ecca37c7ed3c5bf9271082919740e348f4e084",
+            "url": "https://github.com/ResiSense/ResiSense.github.io/commit/50041b6e1a82a10dc21e85b275de6553c382cba3"
         },
         "pusher": {
             "email": "ccheukka@gmail.com",
@@ -68,6 +68,6 @@
     "ref_type": "branch",
     "secret_source": "Actions",
     "workflow_ref": "ResiSense/ResiSense.github.io/.github/workflows/full-ci-pipeline.yaml@refs/heads/main",
-    "workflow_sha": "40b673710a25d50b18064775fd9b94cb06c9fca4",
+    "workflow_sha": "50041b6e1a82a10dc21e85b275de6553c382cba3",
     "workspace": "/home/runner/work/ResiSense.github.io/ResiSense.github.io"
 }
