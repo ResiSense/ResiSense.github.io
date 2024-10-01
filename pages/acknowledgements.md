@@ -28,7 +28,7 @@ The following organisations have provided financial support to the project.
 
 </div>
 
-[Opentrons](https://opentrons.com) has kindly provided us with credits worth [25000USD](https://www.google.com/search?q=25000USD), with which we acquired a [liquid handling robot](https://opentrons.com/products/ot-2-robot) and various accompanying equipment for our experiments.  
+[Opentrons](https://opentrons.com) has kindly provided us with credits, with which we acquired a [liquid handling robot](https://opentrons.com/products/ot-2-robot) and various accompanying equipment for our experiments.  
 
 Opentrons Labworks, Inc. (commonly known as Opentrons) is a biotechnology firm specialising in the production of liquid handling robots that leverage open-source software. These robots assist scientists in handling small liquid volumes for various biochemical and chemical processes. The company currently provides two models: the OT-2 and the Flex. Opentrons partners with iGEM to aim for delivering affordable, open-source automation and standardised protocols to teams that are pioneering advancements in science and engineering.  
 
@@ -41,7 +41,7 @@ Opentrons Labworks, Inc. (commonly known as Opentrons) is a biotechnology firm s
 
 </div>
 
-[Integrated DNA Technologies](https://www.idtdna.com) has kindly provided us with credits worth [3400USD](https://www.google.com/search?q=3400USD), with which we acquired primers and gene fragments for our experiments.  
+[Integrated DNA Technologies](https://www.idtdna.com) has kindly provided us with credits, with which we acquired primers and gene fragments for our experiments.  
 
 Integrated DNA Technologies, Inc. (commonly known as IDT), specialises in providing tailored nucleic acids to support academic research, biotech innovations, clinical diagnostics, and pharmaceutical advancements. The company primarily focuses on producing custom DNA and RNA oligonucleotides (oligos) for various research purposes.  
 
@@ -54,7 +54,7 @@ Integrated DNA Technologies, Inc. (commonly known as IDT), specialises in provid
 
 </div>
 
-[New England Biolabs](https://www.neb.com) has kindly provided us with reagents totalling [880EUR](https://www.google.com/search?q=880EUR) for our experiments.  
+[New England Biolabs](https://www.neb.com) has kindly provided us with various reagents for our experiments.  
 
 ## Hong Kong Life Sciences Society
 
@@ -65,7 +65,7 @@ Integrated DNA Technologies, Inc. (commonly known as IDT), specialises in provid
 
 </div>
 
-The [Hong Kong Life Sciences Society](https://www.hklss.org) has kindly provided us with [5000HKD](https://www.google.com/search?q=5000HKD) to support our project.  
+The [Hong Kong Life Sciences Society](https://www.hklss.org) has kindly provided monetary support for our project.  
 
 ## Hong Kong Amgen Biotech Experience
 
@@ -76,4 +76,4 @@ The [Hong Kong Life Sciences Society](https://www.hklss.org) has kindly provided
 
 </div>
 
-[Hong Kong Amgen Biotech Experience](https://abehk.fed.cuhk.edu.hk) has kindly provided us with various cells, plasmids, and reagents totalling [1000HKD](https://www.google.com/search?q=1000HKD) for our experiments.  
+[Hong Kong Amgen Biotech Experience](https://abehk.fed.cuhk.edu.hk) has kindly provided us with various cells, plasmids, and reagents for our experiments.  
