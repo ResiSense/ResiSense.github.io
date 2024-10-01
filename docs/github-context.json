@@ -1,11 +1,11 @@
 {
     "job": "build",
     "ref": "refs/heads/main",
-    "sha": "50041b6e1a82a10dc21e85b275de6553c382cba3",
+    "sha": "4dc1413d2328cbb77f4745b102547e407151c01e",
     "repository": "ResiSense/ResiSense.github.io",
     "repository_Url": null,
-    "run_id": "11133599904",
-    "run_number": "273",
+    "run_id": "11133777822",
+    "run_number": "274",
     "run_attempt": "1",
     "artifact_cache_size_limit": "10",
     "actor": "CCheukKa",
@@ -13,8 +13,8 @@
     "workflow": "Full CI pipeline",
     "event_name": "push",
     "event": {
-        "after": "50041b6e1a82a10dc21e85b275de6553c382cba3",
-        "before": "ab757bd7ac296998cf083b61d7c958f829ee15f2",
+        "after": "4dc1413d2328cbb77f4745b102547e407151c01e",
+        "before": "8535b7655158fb8e434a9153b6ae1c4c87854295",
         "commits": [
             {
                 "author": {
@@ -28,14 +28,14 @@
                     "username": "CCheukKa"
                 },
                 "distinct": true,
-                "id": "50041b6e1a82a10dc21e85b275de6553c382cba3",
-                "message": "re-encode pdf to decrease file size",
-                "timestamp": "2024-10-02T05:16:27+08:00",
-                "tree_id": "17ecca37c7ed3c5bf9271082919740e348f4e084",
-                "url": "https://github.com/ResiSense/ResiSense.github.io/commit/50041b6e1a82a10dc21e85b275de6553c382cba3"
+                "id": "4dc1413d2328cbb77f4745b102547e407151c01e",
+                "message": "rename file",
+                "timestamp": "2024-10-02T05:29:55+08:00",
+                "tree_id": "c7bd159dd4313bd92758e0e502574b95e49e56d7",
+                "url": "https://github.com/ResiSense/ResiSense.github.io/commit/4dc1413d2328cbb77f4745b102547e407151c01e"
             }
         ],
-        "compare": "https://github.com/ResiSense/ResiSense.github.io/compare/ab757bd7ac29...50041b6e1a82",
+        "compare": "https://github.com/ResiSense/ResiSense.github.io/compare/8535b7655158...4dc1413d2328",
         "created": false,
         "deleted": false,
         "forced": false,
@@ -51,11 +51,11 @@
                 "username": "CCheukKa"
             },
             "distinct": true,
-            "id": "50041b6e1a82a10dc21e85b275de6553c382cba3",
-            "message": "re-encode pdf to decrease file size",
-            "timestamp": "2024-10-02T05:16:27+08:00",
-            "tree_id": "17ecca37c7ed3c5bf9271082919740e348f4e084",
-            "url": "https://github.com/ResiSense/ResiSense.github.io/commit/50041b6e1a82a10dc21e85b275de6553c382cba3"
+            "id": "4dc1413d2328cbb77f4745b102547e407151c01e",
+            "message": "rename file",
+            "timestamp": "2024-10-02T05:29:55+08:00",
+            "tree_id": "c7bd159dd4313bd92758e0e502574b95e49e56d7",
+            "url": "https://github.com/ResiSense/ResiSense.github.io/commit/4dc1413d2328cbb77f4745b102547e407151c01e"
         },
         "pusher": {
             "email": "ccheukka@gmail.com",
@@ -68,6 +68,6 @@
     "ref_type": "branch",
     "secret_source": "Actions",
     "workflow_ref": "ResiSense/ResiSense.github.io/.github/workflows/full-ci-pipeline.yaml@refs/heads/main",
-    "workflow_sha": "50041b6e1a82a10dc21e85b275de6553c382cba3",
+    "workflow_sha": "4dc1413d2328cbb77f4745b102547e407151c01e",
     "workspace": "/home/runner/work/ResiSense.github.io/ResiSense.github.io"
 }
