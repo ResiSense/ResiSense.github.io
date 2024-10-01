@@ -1,5 +1,9 @@
 This page holds miscellaneous resources, serving as a download hub.
 
+# Additional Information
+
+Below only lists the resources we deemed to be of utility. For a comprehensive list of every resource that culminated this website, please visit our repositories on [GitHub](https://github.com/ResiSense/ResiSense.github.io) or [GitLab](https://gitlab.igem.org/2024/hongkong-cuhk).
+
 # Modelling Resources
 
 This section holds resources related to our [modelling](/model) efforts.
