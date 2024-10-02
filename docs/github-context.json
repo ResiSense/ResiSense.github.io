@@ -1,11 +1,11 @@
 {
     "job": "build",
     "ref": "refs/heads/main",
-    "sha": "5d6eafbbf4ce69724a0710c0ae8ba7e919321fcf",
+    "sha": "3925c70981bee07fa0fa4618684527da60baf4fc",
     "repository": "ResiSense/ResiSense.github.io",
     "repository_Url": null,
-    "run_id": "11136851505",
-    "run_number": "280",
+    "run_id": "11137044648",
+    "run_number": "281",
     "run_attempt": "1",
     "artifact_cache_size_limit": "10",
     "actor": "CCheukKa",
@@ -13,8 +13,8 @@
     "workflow": "Full CI pipeline",
     "event_name": "push",
     "event": {
-        "after": "5d6eafbbf4ce69724a0710c0ae8ba7e919321fcf",
-        "before": "c01ec3e619d88dc97d57daa89c801e0952072ff6",
+        "after": "3925c70981bee07fa0fa4618684527da60baf4fc",
+        "before": "ae2a2cef82b5d5abf836e15e691c2474b033183a",
         "commits": [
             {
                 "author": {
@@ -28,14 +28,14 @@
                     "username": "CCheukKa"
                 },
                 "distinct": true,
-                "id": "5d6eafbbf4ce69724a0710c0ae8ba7e919321fcf",
-                "message": "shuffle files",
-                "timestamp": "2024-10-02T10:34:58+08:00",
-                "tree_id": "d2ad9a99085341078b9da090d26123763cbf33c5",
-                "url": "https://github.com/ResiSense/ResiSense.github.io/commit/5d6eafbbf4ce69724a0710c0ae8ba7e919321fcf"
+                "id": "3925c70981bee07fa0fa4618684527da60baf4fc",
+                "message": "attempt to purge gitlab runner",
+                "timestamp": "2024-10-02T10:57:30+08:00",
+                "tree_id": "3cdd09cc399ee827895939fa5c5510457b617cc1",
+                "url": "https://github.com/ResiSense/ResiSense.github.io/commit/3925c70981bee07fa0fa4618684527da60baf4fc"
             }
         ],
-        "compare": "https://github.com/ResiSense/ResiSense.github.io/compare/c01ec3e619d8...5d6eafbbf4ce",
+        "compare": "https://github.com/ResiSense/ResiSense.github.io/compare/ae2a2cef82b5...3925c70981be",
         "created": false,
         "deleted": false,
         "forced": false,
@@ -51,11 +51,11 @@
                 "username": "CCheukKa"
             },
             "distinct": true,
-            "id": "5d6eafbbf4ce69724a0710c0ae8ba7e919321fcf",
-            "message": "shuffle files",
-            "timestamp": "2024-10-02T10:34:58+08:00",
-            "tree_id": "d2ad9a99085341078b9da090d26123763cbf33c5",
-            "url": "https://github.com/ResiSense/ResiSense.github.io/commit/5d6eafbbf4ce69724a0710c0ae8ba7e919321fcf"
+            "id": "3925c70981bee07fa0fa4618684527da60baf4fc",
+            "message": "attempt to purge gitlab runner",
+            "timestamp": "2024-10-02T10:57:30+08:00",
+            "tree_id": "3cdd09cc399ee827895939fa5c5510457b617cc1",
+            "url": "https://github.com/ResiSense/ResiSense.github.io/commit/3925c70981bee07fa0fa4618684527da60baf4fc"
         },
         "pusher": {
             "email": "ccheukka@gmail.com",
@@ -68,6 +68,6 @@
     "ref_type": "branch",
     "secret_source": "Actions",
     "workflow_ref": "ResiSense/ResiSense.github.io/.github/workflows/full-ci-pipeline.yaml@refs/heads/main",
-    "workflow_sha": "5d6eafbbf4ce69724a0710c0ae8ba7e919321fcf",
+    "workflow_sha": "3925c70981bee07fa0fa4618684527da60baf4fc",
     "workspace": "/home/runner/work/ResiSense.github.io/ResiSense.github.io"
 }
