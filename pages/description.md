@@ -79,7 +79,7 @@ This video is loading... Please wait.
 If the video does not load, you can also watch the video on the [iGEM video universe](https://video.igem.org/w/br2ZeGqbCSCF5SKxd5bF6G) or [YouTube](https://www.youtube.com/watch?v=sOPuCzF1nOM).
 
 </div>
-<iframe title="HongKong-CUHK: ResiSense (2024) - Project Promotion [English]" src="https://video.igem.org/videos/embed/86a95df6-730c-4d08-b456-b5297a8e0274" frameborder="0" allowfullscreen="" sandbox="allow-same-origin allow-scripts allow-popups allow-forms">
+<iframe title="HongKong-CUHK: ResiSense Mechanism Overview (2024) [English]" src="https://video.igem.org/videos/embed/547a348d-112a-46ef-afbf-f17b1e0d5a56" frameborder="0" allowfullscreen="" sandbox="allow-same-origin allow-scripts allow-popups allow-forms">
 
 If the video does not load, you can also watch the video on the [iGEM video universe](https://video.igem.org/w/br2ZeGqbCSCF5SKxd5bF6G) or [YouTube](https://www.youtube.com/watch?v=sOPuCzF1nOM).
 
