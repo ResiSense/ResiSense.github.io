@@ -1,11 +1,11 @@
 {
     "job": "build",
     "ref": "refs/heads/main",
-    "sha": "76f5bba5ee0367d7d4a97f73cdf63e710ff6406e",
+    "sha": "9ca50015d623af4f622ca51f4b2322cee7944cea",
     "repository": "ResiSense/ResiSense.github.io",
     "repository_Url": null,
-    "run_id": "11143318453",
-    "run_number": "310",
+    "run_id": "11143447876",
+    "run_number": "311",
     "run_attempt": "1",
     "artifact_cache_size_limit": "10",
     "actor": "CCheukKa",
@@ -13,8 +13,8 @@
     "workflow": "Full CI pipeline",
     "event_name": "push",
     "event": {
-        "after": "76f5bba5ee0367d7d4a97f73cdf63e710ff6406e",
-        "before": "4dee5d2e4737e5496c34234ae5a635db50f22d9f",
+        "after": "9ca50015d623af4f622ca51f4b2322cee7944cea",
+        "before": "38f416bd8d02192437cb3666ffdf1019e9b6066c",
         "commits": [
             {
                 "author": {
@@ -28,14 +28,14 @@
                     "username": "CCheukKa"
                 },
                 "distinct": true,
-                "id": "76f5bba5ee0367d7d4a97f73cdf63e710ff6406e",
-                "message": "uncurse logo",
-                "timestamp": "2024-10-02T19:57:21+08:00",
-                "tree_id": "8c111dbbc6527309597624890997633f865f075a",
-                "url": "https://github.com/ResiSense/ResiSense.github.io/commit/76f5bba5ee0367d7d4a97f73cdf63e710ff6406e"
+                "id": "9ca50015d623af4f622ca51f4b2322cee7944cea",
+                "message": "bypass sls logo nonsense",
+                "timestamp": "2024-10-02T20:06:37+08:00",
+                "tree_id": "9488866565b7dd199ea740ceeb7960a1cf7d0f1b",
+                "url": "https://github.com/ResiSense/ResiSense.github.io/commit/9ca50015d623af4f622ca51f4b2322cee7944cea"
             }
         ],
-        "compare": "https://github.com/ResiSense/ResiSense.github.io/compare/4dee5d2e4737...76f5bba5ee03",
+        "compare": "https://github.com/ResiSense/ResiSense.github.io/compare/38f416bd8d02...9ca50015d623",
         "created": false,
         "deleted": false,
         "forced": false,
@@ -51,11 +51,11 @@
                 "username": "CCheukKa"
             },
             "distinct": true,
-            "id": "76f5bba5ee0367d7d4a97f73cdf63e710ff6406e",
-            "message": "uncurse logo",
-            "timestamp": "2024-10-02T19:57:21+08:00",
-            "tree_id": "8c111dbbc6527309597624890997633f865f075a",
-            "url": "https://github.com/ResiSense/ResiSense.github.io/commit/76f5bba5ee0367d7d4a97f73cdf63e710ff6406e"
+            "id": "9ca50015d623af4f622ca51f4b2322cee7944cea",
+            "message": "bypass sls logo nonsense",
+            "timestamp": "2024-10-02T20:06:37+08:00",
+            "tree_id": "9488866565b7dd199ea740ceeb7960a1cf7d0f1b",
+            "url": "https://github.com/ResiSense/ResiSense.github.io/commit/9ca50015d623af4f622ca51f4b2322cee7944cea"
         },
         "pusher": {
             "email": "ccheukka@gmail.com",
@@ -68,6 +68,6 @@
     "ref_type": "branch",
     "secret_source": "Actions",
     "workflow_ref": "ResiSense/ResiSense.github.io/.github/workflows/full-ci-pipeline.yaml@refs/heads/main",
-    "workflow_sha": "76f5bba5ee0367d7d4a97f73cdf63e710ff6406e",
+    "workflow_sha": "9ca50015d623af4f622ca51f4b2322cee7944cea",
     "workspace": "/home/runner/work/ResiSense.github.io/ResiSense.github.io"
 }
