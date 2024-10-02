@@ -58,7 +58,7 @@
         window.location.pathname.split('/').includes('404') &&
             (document.querySelector('painted-outline').style.visibility = 'hidden');
         let e = document.getElementById('outline-progress-pointer'),
-            t = document.querySelector('painted-content')?.querySelectorAll('h1, h2, h3, h4, h5, h6');
+            t = document.querySelector('painted-content')?.querySelectorAll('h1, h2, h3');
         function r() {
             if (!t || !e) return;
             let n =
