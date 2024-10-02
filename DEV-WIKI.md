@@ -164,7 +164,7 @@ Feel free to make changes here as a test if you wish. (This file is `/DEV-WIKI.m
 Sign here if you read this:
 - CCheukKa was here.
 - The most important things in the world are Ka and sleep (by Tommy.2024)
-- Coming in the final 5.5 hrs before wiki freeze (Ricky, 2024)
+- Coming in the final 5 hrs before wiki freeze (Ricky, 2024)
 ```
 
 ## Post-commit CI
