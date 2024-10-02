@@ -130,7 +130,8 @@
             "includes": {
                 "css": [
                     "/styles/figures.css",
-                    "/styles/flavour-text.css"
+                    "/styles/flavour-text.css",
+                    "/styles/results.css"
                 ]
             }
         },
