@@ -9,7 +9,7 @@ import { convertToPixels } from "./globalLibrary";
     const HEADING_TOLERANCE_PX = 1;
 
     const outlineProgressPointerElement = document.getElementById('outline-progress-pointer');
-    const contentHeadingElements = document.querySelector('painted-content')?.querySelectorAll('h1, h2, h3, h4, h5, h6');
+    const contentHeadingElements = document.querySelector('painted-content')?.querySelectorAll('h1, h2, h3');
     window.addEventListener('DOMContentLoaded', calculateProgressOutlineElementPosition);
     window.addEventListener('scroll', calculateProgressOutlineElementPosition);
     function calculateProgressOutlineElementPosition() {

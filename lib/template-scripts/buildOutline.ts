@@ -27,6 +27,7 @@ export default function (pageData: PageData) {
         aElement.textContent = heading.textContent;
         aElement.id = `--outline-${heading.id}`;
 
+        if (level > 2) { return; }
         if (level === 0) {
             outlineTreeElement.appendChild(currentElement);
             currentElements[level] = outlineTreeElement.lastElementChild as HTMLElement;
