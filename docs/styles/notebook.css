@@ -1,7 +1,0 @@
-painted-content {
-    & table {
-        --left-margin: 40px;
-        margin-inline-start: var(--left-margin);
-        width: calc(100% - var(--left-margin));
-    }
-}
