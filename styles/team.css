@@ -4,8 +4,11 @@ main {
     min-width: 80vw !important;
 }
 
+h1,
+h2,
 .sticky {
     position: initial !important;
+
 }
 
 .sticky::before {
@@ -27,7 +30,6 @@ h1 {
         background-color: var(--bright-brown);
         display: grid;
         grid-template-columns: 1fr 1fr;
-        grid-template-rows: 3lh 3lh auto;
         padding: 3rem;
         padding-right: 1rem;
         box-sizing: border-box;
@@ -40,7 +42,6 @@ h1 {
         }
 
         &>.pic {
-            grid-row: 1/4;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -128,33 +129,40 @@ h1 {
             }
         }
 
-        &>.info {
-            &>h2 {
-                position: initial !important;
-                font-size: 2rem;
-                line-height: 2rem;
-            }
-        }
+        &>.right-wrapper {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: start;
 
-        &>.role {
-            font-weight: bold;
-        }
-
-        &>.quote {
-            &>p {
-                text-align: left;
-                /* font-style: italic; */
-
-                &::before {
-                    content: '“';
-                    margin-right: 2px;
-                    font-weight: bold;
+            &>.info {
+                &>h2 {
+                    position: initial !important;
+                    font-size: 2rem;
+                    line-height: 2rem;
                 }
+            }
 
-                &::after {
-                    content: '”';
-                    margin-left: 2px;
-                    font-weight: bold;
+            &>.role {
+                font-weight: bold;
+            }
+
+            &>.quote {
+                &>p {
+                    text-align: left;
+                    /* font-style: italic; */
+
+                    &::before {
+                        content: '“';
+                        margin-right: 2px;
+                        font-weight: bold;
+                    }
+
+                    &::after {
+                        content: '”';
+                        margin-left: 2px;
+                        font-weight: bold;
+                    }
                 }
             }
         }
