@@ -1,11 +1,11 @@
 {
     "job": "build",
     "ref": "refs/heads/main",
-    "sha": "50aa1ca0b1352ef87853e70f91e25f8e1ea233ab",
+    "sha": "455bd9054997fd1036d0452ab8675aa49fa536a1",
     "repository": "ResiSense/ResiSense.github.io",
     "repository_Url": null,
-    "run_id": "11142312929",
-    "run_number": "301",
+    "run_id": "11142668306",
+    "run_number": "302",
     "run_attempt": "1",
     "artifact_cache_size_limit": "10",
     "actor": "CCheukKa",
@@ -13,9 +13,27 @@
     "workflow": "Full CI pipeline",
     "event_name": "push",
     "event": {
-        "after": "50aa1ca0b1352ef87853e70f91e25f8e1ea233ab",
-        "before": "1bc45cf6a53d7349e7e1f489e882061fcfa589cd",
+        "after": "455bd9054997fd1036d0452ab8675aa49fa536a1",
+        "before": "c46433f7da7f06eb54c9e0dc1f088074758cfd31",
         "commits": [
+            {
+                "author": {
+                    "email": "4a16dick@gmail.com",
+                    "name": "Ricky Leung",
+                    "username": "4a16dick"
+                },
+                "committer": {
+                    "email": "4a16dick@gmail.com",
+                    "name": "Ricky Leung",
+                    "username": "4a16dick"
+                },
+                "distinct": false,
+                "id": "9f34afa8191c6f27904c153e53409cfb88e44667",
+                "message": "Added (very crude) support for small screen sizes for home page",
+                "timestamp": "2024-10-02T18:50:27+08:00",
+                "tree_id": "9bebf04d0ea0945b8ad73767e024884705e3e371",
+                "url": "https://github.com/ResiSense/ResiSense.github.io/commit/9f34afa8191c6f27904c153e53409cfb88e44667"
+            },
             {
                 "author": {
                     "email": "ccheukka@gmail.com",
@@ -27,15 +45,33 @@
                     "name": "CCheukKa",
                     "username": "CCheukKa"
                 },
+                "distinct": false,
+                "id": "22d5a92f463c5148d4a8b1ba1f94b043bfd3a286",
+                "message": "Merge remote-tracking branch origin/main into crude-responsive",
+                "timestamp": "2024-10-02T19:05:48+08:00",
+                "tree_id": "71f4632a097b0fda96f64d861faf2aa450513cbf",
+                "url": "https://github.com/ResiSense/ResiSense.github.io/commit/22d5a92f463c5148d4a8b1ba1f94b043bfd3a286"
+            },
+            {
+                "author": {
+                    "email": "ccheukka@gmail.com",
+                    "name": "CCheukKa",
+                    "username": "CCheukKa"
+                },
+                "committer": {
+                    "email": "noreply@github.com",
+                    "name": "GitHub",
+                    "username": "web-flow"
+                },
                 "distinct": true,
-                "id": "50aa1ca0b1352ef87853e70f91e25f8e1ea233ab",
-                "message": "jank hotfix",
-                "timestamp": "2024-10-02T18:39:23+08:00",
-                "tree_id": "c5dbea3458a04d205c15a5cde27b9b5f69538334",
-                "url": "https://github.com/ResiSense/ResiSense.github.io/commit/50aa1ca0b1352ef87853e70f91e25f8e1ea233ab"
+                "id": "455bd9054997fd1036d0452ab8675aa49fa536a1",
+                "message": "Merge pull request #221 from ResiSense/crude-responsive\n\nAdded (very crude) support for small screen sizes for home page",
+                "timestamp": "2024-10-02T19:07:19+08:00",
+                "tree_id": "71f4632a097b0fda96f64d861faf2aa450513cbf",
+                "url": "https://github.com/ResiSense/ResiSense.github.io/commit/455bd9054997fd1036d0452ab8675aa49fa536a1"
             }
         ],
-        "compare": "https://github.com/ResiSense/ResiSense.github.io/compare/1bc45cf6a53d...50aa1ca0b135",
+        "compare": "https://github.com/ResiSense/ResiSense.github.io/compare/c46433f7da7f...455bd9054997",
         "created": false,
         "deleted": false,
         "forced": false,
@@ -46,16 +82,16 @@
                 "username": "CCheukKa"
             },
             "committer": {
-                "email": "ccheukka@gmail.com",
-                "name": "CCheukKa",
-                "username": "CCheukKa"
+                "email": "noreply@github.com",
+                "name": "GitHub",
+                "username": "web-flow"
             },
             "distinct": true,
-            "id": "50aa1ca0b1352ef87853e70f91e25f8e1ea233ab",
-            "message": "jank hotfix",
-            "timestamp": "2024-10-02T18:39:23+08:00",
-            "tree_id": "c5dbea3458a04d205c15a5cde27b9b5f69538334",
-            "url": "https://github.com/ResiSense/ResiSense.github.io/commit/50aa1ca0b1352ef87853e70f91e25f8e1ea233ab"
+            "id": "455bd9054997fd1036d0452ab8675aa49fa536a1",
+            "message": "Merge pull request #221 from ResiSense/crude-responsive\n\nAdded (very crude) support for small screen sizes for home page",
+            "timestamp": "2024-10-02T19:07:19+08:00",
+            "tree_id": "71f4632a097b0fda96f64d861faf2aa450513cbf",
+            "url": "https://github.com/ResiSense/ResiSense.github.io/commit/455bd9054997fd1036d0452ab8675aa49fa536a1"
         },
         "pusher": {
             "email": "ccheukka@gmail.com",
@@ -68,6 +104,6 @@
     "ref_type": "branch",
     "secret_source": "Actions",
     "workflow_ref": "ResiSense/ResiSense.github.io/.github/workflows/full-ci-pipeline.yaml@refs/heads/main",
-    "workflow_sha": "50aa1ca0b1352ef87853e70f91e25f8e1ea233ab",
+    "workflow_sha": "455bd9054997fd1036d0452ab8675aa49fa536a1",
     "workspace": "/home/runner/work/ResiSense.github.io/ResiSense.github.io"
 }

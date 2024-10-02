@@ -75,6 +75,14 @@
 
         .big {
             font-size: 4rem;
+
+            @media screen and (max-width: 768px) {
+                font-size: 5vh;
+            }
+
+            @media screen and (max-width: 500px) {
+                font-size: 3.5vh;
+            }
         }
 
         & * {
@@ -159,14 +167,36 @@
                         transform: translateY(-0.2em);
                         height: 5.2rem !important;
                         font-size: 6rem !important;
+
+                        @media screen and (max-width: 768px) {
+                            font-size: 7vh !important;
+                        }
+
+                        @media screen and (max-width: 500px) {
+                            font-size: 4.5vh !important;
+                        }
                     }
 
                     & .row-2 {
-                        transform: translateY(1.2em);
+                        transform: translateY(9vh);
+                        @media screen and (max-width: 768px) {
+                            font-size: 4vh !important;
+                        }
+
+                        @media screen and (max-width: 500px) {
+                            font-size: 2.5vh !important;
+                        }
                     }
 
                     & .row-3 {
-                        transform: translateY(2.2em);
+                        transform: translateY(16vh) translateX(3vw);
+                        @media screen and (max-width: 768px) {
+                            font-size: 4vh !important;
+                        }
+
+                        @media screen and (max-width: 500px) {
+                            font-size: 2.5vh !important;
+                        }
                     }
 
                     & > #sticker-container {
@@ -363,6 +393,11 @@
                 height: 60vh;
                 width: 60vh;
 
+                @media screen and (max-width: 768px) {
+                    height: 20vh;
+                    width: 20vh;
+                }
+
                 & > * {
                     position: absolute;
                 }
@@ -496,6 +531,10 @@
                 animation-timing-function: var(--exp-ease-in);
                 overflow: hidden;
 
+                @media screen and (max-width: 768px) {
+                    width: 60%;
+                }
+
                 & > * {
                     text-align: center;
                     position: absolute;
@@ -560,6 +599,18 @@
                 animation-name: exist, technology;
                 transform: translate(0, 0);
                 animation-timing-function: var(--exp-ease-in);
+
+                & > p {
+                    @media screen and (max-width: 768px) {
+                        font-size: 3vh;
+                        width: 40vw;
+                    }
+
+                    @media screen and (max-width: 500px) {
+                        font-size: 2.5vh;
+                        width: 40vw;
+                    }
+                }
             }
 
             #tech-grid {
@@ -575,6 +626,10 @@
                 justify-content: space-between;
                 align-items: center;
                 gap: 2rem;
+
+                @media screen and (max-width: 768px) {
+                    width: 55%;
+                }
 
                 & > div {
                     background-color: var(--bright-brown);
@@ -604,6 +659,16 @@
                         margin: -1px 0;
                         padding: 1px 1rem;
                         background-color: var(--white);
+
+                        @media screen and (max-width: 768px) {
+                            max-width: 90%;
+                            font-size: 3vh;
+                        }
+
+                        @media screen and (max-width: 500px) {
+                            max-width: 80%;
+                            font-size: 2vh;
+                        }
                     }
                 }
 
@@ -650,6 +715,18 @@
                         text-align: center;
                         animation-name: pcr-bad;
                         animation-timing-function: var(--exp-ease-in);
+                    }
+                }
+                #mic-bad,
+                #pcr-bad {
+                    @media screen and (max-width: 768px) {
+                        max-width: 90%;
+                        font-size: 3vh;
+                    }
+
+                    @media screen and (max-width: 500px) {
+                        max-width: 90%;
+                        font-size: 1.75vh;
                     }
                 }
             }
@@ -826,6 +903,33 @@
                     #globe- {
                         animation-name: globe-;
                         animation-timing-function: ease-in-out;
+                    }
+                }
+                #choose-text,
+                #spread-text,
+                #accessibility-text {
+                    @media screen and (max-width: 768px) {
+                        max-width: 90%;
+                        font-size: 3vh;
+
+                        .bold.orange.big {
+                            font-size: 4vh;
+                        }
+                    }
+
+                    @media screen and (max-width: 500px) {
+                        max-width: 90%;
+                        font-size: 2vh;
+
+                        .bold.orange.big {
+                            font-size: 3vh;
+                        }
+                    }
+                }
+
+                #accessibility-text > p {
+                    @media screen and (max-width: 768px) {
+                        font-size: 2.5vh;
                     }
                 }
             }

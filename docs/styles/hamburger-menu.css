@@ -56,6 +56,13 @@ painted-hamburger-menu {
                 border-width: 0.2em;
             }
 
+            @media screen and (max-width: 768px) {
+                font-size: 3.5vh;
+                margin-top: 1em;
+                border-radius: 1em;
+                border-width: 0.2em;
+            }
+
             &:not([open]) {
                 pointer-events: none;
                 opacity: 0;
