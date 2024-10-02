@@ -87,12 +87,19 @@
         }
 
         &>* {
-            position: fixed;
+            --exp-ease-in: cubic-bezier(0, 0, .1, 1);
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
             transform-origin: top left;
-            --exp-ease-in: cubic-bezier(0, 0, .1, 1);
+        }
+
+        &.anchored>* {
+            position: absolute;
+        }
+
+        &.fixed>* {
+            position: fixed;
         }
 
         &#s1 {
