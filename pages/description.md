@@ -58,11 +58,34 @@ With this regard, we consider *Klebsiella pneumoniae* as our **starting focus** 
 
 We are developing a point-of-care test kit, **ResiSense**, for more efficient screening using **cell-free systems**. This proposed testing system consists of **target gene extraction**, **rolling circle amplification (RCA)**, and **signal expression**.  
 
+## Mechanism of Action
+
 ![Diagram Overview of Mechanism](../assets/diagrams/mechanism.png)  
 
 After cell **lysis releases bacterial DNA**, a snippet of the target gene responsible for antibiotic resistance is cut using a pair of **restriction enzymes and nickase**. The **Φ-29 polymerase aids in releasing the target gene** as ss-DNA. This target gene serves as a **primer** and triggers the formation of **peroxidase-mimicking DNAzymes, G-quadruplex** through rolling circle amplification (RCA). Finally, the G-quadruplex DNAzymes cause an **observable colour change in the solution**, indicating the presence of antibiotic-resistant genes in bacteria.  
 
 All processes in our detection system are designed to occur in **isothermal conditions**, specifically at **room temperature**, and **do not require dedicated, large on-site hardware**. Our aim is to create a **versatile, easily programmable system** that can adapt to various settings and detect a wide range of antibiotic resistance genes, starting with those related to *Klebsiella pneumoniae*.  
+
+## Explainer Video
+
+Please feel free to watch this video for an animated explanation of our project. You can also watch the video on the [iGEM video universe](https://video.igem.org/w/br2ZeGqbCSCF5SKxd5bF6G) or [YouTube](https://www.youtube.com/watch?v=sOPuCzF1nOM).  
+
+<div id="video-container">
+<div id="video">
+<div id="buffer">
+
+This video is loading... Please wait.  
+
+If the video does not load, you can also watch the video on the [iGEM video universe](https://video.igem.org/w/br2ZeGqbCSCF5SKxd5bF6G) or [YouTube](https://www.youtube.com/watch?v=sOPuCzF1nOM).
+
+</div>
+<iframe title="HongKong-CUHK: ResiSense Mechanism Overview (2024) [English]" src="https://video.igem.org/videos/embed/547a348d-112a-46ef-afbf-f17b1e0d5a56" frameborder="0" allowfullscreen="" sandbox="allow-same-origin allow-scripts allow-popups allow-forms">
+
+If the video does not load, you can also watch the video on the [iGEM video universe](https://video.igem.org/w/br2ZeGqbCSCF5SKxd5bF6G) or [YouTube](https://www.youtube.com/watch?v=sOPuCzF1nOM).
+
+</iframe>
+</div>
+</div>
 
 ## Choice of Target Bacterium and Gene Fragment
 

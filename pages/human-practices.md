@@ -4,9 +4,15 @@ Integrated human practices refer to the collaborations with various parties with
 
 Our team, Resisense, is deeply committed to addressing the critical needs of our community and the world at large. To secure our project's success, we conducted extensive human practice interviews to understand the intricate details of detecting antibiotic resistance genes and the points of concern of implementing our kits in practice.  
 
+It is with sincerity that we say the success of our project is indebted to our human practice interviews. By investing time and effort into these conversations, the invaluable knowledge and broad perspectives we gathered enriched our project greatly, particularly in our wet lab and education events.  
+
+## Cornerstones
+
 We are acutely aware that antibiotic resistance is not just a complex issue but also a pressing one. Our human practice research is far from a mere formality but the cornerstone of our **probe selection**, **kit design**, **market analysis**, and **outreaching education**.  
 
 ![Human Practice Cornerstones](/assets/diagrams/hp-cornerstone.svg)
+
+## Integration Cycle
 
 Our integrated human practice consists of 4 steps: **literature review and brainstorm**, **implementation**, **expert consultations**, and **project modification**. We heavily emphasises the connection of our project design with the **actual needs of society**. In this regard, we consulted numerous experts to invent a product that provides maximum impact to society and matches the requirements of various stakeholders.  
 
@@ -16,7 +22,13 @@ Our integrated human practice consists of 4 steps: **literature review and brain
 
 </div>
 
-It is with sincerity that we say the success of our project is indebted to our human practice interviews. By investing time and effort into these conversations, the invaluable knowledge and broad perspectives we gathered enriched our project greatly, particularly in our wet lab and education events.  
+## Timeline
+
+<div class="hp-timeline">
+
+![Integrated Human Practice Timeline](/assets/diagrams/hp-timeline.svg)  
+
+</div>
 
 # Interviews
 
