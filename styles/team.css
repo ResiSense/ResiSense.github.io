@@ -36,6 +36,7 @@ h1 {
         overflow: hidden;
         column-gap: 2rem;
         border-radius: 1rem;
+        min-height: 20rem;
 
         * {
             line-height: 1.4rem;
@@ -92,7 +93,7 @@ h1 {
                 }
 
                 &#jeffrey {
-                    scale: 1.1;
+                    scale: 1.05;
                 }
 
                 &#raymond {
