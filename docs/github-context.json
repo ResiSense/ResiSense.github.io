@@ -1,11 +1,11 @@
 {
     "job": "build",
     "ref": "refs/heads/main",
-    "sha": "c06edcc8458fa82557fb581b356e0a73b90de361",
+    "sha": "c14b002f0e505fcc0cef185515d923d22dfd2deb",
     "repository": "ResiSense/ResiSense.github.io",
     "repository_Url": null,
-    "run_id": "11137466631",
-    "run_number": "286",
+    "run_id": "11137957431",
+    "run_number": "287",
     "run_attempt": "1",
     "artifact_cache_size_limit": "10",
     "actor": "CCheukKa",
@@ -13,8 +13,8 @@
     "workflow": "Full CI pipeline",
     "event_name": "push",
     "event": {
-        "after": "c06edcc8458fa82557fb581b356e0a73b90de361",
-        "before": "404e2e260b8ef499b48fb9dec593e92b05bc7d08",
+        "after": "c14b002f0e505fcc0cef185515d923d22dfd2deb",
+        "before": "76b77aa25cb2d0cc3963d6b7080245861d3da91b",
         "commits": [
             {
                 "author": {
@@ -28,14 +28,14 @@
                     "username": "CCheukKa"
                 },
                 "distinct": true,
-                "id": "c06edcc8458fa82557fb581b356e0a73b90de361",
-                "message": "changed sls logo",
-                "timestamp": "2024-10-02T11:43:56+08:00",
-                "tree_id": "c36964dcf0b2d0e13805423dcefefab46598b616",
-                "url": "https://github.com/ResiSense/ResiSense.github.io/commit/c06edcc8458fa82557fb581b356e0a73b90de361"
+                "id": "c14b002f0e505fcc0cef185515d923d22dfd2deb",
+                "message": "fix clipping",
+                "timestamp": "2024-10-02T12:42:55+08:00",
+                "tree_id": "70e84e58d5e20bf8aa34faf2afd18e0a61628c30",
+                "url": "https://github.com/ResiSense/ResiSense.github.io/commit/c14b002f0e505fcc0cef185515d923d22dfd2deb"
             }
         ],
-        "compare": "https://github.com/ResiSense/ResiSense.github.io/compare/404e2e260b8e...c06edcc8458f",
+        "compare": "https://github.com/ResiSense/ResiSense.github.io/compare/76b77aa25cb2...c14b002f0e50",
         "created": false,
         "deleted": false,
         "forced": false,
@@ -51,11 +51,11 @@
                 "username": "CCheukKa"
             },
             "distinct": true,
-            "id": "c06edcc8458fa82557fb581b356e0a73b90de361",
-            "message": "changed sls logo",
-            "timestamp": "2024-10-02T11:43:56+08:00",
-            "tree_id": "c36964dcf0b2d0e13805423dcefefab46598b616",
-            "url": "https://github.com/ResiSense/ResiSense.github.io/commit/c06edcc8458fa82557fb581b356e0a73b90de361"
+            "id": "c14b002f0e505fcc0cef185515d923d22dfd2deb",
+            "message": "fix clipping",
+            "timestamp": "2024-10-02T12:42:55+08:00",
+            "tree_id": "70e84e58d5e20bf8aa34faf2afd18e0a61628c30",
+            "url": "https://github.com/ResiSense/ResiSense.github.io/commit/c14b002f0e505fcc0cef185515d923d22dfd2deb"
         },
         "pusher": {
             "email": "ccheukka@gmail.com",
@@ -68,6 +68,6 @@
     "ref_type": "branch",
     "secret_source": "Actions",
     "workflow_ref": "ResiSense/ResiSense.github.io/.github/workflows/full-ci-pipeline.yaml@refs/heads/main",
-    "workflow_sha": "c06edcc8458fa82557fb581b356e0a73b90de361",
+    "workflow_sha": "c14b002f0e505fcc0cef185515d923d22dfd2deb",
     "workspace": "/home/runner/work/ResiSense.github.io/ResiSense.github.io"
 }
