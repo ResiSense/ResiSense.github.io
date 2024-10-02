@@ -1,0 +1,128 @@
+main {
+    background: none !important;
+    padding: 0 !important;
+    min-width: 80vw !important;
+}
+
+.sticky {
+    position: initial !important;
+}
+
+.sticky::before {
+    box-shadow: none !important;
+    background: none !important;
+}
+
+.team {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 2rem;
+
+    & > .card {
+        background-color: var(--bright-brown);
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 3lh 3lh auto;
+        padding: 3rem;
+        padding-right: 1rem;
+        box-sizing: border-box;
+        overflow: hidden;
+        column-gap: 2rem;
+
+        * {
+            line-height: 1.4rem;
+        }
+
+        & > .pic {
+            grid-row: 1/4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            isolation: isolate;
+            overflow: visible;
+            z-index: 0;
+
+            & > img {
+                position: absolute;
+
+                &#ricky {
+                    scale: 1;
+                }
+
+                &#michelle {
+                    scale: 1.2;
+                    translate: 0 1rem;
+                }
+
+                &#martin {
+                    scale: 1.05;
+                }
+
+                &#fiona {
+                    scale: 1.05;
+                }
+
+                &#tommy {
+                    scale: 1.15;
+                }
+
+                &#ka {
+                    scale: 1.1;
+                }
+
+                &#angle {
+                    scale: 1.05;
+                }
+
+                &#gordon {
+                    scale: 1.15;
+                    translate: -0.5rem 0;
+                }
+
+                &#courtney {
+                    scale: 1.1;
+                }
+
+                &#jeffrey {
+                    scale: 1.1;
+                }
+
+                &#raymond {
+                    scale: 1.15;
+                }
+            }
+        }
+
+        & > .info {
+            & > h2 {
+                position: initial !important;
+                font-size: 2rem;
+                line-height: 2rem;
+            }
+        }
+
+        & > .role {
+            font-weight: bold;
+        }
+
+        & > .quote {
+            & > p {
+                text-align: left;
+                /* font-style: italic; */
+
+                &::before {
+                    content: '“';
+                    margin-right: 2px;
+                    font-weight: bold;
+                }
+
+                &::after {
+                    content: '”';
+                    margin-left: 2px;
+                    font-weight: bold;
+                }
+            }
+        }
+    }
+}
