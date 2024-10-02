@@ -1,11 +1,11 @@
 {
     "job": "build",
     "ref": "refs/heads/main",
-    "sha": "2afa2dda1285d5ba7d2fbedd5470db165671b3ef",
+    "sha": "1a6feec9cdb38ff56515d507aebfe2ab1d9084f9",
     "repository": "ResiSense/ResiSense.github.io",
     "repository_Url": null,
-    "run_id": "11138623557",
-    "run_number": "292",
+    "run_id": "11140613562",
+    "run_number": "293",
     "run_attempt": "1",
     "artifact_cache_size_limit": "10",
     "actor": "CCheukKa",
@@ -13,8 +13,8 @@
     "workflow": "Full CI pipeline",
     "event_name": "push",
     "event": {
-        "after": "2afa2dda1285d5ba7d2fbedd5470db165671b3ef",
-        "before": "016408d933f5fc6fb7204abfd4d7f7693c38f212",
+        "after": "1a6feec9cdb38ff56515d507aebfe2ab1d9084f9",
+        "before": "c2289e579173c0e34571921b7e1ba4891cbbd93a",
         "commits": [
             {
                 "author": {
@@ -28,32 +28,14 @@
                     "username": "CCheukKa"
                 },
                 "distinct": true,
-                "id": "8cc282d41d7d2c7e08d182220c2622893130befd",
-                "message": "add prof & TA",
-                "timestamp": "2024-10-02T14:00:15+08:00",
-                "tree_id": "6ec8f2fc188f66043bd52f9eef1eeccc1d14fcc0",
-                "url": "https://github.com/ResiSense/ResiSense.github.io/commit/8cc282d41d7d2c7e08d182220c2622893130befd"
-            },
-            {
-                "author": {
-                    "email": "ccheukka@gmail.com",
-                    "name": "CCheukKa",
-                    "username": "CCheukKa"
-                },
-                "committer": {
-                    "email": "ccheukka@gmail.com",
-                    "name": "CCheukKa",
-                    "username": "CCheukKa"
-                },
-                "distinct": true,
-                "id": "2afa2dda1285d5ba7d2fbedd5470db165671b3ef",
-                "message": "Merge branch main of https://github.com/ResiSense/ResiSense.github.io",
-                "timestamp": "2024-10-02T14:00:18+08:00",
-                "tree_id": "5c5dcae7b13e15fc8b9e9f4967288f295ded5208",
-                "url": "https://github.com/ResiSense/ResiSense.github.io/commit/2afa2dda1285d5ba7d2fbedd5470db165671b3ef"
+                "id": "1a6feec9cdb38ff56515d507aebfe2ab1d9084f9",
+                "message": "empty",
+                "timestamp": "2024-10-02T08:41:15Z",
+                "tree_id": "b1c9fffa2abcebe579fcbd775e0f756a755fc036",
+                "url": "https://github.com/ResiSense/ResiSense.github.io/commit/1a6feec9cdb38ff56515d507aebfe2ab1d9084f9"
             }
         ],
-        "compare": "https://github.com/ResiSense/ResiSense.github.io/compare/016408d933f5...2afa2dda1285",
+        "compare": "https://github.com/ResiSense/ResiSense.github.io/compare/c2289e579173...1a6feec9cdb3",
         "created": false,
         "deleted": false,
         "forced": false,
@@ -69,11 +51,11 @@
                 "username": "CCheukKa"
             },
             "distinct": true,
-            "id": "2afa2dda1285d5ba7d2fbedd5470db165671b3ef",
-            "message": "Merge branch main of https://github.com/ResiSense/ResiSense.github.io",
-            "timestamp": "2024-10-02T14:00:18+08:00",
-            "tree_id": "5c5dcae7b13e15fc8b9e9f4967288f295ded5208",
-            "url": "https://github.com/ResiSense/ResiSense.github.io/commit/2afa2dda1285d5ba7d2fbedd5470db165671b3ef"
+            "id": "1a6feec9cdb38ff56515d507aebfe2ab1d9084f9",
+            "message": "empty",
+            "timestamp": "2024-10-02T08:41:15Z",
+            "tree_id": "b1c9fffa2abcebe579fcbd775e0f756a755fc036",
+            "url": "https://github.com/ResiSense/ResiSense.github.io/commit/1a6feec9cdb38ff56515d507aebfe2ab1d9084f9"
         },
         "pusher": {
             "email": "ccheukka@gmail.com",
@@ -86,6 +68,6 @@
     "ref_type": "branch",
     "secret_source": "Actions",
     "workflow_ref": "ResiSense/ResiSense.github.io/.github/workflows/full-ci-pipeline.yaml@refs/heads/main",
-    "workflow_sha": "2afa2dda1285d5ba7d2fbedd5470db165671b3ef",
+    "workflow_sha": "1a6feec9cdb38ff56515d507aebfe2ab1d9084f9",
     "workspace": "/home/runner/work/ResiSense.github.io/ResiSense.github.io"
 }
