@@ -1,0 +1,51 @@
+#video-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 2rem;
+
+    #video {
+        border-radius: 1rem;
+        padding: 0;
+        margin: 0;
+        width: fit-content;
+        height: fit-content;
+        overflow: hidden;
+        border: none;
+        height: 50vh;
+        aspect-ratio: 16/9;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        iframe {
+            height: 100%;
+            width: 100%;
+            margin: 0;
+            padding: 0;
+            border: none;
+            z-index: 1;
+        }
+
+        #buffer {
+            position: absolute;
+            height: 50vh;
+            width: calc(50vh * 16 / 9);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            p {
+                padding: 1rem;
+                box-sizing: border-box;
+                height: 50vh;
+                width: calc(50vh * 16 / 9);
+
+                a {
+                    color: var(--dark-green);
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+}
