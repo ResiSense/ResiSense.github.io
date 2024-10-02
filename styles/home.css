@@ -1,3 +1,19 @@
+#apple-warning {
+    position: fixed;
+    bottom: 0;
+    width: 100vw;
+    background-color: red;
+    z-index: 9;
+    padding-inline: 2rem;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+
+    &:not(.apple) {
+        display: none;
+    }
+}
+
 .slides-container {
     display: flex;
     flex-direction: column;
@@ -15,8 +31,6 @@
         isolation: isolate;
         font-family: Inter, Arial, Helvetica, sans-serif;
         font-size: 2rem;
-        /*! this can make the children follow the div for some reason */
-        /* backdrop-filter: blur(0px); */
 
         img {
             user-select: none;
@@ -93,7 +107,8 @@
             transform-origin: top left;
         }
 
-        &.anchored {
+        &.anchored,
+        &.apple {
             position: relative;
 
             &>* {
@@ -101,7 +116,7 @@
             }
         }
 
-        &.fixed>* {
+        &.fixed:not(.apple)>* {
             position: fixed;
         }
 
@@ -347,6 +362,19 @@
         &#s4 {
             height: calc(var(--slide-height) * 3);
 
+            &.apple {
+                height: calc(var(--slide-height) * 1);
+
+                #res-dev {
+                    transform: translate(-70%, -80%);
+                    height: 30%;
+
+                    &>* {
+                        --additional-animation-delay: 3s;
+                    }
+                }
+            }
+
             #misuse {
                 animation-name: exist, misuse;
                 animation-timing-function: var(--exp-ease-in);
@@ -560,6 +588,10 @@
             height: calc(var(--slide-height) * 3);
             z-index: 0;
 
+            &.apple {
+                height: calc(var(--slide-height) * 1.5);
+            }
+
             #technology {
                 animation-name: exist, technology;
                 transform: translate(0, 0);
@@ -724,6 +756,10 @@
         &#s8 {
             height: calc(var(--slide-height) * 3);
             z-index: 0;
+
+            &.apple {
+                height: calc(var(--slide-height) * 1.2);
+            }
 
             #poc {
                 animation-name: exist;
