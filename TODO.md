@@ -31,6 +31,9 @@
 - [x] fix .pdf and .itp upload
 - [x] tend to TKs
 - [x] fix catalogue overflow
+- [x] add video to description page
+- [x] add iHP timeline
+- [x] hide some headings from outline
 - [ ] add links in the end of home page
 - [ ] fix catalogue being janky on resize
 - [ ] different sticker for different category
@@ -39,10 +42,7 @@
 - [ ] add responsiveness to human cards
 - [ ] fix doodles speed being inconsistent
 - [ ] condense iHP outline
+- [ ] add link to YouTube
 <!-- ! -->
 - [ ] fix weirdness for ad-hoc catalogue items 
-- [ ] add link to YouTube
-- [ ] add iHP timeline
-- [ ] hide some headings from outline
 - [ ] rework hamburger menu design
-- [ ] add video to description page

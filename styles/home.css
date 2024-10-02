@@ -4,10 +4,11 @@
     width: 100vw;
     background-color: red;
     z-index: 9;
-    padding-inline: 2rem;
+    padding: 1rem 2rem;
     font-weight: bold;
     color: white;
     text-align: center;
+    box-sizing: border-box;
 
     &:not(.apple) {
         display: none;
