@@ -720,7 +720,197 @@
         }
 
         &#s8 {
-            background-color: brown;
+            background-color: royalblue;
+            z-index: 1;
+        }
+
+        &#s9 {
+            height: calc(var(--slide-height) * 3);
+            z-index: 0;
+
+            #poc {
+                animation-name: exist;
+                text-align: center;
+                top: 20%;
+            }
+
+            #poc-grid {
+                width: 90vw;
+                height: calc(var(--slide-height) * 0.75);
+                translate: 0 15%;
+                animation-name: exist;
+                animation-timing-function: var(--exp-ease-in);
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+                gap: 2rem;
+
+                & > div {
+                    background-color: var(--bright-brown);
+                    border-radius: 1rem;
+                    height: 100%;
+                    padding: 1rem 1rem;
+                    box-sizing: border-box;
+                    display: flex;
+                    justify-content: start;
+                    align-items: start;
+                    overflow: hidden;
+                    position: relative;
+                    isolation: isolate;
+                    width: 15%;
+
+                    & > img {
+                        position: absolute;
+                        z-index: -1;
+                        transform: translateX(-50%);
+                    }
+
+                    & > div {
+                        position: absolute;
+                    }
+                }
+
+                #choose {
+                    animation-name: choose;
+                    animation-timing-function: ease-in-out;
+
+                    #choose-text {
+                        animation-name: choose-text;
+                        animation-timing-function: ease-in-out;
+                    }
+
+                    #orange-bottle {
+                        animation-name: orange-bottle;
+                        animation-timing-function: ease-in-out;
+                    }
+
+                    #hold-meds {
+                        animation-name: hold-meds;
+                        animation-timing-function: ease-in-out;
+                    }
+                }
+
+                #spread {
+                    animation-name: spread;
+                    animation-timing-function: ease-in-out;
+
+                    #spread-text {
+                        animation-name: spread-text;
+                        animation-timing-function: ease-in-out;
+                    }
+
+                    #stethoscope {
+                        animation-name: stethoscope;
+                        animation-timing-function: ease-in-out;
+                    }
+                }
+
+                #accessibility {
+                    animation-name: accessibility;
+                    animation-timing-function: ease-in-out;
+
+                    #accessibility-text {
+                        animation-name: accessibility-text;
+                        animation-timing-function: ease-in-out;
+                    }
+
+                    #ambulance {
+                        animation-name: ambulance;
+                        animation-timing-function: ease-in-out;
+                    }
+
+                    #globe- {
+                        animation-name: globe-;
+                        animation-timing-function: ease-in-out;
+                    }
+                }
+            }
+        }
+
+        &#s10 {
+            backdrop-filter: blur(20px);
+            height: calc(var(--slide-height) * 2);
+
+            #learn-container {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                gap: 2rem;
+            }
+
+            #video-container {
+                #also {
+                    width: 100%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+
+                    p {
+                        font-weight: normal;
+                        font-size: 1rem;
+                        text-align: center;
+
+                        a {
+                            color: var(--dark-green);
+                            text-decoration: underline;
+                        }
+                    }
+                }
+
+                #video {
+                    border-radius: 1rem;
+                    padding: 0;
+                    margin: 0;
+                    width: fit-content;
+                    height: fit-content;
+                    overflow: hidden;
+                    border: none;
+                    height: 50vh;
+                    aspect-ratio: 16/9;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    background-color: rgba(240, 46, 170, 0.5);
+                    box-shadow:
+                        rgba(240, 46, 170, 0.4) -1rem 1rem,
+                        rgba(240, 46, 170, 0.3) -2rem 2rem,
+                        rgba(240, 46, 170, 0.2) -3rem 3rem,
+                        rgba(240, 46, 170, 0.1) -4rem 4rem,
+                        rgba(240, 46, 170, 0.05) -5rem 5rem;
+
+                    iframe {
+                        height: 100%;
+                        width: 100%;
+                        margin: 0;
+                        padding: 0;
+                        border: none;
+                        z-index: 1;
+                    }
+
+                    #buffer {
+                        position: absolute;
+                        height: 50vh;
+                        width: calc(50vh * 16 / 9);
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+
+                        p {
+                            padding: 1rem;
+                            box-sizing: border-box;
+                            height: 50vh;
+                            width: calc(50vh * 16 / 9);
+
+                            a {
+                                color: var(--dark-green);
+                                text-decoration: underline;
+                            }
+                        }
+                    }
+                }
+            }
         }
     }
 }
@@ -1195,5 +1385,183 @@ painted-footer {
     100% {
         left: 80%;
         top: 40%;
+    }
+}
+
+@keyframes choose {
+    0%,
+    37.5% {
+        flex-grow: 1;
+    }
+
+    50%,
+    100% {
+        flex-grow: 0;
+    }
+}
+
+@keyframes spread {
+    0%,
+    37.5% {
+        flex-grow: 0;
+    }
+
+    50% {
+        flex-grow: 1;
+    }
+
+    62.5%,
+    100% {
+        flex-grow: 0;
+    }
+}
+
+@keyframes accessibility {
+    0%,
+    50% {
+        flex-grow: 0;
+    }
+
+    62.5%,
+    100% {
+        flex-grow: 1;
+    }
+}
+
+@keyframes choose-text {
+    0%,
+    37.5% {
+        translate: 10% 10%;
+    }
+
+    50%,
+    100% {
+        translate: 50% 10%;
+    }
+}
+
+@keyframes spread-text {
+    0%,
+    37.5% {
+        translate: 50% 10%;
+    }
+
+    50% {
+        translate: 10% 10%;
+    }
+
+    62.5%,
+    100% {
+        translate: 50% 10%;
+    }
+}
+
+@keyframes accessibility-text {
+    0%,
+    50% {
+        translate: 50% 10%;
+    }
+
+    62.5%,
+    100% {
+        translate: 10% 10%;
+    }
+}
+
+@keyframes orange-bottle {
+    0% {
+        left: 0%;
+        top: 30%;
+    }
+
+    0%,
+    37.5% {
+        scale: 0.8;
+    }
+
+    50%,
+    100% {
+        left: 10%;
+        top: 30%;
+        scale: 0.7;
+    }
+}
+
+@keyframes hold-meds {
+    0% {
+        left: 120%;
+        top: -10%;
+    }
+
+    37.5% {
+        left: 90%;
+        top: -10%;
+        scale: 1.1;
+    }
+
+    50%,
+    100% {
+        left: 250%;
+        top: -10%;
+        scale: 0.9;
+    }
+}
+
+@keyframes stethoscope {
+    0%,
+    37.5%,
+    62.5%,
+    100% {
+        left: 60%;
+        top: 50%;
+        scale: 0.9;
+    }
+
+    50% {
+        left: 75%;
+        top: 50%;
+        scale: 1.1;
+    }
+}
+
+@keyframes globe- {
+    0%,
+    50% {
+        scale: 0.7;
+        left: 50%;
+        top: 30%;
+    }
+
+    62.5% {
+        left: 90%;
+        top: 20%;
+        scale: 0.9;
+    }
+
+    100% {
+        left: 110%;
+        top: 20%;
+        scale: 0.9;
+    }
+}
+
+@keyframes ambulance {
+    0%,
+    50% {
+        scale: 0.7;
+        left: -50%;
+        top: 60%;
+    }
+
+    62.5% {
+        left: 20%;
+        top: 55%;
+        scale: 0.9;
+    }
+
+    100% {
+        left: 30%;
+        top: 55%;
+        scale: 0.9;
     }
 }
