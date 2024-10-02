@@ -654,6 +654,7 @@
             background: linear-gradient(to bottom, transparent 0, rgba(var(--desaturated-orange-rgb), 0.8) 40%, rgba(var(--desaturated-orange-rgb), 0.8) 60%, transparent 100%);
             backdrop-filter: blur(20px);
             isolation: isolate;
+            z-index: 1;
 
             #cheaper {
                 z-index: 1;
@@ -711,11 +712,6 @@
         }
 
         &#s8 {
-            background-color: royalblue;
-            z-index: 1;
-        }
-
-        &#s9 {
             height: calc(var(--slide-height) * 3);
             z-index: 0;
 
@@ -819,7 +815,7 @@
             }
         }
 
-        &#s10 {
+        &#s9 {
             backdrop-filter: blur(20px);
             height: calc(var(--slide-height) * 2);
 
