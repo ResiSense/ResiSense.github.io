@@ -34,6 +34,7 @@
 - [x] add video to description page
 - [x] add iHP timeline
 - [x] hide some headings from outline
+- [x] fix weirdness for ad-hoc catalogue items 
 - [ ] add links in the end of home page
 - [ ] fix catalogue being janky on resize
 - [ ] different sticker for different category
@@ -44,5 +45,4 @@
 - [ ] condense iHP outline
 - [ ] add link to YouTube
 <!-- ! -->
-- [ ] fix weirdness for ad-hoc catalogue items 
 - [ ] rework hamburger menu design
