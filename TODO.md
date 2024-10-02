@@ -45,3 +45,4 @@
 - [ ] add iHP timeline
 - [ ] hide some headings from outline
 - [ ] rework hamburger menu design
+- [ ] add video to description page
