@@ -34,7 +34,6 @@
 - [ ] add links in the end of home page
 - [ ] add iHP timeline
 - [ ] add link to YouTube
-- [ ] /contact
 - [ ] fix catalogue being janky on resize
 - [ ] hide some headings from outline
 - [ ] different sticker for different category
