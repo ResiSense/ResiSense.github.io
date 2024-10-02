@@ -30,6 +30,7 @@
 - [x] backlink to notebook entries?
 - [x] fix .pdf and .itp upload
 - [x] tend to TKs
+- [ ] add links in the end of home page
 - [ ] add iHP timeline
 - [ ] add link to YouTube
 - [ ] /contact
