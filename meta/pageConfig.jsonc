@@ -5,6 +5,7 @@
     name                    (required): Name of the HTML document.
 
     title?                  (optional): Title of the HTML document. If unspecified, a title case of the name will be used.
+    hamburgerPrefixIcon?    (optional): Prefix icon for the hamburger menu. Default is none.
     populator?              (optional): Conten populator to use. Default is "markdown".
                                         | html-full     - Full-page HTML replacement
                                         | html-frame    - HTML-in-frame content populator
@@ -32,6 +33,7 @@
         {
             "name": "home",
             "populator": "html-full",
+            "hamburgerPrefixIcon": "🏠",
             "redirectAliasPaths": [
                 "index"
             ],
@@ -50,6 +52,7 @@
         {
             "name": "description",
             "title": "Project Description",
+            "hamburgerPrefixIcon": "📖",
             "populator": "markdown",
             "includes": {
                 "css": [
@@ -61,6 +64,7 @@
         {
             "name": "human-practices",
             "title": "Integrated Human Practices",
+            "hamburgerPrefixIcon": "🗣️",
             "populator": "markdown",
             "includes": {
                 "ts": [
@@ -74,6 +78,7 @@
         {
             "name": "proof-of-concept",
             "title": "Proof of Concept",
+            "hamburgerPrefixIcon": "🧪",
             "populator": "markdown",
             "includes": {
                 "css": [
@@ -85,6 +90,7 @@
         {
             "name": "engineering",
             "title": "Engineering Success",
+            "hamburgerPrefixIcon": "🧪",
             "populator": "markdown",
             "hideFromCatalogue": true,
             "includes": {
@@ -97,7 +103,33 @@
             }
         },
         {
+            "name": "results",
+            "hamburgerPrefixIcon": "🧪",
+            "populator": "markdown",
+            "hideFromCatalogue": true,
+            "includes": {
+                "css": [
+                    "/styles/figures.css",
+                    "/styles/flavour-text.css",
+                    "/styles/results.css"
+                ]
+            }
+        },
+        {
+            "name": "notebook",
+            "hamburgerPrefixIcon": "🧪",
+            "populator": "markdown",
+            "hideFromCatalogue": true,
+            "includes": {
+                "css": [
+                    "/styles/notebook.css",
+                    "/styles/flavour-text.css"
+                ]
+            }
+        },
+        {
             "name": "education",
+            "hamburgerPrefixIcon": "📚",
             "populator": "markdown",
             "includes": {
                 "css": [
@@ -109,6 +141,7 @@
         {
             "name": "model",
             "title": "Modelling",
+            "hamburgerPrefixIcon": "💻",
             "populator": "markdown",
             "includes": {
                 "css": [
@@ -124,35 +157,14 @@
             }
         },
         {
-            "name": "results",
-            "populator": "markdown",
-            "hideFromCatalogue": true,
-            "includes": {
-                "css": [
-                    "/styles/figures.css",
-                    "/styles/flavour-text.css",
-                    "/styles/results.css"
-                ]
-            }
-        },
-        {
-            "name": "notebook",
-            "populator": "markdown",
-            "hideFromCatalogue": true,
-            "includes": {
-                "css": [
-                    "/styles/notebook.css",
-                    "/styles/flavour-text.css"
-                ]
-            }
-        },
-        {
             "name": "contribution",
+            "hamburgerPrefixIcon": "🧠",
             "populator": "markdown",
             "hideFromCatalogue": true
         },
         {
             "name": "team",
+            "hamburgerPrefixIcon": "🧠",
             "populator": "html-frame",
             "includes": {
                 "css": [
@@ -162,6 +174,7 @@
         },
         {
             "name": "acknowledgements",
+            "hamburgerPrefixIcon": "🧠",
             "populator": "markdown",
             "includes": {
                 "css": [
@@ -170,12 +183,8 @@
             }
         },
         {
-            "name": "resources",
-            "populator": "markdown",
-            "hideFromCatalogue": true
-        },
-        {
             "name": "attributions",
+            "hamburgerPrefixIcon": "🧠",
             "populator": "html-frame",
             "hideFromCatalogue": true,
             "includes": {
@@ -186,6 +195,12 @@
                     "/styles/attributions.css"
                 ]
             }
+        },
+        {
+            "name": "resources",
+            "hamburgerPrefixIcon": "👓",
+            "populator": "markdown",
+            "hideFromCatalogue": true
         }
     ]
 }

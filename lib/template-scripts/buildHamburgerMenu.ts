@@ -16,7 +16,7 @@ export default function (pageData: PageData) {
         const anchorElement = (hamburgerMenuItemElement as HTMLDivElement).querySelector('a')
             || (() => { throw new Error('Anchor element not found!') })();
         anchorElement.href = entry.path;
-        anchorElement.textContent = entry.name;
+        anchorElement.textContent = `${entry.hamburgerPrefixIcon} ${entry.name}`;
 
         hamburgerMenuElement.appendChild(hamburgerMenuItemElement);
         if (entry.path.replace(/^\//, '') === page.trace.join('/')) {
