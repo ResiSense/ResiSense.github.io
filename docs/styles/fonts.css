@@ -1,0 +1,23 @@
+@font-face {
+    /* https://fonts.google.com/specimen/Baloo+2 */
+    font-family: 'Baloo 2';
+    src: url('/assets/fonts/Baloo2.woff2');
+}
+
+@font-face {
+    /* stolen from Microsoft built-in fonts */
+    font-family: 'Segoe UI Emoji';
+    src: url('/assets/fonts/Segoe\ UI\ Emoji\ Flat.woff2');
+}
+
+@font-face {
+    /* https://fonts.google.com/specimen/Inter */
+    font-family: 'Inter';
+    src: url('/assets/fonts/Inter.woff2');
+}
+
+@font-face {
+    /* https://fonts.google.com/specimen/Montserrat */
+    font-family: 'Montserrat';
+    src: url('/assets/fonts/Montserrat.woff2');
+}
