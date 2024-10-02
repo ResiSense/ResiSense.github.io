@@ -30,11 +30,11 @@
 - [x] backlink to notebook entries?
 - [x] fix .pdf and .itp upload
 - [x] tend to TKs
+- [x] fix catalogue overflow
 - [ ] add links in the end of home page
 - [ ] add iHP timeline
 - [ ] add link to YouTube
 - [ ] /contact
-- [ ] fix catalogue overflow
 - [ ] fix catalogue being janky on resize
 - [ ] hide some headings from outline
 - [ ] different sticker for different category

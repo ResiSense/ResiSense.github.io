@@ -21,6 +21,8 @@ export default function (pageData: PageData) {
             ((catalogueItemElement as HTMLDivElement).querySelector('div')
                 || (() => { throw new Error('Catalogue div element not found!') })()
             ).classList.add('catalogue-item-active');
+        } else {
+            if (entry.hideFromCatalogue) { return; }
         }
         catalogueElement.appendChild(catalogueItemElement);
 

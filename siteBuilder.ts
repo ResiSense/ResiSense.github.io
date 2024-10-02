@@ -120,7 +120,7 @@ async function buildFile(page: Page, templateCache: TemplateCache): Promise<void
 
     if (mode === MODES.DEV) { addHtmlExtensionsToAnchorHrefs(pageData); }
 
-    if (pageData.page.hideFromCatalogue) {
+    if (pageData.page.hideFromHamburgerMenu) {
         console.log(`Skipping indexing ${page.trace.join('/')}...`);
     } else {
         pageData.htmlPollutedRawContent === undefined

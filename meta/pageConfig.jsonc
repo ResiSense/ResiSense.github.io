@@ -2,22 +2,23 @@
     This .jsonc file is used to configure how the pages are built and populated.
     This allows .html-less pages with generic styles that are able to be built with minimal effort.
 
-    name                (required): Name of the HTML document.
+    name                    (required): Name of the HTML document.
 
-    title?              (optional): Title of the HTML document. If unspecified, a title case of the name will be used.
-    populator?          (optional): Conten populator to use. Default is "markdown".
-                                    | html-full     - Full-page HTML replacement
-                                    | html-frame    - HTML-in-frame content populator
-                                    | markdown      - Markdown content populator
-                                    | custom        - Custom content populator
-    includes            (optional): {
-        ts?             (optional): Array of TS file paths to include at build-time post-population. Implementation is up to the page populator. Default is none.
-        js?             (optional): Array of JS file paths to include. Implementation is up to the page populator. Default is none.
-        css?            (optional): Array of CSS file paths to include. Implementation is up to the page populator. Default is none.
-    }
-    hideFromCatalogue?  (optional): Whether to hide this page from the catalogue. Default is false.
-    pages?              (optional): Array of pages hierarchically under this page, with "<parent.name>/<child.name>" as their url path.
-    redirectAliasPaths? (optional): Array of alias paths to redirect to this page, relative to root. Default is none.
+    title?                  (optional): Title of the HTML document. If unspecified, a title case of the name will be used.
+    populator?              (optional): Conten populator to use. Default is "markdown".
+                                        | html-full     - Full-page HTML replacement
+                                        | html-frame    - HTML-in-frame content populator
+                                        | markdown      - Markdown content populator
+                                        | custom        - Custom content populator
+    includes                (optional): {
+        ts?                 (optional): Array of TS file paths to include at build-time post-population. Implementation is up to the page populator. Default is none.
+        js?                 (optional): Array of JS file paths to include. Implementation is up to the page populator. Default is none.
+        css?                (optional): Array of CSS file paths to include. Implementation is up to the page populator. Default is none.
+    }   
+    hideFromCatalogue?      (optional): Whether to hide this page from the catalogue. Default is false.
+    hideFromHamburgerMenu?  (optional): Whether to hide this page from the hamburger menu. Default is false.
+    pages?                  (optional): Array of pages hierarchically under this page, with "<parent.name>/<child.name>" as their url path.
+    redirectAliasPaths?     (optional): Array of alias paths to redirect to this page, relative to root. Default is none.
 */
 {
     "pages": [
@@ -38,7 +39,8 @@
             "name": "404",
             "title": "404: Page not found ☹️",
             "populator": "markdown",
-            "hideFromCatalogue": true
+            "hideFromCatalogue": true,
+            "hideFromHamburgerMenu": true
         },
         {
             "name": "home",
@@ -96,6 +98,7 @@
             "name": "engineering",
             "title": "Engineering Success",
             "populator": "markdown",
+            "hideFromCatalogue": true,
             "includes": {
                 "css": [
                     "/styles/figures.css",
@@ -135,6 +138,7 @@
         {
             "name": "results",
             "populator": "markdown",
+            "hideFromCatalogue": true,
             "includes": {
                 "css": [
                     "/styles/figures.css",
@@ -145,6 +149,7 @@
         {
             "name": "notebook",
             "populator": "markdown",
+            "hideFromCatalogue": true,
             "includes": {
                 "css": [
                     "/styles/notebook.css",
@@ -154,7 +159,8 @@
         },
         {
             "name": "contribution",
-            "populator": "markdown"
+            "populator": "markdown",
+            "hideFromCatalogue": true
         },
         {
             "name": "acknowledgements",
@@ -167,7 +173,8 @@
         },
         {
             "name": "resources",
-            "populator": "markdown"
+            "populator": "markdown",
+            "hideFromCatalogue": true
         }
     ]
 }

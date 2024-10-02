@@ -21,6 +21,7 @@ export type FlattenedPage = {
     title: string;
     populator?: 'html-full' | 'html-frame' | 'markdown' | 'custom';
     hideFromCatalogue?: boolean;
+    hideFromHamburgerMenu?: boolean;
     trace: string[];
     redirectAliasPaths?: string[];
 }
@@ -28,6 +29,8 @@ export type FlattenedPage = {
 type Entry = {
     name: string;
     path: string;
+    hideFromCatalogue?: boolean;
+    hideFromHamburgerMenu?: boolean;
 }
 
 let _pageConfig: PageConfig | undefined = undefined;
@@ -71,10 +74,11 @@ const pageEntries: Entry[] = (() => {
     return _pageEntries;
     // 
     function addFlattenedPageToEntries(page: Page, pathTrace = '') {
-        if (page.hideFromCatalogue) { return; }
         const entry: Entry = {
             name: page.title ? page.title.toLowerCase() : page.name,
             path: `${pathTrace}/${page.name}`,
+            hideFromCatalogue: page.hideFromCatalogue,
+            hideFromHamburgerMenu: page.hideFromHamburgerMenu,
         }
         entries.push(entry);
         if (page.pages) { page.pages.forEach(subPage => addFlattenedPageToEntries(subPage, entry.path)); }
