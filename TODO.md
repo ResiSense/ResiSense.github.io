@@ -32,14 +32,16 @@
 - [x] tend to TKs
 - [x] fix catalogue overflow
 - [ ] add links in the end of home page
-- [ ] add iHP timeline
-- [ ] add link to YouTube
 - [ ] fix catalogue being janky on resize
-- [ ] hide some headings from outline
 - [ ] different sticker for different category
 - [ ] add multiple sizes for images
 - [ ] add catalogue nesting
-- [ ] rework hamburger menu design
 - [ ] add responsiveness to human cards
 - [ ] fix doodles speed being inconsistent
 - [ ] condense iHP outline
+<!-- ! -->
+- [ ] fix weirdness for ad-hoc catalogue items 
+- [ ] add link to YouTube
+- [ ] add iHP timeline
+- [ ] hide some headings from outline
+- [ ] rework hamburger menu design

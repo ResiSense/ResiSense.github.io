@@ -163,6 +163,15 @@
             "hideFromCatalogue": true
         },
         {
+            "name": "team",
+            "populator": "html-frame",
+            "includes": {
+                "css": [
+                    "/styles/team.css"
+                ]
+            }
+        },
+        {
             "name": "acknowledgements",
             "populator": "markdown",
             "includes": {
