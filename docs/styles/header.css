@@ -1,0 +1,195 @@
+:root {
+    --header-height: 8rem;
+
+    @media screen and (max-width: 1100px) {
+        --header-height: 12rem;
+    }
+}
+
+painted-header {
+    & > header {
+        position: fixed;
+        width: 100vw;
+        height: var(--header-height);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: row;
+        z-index: 1;
+        pointer-events: none;
+        --header-padding-size: 0.5rem;
+
+        & > .logo-container {
+            margin-left: 1rem;
+            height: var(--header-height);
+            box-sizing: border-box;
+            aspect-ratio: 1;
+            padding: calc(var(--header-padding-size) * 2);
+            background-color: var(--bright-brown);
+            border-radius: 0 0 50% 50%;
+            pointer-events: initial;
+            z-index: 2;
+
+            & > .logo {
+                display: block;
+                position: relative;
+                height: 100%;
+                background-image: url('/assets/logos/resisense/ResiSense Green Logo.svg');
+                background-size: 100% 100%;
+
+                @media screen and (max-width: 1100px) {
+                    scale: 0.9;
+                }
+            }
+        }
+
+        & > .header-shelf {
+            height: var(--header-height);
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: start;
+            pointer-events: none;
+
+            & > .header-items-container {
+                height: calc(var(--header-height) * 0.6);
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                background-color: var(--bright-brown);
+                width: 100%;
+                box-sizing: border-box;
+                padding-right: var(--header-padding-size);
+                box-shadow: var(--bright-brown) -20rem 0px 0px 0px;
+                pointer-events: initial;
+                position: relative;
+                z-index: 1;
+
+                & > * {
+                    height: 100%;
+                }
+
+                & > .header-leftside {
+                    display: flex;
+                    justify-content: center;
+                    flex-direction: column;
+                    /* gap: 0.4rem; */
+
+                    & > .logo-name-text {
+                        height: 2rem;
+                        font-size: 2.2rem;
+                        font-weight: 700;
+                        color: var(--deep-green);
+                        display: flex;
+                        align-items: center;
+
+                        @media screen and (max-width: 1100px) {
+                            font-size: 4rem;
+                            translate: 0 0.8rem;
+                        }
+                    }
+
+                    & > .logo-flavour-text {
+                        height: 1.5rem;
+                        font-size: 1.2rem;
+                        font-weight: 500;
+                        color: var(--pale-brown);
+                        text-indent: 1rem;
+                        margin-bottom: -0.8rem;
+
+                        @media screen and (max-width: 1100px) {
+                            display: none;
+                        }
+                    }
+                }
+
+                & > .page-title-container {
+                    justify-self: center;
+                    align-self: center;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    flex-grow: 1;
+                    overflow: clip;
+
+                    & > #header-page-title {
+                        position: relative;
+                        width: 0;
+                        height: 0;
+                        text-wrap: nowrap;
+                        font-weight: bold;
+                        font-size: 2rem;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        color: var(--deep-green);
+                        right: 3rem;
+                        top: 0.5rem;
+
+                        &.hidden {
+                            top: calc(50% + 1.2rem);
+                            opacity: 0;
+                            user-select: none;
+                        }
+
+                        @media screen and (max-width: 1400px) {
+                            right: 0;
+                        }
+
+                        @media screen and (max-width: 1100px) {
+                            display: none;
+                        }
+                    }
+                }
+
+                & > .header-rightside {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    gap: 1rem;
+                    flex-direction: row;
+                    --header-rightside-button-border-radius: 0.5rem;
+                    --header-rightside-button-border-width: 0.2rem;
+
+                    & .header-rightside-button {
+                        background-color: var(--pale-green);
+                        border-color: var(--light-green);
+                        border-radius: var(--header-rightside-button-border-radius);
+                        border-style: solid;
+                        border-width: var(--header-rightside-button-border-width);
+                        user-select: none;
+                        --font-size: 2rem;
+                        --button-size: calc(var(--header-height) * 0.3);
+                        height: 2rem;
+
+                        @media screen and (max-width: 1100px) {
+                            height: var(--button-size);
+                            width: var(--button-size);
+                        }
+                    }
+                }
+            }
+
+            & > .header-catalogue-container {
+                width: 100%;
+                box-sizing: border-box;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                padding: 0 var(--header-padding-size);
+                margin-top: 0.5rem;
+                margin-bottom: auto;
+                pointer-events: none;
+            }
+        }
+    }
+
+    & > .header-spacer {
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: calc(var(--header-height) * 0.8);
+        pointer-events: none;
+    }
+}

@@ -1,0 +1,3418 @@
+#parallax-doodle-container {
+    transition: none;
+    pointer-events: none;
+    width: 0;
+    height: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5rem;
+    overflow: visible;
+    position: fixed;
+    animation: scroll-up linear forwards;
+    animation-timeline: scroll();
+    user-select: none;
+
+    & > * {
+        font-size: 10rem;
+        font-weight: bolder;
+        height: 10rem;
+        width: 10rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        object-fit: cover;
+        overflow: visible;
+        position: absolute;
+        animation: linear forwards;
+        animation-timeline: scroll();
+        opacity: 0.2;
+
+        @media (prefers-reduced-motion: reduce) {
+            animation: none;
+        }
+    }
+}
+
+@keyframes scroll-up {
+    to {
+        translate: 0 -100%;
+    }
+}
+@keyframes parallax-doodle-dmd9gy {
+    to {
+        transform: translateY(-120.81730920719079px);
+    }
+}
+
+@keyframes parallax-doodle-eoovd4 {
+    to {
+        transform: translateY(-157.40921656251038px);
+    }
+}
+
+@keyframes parallax-doodle-yz0u4y {
+    to {
+        transform: translateY(-175.5803320359345px);
+    }
+}
+
+@keyframes parallax-doodle-uv8n0e {
+    to {
+        transform: translateY(-184.97359090874173px);
+    }
+}
+
+@keyframes parallax-doodle-lv0sh {
+    to {
+        transform: translateY(-174.5543468636411px);
+    }
+}
+
+@keyframes parallax-doodle-rsqogg {
+    to {
+        transform: translateY(-208.93505170131965px);
+    }
+}
+
+@keyframes parallax-doodle-dwsyhq {
+    to {
+        transform: translateY(-88.58865711640823px);
+    }
+}
+
+@keyframes parallax-doodle-7kjr2s {
+    to {
+        transform: translateY(-133.4304100287187px);
+    }
+}
+
+@keyframes parallax-doodle-li7tqh {
+    to {
+        transform: translateY(-208.97997250921554px);
+    }
+}
+
+@keyframes parallax-doodle-a05zt9 {
+    to {
+        transform: translateY(-217.27900544209248px);
+    }
+}
+
+@keyframes parallax-doodle-lrmg6e {
+    to {
+        transform: translateY(-15544.228861610984px);
+    }
+}
+
+@keyframes parallax-doodle-f59n5 {
+    to {
+        transform: translateY(-10462.024244391489px);
+    }
+}
+
+@keyframes parallax-doodle-2e7h2 {
+    to {
+        transform: translateY(-15086.754680955411px);
+    }
+}
+
+@keyframes parallax-doodle-547ji6 {
+    to {
+        transform: translateY(-12108.713844241478px);
+    }
+}
+
+@keyframes parallax-doodle-mjrrg {
+    to {
+        transform: translateY(-11528.471933924882px);
+    }
+}
+
+@keyframes parallax-doodle-d5icm9 {
+    to {
+        transform: translateY(-21426.60753500189px);
+    }
+}
+
+@keyframes parallax-doodle-b1d9p6 {
+    to {
+        transform: translateY(-18007.190823002755px);
+    }
+}
+
+@keyframes parallax-doodle-g5m9gg {
+    to {
+        transform: translateY(-19094.254204305274px);
+    }
+}
+
+@keyframes parallax-doodle-rv386h {
+    to {
+        transform: translateY(-21665.862479929725px);
+    }
+}
+
+@keyframes parallax-doodle-9q0wwi {
+    to {
+        transform: translateY(-19835.605146667684px);
+    }
+}
+
+@keyframes parallax-doodle-ye5hgl {
+    to {
+        transform: translateY(-22428.925119879998px);
+    }
+}
+
+@keyframes parallax-doodle-wci3r {
+    to {
+        transform: translateY(-22914.9814031915px);
+    }
+}
+
+@keyframes parallax-doodle-uqfrgu {
+    to {
+        transform: translateY(-16055.933529114905px);
+    }
+}
+
+@keyframes parallax-doodle-m8df8m {
+    to {
+        transform: translateY(-9327.702637015169px);
+    }
+}
+
+@keyframes parallax-doodle-e42i3l {
+    to {
+        transform: translateY(-17414.27885187419px);
+    }
+}
+
+@keyframes parallax-doodle-zs3zze {
+    to {
+        transform: translateY(-17509.0493780192px);
+    }
+}
+
+@keyframes parallax-doodle-e5a798 {
+    to {
+        transform: translateY(-8278.17159951047px);
+    }
+}
+
+@keyframes parallax-doodle-3dwq9e {
+    to {
+        transform: translateY(-19202.949146655636px);
+    }
+}
+
+@keyframes parallax-doodle-gh0aku {
+    to {
+        transform: translateY(-9032.804365407428px);
+    }
+}
+
+@keyframes parallax-doodle-xkkpcc {
+    to {
+        transform: translateY(-18782.24917634454px);
+    }
+}
+
+@keyframes parallax-doodle-yhh07g {
+    to {
+        transform: translateY(-15262.862621856651px);
+    }
+}
+
+@keyframes parallax-doodle-djzwva {
+    to {
+        transform: translateY(-8280.33593868931px);
+    }
+}
+
+@keyframes parallax-doodle-djetcd {
+    to {
+        transform: translateY(-8398.862944513228px);
+    }
+}
+
+@keyframes parallax-doodle-mh5tgq {
+    to {
+        transform: translateY(-15945.437210149px);
+    }
+}
+
+@keyframes parallax-doodle-9pvfh {
+    to {
+        transform: translateY(-19541.03184410785px);
+    }
+}
+
+@keyframes parallax-doodle-nm72x {
+    to {
+        transform: translateY(-15550.877820999976px);
+    }
+}
+
+@keyframes parallax-doodle-ct2wnx {
+    to {
+        transform: translateY(-14290.413083157555px);
+    }
+}
+
+@keyframes parallax-doodle-6db5cr {
+    to {
+        transform: translateY(-17289.497050105314px);
+    }
+}
+
+@keyframes parallax-doodle-wemcn {
+    to {
+        transform: translateY(-9675.803935316682px);
+    }
+}
+
+@keyframes parallax-doodle-7fkvf8 {
+    to {
+        transform: translateY(-18998.75710375455px);
+    }
+}
+
+@keyframes parallax-doodle-b8ei6r {
+    to {
+        transform: translateY(-22022.21783336365px);
+    }
+}
+
+@keyframes parallax-doodle-k4xau9 {
+    to {
+        transform: translateY(-21466.08453653992px);
+    }
+}
+
+@keyframes parallax-doodle-pd68vf {
+    to {
+        transform: translateY(-13166.609339976229px);
+    }
+}
+
+@keyframes parallax-doodle-u7glei {
+    to {
+        transform: translateY(-11641.65111040914px);
+    }
+}
+
+@keyframes parallax-doodle-rs26qu {
+    to {
+        transform: translateY(-12714.48979294122px);
+    }
+}
+
+@keyframes parallax-doodle-5t15wk {
+    to {
+        transform: translateY(-20867.905988649985px);
+    }
+}
+
+@keyframes parallax-doodle-gg0ymc {
+    to {
+        transform: translateY(-12099.560537662604px);
+    }
+}
+
+@keyframes parallax-doodle-e2lf5 {
+    to {
+        transform: translateY(-16872.89304852717px);
+    }
+}
+
+@keyframes parallax-doodle-2o1nyl {
+    to {
+        transform: translateY(-17061.871970763714px);
+    }
+}
+
+@keyframes parallax-doodle-snv5d {
+    to {
+        transform: translateY(-19257.000614345925px);
+    }
+}
+
+@keyframes parallax-doodle-0smbjj {
+    to {
+        transform: translateY(-10000.31637506431px);
+    }
+}
+
+@keyframes parallax-doodle-xs4fhu {
+    to {
+        transform: translateY(-17955.98529194951px);
+    }
+}
+
+@keyframes parallax-doodle-08gwx {
+    to {
+        transform: translateY(-8698.365745783467px);
+    }
+}
+
+@keyframes parallax-doodle-ssioa9 {
+    to {
+        transform: translateY(-20891.374845511556px);
+    }
+}
+
+@keyframes parallax-doodle-98kxk3 {
+    to {
+        transform: translateY(-14770.609765911642px);
+    }
+}
+
+@keyframes parallax-doodle-cvoetm {
+    to {
+        transform: translateY(-20827.14765260518px);
+    }
+}
+
+@keyframes parallax-doodle-0w4h8p {
+    to {
+        transform: translateY(-14375.354185792714px);
+    }
+}
+
+@keyframes parallax-doodle-1rj8mu {
+    to {
+        transform: translateY(-15019.913618073679px);
+    }
+}
+
+@keyframes parallax-doodle-p3pus3 {
+    to {
+        transform: translateY(-14349.559951630727px);
+    }
+}
+
+@keyframes parallax-doodle-aed3am {
+    to {
+        transform: translateY(-19716.767198195095px);
+    }
+}
+
+@keyframes parallax-doodle-svnum3 {
+    to {
+        transform: translateY(-13361.164970840067px);
+    }
+}
+
+@keyframes parallax-doodle-6a01zr {
+    to {
+        transform: translateY(-12104.748591345604px);
+    }
+}
+
+@keyframes parallax-doodle-xpswu {
+    to {
+        transform: translateY(-22143.32325353123px);
+    }
+}
+
+@keyframes parallax-doodle-189itv {
+    to {
+        transform: translateY(-14406.901260921859px);
+    }
+}
+
+@keyframes parallax-doodle-6u0kia {
+    to {
+        transform: translateY(-8935.932245236902px);
+    }
+}
+
+@keyframes parallax-doodle-f5umcl {
+    to {
+        transform: translateY(-19387.075170664353px);
+    }
+}
+
+@keyframes parallax-doodle-byid78 {
+    to {
+        transform: translateY(-17465.52186125292px);
+    }
+}
+
+@keyframes parallax-doodle-5tyqo8 {
+    to {
+        transform: translateY(-19910.77944599541px);
+    }
+}
+
+@keyframes parallax-doodle-p48vma {
+    to {
+        transform: translateY(-17857.329242068794px);
+    }
+}
+
+@keyframes parallax-doodle-hqpe4 {
+    to {
+        transform: translateY(-23971.446367922985px);
+    }
+}
+
+@keyframes parallax-doodle-6mtt4 {
+    to {
+        transform: translateY(-26508.406777994503px);
+    }
+}
+
+@keyframes parallax-doodle-9nxdzd {
+    to {
+        transform: translateY(-25193.098972579122px);
+    }
+}
+
+@keyframes parallax-doodle-xuy2qv {
+    to {
+        transform: translateY(-17026.151188692274px);
+    }
+}
+
+@keyframes parallax-doodle-uzgyb {
+    to {
+        transform: translateY(-11531.214398690483px);
+    }
+}
+
+@keyframes parallax-doodle-pcos0a {
+    to {
+        transform: translateY(-11070.860882897208px);
+    }
+}
+
+@keyframes parallax-doodle-vh4xzl {
+    to {
+        transform: translateY(-8897.902680813553px);
+    }
+}
+
+@keyframes parallax-doodle-7lgsm {
+    to {
+        transform: translateY(-9605.306489975399px);
+    }
+}
+
+@keyframes parallax-doodle-1bte3 {
+    to {
+        transform: translateY(-12901.36345439459px);
+    }
+}
+
+@keyframes parallax-doodle-bpub6r {
+    to {
+        transform: translateY(-18827.35518942542px);
+    }
+}
+
+@keyframes parallax-doodle-h3mt2e {
+    to {
+        transform: translateY(-18849.012712211326px);
+    }
+}
+
+@keyframes parallax-doodle-hq237k {
+    to {
+        transform: translateY(-19976.845287290686px);
+    }
+}
+
+@keyframes parallax-doodle-4d8ik {
+    to {
+        transform: translateY(-21745.125865219514px);
+    }
+}
+
+@keyframes parallax-doodle-upklds {
+    to {
+        transform: translateY(-14879.877973043871px);
+    }
+}
+
+@keyframes parallax-doodle-6l6x8d {
+    to {
+        transform: translateY(-26095.180696773732px);
+    }
+}
+
+@keyframes parallax-doodle-slbqp {
+    to {
+        transform: translateY(-22329.2220634515px);
+    }
+}
+
+@keyframes parallax-doodle-gz3qei {
+    to {
+        transform: translateY(-17170.903913218084px);
+    }
+}
+
+@keyframes parallax-doodle-87u3kf {
+    to {
+        transform: translateY(-23538.94616378749px);
+    }
+}
+
+@keyframes parallax-doodle-twljy {
+    to {
+        transform: translateY(-16822.98829530007px);
+    }
+}
+
+@keyframes parallax-doodle-o3fwb {
+    to {
+        transform: translateY(-21652.64249176097px);
+    }
+}
+
+@keyframes parallax-doodle-5vfe24 {
+    to {
+        transform: translateY(-14679.701514767372px);
+    }
+}
+
+@keyframes parallax-doodle-tl9n24 {
+    to {
+        transform: translateY(-9606.39260954158px);
+    }
+}
+
+@keyframes parallax-doodle-qtyvs {
+    to {
+        transform: translateY(-16821.811531903106px);
+    }
+}
+
+@keyframes parallax-doodle-jaw83e {
+    to {
+        transform: translateY(-10694.48343841398px);
+    }
+}
+
+@keyframes parallax-doodle-11r9qm {
+    to {
+        transform: translateY(-10078.283201492195px);
+    }
+}
+
+@keyframes parallax-doodle-en0z4d {
+    to {
+        transform: translateY(-20397.956332296846px);
+    }
+}
+
+@keyframes parallax-doodle-vl5476 {
+    to {
+        transform: translateY(-22697.90808443247px);
+    }
+}
+
+@keyframes parallax-doodle-n8g07j {
+    to {
+        transform: translateY(-26285.01438688641px);
+    }
+}
+
+@keyframes parallax-doodle-mds5mi {
+    to {
+        transform: translateY(-10891.491992087547px);
+    }
+}
+
+@keyframes parallax-doodle-23bb2q {
+    to {
+        transform: translateY(-23008.336464593158px);
+    }
+}
+
+@keyframes parallax-doodle-efeive {
+    to {
+        transform: translateY(-22287.94861170854px);
+    }
+}
+
+@keyframes parallax-doodle-g0cs9 {
+    to {
+        transform: translateY(-17660.33290487536px);
+    }
+}
+
+@keyframes parallax-doodle-zkspli {
+    to {
+        transform: translateY(-12730.08100946736px);
+    }
+}
+
+@keyframes parallax-doodle-awuau9 {
+    to {
+        transform: translateY(-9903.404554875458px);
+    }
+}
+
+@keyframes parallax-doodle-rmo0cn {
+    to {
+        transform: translateY(-17442.468956396544px);
+    }
+}
+
+@keyframes parallax-doodle-q2irsl {
+    to {
+        transform: translateY(-16213.164910623289px);
+    }
+}
+
+@keyframes parallax-doodle-n5j1ff {
+    to {
+        transform: translateY(-9207.127811076389px);
+    }
+}
+
+@keyframes parallax-doodle-r3xzro {
+    to {
+        transform: translateY(-9833.606290928561px);
+    }
+}
+
+@keyframes parallax-doodle-k0stxa {
+    to {
+        transform: translateY(-25325.268176059806px);
+    }
+}
+
+@keyframes parallax-doodle-m48q0q {
+    to {
+        transform: translateY(-9009.559887642354px);
+    }
+}
+
+@keyframes parallax-doodle-jpt06 {
+    to {
+        transform: translateY(-21899.453354698744px);
+    }
+}
+
+@keyframes parallax-doodle-ymrzhk {
+    to {
+        transform: translateY(-24897.449816373137px);
+    }
+}
+
+@keyframes parallax-doodle-inlnba {
+    to {
+        transform: translateY(-26175.778949236803px);
+    }
+}
+
+@keyframes parallax-doodle-6s2okc {
+    to {
+        transform: translateY(-26410.0996823527px);
+    }
+}
+
+@keyframes parallax-doodle-irxbjh {
+    to {
+        transform: translateY(-9792.255032058263px);
+    }
+}
+
+@keyframes parallax-doodle-frl9mu {
+    to {
+        transform: translateY(-22137.648486077036px);
+    }
+}
+
+@keyframes parallax-doodle-veh5wx {
+    to {
+        transform: translateY(-14574.296197748048px);
+    }
+}
+
+@keyframes parallax-doodle-2mic5 {
+    to {
+        transform: translateY(-10327.63740194745px);
+    }
+}
+
+@keyframes parallax-doodle-yd47eg {
+    to {
+        transform: translateY(-15096.189779757291px);
+    }
+}
+
+@keyframes parallax-doodle-r2fhxj {
+    to {
+        transform: translateY(-9771.478203607552px);
+    }
+}
+
+@keyframes parallax-doodle-2d32yc {
+    to {
+        transform: translateY(-23827.482303744197px);
+    }
+}
+
+@keyframes parallax-doodle-n6argc {
+    to {
+        transform: translateY(-10036.573027584258px);
+    }
+}
+
+@keyframes parallax-doodle-hu92p {
+    to {
+        transform: translateY(-16084.305166330923px);
+    }
+}
+
+@keyframes parallax-doodle-h0sove {
+    to {
+        transform: translateY(-26357.998821633617px);
+    }
+}
+
+@keyframes parallax-doodle-uvom1 {
+    to {
+        transform: translateY(-24209.580908781332px);
+    }
+}
+
+@keyframes parallax-doodle-ij4o5p {
+    to {
+        transform: translateY(-21406.925551512817px);
+    }
+}
+
+@keyframes parallax-doodle-n0tiyu {
+    to {
+        transform: translateY(-16162.359289754439px);
+    }
+}
+
+@keyframes parallax-doodle-492jj {
+    to {
+        transform: translateY(-16725.211510887384px);
+    }
+}
+
+@keyframes parallax-doodle-6fl0w {
+    to {
+        transform: translateY(-24802.987020595196px);
+    }
+}
+
+@keyframes parallax-doodle-ftxdlz {
+    to {
+        transform: translateY(-6466.903117097699px);
+    }
+}
+
+@keyframes parallax-doodle-8pq2xx {
+    to {
+        transform: translateY(-7352.267162092105px);
+    }
+}
+
+@keyframes parallax-doodle-70cthb {
+    to {
+        transform: translateY(-3305.108946542591px);
+    }
+}
+
+@keyframes parallax-doodle-ack82q {
+    to {
+        transform: translateY(-4279.2525366284835px);
+    }
+}
+
+@keyframes parallax-doodle-wkggo {
+    to {
+        transform: translateY(-7433.063198050807px);
+    }
+}
+
+@keyframes parallax-doodle-kckko {
+    to {
+        transform: translateY(-7769.259695413417px);
+    }
+}
+
+@keyframes parallax-doodle-fmxvhl {
+    to {
+        transform: translateY(-7599.705582074095px);
+    }
+}
+
+@keyframes parallax-doodle-rinx1o {
+    to {
+        transform: translateY(-3935.130991050566px);
+    }
+}
+
+@keyframes parallax-doodle-nmgks5 {
+    to {
+        transform: translateY(-8065.517481650853px);
+    }
+}
+
+@keyframes parallax-doodle-3vdtip {
+    to {
+        transform: translateY(-8562.902089158408px);
+    }
+}
+
+@keyframes parallax-doodle-4zemgd {
+    to {
+        transform: translateY(-7843.712298171853px);
+    }
+}
+
+@keyframes parallax-doodle-i1v0tw {
+    to {
+        transform: translateY(-5283.746528886217px);
+    }
+}
+
+@keyframes parallax-doodle-kopvls {
+    to {
+        transform: translateY(-8402.555227336981px);
+    }
+}
+
+@keyframes parallax-doodle-47adkr {
+    to {
+        transform: translateY(-4618.059503653367px);
+    }
+}
+
+@keyframes parallax-doodle-leg8yq {
+    to {
+        transform: translateY(-6378.0182056204285px);
+    }
+}
+
+@keyframes parallax-doodle-mok9di {
+    to {
+        transform: translateY(-5583.963449123365px);
+    }
+}
+
+@keyframes parallax-doodle-jv4k3s {
+    to {
+        transform: translateY(-7445.87465416299px);
+    }
+}
+
+@keyframes parallax-doodle-usl4ey {
+    to {
+        transform: translateY(-7800.450505702935px);
+    }
+}
+
+@keyframes parallax-doodle-cszsrx {
+    to {
+        transform: translateY(-5640.825891748129px);
+    }
+}
+
+@keyframes parallax-doodle-evlh66 {
+    to {
+        transform: translateY(-7853.632263324821px);
+    }
+}
+
+@keyframes parallax-doodle-xosdmz {
+    to {
+        transform: translateY(-6612.062450457903px);
+    }
+}
+
+@keyframes parallax-doodle-fc6mdg {
+    to {
+        transform: translateY(-6915.022705299265px);
+    }
+}
+
+@keyframes parallax-doodle-x6nn6i {
+    to {
+        transform: translateY(-6640.225248304836px);
+    }
+}
+
+@keyframes parallax-doodle-w97k82 {
+    to {
+        transform: translateY(-5592.192049379173px);
+    }
+}
+
+@keyframes parallax-doodle-otf818 {
+    to {
+        transform: translateY(-8891.404852908561px);
+    }
+}
+
+@keyframes parallax-doodle-oukc96 {
+    to {
+        transform: translateY(-6982.803773341651px);
+    }
+}
+
+@keyframes parallax-doodle-qxilaq {
+    to {
+        transform: translateY(-8025.276811792954px);
+    }
+}
+
+@keyframes parallax-doodle-pw47h8 {
+    to {
+        transform: translateY(-4975.250554958325px);
+    }
+}
+
+@keyframes parallax-doodle-gfr5cm {
+    to {
+        transform: translateY(-6205.70096959908px);
+    }
+}
+
+@keyframes parallax-doodle-7qdcr8 {
+    to {
+        transform: translateY(-5254.654486722533px);
+    }
+}
+
+@keyframes parallax-doodle-rplvxm {
+    to {
+        transform: translateY(-4145.092414937684px);
+    }
+}
+
+@keyframes parallax-doodle-7g7aik {
+    to {
+        transform: translateY(-5483.429172026557px);
+    }
+}
+
+@keyframes parallax-doodle-eou7vc {
+    to {
+        transform: translateY(-4833.3814876968345px);
+    }
+}
+
+@keyframes parallax-doodle-uhogh3 {
+    to {
+        transform: translateY(-3348.854048591689px);
+    }
+}
+
+@keyframes parallax-doodle-p0hvm7 {
+    to {
+        transform: translateY(-5921.667202799103px);
+    }
+}
+
+@keyframes parallax-doodle-7ed3ff {
+    to {
+        transform: translateY(-5573.3527820428935px);
+    }
+}
+
+@keyframes parallax-doodle-oxleut {
+    to {
+        transform: translateY(-51662.658127460476px);
+    }
+}
+
+@keyframes parallax-doodle-6a0arrf {
+    to {
+        transform: translateY(-48176.47706636469px);
+    }
+}
+
+@keyframes parallax-doodle-ifd0rn {
+    to {
+        transform: translateY(-57197.43088481017px);
+    }
+}
+
+@keyframes parallax-doodle-qrj1en {
+    to {
+        transform: translateY(-56759.020651767474px);
+    }
+}
+
+@keyframes parallax-doodle-dsbf9c {
+    to {
+        transform: translateY(-56702.64952669173px);
+    }
+}
+
+@keyframes parallax-doodle-q0s6or {
+    to {
+        transform: translateY(-26837.81460094625px);
+    }
+}
+
+@keyframes parallax-doodle-26p8c {
+    to {
+        transform: translateY(-23126.84263944906px);
+    }
+}
+
+@keyframes parallax-doodle-w0irme {
+    to {
+        transform: translateY(-47721.16359142047px);
+    }
+}
+
+@keyframes parallax-doodle-wsokxj {
+    to {
+        transform: translateY(-47131.21975057479px);
+    }
+}
+
+@keyframes parallax-doodle-9t4ztc {
+    to {
+        transform: translateY(-46973.22979121112px);
+    }
+}
+
+@keyframes parallax-doodle-2gld5zb {
+    to {
+        transform: translateY(-58862.91856553267px);
+    }
+}
+
+@keyframes parallax-doodle-50acr {
+    to {
+        transform: translateY(-44720.82572462254px);
+    }
+}
+
+@keyframes parallax-doodle-5vbibq {
+    to {
+        transform: translateY(-53697.782307092246px);
+    }
+}
+
+@keyframes parallax-doodle-yf3amwk {
+    to {
+        transform: translateY(-59376.10989136532px);
+    }
+}
+
+@keyframes parallax-doodle-d662bc {
+    to {
+        transform: translateY(-33183.33284403605px);
+    }
+}
+
+@keyframes parallax-doodle-wh05ij {
+    to {
+        transform: translateY(-54815.74727804045px);
+    }
+}
+
+@keyframes parallax-doodle-xxktjb {
+    to {
+        transform: translateY(-42545.09794951843px);
+    }
+}
+
+@keyframes parallax-doodle-jeiiwu {
+    to {
+        transform: translateY(-25367.5860640257px);
+    }
+}
+
+@keyframes parallax-doodle-r12kvzl {
+    to {
+        transform: translateY(-51709.715300747455px);
+    }
+}
+
+@keyframes parallax-doodle-jo48dn {
+    to {
+        transform: translateY(-36207.21415616282px);
+    }
+}
+
+@keyframes parallax-doodle-ki67qp {
+    to {
+        transform: translateY(-31012.802908624733px);
+    }
+}
+
+@keyframes parallax-doodle-6jpbh {
+    to {
+        transform: translateY(-35871.18223909709px);
+    }
+}
+
+@keyframes parallax-doodle-0s7drh {
+    to {
+        transform: translateY(-20081.71760938516px);
+    }
+}
+
+@keyframes parallax-doodle-f690t3 {
+    to {
+        transform: translateY(-53466.48393026885px);
+    }
+}
+
+@keyframes parallax-doodle-qqgzh6m {
+    to {
+        transform: translateY(-56261.35396244468px);
+    }
+}
+
+@keyframes parallax-doodle-o61ggm {
+    to {
+        transform: translateY(-27754.90638219717px);
+    }
+}
+
+@keyframes parallax-doodle-0wj79re {
+    to {
+        transform: translateY(-48654.05625285897px);
+    }
+}
+
+@keyframes parallax-doodle-c77r54 {
+    to {
+        transform: translateY(-52607.81496946561px);
+    }
+}
+
+@keyframes parallax-doodle-7qx3h {
+    to {
+        transform: translateY(-20870.92300556755px);
+    }
+}
+
+@keyframes parallax-doodle-ajhwjlo {
+    to {
+        transform: translateY(-48014.00813394491px);
+    }
+}
+
+@keyframes parallax-doodle-dkohcm {
+    to {
+        transform: translateY(-34923.52189588576px);
+    }
+}
+
+@keyframes parallax-doodle-2prwa {
+    to {
+        transform: translateY(-33283.48231129907px);
+    }
+}
+
+@keyframes parallax-doodle-7s99hf {
+    to {
+        transform: translateY(-29485.27254340118px);
+    }
+}
+
+@keyframes parallax-doodle-m26ie {
+    to {
+        transform: translateY(-21251.398620982924px);
+    }
+}
+
+@keyframes parallax-doodle-qqusfp {
+    to {
+        transform: translateY(-51248.74285955235px);
+    }
+}
+
+@keyframes parallax-doodle-dzb8pg {
+    to {
+        transform: translateY(-48914.37189883988px);
+    }
+}
+
+@keyframes parallax-doodle-5oc38c {
+    to {
+        transform: translateY(-59165.809935181474px);
+    }
+}
+
+@keyframes parallax-doodle-yo48k {
+    to {
+        transform: translateY(-55094.61008482752px);
+    }
+}
+
+@keyframes parallax-doodle-v80zn {
+    to {
+        transform: translateY(-52098.63520292137px);
+    }
+}
+
+@keyframes parallax-doodle-vpsbr {
+    to {
+        transform: translateY(-32316.834013123742px);
+    }
+}
+
+@keyframes parallax-doodle-dgvyg6f {
+    to {
+        transform: translateY(-53782.92705949272px);
+    }
+}
+
+@keyframes parallax-doodle-p453tf {
+    to {
+        transform: translateY(-42447.120908673074px);
+    }
+}
+
+@keyframes parallax-doodle-3ilov7 {
+    to {
+        transform: translateY(-58162.25271353139px);
+    }
+}
+
+@keyframes parallax-doodle-ga2q0s {
+    to {
+        transform: translateY(-26168.742632884918px);
+    }
+}
+
+@keyframes parallax-doodle-elalye {
+    to {
+        transform: translateY(-41513.34444854938px);
+    }
+}
+
+@keyframes parallax-doodle-u38qp {
+    to {
+        transform: translateY(-38104.86561407061px);
+    }
+}
+
+@keyframes parallax-doodle-rzho7r {
+    to {
+        transform: translateY(-31986.14103193284px);
+    }
+}
+
+@keyframes parallax-doodle-2jvrl {
+    to {
+        transform: translateY(-33264.35344976613px);
+    }
+}
+
+@keyframes parallax-doodle-rt8y3k {
+    to {
+        transform: translateY(-21147.01602821629px);
+    }
+}
+
+@keyframes parallax-doodle-an21x {
+    to {
+        transform: translateY(-37689.82738855609px);
+    }
+}
+
+@keyframes parallax-doodle-13mayk {
+    to {
+        transform: translateY(-23658.53937544032px);
+    }
+}
+
+@keyframes parallax-doodle-0olfne {
+    to {
+        transform: translateY(-33629.64198995211px);
+    }
+}
+
+@keyframes parallax-doodle-215mqe {
+    to {
+        transform: translateY(-33743.51701886409px);
+    }
+}
+
+@keyframes parallax-doodle-f8t53u {
+    to {
+        transform: translateY(-20894.27501810503px);
+    }
+}
+
+@keyframes parallax-doodle-a37cu5 {
+    to {
+        transform: translateY(-53183.896673618605px);
+    }
+}
+
+@keyframes parallax-doodle-w770dl {
+    to {
+        transform: translateY(-20767.518437068196px);
+    }
+}
+
+@keyframes parallax-doodle-sntmc {
+    to {
+        transform: translateY(-28438.814657530525px);
+    }
+}
+
+@keyframes parallax-doodle-6vw74pp {
+    to {
+        transform: translateY(-53891.477535459344px);
+    }
+}
+
+@keyframes parallax-doodle-h15hnlo {
+    to {
+        transform: translateY(-50938.84647531962px);
+    }
+}
+
+@keyframes parallax-doodle-kstoa {
+    to {
+        transform: translateY(-36428.52513718867px);
+    }
+}
+
+@keyframes parallax-doodle-sig6jh {
+    to {
+        transform: translateY(-30848.911104948686px);
+    }
+}
+
+@keyframes parallax-doodle-do4rko {
+    to {
+        transform: translateY(-29684.0342436202px);
+    }
+}
+
+@keyframes parallax-doodle-1z9v2r {
+    to {
+        transform: translateY(-60140.973749870944px);
+    }
+}
+
+@keyframes parallax-doodle-dr8igjc {
+    to {
+        transform: translateY(-54693.566170191734px);
+    }
+}
+
+@keyframes parallax-doodle-22m291g {
+    to {
+        transform: translateY(-50574.75159921228px);
+    }
+}
+
+@keyframes parallax-doodle-xu1r8lo {
+    to {
+        transform: translateY(-58375.026107012935px);
+    }
+}
+
+@keyframes parallax-doodle-usf3zg {
+    to {
+        transform: translateY(-42617.92349943067px);
+    }
+}
+
+@keyframes parallax-doodle-2pgbk {
+    to {
+        transform: translateY(-37198.96842221874px);
+    }
+}
+
+@keyframes parallax-doodle-sqcenn {
+    to {
+        transform: translateY(-52682.96661403983px);
+    }
+}
+
+@keyframes parallax-doodle-f015y {
+    to {
+        transform: translateY(-32378.460969669475px);
+    }
+}
+
+@keyframes parallax-doodle-v548a9 {
+    to {
+        transform: translateY(-28365.8370872375px);
+    }
+}
+
+@keyframes parallax-doodle-2ym2uo {
+    to {
+        transform: translateY(-31138.344199277282px);
+    }
+}
+
+@keyframes parallax-doodle-kvho2 {
+    to {
+        transform: translateY(-43788.71495359105px);
+    }
+}
+
+@keyframes parallax-doodle-1b6my {
+    to {
+        transform: translateY(-45717.64277500594px);
+    }
+}
+
+@keyframes parallax-doodle-hmoigp {
+    to {
+        transform: translateY(-59094.8191589702px);
+    }
+}
+
+@keyframes parallax-doodle-yz0jfnk {
+    to {
+        transform: translateY(-60121.1380961719px);
+    }
+}
+
+@keyframes parallax-doodle-i76x1r {
+    to {
+        transform: translateY(-30915.46026662771px);
+    }
+}
+
+@keyframes parallax-doodle-mpu98 {
+    to {
+        transform: translateY(-37592.128573340844px);
+    }
+}
+
+@keyframes parallax-doodle-ze2jwf {
+    to {
+        transform: translateY(-56997.749529983514px);
+    }
+}
+
+@keyframes parallax-doodle-jrwnfv {
+    to {
+        transform: translateY(-57765.098591970505px);
+    }
+}
+
+@keyframes parallax-doodle-fbvcosh {
+    to {
+        transform: translateY(-51868.09516184203px);
+    }
+}
+
+@keyframes parallax-doodle-wwp86p {
+    to {
+        transform: translateY(-47415.60872558215px);
+    }
+}
+
+@keyframes parallax-doodle-svqtrh {
+    to {
+        transform: translateY(-29956.069291876945px);
+    }
+}
+
+@keyframes parallax-doodle-rp22fr {
+    to {
+        transform: translateY(-23190.705068930896px);
+    }
+}
+
+@keyframes parallax-doodle-vqj3zd {
+    to {
+        transform: translateY(-44334.34867406053px);
+    }
+}
+
+@keyframes parallax-doodle-de1hsm {
+    to {
+        transform: translateY(-34163.67004008149px);
+    }
+}
+
+@keyframes parallax-doodle-37jj6c {
+    to {
+        transform: translateY(-48074.6969209228px);
+    }
+}
+
+@keyframes parallax-doodle-dd26k4 {
+    to {
+        transform: translateY(-52516.78808857631px);
+    }
+}
+
+@keyframes parallax-doodle-jtf0le {
+    to {
+        transform: translateY(-29774.826813639025px);
+    }
+}
+
+@keyframes parallax-doodle-fjepe {
+    to {
+        transform: translateY(-34631.50650589687px);
+    }
+}
+
+@keyframes parallax-doodle-hvgh7c {
+    to {
+        transform: translateY(-32092.656247295643px);
+    }
+}
+
+@keyframes parallax-doodle-1beiyo {
+    to {
+        transform: translateY(-27323.534750445055px);
+    }
+}
+
+@keyframes parallax-doodle-6xtker {
+    to {
+        transform: translateY(-19051.530241329747px);
+    }
+}
+
+@keyframes parallax-doodle-jdt0x {
+    to {
+        transform: translateY(-17452.960291999043px);
+    }
+}
+
+@keyframes parallax-doodle-8lhpkh {
+    to {
+        transform: translateY(-12933.758671917838px);
+    }
+}
+
+@keyframes parallax-doodle-7cqo8b {
+    to {
+        transform: translateY(-12265.330404533488px);
+    }
+}
+
+@keyframes parallax-doodle-njytl {
+    to {
+        transform: translateY(-17735.61238757387px);
+    }
+}
+
+@keyframes parallax-doodle-pgskwl {
+    to {
+        transform: translateY(-19100.97045324283px);
+    }
+}
+
+@keyframes parallax-doodle-lodwnl {
+    to {
+        transform: translateY(-17763.890125115686px);
+    }
+}
+
+@keyframes parallax-doodle-j0b8b9 {
+    to {
+        transform: translateY(-19010.641611125382px);
+    }
+}
+
+@keyframes parallax-doodle-q5jyt {
+    to {
+        transform: translateY(-22352.472011194604px);
+    }
+}
+
+@keyframes parallax-doodle-8n2vip {
+    to {
+        transform: translateY(-11104.16839508547px);
+    }
+}
+
+@keyframes parallax-doodle-5ipuiv {
+    to {
+        transform: translateY(-12535.574192385639px);
+    }
+}
+
+@keyframes parallax-doodle-zjw9lp {
+    to {
+        transform: translateY(-21735.993817572766px);
+    }
+}
+
+@keyframes parallax-doodle-29rdu9 {
+    to {
+        transform: translateY(-23844.74078941894px);
+    }
+}
+
+@keyframes parallax-doodle-mtu0q8 {
+    to {
+        transform: translateY(-17958.530581891275px);
+    }
+}
+
+@keyframes parallax-doodle-yo2927 {
+    to {
+        transform: translateY(-18021.736854175328px);
+    }
+}
+
+@keyframes parallax-doodle-giovha {
+    to {
+        transform: translateY(-14236.275045421666px);
+    }
+}
+
+@keyframes parallax-doodle-zdydwp {
+    to {
+        transform: translateY(-19226.618042430637px);
+    }
+}
+
+@keyframes parallax-doodle-th0iyq {
+    to {
+        transform: translateY(-15614.036125527879px);
+    }
+}
+
+@keyframes parallax-doodle-7g9jns {
+    to {
+        transform: translateY(-16982.436888113218px);
+    }
+}
+
+@keyframes parallax-doodle-9d0gaf {
+    to {
+        transform: translateY(-18586.622885833767px);
+    }
+}
+
+@keyframes parallax-doodle-jkb4l {
+    to {
+        transform: translateY(-21725.84841315461px);
+    }
+}
+
+@keyframes parallax-doodle-8gxlxv {
+    to {
+        transform: translateY(-17480.72394698169px);
+    }
+}
+
+@keyframes parallax-doodle-72bhoq {
+    to {
+        transform: translateY(-12452.295676106445px);
+    }
+}
+
+@keyframes parallax-doodle-7odl6 {
+    to {
+        transform: translateY(-20588.009423807252px);
+    }
+}
+
+@keyframes parallax-doodle-gfdn5 {
+    to {
+        transform: translateY(-15080.448654560903px);
+    }
+}
+
+@keyframes parallax-doodle-r5wwwo {
+    to {
+        transform: translateY(-18137.39101432368px);
+    }
+}
+
+@keyframes parallax-doodle-t27c2 {
+    to {
+        transform: translateY(-14572.041517944426px);
+    }
+}
+
+@keyframes parallax-doodle-lj3j2b {
+    to {
+        transform: translateY(-10066.82299233756px);
+    }
+}
+
+@keyframes parallax-doodle-e7rvdt {
+    to {
+        transform: translateY(-14026.269594820611px);
+    }
+}
+
+@keyframes parallax-doodle-qyh8vs {
+    to {
+        transform: translateY(-19629.565392613px);
+    }
+}
+
+@keyframes parallax-doodle-xs2fxv {
+    to {
+        transform: translateY(-13423.87726722528px);
+    }
+}
+
+@keyframes parallax-doodle-t9s3z3 {
+    to {
+        transform: translateY(-11942.625627393907px);
+    }
+}
+
+@keyframes parallax-doodle-h04x2p {
+    to {
+        transform: translateY(-21715.45406815405px);
+    }
+}
+
+@keyframes parallax-doodle-8nh1r {
+    to {
+        transform: translateY(-8256.441543468014px);
+    }
+}
+
+@keyframes parallax-doodle-wewq05 {
+    to {
+        transform: translateY(-9078.070910796845px);
+    }
+}
+
+@keyframes parallax-doodle-01333c {
+    to {
+        transform: translateY(-23978.53549447357px);
+    }
+}
+
+@keyframes parallax-doodle-ki061t {
+    to {
+        transform: translateY(-11025.740408524727px);
+    }
+}
+
+@keyframes parallax-doodle-lqcrme {
+    to {
+        transform: translateY(-18361.634725053016px);
+    }
+}
+
+@keyframes parallax-doodle-qddi4d {
+    to {
+        transform: translateY(-17013.04840473959px);
+    }
+}
+
+@keyframes parallax-doodle-6ur6vl {
+    to {
+        transform: translateY(-17126.569591356183px);
+    }
+}
+
+@keyframes parallax-doodle-3tzc39 {
+    to {
+        transform: translateY(-14106.630483385221px);
+    }
+}
+
+@keyframes parallax-doodle-b05yhs {
+    to {
+        transform: translateY(-13640.070451916095px);
+    }
+}
+
+@keyframes parallax-doodle-qqbyk {
+    to {
+        transform: translateY(-15362.063844552695px);
+    }
+}
+
+@keyframes parallax-doodle-e8ypvj {
+    to {
+        transform: translateY(-21721.96789799836px);
+    }
+}
+
+@keyframes parallax-doodle-ddjss6 {
+    to {
+        transform: translateY(-8902.774206455515px);
+    }
+}
+
+@keyframes parallax-doodle-9lak7m {
+    to {
+        transform: translateY(-13457.42381668987px);
+    }
+}
+
+@keyframes parallax-doodle-ms7eyi {
+    to {
+        transform: translateY(-19884.37394511959px);
+    }
+}
+
+@keyframes parallax-doodle-l6tird {
+    to {
+        transform: translateY(-8735.262799842363px);
+    }
+}
+
+@keyframes parallax-doodle-leh9av {
+    to {
+        transform: translateY(-15469.330705637121px);
+    }
+}
+
+@keyframes parallax-doodle-jfqy2 {
+    to {
+        transform: translateY(-11055.806743772684px);
+    }
+}
+
+@keyframes parallax-doodle-v4ecut {
+    to {
+        transform: translateY(-21885.23446335282px);
+    }
+}
+
+@keyframes parallax-doodle-shorut {
+    to {
+        transform: translateY(-17241.302308199112px);
+    }
+}
+
+@keyframes parallax-doodle-11esb {
+    to {
+        transform: translateY(-11751.22455931042px);
+    }
+}
+
+@keyframes parallax-doodle-fnvbsv {
+    to {
+        transform: translateY(-12004.001107318707px);
+    }
+}
+
+@keyframes parallax-doodle-rzuosp {
+    to {
+        transform: translateY(-10679.897204987608px);
+    }
+}
+
+@keyframes parallax-doodle-16ok65 {
+    to {
+        transform: translateY(-21285.291692078565px);
+    }
+}
+
+@keyframes parallax-doodle-q2lgft {
+    to {
+        transform: translateY(-15448.121700791144px);
+    }
+}
+
+@keyframes parallax-doodle-kkksf {
+    to {
+        transform: translateY(-17251.846119933056px);
+    }
+}
+
+@keyframes parallax-doodle-eks6zv {
+    to {
+        transform: translateY(-20687.588275405316px);
+    }
+}
+
+@keyframes parallax-doodle-pp38oj {
+    to {
+        transform: translateY(-27422.992834725337px);
+    }
+}
+
+@keyframes parallax-doodle-wkpws {
+    to {
+        transform: translateY(-20274.92971055273px);
+    }
+}
+
+@keyframes parallax-doodle-b6dfb {
+    to {
+        transform: translateY(-27255.193140797015px);
+    }
+}
+
+@keyframes parallax-doodle-cq9n4k {
+    to {
+        transform: translateY(-19362.41616790257px);
+    }
+}
+
+@keyframes parallax-doodle-0mn6yk {
+    to {
+        transform: translateY(-20037.917451753412px);
+    }
+}
+
+@keyframes parallax-doodle-3kgx45 {
+    to {
+        transform: translateY(-22684.216897475373px);
+    }
+}
+
+@keyframes parallax-doodle-umdemu {
+    to {
+        transform: translateY(-21462.732909410486px);
+    }
+}
+
+@keyframes parallax-doodle-hyfjj7 {
+    to {
+        transform: translateY(-24988.97646511568px);
+    }
+}
+
+@keyframes parallax-doodle-mofadq {
+    to {
+        transform: translateY(-19728.085362621383px);
+    }
+}
+
+@keyframes parallax-doodle-vx1ap6 {
+    to {
+        transform: translateY(-27852.3154989212px);
+    }
+}
+
+@keyframes parallax-doodle-lo37mv {
+    to {
+        transform: translateY(-15732.681020000538px);
+    }
+}
+
+@keyframes parallax-doodle-7mzso7 {
+    to {
+        transform: translateY(-15404.529484712188px);
+    }
+}
+
+@keyframes parallax-doodle-5ld76u {
+    to {
+        transform: translateY(-26864.890551987275px);
+    }
+}
+
+@keyframes parallax-doodle-2g7jib {
+    to {
+        transform: translateY(-21012.44912659173px);
+    }
+}
+
+@keyframes parallax-doodle-bszx3 {
+    to {
+        transform: translateY(-31608.23019130429px);
+    }
+}
+
+@keyframes parallax-doodle-yow4x {
+    to {
+        transform: translateY(-14893.199817632532px);
+    }
+}
+
+@keyframes parallax-doodle-dg6y7n {
+    to {
+        transform: translateY(-14812.035010498272px);
+    }
+}
+
+@keyframes parallax-doodle-4d7qw {
+    to {
+        transform: translateY(-32396.997778787052px);
+    }
+}
+
+@keyframes parallax-doodle-9sb9qj {
+    to {
+        transform: translateY(-23459.68076531366px);
+    }
+}
+
+@keyframes parallax-doodle-8c75z {
+    to {
+        transform: translateY(-30294.33737008879px);
+    }
+}
+
+@keyframes parallax-doodle-werq87 {
+    to {
+        transform: translateY(-25267.69436750438px);
+    }
+}
+
+@keyframes parallax-doodle-7jf0kp {
+    to {
+        transform: translateY(-12125.656797397209px);
+    }
+}
+
+@keyframes parallax-doodle-nfyukq {
+    to {
+        transform: translateY(-17804.627045686655px);
+    }
+}
+
+@keyframes parallax-doodle-ikc3rx {
+    to {
+        transform: translateY(-15667.201015194096px);
+    }
+}
+
+@keyframes parallax-doodle-zwyb3 {
+    to {
+        transform: translateY(-31500.97839324762px);
+    }
+}
+
+@keyframes parallax-doodle-b887xc {
+    to {
+        transform: translateY(-30906.22632091403px);
+    }
+}
+
+@keyframes parallax-doodle-05d1yt {
+    to {
+        transform: translateY(-29526.145064921166px);
+    }
+}
+
+@keyframes parallax-doodle-jz9oek {
+    to {
+        transform: translateY(-32477.587619592116px);
+    }
+}
+
+@keyframes parallax-doodle-e6i3gh {
+    to {
+        transform: translateY(-26680.568976779614px);
+    }
+}
+
+@keyframes parallax-doodle-10yvp7 {
+    to {
+        transform: translateY(-17040.386596084405px);
+    }
+}
+
+@keyframes parallax-doodle-f5xj96 {
+    to {
+        transform: translateY(-22376.10063367551px);
+    }
+}
+
+@keyframes parallax-doodle-ycxng {
+    to {
+        transform: translateY(-23779.533143846424px);
+    }
+}
+
+@keyframes parallax-doodle-hm4i8r {
+    to {
+        transform: translateY(-20290.143896060283px);
+    }
+}
+
+@keyframes parallax-doodle-gwdlta {
+    to {
+        transform: translateY(-12943.246504187828px);
+    }
+}
+
+@keyframes parallax-doodle-49zce5 {
+    to {
+        transform: translateY(-29214.698394145915px);
+    }
+}
+
+@keyframes parallax-doodle-ahh0g {
+    to {
+        transform: translateY(-18487.04883584853px);
+    }
+}
+
+@keyframes parallax-doodle-i7s3rn {
+    to {
+        transform: translateY(-32670.296686731184px);
+    }
+}
+
+@keyframes parallax-doodle-svhivo {
+    to {
+        transform: translateY(-26648.2405880194px);
+    }
+}
+
+@keyframes parallax-doodle-jto7d {
+    to {
+        transform: translateY(-24101.998881692212px);
+    }
+}
+
+@keyframes parallax-doodle-30eidc {
+    to {
+        transform: translateY(-20305.78324355273px);
+    }
+}
+
+@keyframes parallax-doodle-ww3jrp {
+    to {
+        transform: translateY(-22660.11027288296px);
+    }
+}
+
+@keyframes parallax-doodle-6gn50k {
+    to {
+        transform: translateY(-29393.53640394159px);
+    }
+}
+
+@keyframes parallax-doodle-9k9qqi {
+    to {
+        transform: translateY(-21183.103600031573px);
+    }
+}
+
+@keyframes parallax-doodle-2bysgg {
+    to {
+        transform: translateY(-28564.6103894976px);
+    }
+}
+
+@keyframes parallax-doodle-noepz6 {
+    to {
+        transform: translateY(-12855.026742070171px);
+    }
+}
+
+@keyframes parallax-doodle-na9xt {
+    to {
+        transform: translateY(-23566.292165754603px);
+    }
+}
+
+@keyframes parallax-doodle-joa9ax {
+    to {
+        transform: translateY(-15149.854588361242px);
+    }
+}
+
+@keyframes parallax-doodle-gpq0ag {
+    to {
+        transform: translateY(-22740.326747138897px);
+    }
+}
+
+@keyframes parallax-doodle-ahto3j {
+    to {
+        transform: translateY(-23354.63988544057px);
+    }
+}
+
+@keyframes parallax-doodle-lmljdg {
+    to {
+        transform: translateY(-23883.830710470895px);
+    }
+}
+
+@keyframes parallax-doodle-iuzahb {
+    to {
+        transform: translateY(-14364.814447457222px);
+    }
+}
+
+@keyframes parallax-doodle-qz0apm {
+    to {
+        transform: translateY(-22374.185763298436px);
+    }
+}
+
+@keyframes parallax-doodle-jxoxn {
+    to {
+        transform: translateY(-23052.7049026043px);
+    }
+}
+
+@keyframes parallax-doodle-sgr14 {
+    to {
+        transform: translateY(-31251.10477677687px);
+    }
+}
+
+@keyframes parallax-doodle-chnsif {
+    to {
+        transform: translateY(-17844.44779858068px);
+    }
+}
+
+@keyframes parallax-doodle-kurnhp {
+    to {
+        transform: translateY(-17835.845354395366px);
+    }
+}
+
+@keyframes parallax-doodle-qryc0k {
+    to {
+        transform: translateY(-31142.043783789697px);
+    }
+}
+
+@keyframes parallax-doodle-bosw3r {
+    to {
+        transform: translateY(-28746.731732016455px);
+    }
+}
+
+@keyframes parallax-doodle-fquor {
+    to {
+        transform: translateY(-11963.914689341153px);
+    }
+}
+
+@keyframes parallax-doodle-3pxcb {
+    to {
+        transform: translateY(-21206.158258748525px);
+    }
+}
+
+@keyframes parallax-doodle-vzhvnt {
+    to {
+        transform: translateY(-32462.965963349154px);
+    }
+}
+
+@keyframes parallax-doodle-y1z02v {
+    to {
+        transform: translateY(-16876.835606455454px);
+    }
+}
+
+@keyframes parallax-doodle-4smvj {
+    to {
+        transform: translateY(-16313.954578091325px);
+    }
+}
+
+@keyframes parallax-doodle-5jyuj8 {
+    to {
+        transform: translateY(-32668.278668438503px);
+    }
+}
+
+@keyframes parallax-doodle-p325k {
+    to {
+        transform: translateY(-18616.262111732587px);
+    }
+}
+
+@keyframes parallax-doodle-4vg6u8 {
+    to {
+        transform: translateY(-19135.35890075453px);
+    }
+}
+
+@keyframes parallax-doodle-vce5u {
+    to {
+        transform: translateY(-29747.0755174953px);
+    }
+}
+
+@keyframes parallax-doodle-a72dgr {
+    to {
+        transform: translateY(-26072.93231730702px);
+    }
+}
+
+@keyframes parallax-doodle-56yis7 {
+    to {
+        transform: translateY(-4074.084216248796px);
+    }
+}
+
+@keyframes parallax-doodle-1unciu {
+    to {
+        transform: translateY(-3578.345718693173px);
+    }
+}
+
+@keyframes parallax-doodle-wl7d9t {
+    to {
+        transform: translateY(-4048.780791088371px);
+    }
+}
+
+@keyframes parallax-doodle-mqjwi4 {
+    to {
+        transform: translateY(-2601.398635493385px);
+    }
+}
+
+@keyframes parallax-doodle-xiu22f {
+    to {
+        transform: translateY(-2904.371088888727px);
+    }
+}
+
+@keyframes parallax-doodle-xp52uv {
+    to {
+        transform: translateY(-2580.1357531370822px);
+    }
+}
+
+@keyframes parallax-doodle-wu2xjo {
+    to {
+        transform: translateY(-2304.3024013116333px);
+    }
+}
+
+@keyframes parallax-doodle-g2j5q8 {
+    to {
+        transform: translateY(-3280.01963456659px);
+    }
+}
+
+@keyframes parallax-doodle-gnxba7 {
+    to {
+        transform: translateY(-3877.8066843405713px);
+    }
+}
+
+@keyframes parallax-doodle-ry1lbn {
+    to {
+        transform: translateY(-4080.541494034488px);
+    }
+}
+
+@keyframes parallax-doodle-htypld {
+    to {
+        transform: translateY(-4365.467974801498px);
+    }
+}
+
+@keyframes parallax-doodle-of7bqo {
+    to {
+        transform: translateY(-1900.8346283933374px);
+    }
+}
+
+@keyframes parallax-doodle-z7owta {
+    to {
+        transform: translateY(-3506.7484399362625px);
+    }
+}
+
+@keyframes parallax-doodle-h8bxsv {
+    to {
+        transform: translateY(-3539.56286932944px);
+    }
+}
+
+@keyframes parallax-doodle-jryr16 {
+    to {
+        transform: translateY(-4404.775886848722px);
+    }
+}
+
+@keyframes parallax-doodle-khvgu {
+    to {
+        transform: translateY(-2683.029760298842px);
+    }
+}
+
+@keyframes parallax-doodle-fu8nga {
+    to {
+        transform: translateY(-3753.8537345680907px);
+    }
+}
+
+@keyframes parallax-doodle-m51iuo {
+    to {
+        transform: translateY(-3986.8152893532356px);
+    }
+}
+
+@keyframes parallax-doodle-p8ih09 {
+    to {
+        transform: translateY(-3722.596219917602px);
+    }
+}
+
+@keyframes parallax-doodle-r4j5re {
+    to {
+        transform: translateY(-3898.599346834171px);
+    }
+}
+
+@keyframes parallax-doodle-tr2j8b {
+    to {
+        transform: translateY(-2922.4690018851893px);
+    }
+}
+
+@keyframes parallax-doodle-dtz1i7 {
+    to {
+        transform: translateY(-3258.368352036051px);
+    }
+}
+
+@keyframes parallax-doodle-vj3e6z {
+    to {
+        transform: translateY(-1623.0076202502746px);
+    }
+}
+
+@keyframes parallax-doodle-pa7ba3 {
+    to {
+        transform: translateY(-2779.63171475096px);
+    }
+}
+
+@keyframes parallax-doodle-ca2dga {
+    to {
+        transform: translateY(-4132.206281713163px);
+    }
+}
+
+@keyframes parallax-doodle-0pop7 {
+    to {
+        transform: translateY(-991.7052473383815px);
+    }
+}
+
+@keyframes parallax-doodle-wamqs {
+    to {
+        transform: translateY(-1635.516895904643px);
+    }
+}
+
+@keyframes parallax-doodle-g07ogy {
+    to {
+        transform: translateY(-1526.125343062537px);
+    }
+}
+
+@keyframes parallax-doodle-9txni {
+    to {
+        transform: translateY(-783.1812258465758px);
+    }
+}
+
+@keyframes parallax-doodle-7bakswg {
+    to {
+        transform: translateY(-1633.3404345361257px);
+    }
+}
+
+@keyframes parallax-doodle-p1tv5o {
+    to {
+        transform: translateY(-877.1989603878637px);
+    }
+}
+
+@keyframes parallax-doodle-yr975g {
+    to {
+        transform: translateY(-833.8102487456048px);
+    }
+}
+
+@keyframes parallax-doodle-040x51 {
+    to {
+        transform: translateY(-1540.1836443720294px);
+    }
+}
+
+@keyframes parallax-doodle-nbjp4 {
+    to {
+        transform: translateY(-1073.4084072316257px);
+    }
+}
+
+@keyframes parallax-doodle-dbvn0l {
+    to {
+        transform: translateY(-1362.1978165716869px);
+    }
+}
+
+@keyframes parallax-doodle-eq3n3b {
+    to {
+        transform: translateY(-988.7037767710191px);
+    }
+}
+
+@keyframes parallax-doodle-05im8n {
+    to {
+        transform: translateY(-1593.8163613094662px);
+    }
+}
+
+@keyframes parallax-doodle-p7qn99 {
+    to {
+        transform: translateY(-1447.6556330376511px);
+    }
+}
+
+@keyframes parallax-doodle-2c22qk {
+    to {
+        transform: translateY(-913.748050944344px);
+    }
+}
+
+@keyframes parallax-doodle-xxx5f0l {
+    to {
+        transform: translateY(-1661.9590608334563px);
+    }
+}
+
+@keyframes parallax-doodle-jzmnakh {
+    to {
+        transform: translateY(-48157.12653525987px);
+    }
+}
+
+@keyframes parallax-doodle-8vq5hc {
+    to {
+        transform: translateY(-38456.57889406058px);
+    }
+}
+
+@keyframes parallax-doodle-jnu8fj {
+    to {
+        transform: translateY(-41804.477273281416px);
+    }
+}
+
+@keyframes parallax-doodle-aq9lzg {
+    to {
+        transform: translateY(-42177.73093984992px);
+    }
+}
+
+@keyframes parallax-doodle-ntu992 {
+    to {
+        transform: translateY(-66119.87949760957px);
+    }
+}
+
+@keyframes parallax-doodle-4h14oyj {
+    to {
+        transform: translateY(-65097.94789590619px);
+    }
+}
+
+@keyframes parallax-doodle-1gqfrk {
+    to {
+        transform: translateY(-55786.806685836484px);
+    }
+}
+
+@keyframes parallax-doodle-1mw8z4 {
+    to {
+        transform: translateY(-88606.94570678614px);
+    }
+}
+
+@keyframes parallax-doodle-y44kw4 {
+    to {
+        transform: translateY(-46895.609656362125px);
+    }
+}
+
+@keyframes parallax-doodle-b4h5po {
+    to {
+        transform: translateY(-66456.73080582627px);
+    }
+}
+
+@keyframes parallax-doodle-ntovwc {
+    to {
+        transform: translateY(-90391.10171663408px);
+    }
+}
+
+@keyframes parallax-doodle-gf39ki {
+    to {
+        transform: translateY(-57916.67933579212px);
+    }
+}
+
+@keyframes parallax-doodle-g2furn {
+    to {
+        transform: translateY(-75798.45684242985px);
+    }
+}
+
+@keyframes parallax-doodle-cv7ka7 {
+    to {
+        transform: translateY(-77543.59326153324px);
+    }
+}
+
+@keyframes parallax-doodle-0bxl7 {
+    to {
+        transform: translateY(-40518.14121080832px);
+    }
+}
+
+@keyframes parallax-doodle-8ylweu {
+    to {
+        transform: translateY(-32218.21778466527px);
+    }
+}
+
+@keyframes parallax-doodle-vwfdz9 {
+    to {
+        transform: translateY(-61106.552392563724px);
+    }
+}
+
+@keyframes parallax-doodle-nuneo {
+    to {
+        transform: translateY(-39550.01825813174px);
+    }
+}
+
+@keyframes parallax-doodle-4kdef {
+    to {
+        transform: translateY(-39112.15982008521px);
+    }
+}
+
+@keyframes parallax-doodle-68hbh1 {
+    to {
+        transform: translateY(-66874.31036696405px);
+    }
+}
+
+@keyframes parallax-doodle-3snkd4 {
+    to {
+        transform: translateY(-70785.30848453793px);
+    }
+}
+
+@keyframes parallax-doodle-423uq6 {
+    to {
+        transform: translateY(-92280.80868713654px);
+    }
+}
+
+@keyframes parallax-doodle-9q2y7d {
+    to {
+        transform: translateY(-86138.11861458221px);
+    }
+}
+
+@keyframes parallax-doodle-h2khzw {
+    to {
+        transform: translateY(-85935.87428346713px);
+    }
+}
+
+@keyframes parallax-doodle-2cy51l {
+    to {
+        transform: translateY(-51586.11293184877px);
+    }
+}
+
+@keyframes parallax-doodle-3xtop {
+    to {
+        transform: translateY(-87585.64192868248px);
+    }
+}
+
+@keyframes parallax-doodle-9nf08l {
+    to {
+        transform: translateY(-54104.479668571046px);
+    }
+}
+
+@keyframes parallax-doodle-zt76p3 {
+    to {
+        transform: translateY(-62692.94429868852px);
+    }
+}
+
+@keyframes parallax-doodle-jjjke {
+    to {
+        transform: translateY(-40006.463381834605px);
+    }
+}
+
+@keyframes parallax-doodle-cd2y6h {
+    to {
+        transform: translateY(-79924.64842853928px);
+    }
+}
+
+@keyframes parallax-doodle-9gpv49g {
+    to {
+        transform: translateY(-63147.812858334524px);
+    }
+}
+
+@keyframes parallax-doodle-xedv2eh {
+    to {
+        transform: translateY(-49896.19243795187px);
+    }
+}
+
+@keyframes parallax-doodle-6r5w0q {
+    to {
+        transform: translateY(-45734.134404032586px);
+    }
+}
+
+@keyframes parallax-doodle-xcb6g7 {
+    to {
+        transform: translateY(-74892.69239348706px);
+    }
+}
+
+@keyframes parallax-doodle-475yx4m {
+    to {
+        transform: translateY(-59218.28101778621px);
+    }
+}
+
+@keyframes parallax-doodle-yr17kq {
+    to {
+        transform: translateY(-37589.85259668497px);
+    }
+}
+
+@keyframes parallax-doodle-70mvh {
+    to {
+        transform: translateY(-46440.922218313826px);
+    }
+}
+
+@keyframes parallax-doodle-5xjf6e {
+    to {
+        transform: translateY(-74505.08791022567px);
+    }
+}
+
+@keyframes parallax-doodle-sz1bzco {
+    to {
+        transform: translateY(-59047.32791145883px);
+    }
+}
+
+@keyframes parallax-doodle-k8svi3 {
+    to {
+        transform: translateY(-50090.73784298022px);
+    }
+}
+
+@keyframes parallax-doodle-l9mxk2l {
+    to {
+        transform: translateY(-53653.04418803593px);
+    }
+}
+
+@keyframes parallax-doodle-oj85r7 {
+    to {
+        transform: translateY(-54015.018930612634px);
+    }
+}
+
+@keyframes parallax-doodle-twr9cp {
+    to {
+        transform: translateY(-75649.38418975516px);
+    }
+}
+
+@keyframes parallax-doodle-3dvgth {
+    to {
+        transform: translateY(-36205.47923922735px);
+    }
+}
+
+@keyframes parallax-doodle-8r4yy6 {
+    to {
+        transform: translateY(-58469.867865613815px);
+    }
+}
+
+@keyframes parallax-doodle-9mvpfl {
+    to {
+        transform: translateY(-59852.590768191345px);
+    }
+}
+
+@keyframes parallax-doodle-p2dng6 {
+    to {
+        transform: translateY(-59676.29711889585px);
+    }
+}
+
+@keyframes parallax-doodle-a86uic {
+    to {
+        transform: translateY(-35740.3582439023px);
+    }
+}
+
+@keyframes parallax-doodle-gmlh96m {
+    to {
+        transform: translateY(-53425.34616333692px);
+    }
+}
+
+@keyframes parallax-doodle-op7zap {
+    to {
+        transform: translateY(-59521.88017021776px);
+    }
+}
+
+@keyframes parallax-doodle-q04tlf {
+    to {
+        transform: translateY(-55273.075620154894px);
+    }
+}
+
+@keyframes parallax-doodle-wup6e6 {
+    to {
+        transform: translateY(-53572.13646046334px);
+    }
+}
+
+@keyframes parallax-doodle-ijr3ot {
+    to {
+        transform: translateY(-83977.20875670538px);
+    }
+}
+
+@keyframes parallax-doodle-fs0iw7 {
+    to {
+        transform: translateY(-78151.51217452373px);
+    }
+}
+
+@keyframes parallax-doodle-q1takh {
+    to {
+        transform: translateY(-93388.49232282472px);
+    }
+}
+
+@keyframes parallax-doodle-gwcad4 {
+    to {
+        transform: translateY(-73823.56859442152px);
+    }
+}
+
+@keyframes parallax-doodle-zde85b {
+    to {
+        transform: translateY(-66565.41618216682px);
+    }
+}
+
+@keyframes parallax-doodle-hhctqc {
+    to {
+        transform: translateY(-44163.830621616056px);
+    }
+}
+
+@keyframes parallax-doodle-now0x {
+    to {
+        transform: translateY(-41558.751279393386px);
+    }
+}
+
+@keyframes parallax-doodle-lnsrj9 {
+    to {
+        transform: translateY(-77253.54449157715px);
+    }
+}
+
+@keyframes parallax-doodle-ne5ear {
+    to {
+        transform: translateY(-63442.212494639956px);
+    }
+}
+
+@keyframes parallax-doodle-61ya94 {
+    to {
+        transform: translateY(-46702.58800480872px);
+    }
+}
+
+@keyframes parallax-doodle-sqi1jra {
+    to {
+        transform: translateY(-60533.57772850641px);
+    }
+}
+
+@keyframes parallax-doodle-xw3i63k {
+    to {
+        transform: translateY(-53504.38726203174px);
+    }
+}
+
+@keyframes parallax-doodle-m72ip {
+    to {
+        transform: translateY(-38445.113130066624px);
+    }
+}
+
+@keyframes parallax-doodle-r484lj {
+    to {
+        transform: translateY(-85741.46536835069px);
+    }
+}
+
+@keyframes parallax-doodle-g98h22 {
+    to {
+        transform: translateY(-88563.15143251422px);
+    }
+}
+
+@keyframes parallax-doodle-oqqus {
+    to {
+        transform: translateY(-79685.96353622193px);
+    }
+}
+
+@keyframes parallax-doodle-akewrs {
+    to {
+        transform: translateY(-66528.20259804046px);
+    }
+}
+
+@keyframes parallax-doodle-olv7xn {
+    to {
+        transform: translateY(-43268.153305200256px);
+    }
+}
+
+@keyframes parallax-doodle-pkoe5s {
+    to {
+        transform: translateY(-63962.575288871594px);
+    }
+}
+
+@keyframes parallax-doodle-1wyzi0o {
+    to {
+        transform: translateY(-56649.39036719472px);
+    }
+}
+
+@keyframes parallax-doodle-3dbfo1 {
+    to {
+        transform: translateY(-74251.03037803594px);
+    }
+}
+
+@keyframes parallax-doodle-jfqqf3g {
+    to {
+        transform: translateY(-55307.5705534681px);
+    }
+}
+
+@keyframes parallax-doodle-5dexc5h {
+    to {
+        transform: translateY(-55587.14303443528px);
+    }
+}
+
+@keyframes parallax-doodle-p1uvk9 {
+    to {
+        transform: translateY(-92297.24155216236px);
+    }
+}
+
+@keyframes parallax-doodle-swbrfm {
+    to {
+        transform: translateY(-76454.60563114547px);
+    }
+}
+
+@keyframes parallax-doodle-o749ps {
+    to {
+        transform: translateY(-81630.1297822061px);
+    }
+}
+
+@keyframes parallax-doodle-nfosrw {
+    to {
+        transform: translateY(-85918.96252762494px);
+    }
+}
+
+@keyframes parallax-doodle-ruhbhe {
+    to {
+        transform: translateY(-39644.78223265382px);
+    }
+}
+
+@keyframes parallax-doodle-l0c11x {
+    to {
+        transform: translateY(-80336.26621086561px);
+    }
+}
+
+@keyframes parallax-doodle-xv2wih {
+    to {
+        transform: translateY(-44173.05782457457px);
+    }
+}
+
+@keyframes parallax-doodle-o73vi9 {
+    to {
+        transform: translateY(-72635.87978197112px);
+    }
+}
+
+@keyframes parallax-doodle-w2iood {
+    to {
+        transform: translateY(-75183.30252312758px);
+    }
+}
+
+@keyframes parallax-doodle-ly9tc8 {
+    to {
+        transform: translateY(-51484.961382729736px);
+    }
+}
+
+@keyframes parallax-doodle-1nqvhe {
+    to {
+        transform: translateY(-36724.83028248511px);
+    }
+}
+
+@keyframes parallax-doodle-tn4a5tb {
+    to {
+        transform: translateY(-62301.57842761814px);
+    }
+}
+
+@keyframes parallax-doodle-1lgcfx {
+    to {
+        transform: translateY(-47596.64012032846px);
+    }
+}
+
+@keyframes parallax-doodle-z094zb {
+    to {
+        transform: translateY(-50024.332567169135px);
+    }
+}
+
+@keyframes parallax-doodle-dckhn2 {
+    to {
+        transform: translateY(-73785.70474470951px);
+    }
+}
+
+@keyframes parallax-doodle-i5yur9 {
+    to {
+        transform: translateY(-67252.23623902985px);
+    }
+}
+
+@keyframes parallax-doodle-db71gpi {
+    to {
+        transform: translateY(-48619.649159713095px);
+    }
+}
+
+@keyframes parallax-doodle-asoxer {
+    to {
+        transform: translateY(-86921.64721991697px);
+    }
+}
+
+@keyframes parallax-doodle-xesyy {
+    to {
+        transform: translateY(-31632.509975378147px);
+    }
+}
+
+@keyframes parallax-doodle-yj0oyve {
+    to {
+        transform: translateY(-63510.77664221678px);
+    }
+}
+
+@keyframes parallax-doodle-e9pu2k {
+    to {
+        transform: translateY(-34228.54660215052px);
+    }
+}
+
+@keyframes parallax-doodle-8ffijy {
+    to {
+        transform: translateY(-85831.11761469014px);
+    }
+}
+
+@keyframes parallax-doodle-srmdxn {
+    to {
+        transform: translateY(-85682.99441919288px);
+    }
+}
+
+@keyframes parallax-doodle-1029gk {
+    to {
+        transform: translateY(-47324.695217396584px);
+    }
+}
+
+@keyframes parallax-doodle-mw255e {
+    to {
+        transform: translateY(-43012.180274574384px);
+    }
+}
+
+@keyframes parallax-doodle-66ei8p {
+    to {
+        transform: translateY(-78721.19921131182px);
+    }
+}
+
+@keyframes parallax-doodle-zdoj6 {
+    to {
+        transform: translateY(-39370.68208547755px);
+    }
+}
+
+@keyframes parallax-doodle-xh8k87 {
+    to {
+        transform: translateY(-73465.91472131838px);
+    }
+}
+
+@keyframes parallax-doodle-xn7pbi {
+    to {
+        transform: translateY(-81558.0815160747px);
+    }
+}
+
+@keyframes parallax-doodle-r3h2kd {
+    to {
+        transform: translateY(-32796.59240175981px);
+    }
+}
+
+@keyframes parallax-doodle-2m4tqzk {
+    to {
+        transform: translateY(-50423.446462064174px);
+    }
+}
+
+@keyframes parallax-doodle-lvx3b8 {
+    to {
+        transform: translateY(-57250.12799895452px);
+    }
+}
+
+@keyframes parallax-doodle-8uxka {
+    to {
+        transform: translateY(-38119.54185655073px);
+    }
+}
+
+@keyframes parallax-doodle-nfyilu {
+    to {
+        transform: translateY(-76023.40697785496px);
+    }
+}
+
+@keyframes parallax-doodle-8ybbve {
+    to {
+        transform: translateY(-43622.823494366996px);
+    }
+}
+
+@keyframes parallax-doodle-3j6ku7 {
+    to {
+        transform: translateY(-76477.19717041208px);
+    }
+}
+
+@keyframes parallax-doodle-e0bp3t {
+    to {
+        transform: translateY(-68601.48303165568px);
+    }
+}
+
+@keyframes parallax-doodle-jfns8 {
+    to {
+        transform: translateY(-36460.76739186854px);
+    }
+}
+
+@keyframes parallax-doodle-0nykfm {
+    to {
+        transform: translateY(-36609.72918093196px);
+    }
+}
+
+@keyframes parallax-doodle-ym8u9 {
+    to {
+        transform: translateY(-726.9025840536958px);
+    }
+}
+
+@keyframes parallax-doodle-29lai2 {
+    to {
+        transform: translateY(-1771.5185670959531px);
+    }
+}
+
+@keyframes parallax-doodle-ptjit {
+    to {
+        transform: translateY(-1094.8066640354814px);
+    }
+}
+
+@keyframes parallax-doodle-0lkhhe {
+    to {
+        transform: translateY(-1133.7846368450528px);
+    }
+}
+
+@keyframes parallax-doodle-sh98hid {
+    to {
+        transform: translateY(-1950.1310116458453px);
+    }
+}
+
+@keyframes parallax-doodle-q6w10e {
+    to {
+        transform: translateY(-1277.185522280914px);
+    }
+}
+
+@keyframes parallax-doodle-wnf77 {
+    to {
+        transform: translateY(-1077.3554721142316px);
+    }
+}
+
+@keyframes parallax-doodle-x09d5x {
+    to {
+        transform: translateY(-1755.9999358544796px);
+    }
+}
+
+@keyframes parallax-doodle-1a8rlue {
+    to {
+        transform: translateY(-1679.4822806186198px);
+    }
+}
+
+@keyframes parallax-doodle-0vcuu {
+    to {
+        transform: translateY(-1190.6302517188637px);
+    }
+}
+
+@keyframes parallax-doodle-ig0r98 {
+    to {
+        transform: translateY(-1737.4378953409773px);
+    }
+}
+
+@keyframes parallax-doodle-ddpir {
+    to {
+        transform: translateY(-1070.6626237073253px);
+    }
+}
+
+@keyframes parallax-doodle-ouwlt7 {
+    to {
+        transform: translateY(-783.8982701156051px);
+    }
+}
+
+@keyframes parallax-doodle-hd51e4 {
+    to {
+        transform: translateY(-1790.687100587255px);
+    }
+}
+
+@keyframes parallax-doodle-cu1n95 {
+    to {
+        transform: translateY(-1587.374503485154px);
+    }
+}
+
+@keyframes parallax-doodle-1l6tbl {
+    to {
+        transform: translateY(-1738.2492624440893px);
+    }
+}
+
+@keyframes parallax-doodle-1dz989f {
+    to {
+        transform: translateY(-1661.8773445712256px);
+    }
+}
+
+@keyframes parallax-doodle-7nh79u {
+    to {
+        transform: translateY(-230.79919437071453px);
+    }
+}
+
+@keyframes parallax-doodle-f1g9yq {
+    to {
+        transform: translateY(-571.2321548736955px);
+    }
+}
+
+@keyframes parallax-doodle-cgu2ul {
+    to {
+        transform: translateY(-552.0586708316982px);
+    }
+}
+
+@keyframes parallax-doodle-oahwch {
+    to {
+        transform: translateY(-492.33392649962155px);
+    }
+}
+
+@keyframes parallax-doodle-qzu2g {
+    to {
+        transform: translateY(-630.241164049058px);
+    }
+}
+
+@keyframes parallax-doodle-ynva2w {
+    to {
+        transform: translateY(-273.33418987615306px);
+    }
+}
+
+@keyframes parallax-doodle-jrtrqw {
+    to {
+        transform: translateY(-320.6853255583248px);
+    }
+}
+
+@keyframes parallax-doodle-g2a8c9 {
+    to {
+        transform: translateY(-441.5966745157526px);
+    }
+}
+
+@keyframes parallax-doodle-uvc89h {
+    to {
+        transform: translateY(-319.2905490722567px);
+    }
+}

@@ -1,0 +1,34 @@
+@import url('/styles/globalPalette.css');
+@import url('/styles/fonts.css');
+
+* {
+    /* outline: 1px dotted rgba(255, 0, 255, 0.2); */
+}
+
+html {
+    scroll-behavior: smooth;
+    min-height: 100vh;
+
+    & > body {
+        color-scheme: light;
+        background-color: var(--white);
+        color: black;
+        margin: 0;
+        font-family: 'Baloo 2', 'Trebuchet MS', 'Lucida Sans Unicode', Arial, sans-serif, 'Segoe UI Emoji';
+        font-weight: 500;
+
+        &.post-buffered * {
+            transition: all 0.2s ease-in-out;
+        }
+    }
+
+    & a {
+        color: inherit;
+        text-decoration: none;
+        cursor: pointer;
+    }
+
+    & :not(.require-scrollbar)::-webkit-scrollbar {
+        display: none;
+    }
+}

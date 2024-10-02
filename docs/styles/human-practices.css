@@ -1,0 +1,122 @@
+painted-content {
+    blockquote {
+        h3 {
+            top: 0;
+        }
+
+        h4 {
+            font-size: 1.17em;
+            --top-internal-margin: 4em;
+
+            @media screen and (max-width: 1100px) {
+                --top-internal-margin: 6.5em;
+            }
+        }
+
+        h5 {
+            --top-internal-margin: 7.8em;
+
+            @media screen and (max-width: 1100px) {
+                --top-internal-margin: 11em;
+            }
+        }
+
+        h6 {
+            --top-internal-margin: 11.5em;
+
+            @media screen and (max-width: 1100px) {
+                --top-internal-margin: 15.4em;
+            }
+        }
+    }
+
+    & p:has(img) {
+        text-align: center;
+
+        & img {
+            max-height: 25em !important;
+            margin-inline: auto;
+        }
+    }
+}
+
+.human-card {
+    --human-card-background: var(--bright-brown);
+    --border-radius: 1rem;
+    --grid-left-percent: 15%;
+    --grid-right-percent: 85%;
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: var(--grid-left-percent) var(--grid-right-percent);
+    position: relative;
+    height: 100%;
+    margin-bottom: 1rem;
+
+    & > img {
+        --human-outline-width: 0.15rem;
+        --human-outline-colour: white;
+        max-width: 10rem;
+        aspect-ratio: 3/4;
+        overflow: hidden;
+        object-fit: cover;
+        border-radius: 0;
+        z-index: 1;
+        filter: drop-shadow(var(--human-outline-width) 0 0 var(--human-outline-colour))
+            drop-shadow(calc(var(--human-outline-width) * -1) 0 0 var(--human-outline-colour))
+            drop-shadow(0 var(--human-outline-width) 0 var(--human-outline-colour))
+            drop-shadow(0 calc(var(--human-outline-width) * -1) 0 var(--human-outline-colour));
+    }
+
+    & > .human-card-box {
+        background-color: var(--human-card-background);
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        display: flex;
+        justify-content: end;
+        border-radius: var(--border-radius);
+        width: 100%;
+
+        & > .human-card-text-container {
+            display: flex;
+            box-sizing: border-box;
+            flex-direction: column;
+            justify-content: space-between;
+            padding: 0.5rem 1rem;
+            margin: 0;
+            width: var(--grid-right-percent);
+
+            & > h3 {
+                --background-colour: transparent;
+            }
+
+            & > p {
+                margin: 0;
+                padding: 0;
+            }
+        }
+    }
+}
+
+.hp-cycle {
+    & img {
+        animation: infinite 30s linear rotate;
+    }
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@media screen and (max-width: 1250px) {
+    #header-page-title {
+        display: none;
+    }
+}
