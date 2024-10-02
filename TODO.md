@@ -5,8 +5,8 @@
 - [x] add [`attributions.html`](https://competition.igem.org/deliverables/project-attribution)
 - [x] standard URL compliance
   - [x] lowercase alphanumeric + `-`
-  - [ ] [award URLs](https://competition.igem.org/judging/pages-for-awards)
-    - [ ] home
+  - [x] [award URLs](https://competition.igem.org/judging/pages-for-awards)
+    - [x] home
     - [x] attributions
     - [x] acknowledgements
     - [x] contribution
@@ -18,7 +18,7 @@
     - [x] model
     - [x] notebook
     - [x] proof-of-concept
-    - [ ] team
+    - [x] team
 - [ ] only open-source or CC assets are allowed ([check](https://tools.igem.org/wiki/external-content-check))
 - [x] all assets (-videos) are uploaded [here](https://tools.igem.org/uploads/teams)
 - [x] videos are uploaded [here](https://tools.igem.org/wiki/non-deliverable-videos)
