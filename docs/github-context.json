@@ -1,11 +1,11 @@
 {
     "job": "build",
     "ref": "refs/heads/main",
-    "sha": "ab89e8c0768f8779977c28d42d452d9e123f868a",
+    "sha": "c17b29dca425a6df7ed69d7a5f2f8c91975a25d1",
     "repository": "ResiSense/ResiSense.github.io",
     "repository_Url": null,
-    "run_id": "11136521437",
-    "run_number": "276",
+    "run_id": "11136667843",
+    "run_number": "277",
     "run_attempt": "1",
     "artifact_cache_size_limit": "10",
     "actor": "CCheukKa",
@@ -13,8 +13,8 @@
     "workflow": "Full CI pipeline",
     "event_name": "push",
     "event": {
-        "after": "ab89e8c0768f8779977c28d42d452d9e123f868a",
-        "before": "556e545717929d392289a82ae07d72bcca17861d",
+        "after": "c17b29dca425a6df7ed69d7a5f2f8c91975a25d1",
+        "before": "e1237b316217aad396d093b5edd1c6a915e4419d",
         "commits": [
             {
                 "author": {
@@ -28,14 +28,14 @@
                     "username": "CCheukKa"
                 },
                 "distinct": true,
-                "id": "ab89e8c0768f8779977c28d42d452d9e123f868a",
-                "message": "make home page slides; TK martin animation",
-                "timestamp": "2024-10-02T09:58:52+08:00",
-                "tree_id": "f3cab900a29e9f1fcd563877adb7e3022def54d0",
-                "url": "https://github.com/ResiSense/ResiSense.github.io/commit/ab89e8c0768f8779977c28d42d452d9e123f868a"
+                "id": "c17b29dca425a6df7ed69d7a5f2f8c91975a25d1",
+                "message": "trim catalogue item count",
+                "timestamp": "2024-10-02T10:15:13+08:00",
+                "tree_id": "039a172b41d9a379a6607450bd73b571d81c8567",
+                "url": "https://github.com/ResiSense/ResiSense.github.io/commit/c17b29dca425a6df7ed69d7a5f2f8c91975a25d1"
             }
         ],
-        "compare": "https://github.com/ResiSense/ResiSense.github.io/compare/556e54571792...ab89e8c0768f",
+        "compare": "https://github.com/ResiSense/ResiSense.github.io/compare/e1237b316217...c17b29dca425",
         "created": false,
         "deleted": false,
         "forced": false,
@@ -51,11 +51,11 @@
                 "username": "CCheukKa"
             },
             "distinct": true,
-            "id": "ab89e8c0768f8779977c28d42d452d9e123f868a",
-            "message": "make home page slides; TK martin animation",
-            "timestamp": "2024-10-02T09:58:52+08:00",
-            "tree_id": "f3cab900a29e9f1fcd563877adb7e3022def54d0",
-            "url": "https://github.com/ResiSense/ResiSense.github.io/commit/ab89e8c0768f8779977c28d42d452d9e123f868a"
+            "id": "c17b29dca425a6df7ed69d7a5f2f8c91975a25d1",
+            "message": "trim catalogue item count",
+            "timestamp": "2024-10-02T10:15:13+08:00",
+            "tree_id": "039a172b41d9a379a6607450bd73b571d81c8567",
+            "url": "https://github.com/ResiSense/ResiSense.github.io/commit/c17b29dca425a6df7ed69d7a5f2f8c91975a25d1"
         },
         "pusher": {
             "email": "ccheukka@gmail.com",
@@ -68,6 +68,6 @@
     "ref_type": "branch",
     "secret_source": "Actions",
     "workflow_ref": "ResiSense/ResiSense.github.io/.github/workflows/full-ci-pipeline.yaml@refs/heads/main",
-    "workflow_sha": "ab89e8c0768f8779977c28d42d452d9e123f868a",
+    "workflow_sha": "c17b29dca425a6df7ed69d7a5f2f8c91975a25d1",
     "workspace": "/home/runner/work/ResiSense.github.io/ResiSense.github.io"
 }
