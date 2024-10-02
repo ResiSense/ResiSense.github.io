@@ -10,6 +10,8 @@ export default function (pageData: PageData) {
     const hamburgerMenuItemTemplateElement = document.getElementById('hamburger-menu-item-template') as HTMLTemplateElement;
 
     Pages.pageEntries.forEach(entry => {
+        if (entry.hideFromHamburgerMenu) { return; }
+        // 
         const hamburgerMenuItemElement = hamburgerMenuItemTemplateElement.content.cloneNode(true);
         const anchorElement = (hamburgerMenuItemElement as HTMLDivElement).querySelector('a')
             || (() => { throw new Error('Anchor element not found!') })();
