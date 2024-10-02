@@ -31,7 +31,7 @@ if (!targetDirectory) { throw new Error('Invalid mode!'); }
 (async () => {
     await Promise.all([
         cloneDirectory('assets', targetDirectory),
-        cloneDirectory('assets-presistent', targetDirectory),
+        cloneDirectory('assets-persistent', targetDirectory),
         cloneDirectory('styles', targetDirectory),
         // cloneDirectory('scripts', targetDirectory).then(addIdentifierLogToTsEmbeds),
     ]);
