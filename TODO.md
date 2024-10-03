@@ -46,3 +46,4 @@
 - [ ] add link to YouTube
 <!-- ! -->
 - [ ] rework hamburger menu design
+- [ ] fix martin iHP timeline (font + grammar + spelling + spacing)
