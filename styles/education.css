@@ -1,5 +1,10 @@
 painted-content {
     & blockquote:has(img) {
+        background: none;
+        border: none;
+        margin: 0;
+        padding: 0;
+
         & p {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(0, auto));
