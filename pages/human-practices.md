@@ -132,7 +132,7 @@ Our integrated human practice consists of 4 steps: **literature review and brain
 >
 > ### Dr Edmond Ma
 > ![Portrait of Doctor Edmond Ma](/assets/humans/edmond%20ma-Enhanced-SR%20transparent.png)  
-> [Doctor Edmond Ma]([https://www.linkedin.com/in/edmond-ma-abb79896]) is the director of the clinical and molecular pathology and cancer genetics center at the [Hong Kong Sanatorium Hospital](https://www.hksh-hospital.com/en), as well as the consultant for the [Infection Control Branch](https://www.chp.gov.hk/en/static/24011.html) at the [Centre for Health Protection](https://www.chp.gov.hk/en) of Hong Kong.  
+> [Doctor Edmond Ma]([https://www.linkedin.com/in/edmond-ma-abb79896]) is the consultant for the [Infection Control Branch](https://www.chp.gov.hk/en/static/24011.html) at the [Centre for Health Protection](https://www.chp.gov.hk/en) of Hong Kong.  
 > <span class="--human-card-above"></span>
 >
 > #### Global AMR Monitoring
