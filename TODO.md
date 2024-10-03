@@ -47,3 +47,4 @@
 <!-- ! -->
 - [ ] rework hamburger menu design
 - [ ] fix martin iHP timeline (font + grammar + spelling + spacing)
+- [ ] update the mechanism overview video to have correct Φ29 mechanism

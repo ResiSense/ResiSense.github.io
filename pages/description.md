@@ -60,7 +60,7 @@ We are developing a point-of-care test kit, **ResiSense**, for more efficient sc
 
 ## Mechanism of Action
 
-![Diagram Overview of Mechanism](../assets/diagrams/mechanism.png)  
+![Diagram Overview of Mechanism](/assets/diagrams/mechanism.png)  
 
 After cell **lysis releases bacterial DNA**, a snippet of the target gene responsible for antibiotic resistance is cut using a pair of **restriction enzymes and nickase**. The **Φ-29 polymerase aids in releasing the target gene** as ss-DNA. This target gene serves as a **primer** and triggers the formation of **peroxidase-mimicking DNAzymes, G-quadruplex** through rolling circle amplification (RCA). Finally, the G-quadruplex DNAzymes cause an **observable colour change in the solution**, indicating the presence of antibiotic-resistant genes in bacteria.  
 
