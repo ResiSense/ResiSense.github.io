@@ -5,7 +5,7 @@
     var t = globalThis,
         n = {},
         o = {},
-        r = t.parcelRequire8bfa;
+        r = t.parcelRequire94c2;
     null == r &&
         (((r = function (e) {
             if (e in n) return n[e].exports;
@@ -20,13 +20,12 @@
         }).register = function (e, t) {
             o[e] = t;
         }),
-        (t.parcelRequire8bfa = r));
+        (t.parcelRequire94c2 = r));
     var a = r.register;
     a('ap5vA', function (t, n) {
-        e(t.exports, 'default', () => a),
-            ((o = r || (r = {}))[(o.contentScrollPastHeader = 0)] = 'contentScrollPastHeader');
+        e(t.exports, 'default', () => a);
         var o,
-            r,
+            r = (((o = r || {})[(o.contentScrollPastHeader = 0)] = 'contentScrollPastHeader'), o),
             a = r;
     }),
         a('h8pS0', function (t, n) {

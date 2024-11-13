@@ -5,7 +5,7 @@
     var t = globalThis,
         n = {},
         o = {},
-        i = t.parcelRequire8bfa;
+        i = t.parcelRequire94c2;
     null == i &&
         (((i = function (e) {
             if (e in n) return n[e].exports;
@@ -20,7 +20,7 @@
         }).register = function (e, t) {
             o[e] = t;
         }),
-        (t.parcelRequire8bfa = i)),
+        (t.parcelRequire94c2 = i)),
         (0, i.register)('df1N6', function (t, n) {
             function o(e) {
                 return encodeURIComponent(e)

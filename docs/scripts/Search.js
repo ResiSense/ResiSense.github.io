@@ -8,7 +8,7 @@
     var r = globalThis,
         i = {},
         n = {},
-        s = r.parcelRequire8bfa;
+        s = r.parcelRequire94c2;
     null == s &&
         (((s = function (e) {
             if (e in i) return i[e].exports;
@@ -23,15 +23,14 @@
         }).register = function (e, t) {
             n[e] = t;
         }),
-        (r.parcelRequire8bfa = s));
+        (r.parcelRequire94c2 = s));
     var a = s.register;
     a('742Ng', function (r, i) {
         t(r.exports, 'default', () => f);
         var n,
-            a,
-            o = s('gx5Hu'),
-            l = s('lHYGq');
-        ((n = a || (a = {})).NORMAL = 'normal'), (n.TITLE = 'title'), (n.CONTENT = 'content');
+            a = s('gx5Hu'),
+            o = s('lHYGq'),
+            l = (((n = l || {}).NORMAL = 'normal'), (n.TITLE = 'title'), (n.CONTENT = 'content'), n);
         let c = Object.freeze(
                 new Map([
                     ['!', 'title'],
@@ -40,9 +39,9 @@
             ),
             u = Object.freeze(
                 new Map([
-                    ['normal', [l.IndexableFields.TITLE, l.IndexableFields.CONTENT]],
-                    ['title', [l.IndexableFields.TITLE]],
-                    ['content', [l.IndexableFields.CONTENT]],
+                    ['normal', [o.IndexableFields.TITLE, o.IndexableFields.CONTENT]],
+                    ['title', [o.IndexableFields.TITLE]],
+                    ['content', [o.IndexableFields.CONTENT]],
                 ])
             ),
             d = new Map();
@@ -70,7 +69,7 @@
         async function p(t, r, i) {
             let n = [],
                 s = performance.now(),
-                a = e(o).go(r, i, {
+                o = /*@__PURE__*/ e(a).go(r, i, {
                     keys:
                         u.get(t) ??
                         (() => {
@@ -79,7 +78,7 @@
                 }),
                 l = performance.now(),
                 c = performance.now();
-            a.forEach(e => {
+            o.forEach(e => {
                 var i;
                 console.log(e);
                 let { titleResult: s, contentResult: a } = (() => {
@@ -316,8 +315,8 @@
                         },
                         f = e => {
                             if (e.length > 999) return h(e);
-                            var t = E.get(e);
-                            return void 0 !== t || ((t = h(e)), E.set(e, t)), t;
+                            var t = k.get(e);
+                            return void 0 !== t || ((t = h(e)), k.set(e, t)), t;
                         },
                         m = (e, t) => {
                             var r = [];
@@ -326,9 +325,9 @@
                             if (t?.key)
                                 for (var n = 0; n < e.length; n++) {
                                     var s = e[n],
-                                        a = C(s, t.key);
+                                        a = q(s, t.key);
                                     if (a != _) {
-                                        q(a) || (a = p(a));
+                                        C(a) || (a = p(a));
                                         var o = c(a.target, { _score: a._score, obj: s });
                                         if ((r.push(o), r.length >= i)) break;
                                     }
@@ -336,12 +335,12 @@
                             else if (t?.keys)
                                 for (var n = 0; n < e.length; n++) {
                                     for (var s = e[n], u = new l(t.keys.length), d = t.keys.length - 1; d >= 0; --d) {
-                                        var a = C(s, t.keys[d]);
+                                        var a = q(s, t.keys[d]);
                                         if (!a) {
                                             u[d] = P;
                                             continue;
                                         }
-                                        q(a) || (a = p(a)), (a._score = D), (a._indexes.len = 0), (u[d] = a);
+                                        C(a) || (a = p(a)), (a._score = D), (a._indexes.len = 0), (u[d] = a);
                                     }
                                     if (((u.obj = s), (u._score = D), r.push(u), r.length >= i)) break;
                                 }
@@ -350,7 +349,7 @@
                                     var a = e[n];
                                     if (
                                         a != _ &&
-                                        (q(a) || (a = p(a)),
+                                        (C(a) || (a = p(a)),
                                         (a._score = D),
                                         (a._indexes.len = 0),
                                         r.push(a),
@@ -377,7 +376,7 @@
                             ) {
                                 var f = a === l[h];
                                 if (f) {
-                                    if (((k[p++] = h), ++d === c)) break;
+                                    if (((E[p++] = h), ++d === c)) break;
                                     a = s[d];
                                 }
                                 if (++h >= u) return _;
@@ -388,30 +387,30 @@
                                 x = t._nextBeginningIndexes;
                             x === _ && (x = t._nextBeginningIndexes = v(t.target));
                             var y = 0;
-                            if ((h = 0 === k[0] ? 0 : x[k[0] - 1]) !== u)
+                            if ((h = 0 === E[0] ? 0 : x[E[0] - 1]) !== u)
                                 for (;;)
                                     if (h >= u) {
                                         if (d <= 0 || ++y > 200) break;
-                                        --d, (h = x[T[--g]]);
+                                        --d, (h = x[L[--g]]);
                                     } else {
                                         var f = s[d] === l[h];
                                         if (f) {
-                                            if (((T[g++] = h), ++d === c)) {
+                                            if (((L[g++] = h), ++d === c)) {
                                                 m = !0;
                                                 break;
                                             }
                                             ++h;
                                         } else h = x[h];
                                     }
-                            var w = c <= 1 ? -1 : t._targetLower.indexOf(n, k[0]),
-                                E = !!~w,
-                                L = !!E && (0 === w || t._nextBeginningIndexes[w - 1] === w);
-                            if (E && !L) {
-                                for (var S = 0; S < x.length; S = x[S])
-                                    if (!(S <= w)) {
-                                        for (var A = 0; A < c && s[A] === t._targetLowerCodes[S + A]; A++);
+                            var w = c <= 1 ? -1 : t._targetLower.indexOf(n, E[0]),
+                                k = !!~w,
+                                S = !!k && (0 === w || t._nextBeginningIndexes[w - 1] === w);
+                            if (k && !S) {
+                                for (var T = 0; T < x.length; T = x[T])
+                                    if (!(T <= w)) {
+                                        for (var A = 0; A < c && s[A] === t._targetLowerCodes[T + A]; A++);
                                         if (A === c) {
-                                            (w = S), (L = !0);
+                                            (w = T), (S = !0);
                                             break;
                                         }
                                     }
@@ -428,29 +427,29 @@
                                 } else t *= 1e3;
                                 return (
                                     (t -= (u - c) / 2),
-                                    E && (t /= 1 + c * c * 1),
-                                    L && (t /= 1 + c * c * 1),
+                                    k && (t /= 1 + c * c * 1),
+                                    S && (t /= 1 + c * c * 1),
                                     (t -= (u - c) / 2)
                                 );
                             };
                             if (m) {
-                                if (L) {
-                                    for (var S = 0; S < c; ++S) k[S] = w + S;
-                                    var I = k,
-                                        C = N(k);
+                                if (S) {
+                                    for (var T = 0; T < c; ++T) E[T] = w + T;
+                                    var I = E,
+                                        q = N(E);
                                 } else
-                                    var I = T,
-                                        C = N(T);
+                                    var I = L,
+                                        q = N(L);
                             } else {
-                                if (E) for (var S = 0; S < c; ++S) k[S] = w + S;
-                                var I = k,
-                                    C = N(I);
+                                if (k) for (var T = 0; T < c; ++T) E[T] = w + T;
+                                var I = E,
+                                    q = N(I);
                             }
-                            t._score = C;
-                            for (var S = 0; S < c; ++S) t._indexes[S] = I[S];
+                            t._score = q;
+                            for (var T = 0; T < c; ++T) t._indexes[T] = I[T];
                             t._indexes.len = c;
-                            let q = new o();
-                            return (q.target = t.target), (q._score = t._score), (q._indexes = t._indexes), q;
+                            let C = new o();
+                            return (C.target = t.target), (C._score = t._score), (C._indexes = t._indexes), C;
                         },
                         b = (e, t, r) => {
                             for (
@@ -463,7 +462,7 @@
                                     c = 0,
                                     u = () => {
                                         for (let e = c - 1; e >= 0; e--)
-                                            t._nextBeginningIndexes[L[2 * e + 0]] = L[2 * e + 1];
+                                            t._nextBeginningIndexes[S[2 * e + 0]] = S[2 * e + 1];
                                     },
                                     d = !1,
                                     h = 0;
@@ -487,8 +486,8 @@
                                             b = t._nextBeginningIndexes[m - 1];
                                         for (let e = m - 1; e >= 0 && b === t._nextBeginningIndexes[e]; e--)
                                             (t._nextBeginningIndexes[e] = m),
-                                                (L[2 * c + 0] = e),
-                                                (L[2 * c + 1] = b),
+                                                (S[2 * c + 0] = e),
+                                                (S[2 * c + 1] = b),
                                                 c++;
                                     }
                                 }
@@ -537,15 +536,15 @@
                             return i;
                         },
                         w = new Map(),
-                        E = new Map(),
-                        k = [],
-                        T = [],
+                        k = new Map(),
+                        E = [],
                         L = [],
                         S = [],
+                        T = [],
                         A = [],
                         N = [],
                         I = [],
-                        C = (e, t) => {
+                        q = (e, t) => {
                             var r = e[t];
                             if (void 0 !== r) return r;
                             if ('function' == typeof t) return t(e);
@@ -554,14 +553,14 @@
                             for (var n = i.length, s = -1; e && ++s < n; ) e = e[i[s]];
                             return e;
                         },
-                        q = e => 'object' == typeof e && 'number' == typeof e._bitflags,
+                        C = e => 'object' == typeof e && 'number' == typeof e._bitflags,
                         B = 1 / 0,
                         D = -1 / 0,
                         R = [];
                     R.total = 0;
                     var _ = null,
                         P = a(''),
-                        O =
+                        M =
                             ((t = []),
                             (r = 0),
                             (i = {}),
@@ -601,7 +600,7 @@
                         single: (e, t) => {
                             if (!e || !t) return _;
                             var r = f(e);
-                            q(t) || (t = p(t));
+                            C(t) || (t = p(t));
                             var i = r.bitflags;
                             return (i & t._bitflags) !== i ? _ : g(r, t);
                         },
@@ -616,95 +615,95 @@
                                 u = 0,
                                 h = t.length;
                             function b(e) {
-                                c < o ? (O.add(e), ++c) : (++u, e._score > O.peek()._score && O.replaceTop(e));
+                                c < o ? (M.add(e), ++c) : (++u, e._score > M.peek()._score && M.replaceTop(e));
                             }
                             if (r?.key)
                                 for (var x = r.key, y = 0; y < h; ++y) {
                                     var v = t[y],
-                                        w = C(v, x);
-                                    if (w && (q(w) || (w = p(w)), (n & w._bitflags) === n)) {
-                                        var E = g(i, w);
-                                        E !== _ && (E._score < a || ((E.obj = v), b(E)));
+                                        w = q(v, x);
+                                    if (w && (C(w) || (w = p(w)), (n & w._bitflags) === n)) {
+                                        var k = g(i, w);
+                                        k !== _ && (k._score < a || ((k.obj = v), b(k)));
                                     }
                                 }
                             else if (r?.keys) {
-                                var k = r.keys,
-                                    T = k.length;
+                                var E = r.keys,
+                                    L = E.length;
                                 e: for (var y = 0; y < h; ++y) {
-                                    for (var v = t[y], L = 0, M = 0; M < T; ++M) {
-                                        var x = k[M],
-                                            w = C(v, x);
+                                    for (var v = t[y], S = 0, O = 0; O < L; ++O) {
+                                        var x = E[O],
+                                            w = q(v, x);
                                         if (!w) {
-                                            N[M] = P;
+                                            N[O] = P;
                                             continue;
                                         }
-                                        q(w) || (w = p(w)), (N[M] = w), (L |= w._bitflags);
+                                        C(w) || (w = p(w)), (N[O] = w), (S |= w._bitflags);
                                     }
-                                    if ((n & L) === n) {
-                                        if (s) for (let e = 0; e < i.spaceSearches.length; e++) S[e] = D;
-                                        for (var M = 0; M < T; ++M) {
-                                            if ((w = N[M]) === P || ((I[M] = g(i, w, !1, s)), I[M] === _)) {
-                                                I[M] = P;
+                                    if ((n & S) === n) {
+                                        if (s) for (let e = 0; e < i.spaceSearches.length; e++) T[e] = D;
+                                        for (var O = 0; O < L; ++O) {
+                                            if ((w = N[O]) === P || ((I[O] = g(i, w, !1, s)), I[O] === _)) {
+                                                I[O] = P;
                                                 continue;
                                             }
                                             if (s)
                                                 for (let e = 0; e < i.spaceSearches.length; e++) {
-                                                    if (A[e] > -1e3 && S[e] > D) {
-                                                        var V = (S[e] + A[e]) / 4;
-                                                        V > S[e] && (S[e] = V);
+                                                    if (A[e] > -1e3 && T[e] > D) {
+                                                        var U = (T[e] + A[e]) / 4;
+                                                        U > T[e] && (T[e] = U);
                                                     }
-                                                    A[e] > S[e] && (S[e] = A[e]);
+                                                    A[e] > T[e] && (T[e] = A[e]);
                                                 }
                                         }
                                         if (s) {
-                                            for (let e = 0; e < i.spaceSearches.length; e++) if (S[e] === D) continue e;
+                                            for (let e = 0; e < i.spaceSearches.length; e++) if (T[e] === D) continue e;
                                         } else {
-                                            var U = !1;
-                                            for (let e = 0; e < T; e++)
+                                            var V = !1;
+                                            for (let e = 0; e < L; e++)
                                                 if (I[e]._score !== D) {
-                                                    U = !0;
+                                                    V = !0;
                                                     break;
                                                 }
-                                            if (!U) continue;
+                                            if (!V) continue;
                                         }
-                                        var W = new l(T);
-                                        for (let e = 0; e < T; e++) W[e] = I[e];
+                                        var H = new l(L);
+                                        for (let e = 0; e < L; e++) H[e] = I[e];
                                         if (s) {
-                                            var H = 0;
-                                            for (let e = 0; e < i.spaceSearches.length; e++) H += S[e];
+                                            var W = 0;
+                                            for (let e = 0; e < i.spaceSearches.length; e++) W += T[e];
                                         } else {
-                                            var H = D;
-                                            for (let e = 0; e < T; e++) {
-                                                var E = W[e];
-                                                if (E._score > -1e3 && H > D) {
-                                                    var V = (H + E._score) / 4;
-                                                    V > H && (H = V);
+                                            var W = D;
+                                            for (let e = 0; e < L; e++) {
+                                                var k = H[e];
+                                                if (k._score > -1e3 && W > D) {
+                                                    var U = (W + k._score) / 4;
+                                                    U > W && (W = U);
                                                 }
-                                                E._score > H && (H = E._score);
+                                                k._score > W && (W = k._score);
                                             }
                                         }
-                                        if (((W.obj = v), (W._score = H), r?.scoreFn)) {
-                                            if (!(H = r.scoreFn(W))) continue;
-                                            (H = d(H)), (W._score = H);
+                                        if (((H.obj = v), (H._score = W), r?.scoreFn)) {
+                                            if (!(W = r.scoreFn(H))) continue;
+                                            (W = d(W)), (H._score = W);
                                         }
-                                        H < a || b(W);
+                                        W < a || b(H);
                                     }
                                 }
                             } else
                                 for (var y = 0; y < h; ++y) {
                                     var w = t[y];
-                                    if (w && (q(w) || (w = p(w)), (n & w._bitflags) === n)) {
-                                        var E = g(i, w);
-                                        E !== _ && (E._score < a || b(E));
+                                    if (w && (C(w) || (w = p(w)), (n & w._bitflags) === n)) {
+                                        var k = g(i, w);
+                                        k !== _ && (k._score < a || b(k));
                                     }
                                 }
                             if (0 === c) return R;
-                            for (var j = Array(c), y = c - 1; y >= 0; --y) j[y] = O.poll();
+                            for (var j = Array(c), y = c - 1; y >= 0; --y) j[y] = M.poll();
                             return (j.total = c + u), j;
                         },
                         prepare: a,
                         cleanup: () => {
-                            w.clear(), E.clear();
+                            w.clear(), k.clear();
                         },
                     };
                 }),
@@ -715,12 +714,11 @@
                       : (r.fuzzysort = i());
         }),
         a('lHYGq', function (r, i) {
-            t(r.exports, 'IndexableFields', () => a), t(r.exports, 'default', () => c);
+            t(r.exports, 'IndexableFields', () => l), t(r.exports, 'default', () => c);
             var n,
-                a,
-                o = s('iQ98l'),
-                l = s('gx5Hu');
-            ((n = a || (a = {})).TITLE = 'title'), (n.CONTENT = 'content');
+                a = s('iQ98l'),
+                o = s('gx5Hu'),
+                l = (((n = {}).TITLE = 'title'), (n.CONTENT = 'content'), n);
             class c {
                 static {
                     this.index = [];
@@ -731,8 +729,8 @@
                         this.index.forEach(r =>
                             t.push({
                                 path: r.path,
-                                title: e(l).prepare(r.title),
-                                content: e(l).prepare(r.content.replace('<b>', '').replace('</b>', '')),
+                                title: /*@__PURE__*/ e(o).prepare(r.title),
+                                content: /*@__PURE__*/ e(o).prepare(r.content.replace('<b>', '').replace('</b>', '')),
                             })
                         ),
                         (this._targets = t),
@@ -750,7 +748,7 @@
                                 (() => {
                                     throw Error(`htmlPollutedRawContent not found for ${e}!`);
                                 })()),
-                            (0, o.htmlToText)(i, {
+                            (0, a.htmlToText)(i, {
                                 wordwrap: !1,
                                 selectors: [
                                     { selector: '*', options: { leadingLineBreaks: 2, trailingLineBreaks: 2 } },
@@ -765,12 +763,12 @@
             }
         }),
         a('iQ98l', function (r, i) {
-            t(r.exports, 'htmlToText', () => Z);
+            t(r.exports, 'htmlToText', () => Q);
             var n = s('365Jn'),
                 a = s('ys7X1'),
                 o = s('ii6m7'),
                 l = s('4CCA2'),
-                c = s('avuoa');
+                c = s('iwhG6');
             function u(e, t, r = () => void 0) {
                 if (void 0 === e) {
                     let e = function (...r) {
@@ -796,7 +794,7 @@
                 for (let n = t.length; n-- > 0; ) {
                     let s = t[n],
                         a = r(s);
-                    i.set(a, i.has(a) ? e(l)(s, i.get(a), { arrayMerge: p }) : s);
+                    i.set(a, i.has(a) ? /*@__PURE__*/ e(l)(s, i.get(a), { arrayMerge: p }) : s);
                 }
                 return [...i.values()].reverse();
             }
@@ -928,7 +926,7 @@
                         (this.isNoWrap = t && t.isNoWrap);
                 }
             }
-            class E extends w {
+            class k extends w {
                 constructor(
                     e,
                     t = null,
@@ -946,22 +944,22 @@
                         (this.interRowLineBreaks = r);
                 }
             }
-            class k extends w {
+            class E extends w {
                 constructor(e, t = null, { leadingLineBreaks: r = 1, maxLineLength: i, prefix: n = '' } = {}) {
                     super(e, t, r, i), (this.prefix = n);
                 }
             }
-            class T extends v {
+            class L extends v {
                 constructor(e = null) {
                     super(e), (this.rows = []), (this.isPre = e && e.isPre), (this.isNoWrap = e && e.isNoWrap);
                 }
             }
-            class L extends v {
+            class S extends v {
                 constructor(e = null) {
                     super(e), (this.cells = []), (this.isPre = e && e.isPre), (this.isNoWrap = e && e.isNoWrap);
                 }
             }
-            class S extends v {
+            class T extends v {
                 constructor(e, t = null, r) {
                     super(t),
                         (this.inlineTextBuilder = new y(e, r)),
@@ -1105,17 +1103,17 @@
                     return (this._stackItem = e.next), e;
                 }
                 addLineBreak() {
-                    (this._stackItem instanceof w || this._stackItem instanceof k || this._stackItem instanceof S) &&
+                    (this._stackItem instanceof w || this._stackItem instanceof E || this._stackItem instanceof T) &&
                         (this._stackItem.isPre
                             ? (this._stackItem.rawText += '\n')
                             : this._stackItem.inlineTextBuilder.startNewLine());
                 }
                 addWordBreakOpportunity() {
-                    (this._stackItem instanceof w || this._stackItem instanceof k || this._stackItem instanceof S) &&
+                    (this._stackItem instanceof w || this._stackItem instanceof E || this._stackItem instanceof T) &&
                         (this._stackItem.inlineTextBuilder.wordBreakOpportunity = !0);
                 }
                 addInline(e, { noWordTransform: t = !1 } = {}) {
-                    if (this._stackItem instanceof w || this._stackItem instanceof k || this._stackItem instanceof S) {
+                    if (this._stackItem instanceof w || this._stackItem instanceof E || this._stackItem instanceof T) {
                         if (this._stackItem.isPre) {
                             this._stackItem.rawText += e;
                             return;
@@ -1146,8 +1144,8 @@
                 addLiteral(e) {
                     if (
                         (this._stackItem instanceof w ||
-                            this._stackItem instanceof k ||
-                            this._stackItem instanceof S) &&
+                            this._stackItem instanceof E ||
+                            this._stackItem instanceof T) &&
                         0 !== e.length
                     ) {
                         if (this._stackItem.isPre) {
@@ -1170,8 +1168,8 @@
                 }
                 closeBlock({ trailingLineBreaks: e = 1, blockTransform: t } = {}) {
                     let r = this._popStackItem(),
-                        i = t ? t(C(r)) : C(r);
-                    q(this._stackItem, i, r.leadingLineBreaks, Math.max(r.stashedLineBreaks, e));
+                        i = t ? t(q(r)) : q(r);
+                    C(this._stackItem, i, r.leadingLineBreaks, Math.max(r.stashedLineBreaks, e));
                 }
                 openList({
                     maxPrefixLength: e = 0,
@@ -1179,7 +1177,7 @@
                     interRowLineBreaks: r = 1,
                     leadingLineBreaks: i = 2,
                 } = {}) {
-                    this._stackItem = new E(this.options, this._stackItem, {
+                    this._stackItem = new k(this.options, this._stackItem, {
                         interRowLineBreaks: r,
                         leadingLineBreaks: i,
                         maxLineLength: this._stackItem.inlineTextBuilder.maxLineLength,
@@ -1188,12 +1186,12 @@
                     });
                 }
                 openListItem({ prefix: e = '' } = {}) {
-                    if (!(this._stackItem instanceof E))
+                    if (!(this._stackItem instanceof k))
                         throw Error("Can't add a list item to something that is not a list! Check the formatter.");
                     let t = this._stackItem,
                         r = Math.max(e.length, t.maxPrefixLength),
                         i = Math.max(20, t.inlineTextBuilder.maxLineLength - r);
-                    this._stackItem = new k(this.options, t, {
+                    this._stackItem = new E(this.options, t, {
                         prefix: e,
                         maxLineLength: i,
                         leadingLineBreaks: t.interRowLineBreaks,
@@ -1206,32 +1204,32 @@
                         i = '\n' + ' '.repeat(r),
                         n =
                             ('right' === t.prefixAlign ? e.prefix.padStart(r) : e.prefix.padEnd(r)) +
-                            C(e).replace(/\n/g, i);
-                    q(t, n, e.leadingLineBreaks, Math.max(e.stashedLineBreaks, t.interRowLineBreaks));
+                            q(e).replace(/\n/g, i);
+                    C(t, n, e.leadingLineBreaks, Math.max(e.stashedLineBreaks, t.interRowLineBreaks));
                 }
                 closeList({ trailingLineBreaks: e = 2 } = {}) {
                     let t = this._popStackItem(),
-                        r = C(t);
-                    r && q(this._stackItem, r, t.leadingLineBreaks, e);
+                        r = q(t);
+                    r && C(this._stackItem, r, t.leadingLineBreaks, e);
                 }
                 openTable() {
-                    this._stackItem = new T(this._stackItem);
-                }
-                openTableRow() {
-                    if (!(this._stackItem instanceof T))
-                        throw Error("Can't add a table row to something that is not a table! Check the formatter.");
                     this._stackItem = new L(this._stackItem);
                 }
-                openTableCell({ maxColumnWidth: e } = {}) {
+                openTableRow() {
                     if (!(this._stackItem instanceof L))
+                        throw Error("Can't add a table row to something that is not a table! Check the formatter.");
+                    this._stackItem = new S(this._stackItem);
+                }
+                openTableCell({ maxColumnWidth: e } = {}) {
+                    if (!(this._stackItem instanceof S))
                         throw Error(
                             "Can't add a table cell to something that is not a table row! Check the formatter."
                         );
-                    this._stackItem = new S(this.options, this._stackItem, e);
+                    this._stackItem = new T(this.options, this._stackItem, e);
                 }
                 closeTableCell({ colspan: e = 1, rowspan: t = 1 } = {}) {
                     let r = this._popStackItem(),
-                        i = d(C(r), '\n');
+                        i = d(q(r), '\n');
                     r.next.cells.push({ colspan: e, rowspan: t, text: i });
                 }
                 closeTableRow() {
@@ -1240,21 +1238,21 @@
                 }
                 closeTable({ tableToString: e, leadingLineBreaks: t = 2, trailingLineBreaks: r = 2 }) {
                     let i = e(this._popStackItem().rows);
-                    i && q(this._stackItem, i, t, r);
+                    i && C(this._stackItem, i, t, r);
                 }
                 toString() {
-                    return C(this._stackItem.getRoot());
+                    return q(this._stackItem.getRoot());
                 }
             }
-            function C(e) {
-                if (!(e instanceof w || e instanceof k || e instanceof S))
+            function q(e) {
+                if (!(e instanceof w || e instanceof E || e instanceof T))
                     throw Error('Only blocks, list items and table cells can be requested for text contents.');
                 return e.inlineTextBuilder.isEmpty() ? e.rawText : e.rawText + e.inlineTextBuilder.toString();
             }
-            function q(e, t, r, i) {
-                if (!(e instanceof w || e instanceof k || e instanceof S))
+            function C(e, t, r, i) {
+                if (!(e instanceof w || e instanceof E || e instanceof T))
                     throw Error('Only blocks, list items and table cells can contain text.');
-                let n = C(e),
+                let n = q(e),
                     s = Math.max(e.stashedLineBreaks, r);
                 e.inlineTextBuilder.clear(),
                     n ? (e.rawText = n + '\n'.repeat(s) + t) : ((e.rawText = t), (e.leadingLineBreaks = s)),
@@ -1289,7 +1287,7 @@
             function R(e) {
                 return `</${e.name}>`;
             }
-            var _ = Object.freeze({
+            var _ = /*#__PURE__*/ Object.freeze({
                 __proto__: null,
                 block: function (e, t, r, i) {
                     r.openBlock({ leadingLineBreaks: i.leadingLineBreaks || 2 }),
@@ -1347,16 +1345,16 @@
             function P(e, t) {
                 return e[t] || (e[t] = []), e[t];
             }
-            function O(e, t) {
-                return void 0 === e[t] && (e[t] = 0 === t ? 0 : 1 + O(e, t - 1)), e[t];
+            function M(e, t) {
+                return void 0 === e[t] && (e[t] = 0 === t ? 0 : 1 + M(e, t - 1)), e[t];
             }
-            function M(e, t, r, i) {
-                e[t + r] = Math.max(O(e, t + r), O(e, t) + i);
+            function O(e, t, r, i) {
+                e[t + r] = Math.max(M(e, t + r), M(e, t) + i);
             }
-            function V(e, t) {
+            function U(e, t) {
                 return t ? ('string' == typeof t[0] ? t[0] : '[') + e + ('string' == typeof t[1] ? t[1] : ']') : e;
             }
-            function U(e, t, r, i, n) {
+            function V(e, t, r, i, n) {
                 let s = 'function' == typeof t ? t(e, i, n) : e;
                 return '/' === s[0] && r
                     ? (function (e, t) {
@@ -1366,7 +1364,7 @@
                       })(r, 0) + s
                     : s;
             }
-            function W(e, t, r, i, n) {
+            function H(e, t, r, i, n) {
                 let s = 'li' === f(e, ['parent', 'name']),
                     a = 0,
                     o = (e.children || [])
@@ -1388,7 +1386,7 @@
                     r.closeList({ trailingLineBreaks: s ? 1 : i.trailingLineBreaks || 2 });
                 }
             }
-            function H(e, t, r, i) {
+            function W(e, t, r, i) {
                 function n(e) {
                     let n = +f(e, ['attribs', 'colspan']) || 1,
                         s = +f(e, ['attribs', 'rowspan']) || 1;
@@ -1455,7 +1453,7 @@
                                             (l += n.colspan),
                                             (n.lines = n.text.split('\n'));
                                         let c = n.lines.length;
-                                        M(a, r, n.rowspan, c + t);
+                                        O(a, r, n.rowspan, c + t);
                                     }
                                     n = s.length > n ? s.length : n;
                                 }
@@ -1487,7 +1485,7 @@
                                                     (o[c] = (o[c] || '').padEnd(l[e]) + s),
                                                         (i = s.length > i ? s.length : i);
                                                 }
-                                                M(l, e, t.colspan, i + r), (t.rendered = !0);
+                                                O(l, e, t.colspan, i + r), (t.rendered = !0);
                                             }
                                             n += t.rowspan;
                                         } else {
@@ -1501,13 +1499,13 @@
                         trailingLineBreaks: i.trailingLineBreaks,
                     });
             }
-            var j = Object.freeze({
+            var j = /*#__PURE__*/ Object.freeze({
                 __proto__: null,
                 anchor: function (e, t, r, i) {
                     let n = (function () {
                         if (i.ignoreHref || !e.attribs || !e.attribs.href) return '';
                         let t = e.attribs.href.replace(/^mailto:/, '');
-                        return i.noAnchorUrl && '#' === t[0] ? '' : (t = U(t, i.pathRewrite, i.baseUrl, r.metadata, e));
+                        return i.noAnchorUrl && '#' === t[0] ? '' : (t = V(t, i.pathRewrite, i.baseUrl, r.metadata, e));
                     })();
                     if (n) {
                         let s = '';
@@ -1515,7 +1513,7 @@
                             t(e.children, r),
                             r.popWordTransform(),
                             (i.hideLinkHrefIfSameAsText && n === s) ||
-                                r.addInline(s ? ' ' + V(n, i.linkBrackets) : n, { noWordTransform: !0 });
+                                r.addInline(s ? ' ' + U(n, i.linkBrackets) : n, { noWordTransform: !0 });
                     } else t(e.children, r);
                 },
                 blockquote: function (e, t, r, i) {
@@ -1530,7 +1528,7 @@
                                     .join('\n'),
                         });
                 },
-                dataTable: H,
+                dataTable: W,
                 heading: function (e, t, r, i) {
                     r.openBlock({ leadingLineBreaks: i.leadingLineBreaks || 2 }),
                         !1 !== i.uppercase
@@ -1546,8 +1544,8 @@
                 image: function (e, t, r, i) {
                     let n = e.attribs || {},
                         s = n.alt ? n.alt : '',
-                        a = n.src ? U(n.src, i.pathRewrite, i.baseUrl, r.metadata, e) : '',
-                        o = a ? (s ? s + ' ' + V(a, i.linkBrackets) : V(a, i.linkBrackets)) : s;
+                        a = n.src ? V(n.src, i.pathRewrite, i.baseUrl, r.metadata, e) : '',
+                        o = a ? (s ? s + ' ' + U(a, i.linkBrackets) : U(a, i.linkBrackets)) : s;
                     r.addInline(o, { noWordTransform: !0 });
                 },
                 lineBreak: function (e, t, r, i) {
@@ -1569,7 +1567,7 @@
                                     return e => e.toString();
                             }
                         })(e.attribs.type);
-                    return W(e, t, r, i, () => ' ' + s(n++) + '. ');
+                    return H(e, t, r, i, () => ' ' + s(n++) + '. ');
                 },
                 paragraph: function (e, t, r, i) {
                     r.openBlock({ leadingLineBreaks: i.leadingLineBreaks || 2 }),
@@ -1601,17 +1599,17 @@
                         ? void (r.openBlock({ leadingLineBreaks: i.leadingLineBreaks }),
                           t(e.children, r),
                           r.closeBlock({ trailingLineBreaks: i.trailingLineBreaks }))
-                        : H(e, t, r, i);
+                        : W(e, t, r, i);
                 },
                 unorderedList: function (e, t, r, i) {
                     let n = i.itemPrefix || ' * ';
-                    return W(e, t, r, i, () => n);
+                    return H(e, t, r, i, () => n);
                 },
                 wbr: function (e, t, r, i) {
                     r.addWordBreakOpportunity();
                 },
             });
-            let F = {
+            let G = {
                     baseElements: { selectors: ['body'], orderBy: 'selectors', returnDomByDefault: !0 },
                     decodeEntities: !0,
                     encodeCharacters: {},
@@ -1621,7 +1619,7 @@
                         maxBaseElements: void 0,
                         maxChildNodes: void 0,
                         maxDepth: void 0,
-                        maxInputLength: 16777216,
+                        maxInputLength: 0x1000000,
                     },
                     longWordSplit: { forceWrapOnLimit: !1, wrapCharacters: [] },
                     preserveNewlines: !1,
@@ -1743,14 +1741,14 @@
                     whitespaceCharacters: ' 	\r\n\f​',
                     wordwrap: 80,
                 },
-                $ = (e, t, r) => [...e, ...t],
-                G = (e, t, r) => [...t],
-                z = (e, t, r) => (e.some(e => 'object' == typeof e) ? $(e, t) : G(e, t));
-            function Z(t, r = {}, i) {
+                F = (e, t, r) => [...e, ...t],
+                $ = (e, t, r) => [...t],
+                z = (e, t, r) => (e.some(e => 'object' == typeof e) ? F(e, t) : $(e, t));
+            function Q(t, r = {}, i) {
                 return (function (t = {}) {
                     return (
-                        ((t = e(l)(F, t, {
-                            arrayMerge: G,
+                        ((t = /*@__PURE__*/ e(l)(G, t, {
+                            arrayMerge: $,
                             customMerge: e => ('selectors' === e ? z : void 0),
                         })).formatters = Object.assign({}, _, j, t.formatters)),
                         (t.selectors = h(t.selectors, e => e.selector)),
@@ -1853,8 +1851,8 @@
             }
         }),
         a('365Jn', function (e, r) {
-            t(e.exports, 'hp2Builder', () => a), s('66mCi');
-            var i = s('dZvva'),
+            t(e.exports, 'hp2Builder', () => a), s('273yd');
+            var i = s('k9MHs'),
                 n = s('ii6m7');
             function a(e) {
                 return new n.Picker(o(e));
@@ -1923,16 +1921,111 @@
                     return t && (0, i.isTag)(t) ? t : null;
                 };
         }),
-        a('66mCi', function (e, r) {
-            t(e.exports, 'CDATA', () => s('dZvva').CDATA),
-                t(e.exports, 'Comment', () => s('dZvva').Comment),
-                t(e.exports, 'Document', () => s('dZvva').Document),
-                t(e.exports, 'Element', () => s('dZvva').Element),
-                t(e.exports, 'isTag', () => s('dZvva').isTag),
-                t(e.exports, 'ProcessingInstruction', () => s('dZvva').ProcessingInstruction),
-                t(e.exports, 'Text', () => s('dZvva').Text),
-                s('1RLFx'),
-                s('dZvva');
+        a('273yd', function (e, r) {
+            t(e.exports, 'CDATA', () => s('k9MHs').CDATA),
+                t(e.exports, 'Comment', () => s('k9MHs').Comment),
+                t(e.exports, 'Document', () => s('k9MHs').Document),
+                t(e.exports, 'Element', () => s('k9MHs').Element),
+                t(e.exports, 'hasChildren', () => s('k9MHs').hasChildren),
+                t(e.exports, 'isCDATA', () => s('k9MHs').isCDATA),
+                t(e.exports, 'isComment', () => s('k9MHs').isComment),
+                t(e.exports, 'isTag', () => s('k9MHs').isTag),
+                t(e.exports, 'isText', () => s('k9MHs').isText),
+                t(e.exports, 'ProcessingInstruction', () => s('k9MHs').ProcessingInstruction),
+                t(e.exports, 'Text', () => s('k9MHs').Text),
+                t(e.exports, 'DomHandler', () => o);
+            var i = s('1RLFx'),
+                n = s('k9MHs');
+            let a = { withStartIndices: !1, withEndIndices: !1, xmlMode: !1 };
+            class o {
+                constructor(e, t, r) {
+                    (this.dom = []),
+                        (this.root = new n.Document(this.dom)),
+                        (this.done = !1),
+                        (this.tagStack = [this.root]),
+                        (this.lastNode = null),
+                        (this.parser = null),
+                        'function' == typeof t && ((r = t), (t = a)),
+                        'object' == typeof e && ((t = e), (e = void 0)),
+                        (this.callback = null != e ? e : null),
+                        (this.options = null != t ? t : a),
+                        (this.elementCB = null != r ? r : null);
+                }
+                onparserinit(e) {
+                    this.parser = e;
+                }
+                onreset() {
+                    (this.dom = []),
+                        (this.root = new n.Document(this.dom)),
+                        (this.done = !1),
+                        (this.tagStack = [this.root]),
+                        (this.lastNode = null),
+                        (this.parser = null);
+                }
+                onend() {
+                    this.done || ((this.done = !0), (this.parser = null), this.handleCallback(null));
+                }
+                onerror(e) {
+                    this.handleCallback(e);
+                }
+                onclosetag() {
+                    this.lastNode = null;
+                    let e = this.tagStack.pop();
+                    this.options.withEndIndices && (e.endIndex = this.parser.endIndex),
+                        this.elementCB && this.elementCB(e);
+                }
+                onopentag(e, t) {
+                    let r = this.options.xmlMode ? i.ElementType.Tag : void 0,
+                        s = new n.Element(e, t, void 0, r);
+                    this.addNode(s), this.tagStack.push(s);
+                }
+                ontext(e) {
+                    let { lastNode: t } = this;
+                    if (t && t.type === i.ElementType.Text)
+                        (t.data += e), this.options.withEndIndices && (t.endIndex = this.parser.endIndex);
+                    else {
+                        let t = new n.Text(e);
+                        this.addNode(t), (this.lastNode = t);
+                    }
+                }
+                oncomment(e) {
+                    if (this.lastNode && this.lastNode.type === i.ElementType.Comment) {
+                        this.lastNode.data += e;
+                        return;
+                    }
+                    let t = new n.Comment(e);
+                    this.addNode(t), (this.lastNode = t);
+                }
+                oncommentend() {
+                    this.lastNode = null;
+                }
+                oncdatastart() {
+                    let e = new n.Text(''),
+                        t = new n.CDATA([e]);
+                    this.addNode(t), (e.parent = t), (this.lastNode = e);
+                }
+                oncdataend() {
+                    this.lastNode = null;
+                }
+                onprocessinginstruction(e, t) {
+                    let r = new n.ProcessingInstruction(e, t);
+                    this.addNode(r);
+                }
+                handleCallback(e) {
+                    if ('function' == typeof this.callback) this.callback(e, this.dom);
+                    else if (e) throw e;
+                }
+                addNode(e) {
+                    let t = this.tagStack[this.tagStack.length - 1],
+                        r = t.children[t.children.length - 1];
+                    this.options.withStartIndices && (e.startIndex = this.parser.startIndex),
+                        this.options.withEndIndices && (e.endIndex = this.parser.endIndex),
+                        t.children.push(e),
+                        r && ((e.prev = r), (r.next = e)),
+                        (e.parent = t),
+                        (this.lastNode = null);
+                }
+            }
         }),
         a('1RLFx', function (e, r) {
             var i, n;
@@ -1969,14 +2062,18 @@
                 p = i.CDATA,
                 f = i.Doctype;
         }),
-        a('dZvva', function (e, r) {
+        a('k9MHs', function (e, r) {
             t(e.exports, 'Text', () => o),
                 t(e.exports, 'Comment', () => l),
                 t(e.exports, 'ProcessingInstruction', () => c),
                 t(e.exports, 'CDATA', () => d),
                 t(e.exports, 'Document', () => h),
                 t(e.exports, 'Element', () => p),
-                t(e.exports, 'isTag', () => f);
+                t(e.exports, 'isTag', () => f),
+                t(e.exports, 'isCDATA', () => m),
+                t(e.exports, 'isText', () => g),
+                t(e.exports, 'isComment', () => b),
+                t(e.exports, 'hasChildren', () => x);
             var i = s('1RLFx');
             class n {
                 constructor() {
@@ -2005,7 +2102,7 @@
                     this.next = e;
                 }
                 cloneNode(e = !1) {
-                    return m(this, e);
+                    return y(this, e);
                 }
             }
             class a extends n {
@@ -2110,24 +2207,36 @@
             function f(e) {
                 return (0, i.isTag)(e);
             }
-            function m(e, t = !1) {
+            function m(e) {
+                return e.type === i.ElementType.CDATA;
+            }
+            function g(e) {
+                return e.type === i.ElementType.Text;
+            }
+            function b(e) {
+                return e.type === i.ElementType.Comment;
+            }
+            function x(e) {
+                return Object.prototype.hasOwnProperty.call(e, 'children');
+            }
+            function y(e, t = !1) {
                 let r;
-                if (e.type === i.ElementType.Text) r = new o(e.data);
-                else if (e.type === i.ElementType.Comment) r = new l(e.data);
+                if (g(e)) r = new o(e.data);
+                else if (b(e)) r = new l(e.data);
                 else if (f(e)) {
-                    let i = t ? g(e.children) : [],
+                    let i = t ? v(e.children) : [],
                         n = new p(e.name, { ...e.attribs }, i);
                     i.forEach(e => (e.parent = n)),
                         null != e.namespace && (n.namespace = e.namespace),
                         e['x-attribsNamespace'] && (n['x-attribsNamespace'] = { ...e['x-attribsNamespace'] }),
                         e['x-attribsPrefix'] && (n['x-attribsPrefix'] = { ...e['x-attribsPrefix'] }),
                         (r = n);
-                } else if (e.type === i.ElementType.CDATA) {
-                    let i = t ? g(e.children) : [],
+                } else if (m(e)) {
+                    let i = t ? v(e.children) : [],
                         n = new d(i);
                     i.forEach(e => (e.parent = n)), (r = n);
                 } else if (e.type === i.ElementType.Root) {
-                    let i = t ? g(e.children) : [],
+                    let i = t ? v(e.children) : [],
                         n = new h(i);
                     i.forEach(e => (e.parent = n)), e['x-mode'] && (n['x-mode'] = e['x-mode']), (r = n);
                 } else if (e.type === i.ElementType.Directive) {
@@ -2145,8 +2254,8 @@
                     r
                 );
             }
-            function g(e) {
-                let t = e.map(e => m(e, !0));
+            function v(e) {
+                let t = e.map(e => y(e, !0));
                 for (let e = 1; e < t.length; e++) (t[e].prev = t[e - 1]), (t[e - 1].next = t[e]);
                 return t;
             }
@@ -2517,30 +2626,30 @@
             }
             let v = n.token(e => ('unicode' === e.name ? String.fromCodePoint(parseInt(e.text.slice(1), 16)) : void 0)),
                 w = n.token(e => ('escape' === e.name ? e.text.slice(1) : void 0)),
-                E = n.token(e => ('any' === e.name ? e.text : void 0)),
-                k = n.map(n.many(n.or(v, w, E)), e => e.join(''));
-            function T(e) {
-                return k({ tokens: x(e).tokens, options: void 0 }, 0).value;
-            }
+                k = n.token(e => ('any' === e.name ? e.text : void 0)),
+                E = n.map(n.many(n.or(v, w, k)), e => e.join(''));
             function L(e) {
+                return E({ tokens: x(e).tokens, options: void 0 }, 0).value;
+            }
+            function S(e) {
                 return n.token(t => t.name === e || void 0);
             }
-            let S = n.token(e => ('ws' === e.name ? null : void 0)),
-                A = n.option(S, null);
+            let T = n.token(e => ('ws' === e.name ? null : void 0)),
+                A = n.option(T, null);
             function N(e) {
                 return n.middle(A, e, A);
             }
-            let I = n.token(e => ('ident' === e.name ? T(e.text) : void 0)),
-                C = n.token(e => ('hash' === e.name ? T(e.text.slice(1)) : void 0)),
-                q = n.token(e => (e.name.startsWith('str') ? T(e.text.slice(1, -1)) : void 0)),
-                B = n.left(n.option(I, ''), L('|')),
+            let I = n.token(e => ('ident' === e.name ? L(e.text) : void 0)),
+                q = n.token(e => ('hash' === e.name ? L(e.text.slice(1)) : void 0)),
+                C = n.token(e => (e.name.startsWith('str') ? L(e.text.slice(1, -1)) : void 0)),
+                B = n.left(n.option(I, ''), S('|')),
                 D = n.eitherOr(
                     n.ab(B, I, (e, t) => ({ name: t, namespace: e })),
                     n.map(I, e => ({ name: e, namespace: null }))
                 ),
                 R = n.eitherOr(
-                    n.ab(B, L('*'), e => ({ type: 'universal', namespace: e, specificity: [0, 0, 0] })),
-                    n.map(L('*'), () => ({ type: 'universal', namespace: null, specificity: [0, 0, 0] }))
+                    n.ab(B, S('*'), e => ({ type: 'universal', namespace: e, specificity: [0, 0, 0] })),
+                    n.map(S('*'), () => ({ type: 'universal', namespace: null, specificity: [0, 0, 0] }))
                 ),
                 _ = n.map(D, ({ name: e, namespace: t }) => ({
                     type: 'tag',
@@ -2548,35 +2657,35 @@
                     namespace: t,
                     specificity: [0, 0, 1],
                 })),
-                P = n.ab(L('.'), I, (e, t) => ({ type: 'class', name: t, specificity: [0, 1, 0] })),
-                O = n.map(C, e => ({ type: 'id', name: e, specificity: [1, 0, 0] })),
-                M = n.token(e => {
+                P = n.ab(S('.'), I, (e, t) => ({ type: 'class', name: t, specificity: [0, 1, 0] })),
+                M = n.map(q, e => ({ type: 'id', name: e, specificity: [1, 0, 0] })),
+                O = n.token(e => {
                     if ('ident' === e.name) {
                         if ('i' === e.text || 'I' === e.text) return 'i';
                         if ('s' === e.text || 'S' === e.text) return 's';
                     }
                 }),
-                V = n.eitherOr(
-                    n.ab(q, n.option(n.right(A, M), null), (e, t) => ({ value: e, modifier: t })),
-                    n.ab(I, n.option(n.right(S, M), null), (e, t) => ({ value: e, modifier: t }))
+                U = n.eitherOr(
+                    n.ab(C, n.option(n.right(A, O), null), (e, t) => ({ value: e, modifier: t })),
+                    n.ab(I, n.option(n.right(T, O), null), (e, t) => ({ value: e, modifier: t }))
                 ),
-                U = n.choice(
-                    n.map(L('='), () => '='),
-                    n.ab(L('~'), L('='), () => '~='),
-                    n.ab(L('|'), L('='), () => '|='),
-                    n.ab(L('^'), L('='), () => '^='),
-                    n.ab(L('$'), L('='), () => '$='),
-                    n.ab(L('*'), L('='), () => '*=')
+                V = n.choice(
+                    n.map(S('='), () => '='),
+                    n.ab(S('~'), S('='), () => '~='),
+                    n.ab(S('|'), S('='), () => '|='),
+                    n.ab(S('^'), S('='), () => '^='),
+                    n.ab(S('$'), S('='), () => '$='),
+                    n.ab(S('*'), S('='), () => '*=')
                 ),
-                W = n.abc(L('['), N(D), L(']'), (e, { name: t, namespace: r }) => ({
+                H = n.abc(S('['), N(D), S(']'), (e, { name: t, namespace: r }) => ({
                     type: 'attrPresence',
                     name: t,
                     namespace: r,
                     specificity: [0, 1, 0],
                 })),
-                H = n.middle(
-                    L('['),
-                    n.abc(N(D), U, N(V), ({ name: e, namespace: t }, r, { value: i, modifier: n }) => ({
+                W = n.middle(
+                    S('['),
+                    n.abc(N(D), V, N(U), ({ name: e, namespace: t }, r, { value: i, modifier: n }) => ({
                         type: 'attrValue',
                         name: e,
                         namespace: t,
@@ -2585,34 +2694,34 @@
                         modifier: n,
                         specificity: [0, 1, 0],
                     })),
-                    L(']')
+                    S(']')
                 ),
-                j = n.eitherOr(W, H),
-                F = n.eitherOr(R, _),
-                $ = n.choice(O, P, j),
-                G = n.map(n.eitherOr(n.flatten(F, n.many($)), n.many1($)), e => ({
+                j = n.eitherOr(H, W),
+                G = n.eitherOr(R, _),
+                F = n.choice(M, P, j),
+                $ = n.map(n.eitherOr(n.flatten(G, n.many(F)), n.many1(F)), e => ({
                     type: 'compound',
                     list: e,
                     specificity: e.map(e => e.specificity).reduce(y, [0, 0, 0]),
                 })),
                 z = n.choice(
-                    n.map(L('>'), () => '>'),
-                    n.map(L('+'), () => '+'),
-                    n.map(L('~'), () => '~'),
-                    n.ab(L('|'), L('|'), () => '||')
+                    n.map(S('>'), () => '>'),
+                    n.map(S('+'), () => '+'),
+                    n.map(S('~'), () => '~'),
+                    n.ab(S('|'), S('|'), () => '||')
                 ),
-                Z = n.eitherOr(
+                Q = n.eitherOr(
                     N(z),
-                    n.map(S, () => ' ')
+                    n.map(T, () => ' ')
                 ),
-                Q = n.leftAssoc2(
-                    G,
-                    n.map(Z, e => (t, r) => ({
+                Z = n.leftAssoc2(
+                    $,
+                    n.map(Q, e => (t, r) => ({
                         type: 'compound',
                         list: [...r.list, { type: 'combinator', combinator: e, left: t, specificity: t.specificity }],
                         specificity: y(t.specificity, r.specificity),
                     })),
-                    G
+                    $
                 );
             function J(e, t, r = 1) {
                 return `${e.replace(/(\t)|(\r)|(\n)/g, (e, t, r) => (t ? '␉' : r ? '␍' : '␊'))}
@@ -2638,7 +2747,7 @@ ${''.padEnd(t)}${'^'.repeat(r)}`;
                         );
                     }
                     return i.value;
-                })(Q, e);
+                })(Z, e);
             }
             function Y(e) {
                 if (!e.type) throw Error('This is not an AST node.');
@@ -2703,9 +2812,9 @@ ${''.padEnd(t)}${'^'.repeat(r)}`;
                 return e.length - t.length;
             }
             n.leftAssoc2(
-                n.map(Q, e => ({ type: 'list', list: [e] })),
-                n.map(N(L(',')), () => (e, t) => ({ type: 'list', list: [...e.list, t] })),
-                Q
+                n.map(Z, e => ({ type: 'list', list: [e] })),
+                n.map(N(S(',')), () => (e, t) => ({ type: 'list', list: [...e.list, t] })),
+                Z
             );
         }),
         a('ebH2o', function (e, r) {
@@ -2947,12 +3056,12 @@ ${''.padEnd(t)}${'^'.repeat(r)}`;
         a('ys7X1', function (e, r) {
             t(e.exports, 'parseDocument', () => a);
             var i = s('lNrVt'),
-                n = s('kyMdm');
+                n = s('273yd');
             function a(e, t) {
                 let r = new n.DomHandler(void 0, t);
                 return new (0, i.Parser)(r, t).end(e), r.root;
             }
-            s('a7ePg'), s('1RLFx'), s('eNMmU'), s('9YZre');
+            s('a7ePg'), s('1RLFx'), s('a45mF'), s('iG8B0');
         }),
         a('lNrVt', function (e, r) {
             t(e.exports, 'Parser', () => g);
@@ -4225,19 +4334,19 @@ ${''.padEnd(t)}${'^'.repeat(r)}`;
                 return -1;
             }
             (e.exports.EntityDecoder = y), (e.exports.determineBranch = w);
-            var E = v(m.default),
-                k = v(g.default);
+            var k = v(m.default),
+                E = v(g.default);
             (e.exports.decodeHTML = function (e, t) {
-                return void 0 === t && (t = u.Legacy), E(e, t);
+                return void 0 === t && (t = u.Legacy), k(e, t);
             }),
                 (e.exports.decodeHTMLAttribute = function (e) {
-                    return E(e, u.Attribute);
+                    return k(e, u.Attribute);
                 }),
                 (e.exports.decodeHTMLStrict = function (e) {
-                    return E(e, u.Strict);
+                    return k(e, u.Strict);
                 }),
                 (e.exports.decodeXML = function (e) {
-                    return k(e, u.Strict);
+                    return E(e, u.Strict);
                 });
         }),
         a('5sG9R', function (e, t) {
@@ -4318,323 +4427,19 @@ ${''.padEnd(t)}${'^'.repeat(r)}`;
                     return (0, e.exports.fromCodePoint)(n(t));
                 });
         }),
-        a('kyMdm', function (e, r) {
-            t(e.exports, 'CDATA', () => s('lftuc').CDATA),
-                t(e.exports, 'Comment', () => s('lftuc').Comment),
-                t(e.exports, 'Document', () => s('lftuc').Document),
-                t(e.exports, 'Element', () => s('lftuc').Element),
-                t(e.exports, 'hasChildren', () => s('lftuc').hasChildren),
-                t(e.exports, 'isCDATA', () => s('lftuc').isCDATA),
-                t(e.exports, 'isComment', () => s('lftuc').isComment),
-                t(e.exports, 'isTag', () => s('lftuc').isTag),
-                t(e.exports, 'isText', () => s('lftuc').isText),
-                t(e.exports, 'ProcessingInstruction', () => s('lftuc').ProcessingInstruction),
-                t(e.exports, 'Text', () => s('lftuc').Text),
-                t(e.exports, 'DomHandler', () => o);
-            var i = s('1RLFx'),
-                n = s('lftuc');
-            let a = { withStartIndices: !1, withEndIndices: !1, xmlMode: !1 };
-            class o {
-                constructor(e, t, r) {
-                    (this.dom = []),
-                        (this.root = new n.Document(this.dom)),
-                        (this.done = !1),
-                        (this.tagStack = [this.root]),
-                        (this.lastNode = null),
-                        (this.parser = null),
-                        'function' == typeof t && ((r = t), (t = a)),
-                        'object' == typeof e && ((t = e), (e = void 0)),
-                        (this.callback = null != e ? e : null),
-                        (this.options = null != t ? t : a),
-                        (this.elementCB = null != r ? r : null);
-                }
-                onparserinit(e) {
-                    this.parser = e;
-                }
-                onreset() {
-                    (this.dom = []),
-                        (this.root = new n.Document(this.dom)),
-                        (this.done = !1),
-                        (this.tagStack = [this.root]),
-                        (this.lastNode = null),
-                        (this.parser = null);
-                }
-                onend() {
-                    this.done || ((this.done = !0), (this.parser = null), this.handleCallback(null));
-                }
-                onerror(e) {
-                    this.handleCallback(e);
-                }
-                onclosetag() {
-                    this.lastNode = null;
-                    let e = this.tagStack.pop();
-                    this.options.withEndIndices && (e.endIndex = this.parser.endIndex),
-                        this.elementCB && this.elementCB(e);
-                }
-                onopentag(e, t) {
-                    let r = this.options.xmlMode ? i.ElementType.Tag : void 0,
-                        s = new n.Element(e, t, void 0, r);
-                    this.addNode(s), this.tagStack.push(s);
-                }
-                ontext(e) {
-                    let { lastNode: t } = this;
-                    if (t && t.type === i.ElementType.Text)
-                        (t.data += e), this.options.withEndIndices && (t.endIndex = this.parser.endIndex);
-                    else {
-                        let t = new n.Text(e);
-                        this.addNode(t), (this.lastNode = t);
-                    }
-                }
-                oncomment(e) {
-                    if (this.lastNode && this.lastNode.type === i.ElementType.Comment) {
-                        this.lastNode.data += e;
-                        return;
-                    }
-                    let t = new n.Comment(e);
-                    this.addNode(t), (this.lastNode = t);
-                }
-                oncommentend() {
-                    this.lastNode = null;
-                }
-                oncdatastart() {
-                    let e = new n.Text(''),
-                        t = new n.CDATA([e]);
-                    this.addNode(t), (e.parent = t), (this.lastNode = e);
-                }
-                oncdataend() {
-                    this.lastNode = null;
-                }
-                onprocessinginstruction(e, t) {
-                    let r = new n.ProcessingInstruction(e, t);
-                    this.addNode(r);
-                }
-                handleCallback(e) {
-                    if ('function' == typeof this.callback) this.callback(e, this.dom);
-                    else if (e) throw e;
-                }
-                addNode(e) {
-                    let t = this.tagStack[this.tagStack.length - 1],
-                        r = t.children[t.children.length - 1];
-                    this.options.withStartIndices && (e.startIndex = this.parser.startIndex),
-                        this.options.withEndIndices && (e.endIndex = this.parser.endIndex),
-                        t.children.push(e),
-                        r && ((e.prev = r), (r.next = e)),
-                        (e.parent = t),
-                        (this.lastNode = null);
-                }
-            }
+        a('a45mF', function (e, r) {
+            t(e.exports, 'getFeed', () => s('iG8B0').getFeed),
+                s('dzgAU'),
+                s('8DVmQ'),
+                s('itbnG'),
+                s('8YbwJ'),
+                s('0bNle'),
+                s('7fM7F'),
+                s('iG8B0'),
+                s('273yd'),
+                s('k9MHs');
         }),
-        a('lftuc', function (e, r) {
-            t(e.exports, 'Text', () => o),
-                t(e.exports, 'Comment', () => l),
-                t(e.exports, 'ProcessingInstruction', () => c),
-                t(e.exports, 'CDATA', () => d),
-                t(e.exports, 'Document', () => h),
-                t(e.exports, 'Element', () => p),
-                t(e.exports, 'isTag', () => f),
-                t(e.exports, 'isCDATA', () => m),
-                t(e.exports, 'isText', () => g),
-                t(e.exports, 'isComment', () => b),
-                t(e.exports, 'hasChildren', () => x);
-            var i = s('1RLFx');
-            class n {
-                constructor() {
-                    (this.parent = null),
-                        (this.prev = null),
-                        (this.next = null),
-                        (this.startIndex = null),
-                        (this.endIndex = null);
-                }
-                get parentNode() {
-                    return this.parent;
-                }
-                set parentNode(e) {
-                    this.parent = e;
-                }
-                get previousSibling() {
-                    return this.prev;
-                }
-                set previousSibling(e) {
-                    this.prev = e;
-                }
-                get nextSibling() {
-                    return this.next;
-                }
-                set nextSibling(e) {
-                    this.next = e;
-                }
-                cloneNode(e = !1) {
-                    return y(this, e);
-                }
-            }
-            class a extends n {
-                constructor(e) {
-                    super(), (this.data = e);
-                }
-                get nodeValue() {
-                    return this.data;
-                }
-                set nodeValue(e) {
-                    this.data = e;
-                }
-            }
-            class o extends a {
-                constructor() {
-                    super(...arguments), (this.type = i.ElementType.Text);
-                }
-                get nodeType() {
-                    return 3;
-                }
-            }
-            class l extends a {
-                constructor() {
-                    super(...arguments), (this.type = i.ElementType.Comment);
-                }
-                get nodeType() {
-                    return 8;
-                }
-            }
-            class c extends a {
-                constructor(e, t) {
-                    super(t), (this.name = e), (this.type = i.ElementType.Directive);
-                }
-                get nodeType() {
-                    return 1;
-                }
-            }
-            class u extends n {
-                constructor(e) {
-                    super(), (this.children = e);
-                }
-                get firstChild() {
-                    var e;
-                    return null !== (e = this.children[0]) && void 0 !== e ? e : null;
-                }
-                get lastChild() {
-                    return this.children.length > 0 ? this.children[this.children.length - 1] : null;
-                }
-                get childNodes() {
-                    return this.children;
-                }
-                set childNodes(e) {
-                    this.children = e;
-                }
-            }
-            class d extends u {
-                constructor() {
-                    super(...arguments), (this.type = i.ElementType.CDATA);
-                }
-                get nodeType() {
-                    return 4;
-                }
-            }
-            class h extends u {
-                constructor() {
-                    super(...arguments), (this.type = i.ElementType.Root);
-                }
-                get nodeType() {
-                    return 9;
-                }
-            }
-            class p extends u {
-                constructor(
-                    e,
-                    t,
-                    r = [],
-                    n = 'script' === e ? i.ElementType.Script : 'style' === e ? i.ElementType.Style : i.ElementType.Tag
-                ) {
-                    super(r), (this.name = e), (this.attribs = t), (this.type = n);
-                }
-                get nodeType() {
-                    return 1;
-                }
-                get tagName() {
-                    return this.name;
-                }
-                set tagName(e) {
-                    this.name = e;
-                }
-                get attributes() {
-                    return Object.keys(this.attribs).map(e => {
-                        var t, r;
-                        return {
-                            name: e,
-                            value: this.attribs[e],
-                            namespace: null === (t = this['x-attribsNamespace']) || void 0 === t ? void 0 : t[e],
-                            prefix: null === (r = this['x-attribsPrefix']) || void 0 === r ? void 0 : r[e],
-                        };
-                    });
-                }
-            }
-            function f(e) {
-                return (0, i.isTag)(e);
-            }
-            function m(e) {
-                return e.type === i.ElementType.CDATA;
-            }
-            function g(e) {
-                return e.type === i.ElementType.Text;
-            }
-            function b(e) {
-                return e.type === i.ElementType.Comment;
-            }
-            function x(e) {
-                return Object.prototype.hasOwnProperty.call(e, 'children');
-            }
-            function y(e, t = !1) {
-                let r;
-                if (g(e)) r = new o(e.data);
-                else if (b(e)) r = new l(e.data);
-                else if (f(e)) {
-                    let i = t ? v(e.children) : [],
-                        n = new p(e.name, { ...e.attribs }, i);
-                    i.forEach(e => (e.parent = n)),
-                        null != e.namespace && (n.namespace = e.namespace),
-                        e['x-attribsNamespace'] && (n['x-attribsNamespace'] = { ...e['x-attribsNamespace'] }),
-                        e['x-attribsPrefix'] && (n['x-attribsPrefix'] = { ...e['x-attribsPrefix'] }),
-                        (r = n);
-                } else if (m(e)) {
-                    let i = t ? v(e.children) : [],
-                        n = new d(i);
-                    i.forEach(e => (e.parent = n)), (r = n);
-                } else if (e.type === i.ElementType.Root) {
-                    let i = t ? v(e.children) : [],
-                        n = new h(i);
-                    i.forEach(e => (e.parent = n)), e['x-mode'] && (n['x-mode'] = e['x-mode']), (r = n);
-                } else if (e.type === i.ElementType.Directive) {
-                    let t = new c(e.name, e.data);
-                    null != e['x-name'] &&
-                        ((t['x-name'] = e['x-name']),
-                        (t['x-publicId'] = e['x-publicId']),
-                        (t['x-systemId'] = e['x-systemId'])),
-                        (r = t);
-                } else throw Error(`Not implemented yet: ${e.type}`);
-                return (
-                    (r.startIndex = e.startIndex),
-                    (r.endIndex = e.endIndex),
-                    null != e.sourceCodeLocation && (r.sourceCodeLocation = e.sourceCodeLocation),
-                    r
-                );
-            }
-            function v(e) {
-                let t = e.map(e => y(e, !0));
-                for (let e = 1; e < t.length; e++) (t[e].prev = t[e - 1]), (t[e - 1].next = t[e]);
-                return t;
-            }
-        }),
-        a('eNMmU', function (e, r) {
-            t(e.exports, 'getFeed', () => s('9YZre').getFeed),
-                s('1LvIR'),
-                s('63Sud'),
-                s('fVc2z'),
-                s('jAAIj'),
-                s('7zAkY'),
-                s('dIjgl'),
-                s('9YZre'),
-                s('kyMdm'),
-                s('lftuc');
-        }),
-        a('1LvIR', function (e, r) {
+        a('dzgAU', function (e, r) {
             t(
                 e.exports,
                 'textContent',
@@ -4649,16 +4454,16 @@ ${''.padEnd(t)}${'^'.repeat(r)}`;
                                 : '';
                     }
             ),
-                s('kyMdm');
-            var i = s('lftuc');
-            s('avuoa'), s('1RLFx');
+                s('273yd');
+            var i = s('k9MHs');
+            s('iwhG6'), s('1RLFx');
         }),
-        a('avuoa', function (e, r) {
+        a('iwhG6', function (e, r) {
             t(e.exports, 'render', () => u), t(e.exports, 'default', () => d);
             var i = s('1RLFx');
             s('cAp4G');
             var n = s('i7QF4'),
-                a = s('5CdvS');
+                a = s('lxSNE');
             let o = new Set(['style', 'script', 'xmp', 'iframe', 'noembed', 'noframes', 'plaintext', 'noscript']);
             function l(e) {
                 return e.replace(/"/g, '&quot;');
@@ -5165,7 +4970,7 @@ ${''.padEnd(t)}${'^'.repeat(r)}`;
             }
             t(e.exports, 'default', () => n);
             var n = new Map(
-                i([
+                /* #__PURE__ */ i([
                     [9, '&Tab;'],
                     [0, '&NewLine;'],
                     [22, '&excl;'],
@@ -5858,7 +5663,7 @@ ${''.padEnd(t)}${'^'.repeat(r)}`;
                         {
                             v: '&ll;',
                             n: new Map(
-                                i([
+                                /* #__PURE__ */ i([
                                     [824, '&nLtv;'],
                                     [7577, '&nLt;'],
                                 ])
@@ -5870,7 +5675,7 @@ ${''.padEnd(t)}${'^'.repeat(r)}`;
                         {
                             v: '&gg;',
                             n: new Map(
-                                i([
+                                /* #__PURE__ */ i([
                                     [824, '&nGtv;'],
                                     [7577, '&nGt;'],
                                 ])
@@ -6501,7 +6306,7 @@ ${''.padEnd(t)}${'^'.repeat(r)}`;
                         44343,
                         {
                             n: new Map(
-                                i([
+                                /* #__PURE__ */ i([
                                     [56476, '&Ascr;'],
                                     [1, '&Cscr;'],
                                     [0, '&Dscr;'],
@@ -6715,7 +6520,7 @@ ${''.padEnd(t)}${'^'.repeat(r)}`;
                     ])
                 );
         }),
-        a('5CdvS', function (e, r) {
+        a('lxSNE', function (e, r) {
             t(e.exports, 'elementNames', () => i), t(e.exports, 'attributeNames', () => n);
             let i = new Map(
                     [
@@ -6822,11 +6627,11 @@ ${''.padEnd(t)}${'^'.repeat(r)}`;
                     ].map(e => [e.toLowerCase(), e])
                 );
         }),
-        a('63Sud', function (e, t) {
-            s('kyMdm'), s('lftuc');
+        a('8DVmQ', function (e, t) {
+            s('273yd'), s('k9MHs');
         }),
-        a('fVc2z', function (e, t) {}),
-        a('jAAIj', function (e, r) {
+        a('itbnG', function (e, t) {}),
+        a('8YbwJ', function (e, r) {
             t(e.exports, 'filter', () => n),
                 t(
                     e.exports,
@@ -6842,8 +6647,8 @@ ${''.padEnd(t)}${'^'.repeat(r)}`;
                             return s;
                         }
                 ),
-                s('kyMdm');
-            var i = s('lftuc');
+                s('273yd');
+            var i = s('k9MHs');
             function n(e, t, r = !0, s = 1 / 0) {
                 return (function (e, t, r, n) {
                     let s = [],
@@ -6862,10 +6667,10 @@ ${''.padEnd(t)}${'^'.repeat(r)}`;
                 })(e, Array.isArray(t) ? t : [t], r, s);
             }
         }),
-        a('7zAkY', function (e, r) {
-            t(e.exports, 'getElementsByTagName', () => o), s('kyMdm');
-            var i = s('lftuc'),
-                n = s('jAAIj');
+        a('0bNle', function (e, r) {
+            t(e.exports, 'getElementsByTagName', () => o), s('273yd');
+            var i = s('k9MHs'),
+                n = s('8YbwJ');
             let a = e =>
                 'function' == typeof e
                     ? t => (0, i.isTag)(t) && e(t.name)
@@ -6876,20 +6681,20 @@ ${''.padEnd(t)}${'^'.repeat(r)}`;
                 return (0, n.filter)(a(e), t, r, i);
             }
         }),
-        a('dIjgl', function (e, t) {
+        a('7fM7F', function (e, t) {
             var r, i;
-            s('kyMdm'),
-                s('lftuc'),
+            s('273yd'),
+                s('k9MHs'),
                 ((i = r || (r = {}))[(i.DISCONNECTED = 1)] = 'DISCONNECTED'),
                 (i[(i.PRECEDING = 2)] = 'PRECEDING'),
                 (i[(i.FOLLOWING = 4)] = 'FOLLOWING'),
                 (i[(i.CONTAINS = 8)] = 'CONTAINS'),
                 (i[(i.CONTAINED_BY = 16)] = 'CONTAINED_BY');
         }),
-        a('9YZre', function (e, r) {
+        a('iG8B0', function (e, r) {
             t(e.exports, 'getFeed', () => a);
-            var i = s('1LvIR'),
-                n = s('7zAkY');
+            var i = s('dzgAU'),
+                n = s('0bNle');
             function a(e) {
                 let t = u(p, e);
                 return t

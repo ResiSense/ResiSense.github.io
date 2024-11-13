@@ -5,7 +5,7 @@
     var t = globalThis,
         n = {},
         o = {},
-        r = t.parcelRequire8bfa;
+        r = t.parcelRequire94c2;
     null == r &&
         (((r = function (e) {
             if (e in n) return n[e].exports;
@@ -20,7 +20,7 @@
         }).register = function (e, t) {
             o[e] = t;
         }),
-        (t.parcelRequire8bfa = r)),
+        (t.parcelRequire94c2 = r)),
         (0, r.register)('df1N6', function (t, n) {
             function o(e) {
                 return encodeURIComponent(e)
@@ -67,7 +67,7 @@
                 o[t] = r + 1;
             });
         }
-        function a() {
+        function d() {
             for (let e of n) e.classList.toggle('sticky', !1);
             for (let e of n) {
                 let t = e.tagName.toLowerCase(),
@@ -75,7 +75,7 @@
                 if ((e.classList.toggle('sticky', n), !n)) break;
             }
         }
-        function d() {
+        function a() {
             (
                 document.querySelector('painted-content')?.querySelectorAll('h1, h2, h3, h4, h5, h6') ||
                 (() => {
@@ -87,13 +87,13 @@
             });
         }
         window.addEventListener('DOMContentLoaded', l),
-            window.addEventListener('DOMContentLoaded', a),
-            window.addEventListener('scroll', a),
-            window.addEventListener('resize', () => {
-                l(), a();
-            }),
             window.addEventListener('DOMContentLoaded', d),
-            window.addEventListener('resize', d);
+            window.addEventListener('scroll', d),
+            window.addEventListener('resize', () => {
+                l(), d();
+            }),
+            window.addEventListener('DOMContentLoaded', a),
+            window.addEventListener('resize', a);
     }
 })();
 //# sourceMappingURL=content.js.map
