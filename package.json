@@ -51,7 +51,7 @@
         "fuzzysort": "^3.0.2",
         "glob": "^11.0.0",
         "html-to-text": "^9.0.5",
-        "igem-upload-api": "^1.2.10",
+        "igem-upload-api": "^1.2.11",
         "jsdom": "^25.0.1",
         "marked": "^15.0.0"
     },
