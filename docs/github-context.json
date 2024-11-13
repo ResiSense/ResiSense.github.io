@@ -1,11 +1,11 @@
 {
     "job": "build",
     "ref": "refs/heads/main",
-    "sha": "f4d5475a12e50579f07b89f7c7867380c2eaa38f",
+    "sha": "ead9528b34926a2b581bdaa189038b6ca0b5a81e",
     "repository": "ResiSense/ResiSense.github.io",
     "repository_Url": null,
-    "run_id": "11817915194",
-    "run_number": "324",
+    "run_id": "11818028152",
+    "run_number": "325",
     "run_attempt": "1",
     "artifact_cache_size_limit": "10",
     "actor": "CCheukKa",
@@ -13,9 +13,45 @@
     "workflow": "Full CI pipeline",
     "event_name": "push",
     "event": {
-        "after": "f4d5475a12e50579f07b89f7c7867380c2eaa38f",
-        "before": "4ec4f46eca400d210c629d3a0ec8a46ef1dc8682",
+        "after": "ead9528b34926a2b581bdaa189038b6ca0b5a81e",
+        "before": "c2efb98b944851dbc22ea198257ffdb4de4ede37",
         "commits": [
+            {
+                "author": {
+                    "email": "ttoommyywyk@gmail.com",
+                    "name": "ttoommyy",
+                    "username": "ttoommyywyk"
+                },
+                "committer": {
+                    "email": "ttoommyywyk@gmail.com",
+                    "name": "ttoommyy",
+                    "username": "ttoommyywyk"
+                },
+                "distinct": false,
+                "id": "c2af686d3729f15ae0d4dd69241f274702df38ee",
+                "message": "post jam update",
+                "timestamp": "2024-11-09T17:33:26+08:00",
+                "tree_id": "3fe50947733369a62be28c381b4d1dd644896d24",
+                "url": "https://github.com/ResiSense/ResiSense.github.io/commit/c2af686d3729f15ae0d4dd69241f274702df38ee"
+            },
+            {
+                "author": {
+                    "email": "59217426+ttoommyywyk@users.noreply.github.com",
+                    "name": "TToommyy",
+                    "username": "ttoommyywyk"
+                },
+                "committer": {
+                    "email": "noreply@github.com",
+                    "name": "GitHub",
+                    "username": "web-flow"
+                },
+                "distinct": false,
+                "id": "882509a5ce7cab51378ab9a5786a975227a950a2",
+                "message": "Update footer.html",
+                "timestamp": "2024-11-09T17:38:00+08:00",
+                "tree_id": "761092f7463083285f94c06f144903371c3fd858",
+                "url": "https://github.com/ResiSense/ResiSense.github.io/commit/882509a5ce7cab51378ab9a5786a975227a950a2"
+            },
             {
                 "author": {
                     "email": "ccheukka@gmail.com",
@@ -28,14 +64,32 @@
                     "username": "CCheukKa"
                 },
                 "distinct": true,
-                "id": "f4d5475a12e50579f07b89f7c7867380c2eaa38f",
-                "message": "empty",
-                "timestamp": "2024-11-13T21:07:37+08:00",
-                "tree_id": "100f9e76c3c4c80fa51f51fe970430bbbee723a1",
-                "url": "https://github.com/ResiSense/ResiSense.github.io/commit/f4d5475a12e50579f07b89f7c7867380c2eaa38f"
+                "id": "58f2c3c078b9a6f10fb986da962d05d01b1d90fa",
+                "message": "Merge remote-tracking branch origin/post-jambroe",
+                "timestamp": "2024-11-13T21:12:57+08:00",
+                "tree_id": "5a1cf94364796d7634cdf78886736f0f90ef699d",
+                "url": "https://github.com/ResiSense/ResiSense.github.io/commit/58f2c3c078b9a6f10fb986da962d05d01b1d90fa"
+            },
+            {
+                "author": {
+                    "email": "ccheukka@gmail.com",
+                    "name": "CCheukKa",
+                    "username": "CCheukKa"
+                },
+                "committer": {
+                    "email": "ccheukka@gmail.com",
+                    "name": "CCheukKa",
+                    "username": "CCheukKa"
+                },
+                "distinct": true,
+                "id": "ead9528b34926a2b581bdaa189038b6ca0b5a81e",
+                "message": "Merge remote-tracking branch origin/ttoommyywyk-patch-1",
+                "timestamp": "2024-11-13T21:13:40+08:00",
+                "tree_id": "242fbe197a5706592255dc68469db8f03f15d756",
+                "url": "https://github.com/ResiSense/ResiSense.github.io/commit/ead9528b34926a2b581bdaa189038b6ca0b5a81e"
             }
         ],
-        "compare": "https://github.com/ResiSense/ResiSense.github.io/compare/4ec4f46eca40...f4d5475a12e5",
+        "compare": "https://github.com/ResiSense/ResiSense.github.io/compare/c2efb98b9448...ead9528b3492",
         "created": false,
         "deleted": false,
         "forced": false,
@@ -51,11 +105,11 @@
                 "username": "CCheukKa"
             },
             "distinct": true,
-            "id": "f4d5475a12e50579f07b89f7c7867380c2eaa38f",
-            "message": "empty",
-            "timestamp": "2024-11-13T21:07:37+08:00",
-            "tree_id": "100f9e76c3c4c80fa51f51fe970430bbbee723a1",
-            "url": "https://github.com/ResiSense/ResiSense.github.io/commit/f4d5475a12e50579f07b89f7c7867380c2eaa38f"
+            "id": "ead9528b34926a2b581bdaa189038b6ca0b5a81e",
+            "message": "Merge remote-tracking branch origin/ttoommyywyk-patch-1",
+            "timestamp": "2024-11-13T21:13:40+08:00",
+            "tree_id": "242fbe197a5706592255dc68469db8f03f15d756",
+            "url": "https://github.com/ResiSense/ResiSense.github.io/commit/ead9528b34926a2b581bdaa189038b6ca0b5a81e"
         },
         "pusher": {
             "email": "ccheukka@gmail.com",
@@ -68,6 +122,6 @@
     "ref_type": "branch",
     "secret_source": "Actions",
     "workflow_ref": "ResiSense/ResiSense.github.io/.github/workflows/full-ci-pipeline.yaml@refs/heads/main",
-    "workflow_sha": "f4d5475a12e50579f07b89f7c7867380c2eaa38f",
+    "workflow_sha": "ead9528b34926a2b581bdaa189038b6ca0b5a81e",
     "workspace": "/home/runner/work/ResiSense.github.io/ResiSense.github.io"
 }
