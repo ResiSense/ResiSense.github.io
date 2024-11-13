@@ -1,11 +1,11 @@
 {
     "job": "build",
     "ref": "refs/heads/main",
-    "sha": "8710a0c3b27029b9d11ca03c78c1858a8fdbfa40",
+    "sha": "0dfa0b20d30143772892b5fc5def5754ead4d3bf",
     "repository": "ResiSense/ResiSense.github.io",
     "repository_Url": null,
-    "run_id": "11818387488",
-    "run_number": "327",
+    "run_id": "11818415897",
+    "run_number": "328",
     "run_attempt": "1",
     "artifact_cache_size_limit": "10",
     "actor": "CCheukKa",
@@ -13,26 +13,26 @@
     "workflow": "Full CI pipeline",
     "event_name": "push",
     "event": {
-        "after": "8710a0c3b27029b9d11ca03c78c1858a8fdbfa40",
-        "before": "bb8a805f33e0b32e9b3d7dd70a1960dddbaf2615",
+        "after": "0dfa0b20d30143772892b5fc5def5754ead4d3bf",
+        "before": "d2cc9926adc99a50a54e30428004a39e5689d93d",
         "commits": [
             {
                 "author": {
-                    "email": "49699333+dependabot[bot]@users.noreply.github.com",
-                    "name": "dependabot[bot]",
-                    "username": "dependabot[bot]"
+                    "email": "ccheukka@gmail.com",
+                    "name": "CCheukKa",
+                    "username": "CCheukKa"
                 },
                 "committer": {
-                    "email": "noreply@github.com",
-                    "name": "GitHub",
-                    "username": "web-flow"
+                    "email": "ccheukka@gmail.com",
+                    "name": "CCheukKa",
+                    "username": "CCheukKa"
                 },
-                "distinct": false,
-                "id": "31a987397cfd7906f0fa71f30ee8e17148585312",
-                "message": "Build(deps-dev): Bump parcel from 2.12.0 to 2.13.0\n\nBumps [parcel](https://github.com/parcel-bundler/parcel) from 2.12.0 to 2.13.0.\n- [Release notes](https://github.com/parcel-bundler/parcel/releases)\n- [Changelog](https://github.com/parcel-bundler/parcel/blob/v2/CHANGELOG.md)\n- [Commits](https://github.com/parcel-bundler/parcel/compare/v2.12.0...v2.13.0)\n\n---\nupdated-dependencies:\n- dependency-name: parcel\n  dependency-type: direct:development\n  update-type: version-update:semver-minor\n...\n\nSigned-off-by: dependabot[bot] <support@github.com>",
-                "timestamp": "2024-11-13T13:31:41Z",
-                "tree_id": "039a92f4a9ad9496048244cef797aba5b8f1ae70",
-                "url": "https://github.com/ResiSense/ResiSense.github.io/commit/31a987397cfd7906f0fa71f30ee8e17148585312"
+                "distinct": true,
+                "id": "9add5fafab28406c12a6778826d074211ee7530c",
+                "message": "Bump igem-upload-api to version 1.2.10",
+                "timestamp": "2024-11-13T21:36:11+08:00",
+                "tree_id": "a9d1bc09ddd5977efb0fb8e2903cbb5da36d7cbc",
+                "url": "https://github.com/ResiSense/ResiSense.github.io/commit/9add5fafab28406c12a6778826d074211ee7530c"
             },
             {
                 "author": {
@@ -41,19 +41,19 @@
                     "username": "CCheukKa"
                 },
                 "committer": {
-                    "email": "noreply@github.com",
-                    "name": "GitHub",
-                    "username": "web-flow"
+                    "email": "ccheukka@gmail.com",
+                    "name": "CCheukKa",
+                    "username": "CCheukKa"
                 },
                 "distinct": true,
-                "id": "8710a0c3b27029b9d11ca03c78c1858a8fdbfa40",
-                "message": "Merge pull request #250 from ResiSense/dependabot/npm_and_yarn/parcel-2.13.0\n\nBuild(deps-dev): Bump parcel from 2.12.0 to 2.13.0",
-                "timestamp": "2024-11-13T21:34:42+08:00",
-                "tree_id": "039a92f4a9ad9496048244cef797aba5b8f1ae70",
-                "url": "https://github.com/ResiSense/ResiSense.github.io/commit/8710a0c3b27029b9d11ca03c78c1858a8fdbfa40"
+                "id": "0dfa0b20d30143772892b5fc5def5754ead4d3bf",
+                "message": "Merge branch main of https://github.com/ResiSense/ResiSense.github.io",
+                "timestamp": "2024-11-13T21:36:16+08:00",
+                "tree_id": "284e8de51def34f043f7684b62515066fec9df23",
+                "url": "https://github.com/ResiSense/ResiSense.github.io/commit/0dfa0b20d30143772892b5fc5def5754ead4d3bf"
             }
         ],
-        "compare": "https://github.com/ResiSense/ResiSense.github.io/compare/bb8a805f33e0...8710a0c3b270",
+        "compare": "https://github.com/ResiSense/ResiSense.github.io/compare/d2cc9926adc9...0dfa0b20d301",
         "created": false,
         "deleted": false,
         "forced": false,
@@ -64,16 +64,16 @@
                 "username": "CCheukKa"
             },
             "committer": {
-                "email": "noreply@github.com",
-                "name": "GitHub",
-                "username": "web-flow"
+                "email": "ccheukka@gmail.com",
+                "name": "CCheukKa",
+                "username": "CCheukKa"
             },
             "distinct": true,
-            "id": "8710a0c3b27029b9d11ca03c78c1858a8fdbfa40",
-            "message": "Merge pull request #250 from ResiSense/dependabot/npm_and_yarn/parcel-2.13.0\n\nBuild(deps-dev): Bump parcel from 2.12.0 to 2.13.0",
-            "timestamp": "2024-11-13T21:34:42+08:00",
-            "tree_id": "039a92f4a9ad9496048244cef797aba5b8f1ae70",
-            "url": "https://github.com/ResiSense/ResiSense.github.io/commit/8710a0c3b27029b9d11ca03c78c1858a8fdbfa40"
+            "id": "0dfa0b20d30143772892b5fc5def5754ead4d3bf",
+            "message": "Merge branch main of https://github.com/ResiSense/ResiSense.github.io",
+            "timestamp": "2024-11-13T21:36:16+08:00",
+            "tree_id": "284e8de51def34f043f7684b62515066fec9df23",
+            "url": "https://github.com/ResiSense/ResiSense.github.io/commit/0dfa0b20d30143772892b5fc5def5754ead4d3bf"
         },
         "pusher": {
             "email": "ccheukka@gmail.com",
@@ -86,6 +86,6 @@
     "ref_type": "branch",
     "secret_source": "Actions",
     "workflow_ref": "ResiSense/ResiSense.github.io/.github/workflows/full-ci-pipeline.yaml@refs/heads/main",
-    "workflow_sha": "8710a0c3b27029b9d11ca03c78c1858a8fdbfa40",
+    "workflow_sha": "0dfa0b20d30143772892b5fc5def5754ead4d3bf",
     "workspace": "/home/runner/work/ResiSense.github.io/ResiSense.github.io"
 }
