@@ -1,11 +1,11 @@
 {
     "job": "build",
     "ref": "refs/heads/main",
-    "sha": "eaa6f7c4be6ec16fe45953f50017717c63584804",
+    "sha": "f4d5475a12e50579f07b89f7c7867380c2eaa38f",
     "repository": "ResiSense/ResiSense.github.io",
     "repository_Url": null,
-    "run_id": "11145236090",
-    "run_number": "320",
+    "run_id": "11817915194",
+    "run_number": "324",
     "run_attempt": "1",
     "artifact_cache_size_limit": "10",
     "actor": "CCheukKa",
@@ -13,8 +13,8 @@
     "workflow": "Full CI pipeline",
     "event_name": "push",
     "event": {
-        "after": "eaa6f7c4be6ec16fe45953f50017717c63584804",
-        "before": "8f290349d2b9c587f052410424dcea39f5bade21",
+        "after": "f4d5475a12e50579f07b89f7c7867380c2eaa38f",
+        "before": "4ec4f46eca400d210c629d3a0ec8a46ef1dc8682",
         "commits": [
             {
                 "author": {
@@ -28,14 +28,14 @@
                     "username": "CCheukKa"
                 },
                 "distinct": true,
-                "id": "eaa6f7c4be6ec16fe45953f50017717c63584804",
-                "message": "add icons to hamburger menu",
-                "timestamp": "2024-10-02T21:58:08+08:00",
-                "tree_id": "868572878e4832004e6819963202edd7d85f8061",
-                "url": "https://github.com/ResiSense/ResiSense.github.io/commit/eaa6f7c4be6ec16fe45953f50017717c63584804"
+                "id": "f4d5475a12e50579f07b89f7c7867380c2eaa38f",
+                "message": "empty",
+                "timestamp": "2024-11-13T21:07:37+08:00",
+                "tree_id": "100f9e76c3c4c80fa51f51fe970430bbbee723a1",
+                "url": "https://github.com/ResiSense/ResiSense.github.io/commit/f4d5475a12e50579f07b89f7c7867380c2eaa38f"
             }
         ],
-        "compare": "https://github.com/ResiSense/ResiSense.github.io/compare/8f290349d2b9...eaa6f7c4be6e",
+        "compare": "https://github.com/ResiSense/ResiSense.github.io/compare/4ec4f46eca40...f4d5475a12e5",
         "created": false,
         "deleted": false,
         "forced": false,
@@ -51,11 +51,11 @@
                 "username": "CCheukKa"
             },
             "distinct": true,
-            "id": "eaa6f7c4be6ec16fe45953f50017717c63584804",
-            "message": "add icons to hamburger menu",
-            "timestamp": "2024-10-02T21:58:08+08:00",
-            "tree_id": "868572878e4832004e6819963202edd7d85f8061",
-            "url": "https://github.com/ResiSense/ResiSense.github.io/commit/eaa6f7c4be6ec16fe45953f50017717c63584804"
+            "id": "f4d5475a12e50579f07b89f7c7867380c2eaa38f",
+            "message": "empty",
+            "timestamp": "2024-11-13T21:07:37+08:00",
+            "tree_id": "100f9e76c3c4c80fa51f51fe970430bbbee723a1",
+            "url": "https://github.com/ResiSense/ResiSense.github.io/commit/f4d5475a12e50579f07b89f7c7867380c2eaa38f"
         },
         "pusher": {
             "email": "ccheukka@gmail.com",
@@ -68,6 +68,6 @@
     "ref_type": "branch",
     "secret_source": "Actions",
     "workflow_ref": "ResiSense/ResiSense.github.io/.github/workflows/full-ci-pipeline.yaml@refs/heads/main",
-    "workflow_sha": "eaa6f7c4be6ec16fe45953f50017717c63584804",
+    "workflow_sha": "f4d5475a12e50579f07b89f7c7867380c2eaa38f",
     "workspace": "/home/runner/work/ResiSense.github.io/ResiSense.github.io"
 }
