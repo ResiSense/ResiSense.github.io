@@ -1,505 +1,996 @@
-<!DOCTYPE html>
-<html lang="en"><head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/x-icon" href="/assets/favicon.png">
-    <meta base-url=".">
-    <title>Results</title>
+<!doctype html>
+<html lang="en"
+    ><head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="icon" type="image/x-icon" href="/assets/favicon.png" />
+        <meta base-url="." />
+        <title>Results</title>
 
-    <link rel="preconnect" href="https://static.igem.wiki">
+        <link rel="preconnect" href="https://static.igem.wiki" />
 
-    <!-- <link rel="preconnect" href="https://fonts.googleapis.com" /> -->
-    <!-- <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin /> -->
-    <!-- <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400..800&display=swap" rel="stylesheet" /> -->
-    <!-- <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet"> -->
-    <!-- <link href="https://fonts.googleapis.com/css2?family=Bellota+Text:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet"> -->
+        <!-- <link rel="preconnect" href="https://fonts.googleapis.com" /> -->
+        <!-- <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin /> -->
+        <!-- <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400..800&display=swap" rel="stylesheet" /> -->
+        <!-- <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet"> -->
+        <!-- <link href="https://fonts.googleapis.com/css2?family=Bellota+Text:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet"> -->
 
-    <link rel="stylesheet" type="text/css" href="/styles/globalStylesheet.css">
-    <script type="text/javascript" src="/scripts/globalLibrary.js"></script>
-<link rel="stylesheet" type="text/css" href="/styles/template.css"><link rel="stylesheet" type="text/css" href="/styles/parallax-doodle.css"><link rel="stylesheet" type="text/css" href="/styles/header.css"><link rel="stylesheet" type="text/css" href="/styles/body.css"><link rel="stylesheet" type="text/css" href="/styles/content.css"><link rel="stylesheet" type="text/css" href="/styles/footer.css"><link rel="stylesheet" type="text/css" href="/styles/searchbar.css"><link rel="stylesheet" type="text/css" href="/styles/hamburger-menu.css"><link rel="stylesheet" type="text/css" href="/styles/catalogue.css"><link rel="stylesheet" type="text/css" href="/styles/title-card.css"><link rel="stylesheet" type="text/css" href="/styles/outline.css"><link rel="stylesheet" type="text/css" href="/styles/sidebar.css"><link rel="stylesheet" type="text/css" href="/styles/figures.css"><link rel="stylesheet" type="text/css" href="/styles/flavour-text.css"><link rel="stylesheet" type="text/css" href="/styles/results.css"><script type="text/javascript" src="/scripts/responsivenessHandler.js" defer=""></script><script type="text/javascript" src="/scripts/parallax-doodle.js" defer=""></script><script type="text/javascript" src="/scripts/content.js" defer=""></script><script type="text/javascript" src="/scripts/searchbar.js" defer=""></script><script type="text/javascript" src="/scripts/hamburger-menu.js" defer=""></script><script type="text/javascript" src="/scripts/catalogue.js" defer=""></script><script type="text/javascript" src="/scripts/title-card.js" defer=""></script><script type="text/javascript" src="/scripts/outline.js" defer=""></script></head>
+        <link rel="stylesheet" type="text/css" href="/styles/globalStylesheet.css" />
+        <script type="text/javascript" src="/scripts/globalLibrary.js"></script>
+        <link rel="stylesheet" type="text/css" href="/styles/template.css" /><link
+            rel="stylesheet"
+            type="text/css"
+            href="/styles/parallax-doodle.css" /><link
+            rel="stylesheet"
+            type="text/css"
+            href="/styles/header.css" /><link rel="stylesheet" type="text/css" href="/styles/body.css" /><link
+            rel="stylesheet"
+            type="text/css"
+            href="/styles/content.css" /><link rel="stylesheet" type="text/css" href="/styles/footer.css" /><link
+            rel="stylesheet"
+            type="text/css"
+            href="/styles/searchbar.css" /><link
+            rel="stylesheet"
+            type="text/css"
+            href="/styles/hamburger-menu.css" /><link
+            rel="stylesheet"
+            type="text/css"
+            href="/styles/catalogue.css" /><link rel="stylesheet" type="text/css" href="/styles/title-card.css" /><link
+            rel="stylesheet"
+            type="text/css"
+            href="/styles/outline.css" /><link rel="stylesheet" type="text/css" href="/styles/sidebar.css" /><link
+            rel="stylesheet"
+            type="text/css"
+            href="/styles/figures.css" /><link rel="stylesheet" type="text/css" href="/styles/flavour-text.css" /><link
+            rel="stylesheet"
+            type="text/css"
+            href="/styles/results.css" /><script
+            type="text/javascript"
+            src="/scripts/responsivenessHandler.js"
+            defer=""
+        ></script
+        ><script type="text/javascript" src="/scripts/parallax-doodle.js" defer=""></script
+        ><script type="text/javascript" src="/scripts/content.js" defer=""></script
+        ><script type="text/javascript" src="/scripts/searchbar.js" defer=""></script
+        ><script type="text/javascript" src="/scripts/hamburger-menu.js" defer=""></script
+        ><script type="text/javascript" src="/scripts/catalogue.js" defer=""></script
+        ><script type="text/javascript" src="/scripts/title-card.js" defer=""></script
+        ><script type="text/javascript" src="/scripts/outline.js" defer=""></script
+    ></head>
 
-<body>
-    <painted-template> 
-
-
-<painted-parallax-doodle> 
-
-
-
-<div id="parallax-doodle-container"><img src="/assets/doodles/red blood cell.svg" style="translate: 24vw 3040px; animation-name: parallax-doodle-ltvljyh;"><img src="/assets/doodles/virus.svg" style="translate: 25vw 420px; animation-name: parallax-doodle-91tsrt;"><img src="/assets/doodles/syringe.svg" style="translate: 27vw 1600px; animation-name: parallax-doodle-7beoux;"><img src="/assets/doodles/red blood cell.svg" style="translate: 65vw 5800px; animation-name: parallax-doodle-v0ulcl;"><img src="/assets/doodles/drug.svg" style="translate: 69vw 1440px; animation-name: parallax-doodle-if2d1f;"><img src="/assets/logos/resisense/ResiSense Orange Logo.svg" style="translate: 95vw 2860px; animation-name: parallax-doodle-3wv455;"><img src="/assets/doodles/syringe.svg" style="translate: 50vw 6020px; animation-name: parallax-doodle-3js44g;"><img src="/assets/doodles/bacteria.svg" style="translate: 3vw 5340px; animation-name: parallax-doodle-0m8okz;"><img src="/assets/doodles/dna.svg" style="translate: 84vw 1200px; animation-name: parallax-doodle-26nmgc;"><img src="/assets/doodles/bacteria.svg" style="translate: 57vw 5020px; animation-name: parallax-doodle-c1ojer;"><img src="/assets/doodles/virus.svg" style="translate: 84vw 6260px; animation-name: parallax-doodle-p6bu;"><img src="/assets/doodles/red blood cell.svg" style="translate: 67vw 3440px; animation-name: parallax-doodle-v6uhdh;"><img src="/assets/doodles/drug.svg" style="translate: 24vw 3520px; animation-name: parallax-doodle-gevmj4;"><img src="/assets/doodles/virus.svg" style="translate: 90vw 4300px; animation-name: parallax-doodle-tefsen;"><img src="/assets/doodles/e coli.svg" style="translate: 5vw 800px; animation-name: parallax-doodle-sh1v1j;"><img src="/assets/logos/resisense/ResiSense Orange Logo.svg" style="translate: 30vw 4180px; animation-name: parallax-doodle-cycjhi;"><img src="/assets/logos/resisense/ResiSense Orange Logo.svg" style="translate: 90vw 680px; animation-name: parallax-doodle-z5gppx;"><img src="/assets/logos/resisense/ResiSense Orange Logo.svg" style="translate: 33vw 6080px; animation-name: parallax-doodle-xhha4p;"><img src="/assets/doodles/e coli.svg" style="translate: 10vw 4540px; animation-name: parallax-doodle-ex2mch;"><img src="/assets/doodles/bacteria.svg" style="translate: 91vw 4960px; animation-name: parallax-doodle-ymnxqp;"><img src="/assets/doodles/virus.svg" style="translate: 23vw 1860px; animation-name: parallax-doodle-plt44lc;"><img src="/assets/doodles/dna.svg" style="translate: 42vw 2420px; animation-name: parallax-doodle-9iyuzsm;"><img src="/assets/doodles/bacteria.svg" style="translate: 40vw 4440px; animation-name: parallax-doodle-oz3nkr;"><img src="/assets/doodles/dna.svg" style="translate: 57vw 560px; animation-name: parallax-doodle-oulh6q;"><img src="/assets/doodles/dna.svg" style="translate: 76vw 380px; animation-name: parallax-doodle-k24r06;"></div> </painted-parallax-doodle>
-<painted-header> 
-
-<header>
-    <div class="logo-container">
-        <a href="/" class="logo"> </a>
-    </div>
-    <div class="header-shelf">
-        <div class="header-items-container">
-            <div class="header-leftside">
-                <div class="logo-name-text">
-                    <a href="/"> ResiSense </a>
-                </div>
-                <div class="logo-flavour-text"> Finding resistant pathogens one species at a time </div>
-            </div>
-            <div class="page-title-container">
-                <div class="page-title hidden" id="header-page-title">Results</div>
-            </div>
-            <div class="header-rightside">
-                <painted-searchbar> 
-
-
-
-<search id="searchbar" class="header-rightside-button">
-    <input id="header-search-field" type="search" placeholder="Search... (Ctrl + Shift + F)" autocomplete="off">
-    <button id="search-button" type="submit">🔍</button>
-    <dialog id="search-dialog">
-        <div class="main-search-field-container">
-            <div class="search-icon">🔍</div>
-            <input id="main-search-field" type="search" placeholder="Search for a page..." autocomplete="off">
-        </div>
-        <div class="search-results-container">
-            <div class="tooltips">
-                <div class="navigation-tips">
-                    <div>
-                        Use <kbd>↑</kbd>, <kbd>↓</kbd>, and <kbd>Enter</kbd> to navigate the results.
+    <body>
+        <painted-template>
+            <painted-parallax-doodle>
+                <div id="parallax-doodle-container"
+                    ><img
+                        src="/assets/doodles/syringe.svg"
+                        style="translate: 95vw 4340px; animation-name: parallax-doodle-sl7t1y" /><img
+                        src="/assets/logos/resisense/ResiSense Orange Logo.svg"
+                        style="translate: 18vw 5260px; animation-name: parallax-doodle-qm2qju" /><img
+                        src="/assets/doodles/drug.svg"
+                        style="translate: 4vw 780px; animation-name: parallax-doodle-k0fqzk" /><img
+                        src="/assets/doodles/dna.svg"
+                        style="translate: 77vw 3860px; animation-name: parallax-doodle-col1ab" /><img
+                        src="/assets/doodles/dna.svg"
+                        style="translate: 41vw 5800px; animation-name: parallax-doodle-8c1w5" /><img
+                        src="/assets/doodles/e coli.svg"
+                        style="translate: 91vw 6580px; animation-name: parallax-doodle-0iv2ju" /><img
+                        src="/assets/doodles/e coli.svg"
+                        style="translate: 91vw 2580px; animation-name: parallax-doodle-9terug" /><img
+                        src="/assets/doodles/dna.svg"
+                        style="translate: 29vw 7800px; animation-name: parallax-doodle-k3yu33" /><img
+                        src="/assets/doodles/e coli.svg"
+                        style="translate: 97vw 960px; animation-name: parallax-doodle-89npgd" /><img
+                        src="/assets/doodles/red blood cell.svg"
+                        style="translate: 89vw 7600px; animation-name: parallax-doodle-zf6rku" /><img
+                        src="/assets/doodles/virus.svg"
+                        style="translate: 7vw 7840px; animation-name: parallax-doodle-1vrmbj" /><img
+                        src="/assets/doodles/bacteria.svg"
+                        style="translate: 98vw 6140px; animation-name: parallax-doodle-hw0juk" /><img
+                        src="/assets/doodles/red blood cell.svg"
+                        style="translate: 83vw 0px; animation-name: parallax-doodle-wkf7yr" /><img
+                        src="/assets/doodles/syringe.svg"
+                        style="translate: 14vw 3760px; animation-name: parallax-doodle-ebk18y" /><img
+                        src="/assets/doodles/dna.svg"
+                        style="translate: 49vw 4620px; animation-name: parallax-doodle-f7sx5m" /><img
+                        src="/assets/doodles/red blood cell.svg"
+                        style="translate: 69vw 3300px; animation-name: parallax-doodle-wphreb" /><img
+                        src="/assets/doodles/virus.svg"
+                        style="translate: 61vw 2600px; animation-name: parallax-doodle-wr2ord" /><img
+                        src="/assets/doodles/bacteria.svg"
+                        style="translate: 62vw 6000px; animation-name: parallax-doodle-4hn7ma" /><img
+                        src="/assets/doodles/red blood cell.svg"
+                        style="translate: 81vw 540px; animation-name: parallax-doodle-mk8ss9" /><img
+                        src="/assets/doodles/syringe.svg"
+                        style="translate: 25vw 8320px; animation-name: parallax-doodle-5n4x15" /><img
+                        src="/assets/logos/resisense/ResiSense Orange Logo.svg"
+                        style="translate: 6vw 4220px; animation-name: parallax-doodle-1ovdu" /><img
+                        src="/assets/doodles/virus.svg"
+                        style="translate: 9vw 2900px; animation-name: parallax-doodle-pszhtj" /><img
+                        src="/assets/doodles/dna.svg"
+                        style="translate: 3vw 6900px; animation-name: parallax-doodle-wd8w2c" /><img
+                        src="/assets/doodles/bacteria.svg"
+                        style="translate: 6vw 5000px; animation-name: parallax-doodle-v97fwr" /><img
+                        src="/assets/doodles/drug.svg"
+                        style="translate: 68vw 5400px; animation-name: parallax-doodle-m6bj7y" /><img
+                        src="/assets/logos/resisense/ResiSense Orange Logo.svg"
+                        style="translate: 18vw 2340px; animation-name: parallax-doodle-circ9" /><img
+                        src="/assets/doodles/drug.svg"
+                        style="translate: 33vw 2980px; animation-name: parallax-doodle-a1p0gp" /><img
+                        src="/assets/doodles/syringe.svg"
+                        style="translate: 14vw 1720px; animation-name: parallax-doodle-gcl6v8" /><img
+                        src="/assets/doodles/syringe.svg"
+                        style="translate: 89vw 8340px; animation-name: parallax-doodle-hef0sw" /><img
+                        src="/assets/doodles/virus.svg"
+                        style="translate: 39vw 6380px; animation-name: parallax-doodle-ezmv1x" /><img
+                        src="/assets/doodles/drug.svg"
+                        style="translate: 69vw 1920px; animation-name: parallax-doodle-29yatd" /><img
+                        src="/assets/doodles/bacteria.svg"
+                        style="translate: 56vw 0px; animation-name: parallax-doodle-1gdyho" /><img
+                        src="/assets/doodles/virus.svg"
+                        style="translate: 33vw 580px; animation-name: parallax-doodle-ybzyjq"
+                /></div>
+            </painted-parallax-doodle>
+            <painted-header>
+                <header>
+                    <div class="logo-container">
+                        <a href="/" class="logo"> </a>
                     </div>
-                </div>
-                <div class="query-stats">
-                    Querying took <span id="query-time">0</span>ms.
-                    Redrawing took <span id="redraw-time">0</span>ms.
-                </div>
-            </div>
-            <div id="search-results" class="require-scrollbar">
-                <template id="search-result-template">
-                    <a id="search-result">
-                        <div class="result-leftside">
-                            <div id="result-title"></div>
-                            <div id="result-path"></div>
+                    <div class="header-shelf">
+                        <div class="header-items-container">
+                            <div class="header-leftside">
+                                <div class="logo-name-text">
+                                    <a href="/"> ResiSense </a>
+                                </div>
+                                <div class="logo-flavour-text"> Finding resistant pathogens one species at a time </div>
+                            </div>
+                            <div class="page-title-container">
+                                <div class="page-title hidden" id="header-page-title">Results</div>
+                            </div>
+                            <div class="header-rightside">
+                                <painted-searchbar>
+                                    <search id="searchbar" class="header-rightside-button">
+                                        <input
+                                            id="header-search-field"
+                                            type="search"
+                                            placeholder="Search... (Ctrl + Shift + F)"
+                                            autocomplete="off"
+                                        />
+                                        <button id="search-button" type="submit">🔍</button>
+                                        <dialog id="search-dialog">
+                                            <div class="main-search-field-container">
+                                                <div class="search-icon">🔍</div>
+                                                <input
+                                                    id="main-search-field"
+                                                    type="search"
+                                                    placeholder="Search for a page..."
+                                                    autocomplete="off"
+                                                />
+                                            </div>
+                                            <div class="search-results-container">
+                                                <div class="tooltips">
+                                                    <div class="navigation-tips">
+                                                        <div>
+                                                            Use <kbd>↑</kbd>, <kbd>↓</kbd>, and <kbd>Enter</kbd> to
+                                                            navigate the results.
+                                                        </div>
+                                                    </div>
+                                                    <div class="query-stats">
+                                                        Querying took <span id="query-time">0</span>ms. Redrawing took
+                                                        <span id="redraw-time">0</span>ms.
+                                                    </div>
+                                                </div>
+                                                <div id="search-results" class="require-scrollbar">
+                                                    <template id="search-result-template">
+                                                        <a id="search-result">
+                                                            <div class="result-leftside">
+                                                                <div id="result-title"></div>
+                                                                <div id="result-path"></div>
+                                                            </div>
+                                                            <div class="result-divider"></div>
+                                                            <div class="result-rightside">
+                                                                <div id="result-content"></div>
+                                                            </div>
+                                                        </a>
+                                                    </template>
+                                                    <template id="search-results-end-template">
+                                                        <fieldset class="search-results-end">
+                                                            <legend>There's nothing more to see here 🙈</legend>
+                                                        </fieldset>
+                                                    </template>
+                                                    <template id="prefix-tips-template">
+                                                        <div class="prefix-tips">
+                                                            <div>Tips:</div>
+                                                            <ul>
+                                                                <li>
+                                                                    Prefix query with <kbd>:</kbd> to only search for
+                                                                    content
+                                                                </li>
+                                                                <li>
+                                                                    Prefix query with <kbd>!</kbd> to only search for
+                                                                    titles
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </template>
+                                                </div>
+                                            </div>
+                                        </dialog>
+                                    </search>
+                                </painted-searchbar>
+                                <painted-hamburger-menu>
+                                    <button id="hamburger-button" class="header-rightside-button">🍔</button>
+                                    <div class="hamburger-menu-container">
+                                        <dialog id="hamburger-menu">
+                                            <template id="hamburger-menu-item-template">
+                                                <div id="hamburger-menu-item">
+                                                    <a href=""></a>
+                                                </div>
+                                            </template>
+
+                                            <div id="hamburger-menu-item">
+                                                <a href="/home">🏠 home</a>
+                                            </div>
+
+                                            <div id="hamburger-menu-item">
+                                                <a href="/description">📖 project description</a>
+                                            </div>
+
+                                            <div id="hamburger-menu-item">
+                                                <a href="/human-practices">🗣️ integrated human practices</a>
+                                            </div>
+
+                                            <div id="hamburger-menu-item">
+                                                <a href="/proof-of-concept">🧪 proof of concept</a>
+                                            </div>
+
+                                            <div id="hamburger-menu-item">
+                                                <a href="/engineering">🧪 engineering success</a>
+                                            </div>
+
+                                            <div id="hamburger-menu-item" class="hamburger-menu-item-active">
+                                                <a href="/results">🧪 results</a>
+                                            </div>
+
+                                            <div id="hamburger-menu-item">
+                                                <a href="/notebook">🧪 notebook</a>
+                                            </div>
+
+                                            <div id="hamburger-menu-item">
+                                                <a href="/education">📚 education</a>
+                                            </div>
+
+                                            <div id="hamburger-menu-item">
+                                                <a href="/model">💻 modelling</a>
+                                            </div>
+
+                                            <div id="hamburger-menu-item">
+                                                <a href="/contribution">🧠 contribution</a>
+                                            </div>
+
+                                            <div id="hamburger-menu-item">
+                                                <a href="/team">🧠 team</a>
+                                            </div>
+
+                                            <div id="hamburger-menu-item">
+                                                <a href="/acknowledgements">🧠 acknowledgements</a>
+                                            </div>
+
+                                            <div id="hamburger-menu-item">
+                                                <a href="/attributions">🧠 attributions</a>
+                                            </div>
+
+                                            <div id="hamburger-menu-item">
+                                                <a href="/resources">👓 resources</a>
+                                            </div>
+                                        </dialog>
+                                    </div>
+                                </painted-hamburger-menu>
+                            </div>
                         </div>
-                        <div class="result-divider"></div>
-                        <div class="result-rightside">
-                            <div id="result-content"></div>
+                        <div class="header-catalogue-container">
+                            <painted-catalogue>
+                                <div class="catalogue" id="catalogue">
+                                    <template id="catalogue-item-template">
+                                        <div class="catalogue-item">
+                                            <a href=""></a>
+                                        </div>
+                                    </template>
+                                    <template id="catalogue-divider-template">
+                                        <div class="catalogue-item catalogue-divider"><span> | </span></div>
+                                    </template>
+                                    <!--  -->
+                                    <div class="catalogue-item catalogue-arrow"><span> &gt; </span></div>
+
+                                    <div class="catalogue-item">
+                                        <a href="/home">home</a>
+                                    </div>
+
+                                    <div class="catalogue-item catalogue-divider"><span> | </span></div>
+
+                                    <div class="catalogue-item">
+                                        <a href="/description">project description</a>
+                                    </div>
+
+                                    <div class="catalogue-item catalogue-divider"><span> | </span></div>
+
+                                    <div class="catalogue-item">
+                                        <a href="/human-practices">integrated human practices</a>
+                                    </div>
+
+                                    <div class="catalogue-item catalogue-divider"><span> | </span></div>
+
+                                    <div class="catalogue-item">
+                                        <a href="/proof-of-concept">proof of concept</a>
+                                    </div>
+
+                                    <div class="catalogue-item catalogue-divider"><span> | </span></div>
+
+                                    <div class="catalogue-item catalogue-item-active">
+                                        <a href="/results">results</a>
+                                    </div>
+
+                                    <div class="catalogue-item catalogue-divider"><span> | </span></div>
+
+                                    <div class="catalogue-item">
+                                        <a href="/education">education</a>
+                                    </div>
+
+                                    <div class="catalogue-item catalogue-divider"><span> | </span></div>
+
+                                    <div class="catalogue-item">
+                                        <a href="/model">modelling</a>
+                                    </div>
+
+                                    <div class="catalogue-item catalogue-divider"><span> | </span></div>
+
+                                    <div class="catalogue-item">
+                                        <a href="/team">team</a>
+                                    </div>
+
+                                    <div class="catalogue-item catalogue-divider"><span> | </span></div>
+
+                                    <div class="catalogue-item">
+                                        <a href="/acknowledgements">acknowledgements</a>
+                                    </div>
+
+                                    <div class="catalogue-item catalogue-divider"><span> | </span></div>
+                                </div>
+                            </painted-catalogue>
                         </div>
-                    </a>
-                </template>
-                <template id="search-results-end-template">
-                    <fieldset class="search-results-end">
-                        <legend>There's nothing more to see here 🙈</legend>
-                    </fieldset>
-                </template>
-                <template id="prefix-tips-template">
-                    <div class="prefix-tips">
-                        <div>Tips:</div>
-                        <ul>
-                            <li> Prefix query with <kbd>:</kbd> to only search for content </li>
-                            <li> Prefix query with <kbd>!</kbd> to only search for titles </li>
-                        </ul>
                     </div>
-                </template>
-            </div>
-        </div>
-    </dialog>
-</search> </painted-searchbar>
-                <painted-hamburger-menu> 
+                </header>
+                <div class="header-spacer"></div>
+            </painted-header>
+            <painted-body>
+                <div class="body-container">
+                    <painted-title-card>
+                        <div class="title-card-container">
+                            <div class="background-box">
+                                <div class="pattern"></div>
+                            </div>
+                            <div class="page-title use-parallax" id="title-name">Results</div>
+                            <div class="page-title use-parallax" id="title-name-shadow">Results</div>
+                            <div class="page-title use-parallax" id="title-name-box">Results</div>
+                            <div id="sticker-container">
+                                <img
+                                    class="use-parallax"
+                                    id="blue-pills"
+                                    src="/assets/stickers/blue pills-Enhanced-SR.png"
+                                />
+                                <img
+                                    class="use-parallax"
+                                    id="colourful-pills"
+                                    src="/assets/stickers/colourful pills-Enhanced-SR.png"
+                                />
+                                <img
+                                    class="use-parallax"
+                                    id="hold-pills"
+                                    src="/assets/stickers/hold pills-Enhanced-SR.png"
+                                />
+                                <img
+                                    class="use-parallax"
+                                    id="orange-pills"
+                                    src="/assets/stickers/orange pills-Enhanced-SR.png"
+                                />
+                                <img class="use-parallax" id="globe" src="/assets/stickers/globe-Enhanced-SR.png" />
+                                <img class="use-parallax" id="gurney" src="/assets/stickers/gurney-Enhanced-SR.png" />
+                            </div>
+                        </div>
+                    </painted-title-card>
+                    <div class="main-container">
+                        <painted-outline>
+                            <nav>
+                                <div id="outline-progress-pointer">➡️</div>
+                                <div class="outline">
+                                    <ul id="outline-tree">
+                                        <template id="outline-heading-template">
+                                            <li>
+                                                <a>heading</a>
+                                                <ul></ul>
+                                            </li>
+                                        </template>
 
+                                        <li>
+                                            <a href="#cell-lysis-sds-treatment" id="--outline-cell-lysis-sds-treatment"
+                                                >Cell Lysis: SDS Treatment</a
+                                            >
+                                            <ul></ul>
+                                        </li>
 
+                                        <li>
+                                            <a
+                                                href="#target-gene-extraction-nt-bsmai-hhai-lsda"
+                                                id="--outline-target-gene-extraction-nt-bsmai-hhai-lsda"
+                                                >Target Gene Extraction: Nt.BsmAI/HhaI-LSDA</a
+                                            >
+                                            <ul></ul>
+                                        </li>
 
+                                        <li>
+                                            <a
+                                                href="#rolling-circle-amplification"
+                                                id="--outline-rolling-circle-amplification"
+                                                >Rolling Circle Amplification</a
+                                            >
+                                            <ul>
+                                                <li>
+                                                    <a href="#rca-in-rcutsmart" id="--outline-rca-in-rcutsmart"
+                                                        >RCA in rCutSmart</a
+                                                    >
+                                                    <ul></ul>
+                                                </li>
 
-<button id="hamburger-button" class="header-rightside-button">🍔</button>
-<div class="hamburger-menu-container">
-    <dialog id="hamburger-menu">
-        <template id="hamburger-menu-item-template">
-            <div id="hamburger-menu-item">
-                <a href=""></a>
-            </div>
-        </template>
-    
-            <div id="hamburger-menu-item">
-                <a href="/home">🏠 home</a>
-            </div>
-        
-            <div id="hamburger-menu-item">
-                <a href="/description">📖 project description</a>
-            </div>
-        
-            <div id="hamburger-menu-item">
-                <a href="/human-practices">🗣️ integrated human practices</a>
-            </div>
-        
-            <div id="hamburger-menu-item">
-                <a href="/proof-of-concept">🧪 proof of concept</a>
-            </div>
-        
-            <div id="hamburger-menu-item">
-                <a href="/engineering">🧪 engineering success</a>
-            </div>
-        
-            <div id="hamburger-menu-item" class="hamburger-menu-item-active">
-                <a href="/results">🧪 results</a>
-            </div>
-        
-            <div id="hamburger-menu-item">
-                <a href="/notebook">🧪 notebook</a>
-            </div>
-        
-            <div id="hamburger-menu-item">
-                <a href="/education">📚 education</a>
-            </div>
-        
-            <div id="hamburger-menu-item">
-                <a href="/model">💻 modelling</a>
-            </div>
-        
-            <div id="hamburger-menu-item">
-                <a href="/contribution">🧠 contribution</a>
-            </div>
-        
-            <div id="hamburger-menu-item">
-                <a href="/team">🧠 team</a>
-            </div>
-        
-            <div id="hamburger-menu-item">
-                <a href="/acknowledgements">🧠 acknowledgements</a>
-            </div>
-        
-            <div id="hamburger-menu-item">
-                <a href="/attributions">🧠 attributions</a>
-            </div>
-        
-            <div id="hamburger-menu-item">
-                <a href="/resources">👓 resources</a>
-            </div>
-        </dialog>
-</div> </painted-hamburger-menu>
-            </div>
-        </div>
-        <div class="header-catalogue-container">
-            <painted-catalogue> 
+                                                <li>
+                                                    <a href="#third-generation-rca" id="--outline-third-generation-rca"
+                                                        >Third-Generation RCA</a
+                                                    >
+                                                    <ul></ul>
+                                                </li>
+                                            </ul>
+                                        </li>
 
+                                        <li>
+                                            <a
+                                                href="#signal-expression-g-quadruplex-dnazyme-assay"
+                                                id="--outline-signal-expression-g-quadruplex-dnazyme-assay"
+                                                >Signal Expression: G-Quadruplex DNAzyme Assay</a
+                                            >
+                                            <ul></ul>
+                                        </li>
 
+                                        <li>
+                                            <a
+                                                href="#quantification-of-g-quadruplex-activity"
+                                                id="--outline-quantification-of-g-quadruplex-activity"
+                                                >Quantification of G-Quadruplex Activity</a
+                                            >
+                                            <ul></ul>
+                                        </li>
 
-<div class="catalogue" id="catalogue">
-    <template id="catalogue-item-template">
-        <div class="catalogue-item">
-            <a href=""></a>
-        </div>
-    </template>
-    <template id="catalogue-divider-template">
-        <div class="catalogue-item catalogue-divider"><span> | </span></div>
-    </template>
-    <!--  -->
-    <div class="catalogue-item catalogue-arrow"><span> &gt; </span></div>
+                                        <li>
+                                            <a href="#conclusion" id="--outline-conclusion">Conclusion</a>
+                                            <ul></ul>
+                                        </li>
 
-        <div class="catalogue-item">
-            <a href="/home">home</a>
-        </div>
-    
-        <div class="catalogue-item catalogue-divider"><span> | </span></div>
-    
-        <div class="catalogue-item">
-            <a href="/description">project description</a>
-        </div>
-    
-        <div class="catalogue-item catalogue-divider"><span> | </span></div>
-    
-        <div class="catalogue-item">
-            <a href="/human-practices">integrated human practices</a>
-        </div>
-    
-        <div class="catalogue-item catalogue-divider"><span> | </span></div>
-    
-        <div class="catalogue-item">
-            <a href="/proof-of-concept">proof of concept</a>
-        </div>
-    
-        <div class="catalogue-item catalogue-divider"><span> | </span></div>
-    
-        <div class="catalogue-item catalogue-item-active">
-            <a href="/results">results</a>
-        </div>
-    
-        <div class="catalogue-item catalogue-divider"><span> | </span></div>
-    
-        <div class="catalogue-item">
-            <a href="/education">education</a>
-        </div>
-    
-        <div class="catalogue-item catalogue-divider"><span> | </span></div>
-    
-        <div class="catalogue-item">
-            <a href="/model">modelling</a>
-        </div>
-    
-        <div class="catalogue-item catalogue-divider"><span> | </span></div>
-    
-        <div class="catalogue-item">
-            <a href="/team">team</a>
-        </div>
-    
-        <div class="catalogue-item catalogue-divider"><span> | </span></div>
-    
-        <div class="catalogue-item">
-            <a href="/acknowledgements">acknowledgements</a>
-        </div>
-    
-        <div class="catalogue-item catalogue-divider"><span> | </span></div>
-    </div> </painted-catalogue>
-        </div>
-    </div>
-</header>
-<div class="header-spacer"></div> </painted-header>
-<painted-body> 
+                                        <li>
+                                            <a
+                                                href="#additional-key-information"
+                                                id="--outline-additional-key-information"
+                                                >Additional Key Information</a
+                                            >
+                                            <ul></ul>
+                                        </li>
 
+                                        <li>
+                                            <a href="#references" id="--outline-references">References</a>
+                                            <ul></ul>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </nav>
+                        </painted-outline>
+                        <main>
+                            <painted-content
+                                ><p
+                                    >This page presents critical experimental data from our wet lab activities
+                                    throughout the project. For more details on the experiment design rationale, please
+                                    see <a href="/proof-of-concept">Proof of Concept</a>. For further experimental data,
+                                    including the troubleshooting processes, please see
+                                    <a href="/engineering">Engineering Success</a>. Protocols that we used to conduct
+                                    our experiments in this page are available in our <a href="/notebook">Notebook</a>.
+                                </p>
+                                <div class="scroll-marker" id="cell-lysis-sds-treatment"></div
+                                ><section
+                                    ><h1 id="cell-lysis-sds-treatment">Cell Lysis: SDS Treatment</h1
+                                    ><blockquote>
+                                        <p>See protocol <a href="/notebook#p25">[P25]</a> </p> </blockquote
+                                    ><blockquote id="figure-1">
+                                        <p
+                                            ><img
+                                                src="/assets/results-images/p25.png"
+                                                alt="Figure 1: Microscopy images of *E. coli* cells before and after treating with SDS"
+                                            />
+                                        </p>
+                                        <p
+                                            >Figure 1:
+                                            <em
+                                                >Microscopy images of E. coli cells before and after treating with
+                                                SDS</em
+                                            >
+                                        </p> </blockquote
+                                    ><p
+                                        >As described in our
+                                        <a href="/proof-of-concept#cell-lysis">Proof of Concept</a>, we selected
+                                        <strong>SDS</strong> to lyse our cells.
+                                        <em><a href="#figure-1">Figure 1</a></em> shows the results of our SDS treatment
+                                        of <em>Escherichia coli (E. coli)</em> in the form of microscopy pictures. We
+                                        selected an area in both photographs and magnified the selected area for
+                                        comparison. We can observe <strong>more intact cells in the left image</strong>,
+                                        marked in red circles, compared to the picture on the right. This indicates that
+                                        the
+                                        <strong
+                                            >lysis of <em>E. coli</em> using SDS at room temperature was
+                                            successful</strong
+                                        >. More robust luciferase-based tests are planned to verify this method further
+                                        quantitatively. </p
+                                    ><div class="scroll-marker" id="target-gene-extraction-nt-bsmai-hhai-lsda"></div
+                                ></section>
 
+                                <section
+                                    ><h1 id="target-gene-extraction-nt-bsmai-hhai-lsda"
+                                        >Target Gene Extraction: Nt.BsmAI/HhaI-LSDA</h1
+                                    ><blockquote>
+                                        <p>See protocol <a href="/notebook#p26">[P26]</a></p> </blockquote
+                                    ><blockquote id="figure-2">
+                                        <p
+                                            ><img
+                                                src="/assets/results-images/p26.png"
+                                                alt="Figure 2: Gel electrophoresis of Nt.BsmAI/HhaI-LSDA"
+                                            />
+                                        </p>
+                                        <p
+                                            >Figure 2: <em>Gel electrophoresis of Nt.BsmAI/HhaI-LSDA</em>
+                                        </p> </blockquote
+                                    ><p
+                                        >In this project, we <strong>extract our primer</strong>, which will be used in
+                                        downstream reactions through <strong>LSDA</strong>. This process involves the
+                                        <strong
+                                            >nicking and cutting of pSB1C3-KPC-2-surrogate by Nt.BsmAI and HhaI</strong
+                                        >. As illustrated in our
+                                        <a href="/proof-of-concept#target-gene-extraction">Proof of Concept</a>, this
+                                        process is expected to <strong>amplify a 32nt ssDNA</strong> from the
+                                        pSB1C3-KPC-2-surrogate plasmid, along with
+                                        <strong>724 and 534nt ssDNA</strong> strands as the side products of this LSDA
+                                        process. <em><a href="#figure-2">Figure 2</a></em> shows that our LSDA reaction
+                                        has successfully generated the 724 and 534nt ssDNA. However, we
+                                        <strong>cannot detect the 32nt primer</strong>, potentially due to its smaller
+                                        size. To validate this method further, we will combine this reaction with RCA to
+                                        determine if it can produce a positive RCA result. </p
+                                    ><p
+                                        >Note that in this preliminary experiment, we performed
+                                        <strong>45 minutes of digestion</strong>, followed by
+                                        <strong>incubating with Φ29 for an extra 15 minutes</strong> to
+                                        <strong>prevent the displaced ssDNA from Φ29 exonuclease activity</strong>.
+                                        However, this two-step reaction is unnecessary in the target gene extraction-RCA
+                                        coupling since the extracted primer will immediately bind to the RCA template. </p
+                                    ><div class="scroll-marker" id="rolling-circle-amplification"></div
+                                ></section>
 
+                                <section
+                                    ><h1 id="rolling-circle-amplification">Rolling Circle Amplification</h1
+                                    ><div class="scroll-marker" id="rca-in-rcutsmart"></div
+                                    ><section
+                                        ><h2 id="rca-in-rcutsmart">RCA in rCutSmart</h2
+                                        ><blockquote>
+                                            <p
+                                                >See protocols <a href="/notebook#p27">[P27]</a> and
+                                                <a href="/notebook#p28">[P28]</a></p
+                                            > </blockquote
+                                        ><blockquote id="figure-3">
+                                            <p
+                                                ><img
+                                                    src="/assets/results-images/p27-p28.png"
+                                                    alt="Figure 3: Gel electrophoresis of RCA in rCutSmart"
+                                                />
+                                            </p>
+                                            <p
+                                                >Figure 3: <em>Gel electrophoresis of RCA in rCutSmart</em>
+                                            </p> </blockquote
+                                        ><p
+                                            >The reaction mixture
+                                            <strong>must be compatible with both reactions</strong> to facilitate the
+                                            <strong>coupling of the target gene extraction and the RCA process</strong>.
+                                            Therefore, we tested whether Φ29 is compatible with the rCutSmart buffer,
+                                            which is the <strong>primary buffer for Nt.BsmAI and HhaI</strong>.
+                                            <em><a href="#figure-3">Figure 3</a></em> demonstrates that
+                                            <strong
+                                                >the RCA process can be entirely performed in the rCutSmart
+                                                buffer</strong
+                                            >. This is indicated by the presence of <strong>smearing bands</strong>,
+                                            with a size larger than the 10,000bp DNA ladder, in
+                                            <strong>both the "10× Reaction Buffer" and "rCutSmart Buffer" lanes</strong
+                                            >. The smearing bands are expected due to the
+                                            <strong>continuous amplification by RCA</strong> and the
+                                            <strong>generation of variable-length amplification products</strong>. The
+                                            result of experiment
+                                            <a
+                                                href="/engineering#e2-3-first-generation-rca-in-rcutsmart-buffer-without-dtt"
+                                                >E2.3</a
+                                            >
+                                            also obtains further verification. </p
+                                        ><div class="scroll-marker" id="third-generation-rca"></div></section
+                                    ><section
+                                        ><h2 id="third-generation-rca">Third-Generation RCA</h2
+                                        ><blockquote>
+                                            <p
+                                                >See protocols <a href="/notebook#p22">[P22]</a> and
+                                                <a href="/notebook#p23">[P23]</a></p
+                                            > </blockquote
+                                        ><blockquote id="figure-4">
+                                            <p
+                                                ><img
+                                                    src="/assets/results-images/p22-p23.png"
+                                                    alt="Figure 4: Gel electrophoresis of third-generation RCA"
+                                                />
+                                            </p>
+                                            <p
+                                                >Figure 4: <em>Gel electrophoresis of third-generation RCA</em>
+                                            </p> </blockquote
+                                        ><p
+                                            >We have also verified both our RCA template circularisation and our RCA
+                                            methods. With our
+                                            <strong>third-generation RCA template (BBa_K5041004)</strong>, we can obtain
+                                            satisfactory results for our RCA.&nbsp; </p
+                                        ><p
+                                            >In <em><a href="#figure-4">Figure 4</a></em
+                                            >, lanes 1-4 included both the
+                                            <strong
+                                                >third-generation (v3) template (treated with Exonuclease I and
+                                                III)</strong
+                                            >
+                                            and the <strong>RCA primer</strong> (Integrated DNA Technologies), mixed
+                                            with the <strong>Nt.BsmAI nicking endonuclease</strong> (New England
+                                            Biolabs). The template amounts were 1ng, 2ng, 4ng, and 8ng, respectively.
+                                            Lane 5 contained the same template and RCA primer
+                                            <strong>without Nt.BsmAI</strong>, while lane 6 had only the
+                                            third-generation template (treated with Exonuclease I and III), with neither
+                                            the primer nor Nt.BsmAI. </p
+                                        ><p
+                                            >Lanes 1-4 displayed a <strong>smearing band</strong> throughout, indicating
+                                            successful RCA and effective cutting by Nt.BsmAI, with band intensity
+                                            increasing alongside the template amounts. Lane 5 showed a smearing band
+                                            concentrated at sizes larger than 10,000bp, suggesting successful RCA in
+                                            that sample. In contrast, lane 6 had no detected band, confirming that we
+                                            obtained <strong>true negative results</strong> from this circularisation
+                                            method. </p
+                                        ><div
+                                            class="scroll-marker"
+                                            id="signal-expression-g-quadruplex-dnazyme-assay"
+                                        ></div></section
+                                ></section>
 
-<div class="body-container">
-    <painted-title-card> 
+                                <section
+                                    ><h1 id="signal-expression-g-quadruplex-dnazyme-assay"
+                                        >Signal Expression: G-Quadruplex DNAzyme Assay</h1
+                                    ><blockquote>
+                                        <p>See protocol <a href="/notebook#p24">[P24]</a></p> </blockquote
+                                    ><blockquote id="figure-5">
+                                        <p
+                                            ><img
+                                                src="/assets/results-images/p24.png"
+                                                alt="Figure 5: G-quadruplex DNAzyme coupling assay results"
+                                            />
+                                        </p>
+                                        <p
+                                            >Figure 5: <em>G-quadruplex DNAzyme coupling assay results</em>
+                                        </p> </blockquote
+                                    ><p
+                                        >To verify our project mechanism, we coupled the RCA results obtained in
+                                        <em><a href="#figure-4">Figure 4</a></em> for the
+                                        <strong>G-quadruplex assay</strong>. As shown in
+                                        <em><a href="#figure-5">Figure 5</a></em
+                                        >, both samples 1 and 2 exhibited
+                                        <strong>a similar slight colour change to blue</strong>, while samples 3 and 4
+                                        had a <strong>more robust colour change</strong>. Sample 5 exhibited slightly
+                                        weaker colour change compared to sample 1, while sample 6
+                                        <strong>did not produce an observable blue colour</strong>. The last shown
+                                        sample was a <strong>positive control reaction mixture</strong> using
+                                        IDT-synthesised G-quadruplex DNAzyme (<a
+                                            href="https://parts.igem.org/Part:BBa_K5041001"
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            >BBa_K5041001</a
+                                        >), which resulted in a stronger colour change compared to all of the
+                                        RCA-generated G-quadruplex DNAzyme. These results indicate that we have
+                                        successfully coupled our third-generation RCA reaction with the G-quadruplex
+                                        assay.&nbsp; </p
+                                    ><blockquote id="figure-6">
+                                        <p
+                                            ><img
+                                                src="/assets/results-images/p30.png"
+                                                alt="Figure 6: Quantification of RCA-generated G-quadruplex DNAzymes Activity"
+                                        /></p>
+                                        <p
+                                            >Figure 6:
+                                            <em>Quantification of RCA-generated G-quadruplex DNAzymes Activity</em>
+                                        </p> </blockquote
+                                    ><p
+                                        >The activity of the RCA-generated G-quadruplex was then quantified by measuring
+                                        the <strong>absorbance at 650nm</strong> for 90 seconds. Consistent with the
+                                        result shown in <em><a href="#figure-5">Figure 5</a></em
+                                        >, samples cut with <strong>Nt.BsmAI</strong> during the RCA process exhibited
+                                        <strong>higher activity</strong> compared to those RCA products without
+                                        Nt.BsmAI. In addition, the quantification results support our claim that the
+                                        <strong
+                                            >G-quadruplex DNAzyme activity increases with the increase of template
+                                            quantity</strong
+                                        >. </p
+                                    ><div class="scroll-marker" id="quantification-of-g-quadruplex-activity"></div
+                                ></section>
 
+                                <section
+                                    ><h1 id="quantification-of-g-quadruplex-activity"
+                                        >Quantification of G-Quadruplex Activity</h1
+                                    ><blockquote id="figure-7">
+                                        <p
+                                            ><img
+                                                src="/assets/results-images/p29.png"
+                                                alt="Figure 7: Quantification of [BBa_K5041001](https://parts.igem.org/Part:BBa_K5041001) Activity Against Its Previous Variants"
+                                        /></p>
+                                        <p
+                                            >Figure 7:
+                                            <em
+                                                >Quantification of
+                                                <a
+                                                    href="https://parts.igem.org/Part:BBa_K5041001"
+                                                    target="_blank"
+                                                    rel="noopener noreferrer"
+                                                    >BBa_K5041001</a
+                                                >
+                                                Activity Against Its Previous Variants</em
+                                            >
+                                        </p> </blockquote
+                                    ><p
+                                        >In addition, we also measured the activity of our selected G-quadruplex DNAzyme
+                                        (<a
+                                            href="https://parts.igem.org/Part:BBa_K5041001"
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            >BBa_K5041001</a
+                                        >) against its predecessor variants. After successfully replicating the optimum
+                                        signal of
+                                        <a
+                                            href="https://parts.igem.org/Part:BBa_K3343000"
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            >BBa_K3343000</a
+                                        >
+                                        and
+                                        <a
+                                            href="https://parts.igem.org/Part:BBa_K3343001"
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            >BBa_K3343001</a
+                                        >
+                                        as presented by van den Brink <a href="#reference-2">[2]</a>, we also plotted
+                                        the activity of
+                                        <a
+                                            href="https://parts.igem.org/Part:BBa_K5041001"
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            >BBa_K5041001</a
+                                        >
+                                        along with the other variants of G-quadruplex DNAzyme. As shown in
+                                        <em><a href="#figure-7">Figure 7</a></em
+                                        >,
+                                        <a
+                                            href="https://parts.igem.org/Part:BBa_K5041001"
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            >BBa_K5041001</a
+                                        >
+                                        exhibited a <strong>higher activity</strong> compared to the other variants,
+                                        making
+                                        <a
+                                            href="https://parts.igem.org/Part:BBa_K5041001"
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            >BBa_K5041001</a
+                                        >
+                                        as the <strong>ideal choice</strong> to be utilised in our testing kit. </p
+                                    ><div class="scroll-marker" id="conclusion"></div
+                                ></section>
 
+                                <section
+                                    ><h1 id="conclusion">Conclusion</h1
+                                    ><p
+                                        >We have individually tested the <strong>cell lysis</strong> and
+                                        <strong>target gene extraction</strong> and
+                                        <strong>coupled the RCA reaction with the G-quadruplex DNAzyme assay</strong>.
+                                        The experimental results support the claim that
+                                        <strong>the project is feasible</strong> and
+                                        <strong>the mechanism is valid</strong>. To further support our claim, more
+                                        experiments are planned to confirm the coupling of all reactions. </p
+                                    ><div class="scroll-marker" id="additional-key-information"></div
+                                ></section>
 
-<div class="title-card-container">
-    <div class="background-box">
-        <div class="pattern"></div>
-    </div>
-    <div class="page-title use-parallax" id="title-name">Results</div>
-    <div class="page-title use-parallax" id="title-name-shadow">Results</div>
-    <div class="page-title use-parallax" id="title-name-box">Results</div>
-    <div id="sticker-container">
-        <img class="use-parallax" id="blue-pills" src="/assets/stickers/blue pills-Enhanced-SR.png">
-        <img class="use-parallax" id="colourful-pills" src="/assets/stickers/colourful pills-Enhanced-SR.png">
-        <img class="use-parallax" id="hold-pills" src="/assets/stickers/hold pills-Enhanced-SR.png">
-        <img class="use-parallax" id="orange-pills" src="/assets/stickers/orange pills-Enhanced-SR.png">
-        <img class="use-parallax" id="globe" src="/assets/stickers/globe-Enhanced-SR.png">
-        <img class="use-parallax" id="gurney" src="/assets/stickers/gurney-Enhanced-SR.png">
-    </div>
-</div> </painted-title-card>
-    <div class="main-container">
-        <painted-outline> 
+                                <section
+                                    ><h1 id="additional-key-information">Additional Key Information</h1
+                                    ><p
+                                        >All processes in our detection system are
+                                        <strong>designed to be completed at room temperature</strong>. While we have
+                                        confirmed that most reactions <strong>can occur at 37°C or below</strong>, we
+                                        primarily performed the experiments at the recommended optimal temperature for
+                                        each enzyme to ease detection and validate the concept. Further optimisation on
+                                        the individual steps is needed to evaluate the product performance at room
+                                        temperature. In the future, we are also planning to characterise our detection
+                                        system on its sensitivity and specificity.&nbsp; </p
+                                    ><div class="scroll-marker" id="references"></div
+                                ></section>
 
-
-
-
-<nav>
-    <div id="outline-progress-pointer">➡️</div>
-    <div class="outline">
-        <ul id="outline-tree">
-            <template id="outline-heading-template">
-                <li>
-                    <a>heading</a>
-                    <ul></ul>
-                </li>
-            </template>
-        
-                <li>
-                    <a href="#cell-lysis-sds-treatment" id="--outline-cell-lysis-sds-treatment">Cell Lysis: SDS Treatment</a>
-                    <ul></ul>
-                </li>
-            
-                <li>
-                    <a href="#target-gene-extraction-nt-bsmai-hhai-lsda" id="--outline-target-gene-extraction-nt-bsmai-hhai-lsda">Target Gene Extraction: Nt.BsmAI/HhaI-LSDA</a>
-                    <ul></ul>
-                </li>
-            
-                <li>
-                    <a href="#rolling-circle-amplification" id="--outline-rolling-circle-amplification">Rolling Circle Amplification</a>
-                    <ul>
-                <li>
-                    <a href="#rca-in-rcutsmart" id="--outline-rca-in-rcutsmart">RCA in rCutSmart</a>
-                    <ul></ul>
-                </li>
-            
-                <li>
-                    <a href="#third-generation-rca" id="--outline-third-generation-rca">Third-Generation RCA</a>
-                    <ul></ul>
-                </li>
-            </ul>
-                </li>
-            
-                <li>
-                    <a href="#signal-expression-g-quadruplex-dnazyme-assay" id="--outline-signal-expression-g-quadruplex-dnazyme-assay">Signal Expression: G-Quadruplex DNAzyme Assay</a>
-                    <ul></ul>
-                </li>
-            
-                <li>
-                    <a href="#conclusion" id="--outline-conclusion">Conclusion</a>
-                    <ul></ul>
-                </li>
-            
-                <li>
-                    <a href="#additional-key-information" id="--outline-additional-key-information">Additional Key Information</a>
-                    <ul></ul>
-                </li>
-            </ul>
-    </div>
-</nav> </painted-outline>
-        <main>
-            <painted-content><p>This page presents critical experimental data from our wet lab activities throughout the project. For more details on the experiment design rationale, please see <a href="/proof-of-concept">Proof of Concept</a>. For further experimental data, including the troubleshooting processes, please see <a href="/engineering">Engineering Success</a>. Protocols that we used to conduct our experiments in this page are available in our <a href="/notebook">Notebook</a>.  </p>
-<div class="scroll-marker" id="cell-lysis-sds-treatment"></div><section><h1 id="cell-lysis-sds-treatment">Cell Lysis: SDS Treatment</h1><blockquote>
-<p>See protocol <a href="/notebook#p25">[P25]</a>  </p>
-</blockquote><blockquote id="figure-1">
-
-<p><img src="/assets/results-images/p25.png" alt="Figure 1: Microscopy images of *E. coli* cells before and after treating with SDS">  </p>
-<p>Figure 1: <em>Microscopy images of E. coli cells before and after treating with SDS</em>  </p>
-</blockquote><p>As described in our <a href="/proof-of-concept#cell-lysis">Proof of Concept</a>, we selected <strong>SDS</strong> to lyse our cells. <em><a href="#figure-1">Figure 1</a></em> shows the results of our SDS treatment of <em>Escherichia coli (E. coli)</em> in the form of microscopy pictures. We selected an area in both photographs and magnified the selected area for comparison. We can observe <strong>more intact cells in the left image</strong>, marked in red circles, compared to the picture on the right. This indicates that the <strong>lysis of <em>E. coli</em> using SDS at room temperature was successful</strong>. More robust luciferase-based tests are planned to verify this method further quantitatively.  </p><div class="scroll-marker" id="target-gene-extraction-nt-bsmai-hhai-lsda"></div></section>
-
-
-
-
-<section><h1 id="target-gene-extraction-nt-bsmai-hhai-lsda">Target Gene Extraction: Nt.BsmAI/HhaI-LSDA</h1><blockquote>
-<p>See protocol <a href="/notebook#p26">[P26]</a></p>
-</blockquote><blockquote id="figure-2">
-
-<p><img src="/assets/results-images/p26.png" alt="Figure 2: Gel electrophoresis of Nt.BsmAI/HhaI-LSDA">  </p>
-<p>Figure 2: <em>Gel electrophoresis of Nt.BsmAI/HhaI-LSDA</em>  </p>
-</blockquote><p>In this project, we <strong>extract our primer</strong>, which will be used in downstream reactions through <strong>LSDA</strong>. This process involves the <strong>nicking and cutting of pSB1C3-KPC-2-surrogate by Nt.BsmAI and HhaI</strong>. As illustrated in our <a href="/proof-of-concept#target-gene-extraction">Proof of Concept</a>, this process is expected to <strong>amplify a 32nt ssDNA</strong> from the pSB1C3-KPC-2-surrogate plasmid, along with <strong>724 and 534nt ssDNA</strong> strands as the side products of this LSDA process. <em><a href="#figure-2">Figure 2</a></em> shows that our LSDA reaction has successfully generated the 724 and 534nt ssDNA. However, we <strong>cannot detect the 32nt primer</strong>, potentially due to its smaller size. To validate this method further, we will combine this reaction with RCA to determine if it can produce a positive RCA result.  </p><p>Note that in this preliminary experiment, we performed <strong>45 minutes of digestion</strong>, followed by <strong>incubating with Φ29 for an extra 15 minutes</strong> to <strong>prevent the displaced ssDNA from Φ29 exonuclease activity</strong>. However, this two-step reaction is unnecessary in the target gene extraction-RCA coupling since the extracted primer will immediately bind to the RCA template.  </p><div class="scroll-marker" id="rolling-circle-amplification"></div></section>
-
-
-
-
-
-<section><h1 id="rolling-circle-amplification">Rolling Circle Amplification</h1><div class="scroll-marker" id="rca-in-rcutsmart"></div><section><h2 id="rca-in-rcutsmart">RCA in rCutSmart</h2><blockquote>
-<p>See protocols <a href="/notebook#p27">[P27]</a> and <a href="/notebook#p28">[P28]</a></p>
-</blockquote><blockquote id="figure-3">
-
-<p><img src="/assets/results-images/p27-p28.png" alt="Figure 3: Gel electrophoresis of RCA in rCutSmart">  </p>
-<p>Figure 3: <em>Gel electrophoresis of RCA in rCutSmart</em>  </p>
-</blockquote><p>The reaction mixture <strong>must be compatible with both reactions</strong> to facilitate the <strong>coupling of the target gene extraction and the RCA process</strong>. Therefore, we tested whether Φ29 is compatible with the rCutSmart buffer, which is the <strong>primary buffer for Nt.BsmAI and HhaI</strong>. <em><a href="#figure-3">Figure 3</a></em> demonstrates that <strong>the RCA process can be entirely performed in the rCutSmart buffer</strong>. This is indicated by the presence of <strong>smearing bands</strong>, with a size larger than the 10,000bp DNA ladder, in <strong>both the "10× Reaction Buffer" and "rCutSmart Buffer" lanes</strong>. The smearing bands are expected due to the <strong>continuous amplification by RCA</strong> and the <strong>generation of variable-length amplification products</strong>. The result of experiment <a href="/engineering#e2-3-first-generation-rca-in-rcutsmart-buffer-without-dtt">E2.3</a> also obtains further verification.  </p><div class="scroll-marker" id="third-generation-rca"></div></section><section><h2 id="third-generation-rca">Third-Generation RCA</h2><blockquote>
-<p>See protocols <a href="/notebook#p22">[P22]</a> and <a href="/notebook#p23">[P23]</a></p>
-</blockquote><blockquote id="figure-4">
-
-<p><img src="/assets/results-images/p22-p23.png" alt="Figure 4: Gel electrophoresis of third-generation RCA">  </p>
-<p>Figure 4: <em>Gel electrophoresis of third-generation RCA</em>  </p>
-</blockquote><p>We have also verified both our RCA template circularisation and our RCA methods. With our <strong>third-generation RCA template (BBa_K5041004)</strong>, we can obtain satisfactory results for our RCA.&nbsp; </p><p>In <em><a href="#figure-4">Figure 4</a></em>, lanes 1-4 included both the <strong>third-generation (v3) template (treated with Exonuclease I and III)</strong> and the <strong>RCA primer</strong> (Integrated DNA Technologies), mixed with the <strong>Nt.BsmAI nicking endonuclease</strong> (New England Biolabs). The template amounts were 1ng, 2ng, 4ng, and 8ng, respectively. Lane 5 contained the same template and RCA primer <strong>without Nt.BsmAI</strong>, while lane 6 had only the third-generation template (treated with Exonuclease I and III), with neither the primer nor Nt.BsmAI.  </p><p>Lanes 1-4 displayed a <strong>smearing band</strong> throughout, indicating successful RCA and effective cutting by Nt.BsmAI, with band intensity increasing alongside the template amounts. Lane 5 showed a smearing band concentrated at sizes larger than 10,000bp, suggesting successful RCA in that sample. In contrast, lane 6 had no detected band, confirming that we obtained <strong>true negative results</strong> from this circularisation method.  </p><div class="scroll-marker" id="signal-expression-g-quadruplex-dnazyme-assay"></div></section></section>
-
-
-
-
-
-
-
-
-
-
-
-
-<section><h1 id="signal-expression-g-quadruplex-dnazyme-assay">Signal Expression: G-Quadruplex DNAzyme Assay</h1><blockquote>
-<p>See protocol <a href="/notebook#p24">[P24]</a></p>
-</blockquote><blockquote id="figure-5">
-
-<p><img src="/assets/results-images/p24.png" alt="Figure 5: G-quadruplex DNAzyme coupling assay results">  </p>
-<p>Figure 5: <em>G-quadruplex DNAzyme coupling assay results</em>  </p>
-</blockquote><p>To verify our project mechanism, we coupled the RCA results obtained in <em><a href="#figure-4">Figure 4</a></em> for the <strong>G-quadruplex assay</strong>. As shown in <em><a href="#figure-5">Figure 5</a></em>, both samples 1 and 2 exhibited <strong>a similar slight colour change to blue</strong>, while samples 3 and 4 had a <strong>more robust colour change</strong>. Sample 5 exhibited a similar colour change as 1, while sample 6 <strong>did not produce an observable blue colour</strong>. The last shown sample was a <strong>positive control reaction mixture</strong> using IDT-synthesised G-quadruplex DNAzyme (<a href="https://parts.igem.org/Part:BBa_K5041001" target="_blank" rel="noopener noreferrer">BBa_K5041001</a>). These results indicate that we have successfully coupled our third-generation RCA reaction with the G-quadruplex assay.&nbsp; </p><div class="scroll-marker" id="conclusion"></div></section>
-
-
-
-
-<section><h1 id="conclusion">Conclusion</h1><p>We have individually tested the <strong>cell lysis</strong> and <strong>target gene extraction</strong> and <strong>coupled the RCA reaction with the G-quadruplex DNAzyme assay</strong>. The experimental results support the claim that <strong>the project is feasible</strong> and <strong>the mechanism is valid</strong>. To further support our claim, more experiments are planned to confirm the coupling of all reactions.  </p><div class="scroll-marker" id="additional-key-information"></div></section>
-
-<section><h1 id="additional-key-information">Additional Key Information</h1><p>All processes in our detection system are <strong>designed to be completed at room temperature</strong>. While we have confirmed that most reactions <strong>can occur at 37°C or below</strong>, we primarily performed the experiments at the recommended optimal temperature for each enzyme to ease detection and validate the concept. Further optimisation on the individual steps is needed to evaluate the product performance at room temperature. In the future, we are also planning to characterise our detection system on its sensitivity and specificity.&nbsp; </p></section>
-
-</painted-content></main>
-        <painted-sidebar> 
-
-<aside>
-    <a href="#" class="top-button"> 🔝 </a>
-</aside> </painted-sidebar>
-    </div>
-</div> </painted-body>
-<painted-footer> 
-
-<footer>
-    <div class="footer-banner">
-        <div class="resisense">
-            <div class="resisense-logo">
-                <img src="/assets/logos/resisense/ResiSense Green Logo.svg" alt="ResiSense logo">
-            </div>
-            <div class="resisense-logo-aside">
-                <div class="resisense-name"> ResiSense </div>
-                <div class="socials">
-                    <div class="social">
-                        <a href="https://www.instagram.com/cuhkigem2024/" target="_blank" rel="noopener noreferrer">
-                            <img src="/assets/icons/instagram icon.svg" alt="Instagram icon">
-                            <span> cuhkigem2024 </span>
-                        </a>
-                    </div>
-                    <div class="social">
-                        <a href="mailto:cuhkigem2024@gmail.com" target="_blank" rel="noopener noreferrer">
-                            <img src="/assets/icons/email icon.svg" alt="Email icon">
-                            <span> cuhkigem2024@gmail.com </span>
-                        </a>
+                                <section
+                                    ><h1 id="references">References</h1
+                                    ><ol>
+                                        <li
+                                            >F. A. Sorgenfrei, “BBa_K1614007 HRP-mimicking DNAzyme,” Registry of
+                                            Standard Biological Parts,
+                                            <a
+                                                href="https://parts.igem.org/Part:BBa_K1614007"
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                                >https://parts.igem.org/Part:BBa_K1614007</a
+                                            >
+                                            (accessed Oct. 22, 2024).
+                                        </li>
+                                        <li
+                                            >M. van den Brink, “BBa_K3343000 DNAzyme with peroxidase activity,” Registry
+                                            of Standard Biological Parts,
+                                            <a
+                                                href="https://parts.igem.org/Part:BBa_K3343000"
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                                >https://parts.igem.org/Part:BBa_K3343000</a
+                                            >
+                                            (accessed Oct. 22, 2024).
+                                        </li>
+                                        <li
+                                            >M. van den Brink, “BBa_K3343001 DNAzyme with peroxidase activity,” Registry
+                                            of Standard Biological Parts,
+                                            <a
+                                                href="https://parts.igem.org/Part:BBa_K3343001"
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                                >https://parts.igem.org/Part:BBa_K3343001</a
+                                            >
+                                            (accessed Oct. 22, 2024).
+                                        </li>
+                                        <li
+                                            >C. K. Leung, “BBa_K5041001 Peroxidase-mimicking DNAzyme,” Registry of
+                                            Standard Biological Parts,
+                                            <a
+                                                href="https://parts.igem.org/Part:BBa_K5041001"
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                                >https://parts.igem.org/Part:BBa_K5041001</a
+                                            >
+                                            (accessed Oct. 22, 2024).</li
+                                        >
+                                    </ol></section
+                                >
+                            </painted-content></main
+                        >
+                        <painted-sidebar>
+                            <aside>
+                                <a href="#" class="top-button"> 🔝 </a>
+                            </aside>
+                        </painted-sidebar>
                     </div>
                 </div>
-            </div>
-        </div>
-        <div class="divider"></div>
-        <div class="logo-container-wrapper">
-            <div> Affiliated with: </div>
-            <div class="cuhk-department-logo-container">
-                <a href="https://www.cuhk.edu.hk" target="_blank" rel="noopener noreferrer">
-                    <img src="/assets/logos/cuhk logo horizontal.svg" alt="CUHK logo">
-                </a>
-                <a href="https://www.sls.cuhk.edu.hk" target="_blank" rel="noopener noreferrer">
-                    <img src="/assets/logos/sls logo.svg" alt="CUHK SLS logo">
-                </a>
-                <a href="https://www.erg.cuhk.edu.hk" target="_blank" rel="noopener noreferrer">
-                    <img src="/assets/logos/foe logo.svg" alt="CUHK FoE logo">
-                </a>
-                <a href="https://www.bme.cuhk.edu.hk" target="_blank" rel="noopener noreferrer">
-                    <img src="/assets/logos/bme logo.svg" alt="CUHK BME logo">
-                </a>
-            </div>
-            <div> Sponsored by: </div>
-            <div class="sponsor-logo-container">
-                <a href="https://opentrons.com" target="_blank" rel="noopener noreferrer">
-                    <img src="/assets/logos/opentrons logo.svg" alt="Opentrons logo">
-                </a>
-                <a href="https://www.idtdna.com" target="_blank" rel="noopener noreferrer">
-                    <img src="/assets/logos/idt logo.svg" alt="IDT logo">
-                </a>
-                <a href="https://www.neb.com" target="_blank" rel="noopener noreferrer">
-                    <img src="/assets/logos/neb logo.svg" alt="NEB logo">
-                </a>
-                <a href="https://www.hklss.org" target="_blank" rel="noopener noreferrer">
-                    <img src="/assets/logos/hklss logo.svg" alt="HKLSS logo">
-                </a>
-                <a href="https://abehk.fed.cuhk.edu.hk" target="_blank" rel="noopener noreferrer">
-                    <img src="/assets/logos/abehk logo.svg" alt="ABEHK logo">
-                </a>
-            </div>
-        </div>
-    </div>
-    <div class="footer-persistent">
-        <div class="repository-container">
-            <!-- Repository links -->
-            <span>
-                Repository:
-                <a href="https://github.com/ResiSense/ResiSense.github.io" target="_blank">
-                    <img src="/assets/icons/github icon.svg" alt="GitHub icon">
-                </a>
-                <a href="https://gitlab.igem.org/2024/hongkong-cuhk" target="_blank">
-                    <img src="/assets/icons/gitlab icon.svg" alt="GitLab icon">
-                </a>
-            </span>
-        </div>
-        <div class="license-container">
-            <!-- Licensing https://creativecommons.org/licenses/by/4.0/ -->
-            <span>
-                ©️ 2024 ResiSense. Licensed under
-                <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank">
-                    <img src="/assets/icons/creative common/Creative Common CC icon.svg" alt="Creative Commons icon">
-                    <img src="/assets/icons/creative common/Creative Common BY icon.svg" alt="Creative Commons BY icon">
-                    CC BY 4.0</a>. Some rights reserved.
-            </span>
-        </div>
-    </div>
-</footer> </painted-footer> </painted-template>
-
-
-
-
-
-
-
-
-</body></html>
+            </painted-body>
+            <painted-footer>
+                <footer>
+                    <div class="footer-banner">
+                        <div class="resisense">
+                            <div class="resisense-logo">
+                                <img src="/assets/logos/resisense/ResiSense Green Logo.svg" alt="ResiSense logo" />
+                            </div>
+                            <div class="resisense-logo-aside">
+                                <div class="resisense-name"> ResiSense </div>
+                                <div class="socials">
+                                    <div class="social">
+                                        <a
+                                            href="https://www.instagram.com/cuhkigem2024/"
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                        >
+                                            <img src="/assets/icons/instagram icon.svg" alt="Instagram icon" />
+                                            <span> cuhkigem2024 </span>
+                                        </a>
+                                    </div>
+                                    <div class="social">
+                                        <a
+                                            href="mailto:cuhkigem2024@gmail.com"
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                        >
+                                            <img src="/assets/icons/email icon.svg" alt="Email icon" />
+                                            <span> cuhkigem2024@gmail.com </span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="divider"></div>
+                        <div class="logo-container-wrapper">
+                            <div> Affiliated with: </div>
+                            <div class="cuhk-department-logo-container">
+                                <a href="https://www.cuhk.edu.hk" target="_blank" rel="noopener noreferrer">
+                                    <img src="/assets/logos/cuhk logo horizontal.svg" alt="CUHK logo" />
+                                </a>
+                                <a href="https://www.sls.cuhk.edu.hk" target="_blank" rel="noopener noreferrer">
+                                    <img src="/assets/logos/sls logo.svg" alt="CUHK SLS logo" />
+                                </a>
+                                <a href="https://www.erg.cuhk.edu.hk" target="_blank" rel="noopener noreferrer">
+                                    <img src="/assets/logos/foe logo.svg" alt="CUHK FoE logo" />
+                                </a>
+                                <a href="https://www.bme.cuhk.edu.hk" target="_blank" rel="noopener noreferrer">
+                                    <img src="/assets/logos/bme logo.svg" alt="CUHK BME logo" />
+                                </a>
+                            </div>
+                            <div> Sponsored by: </div>
+                            <div class="sponsor-logo-container">
+                                <a href="https://opentrons.com" target="_blank" rel="noopener noreferrer">
+                                    <img src="/assets/logos/opentrons logo.svg" alt="Opentrons logo" />
+                                </a>
+                                <a href="https://www.idtdna.com" target="_blank" rel="noopener noreferrer">
+                                    <img src="/assets/logos/idt logo.svg" alt="IDT logo" />
+                                </a>
+                                <a href="https://www.neb.com" target="_blank" rel="noopener noreferrer">
+                                    <img src="/assets/logos/neb logo.svg" alt="NEB logo" />
+                                </a>
+                                <a href="https://www.hklss.org" target="_blank" rel="noopener noreferrer">
+                                    <img src="/assets/logos/hklss logo.svg" alt="HKLSS logo" />
+                                </a>
+                                <a href="https://abehk.fed.cuhk.edu.hk" target="_blank" rel="noopener noreferrer">
+                                    <img src="/assets/logos/abehk logo.svg" alt="ABEHK logo" />
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="footer-persistent">
+                        <div class="repository-container">
+                            <!-- Repository links -->
+                            <span>
+                                Repository:
+                                <a href="https://github.com/ResiSense/ResiSense.github.io" target="_blank">
+                                    <img src="/assets/icons/github icon.svg" alt="GitHub icon" />
+                                </a>
+                                <a href="https://gitlab.igem.org/2024/hongkong-cuhk" target="_blank">
+                                    <img src="/assets/icons/gitlab icon.svg" alt="GitLab icon" />
+                                </a>
+                            </span>
+                        </div>
+                        <div class="license-container">
+                            <!-- Licensing https://creativecommons.org/licenses/by/4.0/ -->
+                            <span>
+                                ©️ 2024 ResiSense. Licensed under
+                                <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank">
+                                    <img
+                                        src="/assets/icons/creative common/Creative Common CC icon.svg"
+                                        alt="Creative Commons icon"
+                                    />
+                                    <img
+                                        src="/assets/icons/creative common/Creative Common BY icon.svg"
+                                        alt="Creative Commons BY icon"
+                                    />
+                                    CC BY 4.0</a
+                                >. Some rights reserved.
+                            </span>
+                        </div>
+                    </div>
+                </footer>
+            </painted-footer>
+        </painted-template>
+    </body></html
+>
