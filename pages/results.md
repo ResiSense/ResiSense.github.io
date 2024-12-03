@@ -105,6 +105,6 @@ All processes in our detection system are **designed to be completed at room tem
 
 # References
 
-1. C. K. Leung, “BBa_K5041001 Peroxidase-mimicking DNAzyme,” Registry of Standard Biological Parts, https://parts.igem.org/Part:BBa_K5041001 (accessed Oct. 22, 2024).  
-2. M. van den Brink, “BBa_K3343000 DNAzyme with peroxidase activity,” Registry of Standard Biological Parts, https://parts.igem.org/Part:BBa_K3343000 (accessed Oct. 22, 2024).  
-3. M. van den Brink, “BBa_K3343001 DNAzyme with peroxidase activity,” Registry of Standard Biological Parts, https://parts.igem.org/Part:BBa_K3343001 (accessed Oct. 22, 2024).  
+1. C. K. Leung, "BBa_K5041001 Peroxidase-mimicking DNAzyme", Registry of Standard Biological Parts, https://parts.igem.org/Part:BBa_K5041001 (accessed Oct. 22, 2024).  
+2. M. van den Brink, "BBa_K3343000 DNAzyme with peroxidase activity", Registry of Standard Biological Parts, https://parts.igem.org/Part:BBa_K3343000 (accessed Oct. 22, 2024).  
+3. M. van den Brink, "BBa_K3343001 DNAzyme with peroxidase activity", Registry of Standard Biological Parts, https://parts.igem.org/Part:BBa_K3343001 (accessed Oct. 22, 2024).  
