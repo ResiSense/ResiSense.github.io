@@ -71,7 +71,7 @@ Figure 5: *G-quadruplex DNAzyme coupling assay results*
 
 </blockquote>
 
-To verify our project mechanism, we coupled the RCA results obtained in *[Figure 4](#figure-4)* for the **G-quadruplex assay**. As shown in *[Figure 5](#figure-5)*, both samples 1 and 2 exhibited **a similar slight colour change to blue**, while samples 3 and 4 had a **more robust colour change**. Sample 5 exhibited slightly weaker colour change compared to sample 1, while sample 6 **did not produce an observable blue colour**. The last shown sample was a **positive control reaction mixture** using IDT-synthesised G-quadruplex DNAzyme ([BBa_K5041001](https://parts.igem.org/Part:BBa_K5041001)), which resulted in a stronger colour change compared to all of the RCA-generated G-quadruplex DNAzyme. These results indicate that we have successfully coupled our third-generation RCA reaction with the G-quadruplex assay.  
+To verify our project mechanism, we coupled the RCA results obtained in *[Figure 4](#figure-4)* for the **G-quadruplex assay**. As shown in *[Figure 5](#figure-5)*, both samples 1 and 2 exhibited **a similar slight colour change to blue**, while samples 3 and 4 had a **more robust colour change**. Sample 5 exhibited slightly weaker colour change compared to sample 1, while sample 6 **did not produce an observable blue colour**. The last shown sample was a **positive control reaction mixture** using IDT-synthesised G-quadruplex DNAzyme ([BBa_K5041001](https://parts.igem.org/Part:BBa_K5041001)) [[1]](#reference-1), which resulted in a stronger colour change compared to all of the RCA-generated G-quadruplex DNAzyme. These results indicate that we have successfully coupled our third-generation RCA reaction with the G-quadruplex assay.  
 
 <blockquote id="figure-6">
 
@@ -93,7 +93,7 @@ Figure 7: *Quantification of [BBa_K5041001](https://parts.igem.org/Part:BBa_K504
 
 </blockquote>
 
-In addition, we also measured the activity of our selected G-quadruplex DNAzyme ([BBa_K5041001](https://parts.igem.org/Part:BBa_K5041001)) against its predecessor variants. After successfully replicating the optimum signal of [BBa_K3343000](https://parts.igem.org/Part:BBa_K3343000) and [BBa_K3343001](https://parts.igem.org/Part:BBa_K3343001) as presented by van den Brink [[2]](#reference-2), we also plotted the activity of [BBa_K5041001](https://parts.igem.org/Part:BBa_K5041001) along with the other variants of G-quadruplex DNAzyme. As shown in *[Figure 7](#figure-7)*, [BBa_K5041001](https://parts.igem.org/Part:BBa_K5041001) exhibited a **higher activity** compared to the other variants, making [BBa_K5041001](https://parts.igem.org/Part:BBa_K5041001) as the **ideal choice** to be utilised in our testing kit.  
+In addition, we also measured the activity of our selected G-quadruplex DNAzyme ([BBa_K5041001](https://parts.igem.org/Part:BBa_K5041001)) against its predecessor variants. After successfully replicating the optimum signal of [BBa_K3343000](https://parts.igem.org/Part:BBa_K3343000) [[2]](#reference-2) and [BBa_K3343001](https://parts.igem.org/Part:BBa_K3343001) [[3]](#reference-3) as presented by van den Brink, we also plotted the activity of [BBa_K5041001](https://parts.igem.org/Part:BBa_K5041001) along with the other variants of G-quadruplex DNAzyme. As shown in *[Figure 7](#figure-7)*, [BBa_K5041001](https://parts.igem.org/Part:BBa_K5041001) exhibited a **higher activity** compared to the other variants, making [BBa_K5041001](https://parts.igem.org/Part:BBa_K5041001) as the **ideal choice** to be utilised in our testing kit.  
 
 # Conclusion
 
@@ -105,7 +105,6 @@ All processes in our detection system are **designed to be completed at room tem
 
 # References
 
-1. F. A. Sorgenfrei, “BBa_K1614007 HRP-mimicking DNAzyme,” Registry of Standard Biological Parts, https://parts.igem.org/Part:BBa_K1614007 (accessed Oct. 22, 2024).  
+1. C. K. Leung, “BBa_K5041001 Peroxidase-mimicking DNAzyme,” Registry of Standard Biological Parts, https://parts.igem.org/Part:BBa_K5041001 (accessed Oct. 22, 2024).  
 2. M. van den Brink, “BBa_K3343000 DNAzyme with peroxidase activity,” Registry of Standard Biological Parts, https://parts.igem.org/Part:BBa_K3343000 (accessed Oct. 22, 2024).  
 3. M. van den Brink, “BBa_K3343001 DNAzyme with peroxidase activity,” Registry of Standard Biological Parts, https://parts.igem.org/Part:BBa_K3343001 (accessed Oct. 22, 2024).  
-4. C. K. Leung, “BBa_K5041001 Peroxidase-mimicking DNAzyme,” Registry of Standard Biological Parts, https://parts.igem.org/Part:BBa_K5041001 (accessed Oct. 22, 2024).
