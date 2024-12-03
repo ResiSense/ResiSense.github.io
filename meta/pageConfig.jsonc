@@ -58,6 +58,12 @@
                 "css": [
                     "/styles/references.css",
                     "/styles/description.css"
+                ],
+                "ts": [
+                    "/lib/template-scripts/idReferences.ts"
+                ],
+                "js": [
+                    "/scripts/references.js"
                 ]
             }
         },
@@ -84,6 +90,12 @@
                 "css": [
                     "/styles/figures.css",
                     "/styles/references.css"
+                ],
+                "ts": [
+                    "/lib/template-scripts/idReferences.ts"
+                ],
+                "js": [
+                    "/scripts/references.js"
                 ]
             }
         },
@@ -99,6 +111,12 @@
                     "/styles/references.css",
                     "/styles/flavour-text.css",
                     "/styles/engineering.css"
+                ],
+                "ts": [
+                    "/lib/template-scripts/idReferences.ts"
+                ],
+                "js": [
+                    "/scripts/references.js"
                 ]
             }
         },
@@ -111,7 +129,13 @@
                 "css": [
                     "/styles/figures.css",
                     "/styles/flavour-text.css",
-                    "/styles/results.css"
+                    "/styles/references.css"
+                ],
+                "ts": [
+                    "/lib/template-scripts/idReferences.ts"
+                ],
+                "js": [
+                    "/scripts/references.js"
                 ]
             }
         },
