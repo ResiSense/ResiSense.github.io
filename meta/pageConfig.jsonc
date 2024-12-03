@@ -129,7 +129,8 @@
                 "css": [
                     "/styles/figures.css",
                     "/styles/flavour-text.css",
-                    "/styles/references.css"
+                    "/styles/references.css",
+                    "/styles/results.css"
                 ],
                 "ts": [
                     "/lib/template-scripts/idReferences.ts"
