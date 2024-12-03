@@ -1,11 +1,11 @@
 {
     "job": "build",
     "ref": "refs/heads/main",
-    "sha": "9850e888b0fccce9f368b8eb7f8d3f7ccddc4f90",
+    "sha": "339477a0b3197c5ffc2920a280c0a6049371902c",
     "repository": "ResiSense/ResiSense.github.io",
     "repository_Url": null,
-    "run_id": "12141020385",
-    "run_number": "334",
+    "run_id": "12141039044",
+    "run_number": "335",
     "run_attempt": "1",
     "artifact_cache_size_limit": "10",
     "actor": "CCheukKa",
@@ -13,8 +13,8 @@
     "workflow": "Full CI pipeline",
     "event_name": "push",
     "event": {
-        "after": "9850e888b0fccce9f368b8eb7f8d3f7ccddc4f90",
-        "before": "fed5313778ddd4cbfd8719f6f93b6264f3dac83a",
+        "after": "339477a0b3197c5ffc2920a280c0a6049371902c",
+        "before": "5c7c63444f44e8c4af51322de6164d8717fbb9f2",
         "commits": [
             {
                 "author": {
@@ -28,11 +28,11 @@
                     "username": "web-flow"
                 },
                 "distinct": false,
-                "id": "b9a27de18646afca44b42c01be809087a316cc94",
-                "message": "Build(deps): Bump cross-spawn in the npm_and_yarn group\n\nBumps the npm_and_yarn group with 1 update: [cross-spawn](https://github.com/moxystudio/node-cross-spawn).\n\n\nUpdates `cross-spawn` from 7.0.3 to 7.0.6\n- [Changelog](https://github.com/moxystudio/node-cross-spawn/blob/master/CHANGELOG.md)\n- [Commits](https://github.com/moxystudio/node-cross-spawn/compare/v7.0.3...v7.0.6)\n\n---\nupdated-dependencies:\n- dependency-name: cross-spawn\n  dependency-type: indirect\n  dependency-group: npm_and_yarn\n...\n\nSigned-off-by: dependabot[bot] <support@github.com>",
-                "timestamp": "2024-12-03T13:47:22Z",
-                "tree_id": "ac8419a7a53a78a70fa7ee44c0f7aff5b3e2b87e",
-                "url": "https://github.com/ResiSense/ResiSense.github.io/commit/b9a27de18646afca44b42c01be809087a316cc94"
+                "id": "fd5ab51315a306342f648786cabc6e60101ac8a8",
+                "message": "Build(deps-dev): Bump parcel from 2.13.0 to 2.13.2\n\nBumps [parcel](https://github.com/parcel-bundler/parcel) from 2.13.0 to 2.13.2.\n- [Release notes](https://github.com/parcel-bundler/parcel/releases)\n- [Changelog](https://github.com/parcel-bundler/parcel/blob/v2/CHANGELOG.md)\n- [Commits](https://github.com/parcel-bundler/parcel/compare/v2.13.0...v2.13.2)\n\n---\nupdated-dependencies:\n- dependency-name: parcel\n  dependency-type: direct:development\n  update-type: version-update:semver-patch\n...\n\nSigned-off-by: dependabot[bot] <support@github.com>",
+                "timestamp": "2024-12-03T13:48:41Z",
+                "tree_id": "ca7b656389e8e7099d8e08986fbe04a226cdd4f3",
+                "url": "https://github.com/ResiSense/ResiSense.github.io/commit/fd5ab51315a306342f648786cabc6e60101ac8a8"
             },
             {
                 "author": {
@@ -46,14 +46,14 @@
                     "username": "web-flow"
                 },
                 "distinct": true,
-                "id": "9850e888b0fccce9f368b8eb7f8d3f7ccddc4f90",
-                "message": "Merge pull request #264 from ResiSense/dependabot/npm_and_yarn/npm_and_yarn-0189ad7b96\n\nBuild(deps): Bump cross-spawn from 7.0.3 to 7.0.6 in the npm_and_yarn group",
-                "timestamp": "2024-12-03T21:47:54+08:00",
-                "tree_id": "4a4287544bb6823cb3d7a8f5a428aa032acf39f6",
-                "url": "https://github.com/ResiSense/ResiSense.github.io/commit/9850e888b0fccce9f368b8eb7f8d3f7ccddc4f90"
+                "id": "339477a0b3197c5ffc2920a280c0a6049371902c",
+                "message": "Merge pull request #259 from ResiSense/dependabot/npm_and_yarn/parcel-2.13.2\n\nBuild(deps-dev): Bump parcel from 2.13.0 to 2.13.2",
+                "timestamp": "2024-12-03T21:48:57+08:00",
+                "tree_id": "d35f9de63a4cf2d07ceb9ab8aac9c16ebde955a3",
+                "url": "https://github.com/ResiSense/ResiSense.github.io/commit/339477a0b3197c5ffc2920a280c0a6049371902c"
             }
         ],
-        "compare": "https://github.com/ResiSense/ResiSense.github.io/compare/fed5313778dd...9850e888b0fc",
+        "compare": "https://github.com/ResiSense/ResiSense.github.io/compare/5c7c63444f44...339477a0b319",
         "created": false,
         "deleted": false,
         "forced": false,
@@ -69,11 +69,11 @@
                 "username": "web-flow"
             },
             "distinct": true,
-            "id": "9850e888b0fccce9f368b8eb7f8d3f7ccddc4f90",
-            "message": "Merge pull request #264 from ResiSense/dependabot/npm_and_yarn/npm_and_yarn-0189ad7b96\n\nBuild(deps): Bump cross-spawn from 7.0.3 to 7.0.6 in the npm_and_yarn group",
-            "timestamp": "2024-12-03T21:47:54+08:00",
-            "tree_id": "4a4287544bb6823cb3d7a8f5a428aa032acf39f6",
-            "url": "https://github.com/ResiSense/ResiSense.github.io/commit/9850e888b0fccce9f368b8eb7f8d3f7ccddc4f90"
+            "id": "339477a0b3197c5ffc2920a280c0a6049371902c",
+            "message": "Merge pull request #259 from ResiSense/dependabot/npm_and_yarn/parcel-2.13.2\n\nBuild(deps-dev): Bump parcel from 2.13.0 to 2.13.2",
+            "timestamp": "2024-12-03T21:48:57+08:00",
+            "tree_id": "d35f9de63a4cf2d07ceb9ab8aac9c16ebde955a3",
+            "url": "https://github.com/ResiSense/ResiSense.github.io/commit/339477a0b3197c5ffc2920a280c0a6049371902c"
         },
         "pusher": {
             "email": "ccheukka@gmail.com",
@@ -86,6 +86,6 @@
     "ref_type": "branch",
     "secret_source": "Actions",
     "workflow_ref": "ResiSense/ResiSense.github.io/.github/workflows/full-ci-pipeline.yaml@refs/heads/main",
-    "workflow_sha": "9850e888b0fccce9f368b8eb7f8d3f7ccddc4f90",
+    "workflow_sha": "339477a0b3197c5ffc2920a280c0a6049371902c",
     "workspace": "/home/runner/work/ResiSense.github.io/ResiSense.github.io"
 }
