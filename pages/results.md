@@ -71,7 +71,29 @@ Figure 5: *G-quadruplex DNAzyme coupling assay results*
 
 </blockquote>
 
-To verify our project mechanism, we coupled the RCA results obtained in *[Figure 4](#figure-4)* for the **G-quadruplex assay**. As shown in *[Figure 5](#figure-5)*, both samples 1 and 2 exhibited **a similar slight colour change to blue**, while samples 3 and 4 had a **more robust colour change**. Sample 5 exhibited a similar colour change as 1, while sample 6 **did not produce an observable blue colour**. The last shown sample was a **positive control reaction mixture** using IDT-synthesised G-quadruplex DNAzyme ([BBa_K5041001](https://parts.igem.org/Part:BBa_K5041001)). These results indicate that we have successfully coupled our third-generation RCA reaction with the G-quadruplex assay.  
+To verify our project mechanism, we coupled the RCA results obtained in *[Figure 4](#figure-4)* for the **G-quadruplex assay**. As shown in *[Figure 5](#figure-5)*, both samples 1 and 2 exhibited **a similar slight colour change to blue**, while samples 3 and 4 had a **more robust colour change**. Sample 5 exhibited slightly weaker color change compared to sample 1, while sample 6 **did not produce an observable blue colour**. The last shown sample was a **positive control reaction mixture** using IDT-synthesised G-quadruplex DNAzyme ([BBa_K5041001](https://parts.igem.org/Part:BBa_K5041001)), which resulted in a stronger colour change compared to all of the RCA-generated G-quadruplex DNAzyme. These results indicate that we have successfully coupled our third-generation RCA reaction with the G-quadruplex assay.  
+
+<blockquote id="figure-6">
+
+![Figure 6: Quantification of RCA-generated G-quadruplex DNAzymes Activity](/assets/results-images/p30.png)
+
+Figure 6: *Quantification of RCA-generated G-quadruplex DNAzymes Activity*  
+
+</blockquote>
+
+The activity of the RCA-generated G-quadruplex was then quantified by measuring the absorbance at 650 nm for 90 seconds. Consistent with the result shown in *[Figure 5](#figure-5)*, samples cut with Nt.BsmAI during the RCA process exhibited higher activity compared to those RCA products without Nt.BsmAI. In addition, the quantification results support our claim that the G-quadruplex DNAzyme activity increases with the increase of template quantity.  
+
+# Quantification of G-quadrplex DNAzyme ([BBa_K5041001](https://parts.igem.org/Part:BBa_K5041001)) Activity
+
+<blockquote id="figure-7">
+
+![Figure 7: Quantification of [BBa_K5041001](https://parts.igem.org/Part:BBa_K5041001) Activity Against Its Previous Variants](/assets/results-images/p29.png)
+
+Figure 7: *Quantification of [BBa_K5041001](https://parts.igem.org/Part:BBa_K5041001) Activity Against Its Previous Variants*  
+
+</blockquote>
+
+In addition, we also measured the activity of our selected G-quadruplex DNAzyme ([BBa_K5041001](https://parts.igem.org/Part:BBa_K5041001)) against its predecessor variants. After successfully replicating the optimum signal of [BBa_K3343000](https://parts.igem.org/Part:BBa_K3343000) and [BBa_K3343001](https://parts.igem.org/Part:BBa_K3343001) as presented by van den Brink [[2]](#reference-2), we also plotted the activity of [BBa_K5041001](https://parts.igem.org/Part:BBa_K5041001) along with the other variants of G-quadruplex DNAzyme. As shown in *[Figure 7](#figure-7)*, [BBa_K5041001](https://parts.igem.org/Part:BBa_K5041001) exhibited a higher activity compared to the other variants, making [BBa_K5041001](https://parts.igem.org/Part:BBa_K5041001) as the ideal choice to be utilized in our testing kit.  
 
 # Conclusion
 
@@ -80,3 +102,10 @@ We have individually tested the **cell lysis** and **target gene extraction** an
 # Additional Key Information
 
 All processes in our detection system are **designed to be completed at room temperature**. While we have confirmed that most reactions **can occur at 37°C or below**, we primarily performed the experiments at the recommended optimal temperature for each enzyme to ease detection and validate the concept. Further optimisation on the individual steps is needed to evaluate the product performance at room temperature. In the future, we are also planning to characterise our detection system on its sensitivity and specificity.  
+
+# References
+
+1. F. A. Sorgenfrei, “BBa_K1614007 HRP-mimicking DNAzyme,” Registry of Standard Biological Parts, https://parts.igem.org/Part:BBa_K1614007 (accessed Oct. 22, 2024).  
+2. M. van den Brink, “BBa_K3343000 DNAzyme with peroxidase activity,” Registry of Standard Biological Parts, https://parts.igem.org/Part:BBa_K3343000 (accessed Oct. 22, 2024).  
+3. M. van den Brink, “BBa_K3343001 DNAzyme with peroxidase activity,” Registry of Standard Biological Parts, https://parts.igem.org/Part:BBa_K3343001 (accessed Oct. 22, 2024).  
+4. C. K. Leung, “BBa_K5041001 Peroxidase-mimicking DNAzyme,” Registry of Standard Biological Parts, https://parts.igem.org/Part:BBa_K5041001 (accessed Oct. 22, 2024).
