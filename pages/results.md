@@ -75,7 +75,7 @@ To verify our project mechanism, we coupled the RCA results obtained in *[Figure
 
 <blockquote id="figure-6">
 
-![Figure 6: Quantification of RCA-generated G-quadruplex DNAzymes Activity](/assets/results-images/p30.png)
+![Figure 6: Quantification of RCA-generated G-quadruplex DNAzymes Activity](/assets/results-images/p29.png)
 
 Figure 6: *Quantification of RCA-generated G-quadruplex DNAzymes Activity*  
 
@@ -87,13 +87,13 @@ The activity of the RCA-generated G-quadruplex was then quantified by measuring 
 
 <blockquote id="figure-7">
 
-![Figure 7: Quantification of [BBa_K5041001](https://parts.igem.org/Part:BBa_K5041001) Activity Against Its Previous Variants](/assets/results-images/p29.png)
+![Figure 7: Quantification of [BBa_K5041001](https://parts.igem.org/Part:BBa_K5041001) Activity Against Its Previous Variants](/assets/results-images/p30.png)
 
 Figure 7: *Quantification of [BBa_K5041001](https://parts.igem.org/Part:BBa_K5041001) Activity Against Its Previous Variants*  
 
 </blockquote>
 
-In addition, we also measured the activity of our selected G-quadruplex DNAzyme ([BBa_K5041001](https://parts.igem.org/Part:BBa_K5041001)) against its predecessor variants. After successfully replicating the optimum signal of [BBa_K3343000](https://parts.igem.org/Part:BBa_K3343000) [[2]](#reference-2) and [BBa_K3343001](https://parts.igem.org/Part:BBa_K3343001) [[3]](#reference-3) as presented by van den Brink, we also plotted the activity of [BBa_K5041001](https://parts.igem.org/Part:BBa_K5041001) along with the other variants of G-quadruplex DNAzyme. As shown in *[Figure 7](#figure-7)*, [BBa_K5041001](https://parts.igem.org/Part:BBa_K5041001) exhibited a **higher activity** compared to the other variants, making [BBa_K5041001](https://parts.igem.org/Part:BBa_K5041001) as the **ideal choice** to be utilised in our testing kit.  
+In addition, we also measured the activity of our selected G-quadruplex DNAzyme ([BBa_K5041001](https://parts.igem.org/Part:BBa_K5041001)) [[1]](#reference-1) against its predecessor variants, [BBa_K1614007](https://parts.igem.org/Part:BBa_K1614007) [[2]](#reference-2) , [BBa_K3343000](https://parts.igem.org/Part:BBa_K3343000) [[3]](#reference-3), and [BBa_K3343001](https://parts.igem.org/Part:BBa_K3343001) [[4]](#reference-4). After successfully replicating the optimum signal of [BBa_K3343000](https://parts.igem.org/Part:BBa_K3343000) and [BBa_K3343001](https://parts.igem.org/Part:BBa_K3343001) as presented by van den Brink, we also plotted the activity of [BBa_K5041001](https://parts.igem.org/Part:BBa_K5041001) along with the other variants of G-quadruplex DNAzyme. As shown in *[Figure 7](#figure-7)*, [BBa_K5041001](https://parts.igem.org/Part:BBa_K5041001) exhibited a **higher activity** compared to the other variants, making [BBa_K5041001](https://parts.igem.org/Part:BBa_K5041001) as the **ideal choice** to be utilised in our testing kit.  
 
 # Conclusion
 
@@ -106,5 +106,6 @@ All processes in our detection system are **designed to be completed at room tem
 # References
 
 1. C. K. Leung, "BBa_K5041001 Peroxidase-mimicking DNAzyme", Registry of Standard Biological Parts, https://parts.igem.org/Part:BBa_K5041001 (accessed Oct. 22, 2024).  
-2. M. van den Brink, "BBa_K3343000 DNAzyme with peroxidase activity", Registry of Standard Biological Parts, https://parts.igem.org/Part:BBa_K3343000 (accessed Oct. 22, 2024).  
-3. M. van den Brink, "BBa_K3343001 DNAzyme with peroxidase activity", Registry of Standard Biological Parts, https://parts.igem.org/Part:BBa_K3343001 (accessed Oct. 22, 2024).  
+2. F. A. Sorgenfrei, "BBa_K1614007 HRP-mimicking DNAzyme", Registry of Standard Biological Parts, https://parts.igem.org/Part:BBa_K1614007 (accessed Oct. 22, 2024).  
+3. M. van den Brink, "BBa_K3343000 DNAzyme with peroxidase activity", Registry of Standard Biological Parts, https://parts.igem.org/Part:BBa_K3343000 (accessed Oct. 22, 2024).  
+4. M. van den Brink, "BBa_K3343001 DNAzyme with peroxidase activity", Registry of Standard Biological Parts, https://parts.igem.org/Part:BBa_K3343001 (accessed Oct. 22, 2024).  
