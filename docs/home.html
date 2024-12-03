@@ -1,639 +1,719 @@
-<!DOCTYPE html>
-<html lang="en"><head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/x-icon" href="/assets/favicon.png">
-    <meta base-url=".">
-    <title>Home</title>
+<!doctype html>
+<html lang="en"
+    ><head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="icon" type="image/x-icon" href="/assets/favicon.png" />
+        <meta base-url="." />
+        <title>Home</title>
 
-    <link rel="preconnect" href="https://apple.igem.wiki">
+        <link rel="preconnect" href="https://apple.igem.wiki" />
 
-    <link rel="stylesheet" type="text/css" href="/styles/globalStylesheet.css">
-    <script type="text/javascript" src="/scripts/globalLibrary.js"></script>
-<link rel="stylesheet" type="text/css" href="/styles/template.css"><link rel="stylesheet" type="text/css" href="/styles/header.css"><link rel="stylesheet" type="text/css" href="/styles/title-card.css"><link rel="stylesheet" type="text/css" href="/styles/footer.css"><link rel="stylesheet" type="text/css" href="/styles/searchbar.css"><link rel="stylesheet" type="text/css" href="/styles/hamburger-menu.css"><link rel="stylesheet" type="text/css" href="/styles/catalogue.css"><link rel="stylesheet" type="text/css" href="/styles/home.css"><script type="text/javascript" src="/scripts/responsivenessHandler.js" defer=""></script><script type="text/javascript" src="/scripts/title-card.js" defer=""></script><script type="text/javascript" src="/scripts/searchbar.js" defer=""></script><script type="text/javascript" src="/scripts/hamburger-menu.js" defer=""></script><script type="text/javascript" src="/scripts/catalogue.js" defer=""></script><script type="text/javascript" src="/scripts/home.js" defer=""></script></head>
+        <link rel="stylesheet" type="text/css" href="/styles/globalStylesheet.css" />
+        <script type="text/javascript" src="/scripts/globalLibrary.js"></script>
+        <link rel="stylesheet" type="text/css" href="/styles/template.css" /><link
+            rel="stylesheet"
+            type="text/css"
+            href="/styles/header.css" /><link rel="stylesheet" type="text/css" href="/styles/title-card.css" /><link
+            rel="stylesheet"
+            type="text/css"
+            href="/styles/footer.css" /><link rel="stylesheet" type="text/css" href="/styles/searchbar.css" /><link
+            rel="stylesheet"
+            type="text/css"
+            href="/styles/hamburger-menu.css" /><link
+            rel="stylesheet"
+            type="text/css"
+            href="/styles/catalogue.css" /><link rel="stylesheet" type="text/css" href="/styles/home.css" /><script
+            type="text/javascript"
+            src="/scripts/responsivenessHandler.js"
+            defer=""
+        ></script
+        ><script type="text/javascript" src="/scripts/title-card.js" defer=""></script
+        ><script type="text/javascript" src="/scripts/searchbar.js" defer=""></script
+        ><script type="text/javascript" src="/scripts/hamburger-menu.js" defer=""></script
+        ><script type="text/javascript" src="/scripts/catalogue.js" defer=""></script
+        ><script type="text/javascript" src="/scripts/home.js" defer=""></script
+    ></head>
 
-<body>
-    
-    
-
-    <painted-header> 
-
-<header>
-    <div class="logo-container">
-        <a href="/" class="logo"> </a>
-    </div>
-    <div class="header-shelf">
-        <div class="header-items-container">
-            <div class="header-leftside">
-                <div class="logo-name-text">
-                    <a href="/"> ResiSense </a>
+    <body>
+        <painted-header>
+            <header>
+                <div class="logo-container">
+                    <a href="/" class="logo"> </a>
                 </div>
-                <div class="logo-flavour-text"> Finding resistant pathogens one species at a time </div>
-            </div>
-            <div class="page-title-container">
-                <div class="page-title hidden row-1" id="header-page-title">- ResiSense -</div>
-            <div class="page-title hidden row-2" id="header-page-title">A Cell-Free Detection System</div><div class="page-title hidden row-3" id="header-page-title">For Antibiotic Resistance Genes</div></div>
-            <div class="header-rightside">
-                <painted-searchbar> 
-
-
-
-<search id="searchbar" class="header-rightside-button">
-    <input id="header-search-field" type="search" placeholder="Search... (Ctrl + Shift + F)" autocomplete="off">
-    <button id="search-button" type="submit">🔍</button>
-    <dialog id="search-dialog">
-        <div class="main-search-field-container">
-            <div class="search-icon">🔍</div>
-            <input id="main-search-field" type="search" placeholder="Search for a page..." autocomplete="off">
-        </div>
-        <div class="search-results-container">
-            <div class="tooltips">
-                <div class="navigation-tips">
-                    <div>
-                        Use <kbd>↑</kbd>, <kbd>↓</kbd>, and <kbd>Enter</kbd> to navigate the results.
-                    </div>
-                </div>
-                <div class="query-stats">
-                    Querying took <span id="query-time">0</span>ms.
-                    Redrawing took <span id="redraw-time">0</span>ms.
-                </div>
-            </div>
-            <div id="search-results" class="require-scrollbar">
-                <template id="search-result-template">
-                    <a id="search-result">
-                        <div class="result-leftside">
-                            <div id="result-title"></div>
-                            <div id="result-path"></div>
+                <div class="header-shelf">
+                    <div class="header-items-container">
+                        <div class="header-leftside">
+                            <div class="logo-name-text">
+                                <a href="/"> ResiSense </a>
+                            </div>
+                            <div class="logo-flavour-text"> Finding resistant pathogens one species at a time </div>
                         </div>
-                        <div class="result-divider"></div>
-                        <div class="result-rightside">
-                            <div id="result-content"></div>
+                        <div class="page-title-container">
+                            <div class="page-title hidden row-1" id="header-page-title">- ResiSense -</div>
+                            <div class="page-title hidden row-2" id="header-page-title"
+                                >A Cell-Free Detection System</div
+                            ><div class="page-title hidden row-3" id="header-page-title"
+                                >For Antibiotic Resistance Genes</div
+                            ></div
+                        >
+                        <div class="header-rightside">
+                            <painted-searchbar>
+                                <search id="searchbar" class="header-rightside-button">
+                                    <input
+                                        id="header-search-field"
+                                        type="search"
+                                        placeholder="Search... (Ctrl + Shift + F)"
+                                        autocomplete="off"
+                                    />
+                                    <button id="search-button" type="submit">🔍</button>
+                                    <dialog id="search-dialog">
+                                        <div class="main-search-field-container">
+                                            <div class="search-icon">🔍</div>
+                                            <input
+                                                id="main-search-field"
+                                                type="search"
+                                                placeholder="Search for a page..."
+                                                autocomplete="off"
+                                            />
+                                        </div>
+                                        <div class="search-results-container">
+                                            <div class="tooltips">
+                                                <div class="navigation-tips">
+                                                    <div>
+                                                        Use <kbd>↑</kbd>, <kbd>↓</kbd>, and <kbd>Enter</kbd> to navigate
+                                                        the results.
+                                                    </div>
+                                                </div>
+                                                <div class="query-stats">
+                                                    Querying took <span id="query-time">0</span>ms. Redrawing took
+                                                    <span id="redraw-time">0</span>ms.
+                                                </div>
+                                            </div>
+                                            <div id="search-results" class="require-scrollbar">
+                                                <template id="search-result-template">
+                                                    <a id="search-result">
+                                                        <div class="result-leftside">
+                                                            <div id="result-title"></div>
+                                                            <div id="result-path"></div>
+                                                        </div>
+                                                        <div class="result-divider"></div>
+                                                        <div class="result-rightside">
+                                                            <div id="result-content"></div>
+                                                        </div>
+                                                    </a>
+                                                </template>
+                                                <template id="search-results-end-template">
+                                                    <fieldset class="search-results-end">
+                                                        <legend>There's nothing more to see here 🙈</legend>
+                                                    </fieldset>
+                                                </template>
+                                                <template id="prefix-tips-template">
+                                                    <div class="prefix-tips">
+                                                        <div>Tips:</div>
+                                                        <ul>
+                                                            <li>
+                                                                Prefix query with <kbd>:</kbd> to only search for
+                                                                content
+                                                            </li>
+                                                            <li>
+                                                                Prefix query with <kbd>!</kbd> to only search for titles
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </template>
+                                            </div>
+                                        </div>
+                                    </dialog>
+                                </search>
+                            </painted-searchbar>
+                            <painted-hamburger-menu>
+                                <button id="hamburger-button" class="header-rightside-button">🍔</button>
+                                <div class="hamburger-menu-container">
+                                    <dialog id="hamburger-menu">
+                                        <template id="hamburger-menu-item-template">
+                                            <div id="hamburger-menu-item">
+                                                <a href=""></a>
+                                            </div>
+                                        </template>
+
+                                        <div id="hamburger-menu-item" class="hamburger-menu-item-active">
+                                            <a href="/home">🏠 home</a>
+                                        </div>
+
+                                        <div id="hamburger-menu-item">
+                                            <a href="/description">📖 project description</a>
+                                        </div>
+
+                                        <div id="hamburger-menu-item">
+                                            <a href="/human-practices">🗣️ integrated human practices</a>
+                                        </div>
+
+                                        <div id="hamburger-menu-item">
+                                            <a href="/proof-of-concept">🧪 proof of concept</a>
+                                        </div>
+
+                                        <div id="hamburger-menu-item">
+                                            <a href="/engineering">🧪 engineering success</a>
+                                        </div>
+
+                                        <div id="hamburger-menu-item">
+                                            <a href="/results">🧪 results</a>
+                                        </div>
+
+                                        <div id="hamburger-menu-item">
+                                            <a href="/notebook">🧪 notebook</a>
+                                        </div>
+
+                                        <div id="hamburger-menu-item">
+                                            <a href="/education">📚 education</a>
+                                        </div>
+
+                                        <div id="hamburger-menu-item">
+                                            <a href="/model">💻 modelling</a>
+                                        </div>
+
+                                        <div id="hamburger-menu-item">
+                                            <a href="/contribution">🧠 contribution</a>
+                                        </div>
+
+                                        <div id="hamburger-menu-item">
+                                            <a href="/team">🧠 team</a>
+                                        </div>
+
+                                        <div id="hamburger-menu-item">
+                                            <a href="/acknowledgements">🧠 acknowledgements</a>
+                                        </div>
+
+                                        <div id="hamburger-menu-item">
+                                            <a href="/attributions">🧠 attributions</a>
+                                        </div>
+
+                                        <div id="hamburger-menu-item">
+                                            <a href="/resources">👓 resources</a>
+                                        </div>
+                                    </dialog>
+                                </div>
+                            </painted-hamburger-menu>
                         </div>
-                    </a>
-                </template>
-                <template id="search-results-end-template">
-                    <fieldset class="search-results-end">
-                        <legend>There's nothing more to see here 🙈</legend>
-                    </fieldset>
-                </template>
-                <template id="prefix-tips-template">
-                    <div class="prefix-tips">
-                        <div>Tips:</div>
-                        <ul>
-                            <li> Prefix query with <kbd>:</kbd> to only search for content </li>
-                            <li> Prefix query with <kbd>!</kbd> to only search for titles </li>
-                        </ul>
                     </div>
-                </template>
-            </div>
-        </div>
-    </dialog>
-</search> </painted-searchbar>
-                <painted-hamburger-menu> 
+                    <div class="header-catalogue-container">
+                        <painted-catalogue>
+                            <div class="catalogue" id="catalogue">
+                                <template id="catalogue-item-template">
+                                    <div class="catalogue-item">
+                                        <a href=""></a>
+                                    </div>
+                                </template>
+                                <template id="catalogue-divider-template">
+                                    <div class="catalogue-item catalogue-divider"><span> | </span></div>
+                                </template>
+                                <!--  -->
+                                <div class="catalogue-item catalogue-arrow"><span> &gt; </span></div>
 
+                                <div class="catalogue-item catalogue-item-active">
+                                    <a href="/home">home</a>
+                                </div>
 
+                                <div class="catalogue-item catalogue-divider"><span> | </span></div>
 
+                                <div class="catalogue-item">
+                                    <a href="/description">project description</a>
+                                </div>
 
-<button id="hamburger-button" class="header-rightside-button">🍔</button>
-<div class="hamburger-menu-container">
-    <dialog id="hamburger-menu">
-        <template id="hamburger-menu-item-template">
-            <div id="hamburger-menu-item">
-                <a href=""></a>
-            </div>
-        </template>
-    
-            <div id="hamburger-menu-item" class="hamburger-menu-item-active">
-                <a href="/home">🏠 home</a>
-            </div>
-        
-            <div id="hamburger-menu-item">
-                <a href="/description">📖 project description</a>
-            </div>
-        
-            <div id="hamburger-menu-item">
-                <a href="/human-practices">🗣️ integrated human practices</a>
-            </div>
-        
-            <div id="hamburger-menu-item">
-                <a href="/proof-of-concept">🧪 proof of concept</a>
-            </div>
-        
-            <div id="hamburger-menu-item">
-                <a href="/engineering">🧪 engineering success</a>
-            </div>
-        
-            <div id="hamburger-menu-item">
-                <a href="/results">🧪 results</a>
-            </div>
-        
-            <div id="hamburger-menu-item">
-                <a href="/notebook">🧪 notebook</a>
-            </div>
-        
-            <div id="hamburger-menu-item">
-                <a href="/education">📚 education</a>
-            </div>
-        
-            <div id="hamburger-menu-item">
-                <a href="/model">💻 modelling</a>
-            </div>
-        
-            <div id="hamburger-menu-item">
-                <a href="/contribution">🧠 contribution</a>
-            </div>
-        
-            <div id="hamburger-menu-item">
-                <a href="/team">🧠 team</a>
-            </div>
-        
-            <div id="hamburger-menu-item">
-                <a href="/acknowledgements">🧠 acknowledgements</a>
-            </div>
-        
-            <div id="hamburger-menu-item">
-                <a href="/attributions">🧠 attributions</a>
-            </div>
-        
-            <div id="hamburger-menu-item">
-                <a href="/resources">👓 resources</a>
-            </div>
-        </dialog>
-</div> </painted-hamburger-menu>
-            </div>
-        </div>
-        <div class="header-catalogue-container">
-            <painted-catalogue> 
+                                <div class="catalogue-item catalogue-divider"><span> | </span></div>
 
+                                <div class="catalogue-item">
+                                    <a href="/human-practices">integrated human practices</a>
+                                </div>
 
+                                <div class="catalogue-item catalogue-divider"><span> | </span></div>
 
-<div class="catalogue" id="catalogue">
-    <template id="catalogue-item-template">
-        <div class="catalogue-item">
-            <a href=""></a>
-        </div>
-    </template>
-    <template id="catalogue-divider-template">
-        <div class="catalogue-item catalogue-divider"><span> | </span></div>
-    </template>
-    <!--  -->
-    <div class="catalogue-item catalogue-arrow"><span> &gt; </span></div>
+                                <div class="catalogue-item">
+                                    <a href="/proof-of-concept">proof of concept</a>
+                                </div>
 
-        <div class="catalogue-item catalogue-item-active">
-            <a href="/home">home</a>
-        </div>
-    
-        <div class="catalogue-item catalogue-divider"><span> | </span></div>
-    
-        <div class="catalogue-item">
-            <a href="/description">project description</a>
-        </div>
-    
-        <div class="catalogue-item catalogue-divider"><span> | </span></div>
-    
-        <div class="catalogue-item">
-            <a href="/human-practices">integrated human practices</a>
-        </div>
-    
-        <div class="catalogue-item catalogue-divider"><span> | </span></div>
-    
-        <div class="catalogue-item">
-            <a href="/proof-of-concept">proof of concept</a>
-        </div>
-    
-        <div class="catalogue-item catalogue-divider"><span> | </span></div>
-    
-        <div class="catalogue-item">
-            <a href="/education">education</a>
-        </div>
-    
-        <div class="catalogue-item catalogue-divider"><span> | </span></div>
-    
-        <div class="catalogue-item">
-            <a href="/model">modelling</a>
-        </div>
-    
-        <div class="catalogue-item catalogue-divider"><span> | </span></div>
-    
-        <div class="catalogue-item">
-            <a href="/team">team</a>
-        </div>
-    
-        <div class="catalogue-item catalogue-divider"><span> | </span></div>
-    
-        <div class="catalogue-item">
-            <a href="/acknowledgements">acknowledgements</a>
-        </div>
-    
-        <div class="catalogue-item catalogue-divider"><span> | </span></div>
-    </div> </painted-catalogue>
-        </div>
-    </div>
-</header>
-<div class="header-spacer"></div> </painted-header>
-    <div id="apple-warning">
-        It seems you are on an Apple device.
-        For the unrestricted version of the home page animations,
-        please visit the website on a Windows or Android device.
-    </div>
+                                <div class="catalogue-item catalogue-divider"><span> | </span></div>
 
-    <div class="slides-container">
-        <div class="slide anchored" id="s1">
-            <painted-title-card> 
+                                <div class="catalogue-item">
+                                    <a href="/education">education</a>
+                                </div>
 
+                                <div class="catalogue-item catalogue-divider"><span> | </span></div>
 
+                                <div class="catalogue-item">
+                                    <a href="/model">modelling</a>
+                                </div>
 
-<div class="title-card-container">
-    <div class="background-box">
-        <div class="pattern"></div>
-    </div>
-    <div class="page-title use-parallax row-1" id="title-name">- ResiSense -</div>
-    <div class="page-title use-parallax row-1" id="title-name-shadow">- ResiSense -</div>
-    <div class="page-title use-parallax row-1" id="title-name-box">- ResiSense -</div>
-    <div id="sticker-container">
-        <img class="use-parallax" id="blue-pills" src="/assets/stickers/blue pills-Enhanced-SR.png">
-        <img class="use-parallax" id="colourful-pills" src="/assets/stickers/colourful pills-Enhanced-SR.png">
-        <img class="use-parallax" id="hold-pills" src="/assets/stickers/hold pills-Enhanced-SR.png">
-        <img class="use-parallax" id="orange-pills" src="/assets/stickers/orange pills-Enhanced-SR.png">
-        <img class="use-parallax" id="globe" src="/assets/stickers/globe-Enhanced-SR.png">
-        <img class="use-parallax" id="gurney" src="/assets/stickers/gurney-Enhanced-SR.png">
-    </div>
-<div class="page-title use-parallax row-2" id="title-name">A Cell-Free Detection System</div><div class="page-title use-parallax row-3" id="title-name">For Antibiotic Resistance Genes</div><div class="page-title use-parallax row-2" id="title-name-shadow">A Cell-Free Detection System</div><div class="page-title use-parallax row-3" id="title-name-shadow">For Antibiotic Resistance Genes</div><div class="page-title use-parallax row-2" id="title-name-box">A Cell-Free Detection System</div><div class="page-title use-parallax row-3" id="title-name-box">For Antibiotic Resistance Genes</div></div> </painted-title-card>
-        </div>
-        <div class="slide text-shadow fixed apple" id="s2">
-            <img src="/assets/home-images/earth-b.png" id="earth-b">
-            <img src="/assets/home-images/earth-f.png" id="earth-f">
-            <img src="/assets/home-images/gurney.png" id="gurney">
-            <img src="/assets/home-images/meds.png" id="meds">
-            <div id="deaths">
-                <p>
-                    According to the World Health Organisation,
-                    <br>
-                    <span class="green bold">antibiotic resistance</span> contributes to
-                </p>
-                <p><span class="orange bold big">5 MILLION<br>DEATHS</span>
-                </p><p>per year globally</p>
-            </div>
-            <div id="lmic">
-                <p>
-                    Notably,
-                    <br>
-                    <span class="red bold big">4.3 MILLION</span>
-                </p>
-                <p>
-                    of which are occurring in
-                    <br>
-                    <span class="orange bold">Low-</span> and <span class="orange bold">Middle-Income Countries</span>
-                    (LMICs)
-                </p>
-            </div>
-        </div>
-        <div class="slide text-shadow anchored" id="s3">
-            <div id="successful">
-                <p>
-                    <span class="green bold">Antibiotics</span> have been used since the <span class="green bold">1940s</span> to treat bacterial infections
-                    <br>
-                    and they are still <span class="green bold">among our most successful methods of medical
-                        intervention</span>
-                </p>
-            </div>
-            <img src="/assets/home-images/transparent-meds.png" id="tr-meds-1">
-            <img src="/assets/home-images/orange-meds.png" id="orange-meds-1">
-            <img src="/assets/home-images/vial.png" id="vial">
-            <img src="/assets/home-images/orange-meds.png" id="orange-meds-2">
-            <img src="/assets/home-images/ampoule.png" id="ampoule">
-            <img src="/assets/home-images/orange-meds.png" id="orange-meds-3">
-            <img src="/assets/home-images/transparent-meds.png" id="tr-meds-2">
-            <div id="resurface">
-                <p>
-                    However, <span class="orange bold">antibiotic resistance</span> has proliferated due to <span class="orange bold">antibiotic misuse</span>
-                    <br>
-                    causing <span class="orange bold">previously manageable diseases</span> to resurface
-                </p>
-            </div>
-        </div>
-        <div class="slide fixed apple" id="s4">
-            <div id="misuse">
-                <p>
-                    <span class="orange bold big">MISUSE OF ANTIBIOTICS</span>
-                    <br>
-                    such as <span class="green bold">incomplete</span> or <span class="green bold">improper</span>
-                    antibiotic treatment
-                </p>
-                <p>
-                    <span class="green bold">aggravates</span> antimicrobial resistance development
-                </p>
-            </div>
-            <div id="petri-container">
-                <div id="petri-container-2">
-                    <img src="/assets/home-images/petri-dish/dish.svg" id="petri-dish">
-                    <img src="/assets/home-images/petri-dish/r0.svg" class="petri-r" id="petri-r0">
-                    <img src="/assets/home-images/petri-dish/r1.svg" class="petri-r" id="petri-r1">
-                    <img src="/assets/home-images/petri-dish/r2.svg" class="petri-r" id="petri-r2">
-                    <img src="/assets/home-images/petri-dish/r3.svg" class="petri-r" id="petri-r3">
-                    <img src="/assets/home-images/petri-dish/r4.svg" class="petri-r" id="petri-r4">
-                    <img src="/assets/home-images/petri-dish/r5.svg" class="petri-r" id="petri-r5">
-                    <img src="/assets/home-images/petri-dish/r6.svg" class="petri-r" id="petri-r6">
-                    <img src="/assets/home-images/petri-dish/g1.svg" class="petri-g" id="petri-g1">
-                    <img src="/assets/home-images/petri-dish/g2.svg" class="petri-g" id="petri-g2">
-                    <img src="/assets/home-images/petri-dish/g3.svg" class="petri-g" id="petri-g3">
-                    <img src="/assets/home-images/petri-dish/g4.svg" class="petri-g" id="petri-g4">
-                    <img src="/assets/home-images/petri-dish/g5.svg" class="petri-g" id="petri-g5">
-                    <img src="/assets/home-images/petri-dish/g6.svg" class="petri-g" id="petri-g6">
-                    <img src="/assets/home-images/petri-dish/g7.svg" class="petri-g" id="petri-g7">
+                                <div class="catalogue-item catalogue-divider"><span> | </span></div>
+
+                                <div class="catalogue-item">
+                                    <a href="/team">team</a>
+                                </div>
+
+                                <div class="catalogue-item catalogue-divider"><span> | </span></div>
+
+                                <div class="catalogue-item">
+                                    <a href="/acknowledgements">acknowledgements</a>
+                                </div>
+
+                                <div class="catalogue-item catalogue-divider"><span> | </span></div>
+                            </div>
+                        </painted-catalogue>
+                    </div>
                 </div>
+            </header>
+            <div class="header-spacer"></div>
+        </painted-header>
+        <div id="apple-warning">
+            It seems you are on an Apple device. For the unrestricted version of the home page animations, please visit
+            the website on a Windows or Android device.
+        </div>
+
+        <div class="slides-container">
+            <div class="slide anchored" id="s1">
+                <painted-title-card>
+                    <div class="title-card-container">
+                        <div class="background-box">
+                            <div class="pattern"></div>
+                        </div>
+                        <div class="page-title use-parallax row-1" id="title-name">- ResiSense -</div>
+                        <div class="page-title use-parallax row-1" id="title-name-shadow">- ResiSense -</div>
+                        <div class="page-title use-parallax row-1" id="title-name-box">- ResiSense -</div>
+                        <div id="sticker-container">
+                            <img
+                                class="use-parallax"
+                                id="blue-pills"
+                                src="/assets/stickers/blue pills-Enhanced-SR.png"
+                            />
+                            <img
+                                class="use-parallax"
+                                id="colourful-pills"
+                                src="/assets/stickers/colourful pills-Enhanced-SR.png"
+                            />
+                            <img
+                                class="use-parallax"
+                                id="hold-pills"
+                                src="/assets/stickers/hold pills-Enhanced-SR.png"
+                            />
+                            <img
+                                class="use-parallax"
+                                id="orange-pills"
+                                src="/assets/stickers/orange pills-Enhanced-SR.png"
+                            />
+                            <img class="use-parallax" id="globe" src="/assets/stickers/globe-Enhanced-SR.png" />
+                            <img class="use-parallax" id="gurney" src="/assets/stickers/gurney-Enhanced-SR.png" />
+                        </div>
+                        <div class="page-title use-parallax row-2" id="title-name">A Cell-Free Detection System</div
+                        ><div class="page-title use-parallax row-3" id="title-name">For Antibiotic Resistance Genes</div
+                        ><div class="page-title use-parallax row-2" id="title-name-shadow"
+                            >A Cell-Free Detection System</div
+                        ><div class="page-title use-parallax row-3" id="title-name-shadow"
+                            >For Antibiotic Resistance Genes</div
+                        ><div class="page-title use-parallax row-2" id="title-name-box"
+                            >A Cell-Free Detection System</div
+                        ><div class="page-title use-parallax row-3" id="title-name-box"
+                            >For Antibiotic Resistance Genes</div
+                        ></div
+                    >
+                </painted-title-card>
             </div>
-            <div id="res-dev">
-                <div id="res-dev-1">
+            <div class="slide text-shadow fixed apple" id="s2">
+                <img src="/assets/home-images/earth-b.png" id="earth-b" />
+                <img src="/assets/home-images/earth-f.png" id="earth-f" />
+                <img src="/assets/home-images/gurney.png" id="gurney" />
+                <img src="/assets/home-images/meds.png" id="meds" />
+                <div id="deaths">
                     <p>
-                        <span class="red bold">Antibiotic-resistant strains</span> form by
-                        <br>
-                        random mutation or horizontal gene transfer
+                        According to the World Health Organisation,
+                        <br />
+                        <span class="green bold">antibiotic resistance</span> contributes to
                     </p>
+                    <p
+                        ><span class="orange bold big">5 MILLION<br />DEATHS</span> </p
+                    ><p>per year globally</p>
                 </div>
-                <div id="res-dev-2">
+                <div id="lmic">
                     <p>
-                        Antibiotics kill <span class="green bold">sensitive bacteria</span>
-                        <br>
-                        but the <span class="red bold">resistant ones</span> survive
+                        Notably,
+                        <br />
+                        <span class="red bold big">4.3 MILLION</span>
                     </p>
-                </div>
-                <div id="res-dev-3">
                     <p>
-                        Without competition,
-                        <br>
-                        <span class="red bold">resistant strains</span> proliferate rapidly
+                        of which are occurring in
+                        <br />
+                        <span class="orange bold">Low-</span> and
+                        <span class="orange bold">Middle-Income Countries</span>
+                        (LMICs)
                     </p>
                 </div>
             </div>
-        </div>
-        <div class="slide anchored" id="s5">
-            <div id="detection">
-                <p>
-                    <span class="big"><span class="green bold">Detection</span> of antibiotic resistance</span>
-                    <br>
-                    is critical for controlling this <span class="red bold underline">SILENT PANDEMIC</span>!
-                </p>
-            </div>
-        </div>
-        <div class="slide text-shadow fixed apple" id="s6">
-            <div id="technology">
-                <p>
-                    <span class="big">Current technology</span>
-                    <br>
-                    for <span class="green bold">detecting antibiotic resistance</span>
-                    <br>
-                    in <span class="orange bold">low- and middle-income countries</span> includes...
-                </p>
-            </div>
-            <div id="tech-grid">
-                <div id="mic">
-                    <div id="mic-title">
-                        <p>
-                            <span class="bold">Minimum Inhibitory</span>
-                        </p>
-                        <p>
-                            <span class="bold">Concentration (MIC) Tests</span>
-                        </p>
-                    </div>
-                    <div id="mic-bad">
-                        <p>
-                            Requires length culturing:
-                            <br>
-                            <span class="red bold">Time-consuming</span>
-                        </p>
-                    </div>
-                    <img src="/assets/home-images/petri-streak.png" id="petri-streak">
-                    <img src="/assets/home-images/well-plate.png" id="well-plate">
-                    <img src="/assets/home-images/flask.png" id="flask">
-                </div>
-                <div id="pcr">
-                    <div id="pcr-title">
-                        <p>
-                            <span class="bold">Genetic Tests (PCR)</span>
-                        </p>
-                    </div>
-                    <div id="pcr-bad">
-                        <p>
-                            Requires trained personnel:
-                            <br>
-                            <span class="red bold">Low accessibility</span>
-                        </p>
-                    </div>
-                    <img src="/assets/home-images/pipette.png" id="pipette">
-                    <img src="/assets/home-images/thermocycler.png" id="thermocycler">
-                </div>
-            </div>
-        </div>
-        <div class="slide anchored" id="s7">
-            <div id="cheaper">
-                <p>
-                    A <span class="green bold">FASTER</span>, <span class="green bold">CHEAPER</span>, and <span class="green bold">SIMPLER</span>
-                    <br>
-                    technology is needed!
-                </p>
-                <p>
-                    Introducing our solution...
-                    <br>
-                    <br>
-                    <span class="big tag text-shadow" id="r1">
-                        A <span class="orange">Cell-Free</span> Detection System
-                    </span>
-                    <br>
-                    <span class="big tag text-shadow" id="r2">
-                        for <span class="red">Antibiotic Resistance Genes</span>
-                    </span>
-                </p>
-            </div>
-            <img src="/assets/home-images/microscope.png" id="microscope">
-            <img src="/assets/home-images/transparent-meds.png" id="tr-meds--">
-            <img src="/assets/home-images/orange-meds.png" id="orange-meds--">
-            <img src="/assets/home-images/needles.png" id="needles">
-        </div>
-        <div class="slide fixed apple" id="s8">
-            <div id="poc">
-                <p>
-                    ResiSense provides
-                    <br>
-                    a <span class="bold green">point-of-care antibiotic test</span> that can...
-                </p>
-            </div>
-            <div id="poc-grid">
-                <div id="choose">
-                    <div id="choose-text">
-                        <p>
-                            help doctors choose the
-                            <br>
-                            <span class="bold orange big">proper antibiotics</span>
-                            <br>
-                            to prescribe
-                        </p>
-                    </div>
-                    <img src="/assets/home-images/orange-bottle.png" id="orange-bottle">
-                    <img src="/assets/home-images/hold-meds.png" id="hold-meds">
-                </div>
-                <div id="spread">
-                    <div id="spread-text">
-                        <p>
-                            prevent the spread of
-                            <br>
-                            antibiotic resistance by
-                            <br>
-                            <span class="bold big orange">
-                                alerting medical
-                                <br>
-                                professionals
-                            </span>
-                            <br>
-                            of its existence
-                        </p>
-                    </div>
-                    <img src="/assets/home-images/stethoscope.png" id="stethoscope">
-                </div>
-                <div id="accessibility">
-                    <div id="accessibility-text">
-                        <p>
-                            provide a
-                            <br>
-                            <span class="bold big orange">high accessibility</span>
-                            <br>
-                            to tests for places that lack access
-                            <br>
-                            to traditional antibiotic tests
-                        </p>
-                    </div>
-                    <img src="/assets/home-images/ambulance.png" id="ambulance">
-                    <img src="/assets/home-images/globe.png" id="globe-">
-                </div>
-            </div>
-        </div>
-        <div class="slide anchored" id="s9">
-            <div id="learn-container">
-                <div id="learn">
+            <div class="slide text-shadow anchored" id="s3">
+                <div id="successful">
                     <p>
-                        <span class="big bold">Learn more about our project!</span>
+                        <span class="green bold">Antibiotics</span> have been used since the
+                        <span class="green bold">1940s</span> to treat bacterial infections
+                        <br />
+                        and they are still
+                        <span class="green bold">among our most successful methods of medical intervention</span>
                     </p>
                 </div>
-                <div id="video-container">
-                    <div id="also">
+                <img src="/assets/home-images/transparent-meds.png" id="tr-meds-1" />
+                <img src="/assets/home-images/orange-meds.png" id="orange-meds-1" />
+                <img src="/assets/home-images/vial.png" id="vial" />
+                <img src="/assets/home-images/orange-meds.png" id="orange-meds-2" />
+                <img src="/assets/home-images/ampoule.png" id="ampoule" />
+                <img src="/assets/home-images/orange-meds.png" id="orange-meds-3" />
+                <img src="/assets/home-images/transparent-meds.png" id="tr-meds-2" />
+                <div id="resurface">
+                    <p>
+                        However, <span class="orange bold">antibiotic resistance</span> has proliferated due to
+                        <span class="orange bold">antibiotic misuse</span>
+                        <br />
+                        causing <span class="orange bold">previously manageable diseases</span> to resurface
+                    </p>
+                </div>
+            </div>
+            <div class="slide fixed apple" id="s4">
+                <div id="misuse">
+                    <p>
+                        <span class="orange bold big">MISUSE OF ANTIBIOTICS</span>
+                        <br />
+                        such as <span class="green bold">incomplete</span> or <span class="green bold">improper</span>
+                        antibiotic treatment
+                    </p>
+                    <p> <span class="green bold">aggravates</span> antimicrobial resistance development </p>
+                </div>
+                <div id="petri-container">
+                    <div id="petri-container-2">
+                        <img src="/assets/home-images/petri-dish/dish.svg" id="petri-dish" />
+                        <img src="/assets/home-images/petri-dish/r0.svg" class="petri-r" id="petri-r0" />
+                        <img src="/assets/home-images/petri-dish/r1.svg" class="petri-r" id="petri-r1" />
+                        <img src="/assets/home-images/petri-dish/r2.svg" class="petri-r" id="petri-r2" />
+                        <img src="/assets/home-images/petri-dish/r3.svg" class="petri-r" id="petri-r3" />
+                        <img src="/assets/home-images/petri-dish/r4.svg" class="petri-r" id="petri-r4" />
+                        <img src="/assets/home-images/petri-dish/r5.svg" class="petri-r" id="petri-r5" />
+                        <img src="/assets/home-images/petri-dish/r6.svg" class="petri-r" id="petri-r6" />
+                        <img src="/assets/home-images/petri-dish/g1.svg" class="petri-g" id="petri-g1" />
+                        <img src="/assets/home-images/petri-dish/g2.svg" class="petri-g" id="petri-g2" />
+                        <img src="/assets/home-images/petri-dish/g3.svg" class="petri-g" id="petri-g3" />
+                        <img src="/assets/home-images/petri-dish/g4.svg" class="petri-g" id="petri-g4" />
+                        <img src="/assets/home-images/petri-dish/g5.svg" class="petri-g" id="petri-g5" />
+                        <img src="/assets/home-images/petri-dish/g6.svg" class="petri-g" id="petri-g6" />
+                        <img src="/assets/home-images/petri-dish/g7.svg" class="petri-g" id="petri-g7" />
+                    </div>
+                </div>
+                <div id="res-dev">
+                    <div id="res-dev-1">
                         <p>
-                            You can also watch the video on the <a href="https://video.igem.org/w/hCsyUQSr6PMN5Ukx8HzhYL">iGEM
-                                video universe</a> or <a href="https://www.youtube.com/watch?v=C-wbhdFBsfY">YouTube</a>.
+                            <span class="red bold">Antibiotic-resistant strains</span> form by
+                            <br />
+                            random mutation or horizontal gene transfer
                         </p>
                     </div>
-                    <div id="video">
-                        <div id="buffer">
+                    <div id="res-dev-2">
+                        <p>
+                            Antibiotics kill <span class="green bold">sensitive bacteria</span>
+                            <br />
+                            but the <span class="red bold">resistant ones</span> survive
+                        </p>
+                    </div>
+                    <div id="res-dev-3">
+                        <p>
+                            Without competition,
+                            <br />
+                            <span class="red bold">resistant strains</span> proliferate rapidly
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="slide anchored" id="s5">
+                <div id="detection">
+                    <p>
+                        <span class="big"><span class="green bold">Detection</span> of antibiotic resistance</span>
+                        <br />
+                        is critical for controlling this <span class="red bold underline">SILENT PANDEMIC</span>!
+                    </p>
+                </div>
+            </div>
+            <div class="slide text-shadow fixed apple" id="s6">
+                <div id="technology">
+                    <p>
+                        <span class="big">Current technology</span>
+                        <br />
+                        for <span class="green bold">detecting antibiotic resistance</span>
+                        <br />
+                        in <span class="orange bold">low- and middle-income countries</span> includes...
+                    </p>
+                </div>
+                <div id="tech-grid">
+                    <div id="mic">
+                        <div id="mic-title">
                             <p>
-                                The video is loading... Please wait.
-                                <br>
-                                <br>
-                                If the video does not load, you can also watch it on the <a href="https://video.igem.org/w/hCsyUQSr6PMN5Ukx8HzhYL">iGEM video universe</a> or <a href="https://www.youtube.com/watch?v=C-wbhdFBsfY">YouTube</a>.
+                                <span class="bold">Minimum Inhibitory</span>
+                            </p>
+                            <p>
+                                <span class="bold">Concentration (MIC) Tests</span>
                             </p>
                         </div>
-                        <iframe title="HongKong-CUHK: ResiSense (2024) - Project Promotion [English]" src="https://video.igem.org/videos/embed/86a95df6-730c-4d08-b456-b5297a8e0274" frameborder="0" allowfullscreen="" sandbox="allow-same-origin allow-scripts allow-popups allow-forms">
+                        <div id="mic-bad">
                             <p>
-                                The video is loading... Please wait.
-                                <br>
-                                <br>
-                                If the video does not load, you can also watch it on the <a
-                                    href="https://video.igem.org/w/hCsyUQSr6PMN5Ukx8HzhYL">iGEM video universe</a> or <a
-                                    href="https://www.youtube.com/watch?v=C-wbhdFBsfY">YouTube</a>.
+                                Requires length culturing:
+                                <br />
+                                <span class="red bold">Time-consuming</span>
                             </p>
-                        </iframe>
+                        </div>
+                        <img src="/assets/home-images/petri-streak.png" id="petri-streak" />
+                        <img src="/assets/home-images/well-plate.png" id="well-plate" />
+                        <img src="/assets/home-images/flask.png" id="flask" />
+                    </div>
+                    <div id="pcr">
+                        <div id="pcr-title">
+                            <p>
+                                <span class="bold">Genetic Tests (PCR)</span>
+                            </p>
+                        </div>
+                        <div id="pcr-bad">
+                            <p>
+                                Requires trained personnel:
+                                <br />
+                                <span class="red bold">Low accessibility</span>
+                            </p>
+                        </div>
+                        <img src="/assets/home-images/pipette.png" id="pipette" />
+                        <img src="/assets/home-images/thermocycler.png" id="thermocycler" />
+                    </div>
+                </div>
+            </div>
+            <div class="slide anchored" id="s7">
+                <div id="cheaper">
+                    <p>
+                        A <span class="green bold">FASTER</span>, <span class="green bold">CHEAPER</span>, and
+                        <span class="green bold">SIMPLER</span>
+                        <br />
+                        technology is needed!
+                    </p>
+                    <p>
+                        Introducing our solution...
+                        <br />
+                        <br />
+                        <span class="big tag text-shadow" id="r1">
+                            A <span class="orange">Cell-Free</span> Detection System
+                        </span>
+                        <br />
+                        <span class="big tag text-shadow" id="r2">
+                            for <span class="red">Antibiotic Resistance Genes</span>
+                        </span>
+                    </p>
+                </div>
+                <img src="/assets/home-images/microscope.png" id="microscope" />
+                <img src="/assets/home-images/transparent-meds.png" id="tr-meds--" />
+                <img src="/assets/home-images/orange-meds.png" id="orange-meds--" />
+                <img src="/assets/home-images/needles.png" id="needles" />
+            </div>
+            <div class="slide fixed apple" id="s8">
+                <div id="poc">
+                    <p>
+                        ResiSense provides
+                        <br />
+                        a <span class="bold green">point-of-care antibiotic test</span> that can...
+                    </p>
+                </div>
+                <div id="poc-grid">
+                    <div id="choose">
+                        <div id="choose-text">
+                            <p>
+                                help doctors choose the
+                                <br />
+                                <span class="bold orange big">proper antibiotics</span>
+                                <br />
+                                to prescribe
+                            </p>
+                        </div>
+                        <img src="/assets/home-images/orange-bottle.png" id="orange-bottle" />
+                        <img src="/assets/home-images/hold-meds.png" id="hold-meds" />
+                    </div>
+                    <div id="spread">
+                        <div id="spread-text">
+                            <p>
+                                prevent the spread of
+                                <br />
+                                antibiotic resistance by
+                                <br />
+                                <span class="bold big orange">
+                                    alerting medical
+                                    <br />
+                                    professionals
+                                </span>
+                                <br />
+                                of its existence
+                            </p>
+                        </div>
+                        <img src="/assets/home-images/stethoscope.png" id="stethoscope" />
+                    </div>
+                    <div id="accessibility">
+                        <div id="accessibility-text">
+                            <p>
+                                provide a
+                                <br />
+                                <span class="bold big orange">high accessibility</span>
+                                <br />
+                                to tests for places that lack access
+                                <br />
+                                to traditional antibiotic tests
+                            </p>
+                        </div>
+                        <img src="/assets/home-images/ambulance.png" id="ambulance" />
+                        <img src="/assets/home-images/globe.png" id="globe-" />
+                    </div>
+                </div>
+            </div>
+            <div class="slide anchored" id="s9">
+                <div id="learn-container">
+                    <div id="learn">
+                        <p>
+                            <span class="big bold">Learn more about our project!</span>
+                        </p>
+                    </div>
+                    <div id="video-container">
+                        <div id="also">
+                            <p>
+                                You can also watch the video on the
+                                <a href="https://video.igem.org/w/hCsyUQSr6PMN5Ukx8HzhYL">iGEM video universe</a> or
+                                <a href="https://www.youtube.com/watch?v=C-wbhdFBsfY">YouTube</a>.
+                            </p>
+                        </div>
+                        <div id="video">
+                            <div id="buffer">
+                                <p>
+                                    The video is loading... Please wait.
+                                    <br />
+                                    <br />
+                                    If the video does not load, you can also watch it on the
+                                    <a href="https://video.igem.org/w/hCsyUQSr6PMN5Ukx8HzhYL">iGEM video universe</a> or
+                                    <a href="https://www.youtube.com/watch?v=C-wbhdFBsfY">YouTube</a>.
+                                </p>
+                            </div>
+                            <iframe
+                                title="HongKong-CUHK: ResiSense (2024) - Project Promotion [English]"
+                                src="https://video.igem.org/videos/embed/86a95df6-730c-4d08-b456-b5297a8e0274"
+                                frameborder="0"
+                                allowfullscreen=""
+                                sandbox="allow-same-origin allow-scripts allow-popups allow-forms"
+                            >
+                                <p>
+                                    The video is loading... Please wait.
+                                    <br />
+                                    <br />
+                                    If the video does not load, you can also watch it on the
+                                    <a href="https://video.igem.org/w/hCsyUQSr6PMN5Ukx8HzhYL">iGEM video universe</a> or
+                                    <a href="https://www.youtube.com/watch?v=C-wbhdFBsfY">YouTube</a>.
+                                </p>
+                            </iframe>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
 
-    <painted-footer> 
-
-<footer>
-    <div class="footer-banner">
-        <div class="resisense">
-            <div class="resisense-logo">
-                <img src="/assets/logos/resisense/ResiSense Green Logo.svg" alt="ResiSense logo">
-            </div>
-            <div class="resisense-logo-aside">
-                <div class="resisense-name"> ResiSense </div>
-                <div class="socials">
-                    <div class="social">
-                        <a href="https://www.instagram.com/cuhkigem2024/" target="_blank" rel="noopener noreferrer">
-                            <img src="/assets/icons/instagram icon.svg" alt="Instagram icon">
-                            <span> cuhkigem2024 </span>
-                        </a>
+        <painted-footer>
+            <footer>
+                <div class="footer-banner">
+                    <div class="resisense">
+                        <div class="resisense-logo">
+                            <img src="/assets/logos/resisense/ResiSense Green Logo.svg" alt="ResiSense logo" />
+                        </div>
+                        <div class="resisense-logo-aside">
+                            <div class="resisense-name"> ResiSense </div>
+                            <div class="socials">
+                                <div class="social">
+                                    <a
+                                        href="https://www.instagram.com/cuhkigem2024/"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                    >
+                                        <img src="/assets/icons/instagram icon.svg" alt="Instagram icon" />
+                                        <span> cuhkigem2024 </span>
+                                    </a>
+                                </div>
+                                <div class="social">
+                                    <a href="mailto:cuhkigem2024@gmail.com" target="_blank" rel="noopener noreferrer">
+                                        <img src="/assets/icons/email icon.svg" alt="Email icon" />
+                                        <span> cuhkigem2024@gmail.com </span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="social">
-                        <a href="mailto:cuhkigem2024@gmail.com" target="_blank" rel="noopener noreferrer">
-                            <img src="/assets/icons/email icon.svg" alt="Email icon">
-                            <span> cuhkigem2024@gmail.com </span>
-                        </a>
+                    <div class="divider"></div>
+                    <div class="logo-container-wrapper">
+                        <div> Affiliated with: </div>
+                        <div class="cuhk-department-logo-container">
+                            <a href="https://www.cuhk.edu.hk" target="_blank" rel="noopener noreferrer">
+                                <img src="/assets/logos/cuhk logo horizontal.svg" alt="CUHK logo" />
+                            </a>
+                            <a href="https://www.sls.cuhk.edu.hk" target="_blank" rel="noopener noreferrer">
+                                <img src="/assets/logos/sls logo.svg" alt="CUHK SLS logo" />
+                            </a>
+                            <a href="https://www.erg.cuhk.edu.hk" target="_blank" rel="noopener noreferrer">
+                                <img src="/assets/logos/foe logo.svg" alt="CUHK FoE logo" />
+                            </a>
+                            <a href="https://www.bme.cuhk.edu.hk" target="_blank" rel="noopener noreferrer">
+                                <img src="/assets/logos/bme logo.svg" alt="CUHK BME logo" />
+                            </a>
+                        </div>
+                        <div> Sponsored by: </div>
+                        <div class="sponsor-logo-container">
+                            <a href="https://opentrons.com" target="_blank" rel="noopener noreferrer">
+                                <img src="/assets/logos/opentrons logo.svg" alt="Opentrons logo" />
+                            </a>
+                            <a href="https://www.idtdna.com" target="_blank" rel="noopener noreferrer">
+                                <img src="/assets/logos/idt logo.svg" alt="IDT logo" />
+                            </a>
+                            <a href="https://www.neb.com" target="_blank" rel="noopener noreferrer">
+                                <img src="/assets/logos/neb logo.svg" alt="NEB logo" />
+                            </a>
+                            <a href="https://www.hklss.org" target="_blank" rel="noopener noreferrer">
+                                <img src="/assets/logos/hklss logo.svg" alt="HKLSS logo" />
+                            </a>
+                            <a href="https://abehk.fed.cuhk.edu.hk" target="_blank" rel="noopener noreferrer">
+                                <img src="/assets/logos/abehk logo.svg" alt="ABEHK logo" />
+                            </a>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </div>
-        <div class="divider"></div>
-        <div class="logo-container-wrapper">
-            <div> Affiliated with: </div>
-            <div class="cuhk-department-logo-container">
-                <a href="https://www.cuhk.edu.hk" target="_blank" rel="noopener noreferrer">
-                    <img src="/assets/logos/cuhk logo horizontal.svg" alt="CUHK logo">
-                </a>
-                <a href="https://www.sls.cuhk.edu.hk" target="_blank" rel="noopener noreferrer">
-                    <img src="/assets/logos/sls logo.svg" alt="CUHK SLS logo">
-                </a>
-                <a href="https://www.erg.cuhk.edu.hk" target="_blank" rel="noopener noreferrer">
-                    <img src="/assets/logos/foe logo.svg" alt="CUHK FoE logo">
-                </a>
-                <a href="https://www.bme.cuhk.edu.hk" target="_blank" rel="noopener noreferrer">
-                    <img src="/assets/logos/bme logo.svg" alt="CUHK BME logo">
-                </a>
-            </div>
-            <div> Sponsored by: </div>
-            <div class="sponsor-logo-container">
-                <a href="https://opentrons.com" target="_blank" rel="noopener noreferrer">
-                    <img src="/assets/logos/opentrons logo.svg" alt="Opentrons logo">
-                </a>
-                <a href="https://www.idtdna.com" target="_blank" rel="noopener noreferrer">
-                    <img src="/assets/logos/idt logo.svg" alt="IDT logo">
-                </a>
-                <a href="https://www.neb.com" target="_blank" rel="noopener noreferrer">
-                    <img src="/assets/logos/neb logo.svg" alt="NEB logo">
-                </a>
-                <a href="https://www.hklss.org" target="_blank" rel="noopener noreferrer">
-                    <img src="/assets/logos/hklss logo.svg" alt="HKLSS logo">
-                </a>
-                <a href="https://abehk.fed.cuhk.edu.hk" target="_blank" rel="noopener noreferrer">
-                    <img src="/assets/logos/abehk logo.svg" alt="ABEHK logo">
-                </a>
-            </div>
-        </div>
-    </div>
-    <div class="footer-persistent">
-        <div class="repository-container">
-            <!-- Repository links -->
-            <span>
-                Repository:
-                <a href="https://github.com/ResiSense/ResiSense.github.io" target="_blank">
-                    <img src="/assets/icons/github icon.svg" alt="GitHub icon">
-                </a>
-                <a href="https://gitlab.igem.org/2024/hongkong-cuhk" target="_blank">
-                    <img src="/assets/icons/gitlab icon.svg" alt="GitLab icon">
-                </a>
-            </span>
-        </div>
-        <div class="license-container">
-            <!-- Licensing https://creativecommons.org/licenses/by/4.0/ -->
-            <span>
-                ©️ 2024 ResiSense. Licensed under
-                <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank">
-                    <img src="/assets/icons/creative common/Creative Common CC icon.svg" alt="Creative Commons icon">
-                    <img src="/assets/icons/creative common/Creative Common BY icon.svg" alt="Creative Commons BY icon">
-                    CC BY 4.0</a>. Some rights reserved.
-            </span>
-        </div>
-    </div>
-</footer> </painted-footer>
-
-
-</body></html>
+                <div class="footer-persistent">
+                    <div class="repository-container">
+                        <!-- Repository links -->
+                        <span>
+                            Repository:
+                            <a href="https://github.com/ResiSense/ResiSense.github.io" target="_blank">
+                                <img src="/assets/icons/github icon.svg" alt="GitHub icon" />
+                            </a>
+                            <a href="https://gitlab.igem.org/2024/hongkong-cuhk" target="_blank">
+                                <img src="/assets/icons/gitlab icon.svg" alt="GitLab icon" />
+                            </a>
+                        </span>
+                    </div>
+                    <div class="license-container">
+                        <!-- Licensing https://creativecommons.org/licenses/by/4.0/ -->
+                        <span>
+                            ©️ 2024 ResiSense. Licensed under
+                            <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank">
+                                <img
+                                    src="/assets/icons/creative common/Creative Common CC icon.svg"
+                                    alt="Creative Commons icon"
+                                />
+                                <img
+                                    src="/assets/icons/creative common/Creative Common BY icon.svg"
+                                    alt="Creative Commons BY icon"
+                                />
+                                CC BY 4.0</a
+                            >. Some rights reserved.
+                        </span>
+                    </div>
+                </div>
+            </footer>
+        </painted-footer>
+    </body></html
+>
