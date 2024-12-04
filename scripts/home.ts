@@ -1,5 +1,3 @@
-import { warn } from "console";
-
 {
     const slideElements = document.querySelectorAll('.slide')
         || (() => { throw new Error('No slide elements found') })();
