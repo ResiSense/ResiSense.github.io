@@ -10,7 +10,7 @@ It is with sincerity that we say the success of our project is indebted to our h
 
 We are acutely aware that antibiotic resistance is not just a complex issue but also a pressing one. Our human practice research is far from a mere formality but the cornerstone of our **probe selection**, **kit design**, **market analysis**, and **outreaching education**.  
 
-![Human Practice Cornerstones](/assets/diagrams/hp-cornerstone.svg)
+![Human Practice Cornerstones](/assets/diagrams/hp-cornerstone.png)
 
 ## Integration Cycle
 
@@ -18,7 +18,7 @@ Our integrated human practice consists of 4 steps: **literature review and brain
 
 <div class="hp-cycle">
 
-![Integrated Human Practice Cycle](/assets/diagrams/hp-cycle.svg)  
+![Integrated Human Practice Cycle](/assets/diagrams/hp-cycle.png)  
 
 </div>
 
@@ -26,7 +26,7 @@ Our integrated human practice consists of 4 steps: **literature review and brain
 
 <div class="hp-timeline">
 
-![Integrated Human Practice Timeline](/assets/diagrams/hp-timeline.svg)  
+![Integrated Human Practice Timeline](/assets/diagrams/hp-timeline.png)  
 
 </div>
 
