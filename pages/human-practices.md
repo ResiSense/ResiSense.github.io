@@ -10,7 +10,11 @@ It is with sincerity that we say the success of our project is indebted to our h
 
 We are acutely aware that antibiotic resistance is not just a complex issue but also a pressing one. Our human practice research is far from a mere formality but the cornerstone of our **probe selection**, **kit design**, **market analysis**, and **outreaching education**.  
 
+<div class="hp-cornerstone">
+
 ![Human Practice Cornerstones](/assets/diagrams/hp-cornerstone.png)
+
+</div>
 
 ## Integration Cycle
 
