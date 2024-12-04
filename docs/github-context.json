@@ -1,11 +1,11 @@
 {
     "job": "build",
     "ref": "refs/heads/main",
-    "sha": "a81a1a73785e0d91c567698f3b812f7a043da47a",
+    "sha": "0e6ffa7a49f74c696d0b7d146864f6d953c35649",
     "repository": "ResiSense/ResiSense.github.io",
     "repository_Url": null,
-    "run_id": "12160170618",
-    "run_number": "341",
+    "run_id": "12160253950",
+    "run_number": "343",
     "run_attempt": "1",
     "artifact_cache_size_limit": "10",
     "actor": "CCheukKa",
@@ -13,8 +13,8 @@
     "workflow": "Full CI pipeline",
     "event_name": "push",
     "event": {
-        "after": "a81a1a73785e0d91c567698f3b812f7a043da47a",
-        "before": "4f026c67831ad92ca3793c71fb2e88fe76892570",
+        "after": "0e6ffa7a49f74c696d0b7d146864f6d953c35649",
+        "before": "0221e08937dcb61087f7b7fefda7ec55bd645bcf",
         "commits": [
             {
                 "author": {
@@ -28,14 +28,14 @@
                     "username": "CCheukKa"
                 },
                 "distinct": true,
-                "id": "a81a1a73785e0d91c567698f3b812f7a043da47a",
-                "message": "fix sls logo",
-                "timestamp": "2024-12-04T20:54:20+08:00",
-                "tree_id": "6398c82242d89a13c82eea492b18ab53b4f88402",
-                "url": "https://github.com/ResiSense/ResiSense.github.io/commit/a81a1a73785e0d91c567698f3b812f7a043da47a"
+                "id": "0e6ffa7a49f74c696d0b7d146864f6d953c35649",
+                "message": "change citation",
+                "timestamp": "2024-12-04T20:59:10+08:00",
+                "tree_id": "2ec65493b1cd631560e41567c8780a9827529b89",
+                "url": "https://github.com/ResiSense/ResiSense.github.io/commit/0e6ffa7a49f74c696d0b7d146864f6d953c35649"
             }
         ],
-        "compare": "https://github.com/ResiSense/ResiSense.github.io/compare/4f026c67831a...a81a1a73785e",
+        "compare": "https://github.com/ResiSense/ResiSense.github.io/compare/0221e08937dc...0e6ffa7a49f7",
         "created": false,
         "deleted": false,
         "forced": false,
@@ -51,11 +51,11 @@
                 "username": "CCheukKa"
             },
             "distinct": true,
-            "id": "a81a1a73785e0d91c567698f3b812f7a043da47a",
-            "message": "fix sls logo",
-            "timestamp": "2024-12-04T20:54:20+08:00",
-            "tree_id": "6398c82242d89a13c82eea492b18ab53b4f88402",
-            "url": "https://github.com/ResiSense/ResiSense.github.io/commit/a81a1a73785e0d91c567698f3b812f7a043da47a"
+            "id": "0e6ffa7a49f74c696d0b7d146864f6d953c35649",
+            "message": "change citation",
+            "timestamp": "2024-12-04T20:59:10+08:00",
+            "tree_id": "2ec65493b1cd631560e41567c8780a9827529b89",
+            "url": "https://github.com/ResiSense/ResiSense.github.io/commit/0e6ffa7a49f74c696d0b7d146864f6d953c35649"
         },
         "pusher": {
             "email": "ccheukka@gmail.com",
@@ -68,6 +68,6 @@
     "ref_type": "branch",
     "secret_source": "Actions",
     "workflow_ref": "ResiSense/ResiSense.github.io/.github/workflows/full-ci-pipeline.yaml@refs/heads/main",
-    "workflow_sha": "a81a1a73785e0d91c567698f3b812f7a043da47a",
+    "workflow_sha": "0e6ffa7a49f74c696d0b7d146864f6d953c35649",
     "workspace": "/home/runner/work/ResiSense.github.io/ResiSense.github.io"
 }
