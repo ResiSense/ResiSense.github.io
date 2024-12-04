@@ -1,11 +1,11 @@
 {
     "job": "build",
     "ref": "refs/heads/main",
-    "sha": "310868dee3bb3133781354b7707ddfe49db32a1f",
+    "sha": "491c1c1fc87cd00d73dedd130319880d6f37a0f9",
     "repository": "ResiSense/ResiSense.github.io",
     "repository_Url": null,
-    "run_id": "12160270816",
-    "run_number": "344",
+    "run_id": "12160749755",
+    "run_number": "345",
     "run_attempt": "1",
     "artifact_cache_size_limit": "10",
     "actor": "CCheukKa",
@@ -13,8 +13,8 @@
     "workflow": "Full CI pipeline",
     "event_name": "push",
     "event": {
-        "after": "310868dee3bb3133781354b7707ddfe49db32a1f",
-        "before": "488a3aa01822a53a094489e1df394237efaceb50",
+        "after": "491c1c1fc87cd00d73dedd130319880d6f37a0f9",
+        "before": "9715260e6f411afc654ea950bc89f7ece06fccee",
         "commits": [
             {
                 "author": {
@@ -28,11 +28,11 @@
                     "username": "CCheukKa"
                 },
                 "distinct": true,
-                "id": "9e9b7aa416e6ca42688d46ed2b24650c91416b1c",
-                "message": "added citation",
-                "timestamp": "2024-12-04T21:00:13+08:00",
-                "tree_id": "205b3b02b52cafb50fe416288bb3e4a1de769d12",
-                "url": "https://github.com/ResiSense/ResiSense.github.io/commit/9e9b7aa416e6ca42688d46ed2b24650c91416b1c"
+                "id": "865c23ebbdb9d67f59b42cce84c395f6f5a2e015",
+                "message": "remove unused line",
+                "timestamp": "2024-12-04T21:20:33+08:00",
+                "tree_id": "0486f83e2eeb351ac7b36e9ce66f06601f08f40e",
+                "url": "https://github.com/ResiSense/ResiSense.github.io/commit/865c23ebbdb9d67f59b42cce84c395f6f5a2e015"
             },
             {
                 "author": {
@@ -46,14 +46,32 @@
                     "username": "CCheukKa"
                 },
                 "distinct": true,
-                "id": "310868dee3bb3133781354b7707ddfe49db32a1f",
-                "message": "Merge branch main of https://github.com/ResiSense/ResiSense.github.io",
-                "timestamp": "2024-12-04T21:00:16+08:00",
-                "tree_id": "18a4fa8c74532abf1a64009b445ea9219336ec18",
-                "url": "https://github.com/ResiSense/ResiSense.github.io/commit/310868dee3bb3133781354b7707ddfe49db32a1f"
+                "id": "b20cd027ee518794e7f2b43329f29dfef071bde3",
+                "message": "add apple warning banner fade out",
+                "timestamp": "2024-12-04T21:20:51+08:00",
+                "tree_id": "a12c765c029a577e0456e30f89c7ee88759a5e54",
+                "url": "https://github.com/ResiSense/ResiSense.github.io/commit/b20cd027ee518794e7f2b43329f29dfef071bde3"
+            },
+            {
+                "author": {
+                    "email": "ccheukka@gmail.com",
+                    "name": "CCheukKa",
+                    "username": "CCheukKa"
+                },
+                "committer": {
+                    "email": "ccheukka@gmail.com",
+                    "name": "CCheukKa",
+                    "username": "CCheukKa"
+                },
+                "distinct": true,
+                "id": "491c1c1fc87cd00d73dedd130319880d6f37a0f9",
+                "message": "fix svg jank",
+                "timestamp": "2024-12-04T21:27:54+08:00",
+                "tree_id": "9a4c550eb912a4d0859b028806f9d2733550c668",
+                "url": "https://github.com/ResiSense/ResiSense.github.io/commit/491c1c1fc87cd00d73dedd130319880d6f37a0f9"
             }
         ],
-        "compare": "https://github.com/ResiSense/ResiSense.github.io/compare/488a3aa01822...310868dee3bb",
+        "compare": "https://github.com/ResiSense/ResiSense.github.io/compare/9715260e6f41...491c1c1fc87c",
         "created": false,
         "deleted": false,
         "forced": false,
@@ -69,11 +87,11 @@
                 "username": "CCheukKa"
             },
             "distinct": true,
-            "id": "310868dee3bb3133781354b7707ddfe49db32a1f",
-            "message": "Merge branch main of https://github.com/ResiSense/ResiSense.github.io",
-            "timestamp": "2024-12-04T21:00:16+08:00",
-            "tree_id": "18a4fa8c74532abf1a64009b445ea9219336ec18",
-            "url": "https://github.com/ResiSense/ResiSense.github.io/commit/310868dee3bb3133781354b7707ddfe49db32a1f"
+            "id": "491c1c1fc87cd00d73dedd130319880d6f37a0f9",
+            "message": "fix svg jank",
+            "timestamp": "2024-12-04T21:27:54+08:00",
+            "tree_id": "9a4c550eb912a4d0859b028806f9d2733550c668",
+            "url": "https://github.com/ResiSense/ResiSense.github.io/commit/491c1c1fc87cd00d73dedd130319880d6f37a0f9"
         },
         "pusher": {
             "email": "ccheukka@gmail.com",
@@ -86,6 +104,6 @@
     "ref_type": "branch",
     "secret_source": "Actions",
     "workflow_ref": "ResiSense/ResiSense.github.io/.github/workflows/full-ci-pipeline.yaml@refs/heads/main",
-    "workflow_sha": "310868dee3bb3133781354b7707ddfe49db32a1f",
+    "workflow_sha": "491c1c1fc87cd00d73dedd130319880d6f37a0f9",
     "workspace": "/home/runner/work/ResiSense.github.io/ResiSense.github.io"
 }

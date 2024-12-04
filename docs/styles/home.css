@@ -2,16 +2,30 @@
     position: fixed;
     bottom: 0;
     width: 100vw;
-    background-color: red;
+    background-color: var(--deep-green);
     z-index: 9;
     padding: 1rem 2rem;
     font-weight: bold;
     color: white;
     text-align: center;
     box-sizing: border-box;
+    animation: 3s forwards linear fade-out;
+    animation-play-state: paused;
 
     &:not(.apple) {
         display: none;
+    }
+}
+
+@keyframes fade-out {
+    0% {
+        opacity: 1;
+        user-select: auto;
+    }
+
+    100% {
+        opacity: 0;
+        user-select: none;
     }
 }
 
