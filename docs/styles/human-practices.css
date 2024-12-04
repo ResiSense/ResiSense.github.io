@@ -99,13 +99,27 @@ painted-content {
     }
 }
 
+.hp-cornerstone {
+    img {
+        user-select: none;
+    }
+}
+
 .hp-cycle {
+    img {
+        user-select: none;
+    }
+
     & img {
         animation: infinite 30s linear rotate;
     }
 }
 
 .hp-timeline {
+    img {
+        user-select: none;
+    }
+
     & img {
         max-height: initial !important;
     }
